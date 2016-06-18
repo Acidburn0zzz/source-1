@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>remote_path</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L647'>remote_path</a>       647 src/vfs/fish/fish.c fish_dir_load (struct vfs_class *me, struct vfs_s_inode *dir, char *remote_path)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L668'>remote_path</a>       668 src/vfs/fish/fish.c     vfs_print_message (_("fish: Reading directory %s..."), remote_path);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L672'>remote_path</a>       672 src/vfs/fish/fish.c     quoted_path = strutils_shell_escape (remote_path);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L266'>remote_path</a>       266 src/vfs/ftpfs/ftpfs.c                                  const char *remote_path);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L275'>remote_path</a>       275 src/vfs/ftpfs/ftpfs.c ftpfs_translate_path (struct vfs_class *me, struct vfs_s_super *super, const char *remote_path)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L278'>remote_path</a>       278 src/vfs/ftpfs/ftpfs.c         return g_strdup (remote_path);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L285'>remote_path</a>       285 src/vfs/ftpfs/ftpfs.c             fprintf (MEDATA-&gt;logfile, "MC -- ftpfs_translate_path: %s\n", remote_path);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L290'>remote_path</a>       290 src/vfs/ftpfs/ftpfs.c         while (IS_PATH_SEP (*remote_path))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L291'>remote_path</a>       291 src/vfs/ftpfs/ftpfs.c             remote_path++;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L297'>remote_path</a>       297 src/vfs/ftpfs/ftpfs.c         if (*remote_path == '\0')</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L300'>remote_path</a>       300 src/vfs/ftpfs/ftpfs.c         ret = g_strdup (remote_path);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1383'>remote_path</a>      1383 src/vfs/ftpfs/ftpfs.c         char *remote_path = ftpfs_translate_path (me, super, remote);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1386'>remote_path</a>      1386 src/vfs/ftpfs/ftpfs.c                            IS_PATH_SEP (*remote_path) ? remote_path + 1 : remote_path);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1387'>remote_path</a>      1387 src/vfs/ftpfs/ftpfs.c         g_free (remote_path);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1497'>remote_path</a>      1497 src/vfs/ftpfs/ftpfs.c                 if ((strlen (dir-&gt;remote_path) + strlen (fel-&gt;linkname)) &gt;= MC_MAXPATHLEN)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1499'>remote_path</a>      1499 src/vfs/ftpfs/ftpfs.c                 strcpy (tmp, dir-&gt;remote_path);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1563'>remote_path</a>      1563 src/vfs/ftpfs/ftpfs.c     if (strchr (dir-&gt;remote_path, ' '))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1565'>remote_path</a>      1565 src/vfs/ftpfs/ftpfs.c         if (ftpfs_chdir_internal (bucket, dir-&gt;remote_path) != COMPLETE)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1573'>remote_path</a>      1573 src/vfs/ftpfs/ftpfs.c         sock = ftpfs_open_data_connection (bucket, "LIST -lLa", dir-&gt;remote_path, TYPE_ASCII, 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1658'>remote_path</a>      1658 src/vfs/ftpfs/ftpfs.c ftpfs_dir_load (struct vfs_class *me, struct vfs_s_inode *dir, char *remote_path)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1666'>remote_path</a>      1666 src/vfs/ftpfs/ftpfs.c         || (strchr (remote_path, ' ') != NULL);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1670'>remote_path</a>      1670 src/vfs/ftpfs/ftpfs.c                        remote_path,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1676'>remote_path</a>      1676 src/vfs/ftpfs/ftpfs.c         if (ftpfs_chdir_internal (me, super, remote_path) != COMPLETE)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1698'>remote_path</a>      1698 src/vfs/ftpfs/ftpfs.c         path = mc_build_filename (remote_path, ".", (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2073'>remote_path</a>      2073 src/vfs/ftpfs/ftpfs.c ftpfs_chdir_internal (struct vfs_class *me, struct vfs_s_super *super, const char *remote_path)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2078'>remote_path</a>      2078 src/vfs/ftpfs/ftpfs.c     if (!SUP-&gt;cwd_deferred &amp;&amp; ftpfs_is_same_dir (me, super, remote_path))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2081'>remote_path</a>      2081 src/vfs/ftpfs/ftpfs.c     p = ftpfs_translate_path (me, super, remote_path);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2090'>remote_path</a>      2090 src/vfs/ftpfs/ftpfs.c         SUP-&gt;current_dir = g_strdup (remote_path);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L166'>remote_path</a>       166 src/vfs/sftpfs/vfs_subclass.c sftpfs_cb_dir_load (struct vfs_class *me, struct vfs_s_inode *dir, char *remote_path)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L170'>remote_path</a>       170 src/vfs/sftpfs/vfs_subclass.c     (void) remote_path;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1334'>remote_path</a>      1334 src/vfs/smbfs/smbfs.c     char *remote_path = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1358'>remote_path</a>      1358 src/vfs/smbfs/smbfs.c             remote_path = g_strdup (url-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1363'>remote_path</a>      1363 src/vfs/smbfs/smbfs.c     if (remote_path == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1368'>remote_path</a>      1368 src/vfs/smbfs/smbfs.c         int f = strcmp (remote_path, "/~") ? 0 : 1;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1370'>remote_path</a>      1370 src/vfs/smbfs/smbfs.c         if (f != 0 || strncmp (remote_path, "/~/", 3) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1374'>remote_path</a>      1374 src/vfs/smbfs/smbfs.c             s = mc_build_filename ((*sc)-&gt;home, remote_path + 3 - f, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1375'>remote_path</a>      1375 src/vfs/smbfs/smbfs.c             g_free (remote_path);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1376'>remote_path</a>      1376 src/vfs/smbfs/smbfs.c             remote_path = s;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1380'>remote_path</a>      1380 src/vfs/smbfs/smbfs.c     return remote_path;</span>
+</pre>
+</body>
+</html>

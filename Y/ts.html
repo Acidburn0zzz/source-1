@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>ts</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L118'>ts</a>                118 src/diffviewer/ydiff.c TAB_SKIP (int ts, int pos)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L120'>ts</a>                120 src/diffviewer/ydiff.c     if (ts &gt; 0 &amp;&amp; ts &lt; 9)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L121'>ts</a>                121 src/diffviewer/ydiff.c         return ts - pos % ts;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1279'>ts</a>               1279 src/diffviewer/ydiff.c cvt_cpy (char *dst, const char *src, size_t srcsize, int base, int ts)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1290'>ts</a>               1290 src/diffviewer/ydiff.c             j = TAB_SKIP (ts, i + base);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1320'>ts</a>               1320 src/diffviewer/ydiff.c cvt_ncpy (char *dst, int dstsize, const char **_src, size_t srcsize, int base, int ts)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1332'>ts</a>               1332 src/diffviewer/ydiff.c             j = TAB_SKIP (ts, i + base);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1362'>ts</a>               1362 src/diffviewer/ydiff.c cvt_mget (const char *src, size_t srcsize, char *dst, int dstsize, int skip, int ts,</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1379'>ts</a>               1379 src/diffviewer/ydiff.c                 j = TAB_SKIP (ts, i + base);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1461'>ts</a>               1461 src/diffviewer/ydiff.c cvt_mgeta (const char *src, size_t srcsize, char *dst, int dstsize, int skip, int ts,</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1478'>ts</a>               1478 src/diffviewer/ydiff.c                 j = TAB_SKIP (ts, i + base);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1562'>ts</a>               1562 src/diffviewer/ydiff.c cvt_fget (FBUF * f, off_t off, char *dst, size_t dstsize, int skip, int ts, gboolean show_cr)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1592'>ts</a>               1592 src/diffviewer/ydiff.c         base = cvt_cpy (cvt, tmp, sz, old_base, ts);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1623'>ts</a>               1623 src/diffviewer/ydiff.c                 useful += cvt_ncpy (dst + useful, dstsize - useful, &amp;ptr, sz, base, ts) - base;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L75'>ts</a>                 75 src/filemanager/treestore.c static struct TreeStore ts;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L89'>ts</a>                 89 src/filemanager/treestore.c     ts.dirty = dirty;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L215'>ts</a>                215 src/filemanager/treestore.c     if (ts.loaded)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L232'>ts</a>                232 src/filemanager/treestore.c         ts.loaded = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L302'>ts</a>                302 src/filemanager/treestore.c     if (!ts.tree_first)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L308'>ts</a>                308 src/filemanager/treestore.c         ts.loaded = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L337'>ts</a>                337 src/filemanager/treestore.c     current = ts.tree_first;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L381'>ts</a>                381 src/filemanager/treestore.c     tree_entry *current = ts.tree_first;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L386'>ts</a>                386 src/filemanager/treestore.c     if (ts.tree_last &amp;&amp; ts.tree_last-&gt;next)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L404'>ts</a>                404 src/filemanager/treestore.c         if (!ts.tree_first)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L407'>ts</a>                407 src/filemanager/treestore.c             ts.tree_first = new;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L417'>ts</a>                417 src/filemanager/treestore.c         ts.tree_last = new;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L432'>ts</a>                432 src/filemanager/treestore.c             new-&gt;next = ts.tree_first;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L433'>ts</a>                433 src/filemanager/treestore.c             ts.tree_first = new;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L514'>ts</a>                514 src/filemanager/treestore.c         ts.tree_first = entry-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L519'>ts</a>                519 src/filemanager/treestore.c         ts.tree_last = entry-&gt;prev;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L595'>ts</a>                595 src/filemanager/treestore.c     tree_entry *current = ts.tree_first;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L612'>ts</a>                612 src/filemanager/treestore.c     return &amp;ts;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L736'>ts</a>                736 src/filemanager/treestore.c     if (!ts.loaded)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L739'>ts</a>                739 src/filemanager/treestore.c     if (ts.check_name == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L746'>ts</a>                746 src/filemanager/treestore.c     cname = vfs_path_as_str (ts.check_name);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L750'>ts</a>                750 src/filemanager/treestore.c         name = vfs_path_append_new (ts.check_name, subname, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L753'>ts</a>                753 src/filemanager/treestore.c     current = ts.check_start;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L761'>ts</a>                761 src/filemanager/treestore.c         ts.add_queue_vpath = g_list_prepend (ts.add_queue_vpath, name);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L799'>ts</a>                799 src/filemanager/treestore.c     if (!ts.loaded)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L802'>ts</a>                802 src/filemanager/treestore.c     g_return_val_if_fail (ts.check_name == NULL, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L803'>ts</a>                803 src/filemanager/treestore.c     ts.check_start = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L818'>ts</a>                818 src/filemanager/treestore.c         ts.check_name = vfs_path_clone (vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L823'>ts</a>                823 src/filemanager/treestore.c     ts.check_name = vfs_path_clone (vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L828'>ts</a>                828 src/filemanager/treestore.c     ts.check_start = current-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L829'>ts</a>                829 src/filemanager/treestore.c     len = vfs_path_len (ts.check_name);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L831'>ts</a>                831 src/filemanager/treestore.c     current = ts.check_start;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L832'>ts</a>                832 src/filemanager/treestore.c     while (current != NULL &amp;&amp; vfs_path_equal_len (current-&gt;name, ts.check_name, len))</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L859'>ts</a>                859 src/filemanager/treestore.c     if (!ts.loaded)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L862'>ts</a>                862 src/filemanager/treestore.c     g_return_if_fail (ts.check_name != NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L865'>ts</a>                865 src/filemanager/treestore.c     len = vfs_path_len (ts.check_name);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L867'>ts</a>                867 src/filemanager/treestore.c     current = ts.check_start;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L868'>ts</a>                868 src/filemanager/treestore.c     while (current != NULL &amp;&amp; vfs_path_equal_len (current-&gt;name, ts.check_name, len))</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L886'>ts</a>                886 src/filemanager/treestore.c     the_queue = g_list_reverse (ts.add_queue_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L887'>ts</a>                887 src/filemanager/treestore.c     ts.add_queue_vpath = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L888'>ts</a>                888 src/filemanager/treestore.c     vfs_path_free (ts.check_name);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L889'>ts</a>                889 src/filemanager/treestore.c     ts.check_name = NULL;</span>
+</pre>
+</body>
+</html>

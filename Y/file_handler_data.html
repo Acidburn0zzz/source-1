@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>file_handler_data</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L63'>file_handler_data</a>   63 src/vfs/sftpfs/file.c     sftpfs_file_handler_data_t *file_handler_data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L69'>file_handler_data</a>   69 src/vfs/sftpfs/file.c     file_handler_data = (sftpfs_file_handler_data_t *) file_handler-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L70'>file_handler_data</a>   70 src/vfs/sftpfs/file.c     flags = file_handler_data-&gt;flags;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L71'>file_handler_data</a>   71 src/vfs/sftpfs/file.c     mode = file_handler_data-&gt;mode;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L96'>file_handler_data</a>   96 src/vfs/sftpfs/file.c     sftpfs_file_handler_data_t *file_handler_data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L108'>file_handler_data</a>  108 src/vfs/sftpfs/file.c     file_handler_data = g_new0 (sftpfs_file_handler_data_t, 1);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L131'>file_handler_data</a>  131 src/vfs/sftpfs/file.c         file_handler_data-&gt;handle =</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L135'>file_handler_data</a>  135 src/vfs/sftpfs/file.c         if (file_handler_data-&gt;handle != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L143'>file_handler_data</a>  143 src/vfs/sftpfs/file.c             g_free (file_handler_data);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L150'>file_handler_data</a>  150 src/vfs/sftpfs/file.c     file_handler_data-&gt;flags = flags;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L151'>file_handler_data</a>  151 src/vfs/sftpfs/file.c     file_handler_data-&gt;mode = mode;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L152'>file_handler_data</a>  152 src/vfs/sftpfs/file.c     file_handler-&gt;data = file_handler_data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L159'>file_handler_data</a>  159 src/vfs/sftpfs/file.c             libssh2_sftp_seek64 (file_handler_data-&gt;handle, file_info.st_size);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L244'>file_handler_data</a>  244 src/vfs/sftpfs/file.c     sftpfs_file_handler_data_t *file_handler_data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L256'>file_handler_data</a>  256 src/vfs/sftpfs/file.c     file_handler_data = file_handler-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L261'>file_handler_data</a>  261 src/vfs/sftpfs/file.c         rc = libssh2_sftp_read (file_handler_data-&gt;handle, buffer, count);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L276'>file_handler_data</a>  276 src/vfs/sftpfs/file.c     file_handler-&gt;pos = (off_t) libssh2_sftp_tell64 (file_handler_data-&gt;handle);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L299'>file_handler_data</a>  299 src/vfs/sftpfs/file.c     sftpfs_file_handler_data_t *file_handler_data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L304'>file_handler_data</a>  304 src/vfs/sftpfs/file.c     file_handler_data = (sftpfs_file_handler_data_t *) file_handler-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L307'>file_handler_data</a>  307 src/vfs/sftpfs/file.c     file_handler-&gt;pos = (off_t) libssh2_sftp_tell64 (file_handler_data-&gt;handle);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L311'>file_handler_data</a>  311 src/vfs/sftpfs/file.c         rc = libssh2_sftp_write (file_handler_data-&gt;handle, buffer, count);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L343'>file_handler_data</a>  343 src/vfs/sftpfs/file.c     sftpfs_file_handler_data_t *file_handler_data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L347'>file_handler_data</a>  347 src/vfs/sftpfs/file.c     file_handler_data = (sftpfs_file_handler_data_t *) file_handler-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L348'>file_handler_data</a>  348 src/vfs/sftpfs/file.c     if (file_handler_data == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L351'>file_handler_data</a>  351 src/vfs/sftpfs/file.c     libssh2_sftp_close (file_handler_data-&gt;handle);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L353'>file_handler_data</a>  353 src/vfs/sftpfs/file.c     g_free (file_handler_data);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L373'>file_handler_data</a>  373 src/vfs/sftpfs/file.c     sftpfs_file_handler_data_t *file_handler_data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L406'>file_handler_data</a>  406 src/vfs/sftpfs/file.c     file_handler_data = (sftpfs_file_handler_data_t *) file_handler-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L408'>file_handler_data</a>  408 src/vfs/sftpfs/file.c     libssh2_sftp_seek64 (file_handler_data-&gt;handle, file_handler-&gt;pos);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L409'>file_handler_data</a>  409 src/vfs/sftpfs/file.c     file_handler-&gt;pos = (off_t) libssh2_sftp_tell64 (file_handler_data-&gt;handle);</span>
+</pre>
+</body>
+</html>

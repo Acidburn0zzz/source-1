@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>mnt</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L162'>mnt</a>               162 src/filemanager/mountlist.c #define hasmntopt(mnt, opt) ((char *) 0)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L667'>mnt</a>               667 src/filemanager/mountlist.c             struct mntent *mnt = p-&gt;ment;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L670'>mnt</a>               670 src/filemanager/mountlist.c             me-&gt;me_devname = g_strdup (mnt-&gt;mnt_fsname);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L671'>mnt</a>               671 src/filemanager/mountlist.c             me-&gt;me_mountdir = g_strdup (mnt-&gt;mnt_dir);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L673'>mnt</a>               673 src/filemanager/mountlist.c             me-&gt;me_type = g_strdup (mnt-&gt;mnt_type);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L779'>mnt</a>               779 src/filemanager/mountlist.c             struct mntent *mnt;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L786'>mnt</a>               786 src/filemanager/mountlist.c             while ((mnt = getmntent (fp)) != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L790'>mnt</a>               790 src/filemanager/mountlist.c                 bind = hasmntopt (mnt, "bind") != NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L793'>mnt</a>               793 src/filemanager/mountlist.c                 me-&gt;me_devname = g_strdup (mnt-&gt;mnt_fsname);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L794'>mnt</a>               794 src/filemanager/mountlist.c                 me-&gt;me_mountdir = g_strdup (mnt-&gt;mnt_dir);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L796'>mnt</a>               796 src/filemanager/mountlist.c                 me-&gt;me_type = g_strdup (mnt-&gt;mnt_type);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L800'>mnt</a>               800 src/filemanager/mountlist.c                 me-&gt;me_dev = dev_from_mount_options (mnt-&gt;mnt_opts);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1039'>mnt</a>              1039 src/filemanager/mountlist.c         struct mnttab mnt;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1047'>mnt</a>              1047 src/filemanager/mountlist.c         while (fread (&amp;mnt, sizeof (mnt), 1, fp) &gt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1051'>mnt</a>              1051 src/filemanager/mountlist.c             me-&gt;me_devname = g_strdup (mnt.mt_dev);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1053'>mnt</a>              1053 src/filemanager/mountlist.c             me-&gt;me_devname = g_strconcat ("/dev/", mnt.mt_dev, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1055'>mnt</a>              1055 src/filemanager/mountlist.c             me-&gt;me_mountdir = g_strdup (mnt.mt_filsys);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1118'>mnt</a>              1118 src/filemanager/mountlist.c         struct mnttab mnt;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1160'>mnt</a>              1160 src/filemanager/mountlist.c             while ((ret = getmntent (fp, &amp;mnt)) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1163'>mnt</a>              1163 src/filemanager/mountlist.c                 me-&gt;me_devname = g_strdup (mnt.mnt_special);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1164'>mnt</a>              1164 src/filemanager/mountlist.c                 me-&gt;me_mountdir = g_strdup (mnt.mnt_mountp);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1166'>mnt</a>              1166 src/filemanager/mountlist.c                 me-&gt;me_type = g_strdup (mnt.mnt_fstype);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1168'>mnt</a>              1168 src/filemanager/mountlist.c                 me-&gt;me_dummy = MNT_IGNORE (&amp;mnt) != 0;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1170'>mnt</a>              1170 src/filemanager/mountlist.c                 me-&gt;me_dev = dev_from_mount_options (mnt.mnt_mntopts);</span>
+</pre>
+</body>
+</html>

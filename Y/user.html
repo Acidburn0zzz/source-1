@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>user</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--lock.c.html#L91'>user</a>               91 lib/lock.c         const char *user = NULL;</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L96'>user</a>               96 lib/lock.c             user = pw-&gt;pw_name;</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L97'>user</a>               97 lib/lock.c         if (!user)</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L98'>user</a>               98 lib/lock.c             user = getenv ("USER");</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L99'>user</a>               99 lib/lock.c         if (!user)</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L100'>user</a>              100 lib/lock.c             user = getenv ("USERNAME");</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L101'>user</a>              101 lib/lock.c         if (!user)</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L102'>user</a>              102 lib/lock.c             user = getenv ("LOGNAME");</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L103'>user</a>              103 lib/lock.c         if (!user)</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L104'>user</a>              104 lib/lock.c             user = "";</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L110'>user</a>              110 lib/lock.c         return g_strdup_printf ("%s@%s.%d", user, host, (int) getpid ());</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L267'>user</a>              267 lib/vfs/path.c             path_element-&gt;user = g_strdup (pcopy);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L854'>user</a>              854 lib/vfs/path.c     new_element-&gt;user = g_strdup (element-&gt;user);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L888'>user</a>              888 lib/vfs/path.c     g_free (element-&gt;user);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1120'>user</a>             1120 lib/vfs/path.c         mc_config_set_string_raw (cpath, groupname, "user", element-&gt;user);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1197'>user</a>             1197 lib/vfs/path.c         element-&gt;user = mc_config_get_string_raw (cpath, groupname, "user", NULL);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1499'>user</a>             1499 lib/vfs/path.c     if (element-&gt;user != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1500'>user</a>             1500 lib/vfs/path.c         g_string_append (buffer, element-&gt;user);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1510'>user</a>             1510 lib/vfs/path.c         if ((element-&gt;user != NULL) || (element-&gt;password != NULL))</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L35'>user</a>               35 lib/vfs/path.h     char *user;</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L287'>user</a>              287 lib/vfs/utilvfs.c             path_element-&gt;user = g_strdup (pcopy);</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L296'>user</a>              296 lib/vfs/utilvfs.c         path_element-&gt;user = vfs_get_local_username ();</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1270'>user</a>             1270 src/filemanager/boxes.c vfs_smb_get_authinfo (const char *host, const char *share, const char *domain, const char *user)</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1277'>user</a>             1277 src/filemanager/boxes.c     if (user == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1278'>user</a>             1278 src/filemanager/boxes.c         user = "";</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1298'>user</a>             1298 src/filemanager/boxes.c                 QUICK_INPUT (user, "auth_name", &amp;ret_user, NULL, FALSE, FALSE, INPUT_COMPLETE_USERNAMES),</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.h.html#L24'>user</a>               24 src/filemanager/boxes.h int panel_listing_box (WPanel * p, int num, char **user, char **mini, int *use_msformat,</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L383'>user</a>              383 src/filemanager/chown.c                 struct passwd *user;</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L387'>user</a>              387 src/filemanager/chown.c                 user = getpwnam (text);</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L388'>user</a>              388 src/filemanager/chown.c                 if (user)</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L390'>user</a>              390 src/filemanager/chown.c                     new_user = user-&gt;pw_uid;</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L415'>user</a>              415 src/filemanager/chown.c                 struct passwd *user;</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L423'>user</a>              423 src/filemanager/chown.c                 user = getpwnam (text);</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L424'>user</a>              424 src/filemanager/chown.c                 if (user)</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L425'>user</a>              425 src/filemanager/chown.c                     new_user = user-&gt;pw_uid;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L469'>user</a>              469 src/filemanager/cmd.c configure_panel_listing (WPanel * p, int list_type, int brief_cols, int use_msformat, char **user,</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L481'>user</a>              481 src/filemanager/cmd.c         p-&gt;user_format = *user;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L482'>user</a>              482 src/filemanager/cmd.c         *user = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1590'>user</a>             1590 src/filemanager/cmd.c     char *user, *status;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1596'>user</a>             1596 src/filemanager/cmd.c     list_type = panel_listing_box (p, MENU_PANEL_IDX, &amp;user, &amp;status, &amp;use_msformat, &amp;brief_cols);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1601'>user</a>             1601 src/filemanager/cmd.c         configure_panel_listing (p, list_type, brief_cols, use_msformat, &amp;user, &amp;status);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1602'>user</a>             1602 src/filemanager/cmd.c         g_free (user);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L435'>user</a>              435 src/vfs/fish/fish.c     if (super-&gt;path_element-&gt;user != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L438'>user</a>              438 src/vfs/fish/fish.c         argv[i++] = super-&gt;path_element-&gt;user;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L443'>user</a>              443 src/vfs/fish/fish.c         super-&gt;path_element-&gt;user = vfs_get_local_username ();</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L477'>user</a>              477 src/vfs/fish/fish.c             p = g_strdup_printf (_("fish: Password is required for %s"), super-&gt;path_element-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L549'>user</a>              549 src/vfs/fish/fish.c         g_strconcat ("sh://", super-&gt;path_element-&gt;user, "@", super-&gt;path_element-&gt;host,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L632'>user</a>              632 src/vfs/fish/fish.c     if (path_element-&gt;user == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L633'>user</a>              633 src/vfs/fish/fish.c         path_element-&gt;user = vfs_get_local_username ();</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L636'>user</a>              636 src/vfs/fish/fish.c               &amp;&amp; (strcmp (path_element-&gt;user, super-&gt;path_element-&gt;user) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1578'>user</a>             1578 src/vfs/fish/fish.c                          super-&gt;path_element-&gt;user, "@", super-&gt;path_element-&gt;host, flags,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L336'>user</a>              336 src/vfs/ftpfs/ftpfs.c     if (path_element-&gt;user == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L340'>user</a>              340 src/vfs/ftpfs/ftpfs.c             ftpfs_netrc_lookup (path_element-&gt;host, &amp;path_element-&gt;user, &amp;path_element-&gt;password);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L342'>user</a>              342 src/vfs/ftpfs/ftpfs.c     if (path_element-&gt;user == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L343'>user</a>              343 src/vfs/ftpfs/ftpfs.c         path_element-&gt;user = g_strdup ("anonymous");</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L346'>user</a>              346 src/vfs/ftpfs/ftpfs.c     if (ftpfs_use_netrc &amp;&amp; path_element-&gt;user != NULL &amp;&amp; path_element-&gt;password != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L354'>user</a>              354 src/vfs/ftpfs/ftpfs.c         if (new_user != NULL &amp;&amp; strcmp (path_element-&gt;user, new_user) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L587'>user</a>              587 src/vfs/ftpfs/ftpfs.c     else if (strcmp (super-&gt;path_element-&gt;user, "anonymous") == 0</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L588'>user</a>              588 src/vfs/ftpfs/ftpfs.c              || strcmp (super-&gt;path_element-&gt;user, "ftp") == 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L599'>user</a>              599 src/vfs/ftpfs/ftpfs.c         p = g_strdup_printf (_("FTP: Password required for %s"), super-&gt;path_element-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L618'>user</a>              618 src/vfs/ftpfs/ftpfs.c             g_strconcat (super-&gt;path_element-&gt;user, "@",</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L623'>user</a>              623 src/vfs/ftpfs/ftpfs.c         name = g_strdup (super-&gt;path_element-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L653'>user</a>              653 src/vfs/ftpfs/ftpfs.c                                      super-&gt;path_element-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L683'>user</a>              683 src/vfs/ftpfs/ftpfs.c              super-&gt;path_element-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1016'>user</a>             1016 src/vfs/ftpfs/ftpfs.c               &amp;&amp; (strcmp (path_element-&gt;user, super-&gt;path_element-&gt;user) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L56'>user</a>               56 src/vfs/sftpfs/config_parser.c     char *user;                 /* the user to log in as */</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L82'>user</a>               82 src/vfs/sftpfs/config_parser.c     {"^\\s*User\\s+(.*)$", NULL, STRING, offsetof (sftpfs_ssh_config_entity_t, user)},</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L106'>user</a>              106 src/vfs/sftpfs/config_parser.c     g_free (config_entity-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L331'>user</a>              331 src/vfs/sftpfs/config_parser.c     if (config_entity-&gt;user == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L333'>user</a>              333 src/vfs/sftpfs/config_parser.c         config_entity-&gt;user = vfs_get_local_username ();</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L334'>user</a>              334 src/vfs/sftpfs/config_parser.c         if (config_entity-&gt;user == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L376'>user</a>              376 src/vfs/sftpfs/config_parser.c     if (super-&gt;path_element-&gt;user == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L377'>user</a>              377 src/vfs/sftpfs/config_parser.c         super-&gt;path_element-&gt;user = g_strdup (config_entity-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L178'>user</a>              178 src/vfs/sftpfs/connection.c     userauthlist = libssh2_userauth_list (super_data-&gt;session, super-&gt;path_element-&gt;user,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L179'>user</a>              179 src/vfs/sftpfs/connection.c                                           strlen (super-&gt;path_element-&gt;user));</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L237'>user</a>              237 src/vfs/sftpfs/connection.c         if (libssh2_agent_userauth (super_data-&gt;agent, super-&gt;path_element-&gt;user, identity) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L272'>user</a>              272 src/vfs/sftpfs/connection.c     if (libssh2_userauth_publickey_fromfile (super_data-&gt;session, super-&gt;path_element-&gt;user,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L277'>user</a>              277 src/vfs/sftpfs/connection.c     p = g_strdup_printf (_("sftp: Enter passphrase for %s "), super-&gt;path_element-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L286'>user</a>              286 src/vfs/sftpfs/connection.c                                                           super-&gt;path_element-&gt;user,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L321'>user</a>              321 src/vfs/sftpfs/connection.c         while ((rc = libssh2_userauth_password (super_data-&gt;session, super-&gt;path_element-&gt;user,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L328'>user</a>              328 src/vfs/sftpfs/connection.c     p = g_strdup_printf (_("sftp: Enter password for %s "), super-&gt;path_element-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L336'>user</a>              336 src/vfs/sftpfs/connection.c         while ((rc = libssh2_userauth_password (super_data-&gt;session, super-&gt;path_element-&gt;user,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L73'>user</a>               73 src/vfs/sftpfs/vfs_subclass.c               &amp;&amp; (g_strcmp0 (vpath_element-&gt;user, orig_connect_info-&gt;user) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--client.h.html#L37'>user</a>               37 src/vfs/smbfs/helpers/include/client.h     fstring user;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L94'>user</a>               94 src/vfs/smbfs/helpers/include/proto.h const char *get_home_dir (char *user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L95'>user</a>               95 src/vfs/smbfs/helpers/include/proto.h BOOL map_username (const char *user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L96'>user</a>               96 src/vfs/smbfs/helpers/include/proto.h struct passwd *Get_Pwnam (const char *user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L97'>user</a>               97 src/vfs/smbfs/helpers/include/proto.h BOOL user_in_list (const char *user, char *list);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L254'>user</a>              254 src/vfs/smbfs/helpers/include/proto.h BOOL cli_NetWkstaUserLogon (struct cli_state *cli, char *user, char *workstation);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L259'>user</a>              259 src/vfs/smbfs/helpers/include/proto.h BOOL cli_session_setup (struct cli_state *cli, char *user, char *pass, int passlen, char *ntpass,</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L563'>user</a>              563 src/vfs/smbfs/helpers/include/smb.h     char *user;                 /* name of user who *opened* this connection */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L670'>user</a>              670 src/vfs/smbfs/helpers/include/smb.h     char user[30];</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L40'>user</a>               40 src/vfs/smbfs/helpers/lib/username.c get_home_dir (char *user)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L44'>user</a>               44 src/vfs/smbfs/helpers/lib/username.c     pass = Get_Pwnam (user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L64'>user</a>               64 src/vfs/smbfs/helpers/lib/username.c map_username (const char *user)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L74'>user</a>               74 src/vfs/smbfs/helpers/lib/username.c     if (!*user)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L86'>user</a>               86 src/vfs/smbfs/helpers/lib/username.c     if (strequal (user, last_to))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L89'>user</a>               89 src/vfs/smbfs/helpers/lib/username.c     if (strequal (user, last_from))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L91'>user</a>               91 src/vfs/smbfs/helpers/lib/username.c         DEBUG (3, ("Mapped user %s to %s\n", user, last_to));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L92'>user</a>               92 src/vfs/smbfs/helpers/lib/username.c         fstrcpy (user, last_to);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L138'>user</a>              138 src/vfs/smbfs/helpers/lib/username.c         if (strchr (dosname, '*') || user_in_list (user, dosname))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L140'>user</a>              140 src/vfs/smbfs/helpers/lib/username.c             DEBUG (3, ("Mapped user %s to %s\n", user, unixname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L142'>user</a>              142 src/vfs/smbfs/helpers/lib/username.c             fstrcpy (last_from, user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L143'>user</a>              143 src/vfs/smbfs/helpers/lib/username.c             sscanf (unixname, "%s", user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L144'>user</a>              144 src/vfs/smbfs/helpers/lib/username.c             fstrcpy (last_to, user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L159'>user</a>              159 src/vfs/smbfs/helpers/lib/username.c     fstrcpy (last_from, user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L160'>user</a>              160 src/vfs/smbfs/helpers/lib/username.c     fstrcpy (last_to, user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L200'>user</a>              200 src/vfs/smbfs/helpers/lib/username.c     fstring user;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L209'>user</a>              209 src/vfs/smbfs/helpers/lib/username.c     StrnCpy (user, a_user, sizeof (user) - 1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L211'>user</a>              211 src/vfs/smbfs/helpers/lib/username.c     ret = _Get_Pwnam (user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L215'>user</a>              215 src/vfs/smbfs/helpers/lib/username.c     strlower (user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L216'>user</a>              216 src/vfs/smbfs/helpers/lib/username.c     ret = _Get_Pwnam (user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L220'>user</a>              220 src/vfs/smbfs/helpers/lib/username.c     strupper (user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L221'>user</a>              221 src/vfs/smbfs/helpers/lib/username.c     ret = _Get_Pwnam (user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L226'>user</a>              226 src/vfs/smbfs/helpers/lib/username.c     if (strlen (user) &gt; 1)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L227'>user</a>              227 src/vfs/smbfs/helpers/lib/username.c         strlower (user + 1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L228'>user</a>              228 src/vfs/smbfs/helpers/lib/username.c     ret = _Get_Pwnam (user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L233'>user</a>              233 src/vfs/smbfs/helpers/lib/username.c     strlower (user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L234'>user</a>              234 src/vfs/smbfs/helpers/lib/username.c     last_char = strlen (user) - 1;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L235'>user</a>              235 src/vfs/smbfs/helpers/lib/username.c     user[last_char] = toupper (user[last_char]);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L236'>user</a>              236 src/vfs/smbfs/helpers/lib/username.c     ret = _Get_Pwnam (user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L241'>user</a>              241 src/vfs/smbfs/helpers/lib/username.c     strlower (user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L242'>user</a>              242 src/vfs/smbfs/helpers/lib/username.c     ret = uname_string_combinations (user, _Get_Pwnam, usernamelevel);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L254'>user</a>              254 src/vfs/smbfs/helpers/lib/username.c user_in_netgroup_list (char *user, char *ngname)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L267'>user</a>              267 src/vfs/smbfs/helpers/lib/username.c         DEBUG (5, ("looking for user %s of domain %s in netgroup %s\n", user, mydomain, ngname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L268'>user</a>              268 src/vfs/smbfs/helpers/lib/username.c         DEBUG (5, ("innetgr is %s\n", innetgr (ngname, NULL, user, mydomain) ? "TRUE" : "FALSE"));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L270'>user</a>              270 src/vfs/smbfs/helpers/lib/username.c         if (innetgr (ngname, NULL, user, mydomain))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L281'>user</a>              281 src/vfs/smbfs/helpers/lib/username.c user_in_group_list (char *user, char *gname)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L286'>user</a>              286 src/vfs/smbfs/helpers/lib/username.c     struct passwd *pass = Get_Pwnam (user, False);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L302'>user</a>              302 src/vfs/smbfs/helpers/lib/username.c             if (strequal (*member, user))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L316'>user</a>              316 src/vfs/smbfs/helpers/lib/username.c user_in_list (char *user, char *list)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L326'>user</a>              326 src/vfs/smbfs/helpers/lib/username.c         if (strequal (user, tok))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L340'>user</a>              340 src/vfs/smbfs/helpers/lib/username.c             if (user_in_netgroup_list (user, &amp;tok[1]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L342'>user</a>              342 src/vfs/smbfs/helpers/lib/username.c             if (user_in_group_list (user, &amp;tok[1]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L352'>user</a>              352 src/vfs/smbfs/helpers/lib/username.c                 if (user_in_group_list (user, &amp;tok[2]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L354'>user</a>              354 src/vfs/smbfs/helpers/lib/username.c                 if (user_in_netgroup_list (user, &amp;tok[2]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L362'>user</a>              362 src/vfs/smbfs/helpers/lib/username.c                 if (user_in_group_list (user, &amp;tok[1]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L373'>user</a>              373 src/vfs/smbfs/helpers/lib/username.c                 if (user_in_netgroup_list (user, &amp;tok[2]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L375'>user</a>              375 src/vfs/smbfs/helpers/lib/username.c                 if (user_in_group_list (user, &amp;tok[2]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L383'>user</a>              383 src/vfs/smbfs/helpers/lib/username.c                 if (user_in_netgroup_list (user, &amp;tok[1]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2373'>user</a>             2373 src/vfs/smbfs/helpers/lib/util.c             if ((home = get_home_dir (conn-&gt;user)))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2395'>user</a>             2395 src/vfs/smbfs/helpers/lib/util.c             string_sub (p, "%u", conn-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L496'>user</a>              496 src/vfs/smbfs/helpers/libsmb/clientgen.c cli_NetWkstaUserLogon (struct cli_state * cli, char *user, char *workstation)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L516'>user</a>              516 src/vfs/smbfs/helpers/libsmb/clientgen.c     pstrcpy (p, user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L733'>user</a>              733 src/vfs/smbfs/helpers/libsmb/clientgen.c                    char *user,</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L784'>user</a>              784 src/vfs/smbfs/helpers/libsmb/clientgen.c         set_message (cli-&gt;outbuf, 10, 1 + strlen (user) + passlen, True);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L797'>user</a>              797 src/vfs/smbfs/helpers/libsmb/clientgen.c         pstrcpy (p, user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L820'>user</a>              820 src/vfs/smbfs/helpers/libsmb/clientgen.c         pstrcpy (p, user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L863'>user</a>              863 src/vfs/smbfs/helpers/libsmb/clientgen.c     fstrcpy (cli-&gt;user_name, user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L149'>user</a>              149 src/vfs/smbfs/smbfs.c     char *user;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L214'>user</a>              214 src/vfs/smbfs/smbfs.c     g_free (a-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L269'>user</a>              269 src/vfs/smbfs/smbfs.c                 const char *user, const char *pass)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L273'>user</a>              273 src/vfs/smbfs/smbfs.c     auth = vfs_smb_authinfo_new (host, share, domain, user, pass);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L307'>user</a>              307 src/vfs/smbfs/smbfs.c                            const char *domain, const char *user, const char *pass,</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L314'>user</a>              314 src/vfs/smbfs/smbfs.c     if (domain &amp;&amp; user &amp;&amp; pass)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L317'>user</a>              317 src/vfs/smbfs/smbfs.c         g_free (bucket-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L320'>user</a>              320 src/vfs/smbfs/smbfs.c         bucket-&gt;user = g_strdup (user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L323'>user</a>              323 src/vfs/smbfs/smbfs.c         smbfs_auth_add (bucket-&gt;host, bucket-&gt;service, domain, user, pass);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L336'>user</a>              336 src/vfs/smbfs/smbfs.c         bucket-&gt;user = g_strdup (auth-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L344'>user</a>              344 src/vfs/smbfs/smbfs.c         bucket-&gt;user = g_strdup (got_user ? username : user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L350'>user</a>              350 src/vfs/smbfs/smbfs.c                                  bucket-&gt;service, (domain ? domain : lp_workgroup ()), user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L354'>user</a>              354 src/vfs/smbfs/smbfs.c         g_free (bucket-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L357'>user</a>              357 src/vfs/smbfs/smbfs.c         bucket-&gt;user = g_strdup (auth-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L443'>user</a>              443 src/vfs/smbfs/smbfs.c                                 smbfs_connections[i].user, "@",</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1107'>user</a>             1107 src/vfs/smbfs/smbfs.c         if (!cli_session_setup (c, current_bucket-&gt;user,</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1179'>user</a>             1179 src/vfs/smbfs/smbfs.c     g_free (bucket-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1222'>user</a>             1222 src/vfs/smbfs/smbfs.c smbfs_open_link (char *host, char *path, const char *user, int *port, char *this_pass)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1250'>user</a>             1250 src/vfs/smbfs/smbfs.c         user = username;        /* global from getenv */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1258'>user</a>             1258 src/vfs/smbfs/smbfs.c             (strcmp (user, smbfs_connections[i].user) == 0) &amp;&amp;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1292'>user</a>             1292 src/vfs/smbfs/smbfs.c     bucket-&gt;user = g_strdup (user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1306'>user</a>             1306 src/vfs/smbfs/smbfs.c                                     user, this_pass, 1))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1319'>user</a>             1319 src/vfs/smbfs/smbfs.c         if (!smbfs_bucket_set_authinfo (bucket, bucket-&gt;domain, bucket-&gt;user, 0, 0))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1354'>user</a>             1354 src/vfs/smbfs/smbfs.c         *sc = smbfs_open_link (url-&gt;host, url-&gt;path, url-&gt;user, &amp;url-&gt;port, url-&gt;password);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2000'>user</a>             2000 src/vfs/smbfs/smbfs.c                 &amp;&amp; (strcmp (p-&gt;user, smbfs_connections[i].user) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2213'>user</a>             2213 src/vfs/smbfs/smbfs.c                       const char *user, const char *pass)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2224'>user</a>             2224 src/vfs/smbfs/smbfs.c         auth-&gt;user = g_strdup (user);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.h.html#L21'>user</a>               21 src/vfs/smbfs/smbfs.h     char *user;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.h.html#L35'>user</a>               35 src/vfs/smbfs/smbfs.h                                     const char *domain, const char *user, const char *pass);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.h.html#L39'>user</a>               39 src/vfs/smbfs/smbfs.h                                     const char *share, const char *domain, const char *user);</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>smbfs_info</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L817'>smbfs_info</a>        817 src/vfs/smbfs/smbfs.c smbfs_loaddir (opendir_info * smbfs_info)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L820'>smbfs_info</a>        820 src/vfs/smbfs/smbfs.c     int servlen = strlen (smbfs_info-&gt;conn-&gt;service);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L821'>smbfs_info</a>        821 src/vfs/smbfs/smbfs.c     const char *info_dirname = smbfs_info-&gt;dirname;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L838'>smbfs_info</a>        838 src/vfs/smbfs/smbfs.c     current_info = smbfs_info;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L842'>smbfs_info</a>        842 src/vfs/smbfs/smbfs.c         if (!strcmp (smbfs_info-&gt;path, URL_HEADER))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L847'>smbfs_info</a>        847 src/vfs/smbfs/smbfs.c                 (smbfs_info-&gt;conn-&gt;cli, smbfs_info-&gt;conn-&gt;domain,</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L851'>smbfs_info</a>        851 src/vfs/smbfs/smbfs.c                 current_server_info = smbfs_info;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L852'>smbfs_info</a>        852 src/vfs/smbfs/smbfs.c             smbfs_info-&gt;server_list = TRUE;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L857'>smbfs_info</a>        857 src/vfs/smbfs/smbfs.c             if (cli_RNetShareEnum (smbfs_info-&gt;conn-&gt;cli, smbfs_browsing_helper, NULL) &lt; 1)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L860'>smbfs_info</a>        860 src/vfs/smbfs/smbfs.c                 current_share_info = smbfs_info;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L866'>smbfs_info</a>        866 src/vfs/smbfs/smbfs.c     if (strncmp (smbfs_info-&gt;conn-&gt;service, info_dirname + 1, servlen) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L876'>smbfs_info</a>        876 src/vfs/smbfs/smbfs.c     DEBUG (6, ("smbfs_loaddir: service: %s\n", smbfs_info-&gt;conn-&gt;service));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L877'>smbfs_info</a>        877 src/vfs/smbfs/smbfs.c     DEBUG (6, ("smbfs_loaddir: cli-&gt;share: %s\n", smbfs_info-&gt;conn-&gt;cli-&gt;share));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L880'>smbfs_info</a>        880 src/vfs/smbfs/smbfs.c     if (cli_list (smbfs_info-&gt;conn-&gt;cli, my_dirname, attribute, smbfs_loaddir_helper, NULL) &lt; 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L883'>smbfs_info</a>        883 src/vfs/smbfs/smbfs.c         my_errno = cli_error (smbfs_info-&gt;conn-&gt;cli, NULL, &amp;err, NULL);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L888'>smbfs_info</a>        888 src/vfs/smbfs/smbfs.c         smbfs_info-&gt;dirname = smbfs_info-&gt;conn-&gt;service;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L895'>smbfs_info</a>        895 src/vfs/smbfs/smbfs.c     smbfs_info-&gt;current = smbfs_info-&gt;entries;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L924'>smbfs_info</a>        924 src/vfs/smbfs/smbfs.c     opendir_info *smbfs_info = (opendir_info *) info;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L926'>smbfs_info</a>        926 src/vfs/smbfs/smbfs.c     DEBUG (4, ("smbfs_readdir(%s)\n", smbfs_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L928'>smbfs_info</a>        928 src/vfs/smbfs/smbfs.c     if (!smbfs_info-&gt;entries)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L929'>smbfs_info</a>        929 src/vfs/smbfs/smbfs.c         if (!smbfs_loaddir (smbfs_info))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L932'>smbfs_info</a>        932 src/vfs/smbfs/smbfs.c     if (smbfs_info-&gt;current == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L936'>smbfs_info</a>        936 src/vfs/smbfs/smbfs.c         smbfs_free_dir (smbfs_info-&gt;entries);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L937'>smbfs_info</a>        937 src/vfs/smbfs/smbfs.c         smbfs_info-&gt;entries = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L941'>smbfs_info</a>        941 src/vfs/smbfs/smbfs.c     g_strlcpy (dirent_dest, smbfs_info-&gt;current-&gt;text, MC_MAXPATHLEN);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L942'>smbfs_info</a>        942 src/vfs/smbfs/smbfs.c     smbfs_info-&gt;current = smbfs_info-&gt;current-&gt;next;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L952'>smbfs_info</a>        952 src/vfs/smbfs/smbfs.c     opendir_info *smbfs_info = (opendir_info *) info;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L955'>smbfs_info</a>        955 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_closedir(%s)\n", smbfs_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1402'>smbfs_info</a>       1402 src/vfs/smbfs/smbfs.c     opendir_info *smbfs_info;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1414'>smbfs_info</a>       1414 src/vfs/smbfs/smbfs.c     smbfs_info = g_new (opendir_info, 1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1415'>smbfs_info</a>       1415 src/vfs/smbfs/smbfs.c     smbfs_info-&gt;server_list = FALSE;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1416'>smbfs_info</a>       1416 src/vfs/smbfs/smbfs.c     smbfs_info-&gt;path = g_strdup (path_element-&gt;path);   /* keep original */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1417'>smbfs_info</a>       1417 src/vfs/smbfs/smbfs.c     smbfs_info-&gt;dirname = remote_dir;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1418'>smbfs_info</a>       1418 src/vfs/smbfs/smbfs.c     smbfs_info-&gt;conn = sc;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1419'>smbfs_info</a>       1419 src/vfs/smbfs/smbfs.c     smbfs_info-&gt;entries = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1420'>smbfs_info</a>       1420 src/vfs/smbfs/smbfs.c     smbfs_info-&gt;current = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1422'>smbfs_info</a>       1422 src/vfs/smbfs/smbfs.c     return smbfs_info;</span>
+</pre>
+</body>
+</html>

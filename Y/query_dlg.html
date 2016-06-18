@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>query_dlg</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L293'>query_dlg</a>         293 lib/widget/history.c     WDialog *query_dlg;</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L321'>query_dlg</a>         321 lib/widget/history.c     query_dlg =</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L324'>query_dlg</a>         324 lib/widget/history.c     query_dlg-&gt;data = &amp;hist_data;</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L330'>query_dlg</a>         330 lib/widget/history.c     add_widget_autopos (query_dlg, query_list, WPOS_KEEP_ALL, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L338'>query_dlg</a>         338 lib/widget/history.c     send_message (query_dlg, NULL, MSG_RESIZE, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L340'>query_dlg</a>         340 lib/widget/history.c     if (WIDGET (query_dlg)-&gt;y &lt; widget-&gt;y)</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L359'>query_dlg</a>         359 lib/widget/history.c     if (dlg_run (query_dlg) != B_CANCEL)</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L379'>query_dlg</a>         379 lib/widget/history.c     if (WIDGET (query_dlg)-&gt;y &lt; widget-&gt;y)</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L382'>query_dlg</a>         382 lib/widget/history.c     dlg_destroy (query_dlg);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1233'>query_dlg</a>        1233 lib/widget/input_complete.c             WDialog *query_dlg;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1274'>query_dlg</a>        1274 lib/widget/input_complete.c             query_dlg = dlg_create (TRUE, y, x, query_height, query_width, WPOS_KEEP_DEFAULT, TRUE,</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1277'>query_dlg</a>        1277 lib/widget/input_complete.c             add_widget (query_dlg, query_list);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1282'>query_dlg</a>        1282 lib/widget/input_complete.c             i = dlg_run (query_dlg);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1292'>query_dlg</a>        1292 lib/widget/input_complete.c             dlg_destroy (query_dlg);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L275'>query_dlg</a>         275 lib/widget/wtools.c     WDialog *query_dlg;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L307'>query_dlg</a>         307 lib/widget/wtools.c     query_dlg =</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L315'>query_dlg</a>         315 lib/widget/wtools.c         add_widget_autopos (query_dlg, label_new (2, 3, text), WPOS_KEEP_TOP | WPOS_CENTER_HORZ,</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L317'>query_dlg</a>         317 lib/widget/wtools.c         add_widget (query_dlg, hline_new (lines - 4, -1, -1));</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L332'>query_dlg</a>         332 lib/widget/wtools.c             add_widget (query_dlg, button);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L340'>query_dlg</a>         340 lib/widget/wtools.c         send_message (query_dlg, NULL, MSG_RESIZE, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L346'>query_dlg</a>         346 lib/widget/wtools.c         switch (dlg_run (query_dlg))</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L351'>query_dlg</a>         351 lib/widget/wtools.c             result = query_dlg-&gt;ret_value - B_USER;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L355'>query_dlg</a>         355 lib/widget/wtools.c         dlg_destroy (query_dlg);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L359'>query_dlg</a>         359 lib/widget/wtools.c         add_widget_autopos (query_dlg, label_new (2, 3, text), WPOS_KEEP_TOP | WPOS_CENTER_HORZ,</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L361'>query_dlg</a>         361 lib/widget/wtools.c         add_widget (query_dlg, button_new (0, 0, 0, HIDDEN_BUTTON, "-", NULL));</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L362'>query_dlg</a>         362 lib/widget/wtools.c         last_query_dlg = query_dlg;</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>n_read</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1805'>n_read</a>           1805 src/filemanager/file.c             ssize_t n_read = -1, n_written;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1809'>n_read</a>           1809 src/filemanager/file.c                 while ((n_read = mc_read (src_desc, buf, bufsize)) &lt; 0 &amp;&amp; !ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1819'>n_read</a>           1819 src/filemanager/file.c             if (n_read == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1824'>n_read</a>           1824 src/filemanager/file.c             if (n_read &gt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1828'>n_read</a>           1828 src/filemanager/file.c                 n_read_total += n_read;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1839'>n_read</a>           1839 src/filemanager/file.c                 while ((n_written = mc_write (dest_desc, t, (size_t) n_read)) &lt; n_read)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1845'>n_read</a>           1845 src/filemanager/file.c                         n_read -= n_written;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1038'>n_read</a>           1038 src/filemanager/find.c         int n_read = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1067'>n_read</a>           1067 src/filemanager/find.c                 if (pos &gt;= n_read)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1070'>n_read</a>           1070 src/filemanager/find.c                     n_read = mc_read (file_fd, buffer, sizeof (buffer));</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1071'>n_read</a>           1071 src/filemanager/find.c                     if (n_read &lt;= 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1840'>n_read</a>           1840 src/vfs/ftpfs/ftpfs.c         ssize_t n_read, n_written;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1842'>n_read</a>           1842 src/vfs/ftpfs/ftpfs.c         while ((n_read = read (h, lc_buffer, sizeof (lc_buffer))) == -1)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1855'>n_read</a>           1855 src/vfs/ftpfs/ftpfs.c         if (n_read == 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1857'>n_read</a>           1857 src/vfs/ftpfs/ftpfs.c         n_stored += n_read;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1859'>n_read</a>           1859 src/vfs/ftpfs/ftpfs.c         while ((n_written = write (sock, w_buf, n_read)) != n_read)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1870'>n_read</a>           1870 src/vfs/ftpfs/ftpfs.c             n_read -= n_written;</span>
+</pre>
+</body>
+</html>

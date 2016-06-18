@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>tree_entry</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L98'>tree_entry</a>         98 src/filemanager/tree.c     tree_entry *selected_ptr;   /* The selected directory */</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L100'>tree_entry</a>        100 src/filemanager/tree.c     tree_entry **tree_shown;    /* Entries currently on screen */</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L120'>tree_entry</a>        120 src/filemanager/tree.c static tree_entry *</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L121'>tree_entry</a>        121 src/filemanager/tree.c back_ptr (tree_entry * ptr, int *count)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L136'>tree_entry</a>        136 src/filemanager/tree.c static tree_entry *</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L137'>tree_entry</a>        137 src/filemanager/tree.c forw_ptr (tree_entry * ptr, int *count)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L153'>tree_entry</a>        153 src/filemanager/tree.c remove_callback (tree_entry * entry, void *data)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L274'>tree_entry</a>        274 src/filemanager/tree.c     tree_entry *current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L291'>tree_entry</a>        291 src/filemanager/tree.c     tree-&gt;tree_shown = g_new0 (tree_entry *, tree_lines);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L451'>tree_entry</a>        451 src/filemanager/tree.c         tree_entry *current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L480'>tree_entry</a>        480 src/filemanager/tree.c         tree_entry *current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L505'>tree_entry</a>        505 src/filemanager/tree.c     tree_entry *current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L539'>tree_entry</a>        539 src/filemanager/tree.c     tree_entry *current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L540'>tree_entry</a>        540 src/filemanager/tree.c     tree_entry *old;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L620'>tree_entry</a>        620 src/filemanager/tree.c     tree_entry *current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1303'>tree_entry</a>       1303 src/filemanager/tree.c     tree_entry *current;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L82'>tree_entry</a>         82 src/filemanager/treestore.c static tree_entry *tree_store_add_entry (const vfs_path_t * name);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L237'>tree_entry</a>        237 src/filemanager/treestore.c             tree_entry *e;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L328'>tree_entry</a>        328 src/filemanager/treestore.c     tree_entry *current;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L377'>tree_entry</a>        377 src/filemanager/treestore.c static tree_entry *</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L381'>tree_entry</a>        381 src/filemanager/treestore.c     tree_entry *current = ts.tree_first;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L382'>tree_entry</a>        382 src/filemanager/treestore.c     tree_entry *old = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L383'>tree_entry</a>        383 src/filemanager/treestore.c     tree_entry *new;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L400'>tree_entry</a>        400 src/filemanager/treestore.c     new = g_new0 (tree_entry, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L475'>tree_entry</a>        475 src/filemanager/treestore.c tree_store_notify_remove (tree_entry * entry)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L490'>tree_entry</a>        490 src/filemanager/treestore.c static tree_entry *</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L491'>tree_entry</a>        491 src/filemanager/treestore.c remove_entry (tree_entry * entry)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L493'>tree_entry</a>        493 src/filemanager/treestore.c     tree_entry *current = entry-&gt;prev;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L495'>tree_entry</a>        495 src/filemanager/treestore.c     tree_entry *ret = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L592'>tree_entry</a>        592 src/filemanager/treestore.c tree_entry *</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L595'>tree_entry</a>        595 src/filemanager/treestore.c     tree_entry *current = ts.tree_first;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L683'>tree_entry</a>        683 src/filemanager/treestore.c     tree_entry *current, *base;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L709'>tree_entry</a>        709 src/filemanager/treestore.c         tree_entry *old;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L732'>tree_entry</a>        732 src/filemanager/treestore.c     tree_entry *current, *base;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L793'>tree_entry</a>        793 src/filemanager/treestore.c tree_entry *</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L796'>tree_entry</a>        796 src/filemanager/treestore.c     tree_entry *current, *retval;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L855'>tree_entry</a>        855 src/filemanager/treestore.c     tree_entry *current;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L871'>tree_entry</a>        871 src/filemanager/treestore.c         tree_entry *old;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L896'>tree_entry</a>        896 src/filemanager/treestore.c tree_entry *</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L901'>tree_entry</a>        901 src/filemanager/treestore.c     tree_entry *entry;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.h.html#L15'>tree_entry</a>         15 src/filemanager/treestore.h struct tree_entry;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.h.html#L16'>tree_entry</a>         16 src/filemanager/treestore.h typedef void (*tree_store_remove_fn) (struct tree_entry * tree, void *data);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.h.html#L30'>tree_entry</a>         30 src/filemanager/treestore.h     struct tree_entry *next;    /* Next item in the list */</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.h.html#L31'>tree_entry</a>         31 src/filemanager/treestore.h     struct tree_entry *prev;    /* Previous item in the list */</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.h.html#L36'>tree_entry</a>         36 src/filemanager/treestore.h     tree_entry *tree_first;     /* First entry in the list */</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.h.html#L37'>tree_entry</a>         37 src/filemanager/treestore.h     tree_entry *tree_last;      /* Last entry in the list */</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.h.html#L38'>tree_entry</a>         38 src/filemanager/treestore.h     tree_entry *check_start;    /* Start of checked subdirectories */</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.h.html#L53'>tree_entry</a>         53 src/filemanager/treestore.h tree_entry *tree_store_start_check (const vfs_path_t * vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.h.html#L56'>tree_entry</a>         56 src/filemanager/treestore.h tree_entry *tree_store_whereis (const vfs_path_t * name);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.h.html#L57'>tree_entry</a>         57 src/filemanager/treestore.h tree_entry *tree_store_rescan (const vfs_path_t * vpath);</span>
+</pre>
+</body>
+</html>

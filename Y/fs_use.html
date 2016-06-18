@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>fs_use</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1708'>fs_use</a>           1708 src/filemanager/mountlist.c     struct fs_usage fs_use;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1727'>fs_use</a>           1727 src/filemanager/mountlist.c         memset (&amp;fs_use, 0, sizeof (fs_use));</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1728'>fs_use</a>           1728 src/filemanager/mountlist.c         get_fs_usage (entry-&gt;me_mountdir, NULL, &amp;fs_use);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1736'>fs_use</a>           1736 src/filemanager/mountlist.c             ((uintmax_t) (getuid ()? fs_use.fsu_bavail : fs_use.fsu_bfree) *</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1737'>fs_use</a>           1737 src/filemanager/mountlist.c              fs_use.fsu_blocksize) &gt;&gt; 10;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1738'>fs_use</a>           1738 src/filemanager/mountlist.c         myfs_stats-&gt;total = ((uintmax_t) fs_use.fsu_blocks * fs_use.fsu_blocksize) &gt;&gt; 10;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1739'>fs_use</a>           1739 src/filemanager/mountlist.c         myfs_stats-&gt;nfree = (uintmax_t) fs_use.fsu_ffree;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1740'>fs_use</a>           1740 src/filemanager/mountlist.c         myfs_stats-&gt;nodes = (uintmax_t) fs_use.fsu_files;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1753'>fs_use</a>           1753 src/filemanager/mountlist.c     struct fs_usage fs_use;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1758'>fs_use</a>           1758 src/filemanager/mountlist.c         get_fs_usage (entry-&gt;me_mountdir, NULL, &amp;fs_use);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1766'>fs_use</a>           1766 src/filemanager/mountlist.c         myfs_stats-&gt;avail = ((uintmax_t) fs_use.fsu_bfree * fs_use.fsu_blocksize) &gt;&gt; 10;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1767'>fs_use</a>           1767 src/filemanager/mountlist.c         myfs_stats-&gt;total = ((uintmax_t) fs_use.fsu_blocks * fs_use.fsu_blocksize) &gt;&gt; 10;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1768'>fs_use</a>           1768 src/filemanager/mountlist.c         myfs_stats-&gt;nfree = (uintmax_t) fs_use.fsu_ffree;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1769'>fs_use</a>           1769 src/filemanager/mountlist.c         myfs_stats-&gt;nodes = (uintmax_t) fs_use.fsu_files;</span>
+</pre>
+</body>
+</html>

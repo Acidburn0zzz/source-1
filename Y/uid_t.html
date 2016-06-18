@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>uid_t</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--util.h.html#L185'>uid_t</a>             185 lib/util.h     const char *get_owner (uid_t uid);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L286'>uid_t</a>             286 lib/utilunix.c get_owner (uid_t uid)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L290'>uid_t</a>             290 lib/utilunix.c     static uid_t uid_last;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1252'>uid_t</a>            1252 lib/utilunix.c     static uid_t uid;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L253'>uid_t</a>             253 lib/vfs/interface.c MC_NAMEOP (chown, (const vfs_path_t *vpath, uid_t owner, gid_t group), (vpath, owner, group))</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L727'>uid_t</a>             727 lib/vfs/parse_ls_vga.c         s-&gt;st_uid = (uid_t) atol (columns[1]);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L169'>uid_t</a>             169 lib/vfs/vfs.h      int (*chown) (const vfs_path_t * vpath, uid_t owner, gid_t group);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L299'>uid_t</a>             299 lib/vfs/vfs.h  int mc_chown (const vfs_path_t * vpath, uid_t owner, gid_t group);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L240'>uid_t</a>             240 lib/widget/input_complete.c                 uid_t my_uid;</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L164'>uid_t</a>             164 src/consaver/cons.saver.c     uid_t uid, euid;</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L759'>uid_t</a>             759 src/filemanager/achown.c do_chown (uid_t u, gid_t g)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L785'>uid_t</a>             785 src/filemanager/achown.c     uid_t a_uid = sf-&gt;st_uid;</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L794'>uid_t</a>             794 src/filemanager/achown.c     else if (mc_chown (vpath, (ch_flags[9] == '+') ? sf-&gt;st_uid : (uid_t) (-1),</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L818'>uid_t</a>             818 src/filemanager/achown.c         else if (mc_chown (vpath, (ch_flags[9] == '+') ? a_uid : (uid_t) (-1),</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L888'>uid_t</a>             888 src/filemanager/achown.c                      (vpath, (ch_flags[9] == '+') ? sf_stat-&gt;st_uid : (uid_t) (-1),</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L297'>uid_t</a>             297 src/filemanager/chown.c do_chown (uid_t u, gid_t g)</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L313'>uid_t</a>             313 src/filemanager/chown.c apply_chowns (uid_t u, gid_t g)</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L336'>uid_t</a>             336 src/filemanager/chown.c     uid_t new_user;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1487'>uid_t</a>            1487 src/filemanager/file.c     uid_t src_uid = (uid_t) (-1);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L88'>uid_t</a>              88 src/vfs/extfs/extfs.c     uid_t uid;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1199'>uid_t</a>            1199 src/vfs/extfs/extfs.c extfs_chown (const vfs_path_t * vpath, uid_t owner, gid_t group)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1276'>uid_t</a>            1276 src/vfs/fish/fish.c fish_chown (const vfs_path_t * vpath, uid_t owner, gid_t group)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2030'>uid_t</a>            2030 src/vfs/ftpfs/ftpfs.c ftpfs_chown (const vfs_path_t * vpath, uid_t owner, gid_t group)</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L161'>uid_t</a>             161 src/vfs/local/local.c local_chown (const vfs_path_t * vpath, uid_t owner, gid_t group)</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L314'>uid_t</a>             314 src/vfs/sfs/sfs.c sfs_chown (const vfs_path_t * vpath, uid_t owner, gid_t group)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L410'>uid_t</a>             410 src/vfs/sftpfs/vfs_class.c sftpfs_cb_chown (const vfs_path_t * vpath, uid_t owner, gid_t group)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--client.h.html#L23'>uid_t</a>              23 src/vfs/smbfs/helpers/include/client.h     uid_t uid;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L66'>uid_t</a>              66 src/vfs/smbfs/helpers/include/proto.h int sys_chown (const char *fname, uid_t uid, gid_t gid);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L150'>uid_t</a>             150 src/vfs/smbfs/helpers/include/proto.h char *uidtoname (uid_t uid);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L152'>uid_t</a>             152 src/vfs/smbfs/helpers/include/proto.h uid_t nametouid (const char *name);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L375'>uid_t</a>             375 src/vfs/smbfs/helpers/include/smb.h     uid_t smb_userid;           /* this is actually the unix uid_t */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L396'>uid_t</a>             396 src/vfs/smbfs/helpers/include/smb.h     uid_t smb_userid;           /* this is actually the unix uid_t */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L515'>uid_t</a>             515 src/vfs/smbfs/helpers/include/smb.h     uid_t uid_users_cache[10];</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L539'>uid_t</a>             539 src/vfs/smbfs/helpers/include/smb.h     uid_t list[UID_CACHE_SIZE];</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L564'>uid_t</a>             564 src/vfs/smbfs/helpers/include/smb.h     uid_t uid;                  /* uid of user who *opened* this connection */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L588'>uid_t</a>             588 src/vfs/smbfs/helpers/include/smb.h     uid_t uid;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L638'>uid_t</a>             638 src/vfs/smbfs/helpers/include/smb.h     uid_t uid;                  /* uid of a validated user */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L765'>uid_t</a>             765 src/vfs/smbfs/helpers/include/smb.h     struct smb_passwd *(*getsmbpwuid) (uid_t);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L784'>uid_t</a>             784 src/vfs/smbfs/helpers/include/smb.h     struct sam_passwd *(*getsam21pwuid) (uid_t);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L818'>uid_t</a>             818 src/vfs/smbfs/helpers/include/smb.h     uid_t uid;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L252'>uid_t</a>             252 src/vfs/smbfs/helpers/lib/system.c sys_chown (const char *fname, uid_t uid, gid_t gid)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2506'>uid_t</a>            2506 src/vfs/smbfs/helpers/lib/util.c uidtoname (uid_t uid)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2535'>uid_t</a>            2535 src/vfs/smbfs/helpers/lib/util.c uid_t</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2541'>uid_t</a>            2541 src/vfs/smbfs/helpers/lib/util.c     return (uid_t) - 1;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L985'>uid_t</a>             985 src/vfs/smbfs/smbfs.c smbfs_chown (const vfs_path_t * vpath, uid_t owner, gid_t group)</span>
+</pre>
+</body>
+</html>

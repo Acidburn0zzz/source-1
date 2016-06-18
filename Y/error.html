@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>error</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L42'>error</a>              42 lib/mcconfig.h gboolean mc_config_save_file (mc_config_t * config, GError ** error);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L44'>error</a>              44 lib/mcconfig.h gboolean mc_config_save_to_file (mc_config_t * config, const gchar * filename, GError ** error);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L98'>error</a>              98 lib/mcconfig.h void mc_config_init_config_paths (GError ** error);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L102'>error</a>             102 lib/mcconfig.h gboolean mc_config_migrate_from_old_place (GError ** error, char **msg);</span>
+<span class='curline'><a href='../S/lib--search.h.html#L121'>error</a>             121 lib/search.h       mc_search_error_t error;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L262'>error</a>             262 lib/search/regex.c                                     GMatchInfo ** match_info, GError ** error)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L271'>error</a>             271 lib/search/regex.c                                    match_info, error);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L302'>error</a>             302 lib/search/regex.c                             match_info, error);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L325'>error</a>             325 lib/search/regex.c             lc_mc_search-&gt;error = MC_SEARCH_E_REGEX;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L820'>error</a>             820 lib/search/regex.c             lc_mc_search-&gt;error = MC_SEARCH_E_REGEX_COMPILE;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L828'>error</a>             828 lib/search/regex.c         const char *error;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L851'>error</a>             851 lib/search/regex.c             pcre_compile (mc_search_cond-&gt;str-&gt;str, pcre_options, &amp;error, &amp;erroffset, NULL);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L854'>error</a>             854 lib/search/regex.c             mc_search_set_error (lc_mc_search, MC_SEARCH_E_REGEX_COMPILE, "%s", error);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L857'>error</a>             857 lib/search/regex.c         lc_mc_search-&gt;regex_match_info = pcre_study (mc_search_cond-&gt;regex_handle, 0, &amp;error);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L858'>error</a>             858 lib/search/regex.c         if (lc_mc_search-&gt;regex_match_info == NULL &amp;&amp; error != NULL)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L860'>error</a>             860 lib/search/regex.c             mc_search_set_error (lc_mc_search, MC_SEARCH_E_REGEX_COMPILE, "%s", error);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L977'>error</a>             977 lib/search/regex.c     lc_mc_search-&gt;error = ret == MC_SEARCH_CB_ABORT ? MC_SEARCH_E_ABORT : MC_SEARCH_E_NOTFOUND;</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L261'>error</a>             261 lib/search/search.c     return (lc_mc_search-&gt;error == MC_SEARCH_E_OK);</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L499'>error</a>             499 lib/search/search.c     mc_search-&gt;error = code;</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L56'>error</a>              56 lib/serialize.c prepend_error_message (GError ** error, const char *format, ...)</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L62'>error</a>              62 lib/serialize.c     if ((error == NULL) || (*error == NULL))</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L69'>error</a>              69 lib/serialize.c     split_str = g_strdup_printf ("%s: %s", prepend_str, (*error)-&gt;message);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L71'>error</a>              71 lib/serialize.c     g_free ((*error)-&gt;message);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L72'>error</a>              72 lib/serialize.c     (*error)-&gt;message = split_str;</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L109'>error</a>             109 lib/serialize.c mc_serialize_str (const char prefix, const char *data, GError ** error)</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L113'>error</a>             113 lib/serialize.c         g_set_error (error, MC_ERROR, 0, "mc_serialize_str(): Input data is NULL.");</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L132'>error</a>             132 lib/serialize.c mc_deserialize_str (const char prefix, const char *data, GError ** error)</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L138'>error</a>             138 lib/serialize.c         g_set_error (error, MC_ERROR, 0, FUNC_NAME ": Input data is NULL or empty.");</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L144'>error</a>             144 lib/serialize.c         g_set_error (error, MC_ERROR, 0, FUNC_NAME ": String prefix doesn't equal to '%c'", prefix);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L156'>error</a>             156 lib/serialize.c             g_set_error (error, MC_ERROR, 0,</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L163'>error</a>             163 lib/serialize.c             g_set_error (error, MC_ERROR, 0, FUNC_NAME ": Too big string length");</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L174'>error</a>             174 lib/serialize.c         g_set_error (error, MC_ERROR, 0,</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L196'>error</a>             196 lib/serialize.c mc_serialize_config (const mc_config_t * data, GError ** error)</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L209'>error</a>             209 lib/serialize.c         serialized_str = mc_serialize_str ('g', *group_iterator, error);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L225'>error</a>             225 lib/serialize.c             serialized_str = mc_serialize_str ('p', *param_iterator, error);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L237'>error</a>             237 lib/serialize.c             serialized_str = mc_serialize_str ('v', value, error);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L269'>error</a>             269 lib/serialize.c     prepend_error_message (error, FUNC_NAME " at %zd", current_position + 1); \</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L275'>error</a>             275 lib/serialize.c mc_deserialize_config (const char *data, GError ** error)</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L299'>error</a>             299 lib/serialize.c             current_group = mc_deserialize_str ('g', data, error);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L309'>error</a>             309 lib/serialize.c             current_param = mc_deserialize_str ('p', data, error);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L320'>error</a>             320 lib/serialize.c             current_value = mc_deserialize_str ('v', data, error);</span>
+<span class='curline'><a href='../S/lib--serialize.h.html#L19'>error</a>              19 lib/serialize.h char *mc_serialize_str (const char prefix, const char *data, GError ** error);</span>
+<span class='curline'><a href='../S/lib--serialize.h.html#L20'>error</a>              20 lib/serialize.h char *mc_deserialize_str (const char prefix, const char *data, GError ** error);</span>
+<span class='curline'><a href='../S/lib--serialize.h.html#L22'>error</a>              22 lib/serialize.h char *mc_serialize_config (const mc_config_t * data, GError ** error);</span>
+<span class='curline'><a href='../S/lib--serialize.h.html#L23'>error</a>              23 lib/serialize.h mc_config_t *mc_deserialize_config (const char *data, GError ** error);</span>
+<span class='curline'><a href='../S/lib--skin.h.html#L132'>error</a>             132 lib/skin.h     gboolean mc_skin_init (const gchar * skin_override, GError ** error);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L109'>error</a>             109 lib/strutil.h      gchar *(*conv_gerror_message) (GError * error, const char *def_msg);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L203'>error</a>             203 lib/strutil.h  gchar *str_conv_gerror_message (GError * error, const char *def_msg);</span>
+<span class='curline'><a href='../S/lib--util.h.html#L80'>error</a>              80 lib/util.h         int error;</span>
+<span class='curline'><a href='../S/lib--util.h.html#L193'>error</a>             193 lib/util.h     int close_error_pipe (int error, const char *text);</span>
+<span class='curline'><a href='../S/lib--util.h.html#L201'>error</a>             201 lib/util.h     mc_pipe_t *mc_popen (const char *command, GError ** error);</span>
+<span class='curline'><a href='../S/lib--util.h.html#L202'>error</a>             202 lib/util.h     void mc_pread (mc_pipe_t * p, GError ** error);</span>
+<span class='curline'><a href='../S/lib--util.h.html#L203'>error</a>             203 lib/util.h     void mc_pclose (mc_pipe_t * p, GError ** error);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L266'>error</a>             266 lib/utilunix.c         ps-&gt;error = errno;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L510'>error</a>             510 lib/utilunix.c mc_popen (const char *command, GError ** error)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L518'>error</a>             518 lib/utilunix.c         mc_replace_error (error, MC_PIPE_ERROR_CREATE_PIPE, "%s",</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L525'>error</a>             525 lib/utilunix.c          NULL, NULL, &amp;p-&gt;child_pid, NULL, &amp;p-&gt;out.fd, &amp;p-&gt;err.fd, error))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L527'>error</a>             527 lib/utilunix.c         mc_replace_error (error, MC_PIPE_ERROR_CREATE_PIPE_STREAM, "%s",</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L568'>error</a>             568 lib/utilunix.c mc_pread (mc_pipe_t * p, GError ** error)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L575'>error</a>             575 lib/utilunix.c     if (error != NULL)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L576'>error</a>             576 lib/utilunix.c         *error = NULL;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L605'>error</a>             605 lib/utilunix.c         mc_propagate_error (error, MC_PIPE_ERROR_READ,</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L632'>error</a>             632 lib/utilunix.c mc_pclose (mc_pipe_t * p, GError ** error)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L650'>error</a>             650 lib/utilunix.c         mc_replace_error (error, MC_PIPE_ERROR_READ, _("Unexpected error in waitpid():\n%s"),</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L767'>error</a>             767 lib/utilunix.c close_error_pipe (int error, const char *text)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L777'>error</a>             777 lib/utilunix.c     if (error &lt; 0 || (error &gt; 0 &amp;&amp; (error &amp; D_ERROR) != 0))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L785'>error</a>             785 lib/utilunix.c             if (error &lt; 0)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L786'>error</a>             786 lib/utilunix.c                 error = D_ERROR;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L788'>error</a>             788 lib/utilunix.c             message (error, MSG_ERROR, _("Error dup'ing old error pipe"));</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L799'>error</a>             799 lib/utilunix.c     if (error &lt; 0)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L807'>error</a>             807 lib/utilunix.c         message (error, title, "%s", msg);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L812'>error</a>             812 lib/utilunix.c         message (error, title, "%s\n%s", text, msg);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L842'>error</a>             842 lib/vfs/interface.c     const char *error = NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L869'>error</a>             869 lib/vfs/interface.c                 error = _("%s is not a directory\n");</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L871'>error</a>             871 lib/vfs/interface.c                 error = _("Directory %s is not owned by you\n");</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L873'>error</a>             873 lib/vfs/interface.c                 error = _("Cannot set correct permissions for directory %s\n");</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L880'>error</a>             880 lib/vfs/interface.c             error = "";</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L884'>error</a>             884 lib/vfs/interface.c     if (error != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L891'>error</a>             891 lib/vfs/interface.c         if (*error)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L892'>error</a>             892 lib/vfs/interface.c             fprintf (stderr, error, buffer);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L914'>error</a>             914 lib/vfs/interface.c             error = NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L929'>error</a>             929 lib/vfs/interface.c     if (!error)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L690'>error</a>             690 lib/vfs/parse_ls_vga.c         goto error;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L698'>error</a>             698 lib/vfs/parse_ls_vga.c             goto error;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L712'>error</a>             712 lib/vfs/parse_ls_vga.c             goto error;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L722'>error</a>             722 lib/vfs/parse_ls_vga.c         goto error;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L736'>error</a>             736 lib/vfs/parse_ls_vga.c         goto error;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L761'>error</a>             761 lib/vfs/parse_ls_vga.c                 goto error;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L767'>error</a>             767 lib/vfs/parse_ls_vga.c                 goto error;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L771'>error</a>             771 lib/vfs/parse_ls_vga.c                 goto error;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L783'>error</a>             783 lib/vfs/parse_ls_vga.c             goto error;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L793'>error</a>             793 lib/vfs/parse_ls_vga.c         goto error;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L862'>error</a>             862 lib/vfs/parse_ls_vga.c   error:</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L89'>error</a>              89 lib/vfs/path.h char *vfs_path_serialize (const vfs_path_t * vpath, GError ** error);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L90'>error</a>              90 lib/vfs/path.h vfs_path_t *vfs_path_deserialize (const char *data, GError ** error);</span>
+<span class='curline'><a href='../S/src--args.c.html#L538'>error</a>             538 src/args.c                 char *error;</span>
+<span class='curline'><a href='../S/src--args.c.html#L540'>error</a>             540 src/args.c                 lineno = strtol (tmp + 1, &amp;error, 10);</span>
+<span class='curline'><a href='../S/src--args.c.html#L542'>error</a>             542 src/args.c                 if (*error == '\0')</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L123'>error</a>             123 src/clipboard.c         GError *error = NULL;</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L128'>error</a>             128 src/clipboard.c         mc_pread (p, &amp;error);</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L130'>error</a>             130 src/clipboard.c         if (error != NULL)</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L133'>error</a>             133 src/clipboard.c             g_error_free (error);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3456'>error</a>            3456 src/diffviewer/ydiff.c     int error;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3476'>error</a>            3476 src/diffviewer/ydiff.c     error = dview_init (dview, "-a", file1, file2, label1, label2, DATA_SRC_MEM);       /* XXX binary diff? */</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3482'>error</a>            3482 src/diffviewer/ydiff.c     if (error == 0)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3485'>error</a>            3485 src/diffviewer/ydiff.c     if (error != 0 || widget_get_state (WIDGET (dview_dlg), WST_CLOSED))</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3488'>error</a>            3488 src/diffviewer/ydiff.c     return error == 0 ? 1 : 0;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L884'>error</a>             884 src/editor/editcmd.c             if (!ok &amp;&amp; edit-&gt;search-&gt;error == MC_SEARCH_E_ABORT)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L951'>error</a>             951 src/editor/editcmd.c     if (edit-&gt;search-&gt;error == MC_SEARCH_E_NOTFOUND)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1947'>error</a>            1947 src/editor/editcmd.c     char *error = NULL;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1957'>error</a>            1957 src/editor/editcmd.c     count_repeat = strtol (f, &amp;error, 0);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1959'>error</a>            1959 src/editor/editcmd.c     if (*error != '\0')</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2624'>error</a>            2624 src/editor/editcmd.c             if (!(edit-&gt;search-&gt;error == MC_SEARCH_E_OK ||</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2625'>error</a>            2625 src/editor/editcmd.c                   (once_found &amp;&amp; edit-&gt;search-&gt;error == MC_SEARCH_E_NOTFOUND)))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2689'>error</a>            2689 src/editor/editcmd.c             if (edit-&gt;search-&gt;error != MC_SEARCH_E_OK)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3050'>error</a>            3050 src/editor/editcmd.c     char *error;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3060'>error</a>            3060 src/editor/editcmd.c     l = strtol (f, &amp;error, 0);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3061'>error</a>            3061 src/editor/editcmd.c     if (*error != '\0')</span>
+<span class='curline'><a href='../S/src--editor--spell.c.html#L285'>error</a>             285 src/editor/spell.c     AspellCanHaveError *error = NULL;</span>
+<span class='curline'><a href='../S/src--editor--spell.c.html#L309'>error</a>             309 src/editor/spell.c     error = mc_new_aspell_speller (global_speller-&gt;config);</span>
+<span class='curline'><a href='../S/src--editor--spell.c.html#L311'>error</a>             311 src/editor/spell.c     if (mc_aspell_error_number (error) == 0)</span>
+<span class='curline'><a href='../S/src--editor--spell.c.html#L312'>error</a>             312 src/editor/spell.c         global_speller-&gt;speller = mc_to_aspell_speller (error);</span>
+<span class='curline'><a href='../S/src--editor--spell.c.html#L315'>error</a>             315 src/editor/spell.c         edit_error_dialog (_("Error"), mc_aspell_error_message (error));</span>
+<span class='curline'><a href='../S/src--editor--spell.c.html#L316'>error</a>             316 src/editor/spell.c         mc_delete_aspell_can_have_error (error);</span>
+<span class='curline'><a href='../S/src--editor--spell.c.html#L438'>error</a>             438 src/editor/spell.c         AspellCanHaveError *error;</span>
+<span class='curline'><a href='../S/src--editor--spell.c.html#L460'>error</a>             460 src/editor/spell.c         error = mc_new_aspell_speller (global_speller-&gt;config);</span>
+<span class='curline'><a href='../S/src--editor--spell.c.html#L461'>error</a>             461 src/editor/spell.c         if (mc_aspell_error (error) != 0)</span>
+<span class='curline'><a href='../S/src--editor--spell.c.html#L463'>error</a>             463 src/editor/spell.c             mc_delete_aspell_can_have_error (error);</span>
+<span class='curline'><a href='../S/src--editor--spell.c.html#L467'>error</a>             467 src/editor/spell.c         global_speller-&gt;speller = mc_to_aspell_speller (error);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L777'>error</a>             777 src/filemanager/boxes.c             char *error = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L783'>error</a>             783 src/filemanager/boxes.c             cols = strtol (panel_brief_cols_out, &amp;error, 10);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L784'>error</a>             784 src/filemanager/boxes.c             if (*error == '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L247'>error</a>             247 src/filemanager/file.c         if (ctx-&gt;search_handle-&gt;error != MC_SEARCH_E_OK)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L672'>error</a>             672 src/filemanager/file.c real_do_file_error (enum OperationMode mode, const char *error)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L679'>error</a>             679 src/filemanager/file.c         query_dialog (msg, error, D_ERROR, 4, _("&amp;Skip"), _("Ski&amp;p all"), _("&amp;Retry"), _("&amp;Abort"));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1206'>error</a>            1206 src/filemanager/file.c     FileProgressStatus error = FILE_CONT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1222'>error</a>            1222 src/filemanager/file.c             error = file_error (_("Cannot remove directory \"%s\"\n%s"), s);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1223'>error</a>            1223 src/filemanager/file.c             if (error == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1225'>error</a>            1225 src/filemanager/file.c             if (error != FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1230'>error</a>            1230 src/filemanager/file.c     return error;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2444'>error</a>            2444 src/filemanager/file.c     FileProgressStatus error;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2460'>error</a>            2460 src/filemanager/file.c     error = check_dir_is_empty (s_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2461'>error</a>            2461 src/filemanager/file.c     if (error == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2463'>error</a>            2463 src/filemanager/file.c         error = query_recursive (ctx, vfs_path_as_str (s_vpath));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2464'>error</a>            2464 src/filemanager/file.c         if (error == FILE_CONT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2465'>error</a>            2465 src/filemanager/file.c             error = recursive_erase (tctx, ctx, s_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2466'>error</a>            2466 src/filemanager/file.c         return error;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2471'>error</a>            2471 src/filemanager/file.c         error = file_error (_("Cannot remove directory \"%s\"\n%s"), vfs_path_as_str (s_vpath));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2472'>error</a>            2472 src/filemanager/file.c         if (error != FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2473'>error</a>            2473 src/filemanager/file.c             return error;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2875'>error</a>            2875 src/filemanager/file.c                     if (ctx-&gt;search_handle-&gt;error != MC_SEARCH_E_OK)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2988'>error</a>            2988 src/filemanager/file.c                         if (ctx-&gt;search_handle-&gt;error != MC_SEARCH_E_OK)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1688'>error</a>            1688 src/filemanager/panel.c parse_display_format (WPanel * panel, const char *format, char **error, gboolean isstatus,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1697'>error</a>            1697 src/filemanager/panel.c     *error = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1820'>error</a>            1820 src/filemanager/panel.c             *error =</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1837'>error</a>            1837 src/filemanager/panel.c use_display_format (WPanel * panel, const char *format, char **error, gboolean isstatus)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1848'>error</a>            1848 src/filemanager/panel.c     home = parse_display_format (panel, format, error, isstatus, &amp;total_cols);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1850'>error</a>            1850 src/filemanager/panel.c     if (*error != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L172'>error</a>             172 src/filemanager/tree.c     int error;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L175'>error</a>             175 src/filemanager/tree.c     error = tree_store_save ();</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L177'>error</a>             177 src/filemanager/tree.c     if (error)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L183'>error</a>             183 src/filemanager/tree.c                  unix_error_string (error));</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L688'>error</a>             688 src/vfs/fish/fish.c             goto error;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L847'>error</a>             847 src/vfs/fish/fish.c   error:</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L310'>error</a>             310 src/viewer/datasource.c         goto error;</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L319'>error</a>             319 src/viewer/datasource.c             goto error;</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L336'>error</a>             336 src/viewer/datasource.c   error:</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L399'>error</a>             399 src/viewer/datasource.c     GError *error = NULL;</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L403'>error</a>             403 src/viewer/datasource.c     p = mc_popen (command, &amp;error);</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L407'>error</a>             407 src/viewer/datasource.c         mcview_show_error (view, error-&gt;message);</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L408'>error</a>             408 src/viewer/datasource.c         g_error_free (error);</span>
+<span class='curline'><a href='../S/src--viewer--dialogs.c.html#L233'>error</a>             233 src/viewer/dialogs.c         char *error;</span>
+<span class='curline'><a href='../S/src--viewer--dialogs.c.html#L235'>error</a>             235 src/viewer/dialogs.c         addr = (off_t) g_ascii_strtoll (exp, &amp;error, base);</span>
+<span class='curline'><a href='../S/src--viewer--dialogs.c.html#L236'>error</a>             236 src/viewer/dialogs.c         if ((*error == '\0') &amp;&amp; (addr &gt;= 0))</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L167'>error</a>             167 src/viewer/growbuf.c             GError *error = NULL;</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L175'>error</a>             175 src/viewer/growbuf.c             mc_pread (sp, &amp;error);</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L177'>error</a>             177 src/viewer/growbuf.c             if (error != NULL)</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L179'>error</a>             179 src/viewer/growbuf.c                 mcview_show_error (view, error-&gt;message);</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L180'>error</a>             180 src/viewer/growbuf.c                 g_error_free (error);</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L209'>error</a>             209 src/viewer/growbuf.c                                                unix_error_string (sp-&gt;out.error));</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L316'>error</a>             316 src/viewer/internal.h void mcview_show_error (WView * view, const char *error);</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L157'>error</a>             157 src/viewer/search.c             if (!ok &amp;&amp; view-&gt;search-&gt;error == MC_SEARCH_E_ABORT)</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L368'>error</a>             368 src/viewer/search.c         if (view-&gt;search-&gt;error == MC_SEARCH_E_ABORT || view-&gt;search-&gt;error == MC_SEARCH_E_NOTFOUND)</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L410'>error</a>             410 src/viewer/search.c         &amp;&amp; (view-&gt;search-&gt;error == MC_SEARCH_E_ABORT</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L411'>error</a>             411 src/viewer/search.c             || view-&gt;search-&gt;error == MC_SEARCH_E_NOTFOUND))</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L416'>error</a>             416 src/viewer/search.c         if (view-&gt;search-&gt;error == MC_SEARCH_E_NOTFOUND)</span>
+<span class='curline'><a href='../S/tests--lib--mcconfig--config_string.c.html#L55'>error</a>              55 tests/lib/mcconfig/config_string.c     GError *error = NULL;</span>
+<span class='curline'><a href='../S/tests--lib--mcconfig--config_string.c.html#L57'>error</a>              57 tests/lib/mcconfig/config_string.c     if (!mc_config_save_file (mc_config, &amp;error))</span>
+<span class='curline'><a href='../S/tests--lib--mcconfig--config_string.c.html#L59'>error</a>              59 tests/lib/mcconfig/config_string.c         fail ("Unable to save config file: %s", error-&gt;message);</span>
+<span class='curline'><a href='../S/tests--lib--mcconfig--config_string.c.html#L60'>error</a>              60 tests/lib/mcconfig/config_string.c         g_error_free (error);</span>
+<span class='curline'><a href='../S/tests--lib--serialize.c.html#L33'>error</a>              33 tests/lib/serialize.c static GError *error = NULL;</span>
+<span class='curline'><a href='../S/tests--lib--serialize.c.html#L48'>error</a>              48 tests/lib/serialize.c     error = NULL;</span>
+<span class='curline'><a href='../S/tests--lib--serialize.c.html#L57'>error</a>              57 tests/lib/serialize.c     g_clear_error (&amp;error);</span>
+<span class='curline'><a href='../S/tests--lib--serialize.c.html#L93'>error</a>              93 tests/lib/serialize.c     actual_result = mc_serialize_str (data-&gt;input_char_prefix, data-&gt;input_string, &amp;error);</span>
+<span class='curline'><a href='../S/tests--lib--serialize.c.html#L158'>error</a>             158 tests/lib/serialize.c     actual_result = mc_deserialize_str (data-&gt;input_char_prefix, data-&gt;input_string, &amp;error);</span>
+<span class='curline'><a href='../S/tests--lib--serialize.c.html#L163'>error</a>             163 tests/lib/serialize.c     mctest_assert_int_eq (error-&gt;code, data-&gt;expected_error_code);</span>
+<span class='curline'><a href='../S/tests--lib--serialize.c.html#L164'>error</a>             164 tests/lib/serialize.c     mctest_assert_str_eq (error-&gt;message, data-&gt;expected_error_string);</span>
+<span class='curline'><a href='../S/tests--lib--serialize.c.html#L202'>error</a>             202 tests/lib/serialize.c     actual_result = mc_deserialize_str (data-&gt;input_char_prefix, data-&gt;input_string, &amp;error);</span>
+<span class='curline'><a href='../S/tests--lib--serialize.c.html#L242'>error</a>             242 tests/lib/serialize.c     actual = mc_serialize_config (test_data, &amp;error);</span>
+<span class='curline'><a href='../S/tests--lib--serialize.c.html#L296'>error</a>             296 tests/lib/serialize.c     actual_result = mc_deserialize_config (data-&gt;input_string, &amp;error);</span>
+<span class='curline'><a href='../S/tests--lib--serialize.c.html#L301'>error</a>             301 tests/lib/serialize.c     mctest_assert_int_eq (error-&gt;code, data-&gt;expected_error_code);</span>
+<span class='curline'><a href='../S/tests--lib--serialize.c.html#L302'>error</a>             302 tests/lib/serialize.c     mctest_assert_str_eq (error-&gt;message, data-&gt;expected_error_string);</span>
+<span class='curline'><a href='../S/tests--lib--serialize.c.html#L319'>error</a>             319 tests/lib/serialize.c     actual = mc_deserialize_config (deserialize_input_value1, &amp;error);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_serialize.c.html#L153'>error</a>             153 tests/lib/vfs/path_serialize.c     GError *error = NULL;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_serialize.c.html#L157'>error</a>             157 tests/lib/vfs/path_serialize.c     serialized_vpath = vfs_path_serialize (vpath, &amp;error);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_serialize.c.html#L176'>error</a>             176 tests/lib/vfs/path_serialize.c     GError *error = NULL;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_serialize.c.html#L179'>error</a>             179 tests/lib/vfs/path_serialize.c     vpath = vfs_path_deserialize (ETALON_SERIALIZED_PATH, &amp;error);</span>
+</pre>
+</body>
+</html>

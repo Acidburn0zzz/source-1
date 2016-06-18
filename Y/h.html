@@ -1,0 +1,729 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>h</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L191'>h</a>                 191 lib/vfs/vfs.c      struct vfs_openfile *h;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L196'>h</a>                 196 lib/vfs/vfs.c      h = (struct vfs_openfile *) g_ptr_array_index (vfs_openfiles, handle - VFS_FIRST_HANDLE);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L197'>h</a>                 197 lib/vfs/vfs.c      if (h == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L200'>h</a>                 200 lib/vfs/vfs.c      g_assert (h-&gt;handle == handle);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L202'>h</a>                 202 lib/vfs/vfs.c      return h;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L217'>h</a>                 217 lib/vfs/vfs.c          struct vfs_openfile *h;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L219'>h</a>                 219 lib/vfs/vfs.c          h = (struct vfs_openfile *) g_ptr_array_index (vfs_openfiles, idx);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L220'>h</a>                 220 lib/vfs/vfs.c          g_free (h);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L233'>h</a>                 233 lib/vfs/vfs.c      struct vfs_openfile *h;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L235'>h</a>                 235 lib/vfs/vfs.c      h = vfs_get_openfile (handle);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L237'>h</a>                 237 lib/vfs/vfs.c      if (h == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L241'>h</a>                 241 lib/vfs/vfs.c          *fsinfo = h-&gt;fsinfo;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L243'>h</a>                 243 lib/vfs/vfs.c      return h-&gt;vclass;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L255'>h</a>                 255 lib/vfs/vfs.c      struct vfs_openfile *h;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L257'>h</a>                 257 lib/vfs/vfs.c      h = g_new (struct vfs_openfile, 1);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L258'>h</a>                 258 lib/vfs/vfs.c      h-&gt;fsinfo = fsinfo;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L259'>h</a>                 259 lib/vfs/vfs.c      h-&gt;vclass = vclass;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L262'>h</a>                 262 lib/vfs/vfs.c      h-&gt;handle = vfs_free_handle_list;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L263'>h</a>                 263 lib/vfs/vfs.c      if (h-&gt;handle == -1)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L266'>h</a>                 266 lib/vfs/vfs.c          h-&gt;handle = vfs_openfiles-&gt;len;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L267'>h</a>                 267 lib/vfs/vfs.c          g_ptr_array_add (vfs_openfiles, h);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L272'>h</a>                 272 lib/vfs/vfs.c          g_ptr_array_index (vfs_openfiles, h-&gt;handle) = h;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L275'>h</a>                 275 lib/vfs/vfs.c      h-&gt;handle += VFS_FIRST_HANDLE;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L276'>h</a>                 276 lib/vfs/vfs.c      return h-&gt;handle;</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L59'>h</a>                  59 lib/widget/button.c     WDialog *h = w-&gt;owner;</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L71'>h</a>                  71 lib/widget/button.c         if (parm == '\n' &amp;&amp; WIDGET (h-&gt;current-&gt;data) == WIDGET (b))</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L94'>h</a>                  94 lib/widget/button.c         h-&gt;ret_value = b-&gt;action;</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L96'>h</a>                  96 lib/widget/button.c             dlg_stop (h);</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L287'>h</a>                 287 lib/widget/buttonbar.c find_buttonbar (const WDialog * h)</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L289'>h</a>                 289 lib/widget/buttonbar.c     return BUTTONBAR (find_widget_type (h, buttonbar_callback));</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.h.html#L42'>h</a>                  42 lib/widget/buttonbar.h WButtonBar *find_buttonbar (const WDialog * h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L134'>h</a>                 134 lib/widget/dialog-switch.c dialog_switch_add (WDialog * h)</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L138'>h</a>                 138 lib/widget/dialog-switch.c     dlg = g_list_find (mc_dialogs, h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L144'>h</a>                 144 lib/widget/dialog-switch.c         mc_dialogs = g_list_prepend (mc_dialogs, h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L155'>h</a>                 155 lib/widget/dialog-switch.c dialog_switch_remove (WDialog * h)</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L159'>h</a>                 159 lib/widget/dialog-switch.c     if (DIALOG (mc_current-&gt;data) == h)</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L162'>h</a>                 162 lib/widget/dialog-switch.c         this = g_list_find (mc_dialogs, h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L227'>h</a>                 227 lib/widget/dialog-switch.c     GList *h;</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L239'>h</a>                 239 lib/widget/dialog-switch.c     for (h = mc_dialogs; h != NULL; h = g_list_next (h))</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L244'>h</a>                 244 lib/widget/dialog-switch.c         dlg = DIALOG (h-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L262'>h</a>                 262 lib/widget/dialog-switch.c         h = g_list_nth (mc_dialogs, dlg_num - 1 - rv);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L263'>h</a>                 263 lib/widget/dialog-switch.c         dialog_switch_goto (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L276'>h</a>                 276 lib/widget/dialog-switch.c         WDialog *h = DIALOG (mc_current-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L277'>h</a>                 277 lib/widget/dialog-switch.c         Widget *wh = WIDGET (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L281'>h</a>                 281 lib/widget/dialog-switch.c         ret = dlg_run (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L284'>h</a>                 284 lib/widget/dialog-switch.c             dlg_destroy (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.h.html#L19'>h</a>                  19 lib/widget/dialog-switch.h void dialog_switch_add (WDialog * h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.h.html#L20'>h</a>                  20 lib/widget/dialog-switch.h void dialog_switch_remove (WDialog * h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L89'>h</a>                  89 lib/widget/dialog.c dlg_widget_next (WDialog * h, GList * l)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L95'>h</a>                  95 lib/widget/dialog.c         next = h-&gt;widgets;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L103'>h</a>                 103 lib/widget/dialog.c dlg_widget_prev (WDialog * h, GList * l)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L109'>h</a>                 109 lib/widget/dialog.c         prev = g_list_last (h-&gt;widgets);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L122'>h</a>                 122 lib/widget/dialog.c dlg_broadcast_msg_to (WDialog * h, widget_msg_t msg, gboolean reverse, widget_options_t flags)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L126'>h</a>                 126 lib/widget/dialog.c     if (h-&gt;widgets == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L129'>h</a>                 129 lib/widget/dialog.c     if (h-&gt;current == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L130'>h</a>                 130 lib/widget/dialog.c         h-&gt;current = h-&gt;widgets;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L133'>h</a>                 133 lib/widget/dialog.c         p = dlg_widget_prev (h, h-&gt;current);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L135'>h</a>                 135 lib/widget/dialog.c         p = dlg_widget_next (h, h-&gt;current);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L144'>h</a>                 144 lib/widget/dialog.c             p = dlg_widget_prev (h, p);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L146'>h</a>                 146 lib/widget/dialog.c             p = dlg_widget_next (h, p);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L160'>h</a>                 160 lib/widget/dialog.c dlg_read_history (WDialog * h)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L173'>h</a>                 173 lib/widget/dialog.c     mc_event_raise (h-&gt;event_group, MCEVENT_HISTORY_LOAD, &amp;event_data);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L182'>h</a>                 182 lib/widget/dialog.c dlg_unfocus (WDialog * h)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L185'>h</a>                 185 lib/widget/dialog.c     if (h-&gt;current != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L187'>h</a>                 187 lib/widget/dialog.c         Widget *wh = WIDGET (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L191'>h</a>                 191 lib/widget/dialog.c             Widget *current = WIDGET (h-&gt;current-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L195'>h</a>                 195 lib/widget/dialog.c                 send_message (h, current, MSG_UNFOCUS, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L223'>h</a>                 223 lib/widget/dialog.c do_select_widget (WDialog * h, GList * w, select_dir_t dir)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L225'>h</a>                 225 lib/widget/dialog.c     Widget *w0 = WIDGET (h-&gt;current-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L227'>h</a>                 227 lib/widget/dialog.c     if (!dlg_unfocus (h))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L230'>h</a>                 230 lib/widget/dialog.c     h-&gt;current = w;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L234'>h</a>                 234 lib/widget/dialog.c         if (dlg_focus (h))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L240'>h</a>                 240 lib/widget/dialog.c             h-&gt;current = g_list_find (h-&gt;widgets, w0);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L241'>h</a>                 241 lib/widget/dialog.c             if (dlg_focus (h))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L247'>h</a>                 247 lib/widget/dialog.c             h-&gt;current = dlg_widget_next (h, h-&gt;current);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L250'>h</a>                 250 lib/widget/dialog.c             h-&gt;current = dlg_widget_prev (h, h-&gt;current);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L256'>h</a>                 256 lib/widget/dialog.c     while (h-&gt;current != w);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L258'>h</a>                 258 lib/widget/dialog.c     if (widget_overlapped (w0, WIDGET (h-&gt;current-&gt;data)))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L260'>h</a>                 260 lib/widget/dialog.c         send_message (h-&gt;current-&gt;data, NULL, MSG_DRAW, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L261'>h</a>                 261 lib/widget/dialog.c         send_message (h-&gt;current-&gt;data, NULL, MSG_FOCUS, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L283'>h</a>                 283 lib/widget/dialog.c dlg_execute_cmd (WDialog * h, long command)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L289'>h</a>                 289 lib/widget/dialog.c         h-&gt;ret_value = B_ENTER;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L290'>h</a>                 290 lib/widget/dialog.c         dlg_stop (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L293'>h</a>                 293 lib/widget/dialog.c         h-&gt;ret_value = B_CANCEL;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L294'>h</a>                 294 lib/widget/dialog.c         dlg_stop (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L299'>h</a>                 299 lib/widget/dialog.c         dlg_one_up (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L303'>h</a>                 303 lib/widget/dialog.c         dlg_one_down (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L308'>h</a>                 308 lib/widget/dialog.c             ev_help_t event_data = { NULL, h-&gt;help_ctx };</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L322'>h</a>                 322 lib/widget/dialog.c         if (!widget_get_state (WIDGET (h), WST_MODAL))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L328'>h</a>                 328 lib/widget/dialog.c         if (!widget_get_state (WIDGET (h), WST_MODAL))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L334'>h</a>                 334 lib/widget/dialog.c         if (!widget_get_state (WIDGET (h), WST_MODAL))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L350'>h</a>                 350 lib/widget/dialog.c dlg_handle_key (WDialog * h, int d_key)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L359'>h</a>                 359 lib/widget/dialog.c     if (send_message (h, NULL, MSG_ACTION, command, NULL) == MSG_HANDLED</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L360'>h</a>                 360 lib/widget/dialog.c         || dlg_execute_cmd (h, command) == MSG_HANDLED)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L384'>h</a>                 384 lib/widget/dialog.c dlg_mouse_event (WDialog * h, Gpm_Event * event)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L386'>h</a>                 386 lib/widget/dialog.c     Widget *wh = WIDGET (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L395'>h</a>                 395 lib/widget/dialog.c         h-&gt;ret_value = B_CANCEL;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L396'>h</a>                 396 lib/widget/dialog.c         dlg_stop (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L410'>h</a>                 410 lib/widget/dialog.c     p = g_list_last (h-&gt;widgets);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L435'>h</a>                 435 lib/widget/dialog.c dlg_try_hotkey (WDialog * h, int d_key)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L442'>h</a>                 442 lib/widget/dialog.c     if (h-&gt;widgets == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L445'>h</a>                 445 lib/widget/dialog.c     if (h-&gt;current == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L446'>h</a>                 446 lib/widget/dialog.c         h-&gt;current = h-&gt;widgets;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L453'>h</a>                 453 lib/widget/dialog.c     current = WIDGET (h-&gt;current-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L479'>h</a>                 479 lib/widget/dialog.c     hot_cur = dlg_widget_next (h, h-&gt;current);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L482'>h</a>                 482 lib/widget/dialog.c     while (h-&gt;current != hot_cur &amp;&amp; handled == MSG_NOT_HANDLED)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L491'>h</a>                 491 lib/widget/dialog.c             hot_cur = dlg_widget_next (h, hot_cur);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L495'>h</a>                 495 lib/widget/dialog.c         do_select_widget (h, hot_cur, SELECT_EXACT);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L503'>h</a>                 503 lib/widget/dialog.c dlg_key_event (WDialog * h, int d_key)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L507'>h</a>                 507 lib/widget/dialog.c     if (h-&gt;widgets == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L510'>h</a>                 510 lib/widget/dialog.c     if (h-&gt;current == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L511'>h</a>                 511 lib/widget/dialog.c         h-&gt;current = h-&gt;widgets;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L514'>h</a>                 514 lib/widget/dialog.c     if (!widget_get_options (WIDGET (h), WOP_WANT_TAB))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L518'>h</a>                 518 lib/widget/dialog.c             dlg_one_down (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L523'>h</a>                 523 lib/widget/dialog.c             dlg_one_up (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L529'>h</a>                 529 lib/widget/dialog.c     handled = send_message (h, NULL, MSG_KEY, d_key, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L533'>h</a>                 533 lib/widget/dialog.c         handled = dlg_try_hotkey (h, d_key);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L536'>h</a>                 536 lib/widget/dialog.c         send_message (h, NULL, MSG_HOTKEY_HANDLED, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L539'>h</a>                 539 lib/widget/dialog.c         handled = send_message (h-&gt;current-&gt;data, NULL, MSG_KEY, d_key, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L543'>h</a>                 543 lib/widget/dialog.c         handled = send_message (h, NULL, MSG_UNHANDLED_KEY, d_key, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L546'>h</a>                 546 lib/widget/dialog.c         handled = dlg_handle_key (h, d_key);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L549'>h</a>                 549 lib/widget/dialog.c     send_message (h, NULL, MSG_POST_KEY, d_key, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L555'>h</a>                 555 lib/widget/dialog.c frontend_dlg_run (WDialog * h)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L557'>h</a>                 557 lib/widget/dialog.c     Widget *wh = WIDGET (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L565'>h</a>                 565 lib/widget/dialog.c         send_message (h, NULL, MSG_VALIDATE, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L589'>h</a>                 589 lib/widget/dialog.c         update_cursor (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L593'>h</a>                 593 lib/widget/dialog.c         d_key = tty_get_event (&amp;event, h-&gt;mouse_status == MOU_REPEAT, TRUE);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L595'>h</a>                 595 lib/widget/dialog.c         dlg_process_event (h, d_key, &amp;event);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L598'>h</a>                 598 lib/widget/dialog.c             send_message (h, NULL, MSG_VALIDATE, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L619'>h</a>                 619 lib/widget/dialog.c     WDialog *h = widget-&gt;owner;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L622'>h</a>                 622 lib/widget/dialog.c     l = g_list_find (h-&gt;widgets, w);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L627'>h</a>                 627 lib/widget/dialog.c     if (set_top &amp;&amp; widget_get_state (WIDGET (h), WST_ACTIVE))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L628'>h</a>                 628 lib/widget/dialog.c         do_select_widget (h, l, SELECT_EXACT);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L631'>h</a>                 631 lib/widget/dialog.c     h-&gt;widgets = g_list_remove_link (h-&gt;widgets, l);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L633'>h</a>                 633 lib/widget/dialog.c         h-&gt;widgets = g_list_concat (h-&gt;widgets, l);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L635'>h</a>                 635 lib/widget/dialog.c         h-&gt;widgets = g_list_concat (l, h-&gt;widgets);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L644'>h</a>                 644 lib/widget/dialog.c dlg_default_repaint (WDialog * h)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L646'>h</a>                 646 lib/widget/dialog.c     Widget *wh = WIDGET (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L653'>h</a>                 653 lib/widget/dialog.c     space = h-&gt;compact ? 0 : 1;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L655'>h</a>                 655 lib/widget/dialog.c     tty_setcolor (h-&gt;color[DLG_COLOR_NORMAL]);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L656'>h</a>                 656 lib/widget/dialog.c     dlg_erase (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L659'>h</a>                 659 lib/widget/dialog.c     if (h-&gt;title != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L661'>h</a>                 661 lib/widget/dialog.c         tty_setcolor (h-&gt;color[DLG_COLOR_TITLE]);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L662'>h</a>                 662 lib/widget/dialog.c         widget_move (h, space, (wh-&gt;cols - str_term_width1 (h-&gt;title)) / 2);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L663'>h</a>                 663 lib/widget/dialog.c         tty_print_string (h-&gt;title);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L671'>h</a>                 671 lib/widget/dialog.c dlg_set_position (WDialog * h, int y, int x, int lines, int cols)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L673'>h</a>                 673 lib/widget/dialog.c     Widget *wh = WIDGET (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L691'>h</a>                 691 lib/widget/dialog.c     if (h-&gt;widgets == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L694'>h</a>                 694 lib/widget/dialog.c     if (h-&gt;current == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L695'>h</a>                 695 lib/widget/dialog.c         h-&gt;current = h-&gt;widgets;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L707'>h</a>                 707 lib/widget/dialog.c         for (w = h-&gt;widgets; w != NULL; w = g_list_next (w))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L757'>h</a>                 757 lib/widget/dialog.c dlg_set_size (WDialog * h, int lines, int cols)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L759'>h</a>                 759 lib/widget/dialog.c     Widget *w = WIDGET (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L790'>h</a>                 790 lib/widget/dialog.c     dlg_set_position (h, y, x, lines, cols);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L799'>h</a>                 799 lib/widget/dialog.c     WDialog *h = DIALOG (w);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L808'>h</a>                 808 lib/widget/dialog.c         if (h-&gt;color != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L810'>h</a>                 810 lib/widget/dialog.c             dlg_default_repaint (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L826'>h</a>                 826 lib/widget/dialog.c         dlg_set_size (h, w-&gt;lines, w-&gt;cols);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L918'>h</a>                 918 lib/widget/dialog.c dlg_erase (WDialog * h)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L920'>h</a>                 920 lib/widget/dialog.c     Widget *wh = WIDGET (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L932'>h</a>                 932 lib/widget/dialog.c add_widget_autopos (WDialog * h, void *w, widget_pos_flags_t pos_flags, const void *before)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L934'>h</a>                 934 lib/widget/dialog.c     Widget *wh = WIDGET (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L951'>h</a>                 951 lib/widget/dialog.c     widget-&gt;owner = h;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L953'>h</a>                 953 lib/widget/dialog.c     widget-&gt;id = h-&gt;widget_id++;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L955'>h</a>                 955 lib/widget/dialog.c     if (h-&gt;widgets == NULL || before == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L957'>h</a>                 957 lib/widget/dialog.c         h-&gt;widgets = g_list_append (h-&gt;widgets, widget);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L958'>h</a>                 958 lib/widget/dialog.c         h-&gt;current = g_list_last (h-&gt;widgets);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L964'>h</a>                 964 lib/widget/dialog.c         b = g_list_find (h-&gt;widgets, before);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L971'>h</a>                 971 lib/widget/dialog.c         h-&gt;widgets = g_list_insert_before (h-&gt;widgets, b, widget);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L973'>h</a>                 973 lib/widget/dialog.c             h-&gt;current = g_list_previous (b);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L975'>h</a>                 975 lib/widget/dialog.c             h-&gt;current = g_list_last (h-&gt;widgets);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L993'>h</a>                 993 lib/widget/dialog.c add_widget (WDialog * h, void *w)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L995'>h</a>                 995 lib/widget/dialog.c     return add_widget_autopos (h, w, WPOS_KEEP_DEFAULT,</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L996'>h</a>                 996 lib/widget/dialog.c                                h-&gt;current != NULL ? h-&gt;current-&gt;data : NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1002'>h</a>                1002 lib/widget/dialog.c add_widget_before (WDialog * h, void *w, void *before)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1004'>h</a>                1004 lib/widget/dialog.c     return add_widget_autopos (h, w, WPOS_KEEP_DEFAULT, before);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1013'>h</a>                1013 lib/widget/dialog.c     WDialog *h;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1020'>h</a>                1020 lib/widget/dialog.c     h = WIDGET (w)-&gt;owner;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1022'>h</a>                1022 lib/widget/dialog.c     d = g_list_find (h-&gt;widgets, w);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1023'>h</a>                1023 lib/widget/dialog.c     if (d == h-&gt;current)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1024'>h</a>                1024 lib/widget/dialog.c         h-&gt;current = dlg_widget_next (h, d);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1026'>h</a>                1026 lib/widget/dialog.c     h-&gt;widgets = g_list_remove_link (h-&gt;widgets, d);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1032'>h</a>                1032 lib/widget/dialog.c     if (widget_get_state (WIDGET (h), WST_ACTIVE))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1034'>h</a>                1034 lib/widget/dialog.c         dlg_redraw (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1035'>h</a>                1035 lib/widget/dialog.c         dlg_focus (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1068'>h</a>                1068 lib/widget/dialog.c dlg_broadcast_msg (WDialog * h, widget_msg_t msg)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1070'>h</a>                1070 lib/widget/dialog.c     dlg_broadcast_msg_to (h, msg, FALSE, 0);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1076'>h</a>                1076 lib/widget/dialog.c dlg_focus (WDialog * h)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1079'>h</a>                1079 lib/widget/dialog.c     if (h-&gt;current != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1081'>h</a>                1081 lib/widget/dialog.c         Widget *wh = WIDGET (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1085'>h</a>                1085 lib/widget/dialog.c             Widget *current = WIDGET (h-&gt;current-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1090'>h</a>                1090 lib/widget/dialog.c                 send_message (h, current, MSG_FOCUS, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1103'>h</a>                1103 lib/widget/dialog.c find_widget_type (const WDialog * h, widget_cb_fn callback)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1107'>h</a>                1107 lib/widget/dialog.c     w = g_list_find_custom (h-&gt;widgets, (gconstpointer) callback, dlg_find_widget_callback);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1116'>h</a>                1116 lib/widget/dialog.c dlg_find_by_id (const WDialog * h, unsigned long id)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1120'>h</a>                1120 lib/widget/dialog.c     w = g_list_find_custom (h-&gt;widgets, GUINT_TO_POINTER (id), dlg_find_widget_by_id);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1128'>h</a>                1128 lib/widget/dialog.c dlg_select_by_id (const WDialog * h, unsigned long id)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1132'>h</a>                1132 lib/widget/dialog.c     w = dlg_find_by_id (h, id);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1146'>h</a>                1146 lib/widget/dialog.c     WDialog *h = widget-&gt;owner;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1151'>h</a>                1151 lib/widget/dialog.c         do_select_widget (h, g_list_find (h-&gt;widgets, widget), SELECT_EXACT);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1169'>h</a>                1169 lib/widget/dialog.c dlg_one_up (WDialog * h)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1171'>h</a>                1171 lib/widget/dialog.c     if (h-&gt;widgets != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1172'>h</a>                1172 lib/widget/dialog.c         do_select_widget (h, dlg_widget_prev (h, h-&gt;current), SELECT_PREV);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1179'>h</a>                1179 lib/widget/dialog.c dlg_one_down (WDialog * h)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1181'>h</a>                1181 lib/widget/dialog.c     if (h-&gt;widgets != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1182'>h</a>                1182 lib/widget/dialog.c         do_select_widget (h, dlg_widget_next (h, h-&gt;current), SELECT_NEXT);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1188'>h</a>                1188 lib/widget/dialog.c update_cursor (WDialog * h)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1190'>h</a>                1190 lib/widget/dialog.c     GList *p = h-&gt;current;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1192'>h</a>                1192 lib/widget/dialog.c     if (p != NULL &amp;&amp; widget_get_state (WIDGET (h), WST_ACTIVE))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1203'>h</a>                1203 lib/widget/dialog.c                 p = dlg_widget_next (h, p);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1204'>h</a>                1204 lib/widget/dialog.c                 if (p == h-&gt;current)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1224'>h</a>                1224 lib/widget/dialog.c dlg_redraw (WDialog * h)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1226'>h</a>                1226 lib/widget/dialog.c     if (!widget_get_state (WIDGET (h), WST_ACTIVE))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1229'>h</a>                1229 lib/widget/dialog.c     if (h-&gt;winch_pending)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1231'>h</a>                1231 lib/widget/dialog.c         h-&gt;winch_pending = FALSE;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1232'>h</a>                1232 lib/widget/dialog.c         send_message (h, NULL, MSG_RESIZE, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1235'>h</a>                1235 lib/widget/dialog.c     send_message (h, NULL, MSG_DRAW, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1236'>h</a>                1236 lib/widget/dialog.c     dlg_broadcast_msg (h, MSG_DRAW);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1237'>h</a>                1237 lib/widget/dialog.c     update_cursor (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1243'>h</a>                1243 lib/widget/dialog.c dlg_stop (WDialog * h)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1245'>h</a>                1245 lib/widget/dialog.c     widget_set_state (WIDGET (h), WST_CLOSED, TRUE);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1252'>h</a>                1252 lib/widget/dialog.c dlg_init (WDialog * h)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1254'>h</a>                1254 lib/widget/dialog.c     Widget *wh = WIDGET (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1260'>h</a>                1260 lib/widget/dialog.c     top_dlg = g_list_prepend (top_dlg, h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1266'>h</a>                1266 lib/widget/dialog.c             dialog_switch_add (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1268'>h</a>                1268 lib/widget/dialog.c         send_message (h, NULL, MSG_INIT, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1269'>h</a>                1269 lib/widget/dialog.c         dlg_broadcast_msg (h, MSG_INIT);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1270'>h</a>                1270 lib/widget/dialog.c         dlg_read_history (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1276'>h</a>                1276 lib/widget/dialog.c     dlg_redraw (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1279'>h</a>                1279 lib/widget/dialog.c     while (h-&gt;current != NULL &amp;&amp; !dlg_focus (h))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1280'>h</a>                1280 lib/widget/dialog.c         h-&gt;current = dlg_widget_next (h, h-&gt;current);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1283'>h</a>                1283 lib/widget/dialog.c     h-&gt;ret_value = 0;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1289'>h</a>                1289 lib/widget/dialog.c dlg_process_event (WDialog * h, int key, Gpm_Event * event)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1294'>h</a>                1294 lib/widget/dialog.c             if (send_message (h, NULL, MSG_ACTION, CK_Cancel, NULL) != MSG_HANDLED)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1295'>h</a>                1295 lib/widget/dialog.c                 dlg_execute_cmd (h, CK_Cancel);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1298'>h</a>                1298 lib/widget/dialog.c         h-&gt;mouse_status = dlg_mouse_event (h, event);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1300'>h</a>                1300 lib/widget/dialog.c         dlg_key_event (h, key);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1307'>h</a>                1307 lib/widget/dialog.c dlg_run_done (WDialog * h)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1309'>h</a>                1309 lib/widget/dialog.c     top_dlg = g_list_remove (top_dlg, h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1311'>h</a>                1311 lib/widget/dialog.c     if (widget_get_state (WIDGET (h), WST_CLOSED))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1313'>h</a>                1313 lib/widget/dialog.c         send_message (h, h-&gt;current-&gt;data, MSG_END, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1314'>h</a>                1314 lib/widget/dialog.c         if (!widget_get_state (WIDGET (h), WST_MODAL))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1315'>h</a>                1315 lib/widget/dialog.c             dialog_switch_remove (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1328'>h</a>                1328 lib/widget/dialog.c dlg_run (WDialog * h)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1330'>h</a>                1330 lib/widget/dialog.c     dlg_init (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1331'>h</a>                1331 lib/widget/dialog.c     frontend_dlg_run (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1332'>h</a>                1332 lib/widget/dialog.c     dlg_run_done (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1333'>h</a>                1333 lib/widget/dialog.c     return h-&gt;ret_value;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1339'>h</a>                1339 lib/widget/dialog.c dlg_destroy (WDialog * h)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1342'>h</a>                1342 lib/widget/dialog.c     dlg_save_history (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1343'>h</a>                1343 lib/widget/dialog.c     dlg_broadcast_msg (h, MSG_DESTROY);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1344'>h</a>                1344 lib/widget/dialog.c     g_list_free_full (h-&gt;widgets, g_free);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1345'>h</a>                1345 lib/widget/dialog.c     mc_event_group_del (h-&gt;event_group);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1346'>h</a>                1346 lib/widget/dialog.c     g_free (h-&gt;event_group);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1347'>h</a>                1347 lib/widget/dialog.c     g_free (h-&gt;title);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1348'>h</a>                1348 lib/widget/dialog.c     g_free (h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1359'>h</a>                1359 lib/widget/dialog.c dlg_save_history (WDialog * h)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1381'>h</a>                1381 lib/widget/dialog.c         mc_event_raise (h-&gt;event_group, MCEVENT_HISTORY_SAVE, &amp;event_data);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1393'>h</a>                1393 lib/widget/dialog.c dlg_get_title (const WDialog * h, size_t len)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1397'>h</a>                1397 lib/widget/dialog.c     if (h == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1400'>h</a>                1400 lib/widget/dialog.c     if (h-&gt;get_title != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1401'>h</a>                1401 lib/widget/dialog.c         t = h-&gt;get_title (h, len);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L50'>h</a>                  50 lib/widget/dialog.h typedef char *(*dlg_title_str) (const WDialog * h, size_t len);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L117'>h</a>                 117 lib/widget/dialog.h unsigned long add_widget_before (WDialog * h, void *w, void *before);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L122'>h</a>                 122 lib/widget/dialog.h void dlg_set_size (WDialog * h, int lines, int cols);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L124'>h</a>                 124 lib/widget/dialog.h void dlg_set_position (WDialog * h, int y, int x, int lines, int cols);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L126'>h</a>                 126 lib/widget/dialog.h void dlg_init (WDialog * h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L128'>h</a>                 128 lib/widget/dialog.h void dlg_destroy (WDialog * h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L130'>h</a>                 130 lib/widget/dialog.h void dlg_run_done (WDialog * h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L131'>h</a>                 131 lib/widget/dialog.h void dlg_save_history (WDialog * h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L132'>h</a>                 132 lib/widget/dialog.h void dlg_process_event (WDialog * h, int key, Gpm_Event * event);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L134'>h</a>                 134 lib/widget/dialog.h char *dlg_get_title (const WDialog * h, size_t len);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L136'>h</a>                 136 lib/widget/dialog.h void dlg_redraw (WDialog * h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L138'>h</a>                 138 lib/widget/dialog.h void dlg_broadcast_msg (WDialog * h, widget_msg_t message);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L144'>h</a>                 144 lib/widget/dialog.h void dlg_default_repaint (WDialog * h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L146'>h</a>                 146 lib/widget/dialog.h void dlg_erase (WDialog * h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L147'>h</a>                 147 lib/widget/dialog.h void dlg_stop (WDialog * h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L152'>h</a>                 152 lib/widget/dialog.h void dlg_one_up (WDialog * h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L153'>h</a>                 153 lib/widget/dialog.h void dlg_one_down (WDialog * h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L154'>h</a>                 154 lib/widget/dialog.h gboolean dlg_focus (WDialog * h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L155'>h</a>                 155 lib/widget/dialog.h Widget *find_widget_type (const WDialog * h, widget_cb_fn callback);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L156'>h</a>                 156 lib/widget/dialog.h Widget *dlg_find_by_id (const WDialog * h, unsigned long id);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L157'>h</a>                 157 lib/widget/dialog.h void dlg_select_by_id (const WDialog * h, unsigned long id);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L163'>h</a>                 163 lib/widget/dialog.h void update_cursor (WDialog * h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L170'>h</a>                 170 lib/widget/dialog.h dlg_get_current_widget_id (const WDialog * h)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L172'>h</a>                 172 lib/widget/dialog.h     return WIDGET (h-&gt;current-&gt;data)-&gt;id;</span>
+<span class='curline'><a href='../S/lib--widget--gauge.c.html#L61'>h</a>                  61 lib/widget/gauge.c     WDialog *h = w-&gt;owner;</span>
+<span class='curline'><a href='../S/lib--widget--gauge.c.html#L76'>h</a>                  76 lib/widget/gauge.c             tty_setcolor (h-&gt;color[DLG_COLOR_NORMAL]);</span>
+<span class='curline'><a href='../S/lib--widget--gauge.c.html#L108'>h</a>                 108 lib/widget/gauge.c                 tty_setcolor (h-&gt;color[DLG_COLOR_NORMAL]);</span>
+<span class='curline'><a href='../S/lib--widget--gauge.c.html#L113'>h</a>                 113 lib/widget/gauge.c                 tty_setcolor (h-&gt;color[DLG_COLOR_NORMAL]);</span>
+<span class='curline'><a href='../S/lib--widget--gauge.c.html#L117'>h</a>                 117 lib/widget/gauge.c                 tty_setcolor (h-&gt;color[DLG_COLOR_NORMAL]);</span>
+<span class='curline'><a href='../S/lib--widget--groupbox.c.html#L70'>h</a>                  70 lib/widget/groupbox.c             WDialog *h = w-&gt;owner;</span>
+<span class='curline'><a href='../S/lib--widget--groupbox.c.html#L75'>h</a>                  75 lib/widget/groupbox.c             tty_setcolor (disabled ? DISABLED_COLOR : h-&gt;color[DLG_COLOR_NORMAL]);</span>
+<span class='curline'><a href='../S/lib--widget--groupbox.c.html#L80'>h</a>                  80 lib/widget/groupbox.c                 tty_setcolor (disabled ? DISABLED_COLOR : h-&gt;color[DLG_COLOR_TITLE]);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L231'>h</a>                 231 lib/widget/history.c history_save (mc_config_t * cfg, const char *name, GList * h)</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L237'>h</a>                 237 lib/widget/history.c     if (name == NULL || *name == '\0' || h == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L241'>h</a>                 241 lib/widget/history.c     h = g_list_last (h);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L244'>h</a>                 244 lib/widget/history.c     for (i = 0; (i &lt; num_history_items_recorded - 1) &amp;&amp; (h-&gt;prev != NULL); i++)</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L245'>h</a>                 245 lib/widget/history.c         h = g_list_previous (h);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L257'>h</a>                 257 lib/widget/history.c     for (i = 0; h != NULL; h = g_list_next (h))</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L260'>h</a>                 260 lib/widget/history.c         char *text = (char *) h-&gt;data;</span>
+<span class='curline'><a href='../S/lib--widget--history.h.html#L28'>h</a>                  28 lib/widget/history.h void history_save (mc_config_t * cfg, const char *name, GList * h);</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L60'>h</a>                  60 lib/widget/hline.c     WDialog *h = w-&gt;owner;</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L68'>h</a>                  68 lib/widget/hline.c             Widget *wo = WIDGET (h);</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L70'>h</a>                  70 lib/widget/hline.c             if (h-&gt;compact)</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L91'>h</a>                  91 lib/widget/hline.c             tty_setcolor (h-&gt;color[DLG_COLOR_NORMAL]);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1029'>h</a>                1029 lib/widget/input_complete.c     WDialog *h = DIALOG (w);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1039'>h</a>                1039 lib/widget/input_complete.c             h-&gt;ret_value = 0;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1040'>h</a>                1040 lib/widget/input_complete.c             dlg_stop (h);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1048'>h</a>                1048 lib/widget/input_complete.c                 h-&gt;ret_value = 0;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1049'>h</a>                1049 lib/widget/input_complete.c                 dlg_stop (h);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1056'>h</a>                1056 lib/widget/input_complete.c                 h-&gt;ret_value = B_USER;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1057'>h</a>                1057 lib/widget/input_complete.c                 dlg_stop (h);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1067'>h</a>                1067 lib/widget/input_complete.c                 for (i = 0, e = listbox_get_first_link (LISTBOX (h-&gt;current-&gt;data));</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1074'>h</a>                1074 lib/widget/input_complete.c                         listbox_select_entry (LISTBOX (h-&gt;current-&gt;data), i);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1077'>h</a>                1077 lib/widget/input_complete.c                         widget_redraw (WIDGET (h-&gt;current-&gt;data));</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1095'>h</a>                1095 lib/widget/input_complete.c                 h-&gt;ret_value = B_USER;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1096'>h</a>                1096 lib/widget/input_complete.c                 dlg_stop (h);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1121'>h</a>                1121 lib/widget/input_complete.c                 for (i = 0, e = listbox_get_first_link (LISTBOX (h-&gt;current-&gt;data));</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1132'>h</a>                1132 lib/widget/input_complete.c                             listbox_select_entry (LISTBOX (h-&gt;current-&gt;data), i);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1183'>h</a>                1183 lib/widget/input_complete.c                     widget_redraw (WIDGET (h-&gt;current-&gt;data));</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1187'>h</a>                1187 lib/widget/input_complete.c                     h-&gt;ret_value = B_ENTER;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1188'>h</a>                1188 lib/widget/input_complete.c                     dlg_stop (h);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1230'>h</a>                1230 lib/widget/input_complete.c             int x, y, w, h;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1248'>h</a>                1248 lib/widget/input_complete.c                 h = 2 + count;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1253'>h</a>                1253 lib/widget/input_complete.c                 h = start_y;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1258'>h</a>                1258 lib/widget/input_complete.c                 h = LINES - start_y - 1;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1271'>h</a>                1271 lib/widget/input_complete.c             query_height = h;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1276'>h</a>                1276 lib/widget/input_complete.c             query_list = listbox_new (1, 1, h - 2, w - 2, FALSE, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L63'>h</a>                  63 lib/widget/label.c     WDialog *h = w-&gt;owner;</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L89'>h</a>                  89 lib/widget/label.c                 tty_setcolor (disabled ? DISABLED_COLOR : h-&gt;color[DLG_COLOR_NORMAL]);</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.h.html#L10'>h</a>                  10 lib/widget/listbox-window.h #define LISTBOX_APPEND_TEXT(l,h,t,d,f) \</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.h.html#L11'>h</a>                  11 lib/widget/listbox-window.h     listbox_add_item (l-&gt;list, LISTBOX_APPEND_AT_END, h, t, d, f)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L134'>h</a>                 134 lib/widget/listbox.c     const WDialog *h = w-&gt;owner;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L144'>h</a>                 144 lib/widget/listbox.c     normalc = disabled ? DISABLED_COLOR : h-&gt;color[DLG_COLOR_NORMAL];</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L149'>h</a>                 149 lib/widget/listbox.c             ? h-&gt;color[DLG_COLOR_HOT_FOCUS] </span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L150'>h</a>                 150 lib/widget/listbox.c             : h-&gt;color[DLG_COLOR_FOCUS];</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L412'>h</a>                 412 lib/widget/listbox.c         WDialog *h = WIDGET (l)-&gt;owner;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L414'>h</a>                 414 lib/widget/listbox.c         h-&gt;ret_value = B_ENTER;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L415'>h</a>                 415 lib/widget/listbox.c         dlg_stop (h);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L257'>h</a>                 257 lib/widget/menu.c     WDialog *h;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L266'>h</a>                 266 lib/widget/menu.c     h = WIDGET (menubar)-&gt;owner;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L267'>h</a>                 267 lib/widget/menu.c     h-&gt;current = g_list_find (h-&gt;widgets, dlg_find_by_id (h, menubar-&gt;previous_widget));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L274'>h</a>                 274 lib/widget/menu.c     h-&gt;current = g_list_find (h-&gt;widgets, menubar);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L990'>h</a>                 990 lib/widget/menu.c find_menubar (const WDialog * h)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L992'>h</a>                 992 lib/widget/menu.c     return MENUBAR (find_widget_type (h, menubar_callback));</span>
+<span class='curline'><a href='../S/lib--widget--menu.h.html#L57'>h</a>                  57 lib/widget/menu.h WMenuBar *find_menubar (const WDialog * h);</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L277'>h</a>                 277 lib/widget/widget-common.c     WDialog *h = w-&gt;owner;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L285'>h</a>                 285 lib/widget/widget-common.c             color = h-&gt;color[DLG_COLOR_HOT_FOCUS];</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L287'>h</a>                 287 lib/widget/widget-common.c             color = h-&gt;color[DLG_COLOR_HOT_NORMAL];</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L292'>h</a>                 292 lib/widget/widget-common.c             color = h-&gt;color[DLG_COLOR_FOCUS];</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L294'>h</a>                 294 lib/widget/widget-common.c             color = h-&gt;color[DLG_COLOR_NORMAL];</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L330'>h</a>                 330 lib/widget/widget-common.c         WDialog *h = w-&gt;owner;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L332'>h</a>                 332 lib/widget/widget-common.c         if (h != NULL &amp;&amp; widget_get_state (WIDGET (h), WST_ACTIVE))</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L348'>h</a>                 348 lib/widget/widget-common.c     WDialog *h = old_w-&gt;owner;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L351'>h</a>                 351 lib/widget/widget-common.c     if (h-&gt;widgets == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L354'>h</a>                 354 lib/widget/widget-common.c     if (h-&gt;current == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L355'>h</a>                 355 lib/widget/widget-common.c         h-&gt;current = h-&gt;widgets;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L357'>h</a>                 357 lib/widget/widget-common.c     if (old_w == h-&gt;current-&gt;data)</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L360'>h</a>                 360 lib/widget/widget-common.c     new_w-&gt;owner = h;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L364'>h</a>                 364 lib/widget/widget-common.c         h-&gt;current-&gt;data = new_w;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L366'>h</a>                 366 lib/widget/widget-common.c         g_list_find (h-&gt;widgets, old_w)-&gt;data = new_w;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L68'>h</a>                  68 lib/widget/wtools.c     WDialog *h = DIALOG (w);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L81'>h</a>                  81 lib/widget/wtools.c                 if (top_dlg-&gt;data != (void *) h)</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L104'>h</a>                 104 lib/widget/wtools.c             dlg_set_position (h, ypos, xpos, w-&gt;lines, w-&gt;cols);</span>
+<span class='curline'><a href='../S/src--diffviewer--internal.h.html#L15'>h</a>                  15 src/diffviewer/internal.h #define error_dialog(h, s) query_dialog(h, s, D_ERROR, 1, _("&amp;Dismiss"))</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1804'>h</a>                1804 src/diffviewer/ydiff.c                 GArray *h = NULL;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1812'>h</a>                1812 src/diffviewer/ydiff.c                     h = g_array_new (FALSE, FALSE, sizeof (BRACKET));</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1813'>h</a>                1813 src/diffviewer/ydiff.c                     if (h != NULL)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1818'>h</a>                1818 src/diffviewer/ydiff.c                             hdiff_scan (p-&gt;p, p-&gt;u.len, q-&gt;p, q-&gt;u.len, HDIFF_MINCTX, h,</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1822'>h</a>                1822 src/diffviewer/ydiff.c                             g_array_free (h, TRUE);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1823'>h</a>                1823 src/diffviewer/ydiff.c                             h = NULL;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1827'>h</a>                1827 src/diffviewer/ydiff.c                 g_ptr_array_add (dview-&gt;hdiff, h);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1848'>h</a>                1848 src/diffviewer/ydiff.c             GArray *h;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1850'>h</a>                1850 src/diffviewer/ydiff.c             h = (GArray *) g_ptr_array_index (dview-&gt;hdiff, i);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1851'>h</a>                1851 src/diffviewer/ydiff.c             if (h != NULL)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1852'>h</a>                1852 src/diffviewer/ydiff.c                 g_array_free (h, TRUE);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2882'>h</a>                2882 src/diffviewer/ydiff.c     WDialog *h;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2892'>h</a>                2892 src/diffviewer/ydiff.c     h = WIDGET (dview)-&gt;owner;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2893'>h</a>                2893 src/diffviewer/ydiff.c     h_modal = widget_get_state (WIDGET (h), WST_MODAL);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2898'>h</a>                2898 src/diffviewer/ydiff.c     widget_set_state (WIDGET (h), WST_MODAL, TRUE);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2908'>h</a>                2908 src/diffviewer/ydiff.c     widget_set_state (WIDGET (h), WST_MODAL, h_modal);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2966'>h</a>                2966 src/diffviewer/ydiff.c     WDialog *h;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2970'>h</a>                2970 src/diffviewer/ydiff.c     h = d-&gt;owner;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2971'>h</a>                2971 src/diffviewer/ydiff.c     b = find_buttonbar (h);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3306'>h</a>                3306 src/diffviewer/ydiff.c     WDialog *h = w-&gt;owner;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3325'>h</a>                3325 src/diffviewer/ydiff.c             dlg_stop (h);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3333'>h</a>                3333 src/diffviewer/ydiff.c             dlg_stop (h);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3378'>h</a>                3378 src/diffviewer/ydiff.c dview_adjust_size (WDialog * h)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3384'>h</a>                3384 src/diffviewer/ydiff.c     dview = (WDiff *) find_widget_type (h, dview_callback);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3385'>h</a>                3385 src/diffviewer/ydiff.c     bar = find_buttonbar (h);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3398'>h</a>                3398 src/diffviewer/ydiff.c     WDialog *h = DIALOG (w);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3403'>h</a>                3403 src/diffviewer/ydiff.c         dview_adjust_size (h);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3414'>h</a>                3414 src/diffviewer/ydiff.c         dview = (WDiff *) find_widget_type (h, dview_callback);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3418'>h</a>                3418 src/diffviewer/ydiff.c             dlg_stop (h);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3429'>h</a>                3429 src/diffviewer/ydiff.c dview_get_title (const WDialog * h, size_t len)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3437'>h</a>                3437 src/diffviewer/ydiff.c     dview = (const WDiff *) find_widget_type (h, dview_callback);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L74'>h</a>                  74 src/editor/edit-impl.h #define edit_error_dialog(h,s) query_dialog (h, s, D_ERROR, 1, _("&amp;Dismiss"))</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L75'>h</a>                  75 src/editor/edit-impl.h #define edit_query_dialog(h,s) query_dialog (h, s, D_NORMAL, 1, _("&amp;Dismiss"))</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L76'>h</a>                  76 src/editor/edit-impl.h #define edit_query_dialog2(h,t,a,b) query_dialog (h, t, D_NORMAL, 2, a, b)</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L77'>h</a>                  77 src/editor/edit-impl.h #define edit_query_dialog3(h,t,a,b,c) query_dialog (h, t, D_NORMAL, 3, a, b, c)</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L139'>h</a>                 139 src/editor/edit-impl.h gboolean edit_add_window (WDialog * h, int y, int x, int lines, int cols,</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L141'>h</a>                 141 src/editor/edit-impl.h WEdit *find_editor (const WDialog * h);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L143'>h</a>                 143 src/editor/edit-impl.h gboolean edit_drop_hotkey_menu (WDialog * h, int key);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L144'>h</a>                 144 src/editor/edit-impl.h void edit_menu_cmd (WDialog * h);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L188'>h</a>                 188 src/editor/edit-impl.h gboolean edit_load_cmd (WDialog * h);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L189'>h</a>                 189 src/editor/edit-impl.h gboolean edit_load_syntax_file (WDialog * h);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L190'>h</a>                 190 src/editor/edit-impl.h gboolean edit_load_menu_file (WDialog * h);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L221'>h</a>                 221 src/editor/edit-impl.h void edit_syntax_onoff_cmd (WDialog * h);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L222'>h</a>                 222 src/editor/edit-impl.h void edit_show_tabs_tws_cmd (WDialog * h);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L223'>h</a>                 223 src/editor/edit-impl.h void edit_show_margin_cmd (WDialog * h);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L224'>h</a>                 224 src/editor/edit-impl.h void edit_show_numbers_cmd (WDialog * h);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L275'>h</a>                 275 src/editor/edit-impl.h void edit_options_dialog (WDialog * h);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L528'>h</a>                 528 src/editor/editcmd.c edit_load_file_from_filename (WDialog * h, const vfs_path_t * vpath)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L530'>h</a>                 530 src/editor/editcmd.c     Widget *w = WIDGET (h);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L532'>h</a>                 532 src/editor/editcmd.c     return edit_add_window (h, w-&gt;y + 1, w-&gt;x, w-&gt;lines - 2, w-&gt;cols, vpath, 0);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1573'>h</a>                1573 src/editor/editcmd.c edit_syntax_onoff_cmd (WDialog * h)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1576'>h</a>                1576 src/editor/editcmd.c     g_list_foreach (h-&gt;widgets, edit_syntax_onoff_cb, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1577'>h</a>                1577 src/editor/editcmd.c     dlg_redraw (h);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1588'>h</a>                1588 src/editor/editcmd.c edit_show_tabs_tws_cmd (WDialog * h)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1591'>h</a>                1591 src/editor/editcmd.c     g_list_foreach (h-&gt;widgets, edit_redraw_page_cb, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1592'>h</a>                1592 src/editor/editcmd.c     dlg_redraw (h);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1603'>h</a>                1603 src/editor/editcmd.c edit_show_margin_cmd (WDialog * h)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1606'>h</a>                1606 src/editor/editcmd.c     g_list_foreach (h-&gt;widgets, edit_redraw_page_cb, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1607'>h</a>                1607 src/editor/editcmd.c     dlg_redraw (h);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1618'>h</a>                1618 src/editor/editcmd.c edit_show_numbers_cmd (WDialog * h)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1622'>h</a>                1622 src/editor/editcmd.c     g_list_foreach (h-&gt;widgets, edit_redraw_page_cb, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1623'>h</a>                1623 src/editor/editcmd.c     dlg_redraw (h);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2102'>h</a>                2102 src/editor/editcmd.c edit_load_cmd (WDialog * h)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2116'>h</a>                2116 src/editor/editcmd.c         ret = edit_load_file_from_filename (h, exp_vpath);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2133'>h</a>                2133 src/editor/editcmd.c edit_load_syntax_file (WDialog * h)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2159'>h</a>                2159 src/editor/editcmd.c         ret = edit_load_file_from_filename (h, user_syntax_file_vpath);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2163'>h</a>                2163 src/editor/editcmd.c         ret = edit_load_file_from_filename (h, extdir_vpath);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2178'>h</a>                2178 src/editor/editcmd.c edit_load_menu_file (WDialog * h)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2228'>h</a>                2228 src/editor/editcmd.c     ret = edit_load_file_from_filename (h, buffer_vpath);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2252'>h</a>                2252 src/editor/editcmd.c         WDialog *h = WIDGET (edit)-&gt;owner;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2259'>h</a>                2259 src/editor/editcmd.c         if (edit_widget_is_editor (CONST_WIDGET (h-&gt;current-&gt;data)))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2260'>h</a>                2260 src/editor/editcmd.c             edit = (WEdit *) h-&gt;current-&gt;data;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2263'>h</a>                2263 src/editor/editcmd.c             edit = find_editor (h);</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L74'>h</a>                  74 src/editor/editcmd_dialogs.c     WDialog *h = DIALOG (w);</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L79'>h</a>                  79 src/editor/editcmd_dialogs.c         h-&gt;ret_value = parm;</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L80'>h</a>                  80 src/editor/editcmd_dialogs.c         dlg_stop (h);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L198'>h</a>                 198 src/editor/editdraw.c     Widget *h = WIDGET (WIDGET (edit)-&gt;owner);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L199'>h</a>                 199 src/editor/editdraw.c     const int w = h-&gt;cols;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L233'>h</a>                 233 src/editor/editdraw.c     widget_move (h, 0, 0);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L243'>h</a>                 243 src/editor/editdraw.c         widget_move (h, 0, w - 6 - 6);</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L266'>h</a>                 266 src/editor/editmenu.c edit_drop_menu_cmd (WDialog * h, int which)</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L270'>h</a>                 270 src/editor/editmenu.c     menubar = find_menubar (h);</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L303'>h</a>                 303 src/editor/editmenu.c edit_menu_cmd (WDialog * h)</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L305'>h</a>                 305 src/editor/editmenu.c     edit_drop_menu_cmd (h, -1);</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L311'>h</a>                 311 src/editor/editmenu.c edit_drop_hotkey_menu (WDialog * h, int key)</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L341'>h</a>                 341 src/editor/editmenu.c     edit_drop_menu_cmd (h, m);</span>
+<span class='curline'><a href='../S/src--editor--editoptions.c.html#L118'>h</a>                 118 src/editor/editoptions.c edit_options_dialog (WDialog * h)</span>
+<span class='curline'><a href='../S/src--editor--editoptions.c.html#L200'>h</a>                 200 src/editor/editoptions.c         g_list_foreach (h-&gt;widgets, edit_reset_over_col, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editoptions.c.html#L236'>h</a>                 236 src/editor/editoptions.c         g_list_foreach (h-&gt;widgets, edit_reload_syntax, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L320'>h</a>                 320 src/editor/editwidget.c edit_window_list (const WDialog * h)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L323'>h</a>                 323 src/editor/editwidget.c     const size_t dlg_num = g_list_length (h-&gt;widgets) - offset;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L335'>h</a>                 335 src/editor/editwidget.c     for (w = h-&gt;widgets; w != NULL; w = g_list_next (w))</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L353'>h</a>                 353 src/editor/editwidget.c     rv = g_list_position (h-&gt;widgets, h-&gt;current) - offset;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L358'>h</a>                 358 src/editor/editwidget.c         w = g_list_nth (h-&gt;widgets, rv + offset);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L387'>h</a>                 387 src/editor/editwidget.c edit_get_title (const WDialog * h, size_t len)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L389'>h</a>                 389 src/editor/editwidget.c     const WEdit *edit = find_editor (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L410'>h</a>                 410 src/editor/editwidget.c edit_dialog_command_execute (WDialog * h, long command)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L412'>h</a>                 412 src/editor/editwidget.c     Widget *wh = WIDGET (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L418'>h</a>                 418 src/editor/editwidget.c         edit_add_window (h, wh-&gt;y + 1, wh-&gt;x, wh-&gt;lines - 2, wh-&gt;cols, NULL, 0);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L421'>h</a>                 421 src/editor/editwidget.c         edit_load_cmd (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L424'>h</a>                 424 src/editor/editwidget.c         edit_load_syntax_file (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L427'>h</a>                 427 src/editor/editwidget.c         edit_load_menu_file (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L431'>h</a>                 431 src/editor/editwidget.c         if (edit_widget_is_editor (CONST_WIDGET (h-&gt;current-&gt;data)) &amp;&amp;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L432'>h</a>                 432 src/editor/editwidget.c             edit_close_cmd ((WEdit *) h-&gt;current-&gt;data) &amp;&amp; find_editor (h) == NULL)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L433'>h</a>                 433 src/editor/editwidget.c             dlg_stop (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L440'>h</a>                 440 src/editor/editwidget.c         edit_menu_cmd (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L446'>h</a>                 446 src/editor/editwidget.c             Widget *w = WIDGET (h-&gt;current-&gt;data);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L451'>h</a>                 451 src/editor/editwidget.c                 dlg_stop (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L458'>h</a>                 458 src/editor/editwidget.c         edit_syntax_onoff_cmd (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L461'>h</a>                 461 src/editor/editwidget.c         edit_show_tabs_tws_cmd (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L464'>h</a>                 464 src/editor/editwidget.c         edit_show_margin_cmd (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L467'>h</a>                 467 src/editor/editwidget.c         edit_show_numbers_cmd (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L480'>h</a>                 480 src/editor/editwidget.c         if (edit_widget_is_editor (CONST_WIDGET (h-&gt;current-&gt;data)))</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L481'>h</a>                 481 src/editor/editwidget.c             edit_handle_move_resize ((WEdit *) h-&gt;current-&gt;data, command);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L484'>h</a>                 484 src/editor/editwidget.c         edit_window_list (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L487'>h</a>                 487 src/editor/editwidget.c         dlg_one_down (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L488'>h</a>                 488 src/editor/editwidget.c         dlg_select_widget (h-&gt;current-&gt;data);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L491'>h</a>                 491 src/editor/editwidget.c         dlg_one_up (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L492'>h</a>                 492 src/editor/editwidget.c         dlg_select_widget (h-&gt;current-&gt;data);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L495'>h</a>                 495 src/editor/editwidget.c         edit_options_dialog (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L639'>h</a>                 639 src/editor/editwidget.c edit_quit (WDialog * h)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L645'>h</a>                 645 src/editor/editwidget.c     widget_set_state (WIDGET (h), WST_ACTIVE, TRUE);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L647'>h</a>                 647 src/editor/editwidget.c     for (l = h-&gt;widgets; l != NULL; l = g_list_next (l))</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L669'>h</a>                 669 src/editor/editwidget.c         dlg_stop (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L767'>h</a>                 767 src/editor/editwidget.c     WDialog *h = DIALOG (w);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L778'>h</a>                 778 src/editor/editwidget.c         dlg_erase (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L782'>h</a>                 782 src/editor/editwidget.c         menubar = find_menubar (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L783'>h</a>                 783 src/editor/editwidget.c         buttonbar = find_buttonbar (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L790'>h</a>                 790 src/editor/editwidget.c         g_list_foreach (h-&gt;widgets, (GFunc) edit_dialog_resize_cb, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L799'>h</a>                 799 src/editor/editwidget.c             result = edit_dialog_command_execute (h, parm);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L803'>h</a>                 803 src/editor/editwidget.c             if (result == MSG_NOT_HANDLED &amp;&amp; sender == WIDGET (find_menubar (h)))</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L804'>h</a>                 804 src/editor/editwidget.c                 result = send_message (h-&gt;current-&gt;data, NULL, MSG_ACTION, parm, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L811'>h</a>                 811 src/editor/editwidget.c             Widget *we = WIDGET (h-&gt;current-&gt;data);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L828'>h</a>                 828 src/editor/editwidget.c                     ret = edit_dialog_command_execute (h, command);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L845'>h</a>                 845 src/editor/editwidget.c         return edit_drop_hotkey_menu (h, parm) ? MSG_HANDLED : MSG_NOT_HANDLED;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L848'>h</a>                 848 src/editor/editwidget.c         edit_quit (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L857'>h</a>                 857 src/editor/editwidget.c         return send_message (h-&gt;current-&gt;data, NULL, MSG_IDLE, 0, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L880'>h</a>                 880 src/editor/editwidget.c         WDialog *h = DIALOG (w);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L883'>h</a>                 883 src/editor/editwidget.c         b = find_menubar (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L894'>h</a>                 894 src/editor/editwidget.c             for (l = h-&gt;widgets; l != NULL; l = g_list_next (l))</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L906'>h</a>                 906 src/editor/editwidget.c                 if (top != h-&gt;current)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L916'>h</a>                 916 src/editor/editwidget.c                     send_message (h, NULL, MSG_ACTION, CK_Close, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1014'>h</a>                1014 src/editor/editwidget.c     Widget *h = WIDGET (w-&gt;owner);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1039'>h</a>                1039 src/editor/editwidget.c     global_y = CLAMP (global_y, h-&gt;y + 1, h-&gt;y + h-&gt;lines - 2); /* Status line, buttonbar */</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1040'>h</a>                1040 src/editor/editwidget.c     global_x = CLAMP (global_x, h-&gt;x, h-&gt;x + h-&gt;cols - 1);      /* Currently a no-op, as the dialog has no left/right margins. */</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1271'>h</a>                1271 src/editor/editwidget.c find_editor (const WDialog * h)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1273'>h</a>                1273 src/editor/editwidget.c     if (edit_widget_is_editor (CONST_WIDGET (h-&gt;current-&gt;data)))</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1274'>h</a>                1274 src/editor/editwidget.c         return (WEdit *) h-&gt;current-&gt;data;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1275'>h</a>                1275 src/editor/editwidget.c     return (WEdit *) find_widget_type (h, edit_callback);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1297'>h</a>                1297 src/editor/editwidget.c     WDialog *h = WIDGET (e)-&gt;owner;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1301'>h</a>                1301 src/editor/editwidget.c     edit_status (e, (void *) e == h-&gt;current-&gt;data);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1313'>h</a>                1313 src/editor/editwidget.c     widget_redraw (WIDGET (find_buttonbar (h)));</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1350'>h</a>                1350 src/editor/editwidget.c edit_add_window (WDialog * h, int y, int x, int lines, int cols, const vfs_path_t * f, long fline)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1363'>h</a>                1363 src/editor/editwidget.c     add_widget (h, w);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1364'>h</a>                1364 src/editor/editwidget.c     dlg_redraw (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1504'>h</a>                1504 src/editor/editwidget.c         Widget *h = WIDGET (w-&gt;owner);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1507'>h</a>                1507 src/editor/editwidget.c         widget_set_size (w, h-&gt;y + 1, h-&gt;x, h-&gt;lines - 2, h-&gt;cols);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L283'>h</a>                 283 src/filemanager/achown.c update_mode (WDialog * h)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L287'>h</a>                 287 src/filemanager/achown.c     send_message (h-&gt;current-&gt;data, NULL, MSG_FOCUS, 0, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L303'>h</a>                 303 src/filemanager/achown.c                 WDialog *h = DIALOG (w);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L305'>h</a>                 305 src/filemanager/achown.c                 h-&gt;ret_value = parm;</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L306'>h</a>                 306 src/filemanager/achown.c                 dlg_stop (h);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L320'>h</a>                 320 src/filemanager/achown.c do_enter_key (WDialog * h, int f_pos)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L408'>h</a>                 408 src/filemanager/achown.c                 dlg_focus (h);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L477'>h</a>                 477 src/filemanager/achown.c     WDialog *h = DIALOG (w);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L482'>h</a>                 482 src/filemanager/achown.c     id = dlg_get_current_widget_id (h);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L538'>h</a>                 538 src/filemanager/achown.c             do_enter_key (h, f_pos);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L552'>h</a>                 552 src/filemanager/achown.c             update_mode (h);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L553'>h</a>                 553 src/filemanager/achown.c             dlg_broadcast_msg (h, MSG_DRAW);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L554'>h</a>                 554 src/filemanager/achown.c             send_message (h-&gt;current-&gt;data, NULL, MSG_FOCUS, 0, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L568'>h</a>                 568 src/filemanager/achown.c             update_mode (h);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L569'>h</a>                 569 src/filemanager/achown.c             dlg_broadcast_msg (h, MSG_DRAW);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L570'>h</a>                 570 src/filemanager/achown.c             send_message (h-&gt;current-&gt;data, NULL, MSG_FOCUS, 0, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L583'>h</a>                 583 src/filemanager/achown.c             if (BUTTON (h-&gt;current-&gt;data)-&gt;text.start[(flag_pos % 3)] == '-')</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L587'>h</a>                 587 src/filemanager/achown.c             update_mode (h);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L601'>h</a>                 601 src/filemanager/achown.c                 update_mode (h);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L618'>h</a>                 618 src/filemanager/achown.c                 update_mode (h);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L619'>h</a>                 619 src/filemanager/achown.c                 send_message (h, sender, MSG_KEY, KEY_RIGHT, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L621'>h</a>                 621 src/filemanager/achown.c                     dlg_one_down (h);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L249'>h</a>                 249 src/filemanager/boxes.c     WDialog *h = DIALOG (w);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L259'>h</a>                 259 src/filemanager/boxes.c             in1 = INPUT (dlg_find_by_id (h, panel_user_format_id));</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L260'>h</a>                 260 src/filemanager/boxes.c             in2 = INPUT (dlg_find_by_id (h, panel_brief_cols_id));</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L261'>h</a>                 261 src/filemanager/boxes.c             ch = CHECK (dlg_find_by_id (h, mini_user_status_id));</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L262'>h</a>                 262 src/filemanager/boxes.c             in3 = INPUT (dlg_find_by_id (h, mini_user_format_id));</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L278'>h</a>                 278 src/filemanager/boxes.c             in = INPUT (dlg_find_by_id (h, mini_user_format_id));</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L289'>h</a>                 289 src/filemanager/boxes.c                 r = RADIO (dlg_find_by_id (h, panel_listing_types_id));</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L342'>h</a>                 342 src/filemanager/boxes.c     WDialog *h = DIALOG (w);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L351'>h</a>                 351 src/filemanager/boxes.c             dlg_set_size (h, LINES - 9, COLS - 20);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L352'>h</a>                 352 src/filemanager/boxes.c             bar = WIDGET (find_buttonbar (h));</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L359'>h</a>                 359 src/filemanager/boxes.c         return send_message (find_tree (h), NULL, MSG_ACTION, parm, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L182'>h</a>                 182 src/filemanager/chmod.c chmod_toggle_select (WDialog * h, int Id)</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L187'>h</a>                 187 src/filemanager/chmod.c     widget_move (h, PY + Id + 1, PX + 1);</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L189'>h</a>                 189 src/filemanager/chmod.c     widget_move (h, PY + Id + 1, PX + 3);</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L195'>h</a>                 195 src/filemanager/chmod.c chmod_refresh (WDialog * h)</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L200'>h</a>                 200 src/filemanager/chmod.c     dlg_default_repaint (h);</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L219'>h</a>                 219 src/filemanager/chmod.c     WDialog *h = DIALOG (w);</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L240'>h</a>                 240 src/filemanager/chmod.c                 chmod_toggle_select (h, i);</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L254'>h</a>                 254 src/filemanager/chmod.c             id = dlg_get_current_widget_id (h);</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L261'>h</a>                 261 src/filemanager/chmod.c                 chmod_toggle_select (h, i);</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L263'>h</a>                 263 src/filemanager/chmod.c                     dlg_one_down (h);</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L270'>h</a>                 270 src/filemanager/chmod.c         chmod_refresh (h);</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L147'>h</a>                 147 src/filemanager/chown.c chown_refresh (WDialog * h)</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L152'>h</a>                 152 src/filemanager/chown.c     dlg_default_repaint (h);</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L156'>h</a>                 156 src/filemanager/chown.c     widget_move (h, y + 0, x);</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L158'>h</a>                 158 src/filemanager/chown.c     widget_move (h, y + 2, x);</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L160'>h</a>                 160 src/filemanager/chown.c     widget_move (h, y + 4, x);</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L162'>h</a>                 162 src/filemanager/chown.c     widget_move (h, y + 6, x);</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L164'>h</a>                 164 src/filemanager/chown.c     widget_move (h, y + 8, x);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L636'>h</a>                 636 src/filemanager/filegui.c place_progress_buttons (WDialog * h, gboolean suspended)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L639'>h</a>                 639 src/filemanager/filegui.c     Widget *w = WIDGET (h);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L473'>h</a>                 473 src/filemanager/find.c     WDialog *h = DIALOG (w);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L494'>h</a>                 494 src/filemanager/find.c         if (h-&gt;ret_value != B_ENTER)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L502'>h</a>                 502 src/filemanager/find.c             widget_set_state (WIDGET (h), WST_ACTIVE, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L513'>h</a>                 513 src/filemanager/find.c             widget_set_state (WIDGET (h), WST_ACTIVE, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L522'>h</a>                 522 src/filemanager/find.c         if (h-&gt;current-&gt;data == in_name)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L524'>h</a>                 524 src/filemanager/find.c         else if (h-&gt;current-&gt;data == in_with)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L944'>h</a>                 944 src/filemanager/find.c check_find_events (WDialog * h)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L950'>h</a>                 950 src/filemanager/find.c     c = tty_get_event (&amp;event, h-&gt;mouse_status == MOU_REPEAT, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L953'>h</a>                 953 src/filemanager/find.c         dlg_process_event (h, c, &amp;event);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L954'>h</a>                 954 src/filemanager/find.c         if (h-&gt;ret_value == B_ENTER</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L955'>h</a>                 955 src/filemanager/find.c             || h-&gt;ret_value == B_CANCEL || h-&gt;ret_value == B_AGAIN || h-&gt;ret_value == B_PANELIZE)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L960'>h</a>                 960 src/filemanager/find.c         if (!widget_get_state (WIDGET (h), WST_IDLE))</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L982'>h</a>                 982 src/filemanager/find.c search_content (WDialog * h, const char *directory, const char *filename)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1026'>h</a>                1026 src/filemanager/find.c         status_update (str_trunc (buffer, WIDGET (h)-&gt;cols - 8));</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1119'>h</a>                1119 src/filemanager/find.c                     status_update (str_trunc (result, WIDGET (h)-&gt;cols - 8));</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1144'>h</a>                1144 src/filemanager/find.c                 res = check_find_events (h);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1148'>h</a>                1148 src/filemanager/find.c                     stop_idle (h);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1237'>h</a>                1237 src/filemanager/find.c find_rotate_dash (const WDialog * h, gboolean show)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1241'>h</a>                1241 src/filemanager/find.c     const Widget *w = CONST_WIDGET (h);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1246'>h</a>                1246 src/filemanager/find.c     tty_setcolor (h-&gt;color[DLG_COLOR_NORMAL]);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1247'>h</a>                1247 src/filemanager/find.c     widget_move (h, w-&gt;lines - 7, w-&gt;cols - 4);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1256'>h</a>                1256 src/filemanager/find.c do_search (WDialog * h)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1265'>h</a>                1265 src/filemanager/find.c     if (h == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1310'>h</a>                1310 src/filemanager/find.c                         find_rotate_dash (h, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1311'>h</a>                1311 src/filemanager/find.c                         stop_idle (h);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1336'>h</a>                1336 src/filemanager/find.c                     status_update (str_trunc (directory, WIDGET (h)-&gt;cols - 8));</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1386'>h</a>                1386 src/filemanager/find.c                 else if (search_content (h, directory, dp-&gt;d_name))</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1396'>h</a>                1396 src/filemanager/find.c     find_rotate_dash (h, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1469'>h</a>                1469 src/filemanager/find.c find_calc_button_locations (const WDialog * h, gboolean all_buttons)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1471'>h</a>                1471 src/filemanager/find.c     const int cols = CONST_WIDGET (h)-&gt;cols;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1495'>h</a>                1495 src/filemanager/find.c find_relocate_buttons (const WDialog * h, gboolean all_buttons)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1499'>h</a>                1499 src/filemanager/find.c     find_calc_button_locations (h, all_buttons);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1502'>h</a>                1502 src/filemanager/find.c         fbuts[i].button-&gt;x = CONST_WIDGET (h)-&gt;x + fbuts[i].x;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1510'>h</a>                1510 src/filemanager/find.c     WDialog *h = DIALOG (w);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1526'>h</a>                1526 src/filemanager/find.c         dlg_set_size (h, LINES - 4, COLS - 16);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1527'>h</a>                1527 src/filemanager/find.c         find_relocate_buttons (h, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1531'>h</a>                1531 src/filemanager/find.c         do_search (h);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L504'>h</a>                 504 src/filemanager/hotlist.c hotlist_handle_key (WDialog * h, int key)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L515'>h</a>                 515 src/filemanager/hotlist.c             h-&gt;ret_value = B_ENTER;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L516'>h</a>                 516 src/filemanager/hotlist.c             dlg_stop (h);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L558'>h</a>                 558 src/filemanager/hotlist.c                     h-&gt;ret_value = B_CANCEL;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L559'>h</a>                 559 src/filemanager/hotlist.c                     dlg_stop (h);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L575'>h</a>                 575 src/filemanager/hotlist.c     WDialog *h = DIALOG (w);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L585'>h</a>                 585 src/filemanager/hotlist.c         return hotlist_handle_key (h, parm);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L589'>h</a>                 589 src/filemanager/hotlist.c         dlg_select_widget (h == hotlist_dlg ? l_hotlist : l_movelist);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L594'>h</a>                 594 src/filemanager/hotlist.c         dlg_set_size (h, LINES - (h == hotlist_dlg ? 2 : 6), COLS - 6);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L219'>h</a>                 219 src/filemanager/layout.c update_split (const WDialog * h)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L233'>h</a>                 233 src/filemanager/layout.c     widget_move (h, 6, 5);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L239'>h</a>                 239 src/filemanager/layout.c     widget_move (h, 6, 17);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L245'>h</a>                 245 src/filemanager/layout.c     widget_move (h, 6, 12);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L308'>h</a>                 308 src/filemanager/layout.c     WDialog *h = DIALOG (w);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L315'>h</a>                 315 src/filemanager/layout.c         dlg_default_repaint (h);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L319'>h</a>                 319 src/filemanager/layout.c         update_split (h);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L325'>h</a>                 325 src/filemanager/layout.c             widget_move (h, 9, 5);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L327'>h</a>                 327 src/filemanager/layout.c             widget_move (h, 9, 5 + 3 + output_lines_label_len);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L366'>h</a>                 366 src/filemanager/layout.c                 widget_move (h, 9, 5 + 3 + output_lines_label_len);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L397'>h</a>                 397 src/filemanager/layout.c                 update_split (h);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L402'>h</a>                 402 src/filemanager/layout.c                 update_split (h);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L425'>h</a>                 425 src/filemanager/layout.c             update_split (h);</span>
+<span class='curline'><a href='../S/src--filemanager--listmode.c.html#L274'>h</a>                 274 src/filemanager/listmode.c listmode_done (WDialog * h)</span>
+<span class='curline'><a href='../S/src--filemanager--listmode.c.html#L276'>h</a>                 276 src/filemanager/listmode.c     dlg_destroy (h);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L433'>h</a>                 433 src/filemanager/midnight.c midnight_get_title (const WDialog * h, size_t len)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L439'>h</a>                 439 src/filemanager/midnight.c     (void) h;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L89'>h</a>                  89 src/filemanager/tree.c #define TREE_NORMALC(h) (h-&gt;color[DLG_COLOR_NORMAL])</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L90'>h</a>                  90 src/filemanager/tree.c #define TREE_CURRENTC(h) (h-&gt;color[DLG_COLOR_FOCUS])</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L257'>h</a>                 257 src/filemanager/tree.c         WDialog *h = w-&gt;owner;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L259'>h</a>                 259 src/filemanager/tree.c         tty_setcolor (tree-&gt;is_panel ? NORMAL_COLOR : TREE_NORMALC (h));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L273'>h</a>                 273 src/filemanager/tree.c     WDialog *h = w-&gt;owner;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L342'>h</a>                 342 src/filemanager/tree.c         tty_setcolor (tree-&gt;is_panel ? NORMAL_COLOR : TREE_NORMALC (h));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L354'>h</a>                 354 src/filemanager/tree.c             tty_setcolor (current == tree-&gt;selected_ptr ? TREE_CURRENTC (h) : TREE_NORMALC (h));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L598'>h</a>                 598 src/filemanager/tree.c         WDialog *h = WIDGET (tree)-&gt;owner;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L600'>h</a>                 600 src/filemanager/tree.c         h-&gt;ret_value = B_ENTER;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L601'>h</a>                 601 src/filemanager/tree.c         dlg_stop (h);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1106'>h</a>                1106 src/filemanager/tree.c tree_frame (WDialog * h, WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1110'>h</a>                1110 src/filemanager/tree.c     (void) h;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1144'>h</a>                1144 src/filemanager/tree.c     WDialog *h = w-&gt;owner;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1145'>h</a>                1145 src/filemanager/tree.c     WButtonBar *b = find_buttonbar (h);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1150'>h</a>                1150 src/filemanager/tree.c         tree_frame (h, tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1333'>h</a>                1333 src/filemanager/tree.c find_tree (WDialog * h)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1335'>h</a>                1335 src/filemanager/tree.c     return (WTree *) find_widget_type (h, tree_callback);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.h.html#L32'>h</a>                  32 src/filemanager/tree.h WTree *find_tree (WDialog * h);</span>
+<span class='curline'><a href='../S/src--help.c.html#L403'>h</a>                 403 src/help.c     help_print_word (WDialog * h, GString * word, int *col, int *line, gboolean add_space)</span>
+<span class='curline'><a href='../S/src--help.c.html#L422'>h</a>                 422 src/help.c                 widget_move (h, *line + 2, *col + 2);</span>
+<span class='curline'><a href='../S/src--help.c.html#L447'>h</a>                 447 src/help.c     help_show (WDialog * h, const char *paint_start)</span>
+<span class='curline'><a href='../S/src--help.c.html#L503'>h</a>                 503 src/help.c                     help_print_word (h, word, &amp;col, &amp;line, FALSE);</span>
+<span class='curline'><a href='../S/src--help.c.html#L514'>h</a>                 514 src/help.c                     widget_move (h, line + 2, col + 2);</span>
+<span class='curline'><a href='../S/src--help.c.html#L525'>h</a>                 525 src/help.c                     help_print_word (h, word, &amp;col, &amp;line, FALSE);</span>
+<span class='curline'><a href='../S/src--help.c.html#L530'>h</a>                 530 src/help.c                         help_print_word (h, word, &amp;col, &amp;line, FALSE);</span>
+<span class='curline'><a href='../S/src--help.c.html#L545'>h</a>                 545 src/help.c                         help_print_word (h, word, &amp;col, &amp;line, TRUE);</span>
+<span class='curline'><a href='../S/src--help.c.html#L555'>h</a>                 555 src/help.c                             widget_move (h, line + 2, col + 2);</span>
+<span class='curline'><a href='../S/src--help.c.html#L563'>h</a>                 563 src/help.c                                 SLsmg_draw_object (WIDGET (h)-&gt;y + line + 2, WIDGET (h)-&gt;x + col + 2,</span>
+<span class='curline'><a href='../S/src--help.c.html#L574'>h</a>                 574 src/help.c                 help_print_word (h, word, &amp;col, &amp;line, FALSE);</span>
+<span class='curline'><a href='../S/src--help.c.html#L596'>h</a>                 596 src/help.c             widget_move (h, active_line, active_col);</span>
+<span class='curline'><a href='../S/src--help.c.html#L603'>h</a>                 603 src/help.c     help_help (WDialog * h)</span>
+<span class='curline'><a href='../S/src--help.c.html#L616'>h</a>                 616 src/help.c             send_message (h, NULL, MSG_DRAW, 0, NULL);</span>
+<span class='curline'><a href='../S/src--help.c.html#L623'>h</a>                 623 src/help.c     help_index (WDialog * h)</span>
+<span class='curline'><a href='../S/src--help.c.html#L639'>h</a>                 639 src/help.c             send_message (h, NULL, MSG_DRAW, 0, NULL);</span>
+<span class='curline'><a href='../S/src--help.c.html#L646'>h</a>                 646 src/help.c     help_back (WDialog * h)</span>
+<span class='curline'><a href='../S/src--help.c.html#L654'>h</a>                 654 src/help.c         send_message (h, NULL, MSG_DRAW, 0, NULL);  /* FIXME: unneeded? */</span>
+<span class='curline'><a href='../S/src--help.c.html#L845'>h</a>                 845 src/help.c     help_handle_key (WDialog * h, int c)</span>
+<span class='curline'><a href='../S/src--help.c.html#L853'>h</a>                 853 src/help.c         send_message (h, NULL, MSG_DRAW, 0, NULL);</span>
+<span class='curline'><a href='../S/src--help.c.html#L862'>h</a>                 862 src/help.c         WDialog *h = DIALOG (w);</span>
+<span class='curline'><a href='../S/src--help.c.html#L871'>h</a>                 871 src/help.c                 dlg_set_size (h, help_lines + 4, HELP_WINDOW_WIDTH + 4);</span>
+<span class='curline'><a href='../S/src--help.c.html#L872'>h</a>                 872 src/help.c                 bb = find_buttonbar (h);</span>
+<span class='curline'><a href='../S/src--help.c.html#L878'>h</a>                 878 src/help.c             dlg_default_repaint (h);</span>
+<span class='curline'><a href='../S/src--help.c.html#L879'>h</a>                 879 src/help.c             help_show (h, currentpoint);</span>
+<span class='curline'><a href='../S/src--help.c.html#L883'>h</a>                 883 src/help.c             return help_handle_key (h, parm);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L864'>h</a>                 864 src/vfs/fish/fish.c     int h;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L867'>h</a>                 867 src/vfs/fish/fish.c     h = open (localname, O_RDONLY);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L868'>h</a>                 868 src/vfs/fish/fish.c     if (h == -1)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L870'>h</a>                 870 src/vfs/fish/fish.c     if (fstat (h, &amp;s) &lt; 0)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L872'>h</a>                 872 src/vfs/fish/fish.c         close (h);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L933'>h</a>                 933 src/vfs/fish/fish.c         close (h);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L941'>h</a>                 941 src/vfs/fish/fish.c         while ((n = read (h, buffer, sizeof (buffer))) &lt; 0)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L946'>h</a>                 946 src/vfs/fish/fish.c             close (h);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L947'>h</a>                 947 src/vfs/fish/fish.c             h = open ("/dev/zero", O_RDONLY);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L967'>h</a>                 967 src/vfs/fish/fish.c     close (h);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L974'>h</a>                 974 src/vfs/fish/fish.c     close (h);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1803'>h</a>                1803 src/vfs/ftpfs/ftpfs.c     int h, sock;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1816'>h</a>                1816 src/vfs/ftpfs/ftpfs.c     h = open (localname, O_RDONLY);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1817'>h</a>                1817 src/vfs/ftpfs/ftpfs.c     if (h == -1)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1820'>h</a>                1820 src/vfs/ftpfs/ftpfs.c     if (fstat (h, &amp;s) == -1 ||</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1825'>h</a>                1825 src/vfs/ftpfs/ftpfs.c         close (h);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1842'>h</a>                1842 src/vfs/ftpfs/ftpfs.c         while ((n_read = read (h, lc_buffer, sizeof (lc_buffer))) == -1)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1878'>h</a>                1878 src/vfs/ftpfs/ftpfs.c     close (h);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1886'>h</a>                1886 src/vfs/ftpfs/ftpfs.c     close (h);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L587'>h</a>                 587 src/viewer/actions_cmd.c mcview_adjust_size (WDialog * h)</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L593'>h</a>                 593 src/viewer/actions_cmd.c     view = (WView *) find_widget_type (h, mcview_callback);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L594'>h</a>                 594 src/viewer/actions_cmd.c     b = find_buttonbar (h);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L717'>h</a>                 717 src/viewer/actions_cmd.c     WDialog *h = DIALOG (w);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L723'>h</a>                 723 src/viewer/actions_cmd.c         mcview_adjust_size (h);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L734'>h</a>                 734 src/viewer/actions_cmd.c         view = (WView *) find_widget_type (h, mcview_callback);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L736'>h</a>                 736 src/viewer/actions_cmd.c         widget_set_state (WIDGET (h), WST_ACTIVE, TRUE);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L738'>h</a>                 738 src/viewer/actions_cmd.c             dlg_stop (h);</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L81'>h</a>                  81 src/viewer/display.c     WDialog *h = WIDGET (view)-&gt;owner;</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L82'>h</a>                  82 src/viewer/display.c     WButtonBar *b = find_buttonbar (h);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L319'>h</a>                 319 src/viewer/internal.h char *mcview_get_title (const WDialog * h, size_t len);</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L390'>h</a>                 390 src/viewer/lib.c mcview_get_title (const WDialog * h, size_t len)</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L392'>h</a>                 392 src/viewer/lib.c     const WView *view = (const WView *) find_widget_type (h, mcview_callback);</span>
+</pre>
+</body>
+</html>

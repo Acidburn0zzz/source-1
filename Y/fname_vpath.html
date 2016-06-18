@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>fname_vpath</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--lock.c.html#L116'>fname_vpath</a>       116 lib/lock.c     lock_build_symlink_name (const vfs_path_t * fname_vpath)</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L122'>fname_vpath</a>       122 lib/lock.c         elpath = vfs_path_get_by_index (fname_vpath, 0)-&gt;path;</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L200'>fname_vpath</a>       200 lib/lock.c     lock_file (const vfs_path_t * fname_vpath)</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L209'>fname_vpath</a>       209 lib/lock.c         if (fname_vpath == NULL)</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L212'>fname_vpath</a>       212 lib/lock.c         elpath = vfs_path_get_by_index (fname_vpath, 0)-&gt;path;</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L218'>fname_vpath</a>       218 lib/lock.c         is_local = vfs_file_is_local (fname_vpath);</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L222'>fname_vpath</a>       222 lib/lock.c             lockfname = lock_build_symlink_name (fname_vpath);</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L279'>fname_vpath</a>       279 lib/lock.c     unlock_file (const vfs_path_t * fname_vpath)</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L285'>fname_vpath</a>       285 lib/lock.c         if (fname_vpath == NULL)</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L288'>fname_vpath</a>       288 lib/lock.c         elpath = vfs_path_get_by_index (fname_vpath, 0)-&gt;path;</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L293'>fname_vpath</a>       293 lib/lock.c         lockfname = lock_build_symlink_name (fname_vpath);</span>
+<span class='curline'><a href='../S/lib--lock.h.html#L24'>fname_vpath</a>        24 lib/lock.h     int lock_file (const vfs_path_t * fname_vpath);</span>
+<span class='curline'><a href='../S/lib--lock.h.html#L25'>fname_vpath</a>        25 lib/lock.h     int unlock_file (const vfs_path_t * fname_vpath);</span>
+<span class='curline'><a href='../S/src--args.c.html#L568'>fname_vpath</a>       568 src/args.c                 vfs_path_t *tmp_vpath, *fname_vpath;</span>
+<span class='curline'><a href='../S/src--args.c.html#L573'>fname_vpath</a>       573 src/args.c                 fname_vpath = vfs_path_from_str (fname);</span>
+<span class='curline'><a href='../S/src--args.c.html#L579'>fname_vpath</a>       579 src/args.c                 if (mc_stat (tmp_vpath, &amp;st) == -1 &amp;&amp; mc_stat (fname_vpath, &amp;st) != -1)</span>
+<span class='curline'><a href='../S/src--args.c.html#L581'>fname_vpath</a>       581 src/args.c                     arg = mcedit_arg_vpath_new (fname_vpath, atoi (p));</span>
+<span class='curline'><a href='../S/src--args.c.html#L587'>fname_vpath</a>       587 src/args.c                     vfs_path_free (fname_vpath);</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L147'>fname_vpath</a>       147 src/clipboard.c                 vfs_path_t *fname_vpath;</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L149'>fname_vpath</a>       149 src/clipboard.c                 fname_vpath = mc_config_get_full_vpath (EDIT_CLIP_FILE);</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L150'>fname_vpath</a>       150 src/clipboard.c                 file = mc_open (fname_vpath, clip_open_flags, clip_open_mode);</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L151'>fname_vpath</a>       151 src/clipboard.c                 vfs_path_free (fname_vpath);</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L178'>fname_vpath</a>       178 src/clipboard.c     vfs_path_t *fname_vpath = NULL;</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L189'>fname_vpath</a>       189 src/clipboard.c     fname_vpath = mc_config_get_full_vpath (EDIT_CLIP_FILE);</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L190'>fname_vpath</a>       190 src/clipboard.c     file = mc_open (fname_vpath, clip_open_flags, clip_open_mode);</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L191'>fname_vpath</a>       191 src/clipboard.c     vfs_path_free (fname_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L428'>fname_vpath</a>       428 src/filemanager/chown.c                     vfs_path_t *fname_vpath;</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L430'>fname_vpath</a>       430 src/filemanager/chown.c                     fname_vpath = vfs_path_from_str (fname);</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L432'>fname_vpath</a>       432 src/filemanager/chown.c                     if (mc_chown (fname_vpath, new_user, new_group) == -1)</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L435'>fname_vpath</a>       435 src/filemanager/chown.c                     vfs_path_free (fname_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L131'>fname_vpath</a>       131 src/filemanager/cmd.c         vfs_path_t *fname_vpath;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L142'>fname_vpath</a>       142 src/filemanager/cmd.c         fname_vpath = vfs_path_from_str (selection (current_panel)-&gt;fname);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L143'>fname_vpath</a>       143 src/filemanager/cmd.c         if (!do_cd (fname_vpath, cd_exact))</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L145'>fname_vpath</a>       145 src/filemanager/cmd.c         vfs_path_free (fname_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L352'>fname_vpath</a>       352 src/filemanager/cmd.c     vfs_path_t *fname_vpath, *dest_vpath = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L354'>fname_vpath</a>       354 src/filemanager/cmd.c     fname_vpath = vfs_path_from_str (fname);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L364'>fname_vpath</a>       364 src/filemanager/cmd.c         if (-1 == mc_link (fname_vpath, dest_vpath))</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L410'>fname_vpath</a>       410 src/filemanager/cmd.c     vfs_path_free (fname_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L764'>fname_vpath</a>       764 src/filemanager/cmd.c     vfs_path_t *fname_vpath = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L776'>fname_vpath</a>       776 src/filemanager/cmd.c             fname_vpath = vfs_path_from_str (fname);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L784'>fname_vpath</a>       784 src/filemanager/cmd.c     do_edit (fname_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L786'>fname_vpath</a>       786 src/filemanager/cmd.c     vfs_path_free (fname_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2797'>fname_vpath</a>      2797 src/filemanager/panel.c         vfs_path_t *fname_vpath;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2799'>fname_vpath</a>      2799 src/filemanager/panel.c         fname_vpath = vfs_path_from_str (fe-&gt;fname);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2800'>fname_vpath</a>      2800 src/filemanager/panel.c         if (!do_cd (fname_vpath, cd_exact))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2802'>fname_vpath</a>      2802 src/filemanager/panel.c         vfs_path_free (fname_vpath);</span>
+</pre>
+</body>
+</html>

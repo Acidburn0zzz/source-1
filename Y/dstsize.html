@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>dstsize</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1320'>dstsize</a>          1320 src/diffviewer/ydiff.c cvt_ncpy (char *dst, int dstsize, const char **_src, size_t srcsize, int base, int ts)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1325'>dstsize</a>          1325 src/diffviewer/ydiff.c     for (i = 0; i &lt; dstsize &amp;&amp; srcsize != 0; i++, src++, dst++, srcsize--)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1333'>dstsize</a>          1333 src/diffviewer/ydiff.c             if (j &gt; dstsize - i)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1334'>dstsize</a>          1334 src/diffviewer/ydiff.c                 j = dstsize - i;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1362'>dstsize</a>          1362 src/diffviewer/ydiff.c cvt_mget (const char *src, size_t srcsize, char *dst, int dstsize, int skip, int ts,</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1373'>dstsize</a>          1373 src/diffviewer/ydiff.c         for (i = 0; dstsize != 0 &amp;&amp; srcsize != 0 &amp;&amp; *src != '\n'; i++, src++, srcsize--)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1385'>dstsize</a>          1385 src/diffviewer/ydiff.c                     else if (dstsize != 0)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1387'>dstsize</a>          1387 src/diffviewer/ydiff.c                         dstsize--;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1396'>dstsize</a>          1396 src/diffviewer/ydiff.c                     if (dstsize &gt; 1)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1398'>dstsize</a>          1398 src/diffviewer/ydiff.c                         dstsize -= 2;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1404'>dstsize</a>          1404 src/diffviewer/ydiff.c                         dstsize--;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1426'>dstsize</a>          1426 src/diffviewer/ydiff.c                 dstsize--;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1432'>dstsize</a>          1432 src/diffviewer/ydiff.c     while (dstsize != 0)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1434'>dstsize</a>          1434 src/diffviewer/ydiff.c         dstsize--;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1461'>dstsize</a>          1461 src/diffviewer/ydiff.c cvt_mgeta (const char *src, size_t srcsize, char *dst, int dstsize, int skip, int ts,</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1472'>dstsize</a>          1472 src/diffviewer/ydiff.c         for (i = 0, k = 0; dstsize != 0 &amp;&amp; srcsize != 0 &amp;&amp; *src != '\n'; i++, k++, src++, srcsize--)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1484'>dstsize</a>          1484 src/diffviewer/ydiff.c                     else if (dstsize != 0)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1486'>dstsize</a>          1486 src/diffviewer/ydiff.c                         dstsize--;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1496'>dstsize</a>          1496 src/diffviewer/ydiff.c                     if (dstsize &gt; 1)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1498'>dstsize</a>          1498 src/diffviewer/ydiff.c                         dstsize -= 2;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1506'>dstsize</a>          1506 src/diffviewer/ydiff.c                         dstsize--;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1528'>dstsize</a>          1528 src/diffviewer/ydiff.c                 dstsize--;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1535'>dstsize</a>          1535 src/diffviewer/ydiff.c     while (dstsize != 0)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1537'>dstsize</a>          1537 src/diffviewer/ydiff.c         dstsize--;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1562'>dstsize</a>          1562 src/diffviewer/ydiff.c cvt_fget (FBUF * f, off_t off, char *dst, size_t dstsize, int skip, int ts, gboolean show_cr)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1566'>dstsize</a>          1566 src/diffviewer/ydiff.c     size_t amount = dstsize;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1575'>dstsize</a>          1575 src/diffviewer/ydiff.c     if (sizeof (tmp) &lt; amount || sizeof (tmp) &lt;= dstsize || sizeof (cvt) &lt; 8 * amount)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1578'>dstsize</a>          1578 src/diffviewer/ydiff.c         memset (dst, ' ', dstsize);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1579'>dstsize</a>          1579 src/diffviewer/ydiff.c         dst[dstsize] = '\0';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1603'>dstsize</a>          1603 src/diffviewer/ydiff.c         memset (dst, ' ', dstsize);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1604'>dstsize</a>          1604 src/diffviewer/ydiff.c         dst[dstsize] = '\0';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1611'>dstsize</a>          1611 src/diffviewer/ydiff.c     if (useful &lt;= dstsize)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1618'>dstsize</a>          1618 src/diffviewer/ydiff.c             sz = f_gets (tmp, dstsize - useful + 1, f);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1623'>dstsize</a>          1623 src/diffviewer/ydiff.c                 useful += cvt_ncpy (dst + useful, dstsize - useful, &amp;ptr, sz, base, ts) - base;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1632'>dstsize</a>          1632 src/diffviewer/ydiff.c         memmove (dst, cvt + offset, dstsize);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1633'>dstsize</a>          1633 src/diffviewer/ydiff.c         sz = dstsize;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1634'>dstsize</a>          1634 src/diffviewer/ydiff.c         lastch = cvt[offset + dstsize];</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1644'>dstsize</a>          1644 src/diffviewer/ydiff.c                 if (i + 1 &lt; dstsize)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1658'>dstsize</a>          1658 src/diffviewer/ydiff.c     for (; i &lt; dstsize; i++)</span>
+</pre>
+</body>
+</html>

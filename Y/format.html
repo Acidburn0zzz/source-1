@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>format</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--search.h.html#L171'>format</a>            171 lib/search.h   void mc_search_set_error (mc_search_t * mc_search, mc_search_error_t code, const gchar * format, ...)</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L497'>format</a>            497 lib/search/search.c mc_search_set_error (mc_search_t * mc_search, mc_search_error_t code, const gchar * format, ...)</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L503'>format</a>            503 lib/search/search.c     if (format != NULL)</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L507'>format</a>            507 lib/search/search.c         va_start (args, format);</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L508'>format</a>            508 lib/search/search.c         mc_search-&gt;error_str = g_strdup_vprintf (format, args);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L56'>format</a>             56 lib/serialize.c prepend_error_message (GError ** error, const char *format, ...)</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L65'>format</a>             65 lib/serialize.c     va_start (ap, format);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L66'>format</a>             66 lib/serialize.c     prepend_str = g_strdup_vprintf (format, ap);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L221'>format</a>            221 lib/strutil.h  void str_printf (GString * buffer, const char *format, ...) G_GNUC_PRINTF (2, 3);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L328'>format</a>            328 lib/strutil/strutil.c str_printf (GString * buffer, const char *format, ...)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L331'>format</a>            331 lib/strutil/strutil.c     va_start (ap, format);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L333'>format</a>            333 lib/strutil/strutil.c     g_string_append_vprintf (buffer, format, ap);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1432'>format</a>           1432 lib/util.c     mc_propagate_error (GError ** dest, int code, const char *format, ...)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1439'>format</a>           1439 lib/util.c             va_start (args, format);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1440'>format</a>           1440 lib/util.c             tmp_error = g_error_new_valist (MC_ERROR, code, format, args);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1458'>format</a>           1458 lib/util.c     mc_replace_error (GError ** dest, int code, const char *format, ...)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1465'>format</a>           1465 lib/util.c             va_start (args, format);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1466'>format</a>           1466 lib/util.c             tmp_error = g_error_new_valist (MC_ERROR, code, format, args);</span>
+<span class='curline'><a href='../S/lib--util.h.html#L253'>format</a>            253 lib/util.h     void mc_propagate_error (GError ** dest, int code, const char *format, ...) G_GNUC_PRINTF (3, 4);</span>
+<span class='curline'><a href='../S/lib--util.h.html#L254'>format</a>            254 lib/util.h     void mc_replace_error (GError ** dest, int code, const char *format, ...) G_GNUC_PRINTF (3, 4);</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L192'>format</a>            192 lib/widget/label.c label_set_textv (WLabel * label, const char *format, ...)</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L197'>format</a>            197 lib/widget/label.c     va_start (args, format);</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L198'>format</a>            198 lib/widget/label.c     g_vsnprintf (buf, sizeof (buf), format, args);</span>
+<span class='curline'><a href='../S/lib--widget--label.h.html#L32'>format</a>             32 lib/widget/label.h void label_set_textv (WLabel * label, const char *format, ...) G_GNUC_PRINTF (2, 3);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L843'>format</a>            843 src/filemanager/file.c files_error (const char *format, const char *file1, const char *file2)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L849'>format</a>            849 src/filemanager/file.c     g_snprintf (buf, sizeof (buf), format, nfile1, nfile2, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2690'>format</a>           2690 src/filemanager/file.c         char *format;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2722'>format</a>           2722 src/filemanager/file.c         format =</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2726'>format</a>           2726 src/filemanager/file.c             file_mask_dialog (ctx, operation, source != NULL, format,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2730'>format</a>           2730 src/filemanager/file.c         g_free (format);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2743'>format</a>           2743 src/filemanager/file.c         char *format;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2747'>format</a>           2747 src/filemanager/file.c         format =</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2751'>format</a>           2751 src/filemanager/file.c             g_snprintf (fmd_buf, sizeof (fmd_buf), format, panel-&gt;marked);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2755'>format</a>           2755 src/filemanager/file.c             i = fmd_xlen - str_term_width1 (format) - 4;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2756'>format</a>           2756 src/filemanager/file.c             g_snprintf (fmd_buf, sizeof (fmd_buf), format, str_trunc (source, i));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2759'>format</a>           2759 src/filemanager/file.c         g_free (format);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3119'>format</a>           3119 src/filemanager/file.c file_error (const char *format, const char *file)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3123'>format</a>           3123 src/filemanager/file.c     g_snprintf (buf, sizeof (buf), format, path_trunc (file, 30), unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--file.h.html#L58'>format</a>             58 src/filemanager/file.h FileProgressStatus file_error (const char *format, const char *file);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1172'>format</a>           1172 src/filemanager/filegui.c                   const char *format, const void *text, const char *def_text, gboolean * do_bg)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1205'>format</a>           1205 src/filemanager/filegui.c         format_len = str_term_width1 (format);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1220'>format</a>           1220 src/filemanager/filegui.c         g_snprintf (fmd_buf, sizeof (fmd_buf), format, (const char *) text);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1226'>format</a>           1226 src/filemanager/filegui.c         g_snprintf (fmd_buf, sizeof (fmd_buf), format, *(const int *) text);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.h.html#L27'>format</a>             27 src/filemanager/filegui.h                         const char *format, const void *text,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L390'>format</a>            390 src/filemanager/panel.c delete_format (format_e * format)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L392'>format</a>            392 src/filemanager/panel.c     while (format != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L394'>format</a>            394 src/filemanager/panel.c         format_e *next = format-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L395'>format</a>            395 src/filemanager/panel.c         g_free (format-&gt;title);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L396'>format</a>            396 src/filemanager/panel.c         g_free (format);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L397'>format</a>            397 src/filemanager/panel.c         format = next;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L794'>format</a>            794 src/filemanager/panel.c     format_e *format, *home;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L806'>format</a>            806 src/filemanager/panel.c     home = isstatus ? panel-&gt;status_format : panel-&gt;format;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L808'>format</a>            808 src/filemanager/panel.c     for (format = home; format != NULL &amp;&amp; length != width; format = format-&gt;next)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L810'>format</a>            810 src/filemanager/panel.c         if (format-&gt;string_fn != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L818'>format</a>            818 src/filemanager/panel.c                 txt = format-&gt;string_fn (fe, format-&gt;field_len);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L820'>format</a>            820 src/filemanager/panel.c             len = format-&gt;field_len;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L826'>format</a>            826 src/filemanager/panel.c             if (!isstatus &amp;&amp; panel-&gt;content_shift &gt; -1 &amp;&amp; strcmp (format-&gt;id, "name") == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L852'>format</a>            852 src/filemanager/panel.c                 if (strcmp (format-&gt;id, "perm") == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L854'>format</a>            854 src/filemanager/panel.c                 else if (strcmp (format-&gt;id, "mode") == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L865'>format</a>            865 src/filemanager/panel.c                     str_fit_to_term (txt + name_offset, len, HIDE_FIT (format-&gt;just_mode));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L867'>format</a>            867 src/filemanager/panel.c                 prepared_text = str_fit_to_term (txt, len, format-&gt;just_mode);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L870'>format</a>            870 src/filemanager/panel.c                 add_permission_string (prepared_text, format-&gt;field_len, fe, attr, color,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1491'>format</a>           1491 src/filemanager/panel.c     delete_format (p-&gt;format);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1574'>format</a>           1574 src/filemanager/panel.c         format_e *format;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1576'>format</a>           1576 src/filemanager/panel.c         for (format = panel-&gt;format; format != NULL; format = format-&gt;next)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1578'>format</a>           1578 src/filemanager/panel.c             if (format-&gt;string_fn != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1583'>format</a>           1583 src/filemanager/panel.c                     &amp;&amp; strcmp (format-&gt;id, panel-&gt;sort_field-&gt;id) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1588'>format</a>           1588 src/filemanager/panel.c                 g_string_append (format_txt, format-&gt;title);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1591'>format</a>           1591 src/filemanager/panel.c                     &amp;&amp; strcmp (format-&gt;id, "name") == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1599'>format</a>           1599 src/filemanager/panel.c                 tty_print_string (str_fit_to_term (format_txt-&gt;str, format-&gt;field_len,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1625'>format</a>           1625 src/filemanager/panel.c parse_panel_size (WPanel * panel, const char *format, gboolean isstatus)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1628'>format</a>           1628 src/filemanager/panel.c     format = skip_separators (format);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1630'>format</a>           1630 src/filemanager/panel.c     if (strncmp (format, "full", 4) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1633'>format</a>           1633 src/filemanager/panel.c         format += 4;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1635'>format</a>           1635 src/filemanager/panel.c     else if (strncmp (format, "half", 4) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1638'>format</a>           1638 src/filemanager/panel.c         format += 4;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1648'>format</a>           1648 src/filemanager/panel.c     format = skip_separators (format);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1650'>format</a>           1650 src/filemanager/panel.c     if (g_ascii_isdigit (*format))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1654'>format</a>           1654 src/filemanager/panel.c             panel-&gt;brief_cols = g_ascii_digit_value (*format);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1661'>format</a>           1661 src/filemanager/panel.c         format++;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1667'>format</a>           1667 src/filemanager/panel.c     return skip_separators (format);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1688'>format</a>           1688 src/filemanager/panel.c parse_display_format (WPanel * panel, const char *format, char **error, gboolean isstatus,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1712'>format</a>           1712 src/filemanager/panel.c     format = parse_panel_size (panel, format, isstatus);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1714'>format</a>           1714 src/filemanager/panel.c     while (*format != '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1730'>format</a>           1730 src/filemanager/panel.c         format = skip_separators (format);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1732'>format</a>           1732 src/filemanager/panel.c         switch (*format)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1736'>format</a>           1736 src/filemanager/panel.c             format = skip_separators (format + 1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1740'>format</a>           1740 src/filemanager/panel.c             format = skip_separators (format + 1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1744'>format</a>           1744 src/filemanager/panel.c             format = skip_separators (format + 1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1758'>format</a>           1758 src/filemanager/panel.c             if (strncmp (format, panel_fields[i].id, klen) != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1761'>format</a>           1761 src/filemanager/panel.c             format += klen;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1780'>format</a>           1780 src/filemanager/panel.c             format = skip_separators (format);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1783'>format</a>           1783 src/filemanager/panel.c             if (*format == ':')</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1791'>format</a>           1791 src/filemanager/panel.c                 format++;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1792'>format</a>           1792 src/filemanager/panel.c                 req_length = atoi (format);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1795'>format</a>           1795 src/filemanager/panel.c                 format = skip_numbers (format);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1798'>format</a>           1798 src/filemanager/panel.c                 if (*format == '+')</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1801'>format</a>           1801 src/filemanager/panel.c                     format++;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1814'>format</a>           1814 src/filemanager/panel.c             pos = strlen (format);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1818'>format</a>           1818 src/filemanager/panel.c             tmp_format = g_strndup (format, pos);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1837'>format</a>           1837 src/filemanager/panel.c use_display_format (WPanel * panel, const char *format, char **error, gboolean isstatus)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1845'>format</a>           1845 src/filemanager/panel.c     if (format == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1846'>format</a>           1846 src/filemanager/panel.c         format = DEFAULT_USER_FORMAT;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1848'>format</a>           1848 src/filemanager/panel.c     home = parse_display_format (panel, format, error, isstatus, &amp;total_cols);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1927'>format</a>           1927 src/filemanager/panel.c             static char format[BUF_TINY];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1936'>format</a>           1936 src/filemanager/panel.c             g_snprintf (format, sizeof (format), "half %d type name", brief_cols);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1937'>format</a>           1937 src/filemanager/panel.c             return format;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2981'>format</a>           2981 src/filemanager/panel.c     format_e *format;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2984'>format</a>           2984 src/filemanager/panel.c     for (lc_index = 0, format = panel-&gt;format; format != NULL; format = format-&gt;next, lc_index++)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2998'>format</a>           2998 src/filemanager/panel.c     format_e *format;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3001'>format</a>           3001 src/filemanager/panel.c     for (lc_index = 1, format = panel-&gt;format;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3002'>format</a>           3002 src/filemanager/panel.c          format != NULL &amp;&amp; strcmp (format-&gt;title, name) != 0; format = format-&gt;next, lc_index++)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3005'>format</a>           3005 src/filemanager/panel.c     if (format == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3016'>format</a>           3016 src/filemanager/panel.c     format_e *format;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3018'>format</a>           3018 src/filemanager/panel.c     for (format = panel-&gt;format; format != NULL &amp;&amp; lc_index != 0; format = format-&gt;next, lc_index--)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3021'>format</a>           3021 src/filemanager/panel.c     return format;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3030'>format</a>           3030 src/filemanager/panel.c     format_e *format;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3032'>format</a>           3032 src/filemanager/panel.c     format = panel_get_format_field_by_index (panel, lc_index);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3033'>format</a>           3033 src/filemanager/panel.c     if (format == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3036'>format</a>           3036 src/filemanager/panel.c     pfield = panel_get_field_by_title (format-&gt;title);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3779'>format</a>           3779 src/filemanager/panel.c     format_e *format;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3781'>format</a>           3781 src/filemanager/panel.c     for (i = 0, format = panel-&gt;format; format != NULL; format = format-&gt;next)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3783'>format</a>           3783 src/filemanager/panel.c         i += format-&gt;field_len;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3787'>format</a>           3787 src/filemanager/panel.c             lc_sort_name = format-&gt;title;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4327'>format</a>           4327 src/filemanager/panel.c     panel-&gt;format = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4458'>format</a>           4458 src/filemanager/panel.c         delete_format (p-&gt;format);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4459'>format</a>           4459 src/filemanager/panel.c         p-&gt;format = form;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L124'>format</a>            124 src/filemanager/panel.h     struct format_e *format;    /* Display format */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L53'>format</a>             53 src/vfs/smbfs/helpers/include/proto.h int vslprintf (char *str, int n, const char *format, va_list ap);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L57'>format</a>             57 src/vfs/smbfs/helpers/include/smb.h     __attribute__ ((format (printf, 1, 2)))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L62'>format</a>             62 src/vfs/smbfs/helpers/include/smb.h     __attribute__ ((format (printf, 1, 2)))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L1340'>format</a>           1340 src/vfs/smbfs/helpers/include/smb.h slprintf (char *str, int n, const char *format, ...)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L1342'>format</a>           1342 src/vfs/smbfs/helpers/include/smb.h     __attribute__ ((format (printf, 3, 4)))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--slprintf.c.html#L36'>format</a>             36 src/vfs/smbfs/helpers/lib/slprintf.c vslprintf (char *str, int n, const char *format, va_list ap)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--slprintf.c.html#L38'>format</a>             38 src/vfs/smbfs/helpers/lib/slprintf.c     int ret = vsnprintf (str, n, format, ap);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--slprintf.c.html#L50'>format</a>             50 src/vfs/smbfs/helpers/lib/slprintf.c slprintf (char *str, int n, const char *format, ...)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--slprintf.c.html#L57'>format</a>             57 src/vfs/smbfs/helpers/lib/slprintf.c     char *str, *format;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--slprintf.c.html#L64'>format</a>             64 src/vfs/smbfs/helpers/lib/slprintf.c     va_start (ap, format);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--slprintf.c.html#L69'>format</a>             69 src/vfs/smbfs/helpers/lib/slprintf.c     format = va_arg (ap, char *);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--slprintf.c.html#L72'>format</a>             72 src/vfs/smbfs/helpers/lib/slprintf.c     ret = vslprintf (str, n, format, ap);</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>vfs_sfs_ops</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L103'>vfs_sfs_ops</a>       103 src/vfs/sfs/sfs.c static struct vfs_class vfs_sfs_ops;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L236'>vfs_sfs_ops</a>       236 src/vfs/sfs/sfs.c         vfs_stamp (&amp;vfs_sfs_ops, cf);</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L255'>vfs_sfs_ops</a>       255 src/vfs/sfs/sfs.c         vfs_stamp_create (&amp;vfs_sfs_ops, (cachedfile *) head-&gt;data);</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L543'>vfs_sfs_ops</a>       543 src/vfs/sfs/sfs.c     vfs_sfs_ops.name = "sfs";</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L544'>vfs_sfs_ops</a>       544 src/vfs/sfs/sfs.c     vfs_sfs_ops.init = sfs_init;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L545'>vfs_sfs_ops</a>       545 src/vfs/sfs/sfs.c     vfs_sfs_ops.done = sfs_done;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L546'>vfs_sfs_ops</a>       546 src/vfs/sfs/sfs.c     vfs_sfs_ops.fill_names = sfs_fill_names;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L547'>vfs_sfs_ops</a>       547 src/vfs/sfs/sfs.c     vfs_sfs_ops.which = sfs_which;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L548'>vfs_sfs_ops</a>       548 src/vfs/sfs/sfs.c     vfs_sfs_ops.open = sfs_open;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L549'>vfs_sfs_ops</a>       549 src/vfs/sfs/sfs.c     vfs_sfs_ops.close = local_close;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L550'>vfs_sfs_ops</a>       550 src/vfs/sfs/sfs.c     vfs_sfs_ops.read = local_read;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L551'>vfs_sfs_ops</a>       551 src/vfs/sfs/sfs.c     vfs_sfs_ops.stat = sfs_stat;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L552'>vfs_sfs_ops</a>       552 src/vfs/sfs/sfs.c     vfs_sfs_ops.lstat = sfs_lstat;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L553'>vfs_sfs_ops</a>       553 src/vfs/sfs/sfs.c     vfs_sfs_ops.fstat = local_fstat;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L554'>vfs_sfs_ops</a>       554 src/vfs/sfs/sfs.c     vfs_sfs_ops.chmod = sfs_chmod;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L555'>vfs_sfs_ops</a>       555 src/vfs/sfs/sfs.c     vfs_sfs_ops.chown = sfs_chown;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L556'>vfs_sfs_ops</a>       556 src/vfs/sfs/sfs.c     vfs_sfs_ops.utime = sfs_utime;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L557'>vfs_sfs_ops</a>       557 src/vfs/sfs/sfs.c     vfs_sfs_ops.readlink = sfs_readlink;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L558'>vfs_sfs_ops</a>       558 src/vfs/sfs/sfs.c     vfs_sfs_ops.ferrno = local_errno;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L559'>vfs_sfs_ops</a>       559 src/vfs/sfs/sfs.c     vfs_sfs_ops.lseek = local_lseek;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L560'>vfs_sfs_ops</a>       560 src/vfs/sfs/sfs.c     vfs_sfs_ops.getid = sfs_getid;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L561'>vfs_sfs_ops</a>       561 src/vfs/sfs/sfs.c     vfs_sfs_ops.nothingisopen = sfs_nothingisopen;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L562'>vfs_sfs_ops</a>       562 src/vfs/sfs/sfs.c     vfs_sfs_ops.free = sfs_free;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L563'>vfs_sfs_ops</a>       563 src/vfs/sfs/sfs.c     vfs_sfs_ops.getlocalcopy = sfs_getlocalcopy;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L564'>vfs_sfs_ops</a>       564 src/vfs/sfs/sfs.c     vfs_sfs_ops.ungetlocalcopy = sfs_ungetlocalcopy;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L565'>vfs_sfs_ops</a>       565 src/vfs/sfs/sfs.c     vfs_register_class (&amp;vfs_sfs_ops);</span>
+</pre>
+</body>
+</html>

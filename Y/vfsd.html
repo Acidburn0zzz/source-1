@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>vfsd</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1495'>vfsd</a>             1495 src/filemanager/mountlist.c         struct statvfs vfsd;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1497'>vfsd</a>             1497 src/filemanager/mountlist.c         if (statvfs (file, &amp;vfsd) &lt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1501'>vfsd</a>             1501 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = (vfsd.f_frsize</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1502'>vfsd</a>             1502 src/filemanager/mountlist.c                               ? PROPAGATE_ALL_ONES (vfsd.f_frsize)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1503'>vfsd</a>             1503 src/filemanager/mountlist.c                               : PROPAGATE_ALL_ONES (vfsd.f_bsize));</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1505'>vfsd</a>             1505 src/filemanager/mountlist.c         fsp-&gt;fsu_blocks = PROPAGATE_ALL_ONES (vfsd.f_blocks);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1506'>vfsd</a>             1506 src/filemanager/mountlist.c         fsp-&gt;fsu_bfree = PROPAGATE_ALL_ONES (vfsd.f_bfree);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1507'>vfsd</a>             1507 src/filemanager/mountlist.c         fsp-&gt;fsu_bavail = PROPAGATE_TOP_BIT (vfsd.f_bavail);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1508'>vfsd</a>             1508 src/filemanager/mountlist.c         fsp-&gt;fsu_bavail_top_bit_set = EXTRACT_TOP_BIT (vfsd.f_bavail) != 0;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1509'>vfsd</a>             1509 src/filemanager/mountlist.c         fsp-&gt;fsu_files = PROPAGATE_ALL_ONES (vfsd.f_files);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1510'>vfsd</a>             1510 src/filemanager/mountlist.c         fsp-&gt;fsu_ffree = PROPAGATE_ALL_ONES (vfsd.f_ffree);</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>ctx</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--event-types.h.html#L58'>ctx</a>                58 lib/event-types.h     gpointer *ctx;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L237'>ctx</a>               237 lib/widget/wtools.c wtools_parent_call (void *routine, gpointer ctx, int argc, ...)</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L242'>ctx</a>               242 lib/widget/wtools.c     event_data.ctx = ctx;</span>
+<span class='curline'><a href='../S/src--background.c.html#L87'>ctx</a>                87 src/background.c register_task_running (file_op_context_t * ctx, pid_t pid, int fd, int to_child, char *info)</span>
+<span class='curline'><a href='../S/src--background.c.html#L100'>ctx</a>               100 src/background.c     add_select_channel (fd, background_attention, ctx);</span>
+<span class='curline'><a href='../S/src--background.c.html#L186'>ctx</a>               186 src/background.c     file_op_context_t *ctx;</span>
+<span class='curline'><a href='../S/src--background.c.html#L218'>ctx</a>               218 src/background.c     ctx = closure;</span>
+<span class='curline'><a href='../S/src--background.c.html#L225'>ctx</a>               225 src/background.c         unregister_task_running (ctx-&gt;pid, fd);</span>
+<span class='curline'><a href='../S/src--background.c.html#L226'>ctx</a>               226 src/background.c         if (!waitpid (ctx-&gt;pid, &amp;status, WNOHANG))</span>
+<span class='curline'><a href='../S/src--background.c.html#L229'>ctx</a>               229 src/background.c             kill (ctx-&gt;pid, SIGTERM);</span>
+<span class='curline'><a href='../S/src--background.c.html#L259'>ctx</a>               259 src/background.c         if (read (fd, ctx, sizeof (*ctx)) != sizeof (*ctx))</span>
+<span class='curline'><a href='../S/src--background.c.html#L325'>ctx</a>               325 src/background.c                 result = routine.non_have_ctx0 (ctx, Background);</span>
+<span class='curline'><a href='../S/src--background.c.html#L328'>ctx</a>               328 src/background.c                 result = routine.non_have_ctx1 (ctx, Background, data[0]);</span>
+<span class='curline'><a href='../S/src--background.c.html#L331'>ctx</a>               331 src/background.c                 result = routine.non_have_ctx2 (ctx, Background, data[0], data[1]);</span>
+<span class='curline'><a href='../S/src--background.c.html#L334'>ctx</a>               334 src/background.c                 result = routine.non_have_ctx3 (ctx, Background, data[0], data[1], data[2]);</span>
+<span class='curline'><a href='../S/src--background.c.html#L338'>ctx</a>               338 src/background.c                     routine.non_have_ctx4 (ctx, Background, data[0], data[1], data[2], data[3]);</span>
+<span class='curline'><a href='../S/src--background.c.html#L347'>ctx</a>               347 src/background.c             ret = write (to_child_fd, ctx, sizeof (*ctx));</span>
+<span class='curline'><a href='../S/src--background.c.html#L411'>ctx</a>               411 src/background.c parent_call_header (void *routine, int argc, enum ReturnType type, file_op_context_t * ctx)</span>
+<span class='curline'><a href='../S/src--background.c.html#L416'>ctx</a>               416 src/background.c     have_ctx = (ctx != NULL);</span>
+<span class='curline'><a href='../S/src--background.c.html#L424'>ctx</a>               424 src/background.c         ret = write (parent_fd, ctx, sizeof (*ctx));</span>
+<span class='curline'><a href='../S/src--background.c.html#L435'>ctx</a>               435 src/background.c     file_op_context_t *ctx = (file_op_context_t *) data;</span>
+<span class='curline'><a href='../S/src--background.c.html#L437'>ctx</a>               437 src/background.c     parent_call_header (routine, argc, Return_Integer, ctx);</span>
+<span class='curline'><a href='../S/src--background.c.html#L450'>ctx</a>               450 src/background.c     if (ctx)</span>
+<span class='curline'><a href='../S/src--background.c.html#L451'>ctx</a>               451 src/background.c         ret = read (from_parent_fd, ctx, sizeof (*ctx));</span>
+<span class='curline'><a href='../S/src--background.c.html#L526'>ctx</a>               526 src/background.c do_background (file_op_context_t * ctx, char *info)</span>
+<span class='curline'><a href='../S/src--background.c.html#L581'>ctx</a>               581 src/background.c         ctx-&gt;pid = pid;</span>
+<span class='curline'><a href='../S/src--background.c.html#L582'>ctx</a>               582 src/background.c         register_task_running (ctx, pid, comm[0], back_comm[1], info);</span>
+<span class='curline'><a href='../S/src--background.c.html#L590'>ctx</a>               590 src/background.c parent_call (void *routine, file_op_context_t * ctx, int argc, ...)</span>
+<span class='curline'><a href='../S/src--background.c.html#L596'>ctx</a>               596 src/background.c     ret = parent_va_call (routine, (gpointer) ctx, argc, ap);</span>
+<span class='curline'><a href='../S/src--background.c.html#L631'>ctx</a>               631 src/background.c         parent_va_call (event_data-&gt;routine, event_data-&gt;ctx, event_data-&gt;argc, event_data-&gt;ap);</span>
+<span class='curline'><a href='../S/src--background.h.html#L38'>ctx</a>                38 src/background.h int do_background (file_op_context_t * ctx, char *info);</span>
+<span class='curline'><a href='../S/src--background.h.html#L39'>ctx</a>                39 src/background.h int parent_call (void *routine, file_op_context_t * ctx, int argc, ...);</span>
+<span class='curline'><a href='../S/src--diffviewer--internal.h.html#L12'>ctx</a>                12 src/diffviewer/internal.h typedef int (*DFUNC) (void *ctx, int ch, int line, off_t off, size_t sz, const char *str);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L856'>ctx</a>               856 src/diffviewer/ydiff.c dff_reparse (diff_place_t ord, const char *filename, const GArray * ops, DFUNC printer, void *ctx)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L897'>ctx</a>               897 src/diffviewer/ydiff.c             printer (ctx, EQU_CH, line, off, sz, buf);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L904'>ctx</a>               904 src/diffviewer/ydiff.c                     printer (ctx, 0, 0, 0, 1, "\n");</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L907'>ctx</a>               907 src/diffviewer/ydiff.c                 printer (ctx, 0, 0, 0, sz, buf);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L920'>ctx</a>               920 src/diffviewer/ydiff.c                 printer (ctx, DEL_CH, 0, 0, 1, "\n");</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L931'>ctx</a>               931 src/diffviewer/ydiff.c                 printer (ctx, ADD_CH, line, off, sz, buf);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L938'>ctx</a>               938 src/diffviewer/ydiff.c                         printer (ctx, 0, 0, 0, 1, "\n");</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L941'>ctx</a>               941 src/diffviewer/ydiff.c                     printer (ctx, 0, 0, 0, sz, buf);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L957'>ctx</a>               957 src/diffviewer/ydiff.c                 printer (ctx, CHG_CH, line, off, sz, buf);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L964'>ctx</a>               964 src/diffviewer/ydiff.c                         printer (ctx, 0, 0, 0, 1, "\n");</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L967'>ctx</a>               967 src/diffviewer/ydiff.c                     printer (ctx, 0, 0, 0, sz, buf);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L979'>ctx</a>               979 src/diffviewer/ydiff.c                 printer (ctx, CHG_CH, 0, 0, 1, "\n");</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L992'>ctx</a>               992 src/diffviewer/ydiff.c         printer (ctx, EQU_CH, line, off, sz, buf);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L999'>ctx</a>               999 src/diffviewer/ydiff.c                 printer (ctx, 0, 0, 0, 1, "\n");</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1002'>ctx</a>              1002 src/diffviewer/ydiff.c             printer (ctx, 0, 0, 0, sz, buf);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1679'>ctx</a>              1679 src/diffviewer/ydiff.c printer (void *ctx, int ch, int line, off_t off, size_t sz, const char *str)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1681'>ctx</a>              1681 src/diffviewer/ydiff.c     GArray *a = ((PRINTER_CTX *) ctx)-&gt;a;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1682'>ctx</a>              1682 src/diffviewer/ydiff.c     DSRC dsrc = ((PRINTER_CTX *) ctx)-&gt;dsrc;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1723'>ctx</a>              1723 src/diffviewer/ydiff.c         FBUF *f = ((PRINTER_CTX *) ctx)-&gt;f;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1735'>ctx</a>              1735 src/diffviewer/ydiff.c     PRINTER_CTX ctx;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1772'>ctx</a>              1772 src/diffviewer/ydiff.c     ctx.dsrc = dview-&gt;dsrc;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1775'>ctx</a>              1775 src/diffviewer/ydiff.c     ctx.a = dview-&gt;a[DIFF_LEFT];</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1776'>ctx</a>              1776 src/diffviewer/ydiff.c     ctx.f = f[DIFF_LEFT];</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1777'>ctx</a>              1777 src/diffviewer/ydiff.c     rv |= dff_reparse (DIFF_LEFT, dview-&gt;file[DIFF_LEFT], ops, printer, &amp;ctx);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1779'>ctx</a>              1779 src/diffviewer/ydiff.c     ctx.a = dview-&gt;a[DIFF_RIGHT];</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1780'>ctx</a>              1780 src/diffviewer/ydiff.c     ctx.f = f[DIFF_RIGHT];</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1781'>ctx</a>              1781 src/diffviewer/ydiff.c     rv |= dff_reparse (DIFF_RIGHT, dview-&gt;file[DIFF_RIGHT], ops, printer, &amp;ctx);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L229'>ctx</a>               229 src/filemanager/file.c transform_source (file_op_context_t * ctx, const vfs_path_t * source_vpath)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L244'>ctx</a>               244 src/filemanager/file.c     if (mc_search_run (ctx-&gt;search_handle, fnsource, 0, strlen (fnsource), NULL))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L246'>ctx</a>               246 src/filemanager/file.c         q = mc_search_prepare_replace_str2 (ctx-&gt;search_handle, ctx-&gt;dest_mask);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L247'>ctx</a>               247 src/filemanager/file.c         if (ctx-&gt;search_handle-&gt;error != MC_SEARCH_E_OK)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L249'>ctx</a>               249 src/filemanager/file.c             if (ctx-&gt;search_handle-&gt;error_str != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L250'>ctx</a>               250 src/filemanager/file.c                 message (D_ERROR, MSG_ERROR, "%s", ctx-&gt;search_handle-&gt;error_str);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L388'>ctx</a>               388 src/filemanager/file.c make_symlink (file_op_context_t * ctx, const char *src_path, const char *dst_path)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L407'>ctx</a>               407 src/filemanager/file.c         if (ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L413'>ctx</a>               413 src/filemanager/file.c                 ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L421'>ctx</a>               421 src/filemanager/file.c     if (ctx-&gt;stable_symlinks)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L429'>ctx</a>               429 src/filemanager/file.c             ctx-&gt;stable_symlinks = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L433'>ctx</a>               433 src/filemanager/file.c     if (ctx-&gt;stable_symlinks &amp;&amp; !g_path_is_absolute (link_target))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L496'>ctx</a>               496 src/filemanager/file.c     if (ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L502'>ctx</a>               502 src/filemanager/file.c             ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L601'>ctx</a>               601 src/filemanager/file.c progress_update_one (file_op_total_context_t * tctx, file_op_context_t * ctx, off_t add)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L616'>ctx</a>               616 src/filemanager/file.c         if (verbose &amp;&amp; ctx-&gt;dialog_type == FILEGUI_DIALOG_MULTI_ITEM)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L618'>ctx</a>               618 src/filemanager/file.c             file_progress_show_count (ctx, tctx-&gt;progress_count, ctx-&gt;progress_count);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L619'>ctx</a>               619 src/filemanager/file.c             file_progress_show_total (tctx, ctx, tctx-&gt;progress_bytes, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L624'>ctx</a>               624 src/filemanager/file.c     return check_progress_buttons (ctx);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L704'>ctx</a>               704 src/filemanager/file.c real_query_recursive (file_op_context_t * ctx, enum OperationMode mode, const char *s)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L706'>ctx</a>               706 src/filemanager/file.c     if (ctx-&gt;recursive_result &lt; RECURSIVE_ALWAYS)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L719'>ctx</a>               719 src/filemanager/file.c         ctx-&gt;recursive_result =</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L724'>ctx</a>               724 src/filemanager/file.c         if (ctx-&gt;recursive_result != RECURSIVE_ABORT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L728'>ctx</a>               728 src/filemanager/file.c     switch (ctx-&gt;recursive_result)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L769'>ctx</a>               769 src/filemanager/file.c query_recursive (file_op_context_t * ctx, const char *s)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L782'>ctx</a>               782 src/filemanager/file.c         return parent_call (pntr.p, ctx, 1, strlen (s), s);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L784'>ctx</a>               784 src/filemanager/file.c         return real_query_recursive (ctx, Foreground, s);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L790'>ctx</a>               790 src/filemanager/file.c query_replace (file_op_context_t * ctx, const char *destname, struct stat *_s_stat,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L805'>ctx</a>               805 src/filemanager/file.c         return parent_call (pntr.p, ctx, 3, strlen (destname), destname,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L808'>ctx</a>               808 src/filemanager/file.c         return file_progress_real_query_replace (ctx, Foreground, destname, _s_stat, _d_stat);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L823'>ctx</a>               823 src/filemanager/file.c query_recursive (file_op_context_t * ctx, const char *s)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L825'>ctx</a>               825 src/filemanager/file.c     return real_query_recursive (ctx, Foreground, s);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L831'>ctx</a>               831 src/filemanager/file.c query_replace (file_op_context_t * ctx, const char *destname, struct stat *_s_stat,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L834'>ctx</a>               834 src/filemanager/file.c     return file_progress_real_query_replace (ctx, Foreground, destname, _s_stat, _d_stat);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L862'>ctx</a>               862 src/filemanager/file.c copy_file_file_display_progress (file_op_total_context_t * tctx, file_op_context_t * ctx,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L875'>ctx</a>               875 src/filemanager/file.c         ctx-&gt;eta_secs = 0.0;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L878'>ctx</a>               878 src/filemanager/file.c         ctx-&gt;eta_secs = ((dt / (double) n_read_total) * file_size) - dt;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L879'>ctx</a>               879 src/filemanager/file.c         ctx-&gt;bps = n_read_total / ((dt &lt; 1) ? 1 : dt);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L883'>ctx</a>               883 src/filemanager/file.c     ctx-&gt;bps_time = (tv_current.tv_sec - tv_transfer_start.tv_sec);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L884'>ctx</a>               884 src/filemanager/file.c     if (ctx-&gt;bps_time &lt; 1)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L885'>ctx</a>               885 src/filemanager/file.c         ctx-&gt;bps_time = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L886'>ctx</a>               886 src/filemanager/file.c     ctx-&gt;bps = n_read_total / ctx-&gt;bps_time;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L889'>ctx</a>               889 src/filemanager/file.c     if (ctx-&gt;progress_bytes != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L893'>ctx</a>               893 src/filemanager/file.c         remain_bytes = ctx-&gt;progress_bytes - tctx-&gt;copied_bytes;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L907'>ctx</a>               907 src/filemanager/file.c         tctx-&gt;bps = (tctx-&gt;bps * (tctx-&gt;bps_count - 1) + ctx-&gt;bps) / tctx-&gt;bps_count;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L917'>ctx</a>               917 src/filemanager/file.c move_file_file (file_op_total_context_t * tctx, file_op_context_t * ctx, const char *s,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L929'>ctx</a>               929 src/filemanager/file.c     file_progress_show_source (ctx, src_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L930'>ctx</a>               930 src/filemanager/file.c     file_progress_show_target (ctx, dst_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L932'>ctx</a>               932 src/filemanager/file.c     if (check_progress_buttons (ctx) == FILE_ABORT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L943'>ctx</a>               943 src/filemanager/file.c         if (ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L949'>ctx</a>               949 src/filemanager/file.c                 ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L974'>ctx</a>               974 src/filemanager/file.c             return_status = query_replace (ctx, d, &amp;src_stats, &amp;dst_stats);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L981'>ctx</a>               981 src/filemanager/file.c     if (!ctx-&gt;do_append)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L983'>ctx</a>               983 src/filemanager/file.c         if (S_ISLNK (src_stats.st_mode) &amp;&amp; ctx-&gt;stable_symlinks)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L985'>ctx</a>               985 src/filemanager/file.c             return_status = make_symlink (ctx, s, d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L993'>ctx</a>               993 src/filemanager/file.c             return_status = progress_update_one (tctx, ctx, src_stats.st_size);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1007'>ctx</a>              1007 src/filemanager/file.c         if (ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1013'>ctx</a>              1013 src/filemanager/file.c                 ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1025'>ctx</a>              1025 src/filemanager/file.c     return_status = copy_file_file (tctx, ctx, s, d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1032'>ctx</a>              1032 src/filemanager/file.c     file_progress_show_source (ctx, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1033'>ctx</a>              1033 src/filemanager/file.c     file_progress_show (ctx, 0, 0, "", FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1035'>ctx</a>              1035 src/filemanager/file.c     return_status = check_progress_buttons (ctx);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1041'>ctx</a>              1041 src/filemanager/file.c     if (mc_unlink (src_vpath) != 0 &amp;&amp; !ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1047'>ctx</a>              1047 src/filemanager/file.c             ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1052'>ctx</a>              1052 src/filemanager/file.c         return_status = progress_update_one (tctx, ctx, src_stats.st_size);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1068'>ctx</a>              1068 src/filemanager/file.c erase_file (file_op_total_context_t * tctx, file_op_context_t * ctx, const vfs_path_t * vpath)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1072'>ctx</a>              1072 src/filemanager/file.c     file_progress_show_deleting (ctx, vfs_path_as_str (vpath), &amp;tctx-&gt;progress_count);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1073'>ctx</a>              1073 src/filemanager/file.c     file_progress_show_count (ctx, tctx-&gt;progress_count, ctx-&gt;progress_count);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1074'>ctx</a>              1074 src/filemanager/file.c     if (check_progress_buttons (ctx) == FILE_ABORT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1085'>ctx</a>              1085 src/filemanager/file.c     while (mc_unlink (vpath) != 0 &amp;&amp; !ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1095'>ctx</a>              1095 src/filemanager/file.c             ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1102'>ctx</a>              1102 src/filemanager/file.c     return check_progress_buttons (ctx);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1114'>ctx</a>              1114 src/filemanager/file.c recursive_erase (file_op_total_context_t * tctx, file_op_context_t * ctx, const vfs_path_t * vpath)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1141'>ctx</a>              1141 src/filemanager/file.c             return_status = recursive_erase (tctx, ctx, tmp_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1143'>ctx</a>              1143 src/filemanager/file.c             return_status = erase_file (tctx, ctx, tmp_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1153'>ctx</a>              1153 src/filemanager/file.c     file_progress_show_deleting (ctx, s, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1154'>ctx</a>              1154 src/filemanager/file.c     file_progress_show_count (ctx, tctx-&gt;progress_count, ctx-&gt;progress_count);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1155'>ctx</a>              1155 src/filemanager/file.c     if (check_progress_buttons (ctx) == FILE_ABORT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1160'>ctx</a>              1160 src/filemanager/file.c     while (my_rmdir (s) != 0 &amp;&amp; !ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1168'>ctx</a>              1168 src/filemanager/file.c             ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1204'>ctx</a>              1204 src/filemanager/file.c erase_dir_iff_empty (file_op_context_t * ctx, const vfs_path_t * vpath, size_t count)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1211'>ctx</a>              1211 src/filemanager/file.c     file_progress_show_deleting (ctx, s, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1212'>ctx</a>              1212 src/filemanager/file.c     file_progress_show_count (ctx, count, ctx-&gt;progress_count);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1213'>ctx</a>              1213 src/filemanager/file.c     if (check_progress_buttons (ctx) == FILE_ABORT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1220'>ctx</a>              1220 src/filemanager/file.c         while (my_rmdir (s) != 0 &amp;&amp; !ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1224'>ctx</a>              1224 src/filemanager/file.c                 ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1320'>ctx</a>              1320 src/filemanager/file.c panel_operate_init_totals (const WPanel * panel, const char *source, file_op_context_t * ctx,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1339'>ctx</a>              1339 src/filemanager/file.c         ctx-&gt;progress_count = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1340'>ctx</a>              1340 src/filemanager/file.c         ctx-&gt;progress_bytes = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1343'>ctx</a>              1343 src/filemanager/file.c             status = panel_compute_totals (panel, &amp;dsm, &amp;ctx-&gt;progress_count, &amp;ctx-&gt;progress_bytes,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1344'>ctx</a>              1344 src/filemanager/file.c                                            ctx-&gt;follow_links);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1351'>ctx</a>              1351 src/filemanager/file.c             status = compute_dir_size (p, &amp;dsm, &amp;dir_count, &amp;ctx-&gt;progress_count,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1352'>ctx</a>              1352 src/filemanager/file.c                                        &amp;ctx-&gt;progress_bytes, ctx-&gt;follow_links);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1358'>ctx</a>              1358 src/filemanager/file.c         ctx-&gt;progress_totals_computed = (status == FILE_CONT);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1366'>ctx</a>              1366 src/filemanager/file.c         ctx-&gt;progress_count = panel-&gt;marked;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1367'>ctx</a>              1367 src/filemanager/file.c         ctx-&gt;progress_bytes = panel-&gt;total;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1368'>ctx</a>              1368 src/filemanager/file.c         ctx-&gt;progress_totals_computed = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1371'>ctx</a>              1371 src/filemanager/file.c     file_op_context_create_ui (ctx, TRUE, dialog_type);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1465'>ctx</a>              1465 src/filemanager/file.c end_bg_process (file_op_context_t * ctx, enum OperationMode mode)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1467'>ctx</a>              1467 src/filemanager/file.c     int pid = ctx-&gt;pid;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1470'>ctx</a>              1470 src/filemanager/file.c     ctx-&gt;pid = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1484'>ctx</a>              1484 src/filemanager/file.c copy_file_file (file_op_total_context_t * tctx, file_op_context_t * ctx,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1504'>ctx</a>              1504 src/filemanager/file.c     ctx-&gt;do_reget = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1510'>ctx</a>              1510 src/filemanager/file.c     file_progress_show_source (ctx, src_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1511'>ctx</a>              1511 src/filemanager/file.c     file_progress_show_target (ctx, dst_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1513'>ctx</a>              1513 src/filemanager/file.c     if (check_progress_buttons (ctx) == FILE_ABORT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1525'>ctx</a>              1525 src/filemanager/file.c             if (ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1531'>ctx</a>              1531 src/filemanager/file.c                     ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1542'>ctx</a>              1542 src/filemanager/file.c     while ((*ctx-&gt;stat_func) (src_vpath, &amp;src_stat) != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1544'>ctx</a>              1544 src/filemanager/file.c         if (ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1550'>ctx</a>              1550 src/filemanager/file.c                 ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1570'>ctx</a>              1570 src/filemanager/file.c             ctx-&gt;do_reget = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1571'>ctx</a>              1571 src/filemanager/file.c             return_status = query_replace (ctx, dst_path, &amp;src_stat, &amp;dst_stat);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1577'>ctx</a>              1577 src/filemanager/file.c     if (!ctx-&gt;do_append)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1580'>ctx</a>              1580 src/filemanager/file.c         if (!ctx-&gt;follow_links &amp;&amp; src_stat.st_nlink &gt; 1</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1590'>ctx</a>              1590 src/filemanager/file.c             return_status = make_symlink (ctx, src_path, dst_path);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1597'>ctx</a>              1597 src/filemanager/file.c             while (mc_mknod (dst_vpath, src_stat.st_mode &amp; ctx-&gt;umask_kill, src_stat.st_rdev) &lt; 0</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1598'>ctx</a>              1598 src/filemanager/file.c                    &amp;&amp; !ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1604'>ctx</a>              1604 src/filemanager/file.c                     ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1609'>ctx</a>              1609 src/filemanager/file.c             while (ctx-&gt;preserve_uidgid</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1610'>ctx</a>              1610 src/filemanager/file.c                    &amp;&amp; mc_chown (dst_vpath, src_stat.st_uid, src_stat.st_gid) != 0 &amp;&amp; !ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1616'>ctx</a>              1616 src/filemanager/file.c                     ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1624'>ctx</a>              1624 src/filemanager/file.c             while (ctx-&gt;preserve &amp;&amp; mc_chmod (dst_vpath, src_stat.st_mode &amp; ctx-&gt;umask_kill) != 0</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1625'>ctx</a>              1625 src/filemanager/file.c                    &amp;&amp; !ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1631'>ctx</a>              1631 src/filemanager/file.c                     ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1646'>ctx</a>              1646 src/filemanager/file.c     while ((src_desc = mc_open (src_vpath, O_RDONLY | O_LINEAR)) &lt; 0 &amp;&amp; !ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1652'>ctx</a>              1652 src/filemanager/file.c             ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1655'>ctx</a>              1655 src/filemanager/file.c         ctx-&gt;do_append = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1659'>ctx</a>              1659 src/filemanager/file.c     if (ctx-&gt;do_reget != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1661'>ctx</a>              1661 src/filemanager/file.c         if (mc_lseek (src_desc, ctx-&gt;do_reget, SEEK_SET) != ctx-&gt;do_reget)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1664'>ctx</a>              1664 src/filemanager/file.c             ctx-&gt;do_reget = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1665'>ctx</a>              1665 src/filemanager/file.c             ctx-&gt;do_append = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1671'>ctx</a>              1671 src/filemanager/file.c         if (ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1679'>ctx</a>              1679 src/filemanager/file.c                 ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1680'>ctx</a>              1680 src/filemanager/file.c             ctx-&gt;do_append = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1695'>ctx</a>              1695 src/filemanager/file.c         if (ctx-&gt;do_append)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1709'>ctx</a>              1709 src/filemanager/file.c             if (ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1717'>ctx</a>              1717 src/filemanager/file.c                     ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1718'>ctx</a>              1718 src/filemanager/file.c                 ctx-&gt;do_append = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1725'>ctx</a>              1725 src/filemanager/file.c     appending = ctx-&gt;do_append;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1726'>ctx</a>              1726 src/filemanager/file.c     ctx-&gt;do_append = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1731'>ctx</a>              1731 src/filemanager/file.c         if (ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1739'>ctx</a>              1739 src/filemanager/file.c                 ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1747'>ctx</a>              1747 src/filemanager/file.c         if (ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1758'>ctx</a>              1758 src/filemanager/file.c             ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1760'>ctx</a>              1760 src/filemanager/file.c         if (ctx-&gt;skip_all || return_status == FILE_SKIP)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1779'>ctx</a>              1779 src/filemanager/file.c     ctx-&gt;eta_secs = 0.0;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1780'>ctx</a>              1780 src/filemanager/file.c     ctx-&gt;bps = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1783'>ctx</a>              1783 src/filemanager/file.c         file_progress_show (ctx, 0, file_size, "", TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1785'>ctx</a>              1785 src/filemanager/file.c         file_progress_show (ctx, 1, 1, "", TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1786'>ctx</a>              1786 src/filemanager/file.c     return_status = check_progress_buttons (ctx);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1809'>ctx</a>              1809 src/filemanager/file.c                 while ((n_read = mc_read (src_desc, buf, bufsize)) &lt; 0 &amp;&amp; !ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1815'>ctx</a>              1815 src/filemanager/file.c                         ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1852'>ctx</a>              1852 src/filemanager/file.c                     if (ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1866'>ctx</a>              1866 src/filemanager/file.c                         ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1875'>ctx</a>              1875 src/filemanager/file.c             tctx-&gt;copied_bytes = tctx-&gt;progress_bytes + n_read_total + ctx-&gt;do_reget;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1882'>ctx</a>              1882 src/filemanager/file.c                 copy_file_file_display_progress (tctx, ctx,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1900'>ctx</a>              1900 src/filemanager/file.c                 if (verbose &amp;&amp; ctx-&gt;dialog_type == FILEGUI_DIALOG_MULTI_ITEM)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1902'>ctx</a>              1902 src/filemanager/file.c                     file_progress_show_count (ctx, tctx-&gt;progress_count, ctx-&gt;progress_count);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1903'>ctx</a>              1903 src/filemanager/file.c                     file_progress_show_total (tctx, ctx, tctx-&gt;copied_bytes, force_update);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1906'>ctx</a>              1906 src/filemanager/file.c                 file_progress_show (ctx, n_read_total + ctx-&gt;do_reget, file_size, stalled_msg,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1911'>ctx</a>              1911 src/filemanager/file.c             return_status = check_progress_buttons (ctx);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1927'>ctx</a>              1927 src/filemanager/file.c     while (src_desc != -1 &amp;&amp; mc_close (src_desc) &lt; 0 &amp;&amp; !ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1935'>ctx</a>              1935 src/filemanager/file.c             ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1939'>ctx</a>              1939 src/filemanager/file.c     while (dest_desc != -1 &amp;&amp; mc_close (dest_desc) &lt; 0 &amp;&amp; !ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1945'>ctx</a>              1945 src/filemanager/file.c             ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1960'>ctx</a>              1960 src/filemanager/file.c         if (!appending &amp;&amp; ctx-&gt;preserve_uidgid)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1962'>ctx</a>              1962 src/filemanager/file.c             while (mc_chown (dst_vpath, src_uid, src_gid) != 0 &amp;&amp; !ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1969'>ctx</a>              1969 src/filemanager/file.c                     ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1980'>ctx</a>              1980 src/filemanager/file.c             if (ctx-&gt;preserve)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1982'>ctx</a>              1982 src/filemanager/file.c                 while (mc_chmod (dst_vpath, (src_mode &amp; ctx-&gt;umask_kill)) != 0 &amp;&amp; !ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1989'>ctx</a>              1989 src/filemanager/file.c                         ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2002'>ctx</a>              2002 src/filemanager/file.c                 mc_chmod (dst_vpath, (src_mode &amp; ctx-&gt;umask_kill));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2009'>ctx</a>              2009 src/filemanager/file.c         return_status = progress_update_one (tctx, ctx, file_size);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2026'>ctx</a>              2026 src/filemanager/file.c copy_dir_dir (file_op_total_context_t * tctx, file_op_context_t * ctx, const char *s, const char *d,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2043'>ctx</a>              2043 src/filemanager/file.c     if ((*ctx-&gt;stat_func) (src_vpath, &amp;cbuf) != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2045'>ctx</a>              2045 src/filemanager/file.c         if (ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2053'>ctx</a>              2053 src/filemanager/file.c                 ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2071'>ctx</a>              2071 src/filemanager/file.c     if (ctx-&gt;preserve &amp;&amp; cbuf.st_nlink &gt; 1 &amp;&amp; check_hardlinks (src_vpath, dst_vpath, &amp;cbuf))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2079'>ctx</a>              2079 src/filemanager/file.c         if (ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2087'>ctx</a>              2087 src/filemanager/file.c                 ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2129'>ctx</a>              2129 src/filemanager/file.c             if (ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2135'>ctx</a>              2135 src/filemanager/file.c                     ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2142'>ctx</a>              2142 src/filemanager/file.c         if (toplevel &amp;&amp; ctx-&gt;dive_into_subdirs)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2159'>ctx</a>              2159 src/filemanager/file.c         while (my_mkdir (dst_vpath, (cbuf.st_mode &amp; ctx-&gt;umask_kill) | S_IRWXU) != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2161'>ctx</a>              2161 src/filemanager/file.c             if (ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2167'>ctx</a>              2167 src/filemanager/file.c                     ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2181'>ctx</a>              2181 src/filemanager/file.c     if (ctx-&gt;preserve_uidgid)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2185'>ctx</a>              2185 src/filemanager/file.c             if (ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2191'>ctx</a>              2191 src/filemanager/file.c                     ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2218'>ctx</a>              2218 src/filemanager/file.c         (*ctx-&gt;stat_func) (tmp_vpath, &amp;buf);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2231'>ctx</a>              2231 src/filemanager/file.c                 copy_dir_dir (tctx, ctx, path, mdpath, FALSE, FALSE, do_delete, parent_dirs);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2239'>ctx</a>              2239 src/filemanager/file.c             return_status = copy_file_file (tctx, ctx, path, dest_file);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2247'>ctx</a>              2247 src/filemanager/file.c             if (ctx-&gt;erase_at_end)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2256'>ctx</a>              2256 src/filemanager/file.c                 return_status = erase_dir_iff_empty (ctx, tmp_vpath, tctx-&gt;progress_count);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2258'>ctx</a>              2258 src/filemanager/file.c                 return_status = erase_file (tctx, ctx, tmp_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2264'>ctx</a>              2264 src/filemanager/file.c     if (ctx-&gt;preserve)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2268'>ctx</a>              2268 src/filemanager/file.c         mc_chmod (dst_vpath, cbuf.st_mode &amp; ctx-&gt;umask_kill);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2278'>ctx</a>              2278 src/filemanager/file.c         mc_chmod (dst_vpath, cbuf.st_mode &amp; ctx-&gt;umask_kill);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2296'>ctx</a>              2296 src/filemanager/file.c move_dir_dir (file_op_total_context_t * tctx, file_op_context_t * ctx, const char *s, const char *d)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2307'>ctx</a>              2307 src/filemanager/file.c     file_progress_show_source (ctx, src_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2308'>ctx</a>              2308 src/filemanager/file.c     file_progress_show_target (ctx, dst_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2310'>ctx</a>              2310 src/filemanager/file.c     if (check_progress_buttons (ctx) == FILE_ABORT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2329'>ctx</a>              2329 src/filemanager/file.c     else if (!ctx-&gt;dive_into_subdirs)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2348'>ctx</a>              2348 src/filemanager/file.c             return_status = copy_dir_dir (tctx, ctx, s, d, FALSE, TRUE, TRUE, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2354'>ctx</a>              2354 src/filemanager/file.c         else if (ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2363'>ctx</a>              2363 src/filemanager/file.c                 ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2380'>ctx</a>              2380 src/filemanager/file.c         if (!ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2384'>ctx</a>              2384 src/filemanager/file.c                 ctx-&gt;skip_all = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2391'>ctx</a>              2391 src/filemanager/file.c     return_status = copy_dir_dir (tctx, ctx, s, d, FALSE, FALSE, TRUE, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2396'>ctx</a>              2396 src/filemanager/file.c     file_progress_show_source (ctx, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2397'>ctx</a>              2397 src/filemanager/file.c     file_progress_show_target (ctx, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2398'>ctx</a>              2398 src/filemanager/file.c     file_progress_show (ctx, 0, 0, "", FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2400'>ctx</a>              2400 src/filemanager/file.c     return_status = check_progress_buttons (ctx);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2405'>ctx</a>              2405 src/filemanager/file.c     if (ctx-&gt;erase_at_end)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2415'>ctx</a>              2415 src/filemanager/file.c                 return_status = erase_dir_iff_empty (ctx, lp-&gt;src_vpath, tctx-&gt;progress_count);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2417'>ctx</a>              2417 src/filemanager/file.c                 return_status = erase_file (tctx, ctx, lp-&gt;src_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2426'>ctx</a>              2426 src/filemanager/file.c     erase_dir_iff_empty (ctx, src_vpath, tctx-&gt;progress_count);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2442'>ctx</a>              2442 src/filemanager/file.c erase_dir (file_op_total_context_t * tctx, file_op_context_t * ctx, const vfs_path_t * s_vpath)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2446'>ctx</a>              2446 src/filemanager/file.c     file_progress_show_deleting (ctx, vfs_path_as_str (s_vpath), NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2447'>ctx</a>              2447 src/filemanager/file.c     file_progress_show_count (ctx, tctx-&gt;progress_count, ctx-&gt;progress_count);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2448'>ctx</a>              2448 src/filemanager/file.c     if (check_progress_buttons (ctx) == FILE_ABORT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2463'>ctx</a>              2463 src/filemanager/file.c         error = query_recursive (ctx, vfs_path_as_str (s_vpath));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2465'>ctx</a>              2465 src/filemanager/file.c             error = recursive_erase (tctx, ctx, s_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2469'>ctx</a>              2469 src/filemanager/file.c     while (my_rmdir (vfs_path_as_str (s_vpath)) == -1 &amp;&amp; !ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2619'>ctx</a>              2619 src/filemanager/file.c     file_op_context_t *ctx;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2683'>ctx</a>              2683 src/filemanager/file.c     ctx = file_op_context_new (operation);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2726'>ctx</a>              2726 src/filemanager/file.c             file_mask_dialog (ctx, operation, source != NULL, format,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2782'>ctx</a>              2782 src/filemanager/file.c         v = do_background (ctx,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2855'>ctx</a>              2855 src/filemanager/file.c         if (panel_operate_init_totals (panel, vfs_path_as_str (source_with_vpath), ctx, dialog_type)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2861'>ctx</a>              2861 src/filemanager/file.c                     value = erase_dir (tctx, ctx, source_with_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2863'>ctx</a>              2863 src/filemanager/file.c                     value = erase_file (tctx, ctx, source_with_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2867'>ctx</a>              2867 src/filemanager/file.c                 temp = transform_source (ctx, source_with_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2874'>ctx</a>              2874 src/filemanager/file.c                     repl_dest = mc_search_prepare_replace_str2 (ctx-&gt;search_handle, dest);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2875'>ctx</a>              2875 src/filemanager/file.c                     if (ctx-&gt;search_handle-&gt;error != MC_SEARCH_E_OK)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2877'>ctx</a>              2877 src/filemanager/file.c                         if (ctx-&gt;search_handle-&gt;error_str != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2878'>ctx</a>              2878 src/filemanager/file.c                             message (D_ERROR, MSG_ERROR, "%s", ctx-&gt;search_handle-&gt;error_str);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2896'>ctx</a>              2896 src/filemanager/file.c                         ctx-&gt;stat_func (source_with_vpath, &amp;src_stat);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2900'>ctx</a>              2900 src/filemanager/file.c                                 copy_dir_dir (tctx, ctx, vfs_path_as_str (source_with_vpath),</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2904'>ctx</a>              2904 src/filemanager/file.c                                 copy_file_file (tctx, ctx, vfs_path_as_str (source_with_vpath),</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2911'>ctx</a>              2911 src/filemanager/file.c                                 move_dir_dir (tctx, ctx, vfs_path_as_str (source_with_vpath), dest);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2914'>ctx</a>              2914 src/filemanager/file.c                                 move_file_file (tctx, ctx, vfs_path_as_str (source_with_vpath),</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2944'>ctx</a>              2944 src/filemanager/file.c             if (ctx-&gt;skip_all</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2949'>ctx</a>              2949 src/filemanager/file.c         if (panel_operate_init_totals (panel, NULL, ctx, dialog_type) == FILE_CONT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2974'>ctx</a>              2974 src/filemanager/file.c                         value = erase_dir (tctx, ctx, source_with_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2976'>ctx</a>              2976 src/filemanager/file.c                         value = erase_file (tctx, ctx, source_with_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2980'>ctx</a>              2980 src/filemanager/file.c                     temp = transform_source (ctx, source_with_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2987'>ctx</a>              2987 src/filemanager/file.c                         repl_dest = mc_search_prepare_replace_str2 (ctx-&gt;search_handle, dest);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2988'>ctx</a>              2988 src/filemanager/file.c                         if (ctx-&gt;search_handle-&gt;error != MC_SEARCH_E_OK)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2990'>ctx</a>              2990 src/filemanager/file.c                             if (ctx-&gt;search_handle-&gt;error_str != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2991'>ctx</a>              2991 src/filemanager/file.c                                 message (D_ERROR, MSG_ERROR, "%s", ctx-&gt;search_handle-&gt;error_str);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3013'>ctx</a>              3013 src/filemanager/file.c                                 ctx-&gt;stat_func (vpath, &amp;src_stat);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3017'>ctx</a>              3017 src/filemanager/file.c                                 value = copy_dir_dir (tctx, ctx, source_with_path_str, temp,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3020'>ctx</a>              3020 src/filemanager/file.c                                 value = copy_file_file (tctx, ctx, source_with_path_str, temp);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3026'>ctx</a>              3026 src/filemanager/file.c                                 value = move_dir_dir (tctx, ctx, source_with_path_str, temp);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3028'>ctx</a>              3028 src/filemanager/file.c                                 value = move_file_file (tctx, ctx, source_with_path_str, temp);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3047'>ctx</a>              3047 src/filemanager/file.c                 if (verbose &amp;&amp; ctx-&gt;dialog_type == FILEGUI_DIALOG_MULTI_ITEM)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3049'>ctx</a>              3049 src/filemanager/file.c                     file_progress_show_count (ctx, tctx-&gt;progress_count, ctx-&gt;progress_count);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3050'>ctx</a>              3050 src/filemanager/file.c                     file_progress_show_total (tctx, ctx, tctx-&gt;progress_bytes, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3054'>ctx</a>              3054 src/filemanager/file.c                     file_progress_show (ctx, 0, 0, "", FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3056'>ctx</a>              3056 src/filemanager/file.c                 if (check_progress_buttons (ctx) == FILE_ABORT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3089'>ctx</a>              3089 src/filemanager/file.c     MC_PTR_FREE (ctx-&gt;dest_mask);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3098'>ctx</a>              3098 src/filemanager/file.c         ctx-&gt;pid = cur_pid;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3099'>ctx</a>              3099 src/filemanager/file.c         parent_call ((void *) end_bg_process, ctx, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3108'>ctx</a>              3108 src/filemanager/file.c     file_op_context_destroy (ctx);</span>
+<span class='curline'><a href='../S/src--filemanager--file.h.html#L42'>ctx</a>                42 src/filemanager/file.h FileProgressStatus copy_file_file (file_op_total_context_t * tctx, file_op_context_t * ctx,</span>
+<span class='curline'><a href='../S/src--filemanager--file.h.html#L44'>ctx</a>                44 src/filemanager/file.h FileProgressStatus move_dir_dir (file_op_total_context_t * tctx, file_op_context_t * ctx,</span>
+<span class='curline'><a href='../S/src--filemanager--file.h.html#L46'>ctx</a>                46 src/filemanager/file.h FileProgressStatus copy_dir_dir (file_op_total_context_t * tctx, file_op_context_t * ctx,</span>
+<span class='curline'><a href='../S/src--filemanager--file.h.html#L50'>ctx</a>                50 src/filemanager/file.h FileProgressStatus erase_dir (file_op_total_context_t * tctx, file_op_context_t * ctx,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L397'>ctx</a>               397 src/filemanager/filegui.c overwrite_query_dialog (file_op_context_t * ctx, enum OperationMode mode)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L462'>ctx</a>               462 src/filemanager/filegui.c     file_op_context_ui_t *ui = ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L578'>ctx</a>               578 src/filemanager/filegui.c         if ((ctx-&gt;operation == OP_COPY) &amp;&amp; (ui-&gt;d_stat-&gt;st_size != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L668'>ctx</a>               668 src/filemanager/filegui.c check_progress_buttons (file_op_context_t * ctx)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L674'>ctx</a>               674 src/filemanager/filegui.c     if (ctx == NULL || ctx-&gt;ui == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L677'>ctx</a>               677 src/filemanager/filegui.c     ui = ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L681'>ctx</a>               681 src/filemanager/filegui.c     c = tty_get_event (&amp;event, FALSE, ctx-&gt;suspended);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L692'>ctx</a>               692 src/filemanager/filegui.c         if (ctx-&gt;suspended)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L698'>ctx</a>               698 src/filemanager/filegui.c         ctx-&gt;suspended = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L702'>ctx</a>               702 src/filemanager/filegui.c         ctx-&gt;suspended = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L705'>ctx</a>               705 src/filemanager/filegui.c         ctx-&gt;suspended = !ctx-&gt;suspended;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L706'>ctx</a>               706 src/filemanager/filegui.c         place_progress_buttons (ui-&gt;op_dlg, ctx-&gt;suspended);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L710'>ctx</a>               710 src/filemanager/filegui.c         if (ctx-&gt;suspended)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L720'>ctx</a>               720 src/filemanager/filegui.c file_op_context_create_ui (file_op_context_t * ctx, gboolean with_eta,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L728'>ctx</a>               728 src/filemanager/filegui.c     if (ctx == NULL || ctx-&gt;ui != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L741'>ctx</a>               741 src/filemanager/filegui.c     ctx-&gt;dialog_type = dialog_type;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L742'>ctx</a>               742 src/filemanager/filegui.c     ctx-&gt;recursive_result = RECURSIVE_YES;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L743'>ctx</a>               743 src/filemanager/filegui.c     ctx-&gt;ui = g_new0 (file_op_context_ui_t, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L745'>ctx</a>               745 src/filemanager/filegui.c     ui = ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L750'>ctx</a>               750 src/filemanager/filegui.c                     NULL, NULL, op_names[ctx-&gt;operation]);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L754'>ctx</a>               754 src/filemanager/filegui.c         ui-&gt;showing_eta = with_eta &amp;&amp; ctx-&gt;progress_totals_computed;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L783'>ctx</a>               783 src/filemanager/filegui.c             if (ctx-&gt;progress_totals_computed)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L865'>ctx</a>               865 src/filemanager/filegui.c file_op_context_destroy_ui (file_op_context_t * ctx)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L867'>ctx</a>               867 src/filemanager/filegui.c     if (ctx != NULL &amp;&amp; ctx-&gt;ui != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L869'>ctx</a>               869 src/filemanager/filegui.c         file_op_context_ui_t *ui = (file_op_context_ui_t *) ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L873'>ctx</a>               873 src/filemanager/filegui.c         MC_PTR_FREE (ctx-&gt;ui);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L883'>ctx</a>               883 src/filemanager/filegui.c file_progress_show (file_op_context_t * ctx, off_t done, off_t total,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L889'>ctx</a>               889 src/filemanager/filegui.c     if (!verbose || ctx == NULL || ctx-&gt;ui == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L892'>ctx</a>               892 src/filemanager/filegui.c     ui = ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L906'>ctx</a>               906 src/filemanager/filegui.c     if (ui-&gt;showing_eta &amp;&amp; ctx-&gt;eta_secs &gt; 0.5)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L910'>ctx</a>               910 src/filemanager/filegui.c         file_eta_prepare_for_show (buffer2, ctx-&gt;eta_secs, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L911'>ctx</a>               911 src/filemanager/filegui.c         if (ctx-&gt;bps == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L917'>ctx</a>               917 src/filemanager/filegui.c             file_bps_prepare_for_show (buffer3, ctx-&gt;bps);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L932'>ctx</a>               932 src/filemanager/filegui.c file_progress_show_count (file_op_context_t * ctx, size_t done, size_t total)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L937'>ctx</a>               937 src/filemanager/filegui.c     if (ctx == NULL || ctx-&gt;ui == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L940'>ctx</a>               940 src/filemanager/filegui.c     ui = ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L944'>ctx</a>               944 src/filemanager/filegui.c     if (ctx-&gt;progress_totals_computed)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L954'>ctx</a>               954 src/filemanager/filegui.c file_progress_show_total (file_op_total_context_t * tctx, file_op_context_t * ctx,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L962'>ctx</a>               962 src/filemanager/filegui.c     if (ctx == NULL || ctx-&gt;ui == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L965'>ctx</a>               965 src/filemanager/filegui.c     ui = ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L969'>ctx</a>               969 src/filemanager/filegui.c         if (ctx-&gt;progress_bytes == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L974'>ctx</a>               974 src/filemanager/filegui.c                              (int) (1024 * copied_bytes / ctx-&gt;progress_bytes));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L990'>ctx</a>               990 src/filemanager/filegui.c         if (ctx-&gt;progress_totals_computed)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1020'>ctx</a>              1020 src/filemanager/filegui.c         if (!ctx-&gt;progress_totals_computed)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1024'>ctx</a>              1024 src/filemanager/filegui.c             size_trunc_len (buffer3, 5, ctx-&gt;progress_bytes, 0, panels_options.kilobyte_si);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1037'>ctx</a>              1037 src/filemanager/filegui.c file_progress_show_source (file_op_context_t * ctx, const vfs_path_t * s_vpath)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1041'>ctx</a>              1041 src/filemanager/filegui.c     if (ctx == NULL || ctx-&gt;ui == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1044'>ctx</a>              1044 src/filemanager/filegui.c     ui = ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1065'>ctx</a>              1065 src/filemanager/filegui.c file_progress_show_target (file_op_context_t * ctx, const vfs_path_t * s_vpath)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1069'>ctx</a>              1069 src/filemanager/filegui.c     if (ctx == NULL || ctx-&gt;ui == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1072'>ctx</a>              1072 src/filemanager/filegui.c     ui = ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1090'>ctx</a>              1090 src/filemanager/filegui.c file_progress_show_deleting (file_op_context_t * ctx, const char *s, size_t * count)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1094'>ctx</a>              1094 src/filemanager/filegui.c     if (ctx == NULL || ctx-&gt;ui == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1097'>ctx</a>              1097 src/filemanager/filegui.c     ui = ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1111'>ctx</a>              1111 src/filemanager/filegui.c file_progress_real_query_replace (file_op_context_t * ctx,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1117'>ctx</a>              1117 src/filemanager/filegui.c     if (ctx == NULL || ctx-&gt;ui == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1120'>ctx</a>              1120 src/filemanager/filegui.c     ui = ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1127'>ctx</a>              1127 src/filemanager/filegui.c         ui-&gt;replace_result = overwrite_query_dialog (ctx, mode);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1148'>ctx</a>              1148 src/filemanager/filegui.c         ctx-&gt;do_reget = _d_stat-&gt;st_size;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1151'>ctx</a>              1151 src/filemanager/filegui.c         ctx-&gt;do_append = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1170'>ctx</a>              1170 src/filemanager/filegui.c file_mask_dialog (file_op_context_t * ctx, FileOperation operation,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1181'>ctx</a>              1181 src/filemanager/filegui.c     if (ctx == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1185'>ctx</a>              1185 src/filemanager/filegui.c     ctx-&gt;op_preserve = filegui__check_attrs_on_fs (def_text);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1186'>ctx</a>              1186 src/filemanager/filegui.c     ctx-&gt;stable_symlinks = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1248'>ctx</a>              1248 src/filemanager/filegui.c                 QUICK_CHECKBOX (N_("Follow &amp;links"), &amp;ctx-&gt;follow_links, NULL),</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1249'>ctx</a>              1249 src/filemanager/filegui.c                 QUICK_CHECKBOX (N_("Preserve &amp;attributes"), &amp;ctx-&gt;op_preserve, NULL),</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1251'>ctx</a>              1251 src/filemanager/filegui.c                 QUICK_CHECKBOX (N_("Di&amp;ve into subdir if exists"), &amp;ctx-&gt;dive_into_subdirs, NULL),</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1252'>ctx</a>              1252 src/filemanager/filegui.c                 QUICK_CHECKBOX (N_("&amp;Stable symlinks"), &amp;ctx-&gt;stable_symlinks, NULL),</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1279'>ctx</a>              1279 src/filemanager/filegui.c         if (ctx-&gt;follow_links)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1280'>ctx</a>              1280 src/filemanager/filegui.c             ctx-&gt;stat_func = mc_stat;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1282'>ctx</a>              1282 src/filemanager/filegui.c             ctx-&gt;stat_func = mc_lstat;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1284'>ctx</a>              1284 src/filemanager/filegui.c         if (ctx-&gt;op_preserve)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1286'>ctx</a>              1286 src/filemanager/filegui.c             ctx-&gt;preserve = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1287'>ctx</a>              1287 src/filemanager/filegui.c             ctx-&gt;umask_kill = 0777777;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1288'>ctx</a>              1288 src/filemanager/filegui.c             ctx-&gt;preserve_uidgid = (geteuid () == 0);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1294'>ctx</a>              1294 src/filemanager/filegui.c             ctx-&gt;preserve = ctx-&gt;preserve_uidgid = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1297'>ctx</a>              1297 src/filemanager/filegui.c             ctx-&gt;umask_kill = i2 ^ 0777777;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1307'>ctx</a>              1307 src/filemanager/filegui.c         ctx-&gt;search_handle = mc_search_new (source_mask, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1309'>ctx</a>              1309 src/filemanager/filegui.c         if (ctx-&gt;search_handle == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1320'>ctx</a>              1320 src/filemanager/filegui.c         ctx-&gt;search_handle-&gt;is_case_sensitive = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1322'>ctx</a>              1322 src/filemanager/filegui.c             ctx-&gt;search_handle-&gt;search_type = MC_SEARCH_T_GLOB;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1324'>ctx</a>              1324 src/filemanager/filegui.c             ctx-&gt;search_handle-&gt;search_type = MC_SEARCH_T_REGEX;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1331'>ctx</a>              1331 src/filemanager/filegui.c         ctx-&gt;dest_mask = strrchr (dest_dir, PATH_SEP);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1332'>ctx</a>              1332 src/filemanager/filegui.c         if (ctx-&gt;dest_mask == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1333'>ctx</a>              1333 src/filemanager/filegui.c             ctx-&gt;dest_mask = dest_dir;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1335'>ctx</a>              1335 src/filemanager/filegui.c             ctx-&gt;dest_mask++;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1336'>ctx</a>              1336 src/filemanager/filegui.c         orig_mask = ctx-&gt;dest_mask;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1337'>ctx</a>              1337 src/filemanager/filegui.c         if (*ctx-&gt;dest_mask == '\0'</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1338'>ctx</a>              1338 src/filemanager/filegui.c             || (!ctx-&gt;dive_into_subdirs &amp;&amp; !is_wildcarded (ctx-&gt;dest_mask)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1341'>ctx</a>              1341 src/filemanager/filegui.c             || (ctx-&gt;dive_into_subdirs</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1342'>ctx</a>              1342 src/filemanager/filegui.c                 &amp;&amp; ((!only_one &amp;&amp; !is_wildcarded (ctx-&gt;dest_mask))</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1344'>ctx</a>              1344 src/filemanager/filegui.c             ctx-&gt;dest_mask = g_strdup ("\\0");</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1347'>ctx</a>              1347 src/filemanager/filegui.c             ctx-&gt;dest_mask = g_strdup (ctx-&gt;dest_mask);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.h.html#L21'>ctx</a>                21 src/filemanager/filegui.h void file_op_context_create_ui (file_op_context_t * ctx, gboolean with_eta,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.h.html#L23'>ctx</a>                23 src/filemanager/filegui.h void file_op_context_destroy_ui (file_op_context_t * ctx);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.h.html#L25'>ctx</a>                25 src/filemanager/filegui.h char *file_mask_dialog (file_op_context_t * ctx, FileOperation operation,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.h.html#L30'>ctx</a>                30 src/filemanager/filegui.h FileProgressStatus check_progress_buttons (file_op_context_t * ctx);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.h.html#L32'>ctx</a>                32 src/filemanager/filegui.h void file_progress_show (file_op_context_t * ctx, off_t done, off_t total,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.h.html#L34'>ctx</a>                34 src/filemanager/filegui.h void file_progress_show_count (file_op_context_t * ctx, size_t done, size_t total);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.h.html#L35'>ctx</a>                35 src/filemanager/filegui.h void file_progress_show_total (file_op_total_context_t * tctx, file_op_context_t * ctx,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.h.html#L37'>ctx</a>                37 src/filemanager/filegui.h void file_progress_show_source (file_op_context_t * ctx, const vfs_path_t * s_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.h.html#L38'>ctx</a>                38 src/filemanager/filegui.h void file_progress_show_target (file_op_context_t * ctx, const vfs_path_t * path);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.h.html#L39'>ctx</a>                39 src/filemanager/filegui.h void file_progress_show_deleting (file_op_context_t * ctx, const char *path, size_t * count);</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L71'>ctx</a>                71 src/filemanager/fileopctx.c     file_op_context_t *ctx;</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L73'>ctx</a>                73 src/filemanager/fileopctx.c     ctx = g_new0 (file_op_context_t, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L74'>ctx</a>                74 src/filemanager/fileopctx.c     ctx-&gt;operation = op;</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L75'>ctx</a>                75 src/filemanager/fileopctx.c     ctx-&gt;eta_secs = 0.0;</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L76'>ctx</a>                76 src/filemanager/fileopctx.c     ctx-&gt;progress_bytes = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L77'>ctx</a>                77 src/filemanager/fileopctx.c     ctx-&gt;op_preserve = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L78'>ctx</a>                78 src/filemanager/fileopctx.c     ctx-&gt;do_reget = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L79'>ctx</a>                79 src/filemanager/fileopctx.c     ctx-&gt;stat_func = mc_lstat;</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L80'>ctx</a>                80 src/filemanager/fileopctx.c     ctx-&gt;preserve = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L81'>ctx</a>                81 src/filemanager/fileopctx.c     ctx-&gt;preserve_uidgid = (geteuid () == 0);</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L82'>ctx</a>                82 src/filemanager/fileopctx.c     ctx-&gt;umask_kill = 0777777;</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L83'>ctx</a>                83 src/filemanager/fileopctx.c     ctx-&gt;erase_at_end = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L84'>ctx</a>                84 src/filemanager/fileopctx.c     ctx-&gt;skip_all = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L86'>ctx</a>                86 src/filemanager/fileopctx.c     return ctx;</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L99'>ctx</a>                99 src/filemanager/fileopctx.c file_op_context_destroy (file_op_context_t * ctx)</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L101'>ctx</a>               101 src/filemanager/fileopctx.c     if (ctx != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L103'>ctx</a>               103 src/filemanager/fileopctx.c         file_op_context_destroy_ui (ctx);</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L104'>ctx</a>               104 src/filemanager/fileopctx.c         mc_search_free (ctx-&gt;search_handle);</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L105'>ctx</a>               105 src/filemanager/fileopctx.c         g_free (ctx);</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.h.html#L187'>ctx</a>               187 src/filemanager/fileopctx.h void file_op_context_destroy (file_op_context_t * ctx);</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.h.html#L193'>ctx</a>               193 src/filemanager/fileopctx.h FileProgressStatus file_progress_real_query_replace (file_op_context_t * ctx,</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L723'>ctx</a>               723 src/filemanager/tree.c         file_op_context_t *ctx;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L726'>ctx</a>               726 src/filemanager/tree.c         ctx = file_op_context_new (OP_COPY);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L728'>ctx</a>               728 src/filemanager/tree.c         file_op_context_create_ui (ctx, FALSE, FILEGUI_DIALOG_MULTI_ITEM);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L730'>ctx</a>               730 src/filemanager/tree.c         copy_dir_dir (tctx, ctx, vfs_path_as_str (tree-&gt;selected_ptr-&gt;name), dest, TRUE, FALSE,</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L733'>ctx</a>               733 src/filemanager/tree.c         file_op_context_destroy (ctx);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L747'>ctx</a>               747 src/filemanager/tree.c     file_op_context_t *ctx;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L775'>ctx</a>               775 src/filemanager/tree.c     ctx = file_op_context_new (OP_MOVE);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L777'>ctx</a>               777 src/filemanager/tree.c     file_op_context_create_ui (ctx, FALSE, FILEGUI_DIALOG_ONE_ITEM);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L778'>ctx</a>               778 src/filemanager/tree.c     move_dir_dir (tctx, ctx, vfs_path_as_str (tree-&gt;selected_ptr-&gt;name), dest);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L780'>ctx</a>               780 src/filemanager/tree.c     file_op_context_destroy (ctx);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L812'>ctx</a>               812 src/filemanager/tree.c     file_op_context_t *ctx;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L831'>ctx</a>               831 src/filemanager/tree.c     ctx = file_op_context_new (OP_DELETE);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L834'>ctx</a>               834 src/filemanager/tree.c     file_op_context_create_ui (ctx, FALSE, FILEGUI_DIALOG_ONE_ITEM);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L835'>ctx</a>               835 src/filemanager/tree.c     if (erase_dir (tctx, ctx, tree-&gt;selected_ptr-&gt;name) == FILE_CONT)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L838'>ctx</a>               838 src/filemanager/tree.c     file_op_context_destroy (ctx);</span>
+<span class='curline'><a href='../S/src--util.c.html#L57'>ctx</a>                57 src/util.c             file_op_context_t *ctx;</span>
+<span class='curline'><a href='../S/src--util.c.html#L63'>ctx</a>                63 src/util.c             ctx = file_op_context_new (OP_COPY);</span>
+<span class='curline'><a href='../S/src--util.c.html#L65'>ctx</a>                65 src/util.c             file_op_context_create_ui (ctx, 0, FALSE);</span>
+<span class='curline'><a href='../S/src--util.c.html#L66'>ctx</a>                66 src/util.c             copy_file_file (tctx, ctx, vfs_path_as_str (default_file_vpath),</span>
+<span class='curline'><a href='../S/src--util.c.html#L69'>ctx</a>                69 src/util.c             file_op_context_destroy (ctx);</span>
+</pre>
+</body>
+</html>

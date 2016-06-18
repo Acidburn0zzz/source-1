@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>current_info</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L162'>current_info</a>      162 src/vfs/smbfs/smbfs.c static opendir_info *previous_info, *current_info, *current_share_info, *current_server_info;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L534'>current_info</a>      534 src/vfs/smbfs/smbfs.c         current_info-&gt;entries = new_entry;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L539'>current_info</a>      539 src/vfs/smbfs/smbfs.c         current_info-&gt;current-&gt;next = new_entry;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L541'>current_info</a>      541 src/vfs/smbfs/smbfs.c     current_info-&gt;current = new_entry;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L827'>current_info</a>      827 src/vfs/smbfs/smbfs.c     if (current_info)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L829'>current_info</a>      829 src/vfs/smbfs/smbfs.c         DEBUG (3, ("smbfs_loaddir: new:'%s', cached:'%s'\n", info_dirname, current_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L831'>current_info</a>      831 src/vfs/smbfs/smbfs.c         if (smbfs_fs (info_dirname) &gt; smbfs_fs (current_info-&gt;dirname))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L834'>current_info</a>      834 src/vfs/smbfs/smbfs.c             previous_info = current_info;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L838'>current_info</a>      838 src/vfs/smbfs/smbfs.c     current_info = smbfs_info;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1438'>current_info</a>     1438 src/vfs/smbfs/smbfs.c     if (!current_info-&gt;entries)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1440'>current_info</a>     1440 src/vfs/smbfs/smbfs.c         if (!smbfs_loaddir (current_info))      /* browse host */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1444'>current_info</a>     1444 src/vfs/smbfs/smbfs.c     if (current_info-&gt;server_list == True)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1446'>current_info</a>     1446 src/vfs/smbfs/smbfs.c         dentry = current_info-&gt;entries;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1589'>current_info</a>     1589 src/vfs/smbfs/smbfs.c     dir_entry *dentry = current_info-&gt;entries;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1597'>current_info</a>     1597 src/vfs/smbfs/smbfs.c                mypath, current_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1602'>current_info</a>     1602 src/vfs/smbfs/smbfs.c                    current_info-&gt;dirname, path));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1608'>current_info</a>     1608 src/vfs/smbfs/smbfs.c     if (smbfs_search_dir_entry (current_info-&gt;entries, mypath, buf) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1616'>current_info</a>     1616 src/vfs/smbfs/smbfs.c         mdp = mydir = g_strdup (current_info-&gt;dirname);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1627'>current_info</a>     1627 src/vfs/smbfs/smbfs.c             DEBUG (1, ("	PARENT:found in %s\n", current_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1634'>current_info</a>     1634 src/vfs/smbfs/smbfs.c         char *dnp = current_info-&gt;dirname;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1636'>current_info</a>     1636 src/vfs/smbfs/smbfs.c                    mypath, current_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1648'>current_info</a>     1648 src/vfs/smbfs/smbfs.c             DEBUG (1, ("	CURRENT:found in %s\n", current_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1652'>current_info</a>     1652 src/vfs/smbfs/smbfs.c     DEBUG (3, ("'%s' not found in current_info '%s'\n", path, current_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1736'>current_info</a>     1736 src/vfs/smbfs/smbfs.c     if (!current_info)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1771'>current_info</a>     1771 src/vfs/smbfs/smbfs.c         if (!current_info-&gt;server_list)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1814'>current_info</a>     1814 src/vfs/smbfs/smbfs.c     pp = current_info-&gt;dirname;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1825'>current_info</a>     1825 src/vfs/smbfs/smbfs.c         DEBUG (6, ("loaded dir: '%s'\n", current_info-&gt;dirname));</span>
+</pre>
+</body>
+</html>

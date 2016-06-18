@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>usable_columns</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1841'>usable_columns</a>   1841 src/filemanager/panel.c     int usable_columns;         /* Usable columns in the panel */</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1855'>usable_columns</a>   1855 src/filemanager/panel.c     usable_columns = WIDGET (panel)-&gt;cols - 2;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1859'>usable_columns</a>   1859 src/filemanager/panel.c         usable_columns /= panel-&gt;list_cols;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1861'>usable_columns</a>   1861 src/filemanager/panel.c             usable_columns--;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1873'>usable_columns</a>   1873 src/filemanager/panel.c     if (total_cols &gt; usable_columns)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1878'>usable_columns</a>   1878 src/filemanager/panel.c         dif = total_cols - usable_columns;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1892'>usable_columns</a>   1892 src/filemanager/panel.c         total_cols = usable_columns;    /* give up, the rest should be truncated */</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1896'>usable_columns</a>   1896 src/filemanager/panel.c     if (usable_columns &gt; total_cols &amp;&amp; expand_top != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1899'>usable_columns</a>   1899 src/filemanager/panel.c         int spaces = (usable_columns - total_cols) / expand_top;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1906'>usable_columns</a>   1906 src/filemanager/panel.c                     darr-&gt;field_len += (usable_columns - total_cols) % expand_top;</span>
+</pre>
+</body>
+</html>

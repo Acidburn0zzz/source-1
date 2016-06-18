@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>color_N_names</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L142'>color_N_names</a>     142 lib/tty/color-internal.c         static char **color_N_names = NULL;</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L144'>color_N_names</a>     144 lib/tty/color-internal.c         if (color_N_names == NULL)</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L146'>color_N_names</a>     146 lib/tty/color-internal.c             color_N_names = g_try_malloc0 (240 * sizeof (char *));</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L148'>color_N_names</a>     148 lib/tty/color-internal.c         if (color_N_names[idx - 16] == NULL)</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L150'>color_N_names</a>     150 lib/tty/color-internal.c             color_N_names[idx - 16] = g_try_malloc (9);</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L151'>color_N_names</a>     151 lib/tty/color-internal.c             sprintf (color_N_names[idx - 16], "color%d", idx);</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L153'>color_N_names</a>     153 lib/tty/color-internal.c         return color_N_names[idx - 16];</span>
+</pre>
+</body>
+</html>

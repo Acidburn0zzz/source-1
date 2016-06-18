@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>WButton</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L58'>WButton</a>            58 lib/widget/button.c     WButton *b = BUTTON (w);</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L201'>WButton</a>           201 lib/widget/button.c WButton *</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L204'>WButton</a>           204 lib/widget/button.c     WButton *b;</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L207'>WButton</a>           207 lib/widget/button.c     b = g_new (WButton, 1);</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L226'>WButton</a>           226 lib/widget/button.c button_get_text (const WButton * b)</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L236'>WButton</a>           236 lib/widget/button.c button_set_text (WButton * b, const char *text)</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L250'>WButton</a>           250 lib/widget/button.c button_get_len (const WButton * b)</span>
+<span class='curline'><a href='../S/lib--widget--button.h.html#L11'>WButton</a>            11 lib/widget/button.h #define BUTTON(x) ((WButton *)(x))</span>
+<span class='curline'><a href='../S/lib--widget--button.h.html#L13'>WButton</a>            13 lib/widget/button.h struct WButton;</span>
+<span class='curline'><a href='../S/lib--widget--button.h.html#L17'>WButton</a>            17 lib/widget/button.h typedef int (*bcback_fn) (struct WButton * button, int action);</span>
+<span class='curline'><a href='../S/lib--widget--button.h.html#L47'>WButton</a>            47 lib/widget/button.h WButton *button_new (int y, int x, int action, button_flags_t flags, const char *text,</span>
+<span class='curline'><a href='../S/lib--widget--button.h.html#L49'>WButton</a>            49 lib/widget/button.h char *button_get_text (const WButton * b);</span>
+<span class='curline'><a href='../S/lib--widget--button.h.html#L50'>WButton</a>            50 lib/widget/button.h void button_set_text (WButton * b, const char *text);</span>
+<span class='curline'><a href='../S/lib--widget--button.h.html#L51'>WButton</a>            51 lib/widget/button.h int button_get_len (const WButton * b);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L276'>WButton</a>           276 lib/widget/wtools.c     WButton *button;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L313'>WButton</a>           313 lib/widget/wtools.c         WButton *defbutton = NULL;</span>
+<span class='curline'><a href='../S/src--editor--spell_dialogs.c.html#L80'>WButton</a>            80 src/editor/spell_dialogs.c     WButton *add_btn;</span>
+<span class='curline'><a href='../S/src--editor--spell_dialogs.c.html#L81'>WButton</a>            81 src/editor/spell_dialogs.c     WButton *replace_btn;</span>
+<span class='curline'><a href='../S/src--editor--spell_dialogs.c.html#L82'>WButton</a>            82 src/editor/spell_dialogs.c     WButton *skip_btn;</span>
+<span class='curline'><a href='../S/src--editor--spell_dialogs.c.html#L83'>WButton</a>            83 src/editor/spell_dialogs.c     WButton *cancel_button;</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L102'>WButton</a>           102 src/filemanager/achown.c static WButton *b_att[3];       /* permission */</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L103'>WButton</a>           103 src/filemanager/achown.c static WButton *b_user, *b_group;       /* owner */</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L186'>WButton</a>           186 src/filemanager/boxes.c sel_skin_button (WButton * button, int action)</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L308'>WButton</a>           308 src/filemanager/boxes.c sel_charset_button (WButton * button, int action)</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L422'>WButton</a>           422 src/filemanager/boxes.c task_cb (WButton * button, int action)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L654'>WButton</a>           654 src/filemanager/filegui.c progress_button_callback (WButton * button, int action)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L123'>WButton</a>           123 src/filemanager/find.c static int start_stop (WButton * button, int action);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L124'>WButton</a>           124 src/filemanager/find.c static int find_do_view_file (WButton * button, int action);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L125'>WButton</a>           125 src/filemanager/find.c static int find_do_edit_file (WButton * button, int action);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1543'>WButton</a>          1543 src/filemanager/find.c start_stop (WButton * button, int action)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1566'>WButton</a>          1566 src/filemanager/find.c find_do_view_file (WButton * button, int action)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1579'>WButton</a>          1579 src/filemanager/find.c find_do_edit_file (WButton * button, int action)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L491'>WButton</a>           491 src/filemanager/hotlist.c hotlist_button_callback (WButton * button, int action)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L177'>WButton</a>           177 src/filemanager/layout.c static WButton *bleft_widget, *bright_widget;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L252'>WButton</a>           252 src/filemanager/layout.c b_left_right_cback (WButton * button, int action)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L280'>WButton</a>           280 src/filemanager/layout.c bplus_cback (WButton * button, int action)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L293'>WButton</a>           293 src/filemanager/layout.c bminus_cback (WButton * button, int action)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L200'>WButton</a>           200 src/filemanager/panelize.c         WButton *b;</span>
+<span class='curline'><a href='../S/src--learn.c.html#L82'>WButton</a>            82 src/learn.c    learn_button (WButton * button, int action)</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>shell</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--global.c.html#L82'>shell</a>              82 lib/global.c       .shell = NULL,</span>
+<span class='curline'><a href='../S/lib--global.h.html#L231'>shell</a>             231 lib/global.h       mc_shell_t *shell;</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L245'>shell</a>             245 lib/shell.c        mc_global.shell = mc_shell;</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L253'>shell</a>             253 lib/shell.c        if (mc_global.shell != NULL)</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L255'>shell</a>             255 lib/shell.c            g_free (mc_global.shell-&gt;path);</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L256'>shell</a>             256 lib/shell.c            MC_PTR_FREE (mc_global.shell);</span>
+<span class='curline'><a href='../S/lib--util.h.html#L196'>shell</a>             196 lib/util.h     int my_system (int flags, const char *shell, const char *command);</span>
+<span class='curline'><a href='../S/lib--util.h.html#L197'>shell</a>             197 lib/util.h     int my_systeml (int flags, const char *shell, ...);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L210'>shell</a>             210 lib/utilunix.c my_system_make_arg_array (int flags, const char *shell, char **execute_name)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L218'>shell</a>             218 lib/utilunix.c         g_ptr_array_add (args_array, (gpointer) shell);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L220'>shell</a>             220 lib/utilunix.c         *execute_name = g_strdup (shell);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L226'>shell</a>             226 lib/utilunix.c         shell_token = shell != NULL ? strchr (shell, ' ') : NULL;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L228'>shell</a>             228 lib/utilunix.c             *execute_name = g_strdup (shell);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L230'>shell</a>             230 lib/utilunix.c             *execute_name = g_strndup (shell, (gsize) (shell_token - shell));</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L232'>shell</a>             232 lib/utilunix.c         g_ptr_array_add (args_array, (gpointer) shell);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L378'>shell</a>             378 lib/utilunix.c my_system (int flags, const char *shell, const char *command)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L380'>shell</a>             380 lib/utilunix.c     return my_systeml (flags, shell, command, NULL);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L399'>shell</a>             399 lib/utilunix.c my_systeml (int flags, const char *shell, ...)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L408'>shell</a>             408 lib/utilunix.c     va_start (vargs, shell);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L414'>shell</a>             414 lib/utilunix.c     status = my_systemv_flags (flags, shell, (char *const *) args_array-&gt;pdata);</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L88'>shell</a>              88 src/clipboard.c         my_system (EXECUTE_AS_SHELL, mc_global.shell-&gt;path, cmd);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L70'>shell</a>              70 src/execute.c  void do_execute (const char *shell, const char *command, int flags);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L71'>shell</a>              71 src/execute.c  void do_executev (const char *shell, int flags, char *const argv[]);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L293'>shell</a>             293 src/execute.c  do_executev (const char *shell, int flags, char *const argv[])</span>
+<span class='curline'><a href='../S/src--execute.c.html#L325'>shell</a>             325 src/execute.c          my_systemv_flags (flags, shell, argv);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L383'>shell</a>             383 src/execute.c  do_execute (const char *shell, const char *command, int flags)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L391'>shell</a>             391 src/execute.c      do_executev (shell, flags, (char *const *) args_array-&gt;pdata);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L434'>shell</a>             434 src/execute.c              do_execute (mc_global.shell-&gt;path, cmd ? cmd : command, flags | EXECUTE_AS_SHELL);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L439'>shell</a>             439 src/execute.c          do_execute (mc_global.shell-&gt;path, cmd ? cmd : command, flags | EXECUTE_AS_SHELL);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L492'>shell</a>             492 src/execute.c              my_system (EXECUTE_INTERNAL, mc_global.shell-&gt;path, NULL);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L272'>shell</a>             272 src/subshell/common.c     switch (mc_global.shell-&gt;type)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L330'>shell</a>             330 src/subshell/common.c         fprintf (stderr, __FILE__ ": unimplemented subshell type %d\r\n", mc_global.shell-&gt;type);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L355'>shell</a>             355 src/subshell/common.c     switch (mc_global.shell-&gt;type)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L358'>shell</a>             358 src/subshell/common.c         execl (mc_global.shell-&gt;path, "bash", "-rcfile", init_file, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L364'>shell</a>             364 src/subshell/common.c         execl (mc_global.shell-&gt;path, "zsh", "-Z", "-g", (char *) NULL);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L372'>shell</a>             372 src/subshell/common.c         execl (mc_global.shell-&gt;path, mc_global.shell-&gt;path, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L796'>shell</a>             796 src/subshell/common.c     switch (mc_global.shell-&gt;type)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L922'>shell</a>             922 src/subshell/common.c     if (mc_global.shell-&gt;type == SHELL_FISH)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1015'>shell</a>            1015 src/subshell/common.c         if (mc_global.shell-&gt;type == SHELL_NONE)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1040'>shell</a>            1040 src/subshell/common.c         if (mc_global.shell-&gt;type == SHELL_TCSH)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1250'>shell</a>            1250 src/subshell/common.c         if (mc_global.shell-&gt;type == SHELL_TCSH)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1324'>shell</a>            1324 src/subshell/common.c         if (bPathNotEq &amp;&amp; mc_global.shell-&gt;type == SHELL_TCSH)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1353'>shell</a>            1353 src/subshell/common.c     if (mc_global.shell-&gt;type == SHELL_ZSH)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L853'>shell</a>             853 src/vfs/extfs/extfs.c     retval = my_system (EXECUTE_AS_SHELL, mc_global.shell-&gt;path, cmd);</span>
+</pre>
+</body>
+</html>

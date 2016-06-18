@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>file_name</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L102'>file_name</a>         102 lib/skin/ini-file.c     char *file_name, *file_name2;</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L104'>file_name</a>         104 lib/skin/ini-file.c     file_name = g_build_filename (base_dir, MC_SKINS_SUBDIR, mc_skin-&gt;name, (char *) NULL);</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L105'>file_name</a>         105 lib/skin/ini-file.c     if (exist_file (file_name))</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L107'>file_name</a>         107 lib/skin/ini-file.c         mc_skin-&gt;config = mc_config_init (file_name, TRUE);</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L108'>file_name</a>         108 lib/skin/ini-file.c         g_free (file_name);</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L111'>file_name</a>         111 lib/skin/ini-file.c     g_free (file_name);</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L114'>file_name</a>         114 lib/skin/ini-file.c     file_name = g_build_filename (base_dir, MC_SKINS_SUBDIR, file_name2, (char *) NULL);</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L117'>file_name</a>         117 lib/skin/ini-file.c     if (exist_file (file_name))</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L119'>file_name</a>         119 lib/skin/ini-file.c         mc_skin-&gt;config = mc_config_init (file_name, TRUE);</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L120'>file_name</a>         120 lib/skin/ini-file.c         g_free (file_name);</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L123'>file_name</a>         123 lib/skin/ini-file.c     g_free (file_name);</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L150'>file_name</a>         150 lib/skin/ini-file.c     char *file_name;</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L152'>file_name</a>         152 lib/skin/ini-file.c     file_name = g_path_get_basename (mc_skin-&gt;name);</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L153'>file_name</a>         153 lib/skin/ini-file.c     if (file_name == NULL)</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L156'>file_name</a>         156 lib/skin/ini-file.c     if (strcmp (file_name, mc_skin-&gt;name) != 0)</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L158'>file_name</a>         158 lib/skin/ini-file.c         g_free (file_name);</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L164'>file_name</a>         164 lib/skin/ini-file.c     g_free (file_name);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1312'>file_name</a>        1312 lib/util.c     mc_util_make_backup_if_possible (const char *file_name, const char *backup_suffix)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1317'>file_name</a>        1317 lib/util.c         if (!exist_file (file_name))</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1320'>file_name</a>        1320 lib/util.c         backup_path = g_strdup_printf ("%s%s", file_name, backup_suffix);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1325'>file_name</a>        1325 lib/util.c         ret = mc_util_write_backup_content (file_name, backup_path);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1330'>file_name</a>        1330 lib/util.c             if (stat (file_name, &amp;stat_buf) == 0)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1344'>file_name</a>        1344 lib/util.c     mc_util_restore_from_backup_if_possible (const char *file_name, const char *backup_suffix)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1349'>file_name</a>        1349 lib/util.c         backup_path = g_strdup_printf ("%s%s", file_name, backup_suffix);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1353'>file_name</a>        1353 lib/util.c         ret = mc_util_write_backup_content (backup_path, file_name);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1362'>file_name</a>        1362 lib/util.c     mc_util_unlink_backup_if_possible (const char *file_name, const char *backup_suffix)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1366'>file_name</a>        1366 lib/util.c         backup_path = g_strdup_printf ("%s%s", file_name, backup_suffix);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L696'>file_name</a>         696 lib/vfs/direntry.c                    const char *file_name, off_t have, off_t need)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L700'>file_name</a>         700 lib/vfs/direntry.c                            file_name, (int) ((double) have * 100 / need), (long long) have);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L702'>file_name</a>         702 lib/vfs/direntry.c         vfs_print_message (_("%s: %s: %s %lld bytes transferred"), fs_name, action, file_name,</span>
+<span class='curline'><a href='../S/src--args.c.html#L503'>file_name</a>         503 src/args.c     mcedit_arg_new (const char *file_name, long line_number)</span>
+<span class='curline'><a href='../S/src--args.c.html#L505'>file_name</a>         505 src/args.c         return mcedit_arg_vpath_new (vfs_path_from_str (file_name), line_number);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L934'>file_name</a>         934 src/filemanager/layout.c     const char *file_name = NULL;       /* For Quick view */</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1007'>file_name</a>        1007 src/filemanager/layout.c             file_name = the_other_panel-&gt;dir.list[the_other_panel-&gt;selected].fname;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1009'>file_name</a>        1009 src/filemanager/layout.c             file_name = "";</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1011'>file_name</a>        1011 src/filemanager/layout.c         mcview_load ((WView *) new_widget, 0, file_name, 0, 0, 0);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L433'>file_name</a>         433 src/setup.c        char *file_name;</span>
+<span class='curline'><a href='../S/src--setup.c.html#L440'>file_name</a>         440 src/setup.c            file_name = g_strdup (config_file_name);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L442'>file_name</a>         442 src/setup.c            file_name = g_strconcat (config_file_name, ".keymap", (char *) NULL);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L444'>file_name</a>         444 src/setup.c        canonicalize_pathname (file_name);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L446'>file_name</a>         446 src/setup.c        if (g_path_is_absolute (file_name))</span>
+<span class='curline'><a href='../S/src--setup.c.html#L447'>file_name</a>         447 src/setup.c            return file_name;</span>
+<span class='curline'><a href='../S/src--setup.c.html#L449'>file_name</a>         449 src/setup.c        lc_basename = g_path_get_basename (file_name);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L450'>file_name</a>         450 src/setup.c        g_free (file_name);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L81'>file_name</a>          81 src/vfs/sftpfs/internal.c sftpfs_fix_filename (const char *file_name)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L83'>file_name</a>          83 src/vfs/sftpfs/internal.c     g_string_printf (sftpfs_filename_buffer, "%c%s", PATH_SEP, file_name);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L73'>file_name</a>          73 src/vfs/sftpfs/internal.h const char *sftpfs_fix_filename (const char *file_name);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L111'>file_name</a>         111 src/vfs/smbfs/helpers/include/proto.h SMB_OFF_T file_size (char *file_name);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L424'>file_name</a>         424 src/vfs/smbfs/helpers/lib/util.c file_size (char *file_name)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L428'>file_name</a>         428 src/vfs/smbfs/helpers/lib/util.c     if (sys_stat (file_name, &amp;buf) != 0)</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_get_external_cmd_opts_from_config.c.html#L126'>file_name</a>         126 tests/src/execute__execute_get_external_cmd_opts_from_config.c     const char *file_name;</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_get_external_cmd_opts_from_config.c.html#L158'>file_name</a>         158 tests/src/execute__execute_get_external_cmd_opts_from_config.c     filename_vpath = vfs_path_from_str (data-&gt;file_name);</span>
+</pre>
+</body>
+</html>

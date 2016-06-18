@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>gid_t</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--util.h.html#L184'>gid_t</a>             184 lib/util.h     const char *get_group (gid_t gid);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L314'>gid_t</a>             314 lib/utilunix.c get_group (gid_t gid)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L318'>gid_t</a>             318 lib/utilunix.c     static gid_t gid_last;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1250'>gid_t</a>            1250 lib/utilunix.c     static gid_t *groups;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1265'>gid_t</a>            1265 lib/utilunix.c         groups = g_new (gid_t, ngroups + 1);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L253'>gid_t</a>             253 lib/vfs/interface.c MC_NAMEOP (chown, (const vfs_path_t *vpath, uid_t owner, gid_t group), (vpath, owner, group))</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L745'>gid_t</a>             745 lib/vfs/parse_ls_vga.c             s-&gt;st_gid = (gid_t) atol (columns[2]);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L169'>gid_t</a>             169 lib/vfs/vfs.h      int (*chown) (const vfs_path_t * vpath, uid_t owner, gid_t group);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L299'>gid_t</a>             299 lib/vfs/vfs.h  int mc_chown (const vfs_path_t * vpath, uid_t owner, gid_t group);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L241'>gid_t</a>             241 lib/widget/input_complete.c                 gid_t my_gid;</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L759'>gid_t</a>             759 src/filemanager/achown.c do_chown (uid_t u, gid_t g)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L784'>gid_t</a>             784 src/filemanager/achown.c     gid_t a_gid = sf-&gt;st_gid;</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L795'>gid_t</a>             795 src/filemanager/achown.c                        (ch_flags[10] == '+') ? sf-&gt;st_gid : (gid_t) (-1)) == -1)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L819'>gid_t</a>             819 src/filemanager/achown.c                            (ch_flags[10] == '+') ? a_gid : (gid_t) (-1)) == -1)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L889'>gid_t</a>             889 src/filemanager/achown.c                       (ch_flags[10] == '+') ? sf_stat-&gt;st_gid : (gid_t) (-1)) == -1)</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L297'>gid_t</a>             297 src/filemanager/chown.c do_chown (uid_t u, gid_t g)</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L313'>gid_t</a>             313 src/filemanager/chown.c apply_chowns (uid_t u, gid_t g)</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L337'>gid_t</a>             337 src/filemanager/chown.c     gid_t new_group;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1488'>gid_t</a>            1488 src/filemanager/file.c     gid_t src_gid = (gid_t) (-1);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L89'>gid_t</a>              89 src/vfs/extfs/extfs.c     gid_t gid;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1199'>gid_t</a>            1199 src/vfs/extfs/extfs.c extfs_chown (const vfs_path_t * vpath, uid_t owner, gid_t group)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1276'>gid_t</a>            1276 src/vfs/fish/fish.c fish_chown (const vfs_path_t * vpath, uid_t owner, gid_t group)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2030'>gid_t</a>            2030 src/vfs/ftpfs/ftpfs.c ftpfs_chown (const vfs_path_t * vpath, uid_t owner, gid_t group)</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L161'>gid_t</a>             161 src/vfs/local/local.c local_chown (const vfs_path_t * vpath, uid_t owner, gid_t group)</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L314'>gid_t</a>             314 src/vfs/sfs/sfs.c sfs_chown (const vfs_path_t * vpath, uid_t owner, gid_t group)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L410'>gid_t</a>             410 src/vfs/sftpfs/vfs_class.c sftpfs_cb_chown (const vfs_path_t * vpath, uid_t owner, gid_t group)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--client.h.html#L24'>gid_t</a>              24 src/vfs/smbfs/helpers/include/client.h     gid_t gid;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--includes.h.html#L432'>gid_t</a>             432 src/vfs/smbfs/helpers/include/includes.h #define GID_T gid_t</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--includes.h.html#L552'>gid_t</a>             552 src/vfs/smbfs/helpers/include/includes.h int initgroups (char *name, gid_t id);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L66'>gid_t</a>              66 src/vfs/smbfs/helpers/include/proto.h int sys_chown (const char *fname, uid_t uid, gid_t gid);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L102'>gid_t</a>             102 src/vfs/smbfs/helpers/include/proto.h BOOL in_group (gid_t group, gid_t current_gid, int ngroups, gid_t * groups);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L151'>gid_t</a>             151 src/vfs/smbfs/helpers/include/proto.h char *gidtoname (gid_t gid);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L376'>gid_t</a>             376 src/vfs/smbfs/helpers/include/smb.h     gid_t smb_grpid;            /* this is actually the unix gid_t */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L565'>gid_t</a>             565 src/vfs/smbfs/helpers/include/smb.h     gid_t gid;                  /* gid of user who *opened* this connection */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L573'>gid_t</a>             573 src/vfs/smbfs/helpers/include/smb.h     gid_t *groups;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L589'>gid_t</a>             589 src/vfs/smbfs/helpers/include/smb.h     gid_t gid;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L591'>gid_t</a>             591 src/vfs/smbfs/helpers/include/smb.h     gid_t *groups;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L639'>gid_t</a>             639 src/vfs/smbfs/helpers/include/smb.h     gid_t gid;                  /* gid of a validated user */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L649'>gid_t</a>             649 src/vfs/smbfs/helpers/include/smb.h     gid_t *groups;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L819'>gid_t</a>             819 src/vfs/smbfs/helpers/include/smb.h     gid_t gid;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L252'>gid_t</a>             252 src/vfs/smbfs/helpers/lib/system.c sys_chown (const char *fname, uid_t uid, gid_t gid)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L139'>gid_t</a>             139 src/vfs/smbfs/helpers/lib/util.c in_group (gid_t group, gid_t current_gid, int ngroups, gid_t * groups)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2522'>gid_t</a>            2522 src/vfs/smbfs/helpers/lib/util.c gidtoname (gid_t gid)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L985'>gid_t</a>             985 src/vfs/smbfs/smbfs.c smbfs_chown (const vfs_path_t * vpath, uid_t owner, gid_t group)</span>
+</pre>
+</body>
+</html>

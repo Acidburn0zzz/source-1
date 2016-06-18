@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>nameptr</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2673'>nameptr</a>          2673 src/vfs/smbfs/helpers/lib/util.c     char *nameptr = namelist;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2679'>nameptr</a>          2679 src/vfs/smbfs/helpers/lib/util.c     if ((nameptr == NULL) || ((nameptr != NULL) &amp;&amp; (*nameptr == '\0')))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2686'>nameptr</a>          2686 src/vfs/smbfs/helpers/lib/util.c     while (*nameptr)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2688'>nameptr</a>          2688 src/vfs/smbfs/helpers/lib/util.c         if (*nameptr == '/')</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2691'>nameptr</a>          2691 src/vfs/smbfs/helpers/lib/util.c             nameptr++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2695'>nameptr</a>          2695 src/vfs/smbfs/helpers/lib/util.c         name_end = strchr (nameptr, '/');</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2702'>nameptr</a>          2702 src/vfs/smbfs/helpers/lib/util.c         nameptr = name_end + 1;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2718'>nameptr</a>          2718 src/vfs/smbfs/helpers/lib/util.c     nameptr = namelist;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2720'>nameptr</a>          2720 src/vfs/smbfs/helpers/lib/util.c     while (*nameptr)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2722'>nameptr</a>          2722 src/vfs/smbfs/helpers/lib/util.c         if (*nameptr == '/')</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2725'>nameptr</a>          2725 src/vfs/smbfs/helpers/lib/util.c             nameptr++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2729'>nameptr</a>          2729 src/vfs/smbfs/helpers/lib/util.c         if ((name_end = strchr (nameptr, '/')) != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2738'>nameptr</a>          2738 src/vfs/smbfs/helpers/lib/util.c         (*ppname_array)[i].is_wild = ((strchr (nameptr, '?') != NULL) ||</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2739'>nameptr</a>          2739 src/vfs/smbfs/helpers/lib/util.c                                       (strchr (nameptr, '*') != NULL));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2740'>nameptr</a>          2740 src/vfs/smbfs/helpers/lib/util.c         if (((*ppname_array)[i].name = strdup (nameptr)) == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2747'>nameptr</a>          2747 src/vfs/smbfs/helpers/lib/util.c         nameptr = name_end + 1;</span>
+</pre>
+</body>
+</html>

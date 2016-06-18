@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>panels</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L134'>panels</a>            134 src/filemanager/layout.c } panels[MAX_VIEWS] =</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L591'>panels</a>            591 src/filemanager/layout.c         set_panel_formats (PANEL (panels[idx].widget));</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L593'>panels</a>            593 src/filemanager/layout.c         panel_update_cols (panels[idx].widget, frame_half);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L603'>panels</a>            603 src/filemanager/layout.c     const char *saved_dir = panels[idx].last_saved_dir;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L704'>panels</a>            704 src/filemanager/layout.c         widget_set_size (panels[0].widget, start_y, 0, panels_layout.top_panel_size, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L705'>panels</a>            705 src/filemanager/layout.c         widget_set_size (panels[1].widget, start_y + panels_layout.top_panel_size, 0,</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L710'>panels</a>            710 src/filemanager/layout.c         widget_set_size (panels[0].widget, start_y, 0, height, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L711'>panels</a>            711 src/filemanager/layout.c         widget_set_size (panels[1].widget, start_y, panels_layout.left_panel_size, height, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L949'>panels</a>            949 src/filemanager/layout.c         if (panels[the_other].type != view_listing)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L954'>panels</a>            954 src/filemanager/layout.c     if (panels[num].widget != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L956'>panels</a>            956 src/filemanager/layout.c         Widget *w = panels[num].widget;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L964'>panels</a>            964 src/filemanager/layout.c         old_type = panels[num].type;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L985'>panels</a>            985 src/filemanager/layout.c         panels[num].last_saved_dir = _vfs_get_cwd ();</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1005'>panels</a>           1005 src/filemanager/layout.c         the_other_panel = PANEL (panels[the_other].widget);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1023'>panels</a>           1023 src/filemanager/layout.c     panels[num].type = type;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1024'>panels</a>           1024 src/filemanager/layout.c     panels[num].widget = new_widget;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1089'>panels</a>           1089 src/filemanager/layout.c     panel1 = PANEL (panels[0].widget);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1090'>panels</a>           1090 src/filemanager/layout.c     panel2 = PANEL (panels[1].widget);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1092'>panels</a>           1092 src/filemanager/layout.c     if (panels[0].type == view_listing &amp;&amp; panels[1].type == view_listing &amp;&amp;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1132'>panels</a>           1132 src/filemanager/layout.c         if (widget_is_active (panels[0].widget))</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1133'>panels</a>           1133 src/filemanager/layout.c             dlg_select_widget (panels[1].widget);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1134'>panels</a>           1134 src/filemanager/layout.c         else if (widget_is_active (panels[1].widget))</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1135'>panels</a>           1135 src/filemanager/layout.c             dlg_select_widget (panels[0].widget);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1147'>panels</a>           1147 src/filemanager/layout.c         if (panels[0].type == view_listing)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1155'>panels</a>           1155 src/filemanager/layout.c         if (panels[1].type == view_listing)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1164'>panels</a>           1164 src/filemanager/layout.c         x = panels[0].widget-&gt;x;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1165'>panels</a>           1165 src/filemanager/layout.c         y = panels[0].widget-&gt;y;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1166'>panels</a>           1166 src/filemanager/layout.c         cols = panels[0].widget-&gt;cols;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1167'>panels</a>           1167 src/filemanager/layout.c         lines = panels[0].widget-&gt;lines;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1169'>panels</a>           1169 src/filemanager/layout.c         panels[0].widget-&gt;x = panels[1].widget-&gt;x;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1170'>panels</a>           1170 src/filemanager/layout.c         panels[0].widget-&gt;y = panels[1].widget-&gt;y;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1171'>panels</a>           1171 src/filemanager/layout.c         panels[0].widget-&gt;cols = panels[1].widget-&gt;cols;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1172'>panels</a>           1172 src/filemanager/layout.c         panels[0].widget-&gt;lines = panels[1].widget-&gt;lines;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1174'>panels</a>           1174 src/filemanager/layout.c         panels[1].widget-&gt;x = x;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1175'>panels</a>           1175 src/filemanager/layout.c         panels[1].widget-&gt;y = y;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1176'>panels</a>           1176 src/filemanager/layout.c         panels[1].widget-&gt;cols = cols;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1177'>panels</a>           1177 src/filemanager/layout.c         panels[1].widget-&gt;lines = lines;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1179'>panels</a>           1179 src/filemanager/layout.c         tmp_widget = panels[0].widget;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1180'>panels</a>           1180 src/filemanager/layout.c         panels[0].widget = panels[1].widget;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1181'>panels</a>           1181 src/filemanager/layout.c         panels[1].widget = tmp_widget;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1182'>panels</a>           1182 src/filemanager/layout.c         tmp_type = panels[0].type;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1183'>panels</a>           1183 src/filemanager/layout.c         panels[0].type = panels[1].type;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1184'>panels</a>           1184 src/filemanager/layout.c         panels[1].type = tmp_type;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1187'>panels</a>           1187 src/filemanager/layout.c         if (panels[0].type == view_listing)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1188'>panels</a>           1188 src/filemanager/layout.c             set_panel_formats (PANEL (panels[0].widget));</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1189'>panels</a>           1189 src/filemanager/layout.c         if (panels[1].type == view_listing)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1190'>panels</a>           1190 src/filemanager/layout.c             set_panel_formats (PANEL (panels[1].widget));</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1199'>panels</a>           1199 src/filemanager/layout.c     return panels[idx].type;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1207'>panels</a>           1207 src/filemanager/layout.c     return panels[idx].widget;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1215'>panels</a>           1215 src/filemanager/layout.c     if (panels[0].widget == WIDGET (current_panel))</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1243'>panels</a>           1243 src/filemanager/layout.c     if (panels[0].widget == WIDGET (current_panel))</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1244'>panels</a>           1244 src/filemanager/layout.c         return panels[0].type;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1246'>panels</a>           1246 src/filemanager/layout.c         return panels[1].type;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1255'>panels</a>           1255 src/filemanager/layout.c     if (panels[0].widget == WIDGET (current_panel))</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1256'>panels</a>           1256 src/filemanager/layout.c         return panels[1].type;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1258'>panels</a>           1258 src/filemanager/layout.c         return panels[0].type;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1274'>panels</a>           1274 src/filemanager/layout.c         g_free (panels[idx].last_saved_dir);    /* last path no needed */</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1276'>panels</a>           1276 src/filemanager/layout.c         panels[idx].last_saved_dir = g_strdup (vfs_path_as_str (w-&gt;cwd_vpath));</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1304'>panels</a>           1304 src/filemanager/layout.c     return g_strdup (panels[i].last_saved_dir);</span>
+</pre>
+</body>
+</html>

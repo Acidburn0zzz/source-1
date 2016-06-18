@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>vfs_local_ops</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L49'>vfs_local_ops</a>      49 src/vfs/local/local.c static struct vfs_class vfs_local_ops;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L418'>vfs_local_ops</a>     418 src/vfs/local/local.c     vfs_local_ops.name = "localfs";</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L419'>vfs_local_ops</a>     419 src/vfs/local/local.c     vfs_local_ops.flags = VFSF_LOCAL;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L420'>vfs_local_ops</a>     420 src/vfs/local/local.c     vfs_local_ops.which = local_which;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L421'>vfs_local_ops</a>     421 src/vfs/local/local.c     vfs_local_ops.open = local_open;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L422'>vfs_local_ops</a>     422 src/vfs/local/local.c     vfs_local_ops.close = local_close;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L423'>vfs_local_ops</a>     423 src/vfs/local/local.c     vfs_local_ops.read = local_read;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L424'>vfs_local_ops</a>     424 src/vfs/local/local.c     vfs_local_ops.write = local_write;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L425'>vfs_local_ops</a>     425 src/vfs/local/local.c     vfs_local_ops.opendir = local_opendir;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L426'>vfs_local_ops</a>     426 src/vfs/local/local.c     vfs_local_ops.readdir = local_readdir;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L427'>vfs_local_ops</a>     427 src/vfs/local/local.c     vfs_local_ops.closedir = local_closedir;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L428'>vfs_local_ops</a>     428 src/vfs/local/local.c     vfs_local_ops.stat = local_stat;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L429'>vfs_local_ops</a>     429 src/vfs/local/local.c     vfs_local_ops.lstat = local_lstat;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L430'>vfs_local_ops</a>     430 src/vfs/local/local.c     vfs_local_ops.fstat = local_fstat;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L431'>vfs_local_ops</a>     431 src/vfs/local/local.c     vfs_local_ops.chmod = local_chmod;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L432'>vfs_local_ops</a>     432 src/vfs/local/local.c     vfs_local_ops.chown = local_chown;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L433'>vfs_local_ops</a>     433 src/vfs/local/local.c     vfs_local_ops.utime = local_utime;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L434'>vfs_local_ops</a>     434 src/vfs/local/local.c     vfs_local_ops.readlink = local_readlink;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L435'>vfs_local_ops</a>     435 src/vfs/local/local.c     vfs_local_ops.symlink = local_symlink;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L436'>vfs_local_ops</a>     436 src/vfs/local/local.c     vfs_local_ops.link = local_link;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L437'>vfs_local_ops</a>     437 src/vfs/local/local.c     vfs_local_ops.unlink = local_unlink;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L438'>vfs_local_ops</a>     438 src/vfs/local/local.c     vfs_local_ops.rename = local_rename;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L439'>vfs_local_ops</a>     439 src/vfs/local/local.c     vfs_local_ops.chdir = local_chdir;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L440'>vfs_local_ops</a>     440 src/vfs/local/local.c     vfs_local_ops.ferrno = local_errno;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L441'>vfs_local_ops</a>     441 src/vfs/local/local.c     vfs_local_ops.lseek = local_lseek;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L442'>vfs_local_ops</a>     442 src/vfs/local/local.c     vfs_local_ops.mknod = local_mknod;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L443'>vfs_local_ops</a>     443 src/vfs/local/local.c     vfs_local_ops.getlocalcopy = local_getlocalcopy;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L444'>vfs_local_ops</a>     444 src/vfs/local/local.c     vfs_local_ops.ungetlocalcopy = local_ungetlocalcopy;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L445'>vfs_local_ops</a>     445 src/vfs/local/local.c     vfs_local_ops.mkdir = local_mkdir;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L446'>vfs_local_ops</a>     446 src/vfs/local/local.c     vfs_local_ops.rmdir = local_rmdir;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L447'>vfs_local_ops</a>     447 src/vfs/local/local.c     vfs_register_class (&amp;vfs_local_ops);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--relative_cd.c.html#L92'>vfs_local_ops</a>      92 tests/lib/vfs/relative_cd.c     vfs_local_ops.chdir = test_chdir;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_path_string_convert.c.html#L120'>vfs_local_ops</a>     120 tests/lib/vfs/vfs_path_string_convert.c         &amp;vfs_local_ops</span>
+</pre>
+</body>
+</html>

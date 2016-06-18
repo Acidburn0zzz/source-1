@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>color</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--tty--color-ncurses.c.html#L207'>color</a>             207 lib/tty/color-ncurses.c tty_setcolor (int color)</span>
+<span class='curline'><a href='../S/lib--tty--color-ncurses.c.html#L209'>color</a>             209 lib/tty/color-ncurses.c     attrset (COLOR_PAIR (color) | color_get_attr (color));</span>
+<span class='curline'><a href='../S/lib--tty--color-ncurses.c.html#L215'>color</a>             215 lib/tty/color-ncurses.c tty_lowlevel_setcolor (int color)</span>
+<span class='curline'><a href='../S/lib--tty--color-ncurses.c.html#L217'>color</a>             217 lib/tty/color-ncurses.c     tty_setcolor (color);</span>
+<span class='curline'><a href='../S/lib--tty--color-slang.c.html#L185'>color</a>             185 lib/tty/color-slang.c tty_setcolor (int color)</span>
+<span class='curline'><a href='../S/lib--tty--color-slang.c.html#L187'>color</a>             187 lib/tty/color-slang.c     SLsmg_set_color (color);</span>
+<span class='curline'><a href='../S/lib--tty--color-slang.c.html#L196'>color</a>             196 lib/tty/color-slang.c tty_lowlevel_setcolor (int color)</span>
+<span class='curline'><a href='../S/lib--tty--color-slang.c.html#L198'>color</a>             198 lib/tty/color-slang.c     SLsmg_set_color (color &amp; 0x7F);</span>
+<span class='curline'><a href='../S/lib--tty--color.h.html#L44'>color</a>              44 lib/tty/color.h void tty_setcolor (int color);</span>
+<span class='curline'><a href='../S/lib--tty--color.h.html#L45'>color</a>              45 lib/tty/color.h void tty_lowlevel_setcolor (int color);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L655'>color</a>             655 lib/widget/dialog.c     tty_setcolor (h-&gt;color[DLG_COLOR_NORMAL]);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L661'>color</a>             661 lib/widget/dialog.c         tty_setcolor (h-&gt;color[DLG_COLOR_TITLE]);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L808'>color</a>             808 lib/widget/dialog.c         if (h-&gt;color != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L865'>color</a>             865 lib/widget/dialog.c     new_d-&gt;color = colors;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L66'>color</a>              66 lib/widget/dialog.h     const int *color;           /* Color set. Unused in viewer and editor */</span>
+<span class='curline'><a href='../S/lib--widget--gauge.c.html#L76'>color</a>              76 lib/widget/gauge.c             tty_setcolor (h-&gt;color[DLG_COLOR_NORMAL]);</span>
+<span class='curline'><a href='../S/lib--widget--gauge.c.html#L108'>color</a>             108 lib/widget/gauge.c                 tty_setcolor (h-&gt;color[DLG_COLOR_NORMAL]);</span>
+<span class='curline'><a href='../S/lib--widget--gauge.c.html#L113'>color</a>             113 lib/widget/gauge.c                 tty_setcolor (h-&gt;color[DLG_COLOR_NORMAL]);</span>
+<span class='curline'><a href='../S/lib--widget--gauge.c.html#L117'>color</a>             117 lib/widget/gauge.c                 tty_setcolor (h-&gt;color[DLG_COLOR_NORMAL]);</span>
+<span class='curline'><a href='../S/lib--widget--groupbox.c.html#L75'>color</a>              75 lib/widget/groupbox.c             tty_setcolor (disabled ? DISABLED_COLOR : h-&gt;color[DLG_COLOR_NORMAL]);</span>
+<span class='curline'><a href='../S/lib--widget--groupbox.c.html#L80'>color</a>              80 lib/widget/groupbox.c                 tty_setcolor (disabled ? DISABLED_COLOR : h-&gt;color[DLG_COLOR_TITLE]);</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L91'>color</a>              91 lib/widget/hline.c             tty_setcolor (h-&gt;color[DLG_COLOR_NORMAL]);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L117'>color</a>             117 lib/widget/input.c     tty_setcolor (disabled ? DISABLED_COLOR : in-&gt;color[WINPUTC_HISTORY]);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L997'>color</a>             997 lib/widget/input.c     in-&gt;color = colors;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1290'>color</a>            1290 lib/widget/input.c         tty_setcolor (in-&gt;color[WINPUTC_UNCHANGED]);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1292'>color</a>            1292 lib/widget/input.c         tty_setcolor (in-&gt;color[WINPUTC_MAIN]);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1307'>color</a>            1307 lib/widget/input.c                 tty_setcolor (in-&gt;color[WINPUTC_MAIN]);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1310'>color</a>            1310 lib/widget/input.c                 tty_setcolor (in-&gt;color[WINPUTC_MARK]);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1336'>color</a>            1336 lib/widget/input.c         tty_setcolor (in-&gt;color[WINPUTC_MAIN]);</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L49'>color</a>              49 lib/widget/input.h     const int *color;</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L89'>color</a>              89 lib/widget/label.c                 tty_setcolor (disabled ? DISABLED_COLOR : h-&gt;color[DLG_COLOR_NORMAL]);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L144'>color</a>             144 lib/widget/listbox.c     normalc = disabled ? DISABLED_COLOR : h-&gt;color[DLG_COLOR_NORMAL];</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L149'>color</a>             149 lib/widget/listbox.c             ? h-&gt;color[DLG_COLOR_HOT_FOCUS] </span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L150'>color</a>             150 lib/widget/listbox.c             : h-&gt;color[DLG_COLOR_FOCUS];</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L119'>color</a>             119 lib/widget/menu.c menubar_paint_idx (WMenuBar * menubar, unsigned int idx, int color)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L146'>color</a>             146 lib/widget/menu.c         tty_setcolor (color);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L155'>color</a>             155 lib/widget/menu.c             tty_setcolor (color == MENU_SELECTED_COLOR ? MENU_HOTSEL_COLOR : MENU_HOT_COLOR);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L157'>color</a>             157 lib/widget/menu.c             tty_setcolor (color);</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L278'>color</a>             278 lib/widget/widget-common.c     int color;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L281'>color</a>             281 lib/widget/widget-common.c         color = DISABLED_COLOR;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L285'>color</a>             285 lib/widget/widget-common.c             color = h-&gt;color[DLG_COLOR_HOT_FOCUS];</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L287'>color</a>             287 lib/widget/widget-common.c             color = h-&gt;color[DLG_COLOR_HOT_NORMAL];</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L292'>color</a>             292 lib/widget/widget-common.c             color = h-&gt;color[DLG_COLOR_FOCUS];</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L294'>color</a>             294 lib/widget/widget-common.c             color = h-&gt;color[DLG_COLOR_NORMAL];</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L297'>color</a>             297 lib/widget/widget-common.c     tty_setcolor (color);</span>
+<span class='curline'><a href='../S/src--editor--bookmark.c.html#L313'>color</a>             313 src/editor/bookmark.c book_mark_serialize (WEdit * edit, int color)</span>
+<span class='curline'><a href='../S/src--editor--bookmark.c.html#L327'>color</a>             327 src/editor/bookmark.c             if (p-&gt;c == color &amp;&amp; p-&gt;line &gt;= 0)</span>
+<span class='curline'><a href='../S/src--editor--bookmark.c.html#L336'>color</a>             336 src/editor/bookmark.c book_mark_restore (WEdit * edit, int color)</span>
+<span class='curline'><a href='../S/src--editor--bookmark.c.html#L343'>color</a>             343 src/editor/bookmark.c             book_mark_insert (edit, g_array_index (edit-&gt;serialized_bookmarks, size_t, i), color);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L270'>color</a>             270 src/editor/edit-impl.h void book_mark_serialize (WEdit * edit, int color);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L271'>color</a>             271 src/editor/edit-impl.h void book_mark_restore (WEdit * edit, int color);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L196'>color</a>             196 src/editor/editdraw.c edit_status_fullscreen (WEdit * edit, int color)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L234'>color</a>             234 src/editor/editdraw.c     tty_setcolor (color);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L349'>color</a>             349 src/editor/editdraw.c edit_draw_frame (const WEdit * edit, int color, gboolean active)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L354'>color</a>             354 src/editor/editdraw.c     tty_setcolor (color);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L375'>color</a>             375 src/editor/editdraw.c edit_draw_window_icons (const WEdit * edit, int color)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L380'>color</a>             380 src/editor/editdraw.c     tty_setcolor (color);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L461'>color</a>             461 src/editor/editdraw.c         int color;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L471'>color</a>             471 src/editor/editdraw.c         color = p-&gt;style &gt;&gt; 16;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L476'>color</a>             476 src/editor/editdraw.c             color = 0;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L494'>color</a>             494 src/editor/editdraw.c             tty_lowlevel_setcolor (color);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L520'>color</a>             520 src/editor/editdraw.c     int color;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L546'>color</a>             546 src/editor/editdraw.c     color = edit_get_syntax_color (edit, b - 1);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L633'>color</a>             633 src/editor/editdraw.c                     color = edit_get_syntax_color (edit, q);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L634'>color</a>             634 src/editor/editdraw.c                     p-&gt;style |= color &lt;&lt; 16;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1045'>color</a>            1045 src/editor/editdraw.c     int color;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1049'>color</a>            1049 src/editor/editdraw.c         color = STATUSBAR_COLOR;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1050'>color</a>            1050 src/editor/editdraw.c         edit_status_fullscreen (edit, color);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1054'>color</a>            1054 src/editor/editdraw.c         color = edit-&gt;drag_state != MCEDIT_DRAG_NONE ? EDITOR_FRAME_DRAG : active ?</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1056'>color</a>            1056 src/editor/editdraw.c         edit_draw_frame (edit, color, active);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1060'>color</a>            1060 src/editor/editdraw.c     edit_draw_window_icons (edit, color);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L110'>color</a>             110 src/editor/syntax.c     int color;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L641'>color</a>             641 src/editor/syntax.c     return k-&gt;color;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1104'>color</a>            1104 src/editor/syntax.c             k-&gt;color = this_try_alloc_color_pair (fg, bg, attrs);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1172'>color</a>            1172 src/editor/syntax.c             k-&gt;color = this_try_alloc_color_pair (fg, bg, attrs);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1246'>color</a>            1246 src/filemanager/find.c     tty_setcolor (h-&gt;color[DLG_COLOR_NORMAL]);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L415'>color</a>             415 src/filemanager/panel.c add_permission_string (const char *dest, int width, file_entry_t * fe, int attr, int color,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L444'>color</a>             444 src/filemanager/panel.c         else if (color &gt;= 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L445'>color</a>             445 src/filemanager/panel.c             tty_setcolor (color);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L447'>color</a>             447 src/filemanager/panel.c             tty_lowlevel_setcolor (-color);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L792'>color</a>             792 src/filemanager/panel.c     int color = NORMAL_COLOR;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L803'>color</a>             803 src/filemanager/panel.c         color = file_compute_color (attr, fe);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L858'>color</a>             858 src/filemanager/panel.c             if (color &gt;= 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L859'>color</a>             859 src/filemanager/panel.c                 tty_setcolor (color);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L861'>color</a>             861 src/filemanager/panel.c                 tty_lowlevel_setcolor (-color);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L870'>color</a>             870 src/filemanager/panel.c                 add_permission_string (prepared_text, format-&gt;field_len, fe, attr, color,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1051'>color</a>            1051 src/filemanager/panel.c         int color = 0;          /* Color value of the line */</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1055'>color</a>            1055 src/filemanager/panel.c             color = 2 * (panel-&gt;dir.list[i + panel-&gt;top_file].f.marked);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1056'>color</a>            1056 src/filemanager/panel.c             color += (panel-&gt;selected == i + panel-&gt;top_file &amp;&amp; panel-&gt;active);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1059'>color</a>            1059 src/filemanager/panel.c         repaint_file (panel, i + panel-&gt;top_file, TRUE, color, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L89'>color</a>              89 src/filemanager/tree.c #define TREE_NORMALC(h) (h-&gt;color[DLG_COLOR_NORMAL])</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L90'>color</a>              90 src/filemanager/tree.c #define TREE_CURRENTC(h) (h-&gt;color[DLG_COLOR_FOCUS])</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L395'>color</a>             395 src/viewer/ascii.c mcview_get_next_maybe_nroff_char (WView * view, mcview_state_machine_t * state, int *c, int *color)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L400'>color</a>             400 src/viewer/ascii.c     if (color != NULL)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L401'>color</a>             401 src/viewer/ascii.c         *color = VIEW_NORMAL_COLOR;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L427'>color</a>             427 src/viewer/ascii.c         if (color != NULL)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L428'>color</a>             428 src/viewer/ascii.c             *color =</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L435'>color</a>             435 src/viewer/ascii.c         if (color != NULL)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L436'>color</a>             436 src/viewer/ascii.c             *color = VIEW_BOLD_COLOR;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L443'>color</a>             443 src/viewer/ascii.c         if (color != NULL)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L444'>color</a>             444 src/viewer/ascii.c             *color = VIEW_UNDERLINED_COLOR;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L479'>color</a>             479 src/viewer/ascii.c                                      int clen, int *color)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L483'>color</a>             483 src/viewer/ascii.c     if (!mcview_get_next_maybe_nroff_char (view, state, cs, color))</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L612'>color</a>             612 src/viewer/ascii.c         int color;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L615'>color</a>             615 src/viewer/ascii.c         n = mcview_next_combining_char_sequence (view, state, cs, 1 + MAX_COMBINING_CHARS, &amp;color);</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L624'>color</a>             624 src/viewer/ascii.c             color = VIEW_SELECTED_COLOR;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L680'>color</a>             680 src/viewer/ascii.c                 tty_setcolor (color);</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L705'>color</a>             705 src/viewer/ascii.c                 tty_setcolor (color);</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L719'>color</a>             719 src/viewer/ascii.c                 tty_setcolor (color);</span>
+</pre>
+</body>
+</html>

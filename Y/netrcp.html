@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>netrcp</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L246'>netrcp</a>            246 src/vfs/ftpfs/ftpfs.c static const char *netrcp;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2281'>netrcp</a>           2281 src/vfs/ftpfs/ftpfs.c         netrcp = skip_separators (netrcp);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2282'>netrcp</a>           2282 src/vfs/ftpfs/ftpfs.c         if (*netrcp != '\n')</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2284'>netrcp</a>           2284 src/vfs/ftpfs/ftpfs.c         netrcp++;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2286'>netrcp</a>           2286 src/vfs/ftpfs/ftpfs.c     if (!*netrcp)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2289'>netrcp</a>           2289 src/vfs/ftpfs/ftpfs.c     if (*netrcp == '"')</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2291'>netrcp</a>           2291 src/vfs/ftpfs/ftpfs.c         for (netrcp++; *netrcp != '"' &amp;&amp; *netrcp; netrcp++)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2293'>netrcp</a>           2293 src/vfs/ftpfs/ftpfs.c             if (*netrcp == '\\')</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2294'>netrcp</a>           2294 src/vfs/ftpfs/ftpfs.c                 netrcp++;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2295'>netrcp</a>           2295 src/vfs/ftpfs/ftpfs.c             *p++ = *netrcp;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2300'>netrcp</a>           2300 src/vfs/ftpfs/ftpfs.c         for (; *netrcp != '\n' &amp;&amp; *netrcp != '\t' &amp;&amp; *netrcp != ' ' &amp;&amp;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2301'>netrcp</a>           2301 src/vfs/ftpfs/ftpfs.c              *netrcp != ',' &amp;&amp; *netrcp; netrcp++)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2303'>netrcp</a>           2303 src/vfs/ftpfs/ftpfs.c             if (*netrcp == '\\')</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2304'>netrcp</a>           2304 src/vfs/ftpfs/ftpfs.c                 netrcp++;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2305'>netrcp</a>           2305 src/vfs/ftpfs/ftpfs.c             *p++ = *netrcp;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2367'>netrcp</a>           2367 src/vfs/ftpfs/ftpfs.c                 while (*netrcp &amp;&amp; *netrcp != '\n')</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2368'>netrcp</a>           2368 src/vfs/ftpfs/ftpfs.c                     netrcp++;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2369'>netrcp</a>           2369 src/vfs/ftpfs/ftpfs.c                 if (*netrcp != '\n')</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2371'>netrcp</a>           2371 src/vfs/ftpfs/ftpfs.c                 netrcp++;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2373'>netrcp</a>           2373 src/vfs/ftpfs/ftpfs.c             while (*netrcp &amp;&amp; *netrcp != '\n');</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2450'>netrcp</a>           2450 src/vfs/ftpfs/ftpfs.c     netrcp = netrc;</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>l</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L89'>l</a>                  89 lib/widget/dialog.c dlg_widget_next (WDialog * h, GList * l)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L93'>l</a>                  93 lib/widget/dialog.c     next = g_list_next (l);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L103'>l</a>                 103 lib/widget/dialog.c dlg_widget_prev (WDialog * h, GList * l)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L107'>l</a>                 107 lib/widget/dialog.c     prev = g_list_previous (l);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L620'>l</a>                 620 lib/widget/dialog.c     GList *l;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L622'>l</a>                 622 lib/widget/dialog.c     l = g_list_find (h-&gt;widgets, w);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L623'>l</a>                 623 lib/widget/dialog.c     if (l == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L628'>l</a>                 628 lib/widget/dialog.c         do_select_widget (h, l, SELECT_EXACT);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L631'>l</a>                 631 lib/widget/dialog.c     h-&gt;widgets = g_list_remove_link (h-&gt;widgets, l);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L633'>l</a>                 633 lib/widget/dialog.c         h-&gt;widgets = g_list_concat (h-&gt;widgets, l);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L635'>l</a>                 635 lib/widget/dialog.c         h-&gt;widgets = g_list_concat (l, h-&gt;widgets);</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L59'>l</a>                  59 lib/widget/hline.c     WHLine *l = HLINE (w);</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L66'>l</a>                  66 lib/widget/hline.c         if (l-&gt;auto_adjust_cols)</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L88'>l</a>                  88 lib/widget/hline.c         if (l-&gt;transparent)</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L95'>l</a>                  95 lib/widget/hline.c         if (l-&gt;auto_adjust_cols)</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L103'>l</a>                 103 lib/widget/hline.c         if (l-&gt;text != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L107'>l</a>                 107 lib/widget/hline.c             text_width = str_term_width1 (l-&gt;text);</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L109'>l</a>                 109 lib/widget/hline.c             tty_print_string (l-&gt;text);</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L114'>l</a>                 114 lib/widget/hline.c         g_free (l-&gt;text);</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L129'>l</a>                 129 lib/widget/hline.c     WHLine *l;</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L133'>l</a>                 133 lib/widget/hline.c     l = g_new (WHLine, 1);</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L134'>l</a>                 134 lib/widget/hline.c     w = WIDGET (l);</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L136'>l</a>                 136 lib/widget/hline.c     l-&gt;text = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L137'>l</a>                 137 lib/widget/hline.c     l-&gt;auto_adjust_cols = (width &lt; 0);</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L138'>l</a>                 138 lib/widget/hline.c     l-&gt;transparent = FALSE;</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L140'>l</a>                 140 lib/widget/hline.c     return l;</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L146'>l</a>                 146 lib/widget/hline.c hline_set_text (WHLine * l, const char *text)</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L148'>l</a>                 148 lib/widget/hline.c     g_free (l-&gt;text);</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L151'>l</a>                 151 lib/widget/hline.c         l-&gt;text = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L153'>l</a>                 153 lib/widget/hline.c         l-&gt;text = g_strdup (text);</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L155'>l</a>                 155 lib/widget/hline.c     widget_redraw (WIDGET (l));</span>
+<span class='curline'><a href='../S/lib--widget--hline.h.html#L30'>l</a>                  30 lib/widget/hline.h void hline_set_text (WHLine * l, const char *text);</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L62'>l</a>                  62 lib/widget/label.c     WLabel *l = LABEL (w);</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L76'>l</a>                  76 lib/widget/label.c             char *p = l-&gt;text;</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L81'>l</a>                  81 lib/widget/label.c             if (l-&gt;text == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L86'>l</a>                  86 lib/widget/label.c             if (l-&gt;transparent)</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L120'>l</a>                 120 lib/widget/label.c         g_free (l-&gt;text);</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L135'>l</a>                 135 lib/widget/label.c     WLabel *l;</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L143'>l</a>                 143 lib/widget/label.c     l = g_new (WLabel, 1);</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L144'>l</a>                 144 lib/widget/label.c     w = WIDGET (l);</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L147'>l</a>                 147 lib/widget/label.c     l-&gt;text = g_strdup (text);</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L148'>l</a>                 148 lib/widget/label.c     l-&gt;auto_adjust_cols = TRUE;</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L149'>l</a>                 149 lib/widget/label.c     l-&gt;transparent = FALSE;</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L151'>l</a>                 151 lib/widget/label.c     return l;</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L129'>l</a>                 129 lib/widget/listbox-window.c run_listbox (Listbox * l)</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L133'>l</a>                 133 lib/widget/listbox-window.c     if (dlg_run (l-&gt;dlg) != B_CANCEL)</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L134'>l</a>                 134 lib/widget/listbox-window.c         val = l-&gt;list-&gt;pos;</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L135'>l</a>                 135 lib/widget/listbox-window.c     dlg_destroy (l-&gt;dlg);</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L136'>l</a>                 136 lib/widget/listbox-window.c     g_free (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.h.html#L10'>l</a>                  10 lib/widget/listbox-window.h #define LISTBOX_APPEND_TEXT(l,h,t,d,f) \</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.h.html#L11'>l</a>                  11 lib/widget/listbox-window.h     listbox_add_item (l-&gt;list, LISTBOX_APPEND_AT_END, h, t, d, f)</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.h.html#L31'>l</a>                  31 lib/widget/listbox-window.h int run_listbox (Listbox * l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L55'>l</a>                  55 lib/widget/listbox.c #define LISTBOX_LAST(l) (g_queue_is_empty ((l)-&gt;list) ? 0 : (int) g_queue_get_length ((l)-&gt;list) - 1)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L90'>l</a>                  90 lib/widget/listbox.c listbox_drawscroll (WListbox * l)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L92'>l</a>                  92 lib/widget/listbox.c     Widget *w = WIDGET (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L100'>l</a>                 100 lib/widget/listbox.c     if (l-&gt;top == 0)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L105'>l</a>                 105 lib/widget/listbox.c     length = g_queue_get_length (l-&gt;list);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L109'>l</a>                 109 lib/widget/listbox.c     if (l-&gt;top + w-&gt;lines == length || w-&gt;lines &gt;= length)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L115'>l</a>                 115 lib/widget/listbox.c     if (!g_queue_is_empty (l-&gt;list))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L116'>l</a>                 116 lib/widget/listbox.c         line = 1 + ((l-&gt;pos * (w-&gt;lines - 2)) / length);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L131'>l</a>                 131 lib/widget/listbox.c listbox_draw (WListbox * l, gboolean focused)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L133'>l</a>                 133 lib/widget/listbox.c     Widget *w = WIDGET (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L153'>l</a>                 153 lib/widget/listbox.c     if (l-&gt;list != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L155'>l</a>                 155 lib/widget/listbox.c         length = g_queue_get_length (l-&gt;list);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L156'>l</a>                 156 lib/widget/listbox.c         le = g_queue_peek_nth_link (l-&gt;list, (guint) l-&gt;top);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L160'>l</a>                 160 lib/widget/listbox.c     pos = (le == NULL) ? 0 : l-&gt;top;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L167'>l</a>                 167 lib/widget/listbox.c         if (pos == l-&gt;pos &amp;&amp; sel_line == -1)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L175'>l</a>                 175 lib/widget/listbox.c         widget_move (l, i, 1);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L177'>l</a>                 177 lib/widget/listbox.c         if (l-&gt;list != NULL &amp;&amp; le != NULL &amp;&amp; (i == 0 || pos &lt; length))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L189'>l</a>                 189 lib/widget/listbox.c     l-&gt;cursor_y = sel_line;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L191'>l</a>                 191 lib/widget/listbox.c     if (l-&gt;scrollbar &amp;&amp; length &gt; w-&gt;lines)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L194'>l</a>                 194 lib/widget/listbox.c         listbox_drawscroll (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L201'>l</a>                 201 lib/widget/listbox.c listbox_check_hotkey (WListbox * l, int key)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L203'>l</a>                 203 lib/widget/listbox.c     if (!listbox_is_empty (l))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L208'>l</a>                 208 lib/widget/listbox.c         for (i = 0, le = g_queue_peek_head_link (l-&gt;list); le != NULL; i++, le = g_list_next (le))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L224'>l</a>                 224 lib/widget/listbox.c listbox_y_pos (WListbox * l, int y)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L226'>l</a>                 226 lib/widget/listbox.c     return MIN (l-&gt;top + y, LISTBOX_LAST (l));</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L232'>l</a>                 232 lib/widget/listbox.c listbox_fwd (WListbox * l, gboolean wrap)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L234'>l</a>                 234 lib/widget/listbox.c     if ((guint) l-&gt;pos + 1 &lt; g_queue_get_length (l-&gt;list))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L235'>l</a>                 235 lib/widget/listbox.c         listbox_select_entry (l, l-&gt;pos + 1);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L237'>l</a>                 237 lib/widget/listbox.c         listbox_select_first (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L243'>l</a>                 243 lib/widget/listbox.c listbox_fwd_n (WListbox * l, int n)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L245'>l</a>                 245 lib/widget/listbox.c     listbox_select_entry (l, MIN (l-&gt;pos + n, LISTBOX_LAST (l)));</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L251'>l</a>                 251 lib/widget/listbox.c listbox_back (WListbox * l, gboolean wrap)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L253'>l</a>                 253 lib/widget/listbox.c     if (l-&gt;pos &gt; 0)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L254'>l</a>                 254 lib/widget/listbox.c         listbox_select_entry (l, l-&gt;pos - 1);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L256'>l</a>                 256 lib/widget/listbox.c         listbox_select_last (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L262'>l</a>                 262 lib/widget/listbox.c listbox_back_n (WListbox * l, int n)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L264'>l</a>                 264 lib/widget/listbox.c     listbox_select_entry (l, MAX (l-&gt;pos - n, 0));</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L270'>l</a>                 270 lib/widget/listbox.c listbox_execute_cmd (WListbox * l, long command)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L273'>l</a>                 273 lib/widget/listbox.c     Widget *w = WIDGET (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L275'>l</a>                 275 lib/widget/listbox.c     if (l-&gt;list == NULL || g_queue_is_empty (l-&gt;list))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L281'>l</a>                 281 lib/widget/listbox.c         listbox_back (l, TRUE);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L284'>l</a>                 284 lib/widget/listbox.c         listbox_fwd (l, TRUE);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L287'>l</a>                 287 lib/widget/listbox.c         listbox_select_first (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L290'>l</a>                 290 lib/widget/listbox.c         listbox_select_last (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L293'>l</a>                 293 lib/widget/listbox.c         listbox_back_n (l, w-&gt;lines - 1);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L296'>l</a>                 296 lib/widget/listbox.c         listbox_fwd_n (l, w-&gt;lines - 1);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L299'>l</a>                 299 lib/widget/listbox.c         if (l-&gt;deletable)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L304'>l</a>                 304 lib/widget/listbox.c             length = g_queue_get_length (l-&gt;list);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L306'>l</a>                 306 lib/widget/listbox.c             is_last = (l-&gt;pos + 1 &gt;= length);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L307'>l</a>                 307 lib/widget/listbox.c             is_more = (l-&gt;top + w-&gt;lines &gt;= length);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L309'>l</a>                 309 lib/widget/listbox.c             listbox_remove_current (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L310'>l</a>                 310 lib/widget/listbox.c             if ((l-&gt;top &gt; 0) &amp;&amp; (is_last || is_more))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L311'>l</a>                 311 lib/widget/listbox.c                 l-&gt;top--;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L315'>l</a>                 315 lib/widget/listbox.c         if (l-&gt;deletable &amp;&amp; mc_global.widget.confirm_history_cleanup</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L320'>l</a>                 320 lib/widget/listbox.c             listbox_remove_list (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L333'>l</a>                 333 lib/widget/listbox.c listbox_key (WListbox * l, int key)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L337'>l</a>                 337 lib/widget/listbox.c     if (l-&gt;list == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L343'>l</a>                 343 lib/widget/listbox.c         listbox_select_entry (l, key - '0');</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L350'>l</a>                 350 lib/widget/listbox.c     return listbox_execute_cmd (l, command);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L357'>l</a>                 357 lib/widget/listbox.c listbox_append_item (WListbox * l, WLEntry * e, listbox_append_t pos)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L359'>l</a>                 359 lib/widget/listbox.c     if (l-&gt;list == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L361'>l</a>                 361 lib/widget/listbox.c         l-&gt;list = g_queue_new ();</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L368'>l</a>                 368 lib/widget/listbox.c         g_queue_push_tail (l-&gt;list, e);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L372'>l</a>                 372 lib/widget/listbox.c         g_queue_insert_before (l-&gt;list, g_queue_peek_nth_link (l-&gt;list, (guint) l-&gt;pos), e);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L376'>l</a>                 376 lib/widget/listbox.c         g_queue_insert_after (l-&gt;list, g_queue_peek_nth_link (l-&gt;list, (guint) l-&gt;pos), e);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L380'>l</a>                 380 lib/widget/listbox.c         g_queue_insert_sorted (l-&gt;list, e, (GCompareDataFunc) listbox_entry_cmp, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L392'>l</a>                 392 lib/widget/listbox.c listbox_on_change (WListbox * l)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L394'>l</a>                 394 lib/widget/listbox.c     listbox_draw (l, TRUE);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L395'>l</a>                 395 lib/widget/listbox.c     send_message (WIDGET (l)-&gt;owner, l, MSG_NOTIFY, l-&gt;pos, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L401'>l</a>                 401 lib/widget/listbox.c listbox_do_action (WListbox * l)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L405'>l</a>                 405 lib/widget/listbox.c     if (l-&gt;callback != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L406'>l</a>                 406 lib/widget/listbox.c         action = l-&gt;callback (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L412'>l</a>                 412 lib/widget/listbox.c         WDialog *h = WIDGET (l)-&gt;owner;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L422'>l</a>                 422 lib/widget/listbox.c listbox_run_hotkey (WListbox * l, int pos)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L424'>l</a>                 424 lib/widget/listbox.c     listbox_select_entry (l, pos);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L425'>l</a>                 425 lib/widget/listbox.c     listbox_on_change (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L426'>l</a>                 426 lib/widget/listbox.c     listbox_do_action (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L432'>l</a>                 432 lib/widget/listbox.c listbox_destroy (WListbox * l)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L434'>l</a>                 434 lib/widget/listbox.c     listbox_remove_list (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L442'>l</a>                 442 lib/widget/listbox.c     WListbox *l = LISTBOX (w);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L454'>l</a>                 454 lib/widget/listbox.c             pos = listbox_check_hotkey (l, parm);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L458'>l</a>                 458 lib/widget/listbox.c             listbox_run_hotkey (l, pos);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L464'>l</a>                 464 lib/widget/listbox.c         ret_code = listbox_key (l, parm);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L466'>l</a>                 466 lib/widget/listbox.c             listbox_on_change (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L470'>l</a>                 470 lib/widget/listbox.c         return listbox_execute_cmd (l, parm);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L473'>l</a>                 473 lib/widget/listbox.c         widget_move (l, l-&gt;cursor_y, 0);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L478'>l</a>                 478 lib/widget/listbox.c         l-&gt;focused = msg == MSG_FOCUS;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L481'>l</a>                 481 lib/widget/listbox.c         listbox_draw (l, l-&gt;focused);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L485'>l</a>                 485 lib/widget/listbox.c         listbox_destroy (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L501'>l</a>                 501 lib/widget/listbox.c     WListbox *l = LISTBOX (w);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L504'>l</a>                 504 lib/widget/listbox.c     old_pos = l-&gt;pos;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L509'>l</a>                 509 lib/widget/listbox.c         dlg_select_widget (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L510'>l</a>                 510 lib/widget/listbox.c         listbox_select_entry (l, listbox_y_pos (l, event-&gt;y));</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L514'>l</a>                 514 lib/widget/listbox.c         listbox_back (l, FALSE);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L518'>l</a>                 518 lib/widget/listbox.c         listbox_fwd (l, FALSE);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L523'>l</a>                 523 lib/widget/listbox.c         listbox_select_entry (l, listbox_y_pos (l, event-&gt;y));</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L529'>l</a>                 529 lib/widget/listbox.c             listbox_do_action (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L537'>l</a>                 537 lib/widget/listbox.c     if (l-&gt;pos != old_pos)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L538'>l</a>                 538 lib/widget/listbox.c         listbox_on_change (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L548'>l</a>                 548 lib/widget/listbox.c     WListbox *l;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L554'>l</a>                 554 lib/widget/listbox.c     l = g_new (WListbox, 1);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L555'>l</a>                 555 lib/widget/listbox.c     w = WIDGET (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L558'>l</a>                 558 lib/widget/listbox.c     l-&gt;list = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L559'>l</a>                 559 lib/widget/listbox.c     l-&gt;top = l-&gt;pos = 0;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L560'>l</a>                 560 lib/widget/listbox.c     l-&gt;deletable = deletable;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L561'>l</a>                 561 lib/widget/listbox.c     l-&gt;callback = callback;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L562'>l</a>                 562 lib/widget/listbox.c     l-&gt;allow_duplicates = TRUE;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L563'>l</a>                 563 lib/widget/listbox.c     l-&gt;scrollbar = !mc_global.tty.slow_terminal;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L564'>l</a>                 564 lib/widget/listbox.c     l-&gt;focused = FALSE;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L567'>l</a>                 567 lib/widget/listbox.c     return l;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L573'>l</a>                 573 lib/widget/listbox.c listbox_search_text (WListbox * l, const char *text)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L575'>l</a>                 575 lib/widget/listbox.c     if (!listbox_is_empty (l))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L580'>l</a>                 580 lib/widget/listbox.c         for (i = 0, le = g_queue_peek_head_link (l-&gt;list); le != NULL; i++, le = g_list_next (le))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L596'>l</a>                 596 lib/widget/listbox.c listbox_select_first (WListbox * l)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L598'>l</a>                 598 lib/widget/listbox.c     l-&gt;pos = l-&gt;top = 0;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L605'>l</a>                 605 lib/widget/listbox.c listbox_select_last (WListbox * l)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L607'>l</a>                 607 lib/widget/listbox.c     int lines = WIDGET (l)-&gt;lines;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L610'>l</a>                 610 lib/widget/listbox.c     if (!listbox_is_empty (l))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L611'>l</a>                 611 lib/widget/listbox.c         length = g_queue_get_length (l-&gt;list);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L613'>l</a>                 613 lib/widget/listbox.c     l-&gt;pos = length &gt; 0 ? length - 1 : 0;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L614'>l</a>                 614 lib/widget/listbox.c     l-&gt;top = length &gt; lines ? length - lines : 0;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L620'>l</a>                 620 lib/widget/listbox.c listbox_select_entry (WListbox * l, int dest)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L626'>l</a>                 626 lib/widget/listbox.c     if (listbox_is_empty (l) || dest &lt; 0)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L630'>l</a>                 630 lib/widget/listbox.c     for (pos = 0, le = g_queue_peek_head_link (l-&gt;list); le != NULL; pos++, le = g_list_next (le))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L632'>l</a>                 632 lib/widget/listbox.c         if (pos == l-&gt;top)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L637'>l</a>                 637 lib/widget/listbox.c             l-&gt;pos = dest;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L639'>l</a>                 639 lib/widget/listbox.c                 l-&gt;top = l-&gt;pos;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L642'>l</a>                 642 lib/widget/listbox.c                 int lines = WIDGET (l)-&gt;lines;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L644'>l</a>                 644 lib/widget/listbox.c                 if (l-&gt;pos - l-&gt;top &gt;= lines)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L645'>l</a>                 645 lib/widget/listbox.c                     l-&gt;top = l-&gt;pos - lines + 1;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L652'>l</a>                 652 lib/widget/listbox.c     l-&gt;pos = l-&gt;top = 0;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L659'>l</a>                 659 lib/widget/listbox.c listbox_get_current (WListbox * l, char **string, void **extra)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L664'>l</a>                 664 lib/widget/listbox.c     if (l != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L665'>l</a>                 665 lib/widget/listbox.c         e = listbox_get_nth_item (l, l-&gt;pos);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L679'>l</a>                 679 lib/widget/listbox.c listbox_get_nth_item (const WListbox * l, int pos)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L681'>l</a>                 681 lib/widget/listbox.c     if (!listbox_is_empty (l) &amp;&amp; pos &gt;= 0)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L685'>l</a>                 685 lib/widget/listbox.c         item = g_queue_peek_nth_link (l-&gt;list, (guint) pos);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L696'>l</a>                 696 lib/widget/listbox.c listbox_get_first_link (const WListbox * l)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L698'>l</a>                 698 lib/widget/listbox.c     return (l == NULL || l-&gt;list == NULL) ? NULL : g_queue_peek_head_link (l-&gt;list);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L704'>l</a>                 704 lib/widget/listbox.c listbox_remove_current (WListbox * l)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L706'>l</a>                 706 lib/widget/listbox.c     if (!listbox_is_empty (l))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L711'>l</a>                 711 lib/widget/listbox.c         current = g_queue_peek_nth_link (l-&gt;list, (guint) l-&gt;pos);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L713'>l</a>                 713 lib/widget/listbox.c         g_queue_delete_link (l-&gt;list, current);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L715'>l</a>                 715 lib/widget/listbox.c         length = g_queue_get_length (l-&gt;list);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L718'>l</a>                 718 lib/widget/listbox.c             l-&gt;top = l-&gt;pos = 0;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L719'>l</a>                 719 lib/widget/listbox.c         else if (l-&gt;pos &gt;= length)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L720'>l</a>                 720 lib/widget/listbox.c             l-&gt;pos = length - 1;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L727'>l</a>                 727 lib/widget/listbox.c listbox_is_empty (const WListbox * l)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L729'>l</a>                 729 lib/widget/listbox.c     return (l == NULL || l-&gt;list == NULL || g_queue_is_empty (l-&gt;list));</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L735'>l</a>                 735 lib/widget/listbox.c listbox_set_list (WListbox * l, GList * list)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L737'>l</a>                 737 lib/widget/listbox.c     listbox_remove_list (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L739'>l</a>                 739 lib/widget/listbox.c     if (l != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L743'>l</a>                 743 lib/widget/listbox.c         l-&gt;list = g_queue_new ();</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L746'>l</a>                 746 lib/widget/listbox.c             g_queue_push_tail (l-&gt;list, ll-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L755'>l</a>                 755 lib/widget/listbox.c listbox_remove_list (WListbox * l)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L757'>l</a>                 757 lib/widget/listbox.c     if (l != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L759'>l</a>                 759 lib/widget/listbox.c         if (l-&gt;list != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L761'>l</a>                 761 lib/widget/listbox.c             g_queue_foreach (l-&gt;list, (GFunc) listbox_entry_free, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L762'>l</a>                 762 lib/widget/listbox.c             g_queue_free (l-&gt;list);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L765'>l</a>                 765 lib/widget/listbox.c         l-&gt;list = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L766'>l</a>                 766 lib/widget/listbox.c         l-&gt;pos = l-&gt;top = 0;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L773'>l</a>                 773 lib/widget/listbox.c listbox_add_item (WListbox * l, listbox_append_t pos, int hotkey, const char *text, void *data,</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L778'>l</a>                 778 lib/widget/listbox.c     if (l == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L781'>l</a>                 781 lib/widget/listbox.c     if (!l-&gt;allow_duplicates &amp;&amp; (listbox_search_text (l, text) &gt;= 0))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L790'>l</a>                 790 lib/widget/listbox.c     listbox_append_item (l, entry, pos);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L36'>l</a>                  36 lib/widget/listbox.h typedef lcback_ret_t (*lcback_fn) (struct WListbox * l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L67'>l</a>                  67 lib/widget/listbox.h int listbox_search_text (WListbox * l, const char *text);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L68'>l</a>                  68 lib/widget/listbox.h void listbox_select_first (WListbox * l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L69'>l</a>                  69 lib/widget/listbox.h void listbox_select_last (WListbox * l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L70'>l</a>                  70 lib/widget/listbox.h void listbox_select_entry (WListbox * l, int dest);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L71'>l</a>                  71 lib/widget/listbox.h void listbox_get_current (WListbox * l, char **string, void **extra);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L72'>l</a>                  72 lib/widget/listbox.h WLEntry *listbox_get_nth_item (const WListbox * l, int pos);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L73'>l</a>                  73 lib/widget/listbox.h GList *listbox_get_first_link (const WListbox * l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L74'>l</a>                  74 lib/widget/listbox.h void listbox_remove_current (WListbox * l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L75'>l</a>                  75 lib/widget/listbox.h gboolean listbox_is_empty (const WListbox * l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L76'>l</a>                  76 lib/widget/listbox.h void listbox_set_list (WListbox * l, GList * list);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L77'>l</a>                  77 lib/widget/listbox.h void listbox_remove_list (WListbox * l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L78'>l</a>                  78 lib/widget/listbox.h char *listbox_add_item (WListbox * l, listbox_append_t pos, int hotkey, const char *text,</span>
+<span class='curline'><a href='../S/src--args.c.html#L603'>l</a>                 603 src/args.c             GList *l;</span>
+<span class='curline'><a href='../S/src--args.c.html#L605'>l</a>                 605 src/args.c             l = g_list_last (flist);</span>
+<span class='curline'><a href='../S/src--args.c.html#L606'>l</a>                 606 src/args.c             ((mcedit_arg_t *) l-&gt;data)-&gt;line_number = first_line_number;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L228'>l</a>                 228 src/editor/edit.c     size_t i, l;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L233'>l</a>                 233 src/editor/edit.c     l = strlen (vfs_path_as_str (filename_vpath));</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L239'>l</a>                 239 src/editor/edit.c         if (l &gt; e)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L240'>l</a>                 240 src/editor/edit.c             if (!strcmp (all_filters[i].extension, vfs_path_as_str (filename_vpath) + l - e))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1053'>l</a>                1053 src/editor/edit.c     long l = direction ? edit-&gt;buffer.curs_line : edit-&gt;buffer.lines - edit-&gt;buffer.curs_line;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1055'>l</a>                1055 src/editor/edit.c     if (lines &gt; l)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1056'>l</a>                1056 src/editor/edit.c         lines = l;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1707'>l</a>                1707 src/editor/edit.c                 long l;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1711'>l</a>                1711 src/editor/edit.c                     for (l = width - (edit_get_col (edit) - col); l &gt; 0; l -= space_width)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1732'>l</a>                1732 src/editor/edit.c                 for (l = col - edit_get_col (edit); l &gt;= space_width; l -= space_width)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L980'>l</a>                 980 src/editor/editcmd.c         long l = 0, l_last = -1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L991'>l</a>                 991 src/editor/editcmd.c             l += edit_buffer_count_lines (&amp;edit-&gt;buffer, q, edit-&gt;search-&gt;normal_offset);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L992'>l</a>                 992 src/editor/editcmd.c             if (l != l_last)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L994'>l</a>                 994 src/editor/editcmd.c                 book_mark_insert (edit, l, BOOK_MARK_FOUND_COLOR);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L997'>l</a>                 997 src/editor/editcmd.c             l_last = l;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1058'>l</a>                1058 src/editor/editcmd.c edit_get_block (WEdit * edit, off_t start, off_t finish, off_t * l)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1065'>l</a>                1065 src/editor/editcmd.c         *l = 0;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1078'>l</a>                1078 src/editor/editcmd.c                 (*l)++;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1085'>l</a>                1085 src/editor/editcmd.c         *l = finish - start;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1364'>l</a>                1364 src/editor/editcmd.c             long l;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1369'>l</a>                1369 src/editor/editcmd.c                 for (l = width - (edit_get_col (edit) - col); l &gt; 0; l -= space_width)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1389'>l</a>                1389 src/editor/editcmd.c             for (l = col - edit_get_col (edit); l &gt;= space_width; l -= space_width)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2648'>l</a>                2648 src/editor/editcmd.c                 long l;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2651'>l</a>                2651 src/editor/editcmd.c                 l = edit-&gt;curs_row - WIDGET (edit)-&gt;lines / 3;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2652'>l</a>                2652 src/editor/editcmd.c                 if (l &gt; 0)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2653'>l</a>                2653 src/editor/editcmd.c                     edit_scroll_downward (edit, l);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2654'>l</a>                2654 src/editor/editcmd.c                 if (l &lt; 0)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2655'>l</a>                2655 src/editor/editcmd.c                     edit_scroll_upward (edit, -l);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3049'>l</a>                3049 src/editor/editcmd.c     long l;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3060'>l</a>                3060 src/editor/editcmd.c     l = strtol (f, &amp;error, 0);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3067'>l</a>                3067 src/editor/editcmd.c     if (l &lt; 0)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3068'>l</a>                3068 src/editor/editcmd.c         l = edit-&gt;buffer.lines + l + 2;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3069'>l</a>                3069 src/editor/editcmd.c     edit_move_display (edit, l - WIDGET (edit)-&gt;lines / 2 - 1);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3070'>l</a>                3070 src/editor/editcmd.c     edit_move_to_line (edit, l - 1);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L641'>l</a>                 641 src/editor/editwidget.c     GList *l;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L647'>l</a>                 647 src/editor/editwidget.c     for (l = h-&gt;widgets; l != NULL; l = g_list_next (l))</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L648'>l</a>                 648 src/editor/editwidget.c         if (edit_widget_is_editor (CONST_WIDGET (l-&gt;data)))</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L650'>l</a>                 650 src/editor/editwidget.c             e = (WEdit *) l-&gt;data;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L668'>l</a>                 668 src/editor/editwidget.c     if (e == NULL || l == NULL)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L889'>l</a>                 889 src/editor/editwidget.c             GList *l;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L894'>l</a>                 894 src/editor/editwidget.c             for (l = h-&gt;widgets; l != NULL; l = g_list_next (l))</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L895'>l</a>                 895 src/editor/editwidget.c                 if (edit_widget_is_editor (CONST_WIDGET (l-&gt;data))</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L896'>l</a>                 896 src/editor/editwidget.c                     &amp;&amp; ((WEdit *) l-&gt;data)-&gt;fullscreen)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L897'>l</a>                 897 src/editor/editwidget.c                     top = l;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L78'>l</a>                  78 src/editor/format.c     long l;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L80'>l</a>                  80 src/editor/format.c     l = buf-&gt;curs_line;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L83'>l</a>                  83 src/editor/format.c     if (line &lt; l)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L84'>l</a>                  84 src/editor/format.c         p = edit_buffer_get_backward_offset (buf, p, l - line);</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L85'>l</a>                  85 src/editor/format.c     else if (line &gt; l)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L86'>l</a>                  86 src/editor/format.c         p = edit_buffer_get_forward_offset (buf, p, line - l, 0);</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L219'>l</a>                 219 src/editor/format.c line_pixel_length (unsigned char *t, off_t b, off_t l, gboolean utf8)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L228'>l</a>                 228 src/editor/format.c     for (xn = 0, x = 0; xn &lt;= l; x = xn, b += char_length)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L774'>l</a>                 774 src/editor/syntax.c get_args (char *l, char **args, int args_size)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L780'>l</a>                 780 src/editor/syntax.c         char *p = l;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L785'>l</a>                 785 src/editor/syntax.c         for (l = p + 1; *l != '\0' &amp;&amp; !whiteness (*l); l++)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L787'>l</a>                 787 src/editor/syntax.c         if (*l != '\0')</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L788'>l</a>                 788 src/editor/syntax.c             *l++ = '\0';</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L929'>l</a>                 929 src/editor/syntax.c     char *l = 0;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L953'>l</a>                 953 src/editor/syntax.c         l = 0;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L955'>l</a>                 955 src/editor/syntax.c         len = read_one_line (&amp;l, f);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L957'>l</a>                 957 src/editor/syntax.c             xx_lowerize_line (edit, l, len);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L968'>l</a>                 968 src/editor/syntax.c             MC_PTR_FREE (l);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L969'>l</a>                 969 src/editor/syntax.c             len = read_one_line (&amp;l, f);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L972'>l</a>                 972 src/editor/syntax.c             xx_lowerize_line (edit, l, len);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L975'>l</a>                 975 src/editor/syntax.c         argc = get_args (l, args, args_size);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1207'>l</a>                1207 src/editor/syntax.c         MC_PTR_FREE (l);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1210'>l</a>                1210 src/editor/syntax.c     MC_PTR_FREE (l);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1262'>l</a>                1262 src/editor/syntax.c     char *args[1024], *l = NULL;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1282'>l</a>                1282 src/editor/syntax.c         MC_PTR_FREE (l);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1283'>l</a>                1283 src/editor/syntax.c         if (read_one_line (&amp;l, f) == 0)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1285'>l</a>                1285 src/editor/syntax.c         (void) get_args (l, args, 1023);        /* Final NULL */</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1379'>l</a>                1379 src/editor/syntax.c     g_free (l);</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L70'>l</a>                  70 src/filemanager/chown.c #define chown_label(n,txt) label_set_text (chown_label [n].l, txt)</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L101'>l</a>                 101 src/filemanager/chown.c     WLabel *l;</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L245'>l</a>                 245 src/filemanager/chown.c         chown_label[i].l = label_new (chown_label[i].y, 7 + GW * 2, "");</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L246'>l</a>                 246 src/filemanager/chown.c         add_widget (ch_dlg, chown_label[i].l);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L487'>l</a>                 487 src/filemanager/filegui.c         int l1, l2, l, row;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L506'>l</a>                 506 src/filemanager/filegui.c         l = l2 = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L514'>l</a>                 514 src/filemanager/filegui.c                     l2 = MAX (l2, l);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L515'>l</a>                 515 src/filemanager/filegui.c                     l = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L517'>l</a>                 517 src/filemanager/filegui.c                 l += widgets_len[i] + 4;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L520'>l</a>                 520 src/filemanager/filegui.c         l2 = MAX (l2, l);       /* last row */</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L528'>l</a>                 528 src/filemanager/filegui.c         l = l1;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L536'>l</a>                 536 src/filemanager/filegui.c                     l = l1;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L538'>l</a>                 538 src/filemanager/filegui.c                 rd_widgets[i].xpos = l;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L539'>l</a>                 539 src/filemanager/filegui.c                 l += widgets_len[i] + 4;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1223'>l</a>                1223 src/filemanager/hotlist.c     size_t l;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1280'>l</a>                1280 src/filemanager/hotlist.c         l = tkn_buf-&gt;len;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1281'>l</a>                1281 src/filemanager/hotlist.c         if (strncmp (tkn_buf-&gt;str, "GROUP", l) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1283'>l</a>                1283 src/filemanager/hotlist.c         else if (strncmp (tkn_buf-&gt;str, "ENTRY", l) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1285'>l</a>                1285 src/filemanager/hotlist.c         else if (strncmp (tkn_buf-&gt;str, "ENDGROUP", l) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1287'>l</a>                1287 src/filemanager/hotlist.c         else if (strncmp (tkn_buf-&gt;str, "URL", l) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1579'>l</a>                1579 src/filemanager/hotlist.c     int l;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1586'>l</a>                1586 src/filemanager/hotlist.c     l = str_term_width1 (cp);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1588'>l</a>                1588 src/filemanager/hotlist.c     lc_prompt = g_strdup_printf (cp, str_trunc (label_string, COLS - 2 * UX - (l + 8)));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L418'>l</a>                 418 src/filemanager/panel.c     int i, r, l;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L420'>l</a>                 420 src/filemanager/panel.c     l = get_user_permissions (&amp;fe-&gt;st);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L425'>l</a>                 425 src/filemanager/panel.c         l = width + l - 3;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L426'>l</a>                 426 src/filemanager/panel.c         r = l + 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L431'>l</a>                 431 src/filemanager/panel.c         l = l * 3 + 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L432'>l</a>                 432 src/filemanager/panel.c         r = l + 3;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L437'>l</a>                 437 src/filemanager/panel.c         if (i &gt;= l &amp;&amp; i &lt; r)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2629'>l</a>                2629 src/filemanager/panel.c     size_t l;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2637'>l</a>                2637 src/filemanager/panel.c     l = strlen (panel-&gt;search_buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2640'>l</a>                2640 src/filemanager/panel.c         if (l != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2642'>l</a>                2642 src/filemanager/panel.c             act = panel-&gt;search_buffer + l;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2666'>l</a>                2666 src/filemanager/panel.c                 if (l + panel-&gt;search_chpoint &lt; sizeof (panel-&gt;search_buffer))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2668'>l</a>                2668 src/filemanager/panel.c                     memcpy (panel-&gt;search_buffer + l, panel-&gt;search_char, panel-&gt;search_chpoint);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2669'>l</a>                2669 src/filemanager/panel.c                     l += panel-&gt;search_chpoint;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2670'>l</a>                2670 src/filemanager/panel.c                     *(panel-&gt;search_buffer + l) = '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2723'>l</a>                2723 src/filemanager/panel.c         act = panel-&gt;search_buffer + l;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L653'>l</a>                 653 src/filemanager/tree.c     size_t l;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L655'>l</a>                 655 src/filemanager/tree.c     l = strlen (tree-&gt;search_buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L656'>l</a>                 656 src/filemanager/tree.c     if ((l != 0) &amp;&amp; (key == KEY_BACKSPACE))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L657'>l</a>                 657 src/filemanager/tree.c         tree-&gt;search_buffer[--l] = '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L658'>l</a>                 658 src/filemanager/tree.c     else if (key &amp;&amp; l &lt; sizeof (tree-&gt;search_buffer))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L660'>l</a>                 660 src/filemanager/tree.c         tree-&gt;search_buffer[l] = key;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L661'>l</a>                 661 src/filemanager/tree.c         tree-&gt;search_buffer[++l] = '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L665'>l</a>                 665 src/filemanager/tree.c         tree-&gt;search_buffer[--l] = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L562'>l</a>                 562 src/filemanager/treestore.c     GList *l;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L577'>l</a>                 577 src/filemanager/treestore.c     for (l = special_dirs; l != NULL; l = g_list_next (l))</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L578'>l</a>                 578 src/filemanager/treestore.c         if (strncmp (vfs_path_as_str (vpath), l-&gt;data, strlen (l-&gt;data)) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L406'>l</a>                 406 src/vfs/cpio/cpio.c         GSList *l;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L408'>l</a>                 408 src/vfs/cpio/cpio.c         l = g_slist_find_custom (arch-&gt;deferred, &amp;i, cpio_defer_find);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L409'>l</a>                 409 src/vfs/cpio/cpio.c         if (l != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L411'>l</a>                 411 src/vfs/cpio/cpio.c             inode = ((defer_inode *) l-&gt;data)-&gt;inode;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--byteorder.h.html#L164'>l</a>                 164 src/vfs/smbfs/helpers/include/byteorder.h { int l; for (l = 0; l &lt; (len); l++) (val)[l] = macro((buf), (pos) + (size)*l); }</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--byteorder.h.html#L167'>l</a>                 167 src/vfs/smbfs/helpers/include/byteorder.h { int l; for (l = 0; l &lt; (len); l++) macro((buf), (pos) + (size)*l, (val)[l]); }</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L130'>l</a>                 130 src/vfs/smbfs/helpers/lib/username.c             int l = strlen (unixname);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L131'>l</a>                 131 src/vfs/smbfs/helpers/lib/username.c             while (l &amp;&amp; isspace (unixname[l - 1]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L133'>l</a>                 133 src/vfs/smbfs/helpers/lib/username.c                 unixname[l - 1] = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L134'>l</a>                 134 src/vfs/smbfs/helpers/lib/username.c                 l--;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L785'>l</a>                 785 src/vfs/smbfs/helpers/lib/util.c         size_t l = strlen (dir2);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L786'>l</a>                 786 src/vfs/smbfs/helpers/lib/util.c         if (dir2[l - 1] == '/')</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L787'>l</a>                 787 src/vfs/smbfs/helpers/lib/util.c             l--;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L789'>l</a>                 789 src/vfs/smbfs/helpers/lib/util.c         if (strncmp (newname, dir2, l) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L794'>l</a>                 794 src/vfs/smbfs/helpers/lib/util.c                     (int) l));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L800'>l</a>                 800 src/vfs/smbfs/helpers/lib/util.c             if (newname[l] == '/')</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L801'>l</a>                 801 src/vfs/smbfs/helpers/lib/util.c                 pstrcpy (s, newname + l + 1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L803'>l</a>                 803 src/vfs/smbfs/helpers/lib/util.c                 pstrcpy (s, newname + l);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1138'>l</a>                1138 src/vfs/smbfs/helpers/lib/util.c         uint16 l;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1142'>l</a>                1142 src/vfs/smbfs/helpers/lib/util.c         l = RSVAL (p, 0);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1143'>l</a>                1143 src/vfs/smbfs/helpers/lib/util.c         DEBUG (5, ("name ptr to pos %d from %d is %s\n", l, ofs, buf + l));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1144'>l</a>                1144 src/vfs/smbfs/helpers/lib/util.c         return (buf + l);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L62'>l</a>                  62 src/vfs/smbfs/helpers/lib/util_sock.c     unsigned int l;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L63'>l</a>                  63 src/vfs/smbfs/helpers/lib/util_sock.c     l = sizeof (int);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L64'>l</a>                  64 src/vfs/smbfs/helpers/lib/util_sock.c     return (getsockopt (fd, SOL_SOCKET, SO_TYPE, (char *) &amp;v, &amp;l) == 0);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L1019'>l</a>                1019 src/vfs/smbfs/helpers/lib/util_str.c     size_t l;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L1023'>l</a>                1023 src/vfs/smbfs/helpers/lib/util_str.c     l = strlen (src);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L1025'>l</a>                1025 src/vfs/smbfs/helpers/lib/util_str.c     if (l == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L1040'>l</a>                1040 src/vfs/smbfs/helpers/lib/util_str.c         (*dest) = (char *) malloc (l + 1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L354'>l</a>                 354 src/vfs/smbfs/helpers/libsmb/nmblib.c         int l = parse_nmb_name (inbuf, *offset, length, &amp;(*recs)[i].rr_name);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L355'>l</a>                 355 src/vfs/smbfs/helpers/libsmb/nmblib.c         (*offset) += l;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L356'>l</a>                 356 src/vfs/smbfs/helpers/libsmb/nmblib.c         if (!l || (*offset) + 10 &gt; length)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L389'>l</a>                 389 src/vfs/smbfs/helpers/libsmb/nmblib.c         int l = put_nmb_name (buf, offset, &amp;recs[i].rr_name);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L390'>l</a>                 390 src/vfs/smbfs/helpers/libsmb/nmblib.c         offset += l;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L391'>l</a>                 391 src/vfs/smbfs/helpers/libsmb/nmblib.c         ret += l;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L208'>l</a>                 208 src/vfs/smbfs/helpers/libsmb/smbdes.c     char l[32], r[32];</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L231'>l</a>                 231 src/vfs/smbfs/helpers/libsmb/smbdes.c         l[j] = pd1[j];</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L268'>l</a>                 268 src/vfs/smbfs/helpers/libsmb/smbdes.c         xor (r2, l, pcb, 32);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L271'>l</a>                 271 src/vfs/smbfs/helpers/libsmb/smbdes.c             l[j] = r[j];</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L277'>l</a>                 277 src/vfs/smbfs/helpers/libsmb/smbdes.c     concat (rl, r, l, 32, 32);</span>
+</pre>
+</body>
+</html>

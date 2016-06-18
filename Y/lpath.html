@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>lpath</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L833'>lpath</a>             833 lib/utilunix.c     char *lpath = path;         /* path without leading UNC part */</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L843'>lpath</a>             843 lib/utilunix.c             lpath = p;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L846'>lpath</a>             846 lib/utilunix.c     if (!lpath[0] || !lpath[1])</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L852'>lpath</a>             852 lib/utilunix.c         p = lpath;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L855'>lpath</a>             855 lib/utilunix.c             if (IS_PATH_SEP (p[0]) &amp;&amp; IS_PATH_SEP (p[1]) &amp;&amp; (p == lpath || *(p - 1) != ':'))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L869'>lpath</a>             869 lib/utilunix.c         p = lpath;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L884'>lpath</a>             884 lib/utilunix.c         p = lpath + strlen (lpath) - 1;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L885'>lpath</a>             885 lib/utilunix.c         while (p &gt; lpath &amp;&amp; IS_PATH_SEP (*p))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L887'>lpath</a>             887 lib/utilunix.c             if (p &gt;= lpath + url_delim_len - 1</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L894'>lpath</a>             894 lib/utilunix.c         if (lpath[0] == '.' &amp;&amp; IS_PATH_SEP (lpath[1]))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L896'>lpath</a>             896 lib/utilunix.c             if (lpath[2] == 0)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L898'>lpath</a>             898 lib/utilunix.c                 lpath[1] = 0;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L903'>lpath</a>             903 lib/utilunix.c                 str_move (lpath, lpath + 2);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L908'>lpath</a>             908 lib/utilunix.c         len = strlen (lpath);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L911'>lpath</a>             911 lib/utilunix.c         if (IS_PATH_SEP (lpath[len - 1])</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L913'>lpath</a>             913 lib/utilunix.c                 || strncmp (lpath + len - url_delim_len, VFS_PATH_URL_DELIMITER,</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L916'>lpath</a>             916 lib/utilunix.c             lpath[len - 1] = '\0';</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L920'>lpath</a>             920 lib/utilunix.c             if (lpath[len - 1] == '.' &amp;&amp; IS_PATH_SEP (lpath[len - 2]))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L924'>lpath</a>             924 lib/utilunix.c                     lpath[1] = '\0';</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L929'>lpath</a>             929 lib/utilunix.c                     lpath[len - 2] = '\0';</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L942'>lpath</a>             942 lib/utilunix.c         p = lpath;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L954'>lpath</a>             954 lib/utilunix.c             if (s &gt;= lpath + url_delim_len - 2</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L958'>lpath</a>             958 lib/utilunix.c                 while (s &gt;= lpath &amp;&amp; !IS_PATH_SEP (*s--))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L962'>lpath</a>             962 lib/utilunix.c             while (s &gt;= lpath)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L964'>lpath</a>             964 lib/utilunix.c                 if (s - url_delim_len &gt; lpath</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L970'>lpath</a>             970 lib/utilunix.c                     while (vfs_prefix &gt; lpath &amp;&amp; !IS_PATH_SEP (*--vfs_prefix))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1007'>lpath</a>            1007 lib/utilunix.c                 if (s == lpath &amp;&amp; IS_PATH_SEP (*s))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1024'>lpath</a>            1024 lib/utilunix.c                 p = (s &gt; lpath) ? s - 1 : s;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1029'>lpath</a>            1029 lib/utilunix.c             if (s == lpath)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1032'>lpath</a>            1032 lib/utilunix.c                 if (!IS_PATH_SEP (lpath[0]))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1033'>lpath</a>            1033 lib/utilunix.c                     lpath[0] = '.';</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1034'>lpath</a>            1034 lib/utilunix.c                 lpath[1] = '\0';</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1039'>lpath</a>            1039 lib/utilunix.c                 if (s == lpath + 1)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1053'>lpath</a>            1053 lib/utilunix.c                     while (p &gt;= lpath &amp;&amp; !IS_PATH_SEP (*p))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1056'>lpath</a>            1056 lib/utilunix.c                     if (p &gt;= lpath)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1062'>lpath</a>            1062 lib/utilunix.c                     if (s &gt;= lpath + url_delim_len</span>
+</pre>
+</body>
+</html>

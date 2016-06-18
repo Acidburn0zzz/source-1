@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>start</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--strutil.h.html#L422'>start</a>             422 lib/strutil.h  const char *str_term_substring (const char *text, int start, int width);</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L243'>start</a>             243 lib/strutil/strescape.c strutils_is_char_escaped (const char *start, const char *current)</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L247'>start</a>             247 lib/strutil/strescape.c     if (start == NULL || current == NULL || current &lt;= start)</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L251'>start</a>             251 lib/strutil/strescape.c     while (current &gt;= start &amp;&amp; *current == '\\')</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L459'>start</a>             459 lib/strutil/strutil.c str_term_substring (const char *text, int start, int width)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L461'>start</a>             461 lib/strutil/strutil.c     return used_class.term_substring (text, start, width);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L467'>start</a>             467 lib/strutil/strutil8bit.c str_8bit_term_substring (const char *text, int start, int width)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L478'>start</a>             478 lib/strutil/strutil8bit.c     if (start &lt; (int) length)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L482'>start</a>             482 lib/strutil/strutil8bit.c         for (pos = start; pos &lt; length &amp;&amp; width &gt; 0 &amp;&amp; remain &gt; 1;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L447'>start</a>             447 lib/strutil/strutilascii.c str_ascii_term_substring (const char *text, int start, int width)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L458'>start</a>             458 lib/strutil/strutilascii.c     if (start &lt; (int) length)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L463'>start</a>             463 lib/strutil/strutilascii.c         for (pos = start; pos &lt; length &amp;&amp; width &gt; 0 &amp;&amp; remain &gt; 1;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L326'>start</a>             326 lib/strutil/strutilutf8.c     const char *start;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L329'>start</a>             329 lib/strutil/strutilutf8.c     start = text;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L330'>start</a>             330 lib/strutil/strutilutf8.c     while (!g_utf8_validate (start, -1, &amp;end) &amp;&amp; start[0] != '\0')</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L332'>start</a>             332 lib/strutil/strutilutf8.c         if (start != end)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L333'>start</a>             333 lib/strutil/strutilutf8.c             result += g_utf8_strlen (start, end - start);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L336'>start</a>             336 lib/strutil/strutilutf8.c         start = end + 1;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L339'>start</a>             339 lib/strutil/strutilutf8.c     if (start == text)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L341'>start</a>             341 lib/strutil/strutilutf8.c     else if (start[0] != '\0' &amp;&amp; start != end)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L342'>start</a>             342 lib/strutil/strutilutf8.c         result += g_utf8_strlen (start, end - start);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L353'>start</a>             353 lib/strutil/strutilutf8.c     const char *start;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L356'>start</a>             356 lib/strutil/strutilutf8.c     start = text;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L357'>start</a>             357 lib/strutil/strutilutf8.c     while (!g_utf8_validate (start, -1, &amp;end) &amp;&amp; start[0] != '\0' &amp;&amp; size &gt; 0)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L359'>start</a>             359 lib/strutil/strutilutf8.c         if (start != end)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L361'>start</a>             361 lib/strutil/strutilutf8.c             result += g_utf8_strlen (start, MIN (end - start, size));</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L362'>start</a>             362 lib/strutil/strutilutf8.c             size -= end - start;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L366'>start</a>             366 lib/strutil/strutilutf8.c         start = end + 1;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L369'>start</a>             369 lib/strutil/strutilutf8.c     if (start == text)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L371'>start</a>             371 lib/strutil/strutilutf8.c     else if (start[0] != '\0' &amp;&amp; start != end &amp;&amp; size &gt; 0)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L372'>start</a>             372 lib/strutil/strutilutf8.c         result += g_utf8_strlen (start, MIN (end - start, size));</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L828'>start</a>             828 lib/strutil/strutilutf8.c str_utf8_term_substring (const char *text, int start, int width)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L841'>start</a>             841 lib/strutil/strutilutf8.c     tool.ident = -start;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1080'>start</a>            1080 lib/strutil/strutilutf8.c     const char *start;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1085'>start</a>            1085 lib/strutil/strutilutf8.c     start = text;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1086'>start</a>            1086 lib/strutil/strutilutf8.c     while (!g_utf8_validate (start, -1, &amp;end) &amp;&amp; start[0] != '\0')</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1088'>start</a>            1088 lib/strutil/strutilutf8.c         if (start != end)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1090'>start</a>            1090 lib/strutil/strutilutf8.c             tmp = g_utf8_normalize (start, end - start, G_NORMALIZE_ALL);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1095'>start</a>            1095 lib/strutil/strutilutf8.c         start = end + 1;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1098'>start</a>            1098 lib/strutil/strutilutf8.c     if (start == text)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1105'>start</a>            1105 lib/strutil/strutilutf8.c         if (start[0] != '\0' &amp;&amp; start != end)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1107'>start</a>            1107 lib/strutil/strutilutf8.c             tmp = g_utf8_normalize (start, end - start, G_NORMALIZE_ALL);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1125'>start</a>            1125 lib/strutil/strutilutf8.c     const char *start;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1130'>start</a>            1130 lib/strutil/strutilutf8.c     start = text;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1131'>start</a>            1131 lib/strutil/strutilutf8.c     while (!g_utf8_validate (start, -1, &amp;end) &amp;&amp; start[0] != '\0')</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1133'>start</a>            1133 lib/strutil/strutilutf8.c         if (start != end)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1135'>start</a>            1135 lib/strutil/strutilutf8.c             fold = g_utf8_casefold (start, end - start);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1142'>start</a>            1142 lib/strutil/strutilutf8.c         start = end + 1;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1145'>start</a>            1145 lib/strutil/strutilutf8.c     if (start == text)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1154'>start</a>            1154 lib/strutil/strutilutf8.c         if (start[0] != '\0' &amp;&amp; start != end)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1156'>start</a>            1156 lib/strutil/strutilutf8.c             fold = g_utf8_casefold (start, end - start);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1338'>start</a>            1338 lib/strutil/strutilutf8.c         const char *start, *end;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1345'>start</a>            1345 lib/strutil/strutilutf8.c             start = text;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1348'>start</a>            1348 lib/strutil/strutilutf8.c             start = text + 1;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1352'>start</a>            1352 lib/strutil/strutilutf8.c         while (!g_utf8_validate (start, -1, &amp;end) &amp;&amp; start[0] != '\0')</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1354'>start</a>            1354 lib/strutil/strutilutf8.c             if (start != end)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1356'>start</a>            1356 lib/strutil/strutilutf8.c                 fold = g_utf8_casefold (start, end - start);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1363'>start</a>            1363 lib/strutil/strutilutf8.c             start = end + 1;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1366'>start</a>            1366 lib/strutil/strutilutf8.c         if (start == text)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1368'>start</a>            1368 lib/strutil/strutilutf8.c             fold = g_utf8_casefold (start, -1);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1373'>start</a>            1373 lib/strutil/strutilutf8.c         else if (dot &amp;&amp; (start == text + 1))</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1375'>start</a>            1375 lib/strutil/strutilutf8.c             fold = g_utf8_casefold (start, -1);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1384'>start</a>            1384 lib/strutil/strutilutf8.c             if (start[0] != '\0' &amp;&amp; start != end)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1386'>start</a>            1386 lib/strutil/strutilutf8.c                 fold = g_utf8_casefold (start, end - start);</span>
+<span class='curline'><a href='../S/lib--timer.c.html#L48'>start</a>              48 lib/timer.c        guint64 start;</span>
+<span class='curline'><a href='../S/lib--timer.c.html#L76'>start</a>              76 lib/timer.c        timer-&gt;start = (guint64) tv.tv_sec * G_USEC_PER_SEC + (guint64) tv.tv_usec;</span>
+<span class='curline'><a href='../S/lib--timer.c.html#L111'>start</a>             111 lib/timer.c        return ((guint64) tv.tv_sec * G_USEC_PER_SEC + (guint64) tv.tv_usec - timer-&gt;start);</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L629'>start</a>             629 lib/tty/tty-ncurses.c     int start = 0;</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L644'>start</a>             644 lib/tty/tty-ncurses.c         start = -mc_curs_col;</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L653'>start</a>             653 lib/tty/tty-ncurses.c     addstr (str_term_substring (s, start, len));</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1322'>start</a>            1322 lib/utilunix.c             const char *start;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1330'>start</a>            1330 lib/utilunix.c             start = IS_PATH_SEP (tmp_element[0]) ? tmp_element + 1 : tmp_element;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1332'>start</a>            1332 lib/utilunix.c             g_string_append (path, start);</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L218'>start</a>             218 lib/widget/button.c     b-&gt;hotpos = (b-&gt;text.hotkey != NULL) ? str_term_width1 (b-&gt;text.start) : -1;</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L229'>start</a>             229 lib/widget/button.c         return g_strconcat (b-&gt;text.start, "&amp;", b-&gt;text.hotkey, b-&gt;text.end, (char *) NULL);</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L230'>start</a>             230 lib/widget/button.c     return g_strdup (b-&gt;text.start);</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L242'>start</a>             242 lib/widget/button.c     b-&gt;hotpos = (b-&gt;text.hotkey != NULL) ? str_term_width1 (b-&gt;text.start) : -1;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L276'>start</a>             276 lib/widget/input.c move_buffer_backward (WInput * in, int start, int end)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L282'>start</a>             282 lib/widget/input.c     if (start &gt;= str_len || end &gt; str_len + 1)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L285'>start</a>             285 lib/widget/input.c     pos = str_offset_to_pos (in-&gt;buffer, start);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L457'>start</a>             457 lib/widget/input.c     int start;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L462'>start</a>             462 lib/widget/input.c     start = in-&gt;point - str_cprev_noncomb_char (&amp;act, in-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L463'>start</a>             463 lib/widget/input.c     move_buffer_backward (in, start, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L466'>start</a>             466 lib/widget/input.c     in-&gt;point = start;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L103'>start</a>             103 lib/widget/input_complete.c static int start = 0;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L995'>start</a>             995 lib/widget/input_complete.c     size = MIN (size, (ssize_t) text_len) + start - end;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1013'>start</a>            1013 lib/widget/input_complete.c         memmove (in-&gt;buffer + start, text, size - (start - end));</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1072'>start</a>            1072 lib/widget/input_complete.c                     if (strncmp (input-&gt;buffer + start, le-&gt;text, new_end - start) == 0)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1126'>start</a>            1126 lib/widget/input_complete.c                     if (strncmp (input-&gt;buffer + start, le-&gt;text, end - start) == 0</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1127'>start</a>            1127 lib/widget/input_complete.c                         &amp;&amp; strncmp (&amp;le-&gt;text[end - start], buff, bl) == 0)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1142'>start</a>            1142 lib/widget/input_complete.c                             for (si = le-&gt;text + start; si &lt; le-&gt;text + end;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1145'>start</a>            1145 lib/widget/input_complete.c                             for (sl = last_text + start; sl &lt; last_text + end;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1260'>start</a>            1260 lib/widget/input_complete.c             x = start - in-&gt;term_first_shown - 2 + start_x;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1428'>start</a>            1428 lib/widget/input_complete.c         start = s - in-&gt;buffer;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1433'>start</a>            1433 lib/widget/input_complete.c     if (start &lt; end)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1436'>start</a>            1436 lib/widget/input_complete.c         start = s - in-&gt;buffer;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1439'>start</a>            1439 lib/widget/input_complete.c     in-&gt;completions = try_complete (in-&gt;buffer, &amp;start, &amp;end, in-&gt;completion_flags);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L151'>start</a>             151 lib/widget/menu.c         tty_print_string (entry-&gt;text.start);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L231'>start</a>             231 lib/widget/menu.c         tty_print_string (menu-&gt;text.start);</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L75'>start</a>              75 lib/widget/widget-common.c         result.start = g_strndup (text, cp - text);</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L87'>start</a>              87 lib/widget/widget-common.c         result.start = g_strdup (text);</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L100'>start</a>             100 lib/widget/widget-common.c     g_free (hotkey.start);</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L112'>start</a>             112 lib/widget/widget-common.c     result = str_term_width1 (hotkey.start);</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L124'>start</a>             124 lib/widget/widget-common.c     tty_print_string (hotkey.start);</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.h.html#L154'>start</a>             154 lib/widget/widget-common.h     char *start;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L582'>start</a>             582 lib/widget/wtools.c     guint64 start;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L587'>start</a>             587 lib/widget/wtools.c     start = mc_timer_elapsed (mc_global.timer);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L591'>start</a>             591 lib/widget/wtools.c     sm-&gt;start = start;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L602'>start</a>             602 lib/widget/wtools.c     if (mc_time_elapsed (&amp;start, sm-&gt;delay))</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L657'>start</a>             657 lib/widget/wtools.c         guint64 start = sm-&gt;start;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L659'>start</a>             659 lib/widget/wtools.c         if (mc_time_elapsed (&amp;start, sm-&gt;delay))</span>
+<span class='curline'><a href='../S/lib--widget--wtools.h.html#L45'>start</a>              45 lib/widget/wtools.h     guint64 start;              /* start time in microseconds */</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1252'>start</a>            1252 src/diffviewer/ydiff.c         int start, end;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1255'>start</a>            1255 src/diffviewer/ydiff.c         start = (*b)[ord].off;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1256'>start</a>            1256 src/diffviewer/ydiff.c         end = start + (*b)[ord].len;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1257'>start</a>            1257 src/diffviewer/ydiff.c         if (k &gt;= start &amp;&amp; k &lt; end)</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L212'>start</a>             212 src/editor/edit-impl.h gboolean edit_save_block (WEdit * edit, const char *filename, off_t start, off_t finish);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L513'>start</a>             513 src/editor/edit.c     char *start = (char *) edit + sizeof (Widget);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L514'>start</a>             514 src/editor/edit.c     memset (start, 0, len);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L400'>start</a>             400 src/editor/editbuffer.c edit_buffer_get_word_from_pos (const edit_buffer_t * buf, off_t start_pos, off_t * start,</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L427'>start</a>             427 src/editor/editbuffer.c     *start = word_start;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L49'>start</a>              49 src/editor/editbuffer.h GString *edit_buffer_get_word_from_pos (const edit_buffer_t * buf, off_t start_pos, off_t * start,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1058'>start</a>            1058 src/editor/editcmd.c edit_get_block (WEdit * edit, off_t start, off_t finish, off_t * l)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1062'>start</a>            1062 src/editor/editcmd.c     r = s = g_malloc0 (finish - start + 1);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1067'>start</a>            1067 src/editor/editcmd.c         while (start &lt; finish)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1072'>start</a>            1072 src/editor/editcmd.c             x = edit_move_forward3 (edit, edit_buffer_get_bol (&amp;edit-&gt;buffer, start), 0, start);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1073'>start</a>            1073 src/editor/editcmd.c             c = edit_buffer_get_byte (&amp;edit-&gt;buffer, start);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1080'>start</a>            1080 src/editor/editcmd.c             start++;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1085'>start</a>            1085 src/editor/editcmd.c         *l = finish - start;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1086'>start</a>            1086 src/editor/editcmd.c         while (start &lt; finish)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1087'>start</a>            1087 src/editor/editcmd.c             *s++ = edit_buffer_get_byte (&amp;edit-&gt;buffer, start++);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1097'>start</a>            1097 src/editor/editcmd.c edit_save_block_to_clip_file (WEdit * edit, off_t start, off_t finish)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1103'>start</a>            1103 src/editor/editcmd.c     ret = edit_save_block (edit, tmp, start, finish);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1232'>start</a>            1232 src/editor/editcmd.c     off_t last_byte, start = -1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1268'>start</a>            1268 src/editor/editcmd.c     while (mc_search_run (srch, (void *) &amp;esm, start + 1, last_byte, &amp;len))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1271'>start</a>            1271 src/editor/editcmd.c         start = srch-&gt;normal_offset;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1276'>start</a>            1276 src/editor/editcmd.c             skip = edit_buffer_get_byte (&amp;edit-&gt;buffer, start + i);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1281'>start</a>            1281 src/editor/editcmd.c             if (start + (off_t) i == word_start)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1331'>start</a>            1331 src/editor/editcmd.c         start += len;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2906'>start</a>            2906 src/editor/editcmd.c edit_save_block (WEdit * edit, const char *filename, off_t start, off_t finish)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2928'>start</a>            2928 src/editor/editcmd.c             p = block = edit_get_block (edit, start, finish, &amp;len);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2943'>start</a>            2943 src/editor/editcmd.c         off_t i = start;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2946'>start</a>            2946 src/editor/editcmd.c         len = finish - start;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2948'>start</a>            2948 src/editor/editcmd.c         while (start != finish)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2950'>start</a>            2950 src/editor/editcmd.c             end = MIN (finish, start + TEMP_BUF_LEN);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2952'>start</a>            2952 src/editor/editcmd.c                 buf[i - start] = edit_buffer_get_byte (&amp;edit-&gt;buffer, i);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2953'>start</a>            2953 src/editor/editcmd.c             len -= mc_write (file, (char *) buf, end - start);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2954'>start</a>            2954 src/editor/editcmd.c             start = end;</span>
+<span class='curline'><a href='../S/src--editor--etags.c.html#L182'>start</a>             182 src/editor/etags.c     } state = start;</span>
+<span class='curline'><a href='../S/src--editor--etags.c.html#L205'>start</a>             205 src/editor/etags.c         case start:</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L185'>start</a>             185 src/filemanager/achown.c     set_perm_by_flags (b_att[0]-&gt;text.start, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L186'>start</a>             186 src/filemanager/achown.c     set_perm_by_flags (b_att[1]-&gt;text.start, 3);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L187'>start</a>             187 src/filemanager/achown.c     set_perm_by_flags (b_att[2]-&gt;text.start, 6);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L583'>start</a>             583 src/filemanager/achown.c             if (BUTTON (h-&gt;current-&gt;data)-&gt;text.start[(flag_pos % 3)] == '-')</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L126'>start</a>             126 src/filemanager/dir.c clean_sort_keys (dir_list * list, int start, int count)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L134'>start</a>             134 src/filemanager/dir.c         fentry = &amp;list-&gt;list[i + start];</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L116'>start</a>             116 src/filemanager/find.c     gsize start;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L380'>start</a>             380 src/filemanager/find.c get_list_info (char **file, char **dir, gsize * start, gsize * end)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L389'>start</a>             389 src/filemanager/find.c         if (start != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L390'>start</a>             390 src/filemanager/find.c             *start = location-&gt;start;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L892'>start</a>             892 src/filemanager/find.c insert_file (const char *dir, const char *file, gsize start, gsize end)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L919'>start</a>             919 src/filemanager/find.c     location-&gt;start = start;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L928'>start</a>             928 src/filemanager/find.c find_add_match (const char *dir, const char *file, gsize start, gsize end)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L930'>start</a>             930 src/filemanager/find.c     insert_file (dir, file, start, end);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1462'>start</a>            1462 src/filemanager/find.c     find_do_view_edit (unparsed_view, edit, location-&gt;dir, text, location-&gt;start, location-&gt;end);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1620'>start</a>            1620 src/filemanager/midnight.c     size_t len, start;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1633'>start</a>            1633 src/filemanager/midnight.c     start = ((size_t) rand ()) % (len - 1);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1636'>start</a>            1636 src/filemanager/midnight.c     for (; start != 0; start--)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1637'>start</a>            1637 src/filemanager/midnight.c         if (data[start] == '\n' &amp;&amp; data[start + 1] == '\n')</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1639'>start</a>            1639 src/filemanager/midnight.c             start += 2;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1644'>start</a>            1644 src/filemanager/midnight.c     for (eop = data + start; *eop != '\0'; eop++)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1662'>start</a>            1662 src/filemanager/midnight.c         buffer = g_string_sized_new (len - start);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1663'>start</a>            1663 src/filemanager/midnight.c         if (str_convert (conv, &amp;data[start], buffer) != ESTR_FAILURE)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1670'>start</a>            1670 src/filemanager/midnight.c         result = g_strndup (data + start, len - start);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L306'>start</a>             306 src/filemanager/usermenu.c debug_out (char *start, char *end, gboolean condition)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L310'>start</a>             310 src/filemanager/usermenu.c     if (start == NULL &amp;&amp; end == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L346'>start</a>             346 src/filemanager/usermenu.c             p = g_strdup_printf ("%s %s %c \n", msg ? msg : "", type, *start);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L348'>start</a>             348 src/filemanager/usermenu.c             p = g_strdup_printf ("%s %s %.*s \n", msg ? msg : "", type, (int) (end - start), start);</span>
+<span class='curline'><a href='../S/src--help.c.html#L124'>start</a>             124 src/help.c     search_string (const char *start, const char *text)</span>
+<span class='curline'><a href='../S/src--help.c.html#L129'>start</a>             129 src/help.c         const char *e = start;</span>
+<span class='curline'><a href='../S/src--help.c.html#L165'>start</a>             165 src/help.c     search_string_node (const char *start, const char *text)</span>
+<span class='curline'><a href='../S/src--help.c.html#L168'>start</a>             168 src/help.c         const char *e = start;</span>
+<span class='curline'><a href='../S/src--help.c.html#L170'>start</a>             170 src/help.c         if (start != NULL)</span>
+<span class='curline'><a href='../S/src--help.c.html#L190'>start</a>             190 src/help.c     search_char_node (const char *start, char the_char, int direction)</span>
+<span class='curline'><a href='../S/src--help.c.html#L194'>start</a>             194 src/help.c         for (e = start; (*e != '\0') &amp;&amp; (*e != CHAR_NODE_END); e += direction)</span>
+<span class='curline'><a href='../S/src--help.c.html#L295'>start</a>             295 src/help.c     help_follow_link (const char *start, const char *lc_selected_item)</span>
+<span class='curline'><a href='../S/src--help.c.html#L300'>start</a>             300 src/help.c             return start;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L823'>start</a>             823 src/vfs/smbfs/helpers/include/smb.h     time_t start;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L136'>start</a>             136 src/vfs/smbfs/helpers/lib/time.c         time_t start, end;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L151'>start</a>             151 src/vfs/smbfs/helpers/lib/time.c         if (t &gt;= dst_table[i].start &amp;&amp; t &lt;= dst_table[i].end)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L173'>start</a>             173 src/vfs/smbfs/helpers/lib/time.c             dst_table[i].start = dst_table[i].end = t;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L185'>start</a>             185 src/vfs/smbfs/helpers/lib/time.c             while (low + 60 * 60 &lt; dst_table[i].start)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L187'>start</a>             187 src/vfs/smbfs/helpers/lib/time.c                 if (dst_table[i].start - low &gt; MAX_DST_SKIP * 2)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L188'>start</a>             188 src/vfs/smbfs/helpers/lib/time.c                     t = dst_table[i].start - MAX_DST_SKIP;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L190'>start</a>             190 src/vfs/smbfs/helpers/lib/time.c                     t = low + (dst_table[i].start - low) / 2;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L192'>start</a>             192 src/vfs/smbfs/helpers/lib/time.c                     dst_table[i].start = t;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L209'>start</a>             209 src/vfs/smbfs/helpers/lib/time.c             DEBUG (1, ("Added DST entry from %s ", asctime (localtime (&amp;dst_table[i].start))));</span>
+<span class='curline'><a href='../S/src--viewer--nroff.c.html#L94'>start</a>              94 src/viewer/nroff.c mcview__get_nroff_real_len (WView * view, off_t start, off_t length)</span>
+<span class='curline'><a href='../S/src--viewer--nroff.c.html#L103'>start</a>             103 src/viewer/nroff.c     nroff = mcview_nroff_seq_new_num (view, start);</span>
+</pre>
+</body>
+</html>

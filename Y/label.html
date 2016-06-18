@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>label</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1464'>label</a>            1464 lib/tty/key.c  lookup_key (const char *name, char **label)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1512'>label</a>            1512 lib/tty/key.c      if (label != NULL)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1551'>label</a>            1551 lib/tty/key.c          *label = g_string_free (s, FALSE);</span>
+<span class='curline'><a href='../S/lib--tty--key.h.html#L78'>label</a>              78 lib/tty/key.h  long lookup_key (const char *name, char **label);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1029'>label</a>            1029 lib/widget/input.c     in-&gt;label = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1049'>label</a>            1049 lib/widget/input.c         if (in-&gt;label != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1050'>label</a>            1050 lib/widget/input.c             widget_set_state (WIDGET (in-&gt;label), WST_DISABLED, widget_get_state (w, WST_DISABLED));</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1090'>label</a>            1090 lib/widget/input.c         if (in-&gt;label != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1091'>label</a>            1091 lib/widget/input.c             widget_set_state (WIDGET (in-&gt;label), WST_DISABLED, msg == MSG_DISABLE);</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L65'>label</a>              65 lib/widget/input.h     WLabel *label;              /* label associated with this input line */</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L157'>label</a>             157 lib/widget/label.c label_set_text (WLabel * label, const char *text)</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L159'>label</a>             159 lib/widget/label.c     Widget *w = WIDGET (label);</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L163'>label</a>             163 lib/widget/label.c     if (label-&gt;text != NULL &amp;&amp; text != NULL &amp;&amp; strcmp (label-&gt;text, text) == 0)</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L166'>label</a>             166 lib/widget/label.c     g_free (label-&gt;text);</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L169'>label</a>             169 lib/widget/label.c         label-&gt;text = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L172'>label</a>             172 lib/widget/label.c         label-&gt;text = g_strdup (text);</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L173'>label</a>             173 lib/widget/label.c         if (label-&gt;auto_adjust_cols)</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L192'>label</a>             192 lib/widget/label.c label_set_textv (WLabel * label, const char *format, ...)</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L201'>label</a>             201 lib/widget/label.c     label_set_text (label, buf);</span>
+<span class='curline'><a href='../S/lib--widget--label.h.html#L30'>label</a>              30 lib/widget/label.h void label_set_text (WLabel * label, const char *text);</span>
+<span class='curline'><a href='../S/lib--widget--label.h.html#L32'>label</a>              32 lib/widget/label.h void label_set_textv (WLabel * label, const char *format, ...) G_GNUC_PRINTF (2, 3);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L88'>label</a>              88 lib/widget/quick.c     quick_widget_item_t in, label;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L90'>label</a>              90 lib/widget/quick.c     label.quick_widget = g_new0 (quick_widget_t, 1);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L91'>label</a>              91 lib/widget/quick.c     label.quick_widget-&gt;widget_type = quick_label;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L92'>label</a>              92 lib/widget/quick.c     label.quick_widget-&gt;options = quick_widget-&gt;options;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L93'>label</a>              93 lib/widget/quick.c     label.quick_widget-&gt;state = quick_widget-&gt;state;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L95'>label</a>              95 lib/widget/quick.c     label.quick_widget-&gt;pos_flags = quick_widget-&gt;pos_flags;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L100'>label</a>             100 lib/widget/quick.c         label.widget = WIDGET (label_new (*y, x, I18N (quick_widget-&gt;u.input.label_text)));</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L101'>label</a>             101 lib/widget/quick.c         *y += label.widget-&gt;lines - 1;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L102'>label</a>             102 lib/widget/quick.c         g_array_append_val (widgets, label);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L108'>label</a>             108 lib/widget/quick.c         *width = MAX (label.widget-&gt;cols, in.widget-&gt;cols);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L112'>label</a>             112 lib/widget/quick.c         label.widget = WIDGET (label_new (*y, x, I18N (quick_widget-&gt;u.input.label_text)));</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L113'>label</a>             113 lib/widget/quick.c         g_array_append_val (widgets, label);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L115'>label</a>             115 lib/widget/quick.c         in.widget = WIDGET (quick_create_input (*y, x + label.widget-&gt;cols + 1, quick_widget));</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L119'>label</a>             119 lib/widget/quick.c         *width = label.widget-&gt;cols + in.widget-&gt;cols + 1;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L127'>label</a>             127 lib/widget/quick.c         label.widget =</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L130'>label</a>             130 lib/widget/quick.c         g_array_append_val (widgets, label);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L132'>label</a>             132 lib/widget/quick.c         *width = label.widget-&gt;cols + in.widget-&gt;cols + 1;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L140'>label</a>             140 lib/widget/quick.c         label.widget = WIDGET (label_new (++(*y), x, I18N (quick_widget-&gt;u.input.label_text)));</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L141'>label</a>             141 lib/widget/quick.c         *y += label.widget-&gt;lines - 1;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L142'>label</a>             142 lib/widget/quick.c         g_array_append_val (widgets, label);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L144'>label</a>             144 lib/widget/quick.c         *width = MAX (label.widget-&gt;cols, in.widget-&gt;cols);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L151'>label</a>             151 lib/widget/quick.c     INPUT (in.widget)-&gt;label = LABEL (label.widget);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L153'>label</a>             153 lib/widget/quick.c     label.quick_widget-&gt;u.label.input = in.quick_widget;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L154'>label</a>             154 lib/widget/quick.c     in.quick_widget-&gt;u.input.label = label.quick_widget;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L242'>label</a>             242 lib/widget/quick.c                 input_labels = g_list_prepend (input_labels, quick_widget-&gt;u.input.label);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L259'>label</a>             259 lib/widget/quick.c             item.widget = WIDGET (label_new (++y, x, I18N (quick_widget-&gt;u.label.text)));</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L436'>label</a>             436 lib/widget/quick.c                 quick_widget_t *input = item-&gt;quick_widget-&gt;u.label.input;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L470'>label</a>             470 lib/widget/quick.c                 Widget *label = WIDGET (INPUT (item-&gt;widget)-&gt;label);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L480'>label</a>             480 lib/widget/quick.c                     item-&gt;widget-&gt;x = label-&gt;x + label-&gt;cols + 1 - WIDGET (label-&gt;owner)-&gt;x;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L481'>label</a>             481 lib/widget/quick.c                     item-&gt;widget-&gt;cols = width - label-&gt;cols - 1;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L489'>label</a>             489 lib/widget/quick.c                     item-&gt;widget-&gt;cols = width - label-&gt;cols - 1;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L490'>label</a>             490 lib/widget/quick.c                     label-&gt;x = item-&gt;widget-&gt;x + item-&gt;widget-&gt;cols + 1;</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L51'>label</a>              51 lib/widget/quick.h             .label = NULL,                                                      \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L72'>label</a>              72 lib/widget/quick.h             .label = NULL,                                                      \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L90'>label</a>              90 lib/widget/quick.h         .label = {                                                              \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L296'>label</a>             296 lib/widget/quick.h             quick_widget_t *label;</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L309'>label</a>             309 lib/widget/quick.h         } label;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L704'>label</a>             704 lib/widget/wtools.c     ssm-&gt;label = label_new (y++, 3, "");</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L705'>label</a>             705 lib/widget/wtools.c     add_widget_autopos (sm-&gt;dlg, ssm-&gt;label, WPOS_KEEP_TOP | WPOS_CENTER_HORZ, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.h.html#L59'>label</a>              59 lib/widget/wtools.h     WLabel *label;</span>
+<span class='curline'><a href='../S/src--diffviewer--internal.h.html#L91'>label</a>              91 src/diffviewer/internal.h     char *label[DIFF_COUNT];</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2429'>label</a>            2429 src/diffviewer/ydiff.c     dview-&gt;label[DIFF_LEFT] = g_strdup (label1);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2430'>label</a>            2430 src/diffviewer/ydiff.c     dview-&gt;label[DIFF_RIGHT] = g_strdup (label2);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2515'>label</a>            2515 src/diffviewer/ydiff.c     g_free (dview-&gt;label[DIFF_LEFT]);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2516'>label</a>            2516 src/diffviewer/ydiff.c     g_free (dview-&gt;label[DIFF_RIGHT]);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2772'>label</a>            2772 src/diffviewer/ydiff.c     vpath = vfs_path_from_str (dview-&gt;label[ord]);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3443'>label</a>            3443 src/diffviewer/ydiff.c     g_string_append (title, str_term_trim (dview-&gt;label[DIFF_LEFT], len1));</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3446'>label</a>            3446 src/diffviewer/ydiff.c     g_string_append (title, str_term_trim (dview-&gt;label[DIFF_RIGHT], len1));</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L152'>label</a>             152 src/editor/edit.c         label_set_textv (ssm-&gt;label, _("Loading: %3d%%"),</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L155'>label</a>             155 src/editor/edit.c         label_set_text (ssm-&gt;label, _("Loading..."));</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L160'>label</a>             160 src/editor/edit.c         Widget *lw = WIDGET (ssm-&gt;label);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L138'>label</a>             138 src/editor/editcmd.c         label_set_textv (ssm-&gt;label, _("Searching %s: %3d%%"), esm-&gt;edit-&gt;last_search_string,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L141'>label</a>             141 src/editor/editcmd.c         label_set_textv (ssm-&gt;label, _("Searching %s"), esm-&gt;edit-&gt;last_search_string);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L146'>label</a>             146 src/editor/editcmd.c         Widget *lw = WIDGET (ssm-&gt;label);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1272'>label</a>            1272 src/filemanager/boxes.c     char *label;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1280'>label</a>            1280 src/filemanager/boxes.c     label = g_strdup_printf (_("Password for \\\\%s\\%s"), host, share);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1287'>label</a>            1287 src/filemanager/boxes.c             QUICK_LABEL (label, NULL),</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1323'>label</a>            1323 src/filemanager/boxes.c     g_free (label);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L707'>label</a>             707 src/filemanager/find.c     in_with-&gt;label = content_label;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L155'>label</a>             155 src/filemanager/hotlist.c     char *label;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L263'>label</a>             263 src/filemanager/hotlist.c     p = g_strconcat (" ", current_group-&gt;label, " ", (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L292'>label</a>             292 src/filemanager/hotlist.c                 g_string_append (buff, current-&gt;label);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L298'>label</a>             298 src/filemanager/hotlist.c             listbox_add_item (list, LISTBOX_APPEND_AT_END, 0, current-&gt;label, current, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L827'>label</a>             827 src/filemanager/hotlist.c     hdr = g_strdup_printf (_("Moving %s"), item-&gt;label);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L890'>label</a>             890 src/filemanager/hotlist.c add2hotlist (char *label, char *directory, enum HotListType type, listbox_append_t pos)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L911'>label</a>             911 src/filemanager/hotlist.c     new-&gt;label = label;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L964'>label</a>             964 src/filemanager/hotlist.c             lbl = g_strconcat ("-&gt;", new-&gt;label, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L969'>label</a>             969 src/filemanager/hotlist.c             listbox_add_item (l_hotlist, pos, 0, new-&gt;label, new, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1045'>label</a>            1045 src/filemanager/hotlist.c add_new_group_input (const char *header, const char *label, char **result)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1049'>label</a>            1049 src/filemanager/hotlist.c         QUICK_LABELED_INPUT (label, input_label_above, "", "input", result, NULL,</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1077'>label</a>            1077 src/filemanager/hotlist.c     char *label;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1080'>label</a>            1080 src/filemanager/hotlist.c     ret = add_new_group_input (_("New hotlist group"), _("Name of new group:"), &amp;label);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1081'>label</a>            1081 src/filemanager/hotlist.c     if (ret == 0 || label == NULL || *label == '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1085'>label</a>            1085 src/filemanager/hotlist.c         add2hotlist (label, 0, HL_TYPE_GROUP, LISTBOX_APPEND_AFTER);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1087'>label</a>            1087 src/filemanager/hotlist.c         add2hotlist (label, 0, HL_TYPE_GROUP, LISTBOX_APPEND_BEFORE);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1106'>label</a>            1106 src/filemanager/hotlist.c         g_free (current-&gt;label);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1134'>label</a>            1134 src/filemanager/hotlist.c                     str_trunc (entry-&gt;label, 30));</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1151'>label</a>            1151 src/filemanager/hotlist.c                         str_trunc (entry-&gt;label, 30));</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1163'>label</a>            1163 src/filemanager/hotlist.c     g_free (entry-&gt;label);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1303'>label</a>            1303 src/filemanager/hotlist.c     char *label, *url;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1322'>label</a>            1322 src/filemanager/hotlist.c                 label = g_strndup (tkn_buf-&gt;str, tkn_buf-&gt;len);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1326'>label</a>            1326 src/filemanager/hotlist.c                 add2hotlist (label, url, HL_TYPE_ENTRY, LISTBOX_APPEND_AT_END);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1331'>label</a>            1331 src/filemanager/hotlist.c             label = g_strndup (tkn_buf-&gt;str, tkn_buf-&gt;len);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1332'>label</a>            1332 src/filemanager/hotlist.c             add2hotlist (label, 0, HL_TYPE_COMMENT, LISTBOX_APPEND_AT_END);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1357'>label</a>            1357 src/filemanager/hotlist.c     char *label, *url;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1376'>label</a>            1376 src/filemanager/hotlist.c                 label = g_strndup (tkn_buf-&gt;str, tkn_buf-&gt;len);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1380'>label</a>            1380 src/filemanager/hotlist.c                 add2hotlist (label, url, HL_TYPE_ENTRY, LISTBOX_APPEND_AT_END);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1385'>label</a>            1385 src/filemanager/hotlist.c             label = g_strndup (tkn_buf-&gt;str, tkn_buf-&gt;len);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1386'>label</a>            1386 src/filemanager/hotlist.c             add2hotlist (label, 0, HL_TYPE_COMMENT, LISTBOX_APPEND_AT_END);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1447'>label</a>            1447 src/filemanager/hotlist.c     hotlist-&gt;label = g_strdup (_("Top level group"));</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1519'>label</a>            1519 src/filemanager/hotlist.c             for (s = current-&gt;label; *s != '\0'; s++)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1535'>label</a>            1535 src/filemanager/hotlist.c             for (s = current-&gt;label; *s != '\0'; s++)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1551'>label</a>            1551 src/filemanager/hotlist.c             fprintf (hotlist_file, "#%s\n", current-&gt;label);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1580'>label</a>            1580 src/filemanager/hotlist.c     char *label_string, *label;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1589'>label</a>            1589 src/filemanager/hotlist.c     label =</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1594'>label</a>            1594 src/filemanager/hotlist.c     if (label == NULL || *label == '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1597'>label</a>            1597 src/filemanager/hotlist.c         g_free (label);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1601'>label</a>            1601 src/filemanager/hotlist.c         add2hotlist (label, label_string, HL_TYPE_ENTRY, LISTBOX_APPEND_AT_END);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1681'>label</a>            1681 src/filemanager/hotlist.c         g_free (hotlist-&gt;label);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L85'>label</a>              85 src/filemanager/panelize.c     char *label;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L180'>label</a>             180 src/filemanager/panelize.c         listbox_add_item (l_panelize, LISTBOX_APPEND_AT_END, 0, current-&gt;label, current, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L224'>label</a>             224 src/filemanager/panelize.c add2panelize (char *label, char *command)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L230'>label</a>             230 src/filemanager/panelize.c     while (current &amp;&amp; strcmp (current-&gt;label, label) &lt;= 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L239'>label</a>             239 src/filemanager/panelize.c         panelize-&gt;label = label;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L247'>label</a>             247 src/filemanager/panelize.c         new-&gt;label = label;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L261'>label</a>             261 src/filemanager/panelize.c         char *label;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L263'>label</a>             263 src/filemanager/panelize.c         label = input_dialog (_("Add to external panelize"),</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L266'>label</a>             266 src/filemanager/panelize.c         if (label == NULL || *label == '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L267'>label</a>             267 src/filemanager/panelize.c             g_free (label);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L269'>label</a>             269 src/filemanager/panelize.c             add2panelize (label, g_strdup (pname-&gt;buffer));</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L278'>label</a>             278 src/filemanager/panelize.c     if (strcmp (entry-&gt;label, _("Other command")) != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L295'>label</a>             295 src/filemanager/panelize.c         g_free (entry-&gt;label);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L617'>label</a>             617 src/filemanager/panelize.c         if (strcmp (current-&gt;label, _("Other command")))</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L619'>label</a>             619 src/filemanager/panelize.c                                   panelize_section, current-&gt;label, current-&gt;command);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L634'>label</a>             634 src/filemanager/panelize.c         g_free (current-&gt;label);</span>
+<span class='curline'><a href='../S/src--learn.c.html#L63'>label</a>              63 src/learn.c        Widget *label;</span>
+<span class='curline'><a href='../S/src--learn.c.html#L180'>label</a>             180 src/learn.c            label_set_text (LABEL (learnkeys[i].label), _("OK"));</span>
+<span class='curline'><a href='../S/src--learn.c.html#L297'>label</a>             297 src/learn.c            const char *label;</span>
+<span class='curline'><a href='../S/src--learn.c.html#L303'>label</a>             303 src/learn.c            label = _(key_name_conv_tab[i].longname);</span>
+<span class='curline'><a href='../S/src--learn.c.html#L304'>label</a>             304 src/learn.c            padding = 16 - str_term_width1 (label);</span>
+<span class='curline'><a href='../S/src--learn.c.html#L306'>label</a>             306 src/learn.c            g_snprintf (buffer, sizeof (buffer), "%s%*s", label, padding, "");</span>
+<span class='curline'><a href='../S/src--learn.c.html#L310'>label</a>             310 src/learn.c            learnkeys[i].label = WIDGET (label_new (y, x + 19, ""));</span>
+<span class='curline'><a href='../S/src--learn.c.html#L312'>label</a>             312 src/learn.c            add_widget (learn_dlg, learnkeys[i].label);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L866'>label</a>             866 src/vfs/smbfs/helpers/include/smb.h     const char *label;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L545'>label</a>             545 src/vfs/smbfs/helpers/param/loadparm.c #define PARM_SEPARATOR(label) {label, P_SEP, P_SEPARATOR, NULL, NULL, NULL, 0, {0}}</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L921'>label</a>             921 src/vfs/smbfs/helpers/param/loadparm.c         for (i = 0; parm_table[i].label; i++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1426'>label</a>            1426 src/vfs/smbfs/helpers/param/loadparm.c     for (i = 0; parm_table[i].label; i++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1597'>label</a>            1597 src/vfs/smbfs/helpers/param/loadparm.c     for (iIndex = 0; parm_table[iIndex].label; iIndex++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1598'>label</a>            1598 src/vfs/smbfs/helpers/param/loadparm.c         if (strwicmp (parm_table[iIndex].label, pszParmName) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1663'>label</a>            1663 src/vfs/smbfs/helpers/param/loadparm.c     for (i = 0; parm_table[i].label; i++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2017'>label</a>            2017 src/vfs/smbfs/helpers/param/loadparm.c         for (i = 0; parm_table[i].label; i++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2230'>label</a>            2230 src/vfs/smbfs/helpers/param/loadparm.c         for (; parm_table[*i].label; (*i)++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2235'>label</a>            2235 src/vfs/smbfs/helpers/param/loadparm.c             if (!parm_table[*i].ptr || (*parm_table[*i].label == '-'))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2248'>label</a>            2248 src/vfs/smbfs/helpers/param/loadparm.c         for (; parm_table[*i].label; (*i)++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2255'>label</a>            2255 src/vfs/smbfs/helpers/param/loadparm.c                 (*parm_table[*i].label != '-') &amp;&amp;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2356'>label</a>            2356 src/vfs/smbfs/helpers/param/loadparm.c     for (i = 0; parm_table[i].label; i++)</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L82'>label</a>              82 src/viewer/search.c         label_set_textv (ssm-&gt;label, _("Searching %s: %3d%%"), vsm-&gt;view-&gt;last_search_string,</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L85'>label</a>              85 src/viewer/search.c         label_set_textv (ssm-&gt;label, _("Searching %s"), vsm-&gt;view-&gt;last_search_string);</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L90'>label</a>              90 src/viewer/search.c         Widget *lw = WIDGET (ssm-&gt;label);</span>
+</pre>
+</body>
+</html>

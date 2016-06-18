@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>WInput</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L103'>WInput</a>            103 lib/widget/input.c draw_history_button (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L130'>WInput</a>            130 lib/widget/input.c input_mark_cmd (WInput * in, gboolean mark)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L138'>WInput</a>            138 lib/widget/input.c input_eval_marks (WInput * in, long *start_mark, long *end_mark)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L154'>WInput</a>            154 lib/widget/input.c delete_region (WInput * in, int x_first, int x_last)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L173'>WInput</a>            173 lib/widget/input.c do_show_hist (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L233'>WInput</a>            233 lib/widget/input.c push_history (WInput * in, const char *text)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L276'>WInput</a>            276 lib/widget/input.c move_buffer_backward (WInput * in, int start, int end)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L295'>WInput</a>            295 lib/widget/input.c insert_char (WInput * in, int c_code)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L358'>WInput</a>            358 lib/widget/input.c beginning_of_line (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L367'>WInput</a>            367 lib/widget/input.c end_of_line (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L376'>WInput</a>            376 lib/widget/input.c backward_char (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L389'>WInput</a>            389 lib/widget/input.c forward_char (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L402'>WInput</a>            402 lib/widget/input.c forward_word (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L422'>WInput</a>            422 lib/widget/input.c backward_word (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L454'>WInput</a>            454 lib/widget/input.c backward_delete (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L472'>WInput</a>            472 lib/widget/input.c delete_char (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L488'>WInput</a>            488 lib/widget/input.c copy_region (WInput * in, int x_first, int x_last)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L517'>WInput</a>            517 lib/widget/input.c kill_word (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L534'>WInput</a>            534 lib/widget/input.c back_kill_word (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L550'>WInput</a>            550 lib/widget/input.c yank (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L566'>WInput</a>            566 lib/widget/input.c kill_line (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L580'>WInput</a>            580 lib/widget/input.c clear_line (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L592'>WInput</a>            592 lib/widget/input.c ins_from_clip (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L616'>WInput</a>            616 lib/widget/input.c hist_prev (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L639'>WInput</a>            639 lib/widget/input.c hist_next (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L671'>WInput</a>            671 lib/widget/input.c port_region_marked_for_delete (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L682'>WInput</a>            682 lib/widget/input.c input_execute_cmd (WInput * in, long command)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L838'>WInput</a>            838 lib/widget/input.c     WInput *in = INPUT (init_data);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L867'>WInput</a>            867 lib/widget/input.c     WInput *in = INPUT (init_data);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L888'>WInput</a>            888 lib/widget/input.c input_destroy (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L916'>WInput</a>            916 lib/widget/input.c input_screen_to_point (const WInput * in, int x)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L936'>WInput</a>            936 lib/widget/input.c     WInput *in = INPUT (w);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L985'>WInput</a>            985 lib/widget/input.c WInput *</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L989'>WInput</a>            989 lib/widget/input.c     WInput *in;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L992'>WInput</a>            992 lib/widget/input.c     in = g_new (WInput, 1);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1039'>WInput</a>           1039 lib/widget/input.c     WInput *in = INPUT (w);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1125'>WInput</a>           1125 lib/widget/input.c input_handle_char (WInput * in, int key)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1170'>WInput</a>           1170 lib/widget/input.c input_key_is_in_map (WInput * in, int key)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1186'>WInput</a>           1186 lib/widget/input.c input_assign_text (WInput * in, const char *text)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1212'>WInput</a>           1212 lib/widget/input.c input_is_empty (const WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1221'>WInput</a>           1221 lib/widget/input.c input_insert (WInput * in, const char *text, gboolean insert_extra_space)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1235'>WInput</a>           1235 lib/widget/input.c input_set_point (WInput * in, int pos)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1251'>WInput</a>           1251 lib/widget/input.c input_update (WInput * in, gboolean clear_first)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1355'>WInput</a>           1355 lib/widget/input.c input_enable_update (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1364'>WInput</a>           1364 lib/widget/input.c input_disable_update (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1377'>WInput</a>           1377 lib/widget/input.c input_clean (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1392'>WInput</a>           1392 lib/widget/input.c input_free_completions (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L13'>WInput</a>             13 lib/widget/input.h #define INPUT(x) ((WInput *)(x))</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L86'>WInput</a>             86 lib/widget/input.h WInput *input_new (int y, int x, const int *colors,</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L92'>WInput</a>             92 lib/widget/input.h cb_ret_t input_handle_char (WInput * in, int key);</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L93'>WInput</a>             93 lib/widget/input.h int input_key_is_in_map (WInput * in, int key);</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L94'>WInput</a>             94 lib/widget/input.h void input_assign_text (WInput * in, const char *text);</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L95'>WInput</a>             95 lib/widget/input.h gboolean input_is_empty (const WInput * in);</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L96'>WInput</a>             96 lib/widget/input.h void input_insert (WInput * in, const char *text, gboolean insert_extra_space);</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L97'>WInput</a>             97 lib/widget/input.h void input_set_point (WInput * in, int pos);</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L98'>WInput</a>             98 lib/widget/input.h void input_update (WInput * in, gboolean clear_first);</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L99'>WInput</a>             99 lib/widget/input.h void input_enable_update (WInput * in);</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L100'>WInput</a>            100 lib/widget/input.h void input_disable_update (WInput * in);</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L101'>WInput</a>            101 lib/widget/input.h void input_clean (WInput * in);</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L102'>WInput</a>            102 lib/widget/input.h void input_free_completions (WInput * in);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L101'>WInput</a>            101 lib/widget/input_complete.c static WInput *input;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L110'>WInput</a>            110 lib/widget/input_complete.c void complete_engine_fill_completions (WInput * in);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L988'>WInput</a>            988 lib/widget/input_complete.c insert_text (WInput * in, char *text, ssize_t size)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1204'>WInput</a>           1204 lib/widget/input_complete.c complete_engine (WInput * in, int what_to_do)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1407'>WInput</a>           1407 lib/widget/input_complete.c complete_engine_fill_completions (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1446'>WInput</a>           1446 lib/widget/input_complete.c complete (WInput * in)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.h.html#L14'>WInput</a>             14 lib/widget/input_complete.h void complete (WInput * in);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L68'>WInput</a>             68 lib/widget/quick.c static WInput *</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L71'>WInput</a>             71 lib/widget/quick.c     WInput *in;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L257'>WInput</a>            257 src/filemanager/boxes.c             WInput *in1, *in2, *in3;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L276'>WInput</a>            276 src/filemanager/boxes.c             WInput *in;</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L63'>WInput</a>             63 src/filemanager/command.c WInput *cmdline;</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L249'>WInput</a>            249 src/filemanager/command.c enter (WInput * lc_cmdline)</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L472'>WInput</a>            472 src/filemanager/command.c WInput *</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L475'>WInput</a>            475 src/filemanager/command.c     WInput *cmd;</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L513'>WInput</a>            513 src/filemanager/command.c command_insert (WInput * in, const char *text, gboolean insert_extra_space)</span>
+<span class='curline'><a href='../S/src--filemanager--command.h.html#L18'>WInput</a>             18 src/filemanager/command.h extern WInput *cmdline;</span>
+<span class='curline'><a href='../S/src--filemanager--command.h.html#L22'>WInput</a>             22 src/filemanager/command.h WInput *command_new (int y, int x, int len);</span>
+<span class='curline'><a href='../S/src--filemanager--command.h.html#L25'>WInput</a>             25 src/filemanager/command.h void command_insert (WInput * in, const char *text, gboolean insert_extra_space);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L131'>WInput</a>            131 src/filemanager/find.c static WInput *in_start;        /* Start path */</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L132'>WInput</a>            132 src/filemanager/find.c static WInput *in_name;         /* Filename */</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L133'>WInput</a>            133 src/filemanager/find.c static WInput *in_with;         /* Text */</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L134'>WInput</a>            134 src/filemanager/find.c static WInput *in_ignore;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L77'>WInput</a>             77 src/filemanager/panelize.c static WInput *pname;</span>
+<span class='curline'><a href='../S/tests--lib--widget--complete_engine.c.html#L35'>WInput</a>             35 tests/lib/widget/complete_engine.c void complete_engine_fill_completions (WInput * in);</span>
+<span class='curline'><a href='../S/tests--lib--widget--complete_engine.c.html#L199'>WInput</a>            199 tests/lib/widget/complete_engine.c     WInput *w_input;</span>
+<span class='curline'><a href='../S/tests--lib--widget--complete_engine.c.html#L201'>WInput</a>            201 tests/lib/widget/complete_engine.c     w_input = g_new (WInput, 1);</span>
+</pre>
+</body>
+</html>

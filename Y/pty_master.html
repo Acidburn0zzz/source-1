@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>pty_master</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L636'>pty_master</a>        636 src/subshell/common.c     int pty_master;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L639'>pty_master</a>        639 src/subshell/common.c     pty_master = posix_openpt (O_RDWR);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L642'>pty_master</a>        642 src/subshell/common.c     pty_master = getpt ();</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L645'>pty_master</a>        645 src/subshell/common.c     pty_master = open (pty_name, O_RDWR);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L648'>pty_master</a>        648 src/subshell/common.c     pty_master = open (pty_name, O_RDWR);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L651'>pty_master</a>        651 src/subshell/common.c     if (pty_master == -1)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L654'>pty_master</a>        654 src/subshell/common.c     if (grantpt (pty_master) == -1      /* Grant access to slave */</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L655'>pty_master</a>        655 src/subshell/common.c         || unlockpt (pty_master) == -1  /* Clear slave's lock flag */</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L656'>pty_master</a>        656 src/subshell/common.c         || !(slave_name = ptsname (pty_master)))        /* Get slave's name */</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L658'>pty_master</a>        658 src/subshell/common.c         close (pty_master);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L662'>pty_master</a>        662 src/subshell/common.c     return pty_master;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L724'>pty_master</a>        724 src/subshell/common.c     int pty_master;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L736'>pty_master</a>        736 src/subshell/common.c             pty_master = open (pty_name, O_RDWR);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L737'>pty_master</a>        737 src/subshell/common.c             if (pty_master == -1)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L746'>pty_master</a>        746 src/subshell/common.c                 close (pty_master);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L750'>pty_master</a>        750 src/subshell/common.c             return pty_master;</span>
+</pre>
+</body>
+</html>

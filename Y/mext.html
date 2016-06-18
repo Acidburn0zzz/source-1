@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>mext</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L871'>mext</a>              871 src/vfs/smbfs/helpers/lib/util.c     pstring mbeg, mext;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L878'>mext</a>              878 src/vfs/smbfs/helpers/lib/util.c     *mbeg = *mext = *dirpart = *filepart = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L892'>mext</a>              892 src/vfs/smbfs/helpers/lib/util.c         pstrcpy (mext, p1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L896'>mext</a>              896 src/vfs/smbfs/helpers/lib/util.c         pstrcpy (mext, "");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L899'>mext</a>              899 src/vfs/smbfs/helpers/lib/util.c             pstrcpy (mext, mbeg + 8);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L906'>mext</a>              906 src/vfs/smbfs/helpers/lib/util.c     if ((*mext == 0) &amp;&amp; doext &amp;&amp; !hasdot)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L907'>mext</a>              907 src/vfs/smbfs/helpers/lib/util.c         pstrcpy (mext, "???");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L909'>mext</a>              909 src/vfs/smbfs/helpers/lib/util.c     if (strequal (mbeg, "*") &amp;&amp; *mext == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L910'>mext</a>              910 src/vfs/smbfs/helpers/lib/util.c         pstrcpy (mext, "*");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L914'>mext</a>              914 src/vfs/smbfs/helpers/lib/util.c     if (*mext)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L915'>mext</a>              915 src/vfs/smbfs/helpers/lib/util.c         expand_one (mext, 3);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L922'>mext</a>              922 src/vfs/smbfs/helpers/lib/util.c     pstrcat (Mask, mext);</span>
+</pre>
+</body>
+</html>

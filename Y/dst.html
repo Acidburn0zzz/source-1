@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>dst</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1279'>dst</a>              1279 src/diffviewer/ydiff.c cvt_cpy (char *dst, const char *src, size_t srcsize, int base, int ts)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1283'>dst</a>              1283 src/diffviewer/ydiff.c     for (i = 0; srcsize != 0; i++, src++, dst++, srcsize--)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1285'>dst</a>              1285 src/diffviewer/ydiff.c         *dst = *src;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1293'>dst</a>              1293 src/diffviewer/ydiff.c                 *dst++ = ' ';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1294'>dst</a>              1294 src/diffviewer/ydiff.c             dst--;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1320'>dst</a>              1320 src/diffviewer/ydiff.c cvt_ncpy (char *dst, int dstsize, const char **_src, size_t srcsize, int base, int ts)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1325'>dst</a>              1325 src/diffviewer/ydiff.c     for (i = 0; i &lt; dstsize &amp;&amp; srcsize != 0; i++, src++, dst++, srcsize--)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1327'>dst</a>              1327 src/diffviewer/ydiff.c         *dst = *src;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1337'>dst</a>              1337 src/diffviewer/ydiff.c                 *dst++ = ' ';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1338'>dst</a>              1338 src/diffviewer/ydiff.c             dst--;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1362'>dst</a>              1362 src/diffviewer/ydiff.c cvt_mget (const char *src, size_t srcsize, char *dst, int dstsize, int skip, int ts,</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1370'>dst</a>              1370 src/diffviewer/ydiff.c         char *tmp = dst;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1388'>dst</a>              1388 src/diffviewer/ydiff.c                         *dst++ = ' ';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1399'>dst</a>              1399 src/diffviewer/ydiff.c                         *dst++ = '^';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1400'>dst</a>              1400 src/diffviewer/ydiff.c                         *dst++ = 'M';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1405'>dst</a>              1405 src/diffviewer/ydiff.c                         *dst++ = '.';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1427'>dst</a>              1427 src/diffviewer/ydiff.c                 *dst++ = *src;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1430'>dst</a>              1430 src/diffviewer/ydiff.c         sz = dst - tmp;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1435'>dst</a>              1435 src/diffviewer/ydiff.c         *dst++ = ' ';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1437'>dst</a>              1437 src/diffviewer/ydiff.c     *dst = '\0';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1461'>dst</a>              1461 src/diffviewer/ydiff.c cvt_mgeta (const char *src, size_t srcsize, char *dst, int dstsize, int skip, int ts,</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1469'>dst</a>              1469 src/diffviewer/ydiff.c         char *tmp = dst;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1488'>dst</a>              1488 src/diffviewer/ydiff.c                         *dst++ = ' ';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1500'>dst</a>              1500 src/diffviewer/ydiff.c                         *dst++ = '^';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1502'>dst</a>              1502 src/diffviewer/ydiff.c                         *dst++ = 'M';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1508'>dst</a>              1508 src/diffviewer/ydiff.c                         *dst++ = '.';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1530'>dst</a>              1530 src/diffviewer/ydiff.c                 *dst++ = *src;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1533'>dst</a>              1533 src/diffviewer/ydiff.c         sz = dst - tmp;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1539'>dst</a>              1539 src/diffviewer/ydiff.c         *dst++ = ' ';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1541'>dst</a>              1541 src/diffviewer/ydiff.c     *dst = '\0';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1562'>dst</a>              1562 src/diffviewer/ydiff.c cvt_fget (FBUF * f, off_t off, char *dst, size_t dstsize, int skip, int ts, gboolean show_cr)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1578'>dst</a>              1578 src/diffviewer/ydiff.c         memset (dst, ' ', dstsize);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1579'>dst</a>              1579 src/diffviewer/ydiff.c         dst[dstsize] = '\0';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1603'>dst</a>              1603 src/diffviewer/ydiff.c         memset (dst, ' ', dstsize);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1604'>dst</a>              1604 src/diffviewer/ydiff.c         dst[dstsize] = '\0';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1614'>dst</a>              1614 src/diffviewer/ydiff.c             memmove (dst, cvt + offset, useful);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1623'>dst</a>              1623 src/diffviewer/ydiff.c                 useful += cvt_ncpy (dst + useful, dstsize - useful, &amp;ptr, sz, base, ts) - base;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1632'>dst</a>              1632 src/diffviewer/ydiff.c         memmove (dst, cvt + offset, dstsize);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1637'>dst</a>              1637 src/diffviewer/ydiff.c     dst[sz] = lastch;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1638'>dst</a>              1638 src/diffviewer/ydiff.c     for (i = 0; i &lt; sz &amp;&amp; dst[i] != '\n'; i++)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1640'>dst</a>              1640 src/diffviewer/ydiff.c         if (dst[i] == '\r' &amp;&amp; dst[i + 1] == '\n')</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1646'>dst</a>              1646 src/diffviewer/ydiff.c                     dst[i++] = '^';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1647'>dst</a>              1647 src/diffviewer/ydiff.c                     dst[i++] = 'M';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1651'>dst</a>              1651 src/diffviewer/ydiff.c                     dst[i++] = '*';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1659'>dst</a>              1659 src/diffviewer/ydiff.c         dst[i] = ' ';</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1660'>dst</a>              1660 src/diffviewer/ydiff.c     dst[i] = '\0';</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbencrypt.c.html#L79'>dst</a>                79 src/vfs/smbfs/helpers/libsmb/smbencrypt.c _my_mbstowcs (int16 * dst, uchar * src, int len)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbencrypt.c.html#L87'>dst</a>                87 src/vfs/smbfs/helpers/libsmb/smbencrypt.c         SSVAL (dst, 0, val);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbencrypt.c.html#L88'>dst</a>                88 src/vfs/smbfs/helpers/libsmb/smbencrypt.c         dst++;</span>
+</pre>
+</body>
+</html>

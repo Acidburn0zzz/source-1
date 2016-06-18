@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>columns</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--strutil.h.html#L544'>columns</a>           544 lib/strutil.h  void str_msg_term_size (const char *text, int *lines, int *columns);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L916'>columns</a>           916 lib/strutil/strutil.c str_msg_term_size (const char *text, int *lines, int *columns)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L923'>columns</a>           923 lib/strutil/strutil.c     *columns = 0;</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L940'>columns</a>           940 lib/strutil/strutil.c         if (width &gt; *columns)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L941'>columns</a>           941 lib/strutil/strutil.c             *columns = width;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L59'>columns</a>            59 lib/vfs/parse_ls_vga.c static char *columns[MAXCOLS];  /* Points to the string in column n */</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L69'>columns</a>            69 lib/vfs/parse_ls_vga.c     char *column = columns[idx];</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L540'>columns</a>           540 lib/vfs/parse_ls_vga.c     p = columns[idx++];</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L544'>columns</a>           544 lib/vfs/parse_ls_vga.c         p = columns[idx++];</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L551'>columns</a>           551 lib/vfs/parse_ls_vga.c             tim.tm_mday = (int) atol (columns[idx++]);</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L610'>columns</a>           610 lib/vfs/parse_ls_vga.c     if (is_num (idx) &amp;&amp; (is_time (columns[idx], &amp;tim) || (got_year = is_year (columns[idx], &amp;tim))))</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L640'>columns</a>           640 lib/vfs/parse_ls_vga.c     memset (columns, 0, sizeof (columns));</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L649'>columns</a>           649 lib/vfs/parse_ls_vga.c         columns[numcols] = p;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L720'>columns</a>           720 lib/vfs/parse_ls_vga.c     s-&gt;st_nlink = atol (columns[0]);</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L725'>columns</a>           725 lib/vfs/parse_ls_vga.c         s-&gt;st_uid = vfs_finduid (columns[1]);</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L727'>columns</a>           727 lib/vfs/parse_ls_vga.c         s-&gt;st_uid = (uid_t) atol (columns[1]);</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L731'>columns</a>           731 lib/vfs/parse_ls_vga.c         if (is_month (columns[idx], NULL) || is_week (columns[idx], NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L732'>columns</a>           732 lib/vfs/parse_ls_vga.c             || is_dos_date (columns[idx]) || is_localized_month (columns[idx]))</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L745'>columns</a>           745 lib/vfs/parse_ls_vga.c             s-&gt;st_gid = (gid_t) atol (columns[2]);</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L747'>columns</a>           747 lib/vfs/parse_ls_vga.c             s-&gt;st_gid = vfs_findgid (columns[2]);</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L760'>columns</a>           760 lib/vfs/parse_ls_vga.c             if (!is_num (++idx2) || sscanf (columns[idx2], " %d,%d", &amp;maj, &amp;min) != 2)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L766'>columns</a>           766 lib/vfs/parse_ls_vga.c             if (!is_num (idx2) || sscanf (columns[idx2], " %d,", &amp;maj) != 1)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L770'>columns</a>           770 lib/vfs/parse_ls_vga.c             if (!is_num (++idx2) || sscanf (columns[idx2], " %d", &amp;min) != 1)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L785'>columns</a>           785 lib/vfs/parse_ls_vga.c         s-&gt;st_size = (off_t) g_ascii_strtoll (columns[idx2], NULL, 10);</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L806'>columns</a>           806 lib/vfs/parse_ls_vga.c         *num_spaces = column_ptr[idx] - column_ptr[idx - 1] - strlen (columns[idx - 1]);</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L807'>columns</a>           807 lib/vfs/parse_ls_vga.c         if (DIR_IS_DOTDOT (columns[idx]))</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L812'>columns</a>           812 lib/vfs/parse_ls_vga.c         if (strcmp (columns[i], "-&gt;") == 0)</span>
+<span class='curline'><a href='../S/lib--widget--gauge.c.html#L82'>columns</a>            82 lib/widget/gauge.c             int percentage, columns;</span>
+<span class='curline'><a href='../S/lib--widget--gauge.c.html#L102'>columns</a>           102 lib/widget/gauge.c             columns = (2 * gauge_len * done / total + 1) / 2;</span>
+<span class='curline'><a href='../S/lib--widget--gauge.c.html#L107'>columns</a>           107 lib/widget/gauge.c                 tty_printf ("%*s", columns, "");</span>
+<span class='curline'><a href='../S/lib--widget--gauge.c.html#L109'>columns</a>           109 lib/widget/gauge.c                 tty_printf ("%*s] %3d%%", gauge_len - columns, "", percentage);</span>
+<span class='curline'><a href='../S/lib--widget--gauge.c.html#L114'>columns</a>           114 lib/widget/gauge.c                 tty_printf ("%*s", gauge_len - columns, "");</span>
+<span class='curline'><a href='../S/lib--widget--gauge.c.html#L116'>columns</a>           116 lib/widget/gauge.c                 tty_printf ("%*s", columns, "");</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L89'>columns</a>            89 src/consaver/cons.saver.c send_contents (char *buffer, unsigned int columns, unsigned int rows)</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L96'>columns</a>            96 src/consaver/cons.saver.c     lc_index = 2 * rows * columns;</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L98'>columns</a>            98 src/consaver/cons.saver.c         for (x = 0; x &lt; columns; x++)</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L118'>columns</a>           118 src/consaver/cons.saver.c     lc_index = (end_line - begin_line) * columns;</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L127'>columns</a>           127 src/consaver/cons.saver.c     for (lc_index = 2 * begin_line * columns; lc_index &lt; 2 * end_line * columns; lc_index += 2)</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L171'>columns</a>           171 src/viewer/move.c mcview_move_left (WView * view, off_t columns)</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L177'>columns</a>           177 src/viewer/move.c         assert (columns == 1);</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L189'>columns</a>           189 src/viewer/move.c         view-&gt;dpy_text_column = mcview_offset_doz (view-&gt;dpy_text_column, columns);</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L196'>columns</a>           196 src/viewer/move.c mcview_move_right (WView * view, off_t columns)</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L205'>columns</a>           205 src/viewer/move.c         assert (columns == 1);</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L218'>columns</a>           218 src/viewer/move.c         view-&gt;dpy_text_column += columns;</span>
+</pre>
+</body>
+</html>

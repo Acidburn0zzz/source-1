@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>view_dlg</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L232'>view_dlg</a>          232 src/viewer/mcviewer.c     WDialog *view_dlg;</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L235'>view_dlg</a>          235 src/viewer/mcviewer.c     view_dlg = dlg_create (FALSE, 0, 0, 1, 1, WPOS_FULLSCREEN, FALSE, NULL, mcview_dialog_callback,</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L237'>view_dlg</a>          237 src/viewer/mcviewer.c     widget_want_tab (WIDGET (view_dlg), TRUE);</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L240'>view_dlg</a>          240 src/viewer/mcviewer.c     add_widget (view_dlg, lc_mcview);</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L242'>view_dlg</a>          242 src/viewer/mcviewer.c     add_widget (view_dlg, buttonbar_new (TRUE));</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L244'>view_dlg</a>          244 src/viewer/mcviewer.c     view_dlg-&gt;get_title = mcview_get_title;</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L251'>view_dlg</a>          251 src/viewer/mcviewer.c         dlg_run (view_dlg);</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L253'>view_dlg</a>          253 src/viewer/mcviewer.c         dlg_stop (view_dlg);</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L255'>view_dlg</a>          255 src/viewer/mcviewer.c     if (widget_get_state (WIDGET (view_dlg), WST_CLOSED))</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L256'>view_dlg</a>          256 src/viewer/mcviewer.c         dlg_destroy (view_dlg);</span>
+</pre>
+</body>
+</html>

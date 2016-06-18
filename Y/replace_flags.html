@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>replace_flags</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L525'>replace_flags</a>     525 lib/search/regex.c                                       gsize * skip_len, replace_transform_type_t * replace_flags)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L589'>replace_flags</a>     589 lib/search/regex.c             *replace_flags |= REPLACE_T_UPP_TRANSFORM;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L590'>replace_flags</a>     590 lib/search/regex.c             *replace_flags &amp;= ~REPLACE_T_LOW_TRANSFORM;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L593'>replace_flags</a>     593 lib/search/regex.c             *replace_flags |= REPLACE_T_UPP_TRANSFORM_CHAR;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L596'>replace_flags</a>     596 lib/search/regex.c             *replace_flags |= REPLACE_T_LOW_TRANSFORM;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L597'>replace_flags</a>     597 lib/search/regex.c             *replace_flags &amp;= ~REPLACE_T_UPP_TRANSFORM;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L600'>replace_flags</a>     600 lib/search/regex.c             *replace_flags |= REPLACE_T_LOW_TRANSFORM_CHAR;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L603'>replace_flags</a>     603 lib/search/regex.c             *replace_flags = REPLACE_T_NO_TRANSFORM;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L617'>replace_flags</a>     617 lib/search/regex.c                                      replace_transform_type_t * replace_flags)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L625'>replace_flags</a>     625 lib/search/regex.c     if (*replace_flags == REPLACE_T_NO_TRANSFORM)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L639'>replace_flags</a>     639 lib/search/regex.c         if ((*replace_flags &amp; REPLACE_T_UPP_TRANSFORM_CHAR) != 0)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L641'>replace_flags</a>     641 lib/search/regex.c             *replace_flags &amp;= ~REPLACE_T_UPP_TRANSFORM_CHAR;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L646'>replace_flags</a>     646 lib/search/regex.c         else if ((*replace_flags &amp; REPLACE_T_LOW_TRANSFORM_CHAR) != 0)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L648'>replace_flags</a>     648 lib/search/regex.c             *replace_flags &amp;= ~REPLACE_T_LOW_TRANSFORM_CHAR;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L653'>replace_flags</a>     653 lib/search/regex.c         else if ((*replace_flags &amp; REPLACE_T_UPP_TRANSFORM) != 0)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L659'>replace_flags</a>     659 lib/search/regex.c         else if ((*replace_flags &amp; REPLACE_T_LOW_TRANSFORM) != 0)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L674'>replace_flags</a>     674 lib/search/regex.c                                           replace_transform_type_t * replace_flags,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L737'>replace_flags</a>     737 lib/search/regex.c             mc_search_regex__process_append_str (dest_str, from, len, replace_flags);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L992'>replace_flags</a>     992 lib/search/regex.c     replace_transform_type_t replace_flags = REPLACE_T_NO_TRANSFORM;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1016'>replace_flags</a>    1016 lib/search/regex.c         lc_index = mc_search_regex__process_replace_str (replace_str, loop, &amp;len, &amp;replace_flags);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1023'>replace_flags</a>    1023 lib/search/regex.c                                                      &amp;replace_flags);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1025'>replace_flags</a>    1025 lib/search/regex.c                                                      &amp;replace_flags);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1037'>replace_flags</a>    1037 lib/search/regex.c                                                      &amp;replace_flags);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1047'>replace_flags</a>    1047 lib/search/regex.c                                                  &amp;replace_flags);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1050'>replace_flags</a>    1050 lib/search/regex.c                                                       &amp;replace_flags, lc_mc_search-&gt;is_utf8);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1069'>replace_flags</a>    1069 lib/search/regex.c                                                  &amp;replace_flags);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1071'>replace_flags</a>    1071 lib/search/regex.c         mc_search_regex__process_append_str (ret, tmp_str, -1, &amp;replace_flags);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1079'>replace_flags</a>    1079 lib/search/regex.c                                          &amp;replace_flags);</span>
+<span class='curline'><a href='../S/tests--lib--search--regex_process_escape_sequence.c.html#L120'>replace_flags</a>     120 tests/lib/search/regex_process_escape_sequence.c     replace_transform_type_t replace_flags = REPLACE_T_NO_TRANSFORM;</span>
+<span class='curline'><a href='../S/tests--lib--search--regex_process_escape_sequence.c.html#L122'>replace_flags</a>     122 tests/lib/search/regex_process_escape_sequence.c     replace_flags = data-&gt;input_initial_flags;</span>
+<span class='curline'><a href='../S/tests--lib--search--regex_process_escape_sequence.c.html#L126'>replace_flags</a>     126 tests/lib/search/regex_process_escape_sequence.c     mc_search_regex__process_escape_sequence (actual_string, data-&gt;input_from, -1, &amp;replace_flags,</span>
+</pre>
+</body>
+</html>

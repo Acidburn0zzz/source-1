@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>cd_vpath</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L688'>cd_vpath</a>          688 lib/vfs/interface.c     vfs_path_t *cd_vpath;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L694'>cd_vpath</a>          694 lib/vfs/interface.c         cd_vpath = vfs_path_to_absolute (vpath);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L696'>cd_vpath</a>          696 lib/vfs/interface.c         cd_vpath = vfs_path_clone (vpath);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L698'>cd_vpath</a>          698 lib/vfs/interface.c     path_element = vfs_path_get_by_index (cd_vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L705'>cd_vpath</a>          705 lib/vfs/interface.c     result = (*path_element-&gt;class-&gt;chdir) (cd_vpath);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L717'>cd_vpath</a>          717 lib/vfs/interface.c     vfs_set_raw_current_dir (cd_vpath);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L754'>cd_vpath</a>          754 lib/vfs/interface.c     vfs_path_free (cd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L455'>cd_vpath</a>          455 src/filemanager/cmd.c         vfs_path_t *cd_vpath;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L457'>cd_vpath</a>          457 src/filemanager/cmd.c         cd_vpath = vfs_path_from_str_flags (cd_path, VPF_NO_CANON);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L458'>cd_vpath</a>          458 src/filemanager/cmd.c         if (!do_panel_cd (MENU_PANEL, cd_vpath, cd_parse_command))</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L460'>cd_vpath</a>          460 src/filemanager/cmd.c         vfs_path_free (cd_vpath);</span>
+</pre>
+</body>
+</html>

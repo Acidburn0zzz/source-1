@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>row</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L392'>row</a>               392 src/editor/editdraw.c print_to_widget (WEdit * edit, long row, int start_col, int start_col_real,</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L401'>row</a>               401 src/editor/editdraw.c     int y = row + EDIT_TEXT_VERTICAL_OFFSET;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L511'>row</a>               511 src/editor/editdraw.c edit_draw_this_line (WEdit * edit, off_t b, long row, long start_col, long end_col)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L525'>row</a>               525 src/editor/editdraw.c     if (row &gt; w-&gt;lines - 1 - EDIT_TEXT_VERTICAL_OFFSET - 2 * (edit-&gt;fullscreen ? 0 : 1))</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L528'>row</a>               528 src/editor/editdraw.c     if (book_mark_query_color (edit, edit-&gt;start_line + row, BOOK_MARK_COLOR))</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L530'>row</a>               530 src/editor/editdraw.c     else if (book_mark_query_color (edit, edit-&gt;start_line + row, BOOK_MARK_FOUND_COLOR))</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L554'>row</a>               554 src/editor/editdraw.c         cur_line = edit-&gt;start_line + row;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L574'>row</a>               574 src/editor/editdraw.c         if (row &lt;= edit-&gt;buffer.lines - edit-&gt;start_line)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L836'>row</a>               836 src/editor/editdraw.c     print_to_widget (edit, row, start_col, start_col_real, end_col, line, line_stat, book_mark);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L842'>row</a>               842 src/editor/editdraw.c edit_draw_this_char (WEdit * edit, off_t curs, long row, long start_column, long end_column)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L846'>row</a>               846 src/editor/editdraw.c     edit_draw_this_line (edit, b, row, start_column, end_column);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L915'>row</a>               915 src/editor/editdraw.c         long row = 0;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L920'>row</a>               920 src/editor/editdraw.c             row = start_row;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L922'>row</a>               922 src/editor/editdraw.c             while (row &lt;= end_row)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L926'>row</a>               926 src/editor/editdraw.c                 edit_draw_this_line (edit, b, row, start_column, end_column);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L928'>row</a>               928 src/editor/editdraw.c                 row++;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L939'>row</a>               939 src/editor/editdraw.c                 row = start_row;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L941'>row</a>               941 src/editor/editdraw.c                 while (row &lt;= upto)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L945'>row</a>               945 src/editor/editdraw.c                     edit_draw_this_line (edit, b, row, start_column, end_column);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L961'>row</a>               961 src/editor/editdraw.c                 row = curs_row + 1 &lt; start_row ? start_row : curs_row + 1;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L963'>row</a>               963 src/editor/editdraw.c                 while (row &lt;= end_row)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L967'>row</a>               967 src/editor/editdraw.c                     edit_draw_this_line (edit, b, row, start_column, end_column);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L969'>row</a>               969 src/editor/editdraw.c                     row++;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L975'>row</a>               975 src/editor/editdraw.c                 row = curs_row - 1;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L979'>row</a>               979 src/editor/editdraw.c                 if (row &gt;= start_row &amp;&amp; row &lt;= end_row)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L983'>row</a>               983 src/editor/editdraw.c                     edit_draw_this_line (edit, b, row, start_column, end_column);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L987'>row</a>               987 src/editor/editdraw.c             if ((force &amp; REDRAW_LINE_BELOW) != 0 &amp;&amp; row &lt; w-&gt;lines - 1)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L989'>row</a>               989 src/editor/editdraw.c                 row = curs_row + 1;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L992'>row</a>               992 src/editor/editdraw.c                 if (row &gt;= start_row &amp;&amp; row &lt;= end_row)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L996'>row</a>               996 src/editor/editdraw.c                     edit_draw_this_line (edit, b, row, start_column, end_column);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L487'>row</a>               487 src/filemanager/filegui.c         int l1, l2, l, row;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L507'>row</a>               507 src/filemanager/filegui.c         row = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L511'>row</a>               511 src/filemanager/filegui.c                 if (row != rd_widgets[i].ypos)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L513'>row</a>               513 src/filemanager/filegui.c                     row = rd_widgets[i].ypos;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L529'>row</a>               529 src/filemanager/filegui.c         row = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L533'>row</a>               533 src/filemanager/filegui.c                 if (row != rd_widgets[i].ypos)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L535'>row</a>               535 src/filemanager/filegui.c                     row = rd_widgets[i].ypos;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L690'>row</a>               690 src/filemanager/hotlist.c                 int row;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L692'>row</a>               692 src/filemanager/hotlist.c                 row = hotlist_but[i].y;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L693'>row</a>               693 src/filemanager/hotlist.c                 ++count[row];</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L694'>row</a>               694 src/filemanager/hotlist.c                 len[row] += hotlist_but[i].len + 1;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L706'>row</a>               706 src/filemanager/hotlist.c                 int row;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L708'>row</a>               708 src/filemanager/hotlist.c                 row = hotlist_but[i].y;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L716'>row</a>               716 src/filemanager/hotlist.c                         hotlist_but[i].x = cur_x[row];</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L719'>row</a>               719 src/filemanager/hotlist.c                 cur_x[row] += hotlist_but[i].len + 1;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L541'>row</a>               541 src/filemanager/midnight.c         int col, row;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L547'>row</a>               547 src/filemanager/midnight.c         tty_getyx (&amp;row, &amp;col);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L554'>row</a>               554 src/filemanager/midnight.c         tty_gotoyx (row, col);</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L577'>row</a>               577 src/viewer/ascii.c mcview_display_line (WView * view, mcview_state_machine_t * state, int row,</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L593'>row</a>               593 src/viewer/ascii.c     if (!view-&gt;text_wrap_mode &amp;&amp; (row &lt; 0 || row &gt;= (int) height) &amp;&amp; linewidth == NULL)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L674'>row</a>               674 src/viewer/ascii.c         if (row &gt;= 0 &amp;&amp; row &lt; (int) height)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L681'>row</a>               681 src/viewer/ascii.c                 widget_move (view, top + row, left + ((off_t) col - dpy_text_column));</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L709'>row</a>               709 src/viewer/ascii.c                     widget_move (view, top + row, left + (i - dpy_text_column));</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L722'>row</a>               722 src/viewer/ascii.c                     widget_move (view, top + row, left + (i - dpy_text_column));</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L772'>row</a>               772 src/viewer/ascii.c mcview_display_paragraph (WView * view, mcview_state_machine_t * state, int row)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L781'>row</a>               781 src/viewer/ascii.c         lines += mcview_display_line (view, state, row, &amp;paragraph_ended, NULL);</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L785'>row</a>               785 src/viewer/ascii.c         if (row &lt; (int) height)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L787'>row</a>               787 src/viewer/ascii.c             row++;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L789'>row</a>               789 src/viewer/ascii.c             if (row &gt;= (int) height)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L858'>row</a>               858 src/viewer/ascii.c     int row;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L879'>row</a>               879 src/viewer/ascii.c         for (row = 0; row &lt; (int) height; row += n)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L881'>row</a>               881 src/viewer/ascii.c             n = mcview_display_paragraph (view, &amp;state, row);</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L891'>row</a>               891 src/viewer/ascii.c                     mcview_ascii_move_up (view, height - row);</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L905'>row</a>               905 src/viewer/ascii.c         while (row &lt; (int) height)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L907'>row</a>               907 src/viewer/ascii.c             widget_move (view, top + row, left);</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L910'>row</a>               910 src/viewer/ascii.c             row++;</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L113'>row</a>               113 src/viewer/hex.c     int row;</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L131'>row</a>               131 src/viewer/hex.c     row = 0;</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L137'>row</a>               137 src/viewer/hex.c             row--;</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L142'>row</a>               142 src/viewer/hex.c             row--;</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L152'>row</a>               152 src/viewer/hex.c     for (; mcview_get_byte (view, from, NULL) &amp;&amp; row &lt; (int) height; row++)</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L159'>row</a>               159 src/viewer/hex.c         if (row &gt;= 0)</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L162'>row</a>               162 src/viewer/hex.c             widget_move (view, top + row, left);</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L242'>row</a>               242 src/viewer/hex.c             if (row &lt; 0)</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L255'>row</a>               255 src/viewer/hex.c                 view-&gt;cursor_row = row;</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L278'>row</a>               278 src/viewer/hex.c             widget_move (view, top + row, left + col);</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L351'>row</a>               351 src/viewer/hex.c                 widget_move (view, top + row, left + text_start + bytes);</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L363'>row</a>               363 src/viewer/hex.c                 view-&gt;cursor_row = row;</span>
+</pre>
+</body>
+</html>

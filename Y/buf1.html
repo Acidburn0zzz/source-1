@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>buf1</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L243'>buf1</a>              243 src/filemanager/cmd.c             char buf1[BUFSIZ], buf2[BUFSIZ];</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L248'>buf1</a>              248 src/filemanager/cmd.c                 while ((n1 = read (file1, buf1, sizeof (buf1))) == -1 &amp;&amp; errno == EINTR)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L253'>buf1</a>              253 src/filemanager/cmd.c             while (n1 == n2 &amp;&amp; n1 == sizeof (buf1) &amp;&amp; memcmp (buf1, buf2, sizeof (buf1)) == 0);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L254'>buf1</a>              254 src/filemanager/cmd.c             result = (n1 != n2) || memcmp (buf1, buf2, n1);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L149'>buf1</a>              149 src/filemanager/dir.c handle_dirent (struct dirent *dp, const char *fltr, struct stat *buf1, int *link_to_dir,</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L162'>buf1</a>              162 src/filemanager/dir.c     if (mc_lstat (vpath, buf1) == -1)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L169'>buf1</a>              169 src/filemanager/dir.c         memset (buf1, 0, sizeof (*buf1));</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L172'>buf1</a>              172 src/filemanager/dir.c     if (S_ISDIR (buf1-&gt;st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L178'>buf1</a>              178 src/filemanager/dir.c     if (S_ISLNK (buf1-&gt;st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L190'>buf1</a>              190 src/filemanager/dir.c     return (S_ISDIR (buf1-&gt;st_mode) || *link_to_dir != 0 || fltr == NULL</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L586'>buf1</a>              586 src/filemanager/dir.c handle_path (const char *path, struct stat * buf1, int *link_to_dir, int *stale_link)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L594'>buf1</a>              594 src/filemanager/dir.c     if (mc_lstat (vpath, buf1) == -1)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L600'>buf1</a>              600 src/filemanager/dir.c     if (S_ISDIR (buf1-&gt;st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L606'>buf1</a>              606 src/filemanager/dir.c     if (S_ISLNK (buf1-&gt;st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--dir.h.html#L58'>buf1</a>               58 src/filemanager/dir.h gboolean handle_path (const char *path, struct stat *buf1, int *link_to_dir, int *stale_link);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L164'>buf1</a>              164 src/vfs/smbfs/helpers/include/proto.h void out_data (FILE * f, char *buf1, int len, int per_line);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L166'>buf1</a>              166 src/vfs/smbfs/helpers/include/proto.h void dump_data (int level, char *buf1, int len);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1049'>buf1</a>             1049 src/vfs/smbfs/helpers/lib/util.c     char *buf1, *abuf;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1087'>buf1</a>             1087 src/vfs/smbfs/helpers/lib/util.c             buf1 = header;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1095'>buf1</a>             1095 src/vfs/smbfs/helpers/lib/util.c             buf1 = abuf;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1101'>buf1</a>             1101 src/vfs/smbfs/helpers/lib/util.c             memcpy (buf1, header, ret);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1109'>buf1</a>             1109 src/vfs/smbfs/helpers/lib/util.c             ret += read (infd, buf1 + ret, s - ret);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1113'>buf1</a>             1113 src/vfs/smbfs/helpers/lib/util.c             ret2 = (outfd &gt;= 0 ? write_data (outfd, buf1, ret) : ret);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2973'>buf1</a>             2973 src/vfs/smbfs/helpers/lib/util.c out_data (FILE * f, char *buf1, int len, int per_line)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2975'>buf1</a>             2975 src/vfs/smbfs/helpers/lib/util.c     unsigned char *buf = (unsigned char *) buf1;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L3031'>buf1</a>             3031 src/vfs/smbfs/helpers/lib/util.c dump_data (int level, char *buf1, int len)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L3033'>buf1</a>             3033 src/vfs/smbfs/helpers/lib/util.c     unsigned char *buf = (unsigned char *) buf1;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L273'>buf1</a>              273 src/vfs/smbfs/helpers/libsmb/nmblib.c     fstring buf1;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L279'>buf1</a>              279 src/vfs/smbfs/helpers/libsmb/nmblib.c         memset (buf1, '\0', 20);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L280'>buf1</a>              280 src/vfs/smbfs/helpers/libsmb/nmblib.c         buf1[0] = '*';</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L281'>buf1</a>              281 src/vfs/smbfs/helpers/libsmb/nmblib.c         buf1[15] = name-&gt;name_type;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L285'>buf1</a>              285 src/vfs/smbfs/helpers/libsmb/nmblib.c         slprintf (buf1, sizeof (buf1) - 1, "%-15.15s%c", name-&gt;name, name-&gt;name_type);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L294'>buf1</a>              294 src/vfs/smbfs/helpers/libsmb/nmblib.c         buf[offset + 1 + 2 * m] = 'A' + ((buf1[m] &gt;&gt; 4) &amp; 0xF);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L295'>buf1</a>              295 src/vfs/smbfs/helpers/libsmb/nmblib.c         buf[offset + 2 + 2 * m] = 'A' + (buf1[m] &amp; 0xF);</span>
+</pre>
+</body>
+</html>

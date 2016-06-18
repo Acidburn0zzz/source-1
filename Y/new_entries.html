@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>new_entries</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L1000'>new_entries</a>      1000 src/filemanager/usermenu.c             char **new_entries;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L1003'>new_entries</a>      1003 src/filemanager/usermenu.c             new_entries = g_try_realloc (entries, sizeof (new_entries[0]) * menu_limit);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L1005'>new_entries</a>      1005 src/filemanager/usermenu.c             if (new_entries == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L1008'>new_entries</a>      1008 src/filemanager/usermenu.c             entries = new_entries;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L1009'>new_entries</a>      1009 src/filemanager/usermenu.c             new_entries += menu_limit;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L1010'>new_entries</a>      1010 src/filemanager/usermenu.c             while (--new_entries &gt;= &amp;entries[menu_lines])</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L1011'>new_entries</a>      1011 src/filemanager/usermenu.c                 *new_entries = NULL;</span>
+</pre>
+</body>
+</html>

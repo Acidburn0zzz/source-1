@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>errno</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--lock.c.html#L238'>errno</a>             238 lib/lock.c             if (lockinfo-&gt;pid == 0 || !(kill (lockinfo-&gt;pid, 0) == -1 &amp;&amp; errno == ESRCH))</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L74'>errno</a>              74 lib/mcconfig/common.c         mc_propagate_error (mcerror, 0, "%s", unix_error_string (errno));</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L89'>errno</a>              89 lib/mcconfig/common.c         mc_propagate_error (mcerror, 0, "%s", unix_error_string (errno));</span>
+<span class='curline'><a href='../S/lib--mcconfig--paths.c.html#L219'>errno</a>             219 lib/mcconfig/paths.c                                 unix_error_string (errno));</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L102'>errno</a>             102 lib/strutil/strutil.c     errno = 0;                  /* FIXME: is it really needed? */</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L359'>errno</a>             359 lib/strutil/strutil.c         return (errno == EINVAL) ? ESTR_PROBLEM : ESTR_FAILURE;</span>
+<span class='curline'><a href='../S/lib--strutil--xstrtol.c.html#L104'>errno</a>             104 lib/strutil/xstrtol.c     errno = 0;</span>
+<span class='curline'><a href='../S/lib--strutil--xstrtol.c.html#L116'>errno</a>             116 lib/strutil/xstrtol.c     else if (errno != 0)</span>
+<span class='curline'><a href='../S/lib--strutil--xstrtol.c.html#L118'>errno</a>             118 lib/strutil/xstrtol.c         if (errno != ERANGE)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2071'>errno</a>            2071 lib/tty/key.c          if (flag == -1 &amp;&amp; errno == EINTR)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L173'>errno</a>             173 lib/utilunix.c         if (errno != EINTR)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L260'>errno</a>             260 lib/utilunix.c     while (read_len &lt; 0 &amp;&amp; errno == EINTR);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L266'>errno</a>             266 lib/utilunix.c         ps-&gt;error = errno;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L603'>errno</a>             603 lib/utilunix.c     if (res &lt; 0 &amp;&amp; errno != EINTR)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L608'>errno</a>             608 lib/utilunix.c                             unix_error_string (errno));</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L647'>errno</a>             647 lib/utilunix.c     while (res &lt; 0 &amp;&amp; errno == EINTR);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L651'>errno</a>             651 lib/utilunix.c                           unix_error_string (errno));</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1112'>errno</a>            1112 lib/utilunix.c         errno = ENAMETOOLONG;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1179'>errno</a>            1179 lib/utilunix.c                 errno = ENAMETOOLONG;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1188'>errno</a>            1188 lib/utilunix.c             errno = ELOOP;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1197'>errno</a>            1197 lib/utilunix.c             if (errno != EINVAL)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1219'>errno</a>            1219 lib/utilunix.c                 errno = ENAMETOOLONG;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L582'>errno</a>             582 lib/vfs/direntry.c             me-&gt;verrno = errno;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L606'>errno</a>             606 lib/vfs/direntry.c             me-&gt;verrno = errno;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L627'>errno</a>             627 lib/vfs/direntry.c             FH-&gt;ino-&gt;super-&gt;me-&gt;verrno = errno;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1310'>errno</a>            1310 lib/vfs/direntry.c             path_element-&gt;class-&gt;verrno = errno;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1349'>errno</a>            1349 lib/vfs/direntry.c         me-&gt;verrno = errno;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1376'>errno</a>            1376 lib/vfs/direntry.c                 me-&gt;verrno = errno;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1549'>errno</a>            1549 lib/vfs/direntry.c         if (n == -1 &amp;&amp; errno == EINTR)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L217'>errno</a>             217 lib/vfs/interface.c             errno = vfs_ferrno (path_element-&gt;class);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L222'>errno</a>             222 lib/vfs/interface.c         errno = -EOPNOTSUPP;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L248'>errno</a>             248 lib/vfs/interface.c         errno = path_element-&gt;class-&gt;name != NULL ? vfs_ferrno (path_element-&gt;class) : E_NOTSUPP; \</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L285'>errno</a>             285 lib/vfs/interface.c                 errno =</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L310'>errno</a>             310 lib/vfs/interface.c         errno = vfs-&gt;name != NULL ? vfs_ferrno (vfs) : E_NOTSUPP; \</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L339'>errno</a>             339 lib/vfs/interface.c         errno = EXDEV; \</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L347'>errno</a>             347 lib/vfs/interface.c         errno = path_element1-&gt;class-&gt;name != NULL ? vfs_ferrno (path_element1-&gt;class) : E_NOTSUPP; \</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L415'>errno</a>             415 lib/vfs/interface.c         errno = vfs_ferrno (vfs);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L436'>errno</a>             436 lib/vfs/interface.c         errno = E_NOTSUPP;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L444'>errno</a>             444 lib/vfs/interface.c         errno = path_element-&gt;class-&gt;opendir ? vfs_ferrno (path_element-&gt;class) : E_NOTSUPP;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L492'>errno</a>             492 lib/vfs/interface.c         errno = EFAULT;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L518'>errno</a>             518 lib/vfs/interface.c         errno = vfs-&gt;readdir ? vfs_ferrno (vfs) : E_NOTSUPP;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L575'>errno</a>             575 lib/vfs/interface.c             errno = path_element-&gt;class-&gt;name ? vfs_ferrno (path_element-&gt;class) : E_NOTSUPP;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L598'>errno</a>             598 lib/vfs/interface.c             errno = path_element-&gt;class-&gt;name ? vfs_ferrno (path_element-&gt;class) : E_NOTSUPP;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L622'>errno</a>             622 lib/vfs/interface.c         errno = vfs-&gt;fstat ? vfs_ferrno (vfs) : E_NOTSUPP;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L645'>errno</a>             645 lib/vfs/interface.c             errno = vfs_ferrno (path_element-&gt;class);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L709'>errno</a>             709 lib/vfs/interface.c         errno = vfs_ferrno (path_element-&gt;class);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L776'>errno</a>             776 lib/vfs/interface.c         errno = vfs-&gt;lseek ? vfs_ferrno (vfs) : E_NOTSUPP;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L865'>errno</a>             865 lib/vfs/interface.c         if (errno == EEXIST &amp;&amp; lstat (buffer, &amp;st) == 0)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L879'>errno</a>             879 lib/vfs/interface.c                      buffer, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L168'>errno</a>             168 lib/vfs/vfs.c          errno = EINVAL;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1373'>errno</a>            1373 lib/widget/dialog.c     if (chmod (profile, S_IRUSR | S_IWUSR) != -1 || errno == ENOENT)</span>
+<span class='curline'><a href='../S/src--background.c.html#L541'>errno</a>             541 src/background.c         int saved_errno = errno;</span>
+<span class='curline'><a href='../S/src--background.c.html#L547'>errno</a>             547 src/background.c         errno = saved_errno;</span>
+<span class='curline'><a href='../S/src--background.c.html#L569'>errno</a>             569 src/background.c             while (dup2 (nullfd, STDIN_FILENO) == -1 &amp;&amp; errno == EINTR)</span>
+<span class='curline'><a href='../S/src--background.c.html#L571'>errno</a>             571 src/background.c             while (dup2 (nullfd, STDOUT_FILENO) == -1 &amp;&amp; errno == EINTR)</span>
+<span class='curline'><a href='../S/src--background.c.html#L573'>errno</a>             573 src/background.c             while (dup2 (nullfd, STDERR_FILENO) == -1 &amp;&amp; errno == EINTR)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L175'>errno</a>             175 src/diffviewer/ydiff.c                  _("Cannot create temporary diff file\n%s"), unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L665'>errno</a>             665 src/diffviewer/ydiff.c     errno = 0;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L667'>errno</a>             667 src/diffviewer/ydiff.c     if (errno != 0 || p == q)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2208'>errno</a>            2208 src/diffviewer/ydiff.c                          dview-&gt;file[n_merge], "~~~", unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2217'>errno</a>            2217 src/diffviewer/ydiff.c                      unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3590'>errno</a>            3590 src/diffviewer/ydiff.c                          path_trunc (p0, 30), unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3607'>errno</a>            3607 src/diffviewer/ydiff.c                          path_trunc (p1, 30), unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1212'>errno</a>            1212 src/editor/editwidget.c         made_directory = (mkdir (dir, 0700) != -1 || errno == EEXIST);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1216'>errno</a>            1216 src/editor/editwidget.c         made_directory = (mkdir (dir, 0700) != -1 || errno == EEXIST);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1220'>errno</a>            1220 src/editor/editwidget.c         made_directory = (mkdir (dir, 0700) != -1 || errno == EEXIST);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L669'>errno</a>             669 src/editor/syntax.c                 if (errno == EINTR)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1502'>errno</a>            1502 src/editor/syntax.c                  _("Cannot open file %s\n%s"), f, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L792'>errno</a>             792 src/filemanager/achown.c                  lc_fname, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L797'>errno</a>             797 src/filemanager/achown.c                  lc_fname, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L816'>errno</a>             816 src/filemanager/achown.c                      lc_fname, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L821'>errno</a>             821 src/filemanager/achown.c                      lc_fname, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L885'>errno</a>             885 src/filemanager/achown.c                          fname, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L891'>errno</a>             891 src/filemanager/achown.c                          unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L406'>errno</a>             406 src/filemanager/chmod.c                  current_panel-&gt;dir.list[c_file].fname, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L491'>errno</a>             491 src/filemanager/chmod.c                          fname, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L304'>errno</a>             304 src/filemanager/chown.c                  current_panel-&gt;dir.list[current_file].fname, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L434'>errno</a>             434 src/filemanager/chown.c                                  fname, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L248'>errno</a>             248 src/filemanager/cmd.c                 while ((n1 = read (file1, buf1, sizeof (buf1))) == -1 &amp;&amp; errno == EINTR)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L250'>errno</a>             250 src/filemanager/cmd.c                 while ((n2 = read (file2, buf2, sizeof (buf2))) == -1 &amp;&amp; errno == EINTR)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L365'>errno</a>             365 src/filemanager/cmd.c             message (D_ERROR, MSG_ERROR, _("link: %s"), unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L402'>errno</a>             402 src/filemanager/cmd.c             message (D_ERROR, MSG_ERROR, _("symlink: %s"), unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L889'>errno</a>             889 src/filemanager/cmd.c             message (D_ERROR, MSG_ERROR, "%s", unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1296'>errno</a>            1296 src/filemanager/cmd.c                              unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1304'>errno</a>            1304 src/filemanager/cmd.c                                  unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L461'>errno</a>             461 src/filemanager/command.c                      unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L452'>errno</a>             452 src/filemanager/ext.c                  _("Cannot create temporary command file\n%s"), unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L849'>errno</a>             849 src/filemanager/file.c     g_snprintf (buf, sizeof (buf), format, nfile1, nfile2, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1003'>errno</a>            1003 src/filemanager/file.c         errno = EXDEV;          /* Hack to copy (append) the file and then delete it */</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1005'>errno</a>            1005 src/filemanager/file.c     if (errno != EXDEV)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1707'>errno</a>            1707 src/filemanager/file.c         if (errno != EEXIST)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1850'>errno</a>            1850 src/filemanager/file.c                     write_errno_nospace = (n_written &lt; 0 &amp;&amp; errno == ENOSPC);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2378'>errno</a>            2378 src/filemanager/file.c     if (errno != EXDEV)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2661'>errno</a>            2661 src/filemanager/file.c                          path_trunc (source, 30), unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3123'>errno</a>            3123 src/filemanager/file.c     g_snprintf (buf, sizeof (buf), format, path_trunc (file, 30), unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L120'>errno</a>             120 src/filemanager/filegui.c         errno = (device == B_ENTRY_NOT_FOUND ? ENOENT</span>
+<span class='curline'><a href='../S/src--filemanager--filenot.c.html#L82'>errno</a>              82 src/filemanager/filenot.c     if (errno != ENOENT)</span>
+<span class='curline'><a href='../S/src--filemanager--filenot.c.html#L91'>errno</a>              91 src/filemanager/filenot.c         errno = ENOTDIR;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L570'>errno</a>             570 src/filemanager/mountlist.c         errno = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L574'>errno</a>             574 src/filemanager/mountlist.c             &amp;&amp; !(dev == ULONG_MAX &amp;&amp; errno == ERANGE) &amp;&amp; dev == (dev_t) dev)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L766'>errno</a>             766 src/filemanager/mountlist.c                 int saved_errno = errno;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L769'>errno</a>             769 src/filemanager/mountlist.c                 errno = saved_errno;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L871'>errno</a>             871 src/filemanager/mountlist.c             errno = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1082'>errno</a>            1082 src/filemanager/mountlist.c             int saved_errno = errno;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1085'>errno</a>            1085 src/filemanager/mountlist.c             errno = saved_errno;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1142'>errno</a>            1142 src/filemanager/mountlist.c                 if (errno != EINTR)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1144'>errno</a>            1144 src/filemanager/mountlist.c                     int saved_errno = errno;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1146'>errno</a>            1146 src/filemanager/mountlist.c                     errno = saved_errno;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1150'>errno</a>            1150 src/filemanager/mountlist.c         else if (errno != ENOENT)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1154'>errno</a>            1154 src/filemanager/mountlist.c         errno = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1157'>errno</a>            1157 src/filemanager/mountlist.c             ret = errno;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1175'>errno</a>            1175 src/filemanager/mountlist.c             ret = fclose (fp) == EOF ? errno : 0 &lt; ret ? 0 : -1;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1179'>errno</a>            1179 src/filemanager/mountlist.c             ret = errno;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1183'>errno</a>            1183 src/filemanager/mountlist.c             errno = ret;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1208'>errno</a>            1208 src/filemanager/mountlist.c             int saved_errno = errno;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1211'>errno</a>            1211 src/filemanager/mountlist.c             errno = saved_errno;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1297'>errno</a>            1297 src/filemanager/mountlist.c         int saved_errno = errno;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1301'>errno</a>            1301 src/filemanager/mountlist.c         errno = saved_errno;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1434'>errno</a>            1434 src/filemanager/mountlist.c         else if (IS_EINTR (errno))</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1436'>errno</a>            1436 src/filemanager/mountlist.c         else if (errno == EINVAL &amp;&amp; BUGGY_READ_MAXIMUM &lt; count)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1465'>errno</a>            1465 src/filemanager/mountlist.c             errno = ZERO_BYTE_TRANSFER_ERRNO;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1555'>errno</a>            1555 src/filemanager/mountlist.c             errno = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3678'>errno</a>            3678 src/filemanager/panel.c                      cwd, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L332'>errno</a>             332 src/filemanager/panelize.c             if (ferror (external) &amp;&amp; errno == EINTR)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L590'>errno</a>             590 src/filemanager/tree.c                      vfs_path_as_str (tree-&gt;selected_ptr-&gt;name), unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L765'>errno</a>             765 src/filemanager/tree.c                  unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L333'>errno</a>             333 src/filemanager/treestore.c         return errno;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L363'>errno</a>             363 src/filemanager/treestore.c                          name, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L447'>errno</a>             447 src/filemanager/usermenu.c                  unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L943'>errno</a>             943 src/filemanager/usermenu.c                      unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L983'>errno</a>             983 src/filemanager/usermenu.c         message (D_ERROR, MSG_ERROR, _("Cannot open file %s\n%s"), menu, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--help.c.html#L1065'>errno</a>            1065 src/help.c                      event_data-&gt;filename ? event_data-&gt;filename : hlpfile, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L194'>errno</a>             194 src/subshell/common.c             if (errno == EINTR)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L243'>errno</a>             243 src/subshell/common.c         fprintf (stderr, "Cannot set pty terminal modes: %s\r\n", unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L532'>errno</a>             532 src/subshell/common.c             if (errno == EINTR)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L541'>errno</a>             541 src/subshell/common.c                      unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L556'>errno</a>             556 src/subshell/common.c             if (bytes == -1 &amp;&amp; errno == EIO &amp;&amp; !subshell_alive)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L562'>errno</a>             562 src/subshell/common.c                 fprintf (stderr, "read (subshell_pty...): %s\r\n", unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L578'>errno</a>             578 src/subshell/common.c                          unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L602'>errno</a>             602 src/subshell/common.c                          "read (STDIN_FILENO, pty_buffer...): %s\r\n", unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L676'>errno</a>             676 src/subshell/common.c         fprintf (stderr, "open (%s, O_RDWR): %s\r\n", pty_name, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L685'>errno</a>             685 src/subshell/common.c                      pty_slave, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L695'>errno</a>             695 src/subshell/common.c                      pty_slave, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L705'>errno</a>             705 src/subshell/common.c                      pty_slave, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L739'>errno</a>             739 src/subshell/common.c                 if (errno == ENOENT)    /* Different from EIO */</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1025'>errno</a>            1025 src/subshell/common.c             fprintf (stderr, "Cannot open master side of pty: %s\r\n", unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1033'>errno</a>            1033 src/subshell/common.c                      pty_name, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1046'>errno</a>            1046 src/subshell/common.c                 fprintf (stderr, "mkfifo(%s) failed: %s\r\n", tcsh_fifo, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1078'>errno</a>            1078 src/subshell/common.c         fprintf (stderr, "Cannot spawn the subshell process: %s\r\n", unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1189'>errno</a>            1189 src/subshell/common.c             if (errno == EINTR)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1197'>errno</a>            1197 src/subshell/common.c             fprintf (stderr, "select (FD_SETSIZE, &amp;tmp...): %s\r\n", unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1254'>errno</a>            1254 src/subshell/common.c                          tcsh_fifo, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1379'>errno</a>            1379 src/subshell/common.c         fprintf (stderr, "Cannot get terminal settings: %s\r\n", unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L834'>errno</a>             834 src/vfs/cpio/cpio.c         ERRNOR (errno, -1);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L943'>errno</a>             943 src/vfs/fish/fish.c             if ((errno == EINTR) &amp;&amp; tty_got_interrupt ())</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L957'>errno</a>             957 src/vfs/fish/fish.c                 me-&gt;verrno = errno;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1019'>errno</a>            1019 src/vfs/fish/fish.c     errno = 0;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1025'>errno</a>            1025 src/vfs/fish/fish.c     if (errno != 0)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1074'>errno</a>            1074 src/vfs/fish/fish.c         if ((errno == EINTR) &amp;&amp; !tty_got_interrupt ())</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1086'>errno</a>            1086 src/vfs/fish/fish.c     ERRNOR (errno, n);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1122'>errno</a>            1122 src/vfs/fish/fish.c             if (((v &lt; 0) &amp;&amp; (errno == EINTR)) || v == 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L493'>errno</a>             493 src/vfs/ftpfs/ftpfs.c         if (errno == EPIPE)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L829'>errno</a>             829 src/vfs/ftpfs/ftpfs.c         ftpfs_errno = errno;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L878'>errno</a>             878 src/vfs/ftpfs/ftpfs.c             vfs_print_message (_("ftpfs: %s"), unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L881'>errno</a>             881 src/vfs/ftpfs/ftpfs.c             ftpfs_errno = errno;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L891'>errno</a>             891 src/vfs/ftpfs/ftpfs.c         ftpfs_errno = errno;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L894'>errno</a>             894 src/vfs/ftpfs/ftpfs.c         if (errno == EINTR &amp;&amp; tty_got_interrupt ())</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L898'>errno</a>             898 src/vfs/ftpfs/ftpfs.c                                unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1289'>errno</a>            1289 src/vfs/ftpfs/ftpfs.c         vfs_print_message (_("ftpfs: could not create socket: %s"), unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1402'>errno</a>            1402 src/vfs/ftpfs/ftpfs.c             ftpfs_errno = errno;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1428'>errno</a>            1428 src/vfs/ftpfs/ftpfs.c         vfs_print_message (_("ftpfs: abort error: %s"), unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1844'>errno</a>            1844 src/vfs/ftpfs/ftpfs.c             if (errno != EINTR)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1846'>errno</a>            1846 src/vfs/ftpfs/ftpfs.c                 ftpfs_errno = errno;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1863'>errno</a>            1863 src/vfs/ftpfs/ftpfs.c                 if (errno == EINTR &amp;&amp; !tty_got_interrupt ())</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1866'>errno</a>            1866 src/vfs/ftpfs/ftpfs.c                 ftpfs_errno = errno;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1923'>errno</a>            1923 src/vfs/ftpfs/ftpfs.c         if ((errno == EINTR) &amp;&amp; !tty_got_interrupt ())</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1940'>errno</a>            1940 src/vfs/ftpfs/ftpfs.c     ERRNOR (errno, n);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1971'>errno</a>            1971 src/vfs/ftpfs/ftpfs.c             return (((v &lt; 0) &amp;&amp; (errno == EINTR)) || v == 0) ? 1 : 0;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L230'>errno</a>             230 src/vfs/local/local.c         if (errno == EAGAIN)</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L234'>errno</a>             234 src/vfs/local/local.c         if (errno == EINTR)</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L358'>errno</a>             358 src/vfs/local/local.c         if (errno == EAGAIN)</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L362'>errno</a>             362 src/vfs/local/local.c         if (errno == EINTR)</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L391'>errno</a>             391 src/vfs/local/local.c     return errno;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L229'>errno</a>             229 src/vfs/sftpfs/config_parser.c             e = errno;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L126'>errno</a>             126 src/vfs/sftpfs/connection.c             vfs_print_message (_("sftp: %s"), unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L136'>errno</a>             136 src/vfs/sftpfs/connection.c         save_errno = errno;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L635'>errno</a>             635 src/vfs/sftpfs/vfs_class.c     return errno;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charset.c.html#L254'>errno</a>             254 src/vfs/smbfs/helpers/lib/charset.c                    codepage_file_name, unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charset.c.html#L261'>errno</a>             261 src/vfs/smbfs/helpers/lib/charset.c                    codepage_file_name, unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charset.c.html#L309'>errno</a>             309 src/vfs/smbfs/helpers/lib/charset.c                    codepage_file_name, unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--debug.c.html#L153'>errno</a>             153 src/vfs/smbfs/helpers/lib/debug.c     int old_errno = errno;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--debug.c.html#L165'>errno</a>             165 src/vfs/smbfs/helpers/lib/debug.c         errno = old_errno;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--debug.c.html#L184'>errno</a>             184 src/vfs/smbfs/helpers/lib/debug.c             errno = old_errno;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--debug.c.html#L202'>errno</a>             202 src/vfs/smbfs/helpers/lib/debug.c     errno = old_errno;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L128'>errno</a>             128 src/vfs/smbfs/helpers/lib/system.c     errno = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L133'>errno</a>             133 src/vfs/smbfs/helpers/lib/system.c     while (pollrtn &lt; 0 &amp;&amp; errno == EINTR);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L151'>errno</a>             151 src/vfs/smbfs/helpers/lib/system.c         errno = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L154'>errno</a>             154 src/vfs/smbfs/helpers/lib/system.c     while (selrtn &lt; 0 &amp;&amp; errno == EINTR);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L416'>errno</a>             416 src/vfs/smbfs/helpers/lib/util.c         errno = ENOTDIR;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1209'>errno</a>            1209 src/vfs/smbfs/helpers/lib/util.c         errno = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2827'>errno</a>            2827 src/vfs/smbfs/helpers/lib/util.c     errno = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2830'>errno</a>            2830 src/vfs/smbfs/helpers/lib/util.c     if (errno == EFBIG)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2841'>errno</a>            2841 src/vfs/smbfs/helpers/lib/util.c         errno = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2846'>errno</a>            2846 src/vfs/smbfs/helpers/lib/util.c     if (errno != 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2847'>errno</a>            2847 src/vfs/smbfs/helpers/lib/util.c         DEBUG (3, ("fcntl lock gave errno %d (%s)\n", errno, unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2867'>errno</a>            2867 src/vfs/smbfs/helpers/lib/util.c                    (double) offset, (double) count, op, type, unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2870'>errno</a>            2870 src/vfs/smbfs/helpers/lib/util.c         if (errno == EINVAL)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L3130'>errno</a>            3130 src/vfs/smbfs/helpers/lib/util.c                    unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L3149'>errno</a>            3149 src/vfs/smbfs/helpers/lib/util.c                    (int) rlp.rlim_cur, unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L3157'>errno</a>            3157 src/vfs/smbfs/helpers/lib/util.c                    unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L93'>errno</a>              93 src/vfs/smbfs/helpers/lib/util_file.c                         unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L117'>errno</a>             117 src/vfs/smbfs/helpers/lib/util_file.c                     unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L218'>errno</a>             218 src/vfs/smbfs/helpers/lib/util_sock.c                    (int) len, fd, unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L239'>errno</a>             239 src/vfs/smbfs/helpers/lib/util_sock.c         DEBUG (2, ("read socket failed. ERRNO=%s\n", unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L305'>errno</a>             305 src/vfs/smbfs/helpers/lib/util_sock.c                 DEBUG (0, ("read_with_timeout: read error = %s.\n", unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L337'>errno</a>             337 src/vfs/smbfs/helpers/lib/util_sock.c                     unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L376'>errno</a>             376 src/vfs/smbfs/helpers/lib/util_sock.c                     unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L435'>errno</a>             435 src/vfs/smbfs/helpers/lib/util_sock.c                     unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L443'>errno</a>             443 src/vfs/smbfs/helpers/lib/util_sock.c                     unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L479'>errno</a>             479 src/vfs/smbfs/helpers/lib/util_sock.c             DEBUG (1, ("write_data: write failure. Error = %s\n", unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L731'>errno</a>             731 src/vfs/smbfs/helpers/lib/util_sock.c                    inet_ntoa (ip), port, unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L795'>errno</a>             795 src/vfs/smbfs/helpers/lib/util_sock.c                                 port, inet_ntoa (sock.sin_addr), unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L851'>errno</a>             851 src/vfs/smbfs/helpers/lib/util_sock.c     if (ret &lt; 0 &amp;&amp; (errno == EINPROGRESS || errno == EALREADY || errno == EAGAIN) &amp;&amp; loops--)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L857'>errno</a>             857 src/vfs/smbfs/helpers/lib/util_sock.c     if (ret &lt; 0 &amp;&amp; (errno == EINPROGRESS || errno == EALREADY || errno == EAGAIN))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L865'>errno</a>             865 src/vfs/smbfs/helpers/lib/util_sock.c     if (ret &lt; 0 &amp;&amp; errno == EISCONN)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L867'>errno</a>             867 src/vfs/smbfs/helpers/lib/util_sock.c         errno = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L875'>errno</a>             875 src/vfs/smbfs/helpers/lib/util_sock.c                    inet_ntoa (*addr), port, unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L924'>errno</a>             924 src/vfs/smbfs/helpers/lib/util_sock.c         DEBUG (0, ("getpeername failed. Error was %s\n", unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L974'>errno</a>             974 src/vfs/smbfs/helpers/lib/util_sock.c         DEBUG (0, ("getpeername failed. Error was %s\n", unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L73'>errno</a>              73 src/vfs/smbfs/helpers/libsmb/clientgen.c         if (ret &lt;= 0 &amp;&amp; errno == EPIPE &amp;&amp; !reestablished)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L251'>errno</a>             251 src/vfs/smbfs/helpers/libsmb/namequery.c                    fname, unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L773'>errno</a>             773 src/vfs/smbfs/helpers/libsmb/nmblib.c                    inet_ntoa (ip), port, unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--params.c.html#L516'>errno</a>             516 src/vfs/smbfs/helpers/param/params.c                 func, FileName, unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L719'>errno</a>             719 src/vfs/smbfs/smbfs.c             if (errno == EPIPE)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1858'>errno</a>            1858 src/vfs/smbfs/smbfs.c             errno = EINVAL;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L880'>errno</a>             880 src/vfs/tar/tar.c         ERRNOR (errno, -1);</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L236'>errno</a>             236 src/viewer/growbuf.c             while (nread == -1 &amp;&amp; errno == EINTR);</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L422'>errno</a>             422 src/viewer/hex.c                            "Data may have been written or not"), unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L429'>errno</a>             429 src/viewer/hex.c         text = g_strdup_printf (_("Cannot save file:\n%s"), unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L323'>errno</a>             323 src/viewer/mcviewer.c                         file, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L338'>errno</a>             338 src/viewer/mcviewer.c                         file, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L388'>errno</a>             388 src/viewer/mcviewer.c                                     file, unix_error_string (errno));</span>
+</pre>
+</body>
+</html>

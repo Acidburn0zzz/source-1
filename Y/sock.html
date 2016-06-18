@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>sock</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1487'>sock</a>             1487 lib/vfs/direntry.c vfs_s_get_line (struct vfs_class *me, int sock, char *buf, int buf_len, char term)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1495'>sock</a>             1495 lib/vfs/direntry.c         if (read (sock, buf, sizeof (char)) &lt;= 0)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1515'>sock</a>             1515 lib/vfs/direntry.c     while (read (sock, &amp;c, sizeof (c)) &gt; 0)</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L188'>sock</a>              188 lib/vfs/xdirentry.h int vfs_s_get_line (struct vfs_class *me, int sock, char *buf, int buf_len, char term);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L213'>sock</a>              213 src/vfs/fish/fish.c fish_get_reply (struct vfs_class *me, int sock, char *string_buf, int string_len)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L220'>sock</a>              220 src/vfs/fish/fish.c         if (!vfs_s_get_line (me, sock, answer, sizeof (answer), '\n'))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L157'>sock</a>              157 src/vfs/ftpfs/ftpfs.c #define FH_SOCK ((ftp_fh_data_t *) fh-&gt;data)-&gt;sock</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L206'>sock</a>              206 src/vfs/ftpfs/ftpfs.c     int sock;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L225'>sock</a>              225 src/vfs/ftpfs/ftpfs.c     int sock;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L368'>sock</a>              368 src/vfs/ftpfs/ftpfs.c ftpfs_get_reply (struct vfs_class *me, int sock, char *string_buf, int string_len)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L375'>sock</a>              375 src/vfs/ftpfs/ftpfs.c         if (!vfs_s_get_line (me, sock, answer, sizeof (answer), '\n'))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L395'>sock</a>              395 src/vfs/ftpfs/ftpfs.c                     if (!vfs_s_get_line (me, sock, answer, sizeof (answer), '\n'))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L421'>sock</a>              421 src/vfs/ftpfs/ftpfs.c     int sock;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L423'>sock</a>              423 src/vfs/ftpfs/ftpfs.c     sock = ftpfs_open_socket (me, super);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L424'>sock</a>              424 src/vfs/ftpfs/ftpfs.c     if (sock != -1)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L428'>sock</a>              428 src/vfs/ftpfs/ftpfs.c         close (SUP-&gt;sock);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L429'>sock</a>              429 src/vfs/ftpfs/ftpfs.c         SUP-&gt;sock = sock;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L436'>sock</a>              436 src/vfs/ftpfs/ftpfs.c             sock = ftpfs_chdir_internal (me, super, cwdir);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L438'>sock</a>              438 src/vfs/ftpfs/ftpfs.c             return sock == COMPLETE ? 1 : 0;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L487'>sock</a>              487 src/vfs/ftpfs/ftpfs.c     status = write (SUP-&gt;sock, cmdstr, cmdlen);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L500'>sock</a>              500 src/vfs/ftpfs/ftpfs.c                 if (status &amp;&amp; (write (SUP-&gt;sock, cmdstr, cmdlen) &gt; 0))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L518'>sock</a>              518 src/vfs/ftpfs/ftpfs.c         status = ftpfs_get_reply (me, SUP-&gt;sock,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L527'>sock</a>              527 src/vfs/ftpfs/ftpfs.c             if (status &amp;&amp; (write (SUP-&gt;sock, cmdstr, cmdlen) &gt; 0))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L545'>sock</a>              545 src/vfs/ftpfs/ftpfs.c     if (SUP-&gt;sock != -1)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L549'>sock</a>              549 src/vfs/ftpfs/ftpfs.c         close (SUP-&gt;sock);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L625'>sock</a>              625 src/vfs/ftpfs/ftpfs.c     if (ftpfs_get_reply (me, SUP-&gt;sock, reply_string, sizeof (reply_string) - 1) == COMPLETE)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L928'>sock</a>              928 src/vfs/ftpfs/ftpfs.c         SUP-&gt;sock = ftpfs_open_socket (me, super);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L929'>sock</a>              929 src/vfs/ftpfs/ftpfs.c         if (SUP-&gt;sock == -1)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L943'>sock</a>              943 src/vfs/ftpfs/ftpfs.c             close (SUP-&gt;sock);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1032'>sock</a>             1032 src/vfs/ftpfs/ftpfs.c         ftpfs_get_reply (me, SUP-&gt;sock, buf, sizeof (buf)) == COMPLETE)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1265'>sock</a>             1265 src/vfs/ftpfs/ftpfs.c         result = getpeername (SUP-&gt;sock, (struct sockaddr *) data_addr, data_addrlen);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1267'>sock</a>             1267 src/vfs/ftpfs/ftpfs.c         result = getsockname (SUP-&gt;sock, (struct sockaddr *) data_addr, data_addrlen);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1426'>sock</a>             1426 src/vfs/ftpfs/ftpfs.c     if (send (SUP-&gt;sock, ipbuf, sizeof (ipbuf), MSG_OOB) != sizeof (ipbuf))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1466'>sock</a>             1466 src/vfs/ftpfs/ftpfs.c     if ((ftpfs_get_reply (me, SUP-&gt;sock, NULL, 0) == TRANSIENT) &amp;&amp; (code == 426))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1467'>sock</a>             1467 src/vfs/ftpfs/ftpfs.c         ftpfs_get_reply (me, SUP-&gt;sock, NULL, 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1555'>sock</a>             1555 src/vfs/ftpfs/ftpfs.c     int sock;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1570'>sock</a>             1570 src/vfs/ftpfs/ftpfs.c         sock = ftpfs_open_data_connection (bucket, "LIST -lLa", ".", TYPE_ASCII, 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1573'>sock</a>             1573 src/vfs/ftpfs/ftpfs.c         sock = ftpfs_open_data_connection (bucket, "LIST -lLa", dir-&gt;remote_path, TYPE_ASCII, 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1575'>sock</a>             1575 src/vfs/ftpfs/ftpfs.c     if (sock == -1)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1581'>sock</a>             1581 src/vfs/ftpfs/ftpfs.c     fp = fdopen (sock, "r");</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1584'>sock</a>             1584 src/vfs/ftpfs/ftpfs.c         close (sock);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1638'>sock</a>             1638 src/vfs/ftpfs/ftpfs.c     ftpfs_get_reply (me, SUP-&gt;sock, NULL, 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1662'>sock</a>             1662 src/vfs/ftpfs/ftpfs.c     int sock, num_entries = 0;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1688'>sock</a>             1688 src/vfs/ftpfs/ftpfs.c         sock = ftpfs_open_data_connection (me, super, "LIST", 0, TYPE_ASCII, 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1692'>sock</a>             1692 src/vfs/ftpfs/ftpfs.c         sock = ftpfs_open_data_connection (me, super, "LIST -la", 0, TYPE_ASCII, 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1699'>sock</a>             1699 src/vfs/ftpfs/ftpfs.c         sock = ftpfs_open_data_connection (me, super, "LIST -la", path, TYPE_ASCII, 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1703'>sock</a>             1703 src/vfs/ftpfs/ftpfs.c     if (sock == -1)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1717'>sock</a>             1717 src/vfs/ftpfs/ftpfs.c         res = vfs_s_get_line_interruptible (me, lc_buffer, sizeof (lc_buffer), sock);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1724'>sock</a>             1724 src/vfs/ftpfs/ftpfs.c             close (sock);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1727'>sock</a>             1727 src/vfs/ftpfs/ftpfs.c             ftpfs_get_reply (me, SUP-&gt;sock, NULL, 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1753'>sock</a>             1753 src/vfs/ftpfs/ftpfs.c     close (sock);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1756'>sock</a>             1756 src/vfs/ftpfs/ftpfs.c     if ((ftpfs_get_reply (me, SUP-&gt;sock, NULL, 0) != COMPLETE))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1803'>sock</a>             1803 src/vfs/ftpfs/ftpfs.c     int h, sock;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1821'>sock</a>             1821 src/vfs/ftpfs/ftpfs.c         ((sock =</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1831'>sock</a>             1831 src/vfs/ftpfs/ftpfs.c     setsockopt (sock, SOL_SOCKET, SO_LINGER, (char *) &amp;li, sizeof (li));</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1833'>sock</a>             1833 src/vfs/ftpfs/ftpfs.c     setsockopt (sock, SOL_SOCKET, SO_LINGER, &amp;flag_one, sizeof (flag_one));</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1859'>sock</a>             1859 src/vfs/ftpfs/ftpfs.c         while ((n_written = write (sock, w_buf, n_read)) != n_read)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1876'>sock</a>             1876 src/vfs/ftpfs/ftpfs.c     close (sock);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1879'>sock</a>             1879 src/vfs/ftpfs/ftpfs.c     if (ftpfs_get_reply (me, SUP-&gt;sock, NULL, 0) != COMPLETE)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1884'>sock</a>             1884 src/vfs/ftpfs/ftpfs.c     close (sock);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1887'>sock</a>             1887 src/vfs/ftpfs/ftpfs.c     ftpfs_get_reply (me, SUP-&gt;sock, NULL, 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1936'>sock</a>             1936 src/vfs/ftpfs/ftpfs.c         if ((ftpfs_get_reply (me, SUP-&gt;sock, NULL, 0) != COMPLETE))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1970'>sock</a>             1970 src/vfs/ftpfs/ftpfs.c             v = vfs_s_select_on_two (((ftp_fh_data_t *) (FH-&gt;data))-&gt;sock, 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2228'>sock</a>             2228 src/vfs/ftpfs/ftpfs.c         if (ftpfs_get_reply (me, ftp-&gt;sock, NULL, 0) != COMPLETE)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L230'>sock</a>              230 src/vfs/smbfs/helpers/lib/util_sock.c     struct sockaddr_in sock;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L233'>sock</a>              233 src/vfs/smbfs/helpers/lib/util_sock.c     socklen = sizeof (sock);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L234'>sock</a>              234 src/vfs/smbfs/helpers/lib/util_sock.c     memset ((char *) &amp;sock, '\0', socklen);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L236'>sock</a>              236 src/vfs/smbfs/helpers/lib/util_sock.c     ret = (ssize_t) recvfrom (fd, buf, len, 0, (struct sockaddr *) &amp;sock, &amp;socklen);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L243'>sock</a>              243 src/vfs/smbfs/helpers/lib/util_sock.c     lastip = sock.sin_addr;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L244'>sock</a>              244 src/vfs/smbfs/helpers/lib/util_sock.c     lastport = ntohs (sock.sin_port);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L745'>sock</a>              745 src/vfs/smbfs/helpers/lib/util_sock.c     struct sockaddr_in sock;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L763'>sock</a>              763 src/vfs/smbfs/helpers/lib/util_sock.c     memset ((char *) &amp;sock, '\0', sizeof (sock));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L764'>sock</a>              764 src/vfs/smbfs/helpers/lib/util_sock.c     memcpy ((char *) &amp;sock.sin_addr, (char *) hp-&gt;h_addr, hp-&gt;h_length);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L767'>sock</a>              767 src/vfs/smbfs/helpers/lib/util_sock.c     sock.sin_len = sizeof (sock);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L769'>sock</a>              769 src/vfs/smbfs/helpers/lib/util_sock.c     sock.sin_port = htons (port);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L770'>sock</a>              770 src/vfs/smbfs/helpers/lib/util_sock.c     sock.sin_family = hp-&gt;h_addrtype;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L771'>sock</a>              771 src/vfs/smbfs/helpers/lib/util_sock.c     sock.sin_addr.s_addr = socket_addr;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L789'>sock</a>              789 src/vfs/smbfs/helpers/lib/util_sock.c     if (bind (res, (struct sockaddr *) &amp;sock, sizeof (sock)) &lt; 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L795'>sock</a>              795 src/vfs/smbfs/helpers/lib/util_sock.c                                 port, inet_ntoa (sock.sin_addr), unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L359'>sock</a>              359 src/vfs/smbfs/helpers/libsmb/namequery.c     int sock, i;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L367'>sock</a>              367 src/vfs/smbfs/helpers/libsmb/namequery.c     sock = open_socket_in (SOCK_DGRAM, 0, 3, interpret_addr (lp_socket_address ()), True);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L369'>sock</a>              369 src/vfs/smbfs/helpers/libsmb/namequery.c     if (sock != -1)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L375'>sock</a>              375 src/vfs/smbfs/helpers/libsmb/namequery.c         set_socket_options (sock, so_broadcast);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L385'>sock</a>              385 src/vfs/smbfs/helpers/libsmb/namequery.c             iplist = name_query (sock, name, name_type, True, True, sendto_ip, &amp;count, NULL);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L390'>sock</a>              390 src/vfs/smbfs/helpers/libsmb/namequery.c                 close (sock);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L394'>sock</a>              394 src/vfs/smbfs/helpers/libsmb/namequery.c         close (sock);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L408'>sock</a>              408 src/vfs/smbfs/helpers/libsmb/namequery.c     int sock;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L433'>sock</a>              433 src/vfs/smbfs/helpers/libsmb/namequery.c         sock = open_socket_in (SOCK_DGRAM, 0, 3, interpret_addr (lp_socket_address ()), True);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L435'>sock</a>              435 src/vfs/smbfs/helpers/libsmb/namequery.c         if (sock != -1)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L439'>sock</a>              439 src/vfs/smbfs/helpers/libsmb/namequery.c             iplist = name_query (sock, name, name_type, False, True, wins_ip, &amp;count, NULL);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L444'>sock</a>              444 src/vfs/smbfs/helpers/libsmb/namequery.c                 close (sock);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L447'>sock</a>              447 src/vfs/smbfs/helpers/libsmb/namequery.c             close (sock);</span>
+</pre>
+</body>
+</html>

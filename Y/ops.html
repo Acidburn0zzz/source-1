@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>ops</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L684'>ops</a>               684 src/diffviewer/ydiff.c scan_line (const char *p, GArray * ops)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L745'>ops</a>               745 src/diffviewer/ydiff.c     g_array_append_val (ops, op);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L760'>ops</a>               760 src/diffviewer/ydiff.c scan_diff (FBUF * f, GArray * ops)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L773'>ops</a>               773 src/diffviewer/ydiff.c             if (scan_line (buf, ops) != 0)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L783'>ops</a>               783 src/diffviewer/ydiff.c     return ops-&gt;len;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L802'>ops</a>               802 src/diffviewer/ydiff.c              GArray * ops)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L832'>ops</a>               832 src/diffviewer/ydiff.c     rv = scan_diff (f, ops);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L856'>ops</a>               856 src/diffviewer/ydiff.c dff_reparse (diff_place_t ord, const char *filename, const GArray * ops, DFUNC printer, void *ctx)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L887'>ops</a>               887 src/diffviewer/ydiff.c     for (i = 0; i &lt; ops-&gt;len; i++)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L891'>ops</a>               891 src/diffviewer/ydiff.c         op = &amp;g_array_index (ops, DIFFCMD, i);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1736'>ops</a>              1736 src/diffviewer/ydiff.c     GArray *ops;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1763'>ops</a>              1763 src/diffviewer/ydiff.c     ops = g_array_new (FALSE, FALSE, sizeof (DIFFCMD));</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1764'>ops</a>              1764 src/diffviewer/ydiff.c     ndiff = dff_execute (dview-&gt;args, extra, dview-&gt;file[DIFF_LEFT], dview-&gt;file[DIFF_RIGHT], ops);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1767'>ops</a>              1767 src/diffviewer/ydiff.c         if (ops != NULL)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1768'>ops</a>              1768 src/diffviewer/ydiff.c             g_array_free (ops, TRUE);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1777'>ops</a>              1777 src/diffviewer/ydiff.c     rv |= dff_reparse (DIFF_LEFT, dview-&gt;file[DIFF_LEFT], ops, printer, &amp;ctx);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1781'>ops</a>              1781 src/diffviewer/ydiff.c     rv |= dff_reparse (DIFF_RIGHT, dview-&gt;file[DIFF_RIGHT], ops, printer, &amp;ctx);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1783'>ops</a>              1783 src/diffviewer/ydiff.c     if (ops != NULL)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1784'>ops</a>              1784 src/diffviewer/ydiff.c         g_array_free (ops, TRUE);</span>
+</pre>
+</body>
+</html>

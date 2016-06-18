@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>layout</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L194'>layout</a>            194 src/filemanager/layout.c check_split (panels_layout_t * layout)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L196'>layout</a>            196 src/filemanager/layout.c     if (layout-&gt;horizontal_split)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L198'>layout</a>            198 src/filemanager/layout.c         if (layout-&gt;horizontal_equal)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L199'>layout</a>            199 src/filemanager/layout.c             layout-&gt;top_panel_size = height / 2;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L200'>layout</a>            200 src/filemanager/layout.c         else if (layout-&gt;top_panel_size &lt; MINHEIGHT)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L201'>layout</a>            201 src/filemanager/layout.c             layout-&gt;top_panel_size = MINHEIGHT;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L202'>layout</a>            202 src/filemanager/layout.c         else if (layout-&gt;top_panel_size &gt; height - MINHEIGHT)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L203'>layout</a>            203 src/filemanager/layout.c             layout-&gt;top_panel_size = height - MINHEIGHT;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L207'>layout</a>            207 src/filemanager/layout.c         if (layout-&gt;vertical_equal)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L208'>layout</a>            208 src/filemanager/layout.c             layout-&gt;left_panel_size = COLS / 2;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L209'>layout</a>            209 src/filemanager/layout.c         else if (layout-&gt;left_panel_size &lt; MINWIDTH)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L210'>layout</a>            210 src/filemanager/layout.c             layout-&gt;left_panel_size = MINWIDTH;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L211'>layout</a>            211 src/filemanager/layout.c         else if (layout-&gt;left_panel_size &gt; COLS - MINWIDTH)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L212'>layout</a>            212 src/filemanager/layout.c             layout-&gt;left_panel_size = COLS - MINWIDTH;</span>
+<span class='curline'><a href='../S/src--setup.c.html#L259'>layout</a>            259 src/setup.c    } layout [] = {</span>
+<span class='curline'><a href='../S/src--setup.c.html#L608'>layout</a>            608 src/setup.c        for (i = 0; layout[i].opt_name != NULL; i++)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L609'>layout</a>            609 src/setup.c            *layout[i].opt_addr = mc_config_get_int (mc_global.main_config, CONFIG_LAYOUT_SECTION,</span>
+<span class='curline'><a href='../S/src--setup.c.html#L610'>layout</a>            610 src/setup.c                                                     layout[i].opt_name, *layout[i].opt_addr);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L907'>layout</a>            907 src/setup.c        for (i = 0; layout[i].opt_name != NULL; i++)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L908'>layout</a>            908 src/setup.c            mc_config_set_int (mc_global.main_config, CONFIG_LAYOUT_SECTION, layout[i].opt_name,</span>
+<span class='curline'><a href='../S/src--setup.c.html#L909'>layout</a>            909 src/setup.c                               *layout[i].opt_addr);</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>dpy_text_column</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L584'>dpy_text_column</a>   584 src/viewer/ascii.c     off_t dpy_text_column = view-&gt;text_wrap_mode ? 0 : view-&gt;dpy_text_column;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L662'>dpy_text_column</a>   662 src/viewer/ascii.c         if (view-&gt;text_wrap_mode &amp;&amp; (off_t) col + charwidth &gt; dpy_text_column + (off_t) width</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L676'>dpy_text_column</a>   676 src/viewer/ascii.c             if ((off_t) col &gt;= dpy_text_column &amp;&amp;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L677'>dpy_text_column</a>   677 src/viewer/ascii.c                 (off_t) col + charwidth &lt;= dpy_text_column + (off_t) width)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L681'>dpy_text_column</a>   681 src/viewer/ascii.c                 widget_move (view, top + row, left + ((off_t) col - dpy_text_column));</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L700'>dpy_text_column</a>   700 src/viewer/ascii.c             else if ((off_t) col &lt; dpy_text_column &amp;&amp; (off_t) col + charwidth &gt; dpy_text_column)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L706'>dpy_text_column</a>   706 src/viewer/ascii.c                 for (i = dpy_text_column;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L707'>dpy_text_column</a>   707 src/viewer/ascii.c                      i &lt; (off_t) col + charwidth &amp;&amp; i &lt; dpy_text_column + (off_t) width; i++)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L709'>dpy_text_column</a>   709 src/viewer/ascii.c                     widget_move (view, top + row, left + (i - dpy_text_column));</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L713'>dpy_text_column</a>   713 src/viewer/ascii.c             else if ((off_t) col &lt; dpy_text_column + (off_t) width &amp;&amp;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L714'>dpy_text_column</a>   714 src/viewer/ascii.c                      (off_t) col + charwidth &gt; dpy_text_column + (off_t) width)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L720'>dpy_text_column</a>   720 src/viewer/ascii.c                 for (i = col; i &lt; dpy_text_column + (off_t) width; i++)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L722'>dpy_text_column</a>   722 src/viewer/ascii.c                     widget_move (view, top + row, left + (i - dpy_text_column));</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L731'>dpy_text_column</a>   731 src/viewer/ascii.c         if (!view-&gt;text_wrap_mode &amp;&amp; (off_t) col &gt;= dpy_text_column + (off_t) width</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L1029'>dpy_text_column</a>  1029 src/viewer/ascii.c         view-&gt;dpy_text_column = 0;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L1045'>dpy_text_column</a>  1045 src/viewer/ascii.c         view-&gt;dpy_text_column = mcview_offset_doz (linewidth, (off_t) view-&gt;data_area.width);</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L393'>dpy_text_column</a>   393 src/viewer/display.c         cl = view-&gt;dpy_text_column + c;</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L164'>dpy_text_column</a>   164 src/viewer/internal.h     off_t dpy_text_column;      /* Number of skipped columns in non-wrap</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L178'>dpy_text_column</a>   178 src/viewer/lib.c     view-&gt;dpy_text_column = 0;</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L305'>dpy_text_column</a>   305 src/viewer/mcviewer.c         view-&gt;dpy_text_column = 0;</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L413'>dpy_text_column</a>   413 src/viewer/mcviewer.c     view-&gt;dpy_text_column = 0;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L189'>dpy_text_column</a>   189 src/viewer/move.c         view-&gt;dpy_text_column = mcview_offset_doz (view-&gt;dpy_text_column, columns);</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L218'>dpy_text_column</a>   218 src/viewer/move.c         view-&gt;dpy_text_column += columns;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L232'>dpy_text_column</a>   232 src/viewer/move.c     view-&gt;dpy_text_column = 0;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L274'>dpy_text_column</a>   274 src/viewer/move.c         view-&gt;dpy_text_column = 0;</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>input_fd</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L522'>input_fd</a>          522 lib/tty/key.c  static int input_fd;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L616'>input_fd</a>          616 lib/tty/key.c          FD_SET (input_fd, &amp;select_set); /* Add stdin */</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L617'>input_fd</a>          617 lib/tty/key.c          maxfdp = MAX (add_selects (&amp;select_set), input_fd);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L630'>input_fd</a>          630 lib/tty/key.c              if (FD_ISSET (input_fd, &amp;select_set))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1148'>input_fd</a>         1148 lib/tty/key.c      FD_SET (input_fd, &amp;Read_FD_Set);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1149'>input_fd</a>         1149 lib/tty/key.c      select (input_fd + 1, &amp;Read_FD_Set, NULL, NULL, &amp;time_out);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1378'>input_fd</a>         1378 lib/tty/key.c      input_fd = SLang_TT_Read_FD;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1712'>input_fd</a>         1712 lib/tty/key.c      FD_SET (input_fd, &amp;select_set);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1713'>input_fd</a>         1713 lib/tty/key.c      nfd = MAX (0, input_fd) + 1;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1990'>input_fd</a>         1990 lib/tty/key.c          FD_SET (input_fd, &amp;select_set);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1991'>input_fd</a>         1991 lib/tty/key.c          nfd = MAX (add_selects (&amp;select_set), MAX (0, input_fd)) + 1;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2076'>input_fd</a>         2076 lib/tty/key.c          if (FD_ISSET (input_fd, &amp;select_set))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2214'>input_fd</a>         2214 lib/tty/key.c                  FD_SET (input_fd, &amp;Read_FD_Set);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2215'>input_fd</a>         2215 lib/tty/key.c                  select (input_fd + 1, &amp;Read_FD_Set, NULL, NULL, &amp;time_out);</span>
+</pre>
+</body>
+</html>

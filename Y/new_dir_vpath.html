@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>new_dir_vpath</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--execute.c.html#L132'>new_dir_vpath</a>     132 src/execute.c  do_possible_cd (const vfs_path_t * new_dir_vpath)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L134'>new_dir_vpath</a>     134 src/execute.c      if (!do_cd (new_dir_vpath, cd_exact))</span>
+<span class='curline'><a href='../S/src--execute.c.html#L296'>new_dir_vpath</a>     296 src/execute.c      vfs_path_t *new_dir_vpath = NULL;</span>
+<span class='curline'><a href='../S/src--execute.c.html#L321'>new_dir_vpath</a>     321 src/execute.c          invoke_subshell (*argv, VISIBLY, old_vfs_dir_vpath != NULL ? NULL : &amp;new_dir_vpath);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L356'>new_dir_vpath</a>     356 src/execute.c      if (new_dir_vpath != NULL)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L358'>new_dir_vpath</a>     358 src/execute.c          do_possible_cd (new_dir_vpath);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L359'>new_dir_vpath</a>     359 src/execute.c          vfs_path_free (new_dir_vpath);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L450'>new_dir_vpath</a>     450 src/execute.c      vfs_path_t *new_dir_vpath = NULL;</span>
+<span class='curline'><a href='../S/src--execute.c.html#L481'>new_dir_vpath</a>     481 src/execute.c          new_dir_p = vfs_current_is_local ()? &amp;new_dir_vpath : NULL;</span>
+<span class='curline'><a href='../S/src--execute.c.html#L539'>new_dir_vpath</a>     539 src/execute.c          if (new_dir_vpath != NULL)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L540'>new_dir_vpath</a>     540 src/execute.c              do_possible_cd (new_dir_vpath);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L547'>new_dir_vpath</a>     547 src/execute.c      vfs_path_free (new_dir_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2874'>new_dir_vpath</a>    2874 src/filemanager/panel.c     vfs_path_t *new_dir_vpath;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2881'>new_dir_vpath</a>    2881 src/filemanager/panel.c         new_dir_vpath = vfs_path_append_new (panel-&gt;cwd_vpath, entry-&gt;fname, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2884'>new_dir_vpath</a>    2884 src/filemanager/panel.c         new_dir_vpath = vfs_path_append_new (panel-&gt;cwd_vpath, "..", (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2889'>new_dir_vpath</a>    2889 src/filemanager/panel.c     do_cd (new_dir_vpath, cd_exact);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2890'>new_dir_vpath</a>    2890 src/filemanager/panel.c     vfs_path_free (new_dir_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2925'>new_dir_vpath</a>    2925 src/filemanager/panel.c     vfs_path_t *new_dir_vpath;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2964'>new_dir_vpath</a>    2964 src/filemanager/panel.c         new_dir_vpath = vfs_path_from_str (buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2966'>new_dir_vpath</a>    2966 src/filemanager/panel.c         new_dir_vpath = vfs_path_append_new (panel-&gt;cwd_vpath, buffer, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2969'>new_dir_vpath</a>    2969 src/filemanager/panel.c     do_cd (new_dir_vpath, cd_exact);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2970'>new_dir_vpath</a>    2970 src/filemanager/panel.c     vfs_path_free (new_dir_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3268'>new_dir_vpath</a>    3268 src/filemanager/panel.c _do_panel_cd (WPanel * panel, const vfs_path_t * new_dir_vpath, enum cd_enum cd_type)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3277'>new_dir_vpath</a>    3277 src/filemanager/panel.c         element = vfs_path_get_by_index (new_dir_vpath, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3279'>new_dir_vpath</a>    3279 src/filemanager/panel.c             new_dir_vpath = panel-&gt;lwd_vpath;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3282'>new_dir_vpath</a>    3282 src/filemanager/panel.c     if (mc_chdir (new_dir_vpath) == -1)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4652'>new_dir_vpath</a>    4652 src/filemanager/panel.c do_panel_cd (WPanel * panel, const vfs_path_t * new_dir_vpath, enum cd_enum cd_type)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4656'>new_dir_vpath</a>    4656 src/filemanager/panel.c     r = _do_panel_cd (panel, new_dir_vpath, cd_type);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L5042'>new_dir_vpath</a>    5042 src/filemanager/panel.c do_cd (const vfs_path_t * new_dir_vpath, enum cd_enum exact)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L5045'>new_dir_vpath</a>    5045 src/filemanager/panel.c     const vfs_path_t *_new_dir_vpath = new_dir_vpath;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L5051'>new_dir_vpath</a>    5051 src/filemanager/panel.c         new_vpath_len = vfs_path_len (new_dir_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L5052'>new_dir_vpath</a>    5052 src/filemanager/panel.c         if (vfs_path_equal_len (new_dir_vpath, panelized_panel.root_vpath, new_vpath_len))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L180'>new_dir_vpath</a>     180 src/filemanager/panel.h gboolean do_panel_cd (WPanel * panel, const vfs_path_t * new_dir_vpath, enum cd_enum cd_type);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L194'>new_dir_vpath</a>     194 src/filemanager/panel.h gboolean do_cd (const vfs_path_t * new_dir_vpath, enum cd_enum cd_type);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1110'>new_dir_vpath</a>    1110 src/subshell/common.c invoke_subshell (const char *command, int how, vfs_path_t ** new_dir_vpath)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1116'>new_dir_vpath</a>    1116 src/subshell/common.c     if (new_dir_vpath != NULL)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1143'>new_dir_vpath</a>    1143 src/subshell/common.c     if (new_dir_vpath != NULL &amp;&amp; subshell_alive)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1149'>new_dir_vpath</a>    1149 src/subshell/common.c             *new_dir_vpath = vfs_path_from_str (subshell_cwd);  /* Make MC change to the subshell's CWD */</span>
+<span class='curline'><a href='../S/tests--src--filemanager--do_cd_command.c.html#L58'>new_dir_vpath</a>      58 tests/src/filemanager/do_cd_command.c do_cd (const vfs_path_t * new_dir_vpath, enum cd_enum cd_type)</span>
+<span class='curline'><a href='../S/tests--src--filemanager--do_cd_command.c.html#L60'>new_dir_vpath</a>      60 tests/src/filemanager/do_cd_command.c     do_cd__new_dir_vpath__captured = vfs_path_clone (new_dir_vpath);</span>
+<span class='curline'><a href='../S/tests--src--filemanager--examine_cd.c.html#L59'>new_dir_vpath</a>      59 tests/src/filemanager/examine_cd.c do_cd (const vfs_path_t * new_dir_vpath, enum cd_enum cd_type)</span>
+<span class='curline'><a href='../S/tests--src--filemanager--examine_cd.c.html#L61'>new_dir_vpath</a>      61 tests/src/filemanager/examine_cd.c     (void) new_dir_vpath;</span>
+</pre>
+</body>
+</html>

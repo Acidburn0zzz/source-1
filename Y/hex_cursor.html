@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>hex_cursor</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L109'>hex_cursor</a>        109 src/viewer/actions_cmd.c                 want_search_start = view-&gt;hex_cursor;</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L119'>hex_cursor</a>        119 src/viewer/actions_cmd.c                 want_search_start = view-&gt;hex_cursor + 1;</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L120'>hex_cursor</a>        120 src/viewer/actions_cmd.c             else if (view-&gt;hex_cursor &gt; 0)</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L121'>hex_cursor</a>        121 src/viewer/actions_cmd.c                 want_search_start = view-&gt;hex_cursor - 1;</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L227'>hex_cursor</a>        227 src/viewer/actions_cmd.c     while ((node != NULL) &amp;&amp; (node-&gt;offset != view-&gt;hex_cursor))</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L247'>hex_cursor</a>        247 src/viewer/actions_cmd.c             mcview_get_byte (view, view-&gt;hex_cursor, &amp;byte_val);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L271'>hex_cursor</a>        271 src/viewer/actions_cmd.c         node-&gt;offset = view-&gt;hex_cursor;</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L172'>hex_cursor</a>        172 src/viewer/display.c             tty_printf ("0x%08" PRIxMAX, (uintmax_t) view-&gt;hex_cursor);</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L194'>hex_cursor</a>        194 src/viewer/display.c         mcview_display_percent (view, view-&gt;hex_mode ? view-&gt;hex_cursor : view-&gt;dpy_end);</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L87'>hex_cursor</a>         87 src/viewer/hex.c     return (from == view-&gt;hex_cursor) ? MARK_CURSOR</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L253'>hex_cursor</a>        253 src/viewer/hex.c             if (from == view-&gt;hex_cursor &amp;&amp; !view-&gt;hexview_in_text)</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L361'>hex_cursor</a>        361 src/viewer/hex.c             if (from == view-&gt;hex_cursor &amp;&amp; view-&gt;hexview_in_text)</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L166'>hex_cursor</a>        166 src/viewer/internal.h     off_t hex_cursor;           /* Hexview cursor position in file */</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L135'>hex_cursor</a>        135 src/viewer/lib.c         view-&gt;hex_cursor = view-&gt;dpy_start;</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L141'>hex_cursor</a>        141 src/viewer/lib.c         view-&gt;dpy_start = mcview_bol (view, view-&gt;hex_cursor, 0);</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L142'>hex_cursor</a>        142 src/viewer/lib.c         view-&gt;hex_cursor = view-&gt;dpy_start;</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L180'>hex_cursor</a>        180 src/viewer/lib.c     view-&gt;hex_cursor = 0;</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L213'>hex_cursor</a>        213 src/viewer/lib.c                             view-&gt;hex_mode ? view-&gt;hex_cursor : view-&gt;dpy_start,</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L437'>hex_cursor</a>        437 src/viewer/mcviewer.c             view-&gt;hex_cursor = new_offset;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L76'>hex_cursor</a>         76 src/viewer/move.c         off_t cursor = view-&gt;hex_cursor;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L99'>hex_cursor</a>         99 src/viewer/move.c         view-&gt;search_start = view-&gt;hex_mode ? view-&gt;hex_cursor : view-&gt;dpy_start;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L115'>hex_cursor</a>        115 src/viewer/move.c         if (view-&gt;hex_cursor &gt;= bytes)</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L117'>hex_cursor</a>        117 src/viewer/move.c             view-&gt;hex_cursor -= bytes;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L118'>hex_cursor</a>        118 src/viewer/move.c             if (view-&gt;hex_cursor &lt; view-&gt;dpy_start)</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L127'>hex_cursor</a>        127 src/viewer/move.c             view-&gt;hex_cursor %= view-&gt;bytes_per_line;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L150'>hex_cursor</a>        150 src/viewer/move.c         for (i = 0; i &lt; lines &amp;&amp; view-&gt;hex_cursor &lt; limit; i++)</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L152'>hex_cursor</a>        152 src/viewer/move.c             view-&gt;hex_cursor += view-&gt;bytes_per_line;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L175'>hex_cursor</a>        175 src/viewer/move.c         off_t old_cursor = view-&gt;hex_cursor;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L181'>hex_cursor</a>        181 src/viewer/move.c             if (view-&gt;hex_cursor &gt; 0)</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L182'>hex_cursor</a>        182 src/viewer/move.c                 view-&gt;hex_cursor--;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L201'>hex_cursor</a>        201 src/viewer/move.c         off_t old_cursor = view-&gt;hex_cursor;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L209'>hex_cursor</a>        209 src/viewer/move.c             if (view-&gt;hex_cursor &lt; last_byte)</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L210'>hex_cursor</a>        210 src/viewer/move.c                 view-&gt;hex_cursor++;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L231'>hex_cursor</a>        231 src/viewer/move.c     view-&gt;hex_cursor = 0;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L252'>hex_cursor</a>        252 src/viewer/move.c         view-&gt;hex_cursor = mcview_offset_doz (filesize, 1);</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L273'>hex_cursor</a>        273 src/viewer/move.c         view-&gt;hex_cursor -= view-&gt;hex_cursor % view-&gt;bytes_per_line;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L293'>hex_cursor</a>        293 src/viewer/move.c         bol = mcview_offset_rounddown (view-&gt;hex_cursor, view-&gt;bytes_per_line);</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L296'>hex_cursor</a>        296 src/viewer/move.c             view-&gt;hex_cursor = bol + view-&gt;bytes_per_line - 1;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L301'>hex_cursor</a>        301 src/viewer/move.c             view-&gt;hex_cursor = mcview_offset_doz (filesize, 1);</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L318'>hex_cursor</a>        318 src/viewer/move.c         view-&gt;hex_cursor = offset;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L394'>hex_cursor</a>        394 src/viewer/move.c         view-&gt;hex_cursor = view-&gt;search_start;</span>
+</pre>
+</body>
+</html>

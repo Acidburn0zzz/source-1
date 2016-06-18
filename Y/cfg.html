@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>cfg</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--event-types.h.html#L74'>cfg</a>                74 lib/event-types.h     struct mc_config_t *cfg;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L169'>cfg</a>               169 lib/widget/dialog.c     event_data.cfg = mc_config_init (profile, TRUE);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L175'>cfg</a>               175 lib/widget/dialog.c     mc_config_deinit (event_data.cfg);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1377'>cfg</a>              1377 lib/widget/dialog.c         event_data.cfg = mc_config_init (profile, FALSE);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1383'>cfg</a>              1383 lib/widget/dialog.c         mc_config_save_file (event_data.cfg, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1384'>cfg</a>              1384 lib/widget/dialog.c         mc_config_deinit (event_data.cfg);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L144'>cfg</a>               144 lib/widget/history.c     mc_config_t *cfg;</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L152'>cfg</a>               152 lib/widget/history.c     cfg = mc_config_init (profile, TRUE);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L154'>cfg</a>               154 lib/widget/history.c     hist = history_load (cfg, input_name);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L156'>cfg</a>               156 lib/widget/history.c     mc_config_deinit (cfg);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L168'>cfg</a>               168 lib/widget/history.c history_load (mc_config_t * cfg, const char *name)</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L181'>cfg</a>               181 lib/widget/history.c     keys = mc_config_get_keys (cfg, name, &amp;keys_num);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L197'>cfg</a>               197 lib/widget/history.c         this_entry = mc_config_get_string_raw (cfg, name, key, "");</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L231'>cfg</a>               231 lib/widget/history.c history_save (mc_config_t * cfg, const char *name, GList * h)</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L248'>cfg</a>               248 lib/widget/history.c         mc_config_del_group (cfg, name);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L269'>cfg</a>               269 lib/widget/history.c             mc_config_set_string_raw (cfg, name, key, text);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L274'>cfg</a>               274 lib/widget/history.c                 mc_config_set_string_raw (cfg, name, key, text);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L276'>cfg</a>               276 lib/widget/history.c                 mc_config_set_string_raw (cfg, name, key, buffer-&gt;str);</span>
+<span class='curline'><a href='../S/lib--widget--history.h.html#L26'>cfg</a>                26 lib/widget/history.h GList *history_load (mc_config_t * cfg, const char *name);</span>
+<span class='curline'><a href='../S/lib--widget--history.h.html#L28'>cfg</a>                28 lib/widget/history.h void history_save (mc_config_t * cfg, const char *name, GList * h);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L844'>cfg</a>               844 lib/widget/input.c     in-&gt;history.list = history_load (ev-&gt;cfg, in-&gt;history.name);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L878'>cfg</a>               878 lib/widget/input.c             history_save (ev-&gt;cfg, in-&gt;history.name, in-&gt;history.list);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L241'>cfg</a>               241 src/execute.c          mc_config_t *cfg;</span>
+<span class='curline'><a href='../S/src--execute.c.html#L243'>cfg</a>               243 src/execute.c          cfg = mc_config_init (global_profile_name, TRUE);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L244'>cfg</a>               244 src/execute.c          if (cfg == NULL)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L248'>cfg</a>               248 src/execute.c              mc_config_get_string_raw (cfg, CONFIG_EXT_EDITOR_VIEWER_SECTION, command, default_str);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L250'>cfg</a>               250 src/execute.c          mc_config_deinit (cfg);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1431'>cfg</a>              1431 src/filemanager/panel.c         if (ev-&gt;cfg != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1432'>cfg</a>              1432 src/filemanager/panel.c             p-&gt;dir_history = history_load (ev-&gt;cfg, p-&gt;hist_name);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1458'>cfg</a>              1458 src/filemanager/panel.c         history_save (ev-&gt;cfg, p-&gt;hist_name, p-&gt;dir_history);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L534'>cfg</a>               534 src/filemanager/treestore.c     mc_config_t *cfg;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L536'>cfg</a>               536 src/filemanager/treestore.c     cfg = mc_config_init (file, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L537'>cfg</a>               537 src/filemanager/treestore.c     if (cfg == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L540'>cfg</a>               540 src/filemanager/treestore.c     start_buff = mc_config_get_string_list (cfg, "Special dirs", "list", NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L553'>cfg</a>               553 src/filemanager/treestore.c     mc_config_deinit (cfg);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L621'>cfg</a>               621 src/setup.c    load_keys_from_section (const char *terminal, mc_config_t * cfg)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L632'>cfg</a>               632 src/setup.c        keys = mc_config_get_keys (cfg, section_name, NULL);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L639'>cfg</a>               639 src/setup.c                valcopy = mc_config_get_string (cfg, section_name, *profile_keys, "");</span>
+<span class='curline'><a href='../S/src--setup.c.html#L640'>cfg</a>               640 src/setup.c                load_keys_from_section (valcopy, cfg);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L650'>cfg</a>               650 src/setup.c                values = mc_config_get_string_list (cfg, section_name, *profile_keys, NULL);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L666'>cfg</a>               666 src/setup.c                    value = mc_config_get_string (cfg, section_name, *profile_keys, "");</span>
+<span class='curline'><a href='../S/src--setup.c.html#L681'>cfg</a>               681 src/setup.c    load_keymap_from_section (const char *section_name, GArray * keymap, mc_config_t * cfg)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L688'>cfg</a>               688 src/setup.c        keys = mc_config_get_keys (cfg, section_name, NULL);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L694'>cfg</a>               694 src/setup.c            values = mc_config_get_string_list (cfg, section_name, *profile_keys, NULL);</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L418'>cfg</a>               418 src/vfs/sfs/sfs.c     FILE *cfg;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L424'>cfg</a>               424 src/vfs/sfs/sfs.c     cfg = fopen (mc_sfsini, "r");</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L426'>cfg</a>               426 src/vfs/sfs/sfs.c     if (cfg == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L435'>cfg</a>               435 src/vfs/sfs/sfs.c     while (sfs_no &lt; MAXFS &amp;&amp; fgets (key, sizeof (key), cfg))</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L494'>cfg</a>               494 src/vfs/sfs/sfs.c     fclose (cfg);</span>
+</pre>
+</body>
+</html>

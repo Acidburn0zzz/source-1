@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>root</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L878'>root</a>              878 lib/tty/key.c          Window root, child;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L883'>root</a>              883 lib/tty/key.c          mc_XQueryPointer (x11_display, x11_window, &amp;root, &amp;child, &amp;root_x,</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L167'>root</a>              167 lib/vfs/direntry.c     target = (MEDATA-&gt;find_entry) (me, entry-&gt;dir-&gt;super-&gt;root, linkname, follow - 1, 0);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L179'>root</a>              179 lib/vfs/direntry.c vfs_s_find_entry_tree (struct vfs_class *me, struct vfs_s_inode *root,</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L190'>root</a>              190 lib/vfs/direntry.c     while (root != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L206'>root</a>              206 lib/vfs/direntry.c         for (iter = root-&gt;subdir; iter != NULL; iter = g_list_next (iter))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L217'>root</a>              217 lib/vfs/direntry.c             ent = vfs_s_automake (me, root, path, flags);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L231'>root</a>              231 lib/vfs/direntry.c         root = ent-&gt;ino;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L241'>root</a>              241 lib/vfs/direntry.c vfs_s_find_entry_linear (struct vfs_class *me, struct vfs_s_inode *root,</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L248'>root</a>              248 lib/vfs/direntry.c     if (root-&gt;super-&gt;root != root)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L261'>root</a>              261 lib/vfs/direntry.c         ino = vfs_s_find_inode (me, root-&gt;super, dirname, follow, flags | FL_DIR);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L269'>root</a>              269 lib/vfs/direntry.c     iter = g_list_find_custom (root-&gt;subdir, path, (GCompareFunc) vfs_s_entry_compare);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L285'>root</a>              285 lib/vfs/direntry.c         ino = vfs_s_new_inode (me, root-&gt;super, vfs_s_default_stat (me, S_IFDIR | 0755));</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L294'>root</a>              294 lib/vfs/direntry.c         vfs_s_insert_entry (me, root, ent);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L296'>root</a>              296 lib/vfs/direntry.c         iter = g_list_find_custom (root-&gt;subdir, path, (GCompareFunc) vfs_s_entry_compare);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L340'>root</a>              340 lib/vfs/direntry.c     if (super-&gt;root != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L342'>root</a>              342 lib/vfs/direntry.c         vfs_s_free_inode (me, super-&gt;root);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L343'>root</a>              343 lib/vfs/direntry.c         super-&gt;root = NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1028'>root</a>             1028 lib/vfs/direntry.c         return super-&gt;root;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1030'>root</a>             1030 lib/vfs/direntry.c     ent = (MEDATA-&gt;find_entry) (me, super-&gt;root, path, follow, flags);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1145'>root</a>             1145 lib/vfs/direntry.c     if (!super-&gt;root)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1163'>root</a>             1163 lib/vfs/direntry.c         vfs_s_free_inode (me, super-&gt;root);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1164'>root</a>             1164 lib/vfs/direntry.c         super-&gt;root = vfs_s_new_inode (me, super, vfs_s_default_stat (me, S_IFDIR | 0755));</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1184'>root</a>             1184 lib/vfs/direntry.c             if (ino == ino-&gt;super-&gt;root)</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L65'>root</a>               65 lib/vfs/xdirentry.h     struct vfs_s_inode *root;</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L144'>root</a>              144 lib/vfs/xdirentry.h                                        struct vfs_s_inode * root,</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L965'>root</a>              965 src/filemanager/mountlist.c                     if (re-&gt;dev == fi.dev &amp;&amp; re-&gt;ino == fi.root)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L219'>root</a>              219 src/vfs/cpio/cpio.c     struct vfs_s_inode *root;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L264'>root</a>              264 src/vfs/cpio/cpio.c     root = vfs_s_new_inode (me, super, &amp;arch-&gt;st);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L265'>root</a>              265 src/vfs/cpio/cpio.c     root-&gt;st.st_mode = mode;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L266'>root</a>              266 src/vfs/cpio/cpio.c     root-&gt;data_offset = -1;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L267'>root</a>              267 src/vfs/cpio/cpio.c     root-&gt;st.st_nlink++;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L268'>root</a>              268 src/vfs/cpio/cpio.c     root-&gt;st.st_dev = MEDATA-&gt;rdev++;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L270'>root</a>              270 src/vfs/cpio/cpio.c     super-&gt;root = root;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L371'>root</a>              371 src/vfs/cpio/cpio.c     struct vfs_s_inode *root = super-&gt;root;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L439'>root</a>              439 src/vfs/cpio/cpio.c         root = vfs_s_find_inode (me, super, name, LINK_FOLLOW, FL_MKDIR);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L444'>root</a>              444 src/vfs/cpio/cpio.c     entry = MEDATA-&gt;find_entry (me, root, tn, LINK_FOLLOW, FL_NONE);    /* In case entry is already there */</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L476'>root</a>              476 src/vfs/cpio/cpio.c         if (root != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L499'>root</a>              499 src/vfs/cpio/cpio.c             vfs_s_insert_entry (me, root, entry);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L555'>root</a>              555 src/vfs/fish/fish.c     super-&gt;root = vfs_s_new_inode (me, super, vfs_s_default_stat (me, S_IFDIR | 0755));</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L994'>root</a>              994 src/vfs/ftpfs/ftpfs.c     super-&gt;root =</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L120'>root</a>              120 src/vfs/sftpfs/vfs_subclass.c     super-&gt;root =</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L288'>root</a>              288 src/vfs/tar/tar.c     struct vfs_s_inode *root;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L338'>root</a>              338 src/vfs/tar/tar.c     root = vfs_s_new_inode (me, archive, &amp;arch-&gt;st);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L339'>root</a>              339 src/vfs/tar/tar.c     root-&gt;st.st_mode = mode;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L340'>root</a>              340 src/vfs/tar/tar.c     root-&gt;data_offset = -1;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L341'>root</a>              341 src/vfs/tar/tar.c     root-&gt;st.st_nlink++;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L342'>root</a>              342 src/vfs/tar/tar.c     root-&gt;st.st_dev = MEDATA-&gt;rdev++;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L344'>root</a>              344 src/vfs/tar/tar.c     archive-&gt;root = root;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L49'>root</a>               49 tests/lib/vfs/vfs_s_get_path.c     struct vfs_s_inode *root;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L55'>root</a>               55 tests/lib/vfs/vfs_s_get_path.c     root = vfs_s_new_inode (vpath_element-&gt;class, super, NULL);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L56'>root</a>               56 tests/lib/vfs/vfs_s_get_path.c     super-&gt;root = root;</span>
+</pre>
+</body>
+</html>

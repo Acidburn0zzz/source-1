@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>newname</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L703'>newname</a>           703 src/vfs/smbfs/helpers/lib/util.c     pstring newname;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L707'>newname</a>           707 src/vfs/smbfs/helpers/lib/util.c     *dir2 = *wd = *base_name = *newname = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L771'>newname</a>           771 src/vfs/smbfs/helpers/lib/util.c     if (!dos_GetWd (newname))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L780'>newname</a>           780 src/vfs/smbfs/helpers/lib/util.c         pstrcat (newname, "/");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L781'>newname</a>           781 src/vfs/smbfs/helpers/lib/util.c         pstrcat (newname, p + 1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L789'>newname</a>           789 src/vfs/smbfs/helpers/lib/util.c         if (strncmp (newname, dir2, l) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L793'>newname</a>           793 src/vfs/smbfs/helpers/lib/util.c                    ("Bad access attempt? s=%s dir=%s newname=%s l=%d\n", s, dir2, newname,</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L800'>newname</a>           800 src/vfs/smbfs/helpers/lib/util.c             if (newname[l] == '/')</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L801'>newname</a>           801 src/vfs/smbfs/helpers/lib/util.c                 pstrcpy (s, newname + l + 1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L803'>newname</a>           803 src/vfs/smbfs/helpers/lib/util.c                 pstrcpy (s, newname + l);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L806'>newname</a>           806 src/vfs/smbfs/helpers/lib/util.c             pstrcpy (s, newname);</span>
+</pre>
+</body>
+</html>

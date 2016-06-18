@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>search_buffer</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L997'>search_buffer</a>     997 src/filemanager/panel.c         tty_print_string (str_fit_to_term (panel-&gt;search_buffer, w-&gt;cols - 3, J_LEFT));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2637'>search_buffer</a>    2637 src/filemanager/panel.c     l = strlen (panel-&gt;search_buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2642'>search_buffer</a>    2642 src/filemanager/panel.c             act = panel-&gt;search_buffer + l;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2643'>search_buffer</a>    2643 src/filemanager/panel.c             str_prev_noncomb_char (&amp;act, panel-&gt;search_buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2666'>search_buffer</a>    2666 src/filemanager/panel.c                 if (l + panel-&gt;search_chpoint &lt; sizeof (panel-&gt;search_buffer))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2668'>search_buffer</a>    2668 src/filemanager/panel.c                     memcpy (panel-&gt;search_buffer + l, panel-&gt;search_char, panel-&gt;search_chpoint);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2670'>search_buffer</a>    2670 src/filemanager/panel.c                     *(panel-&gt;search_buffer + l) = '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2677'>search_buffer</a>    2677 src/filemanager/panel.c     reg_exp = g_strdup_printf ("%s*", panel-&gt;search_buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2723'>search_buffer</a>    2723 src/filemanager/panel.c         act = panel-&gt;search_buffer + l;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2724'>search_buffer</a>    2724 src/filemanager/panel.c         str_prev_noncomb_char (&amp;act, panel-&gt;search_buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2749'>search_buffer</a>    2749 src/filemanager/panel.c         if (panel-&gt;search_buffer[0] == '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2750'>search_buffer</a>    2750 src/filemanager/panel.c             g_strlcpy (panel-&gt;search_buffer, panel-&gt;prev_search_buffer,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2751'>search_buffer</a>    2751 src/filemanager/panel.c                        sizeof (panel-&gt;search_buffer));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2758'>search_buffer</a>    2758 src/filemanager/panel.c         panel-&gt;search_buffer[0] = '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2775'>search_buffer</a>    2775 src/filemanager/panel.c     if (panel-&gt;search_buffer[0] != '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2776'>search_buffer</a>    2776 src/filemanager/panel.c         g_strlcpy (panel-&gt;prev_search_buffer, panel-&gt;search_buffer,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4343'>search_buffer</a>    4343 src/filemanager/panel.c     panel-&gt;search_buffer[0] = '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L137'>search_buffer</a>     137 src/filemanager/panel.h     char search_buffer[MC_MAXFILENAMELEN];</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L99'>search_buffer</a>      99 src/filemanager/tree.c     char search_buffer[MC_MAXFILENAMELEN];      /* Current search string */</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L251'>search_buffer</a>     251 src/filemanager/tree.c         tty_print_string (str_fit_to_term (tree-&gt;search_buffer, tree_cols - 2, J_LEFT_FIT));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L655'>search_buffer</a>     655 src/filemanager/tree.c     l = strlen (tree-&gt;search_buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L657'>search_buffer</a>     657 src/filemanager/tree.c         tree-&gt;search_buffer[--l] = '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L658'>search_buffer</a>     658 src/filemanager/tree.c     else if (key &amp;&amp; l &lt; sizeof (tree-&gt;search_buffer))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L660'>search_buffer</a>     660 src/filemanager/tree.c         tree-&gt;search_buffer[l] = key;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L661'>search_buffer</a>     661 src/filemanager/tree.c         tree-&gt;search_buffer[++l] = '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L664'>search_buffer</a>     664 src/filemanager/tree.c     if (!search_tree (tree, tree-&gt;search_buffer))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L665'>search_buffer</a>     665 src/filemanager/tree.c         tree-&gt;search_buffer[--l] = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L964'>search_buffer</a>     964 src/filemanager/tree.c         tree-&gt;search_buffer[0] = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1289'>search_buffer</a>    1289 src/filemanager/tree.c     tree-&gt;search_buffer[0] = 0;</span>
+</pre>
+</body>
+</html>

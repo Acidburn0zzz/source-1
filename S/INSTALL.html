@@ -1,0 +1,506 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>INSTALL</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<!-- beginning of fixed guide -->
+<div id='guide'><ul>
+<li><a href='#TOP'><img class='icon' src='../icons/first.png' alt='[^]' /></a></li>
+<li><a href='#BOTTOM'><img class='icon' src='../icons/last.png' alt='[v]' /></a></li>
+<li><a href='#TOP'><img class='icon' src='../icons/top.png' alt='[top]' /></a></li>
+<li><a href='#BOTTOM'><img class='icon' src='../icons/bottom.png' alt='[bottom]' /></a></li>
+<li><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a></li>
+<li><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a></li>
+<li class='standout'><span>INSTALL</span></li>
+</ul></div>
+<!-- end of fixed guide -->
+<a id='TOP' name='TOP'></a><h2 class='header'><a href='../mains.html'>root</a>/INSTALL</h2>
+<em class='comment'>/* <img class='icon' src='../icons/n_left.png' alt='[previous]' /><img class='icon' src='../icons/n_right.png' alt='[next]' /><img class='icon' src='../icons/n_first.png' alt='[first]' /><img class='icon' src='../icons/n_last.png' alt='[last]' /><img class='icon' src='../icons/n_top.png' alt='[top]' /><a href='#BOTTOM'><img class='icon' src='../icons/bottom.png' alt='[bottom]' /></a><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a>&nbsp;<em class='position'>[+1 INSTALL]</em> */</em>
+<hr />
+<pre>
+<a id='L1' name='L1'></a>This file contains:
+<a id='L2' name='L2'></a> 
+<a id='L3' name='L3'></a>- Build requirements for GNU Midnight Commander
+<a id='L4' name='L4'></a>- Installation instructions for GNU Midnight Commander
+<a id='L5' name='L5'></a>- Where to get more information on GNU Midnight Commander
+<a id='L6' name='L6'></a>- Notes about GNU Midnight Commander installation
+<a id='L7' name='L7'></a>- Obtaining related software
+<a id='L8' name='L8'></a> 
+<a id='L9' name='L9'></a>Build requirements for GNU Midnight Commander
+<a id='L10' name='L10'></a>----------------------------------------------------
+<a id='L11' name='L11'></a> 
+<a id='L12' name='L12'></a>- glibc
+<a id='L13' name='L13'></a>- gcc
+<a id='L14' name='L14'></a>- make
+<a id='L15' name='L15'></a>- autoconf
+<a id='L16' name='L16'></a>- automake
+<a id='L17' name='L17'></a>- libtool
+<a id='L18' name='L18'></a>- glib2
+<a id='L19' name='L19'></a>- pcre (if glib &lt; 2.14)
+<a id='L20' name='L20'></a>- slang or ncurses
+<a id='L21' name='L21'></a>- gettext
+<a id='L22' name='L22'></a>- cvs (for gettext &lt; 0.18 or if gettext &gt;= 0.18 is built with --with-cvs)
+<a id='L23' name='L23'></a>- libssh2 &gt;= 1.2.5 is required only for sftp vfs (1.2.7 if you need ssh-agent support)
+<a id='L24' name='L24'></a>- libaspell to support spell checking in the internal editor
+<a id='L25' name='L25'></a> 
+<a id='L26' name='L26'></a> 
+<a id='L27' name='L27'></a>Installation instructions for GNU Midnight Commander
+<a id='L28' name='L28'></a>----------------------------------------------------
+<a id='L29' name='L29'></a> 
+<a id='L30' name='L30'></a>The `configure' shell script attempts to guess correct values for
+<a id='L31' name='L31'></a>various system-dependent variables used during compilation, and creates
+<a id='L32' name='L32'></a>the makefiles.  It also creates a file `config.status' that you can run
+<a id='L33' name='L33'></a>in the future to recreate the current configuration.
+<a id='L34' name='L34'></a> 
+<a id='L35' name='L35'></a>To compile this package:
+<a id='L36' name='L36'></a> 
+<a id='L37' name='L37'></a>1.  Configure the package for your system.
+<a id='L38' name='L38'></a> 
+<a id='L39' name='L39'></a>Normally, you just `cd' to the directory containing the package's source
+<a id='L40' name='L40'></a>code and type `./configure'.  If you're using `csh' on an old version of
+<a id='L41' name='L41'></a>SystemV, you might need to type `sh configure' instead to prevent `csh'
+<a id='L42' name='L42'></a>from trying to execute `configure' itself.  Under AIX, you may need to
+<a id='L43' name='L43'></a>use ksh instead of sh.
+<a id='L44' name='L44'></a> 
+<a id='L45' name='L45'></a>Running `configure' takes a while.  While it is running, it prints some
+<a id='L46' name='L46'></a>messages that tell what it is doing.  If you don't want to see any
+<a id='L47' name='L47'></a>messages, run `configure' with the `--quiet' option.
+<a id='L48' name='L48'></a> 
+<a id='L49' name='L49'></a>To compile the package in a different directory than the one containing
+<a id='L50' name='L50'></a>the source code, you must use a version of `make' supporting the `VPATH'
+<a id='L51' name='L51'></a>variable, such as GNU `make'.  Change to the directory where you want
+<a id='L52' name='L52'></a>the object files and executables to go and run the `configure' script
+<a id='L53' name='L53'></a>with the full path.  If for some reason `configure' cannot find the
+<a id='L54' name='L54'></a>source code directory, run `configure' with the option `--srcdir=DIR',
+<a id='L55' name='L55'></a>where DIR is the directory that contains the source code.
+<a id='L56' name='L56'></a> 
+<a id='L57' name='L57'></a>By default, `make install' will install the package's files in
+<a id='L58' name='L58'></a>`/usr/local/bin', `/usr/local/man', etc.  You can specify an
+<a id='L59' name='L59'></a>installation prefix other than `/usr/local' by giving `configure' the
+<a id='L60' name='L60'></a>option `--prefix=PATH'.
+<a id='L61' name='L61'></a> 
+<a id='L62' name='L62'></a>You can specify separate installation prefixes for architecture specific
+<a id='L63' name='L63'></a>files and architecture-independent files.  If you give `configure' the
+<a id='L64' name='L64'></a>option `--exec-prefix=PATH', the package will use PATH as the prefix for
+<a id='L65' name='L65'></a>installing binary programs and libraries.  Data files and documentation
+<a id='L66' name='L66'></a>will still use the regular prefix.  Normally, all files are installed
+<a id='L67' name='L67'></a>using the same prefix.
+<a id='L68' name='L68'></a> 
+<a id='L69' name='L69'></a>If compiled on GNU/Linux, Midnight Commander detects if you have the gpm
+<a id='L70' name='L70'></a>library installed.  If you installed the gpm mouse library in a
+<a id='L71' name='L71'></a>non-standard place, you will need to use the --with-gpm-mouse flag with
+<a id='L72' name='L72'></a>the directory base where you installed the gpm package.
+<a id='L73' name='L73'></a> 
+<a id='L74' name='L74'></a>`configure' recognizes the following options (the list may be
+<a id='L75' name='L75'></a>incomplete, use `configure --help' to get the full list):
+<a id='L76' name='L76'></a> 
+<a id='L77' name='L77'></a>`--help'
+<a id='L78' name='L78'></a>     Print a summary of the options to `configure' and exit.
+<a id='L79' name='L79'></a> 
+<a id='L80' name='L80'></a>`--quiet'
+<a id='L81' name='L81'></a>`--silent'
+<a id='L82' name='L82'></a>     Do not print messages saying which checks are being made.
+<a id='L83' name='L83'></a> 
+<a id='L84' name='L84'></a>`--version'
+<a id='L85' name='L85'></a>     Print the version of Autoconf used to generate the `configure'
+<a id='L86' name='L86'></a>     script, and exit.
+<a id='L87' name='L87'></a> 
+<a id='L88' name='L88'></a>`--without-edit'
+<a id='L89' name='L89'></a>     Configure GNU Midnight Commander to be compiled without the
+<a id='L90' name='L90'></a>     built-in file editor.  The built-in editor is compiled in by
+<a id='L91' name='L91'></a>     default.
+<a id='L92' name='L92'></a> 
+<a id='L93' name='L93'></a>`--enable-aspell'
+<a id='L94' name='L94'></a>     This option adds spell check support in the internal editor using
+<a id='L95' name='L95'></a>     libaspell. Disabled by default.
+<a id='L96' name='L96'></a> 
+<a id='L97' name='L97'></a>`--without-gpm-mouse'
+<a id='L98' name='L98'></a>     Use this flag to disable gpm mouse support (e.g. if you want to
+<a id='L99' name='L99'></a>     use mouse only on X terminals).
+<a id='L100' name='L100'></a> 
+<a id='L101' name='L101'></a>`--with-glib-static'
+<a id='L102' name='L102'></a>     Force linking against glib statically.  This option is intended for
+<a id='L103' name='L103'></a>     building binaries for distribution purposes and may not work on
+<a id='L104' name='L104'></a>     some operating systems.
+<a id='L105' name='L105'></a> 
+<a id='L106' name='L106'></a>`--with-mmap', `--without-mmap'
+<a id='L107' name='L107'></a>     Force using or not using the mmap function.  It is currently used
+<a id='L108' name='L108'></a>     in the internal viewer.  `--with-mmap' may be useful on some
+<a id='L109' name='L109'></a>     versions of AIX where the `configure' script decides that mmap is
+<a id='L110' name='L110'></a>     broken, but it's actually suitable for the internal viewer.
+<a id='L111' name='L111'></a> 
+<a id='L112' name='L112'></a>`--with-subshell[=optional]', `--without-subshell' 
+<a id='L113' name='L113'></a>     The subshell support is by default turned on, you can disable
+<a id='L114' name='L114'></a>     this by using the --without-subshell option.  If you pass the
+<a id='L115' name='L115'></a>     =optional parameter, then the subshell support is turned off by
+<a id='L116' name='L116'></a>     default.  To turn it on, specify the `-U' option to the program.
+<a id='L117' name='L117'></a> 
+<a id='L118' name='L118'></a>`--without-x'
+<a id='L119' name='L119'></a>     By default, the Midnight Commander tries to connect to the X Window
+<a id='L120' name='L120'></a>     System events to query the status of the keyboard modifiers, such
+<a id='L121' name='L121'></a>     as Control, Shift and Alt, when invoked in a terminal emulator
+<a id='L122' name='L122'></a>     under X11.  This is necessary (but not always sufficient) to
+<a id='L123' name='L123'></a>     recognize some optional but handy key combinations like Ctrl-Home
+<a id='L124' name='L124'></a>     and Shift-Cursor keys.  Use `--without-x' if the dependency on
+<a id='L125' name='L125'></a>     X11 libraries is not desired.
+<a id='L126' name='L126'></a> 
+<a id='L127' name='L127'></a>`--disable-largefile'
+<a id='L128' name='L128'></a>     This option disables support for large files (2 gigabytes and more)
+<a id='L129' name='L129'></a>     on the systems where file operations use 32-bit offsets by default,
+<a id='L130' name='L130'></a>     but support for 64-bit offsets is available.  May be useful for
+<a id='L131' name='L131'></a>     slow processors and embedded systems.
+<a id='L132' name='L132'></a> 
+<a id='L133' name='L133'></a>`--enable-charset'
+<a id='L134' name='L134'></a>     This option adds support for selecting character set of the text in
+<a id='L135' name='L135'></a>     the internal viewer and editor and converting it on the fly.  The
+<a id='L136' name='L136'></a>     implementation of this option is currently incomplete.
+<a id='L137' name='L137'></a> 
+<a id='L138' name='L138'></a>`--disable-background'
+<a id='L139' name='L139'></a>     This option disables support for background operations.  Background
+<a id='L140' name='L140'></a>     operations allow to perform some tasks such as copying files in a
+<a id='L141' name='L141'></a>     separate background process.  Any messages from the background
+<a id='L142' name='L142'></a>     process are forwarded to the foreground process.  More advanced
+<a id='L143' name='L143'></a>     dialogs cannot be forwarded yet, so the background process uses the
+<a id='L144' name='L144'></a>     default.  Background code is known to be less stable than the rest
+<a id='L145' name='L145'></a>     of the code, so you may want to disable it at the compile time.
+<a id='L146' name='L146'></a> 
+<a id='L147' name='L147'></a>`--with-homedir'
+<a id='L148' name='L148'></a>     This option allow users  to place user config directories in any
+<a id='L149' name='L149'></a>     place. By default value is 'XDG', this mean, mc will respect XDG
+<a id='L150' name='L150'></a>     standards. If other value is specified, this will used as directory
+<a id='L151' name='L151'></a>     name (relative to $HOME if path is relative, or as is if path is
+<a id='L152' name='L152'></a>     absolute).
+<a id='L153' name='L153'></a> 
+<a id='L154' name='L154'></a>VFS options:
+<a id='L155' name='L155'></a>- - - - - -
+<a id='L156' name='L156'></a> 
+<a id='L157' name='L157'></a>`--disable-vfs'
+<a id='L158' name='L158'></a>     This option disables the Virtual File System switch code in the
+<a id='L159' name='L159'></a>     Midnight Commander and uses the standard file system calls for
+<a id='L160' name='L160'></a>     file access.  If you specify this option, you won't get the
+<a id='L161' name='L161'></a>     transparent access to archives and remote directories.
+<a id='L162' name='L162'></a> 
+<a id='L163' name='L163'></a>`--enable-vfs-cpio'
+<a id='L164' name='L164'></a>     (on by default)
+<a id='L165' name='L165'></a>     Support for cpio filesystem
+<a id='L166' name='L166'></a> 
+<a id='L167' name='L167'></a>`--enable-vfs-tar'
+<a id='L168' name='L168'></a>     (on by default)
+<a id='L169' name='L169'></a>     Support for tar filesystem
+<a id='L170' name='L170'></a> 
+<a id='L171' name='L171'></a>`--enable-vfs-ftp'
+<a id='L172' name='L172'></a>     (on by default)
+<a id='L173' name='L173'></a>     Support for FTP vfs
+<a id='L174' name='L174'></a> 
+<a id='L175' name='L175'></a>`--enable-vfs-fish'
+<a id='L176' name='L176'></a>     (on by default)
+<a id='L177' name='L177'></a>     Support for FISH vfs
+<a id='L178' name='L178'></a> 
+<a id='L179' name='L179'></a>`--enable-vfs-sftp'
+<a id='L180' name='L180'></a>     (auto)
+<a id='L181' name='L181'></a>     Support for SFTP vfs
+<a id='L182' name='L182'></a> 
+<a id='L183' name='L183'></a>`--enable-vfs-extfs'
+<a id='L184' name='L184'></a>     (on by default)
+<a id='L185' name='L185'></a>     Support for extfs
+<a id='L186' name='L186'></a> 
+<a id='L187' name='L187'></a>`--enable-vfs-sfs`
+<a id='L188' name='L188'></a>     (on by default)
+<a id='L189' name='L189'></a>     Support for sfs
+<a id='L190' name='L190'></a> 
+<a id='L191' name='L191'></a>`--enable-vfs-undelfs'
+<a id='L192' name='L192'></a>     (off by default)
+<a id='L193' name='L193'></a>     Support for ext2 undelete filesystem.
+<a id='L194' name='L194'></a>     On systems that use the ext2 or ext3 file system and have the
+<a id='L195' name='L195'></a>     libext2fs library available, this option adds support for
+<a id='L196' name='L196'></a>     recovering deleted files (the undel virtual file system).
+<a id='L197' name='L197'></a> 
+<a id='L198' name='L198'></a>`--enable-vfs-smb'
+<a id='L199' name='L199'></a>     (off by default)
+<a id='L200' name='L200'></a>     This option enables remote VFS over the SMB protocol.  A stripped
+<a id='L201' name='L201'></a>     down version of samba distributed with the sources is compiled and
+<a id='L202' name='L202'></a>     linked with the mc executable.  It is recommended that you install
+<a id='L203' name='L203'></a>     Samba client, since mc uses some files from Samba under certain
+<a id='L204' name='L204'></a>     conditions.  Please visit http://www.samba.org/ to learn more.
+<a id='L205' name='L205'></a> 
+<a id='L206' name='L206'></a> 
+<a id='L207' name='L207'></a>Screen library:
+<a id='L208' name='L208'></a>- - - - - - - -
+<a id='L209' name='L209'></a> 
+<a id='L210' name='L210'></a>You may also tell configure which screen library you want to use with
+<a id='L211' name='L211'></a>the Midnight Commander.  The configure script will use S-Lang as
+<a id='L212' name='L212'></a>default, and prefers an already installed S-Lang library over the
+<a id='L213' name='L213'></a>included one, but you can override this by using the following flag
+<a id='L214' name='L214'></a>(please note that since S-Lang is default, it is tested better than
+<a id='L215' name='L215'></a>ncurses):
+<a id='L216' name='L216'></a> 
+<a id='L217' name='L217'></a>`--with-screen={slang|ncurses}'
+<a id='L218' name='L218'></a>     Choose the library used to manage interaction with the terminal.
+<a id='L219' name='L219'></a>     `slang' means S-Lang library already installed on the system,
+<a id='L220' name='L220'></a>     `ncurses' means ncurses library already installed on the system.
+<a id='L221' name='L221'></a>     The S-Lang library is used by default if found.
+<a id='L222' name='L222'></a> 
+<a id='L223' name='L223'></a>`--with-slang-includes=[DIR]'
+<a id='L224' name='L224'></a>     Set path to SLANG includes [default=/usr/include]; make sense
+<a id='L225' name='L225'></a>     only if --with-screen=slang is used.
+<a id='L226' name='L226'></a> 
+<a id='L227' name='L227'></a>`--with-slang-libs=[DIR]'
+<a id='L228' name='L228'></a>     Set path to SLANG library [default=/usr/lib]; mke sense only
+<a id='L229' name='L229'></a>     if --with-screen=slang is used.
+<a id='L230' name='L230'></a> 
+<a id='L231' name='L231'></a>`--with-ncurses-includes=[DIR]'
+<a id='L232' name='L232'></a>     Set path to ncurses includes [default=/usr/include]; make
+<a id='L233' name='L233'></a>     sense only if --with-screen=ncurses is used;
+<a id='L234' name='L234'></a>     for /usr/local/include/ncurses specify /usr/local/include.
+<a id='L235' name='L235'></a> 
+<a id='L236' name='L236'></a>`--with-ncurses-libs=[DIR]'
+<a id='L237' name='L237'></a>     Set path to ncurses library [default=/usr/lib]; make sense
+<a id='L238' name='L238'></a>     only if --with-screen=ncurses is used.
+<a id='L239' name='L239'></a> 
+<a id='L240' name='L240'></a>Compiler options:
+<a id='L241' name='L241'></a>- - - - - - - - -
+<a id='L242' name='L242'></a> 
+<a id='L243' name='L243'></a>On systems that require unusual options for compilation or linking that
+<a id='L244' name='L244'></a>the package's `configure' script does not know about, you can give
+<a id='L245' name='L245'></a>`configure' initial values for variables by placing them in the command
+<a id='L246' name='L246'></a>line:
+<a id='L247' name='L247'></a> 
+<a id='L248' name='L248'></a>./configure CC='gcc -traditional' LIBS=-lposix
+<a id='L249' name='L249'></a> 
+<a id='L250' name='L250'></a>Here are the variables that you might want to override when running
+<a id='L251' name='L251'></a>`configure'.
+<a id='L252' name='L252'></a> 
+<a id='L253' name='L253'></a> - Variable: CC
+<a id='L254' name='L254'></a>     C compiler program.  The default is `gcc' if found, otherwise `cc'.
+<a id='L255' name='L255'></a> 
+<a id='L256' name='L256'></a> - Variable: CFLAGS
+<a id='L257' name='L257'></a>     The default flags used to build the program.
+<a id='L258' name='L258'></a> 
+<a id='L259' name='L259'></a> - Variable: INSTALL
+<a id='L260' name='L260'></a>     Program to use to install files.  The default is `install' if you
+<a id='L261' name='L261'></a>     have it, `cp' otherwise.
+<a id='L262' name='L262'></a> 
+<a id='L263' name='L263'></a>For these variables, any value given in the command line is added to the
+<a id='L264' name='L264'></a>value that `configure' decides to use:
+<a id='L265' name='L265'></a> 
+<a id='L266' name='L266'></a> - Variable: LIBS
+<a id='L267' name='L267'></a>     Libraries to link with, in the form `-lfoo -lbar...'.
+<a id='L268' name='L268'></a> 
+<a id='L269' name='L269'></a> - Variable: LDFLAGS
+<a id='L270' name='L270'></a>     Linker flags, e.g. -L&lt;lib dir&gt; if you have libraries in a
+<a id='L271' name='L271'></a>     nonstandard directory &lt;lib dir&gt;
+<a id='L272' name='L272'></a> 
+<a id='L273' name='L273'></a> - Variable: CPPFLAGS
+<a id='L274' name='L274'></a>     C/C++ preprocessor flags, e.g. -I&lt;include dir&gt; if you have
+<a id='L275' name='L275'></a>     headers in a nonstandard directory &lt;include dir&gt;
+<a id='L276' name='L276'></a> 
+<a id='L277' name='L277'></a>If you need to do unusual things to compile the package, we encourage
+<a id='L278' name='L278'></a>you to figure out how `configure' could check whether to do them, and
+<a id='L279' name='L279'></a>mail diffs or instructions to the address given in the README so we can
+<a id='L280' name='L280'></a>include them in the next release.
+<a id='L281' name='L281'></a> 
+<a id='L282' name='L282'></a>2.  Type `make' to compile the package.
+<a id='L283' name='L283'></a> 
+<a id='L284' name='L284'></a>3.  Type `make install' to install programs, data files, and the
+<a id='L285' name='L285'></a>documentation.  On GNU/Linux the console screen saver is installed as
+<a id='L286' name='L286'></a>well.
+<a id='L287' name='L287'></a> 
+<a id='L288' name='L288'></a>4.  You can remove the program binaries and object files from the source
+<a id='L289' name='L289'></a>directory by typing `make clean'.  If you want to clean the source tree
+<a id='L290' name='L290'></a>completely, so that it contains only those files that should be packaged
+<a id='L291' name='L291'></a>in the archive, issue `make distclean'.  If you've run configure in a
+<a id='L292' name='L292'></a>different directory than the source tree, distclean won't remove your
+<a id='L293' name='L293'></a>*.o and linked programs in that directory.
+<a id='L294' name='L294'></a> 
+<a id='L295' name='L295'></a>5.  GNU Midnight Commander allows you to stay in the last current
+<a id='L296' name='L296'></a>directory after exiting MC.  This is done with a shell function, the man
+<a id='L297' name='L297'></a>page has more information about this.
+<a id='L298' name='L298'></a> 
+<a id='L299' name='L299'></a>The file `configure.in' is used to create `configure' by a program
+<a id='L300' name='L300'></a>called `autoconf'.  You only need it if you want to regenerate
+<a id='L301' name='L301'></a>`configure' using a newer version of `autoconf'.
+<a id='L302' name='L302'></a> 
+<a id='L303' name='L303'></a> 
+<a id='L304' name='L304'></a>Where to get more information on GNU Midnight Commander
+<a id='L305' name='L305'></a>-------------------------------------------------------
+<a id='L306' name='L306'></a> 
+<a id='L307' name='L307'></a>There are two mailing lists for the program:
+<a id='L308' name='L308'></a> 
+<a id='L309' name='L309'></a>mc@gnome.org:        Discussion on GNU Midnight Commander file manager.
+<a id='L310' name='L310'></a>mc-devel@gnome.org:  Discussion between the developers of the program.
+<a id='L311' name='L311'></a> 
+<a id='L312' name='L312'></a>To subscribe to the mailing lists, visit their respective pages:
+<a id='L313' name='L313'></a> 
+<a id='L314' name='L314'></a>http://mail.gnome.org/mailman/listinfo/mc/
+<a id='L315' name='L315'></a>http://mail.gnome.org/mailman/listinfo/mc-devel/
+<a id='L316' name='L316'></a> 
+<a id='L317' name='L317'></a> 
+<a id='L318' name='L318'></a>Notes about GNU Midnight Commander installation
+<a id='L319' name='L319'></a>-----------------------------------------------
+<a id='L320' name='L320'></a> 
+<a id='L321' name='L321'></a>GNU Midnight Commander has been run in the following configurations:
+<a id='L322' name='L322'></a> 
+<a id='L323' name='L323'></a>i386-*-linux
+<a id='L324' name='L324'></a>sparc-*-linux
+<a id='L325' name='L325'></a>alpha-*-linux
+<a id='L326' name='L326'></a>powerpc-*-linux
+<a id='L327' name='L327'></a>mips-dec-ultrix4.3
+<a id='L328' name='L328'></a>mips-dec-{open,net}bsd1.0
+<a id='L329' name='L329'></a>mips-sgi-irix5.2
+<a id='L330' name='L330'></a>mips-sgi-irix5.3
+<a id='L331' name='L331'></a>powerpc-ibm-aix5.3.0.0 (IBM XL C, IBM XL C/C++)
+<a id='L332' name='L332'></a>sparc-sun-sunos4.1
+<a id='L333' name='L333'></a>sparc-sun-netbsd1.0
+<a id='L334' name='L334'></a>sparc-sun-solaris2.3
+<a id='L335' name='L335'></a>hppa-hp-hpux9
+<a id='L336' name='L336'></a>hppa-hp-hpux7
+<a id='L337' name='L337'></a>m68k-apple-aux
+<a id='L338' name='L338'></a>mc88110-aviion-dgux5.4
+<a id='L339' name='L339'></a>i386-*-bsdi2
+<a id='L340' name='L340'></a>i386-*-freebsd4.3
+<a id='L341' name='L341'></a>i386-*-openbsd2.9
+<a id='L342' name='L342'></a> 
+<a id='L343' name='L343'></a>Midnight Commander is written in a portable manner and uses GNU Autoconf
+<a id='L344' name='L344'></a>for configuration, so it is expected to compile without changes on many
+<a id='L345' name='L345'></a>other operating systems.
+<a id='L346' name='L346'></a> 
+<a id='L347' name='L347'></a>You will need an ANSI C Compiler (such as GCC) and glib library to
+<a id='L348' name='L348'></a>compile the source.  GNU Midnight Commander now comes with the S-Lang
+<a id='L349' name='L349'></a>screen manager, a fast screen manager, but you may want to use the
+<a id='L350' name='L350'></a>already installed S-Lang or ncurses library.
+<a id='L351' name='L351'></a> 
+<a id='L352' name='L352'></a>If you insist on using ncurses, it's recommended to use ncurses 4.1 and
+<a id='L353' name='L353'></a>above, since the older versions don't support resizing in the xterm
+<a id='L354' name='L354'></a>window.
+<a id='L355' name='L355'></a> 
+<a id='L356' name='L356'></a>GNU Midnight Commander comes with the mouse support on xterms and in the
+<a id='L357' name='L357'></a>Linux console.  In order to take advantage of the mouse support on the
+<a id='L358' name='L358'></a>Linux console you will need the gpm mouse server (see the section
+<a id='L359' name='L359'></a>"Obtaining related software" in this file).
+<a id='L360' name='L360'></a> 
+<a id='L361' name='L361'></a>Once you get gpm, compile it and install it, then you will have to
+<a id='L362' name='L362'></a>specify the `--with-gpm-mouse' flag to the configure program if you
+<a id='L363' name='L363'></a>installed it in a non-standard directory.  If you installed the gpm
+<a id='L364' name='L364'></a>package under /usr or /usr/local, you don't need to specify this flag;
+<a id='L365' name='L365'></a>configure will find gpm for you.  The support for mice on xterms is
+<a id='L366' name='L366'></a>always compiled in.
+<a id='L367' name='L367'></a> 
+<a id='L368' name='L368'></a>We are working on further enhancements to the program, but we're not
+<a id='L369' name='L369'></a>sure which ones must go first.  If you would like to point us in the
+<a id='L370' name='L370'></a>Right Direction we will be glad to hear from you.
+<a id='L371' name='L371'></a> 
+<a id='L372' name='L372'></a>If you happen to find a feature that doesn't do what you expect, please
+<a id='L373' name='L373'></a>write to mc@gnome.org telling as much as you can about the problem
+<a id='L374' name='L374'></a>you're experiencing.  Please don't send personal messages to the
+<a id='L375' name='L375'></a>maintainers.
+<a id='L376' name='L376'></a> 
+<a id='L377' name='L377'></a> 
+<a id='L378' name='L378'></a>Obtaining related software
+<a id='L379' name='L379'></a>--------------------------
+<a id='L380' name='L380'></a> 
+<a id='L381' name='L381'></a>glib
+<a id='L382' name='L382'></a>----
+<a id='L383' name='L383'></a> 
+<a id='L384' name='L384'></a>The only "hard" dependency of GNU Midnight Commander is glib.  You can
+<a id='L385' name='L385'></a>get glib from
+<a id='L386' name='L386'></a> 
+<a id='L387' name='L387'></a>ftp://ftp.gnome.org/pub/gnome/sources/glib/
+<a id='L388' name='L388'></a> 
+<a id='L389' name='L389'></a>Minimal version of glib: 2.26.x
+<a id='L390' name='L390'></a>Recommended version: 2.26.x and higher.
+<a id='L391' name='L391'></a> 
+<a id='L392' name='L392'></a>Newer versions may work, but haven't been tested.
+<a id='L393' name='L393'></a> 
+<a id='L394' name='L394'></a>PCRE
+<a id='L395' name='L395'></a>----
+<a id='L396' name='L396'></a> 
+<a id='L397' name='L397'></a>If the version of glib you have installed is older than 2.14.x, then you
+<a id='L398' name='L398'></a>also need to install PCRE library.
+<a id='L399' name='L399'></a> 
+<a id='L400' name='L400'></a>You can get PCRE from
+<a id='L401' name='L401'></a> 
+<a id='L402' name='L402'></a>http://www.pcre.org/
+<a id='L403' name='L403'></a> 
+<a id='L404' name='L404'></a>Terminal database
+<a id='L405' name='L405'></a>-----------------
+<a id='L406' name='L406'></a> 
+<a id='L407' name='L407'></a>There are many incomplete terminal databases out there, however, a
+<a id='L408' name='L408'></a>complete terminfo is bundled with ncurses.  (It is simple to generate
+<a id='L409' name='L409'></a>the termcap database using the infocmp utility in ncurses).
+<a id='L410' name='L410'></a> 
+<a id='L411' name='L411'></a>Some terminfo data are included with the mc distribution (lib/*.ti).
+<a id='L412' name='L412'></a>Particularly linux, xterm and vt100. Use e.g. ''tic linux.ti'' to use
+<a id='L413' name='L413'></a>them.
+<a id='L414' name='L414'></a> 
+<a id='L415' name='L415'></a>If you want to run mc on xterm/color_xterm/ansi_xterm (not rxvt), then
+<a id='L416' name='L416'></a>you might read lib/README.xterm for further information.
+<a id='L417' name='L417'></a> 
+<a id='L418' name='L418'></a>Screen libraries
+<a id='L419' name='L419'></a>----------------
+<a id='L420' name='L420'></a> 
+<a id='L421' name='L421'></a>GNU Midnight Commander can use the included version of S-Lang, but you
+<a id='L422' name='L422'></a>can get the latest version here:
+<a id='L423' name='L423'></a> 
+<a id='L424' name='L424'></a>http://www.s-lang.org/
+<a id='L425' name='L425'></a> 
+<a id='L426' name='L426'></a>Alternatively, you can use ncurses:
+<a id='L427' name='L427'></a> 
+<a id='L428' name='L428'></a>http://www.gnu.org/software/ncurses/ncurses.html
+<a id='L429' name='L429'></a> 
+<a id='L430' name='L430'></a>Mouse support
+<a id='L431' name='L431'></a>-------------
+<a id='L432' name='L432'></a> 
+<a id='L433' name='L433'></a>The general purpose mouse (gpm) daemon is available from
+<a id='L434' name='L434'></a> 
+<a id='L435' name='L435'></a>http://unix.schottelius.org/gpm/
+<a id='L436' name='L436'></a> 
+<a id='L437' name='L437'></a>Compiler
+<a id='L438' name='L438'></a>--------
+<a id='L439' name='L439'></a> 
+<a id='L440' name='L440'></a>If your C compiler is not powerful enough to compile GNU Midnight
+<a id='L441' name='L441'></a>Commander, you should report is as a bug to the GNU Midnight Commander
+<a id='L442' name='L442'></a>team.  Sometimes there is no solution than upgrading to a modern and
+<a id='L443' name='L443'></a>free compiler - GCC (Compiler Collection):
+<a id='L444' name='L444'></a> 
+<a id='L445' name='L445'></a>http://gcc.gnu.org/
+<a id='L446' name='L446'></a> 
+<a id='L447' name='L447'></a>AIX
+<a id='L448' name='L448'></a>---
+<a id='L449' name='L449'></a>Currently you can not use gcc 4.2.4 (and probably other versions) on
+<a id='L450' name='L450'></a>AIX to compile the S-Lang version. Please use IBM XL C or IBM XL C/C++
+<a id='L451' name='L451'></a>instead.
+<a id='L452' name='L452'></a> 
+<a id='L453' name='L453'></a>If you compile a ncurses version you need to set TERM=dtterm to get
+<a id='L454' name='L454'></a>working color support. Furthermore it is important to specify the
+<a id='L455' name='L455'></a>--with-ncurses-includes/--with-ncurses-lib parameters because otherwise
+<a id='L456' name='L456'></a>mc will pick up term.h from AIX which does not work with the ncurses
+<a id='L457' name='L457'></a>library.
+<a id='L458' name='L458'></a> 
+<a id='L459' name='L459'></a>The AIX S-Lang build was tested with S-Lang 2.0.7. Later versions may
+<a id='L460' name='L460'></a>also work but are not tested yet.
+<a id='L461' name='L461'></a> 
+<a id='L462' name='L462'></a>Here is an example for S-Lang, it is assumed that the S-Lang library
+<a id='L463' name='L463'></a>is installed under /user/local and that you also want want to install
+<a id='L464' name='L464'></a>to /usr/local:
+<a id='L465' name='L465'></a> 
+<a id='L466' name='L466'></a>  export CC=cc_r
+<a id='L467' name='L467'></a>  export CXX=xlC_r
+<a id='L468' name='L468'></a>  export CONFIG_SHELL=/usr/bin/bash (if installed)
+<a id='L469' name='L469'></a>  export SHELL=/usr/bin/bash        (if installed)
+<a id='L470' name='L470'></a> 
+<a id='L471' name='L471'></a>  ./configure \
+<a id='L472' name='L472'></a>     --prefix=/usr/local \
+<a id='L473' name='L473'></a>     --with-screen=slang \
+<a id='L474' name='L474'></a>     --with-slang-includes=/usr/local/include \
+<a id='L475' name='L475'></a>     --with-slang-libs=/usr/local/lib
+</pre>
+<hr />
+<a id='BOTTOM' name='BOTTOM'></a>
+<em class='comment'>/* <img class='icon' src='../icons/n_left.png' alt='[previous]' /><img class='icon' src='../icons/n_right.png' alt='[next]' /><img class='icon' src='../icons/n_first.png' alt='[first]' /><img class='icon' src='../icons/n_last.png' alt='[last]' /><a href='#TOP'><img class='icon' src='../icons/top.png' alt='[top]' /></a><img class='icon' src='../icons/n_bottom.png' alt='[bottom]' /><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a>&nbsp;<em class='position'>[+475 INSTALL]</em> */</em>
+</body>
+</html>

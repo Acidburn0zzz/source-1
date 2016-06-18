@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>src</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--strutil.h.html#L598'>src</a>               598 lib/strutil.h  str_move (char *dest, const char *src)</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L603'>src</a>               603 lib/strutil.h      assert (dest &lt;= src);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L606'>src</a>               606 lib/strutil.h      n = strlen (src) + 1;       /* + '\0' */</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L608'>src</a>               608 lib/strutil.h      return (char *) memmove (dest, src, n);</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L49'>src</a>                49 lib/strutil/strescape.c strutils_escape (const char *src, gsize src_len, const char *escaped_chars,</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L55'>src</a>                55 lib/strutil/strescape.c     if (src == NULL)</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L58'>src</a>                58 lib/strutil/strescape.c     if (*src == '\0')</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L64'>src</a>                64 lib/strutil/strescape.c         src_len = strlen (src);</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L70'>src</a>                70 lib/strutil/strescape.c             switch (src[curr_index])</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L89'>src</a>                89 lib/strutil/strescape.c         if (strchr (escaped_chars, (int) src[curr_index]))</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L92'>src</a>                92 lib/strutil/strescape.c         g_string_append_c (ret, src[curr_index]);</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L99'>src</a>                99 lib/strutil/strescape.c strutils_unescape (const char *src, gsize src_len, const char *unescaped_chars,</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L105'>src</a>               105 lib/strutil/strescape.c     if (src == NULL)</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L108'>src</a>               108 lib/strutil/strescape.c     if (*src == '\0')</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L114'>src</a>               114 lib/strutil/strescape.c         src_len = strlen (src);</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L119'>src</a>               119 lib/strutil/strescape.c         if (src[curr_index] != '\\')</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L121'>src</a>               121 lib/strutil/strescape.c             g_string_append_c (ret, src[curr_index]);</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L127'>src</a>               127 lib/strutil/strescape.c         if (unescaped_chars == ESCAPE_SHELL_CHARS &amp;&amp; src[curr_index] == '$')</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L136'>src</a>               136 lib/strutil/strescape.c                 switch (src[curr_index])</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L155'>src</a>               155 lib/strutil/strescape.c             if (strchr (unescaped_chars, (int) src[curr_index]) == NULL)</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L159'>src</a>               159 lib/strutil/strescape.c         g_string_append_c (ret, src[curr_index]);</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L161'>src</a>               161 lib/strutil/strescape.c     g_string_append_c (ret, src[curr_index]);</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L178'>src</a>               178 lib/strutil/strescape.c strutils_shell_escape (const char *src)</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L180'>src</a>               180 lib/strutil/strescape.c     return strutils_escape (src, -1, ESCAPE_SHELL_CHARS, FALSE);</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L186'>src</a>               186 lib/strutil/strescape.c strutils_glob_escape (const char *src)</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L188'>src</a>               188 lib/strutil/strescape.c     return strutils_escape (src, -1, ESCAPE_GLOB_CHARS, TRUE);</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L194'>src</a>               194 lib/strutil/strescape.c strutils_regex_escape (const char *src)</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L196'>src</a>               196 lib/strutil/strescape.c     return strutils_escape (src, -1, ESCAPE_REGEX_CHARS, TRUE);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1279'>src</a>              1279 src/diffviewer/ydiff.c cvt_cpy (char *dst, const char *src, size_t srcsize, int base, int ts)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1283'>src</a>              1283 src/diffviewer/ydiff.c     for (i = 0; srcsize != 0; i++, src++, dst++, srcsize--)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1285'>src</a>              1285 src/diffviewer/ydiff.c         *dst = *src;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1286'>src</a>              1286 src/diffviewer/ydiff.c         if (*src == '\t')</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1323'>src</a>              1323 src/diffviewer/ydiff.c     const char *src = *_src;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1325'>src</a>              1325 src/diffviewer/ydiff.c     for (i = 0; i &lt; dstsize &amp;&amp; srcsize != 0; i++, src++, dst++, srcsize--)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1327'>src</a>              1327 src/diffviewer/ydiff.c         *dst = *src;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1328'>src</a>              1328 src/diffviewer/ydiff.c         if (*src == '\t')</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1341'>src</a>              1341 src/diffviewer/ydiff.c     *_src = src;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1362'>src</a>              1362 src/diffviewer/ydiff.c cvt_mget (const char *src, size_t srcsize, char *dst, int dstsize, int skip, int ts,</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1367'>src</a>              1367 src/diffviewer/ydiff.c     if (src != NULL)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1373'>src</a>              1373 src/diffviewer/ydiff.c         for (i = 0; dstsize != 0 &amp;&amp; srcsize != 0 &amp;&amp; *src != '\n'; i++, src++, srcsize--)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1375'>src</a>              1375 src/diffviewer/ydiff.c             if (*src == '\t')</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1392'>src</a>              1392 src/diffviewer/ydiff.c             else if (src[0] == '\r' &amp;&amp; (srcsize == 1 || src[1] == '\n'))</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1416'>src</a>              1416 src/diffviewer/ydiff.c                 (void) dview_get_utf (src, &amp;ch, &amp;ch_length);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1427'>src</a>              1427 src/diffviewer/ydiff.c                 *dst++ = *src;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1461'>src</a>              1461 src/diffviewer/ydiff.c cvt_mgeta (const char *src, size_t srcsize, char *dst, int dstsize, int skip, int ts,</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1466'>src</a>              1466 src/diffviewer/ydiff.c     if (src != NULL)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1472'>src</a>              1472 src/diffviewer/ydiff.c         for (i = 0, k = 0; dstsize != 0 &amp;&amp; srcsize != 0 &amp;&amp; *src != '\n'; i++, k++, src++, srcsize--)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1474'>src</a>              1474 src/diffviewer/ydiff.c             if (*src == '\t')</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1492'>src</a>              1492 src/diffviewer/ydiff.c             else if (src[0] == '\r' &amp;&amp; (srcsize == 1 || src[1] == '\n'))</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1519'>src</a>              1519 src/diffviewer/ydiff.c                 (void) dview_get_utf (src, &amp;ch, &amp;ch_length);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1530'>src</a>              1530 src/diffviewer/ydiff.c                 *dst++ = *src;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L351'>src</a>               351 src/filemanager/cmd.c     char *dest = NULL, *src = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L357'>src</a>               357 src/filemanager/cmd.c         src = g_strdup_printf (_("Link %s to:"), str_trunc (fname, 46));</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L359'>src</a>               359 src/filemanager/cmd.c             input_expand_dialog (_("Link"), src, MC_HISTORY_FM_LINK, "", INPUT_COMPLETE_FILENAMES);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L390'>src</a>               390 src/filemanager/cmd.c         symlink_dialog (s, d, &amp;dest, &amp;src);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L394'>src</a>               394 src/filemanager/cmd.c         if (!dest || !*dest || !src || !*src)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L400'>src</a>               400 src/filemanager/cmd.c         s = vfs_path_from_str (src);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L412'>src</a>               412 src/filemanager/cmd.c     g_free (src);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L105'>src</a>               105 src/vfs/smbfs/helpers/include/proto.h void putip (void *dest, void *src);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L227'>src</a>               227 src/vfs/smbfs/helpers/include/proto.h char *safe_strcpy (char *dest, const char *src, size_t maxlength);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L228'>src</a>               228 src/vfs/smbfs/helpers/include/proto.h char *safe_strcat (char *dest, const char *src, size_t maxlength);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L229'>src</a>               229 src/vfs/smbfs/helpers/include/proto.h char *StrCpy (char *dest, const char *src);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L230'>src</a>               230 src/vfs/smbfs/helpers/include/proto.h char *StrnCpy (char *dest, const char *src, size_t n);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L231'>src</a>               231 src/vfs/smbfs/helpers/include/proto.h char *strncpyn (char *dest, const char *src, size_t n, char c);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L234'>src</a>               234 src/vfs/smbfs/helpers/include/proto.h BOOL string_init (char **dest, const char *src);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L236'>src</a>               236 src/vfs/smbfs/helpers/include/proto.h BOOL string_set (char **dest, const char *src);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L217'>src</a>               217 src/vfs/smbfs/helpers/lib/util.c putip (void *dest, void *src)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L219'>src</a>               219 src/vfs/smbfs/helpers/lib/util.c     memcpy (dest, src, 4);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L798'>src</a>               798 src/vfs/smbfs/helpers/lib/util_str.c safe_strcpy (char *dest, const char *src, size_t maxlength)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L808'>src</a>               808 src/vfs/smbfs/helpers/lib/util_str.c     if (!src)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L814'>src</a>               814 src/vfs/smbfs/helpers/lib/util_str.c     len = strlen (src);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L819'>src</a>               819 src/vfs/smbfs/helpers/lib/util_str.c                    (int) (len - maxlength), src));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L823'>src</a>               823 src/vfs/smbfs/helpers/lib/util_str.c     memcpy (dest, src, len);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L833'>src</a>               833 src/vfs/smbfs/helpers/lib/util_str.c safe_strcat (char *dest, const char *src, size_t maxlength)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L843'>src</a>               843 src/vfs/smbfs/helpers/lib/util_str.c     if (!src)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L848'>src</a>               848 src/vfs/smbfs/helpers/lib/util_str.c     src_len = strlen (src);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L854'>src</a>               854 src/vfs/smbfs/helpers/lib/util_str.c                    (int) (src_len + dest_len - maxlength), src));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L858'>src</a>               858 src/vfs/smbfs/helpers/lib/util_str.c     memcpy (&amp;dest[dest_len], src, src_len);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L867'>src</a>               867 src/vfs/smbfs/helpers/lib/util_str.c StrCpy (char *dest, const char *src)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L872'>src</a>               872 src/vfs/smbfs/helpers/lib/util_str.c     SMB_ASSERT (dest &amp;&amp; src);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L876'>src</a>               876 src/vfs/smbfs/helpers/lib/util_str.c     if (!src)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L881'>src</a>               881 src/vfs/smbfs/helpers/lib/util_str.c     while ((*d++ = *src++));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L889'>src</a>               889 src/vfs/smbfs/helpers/lib/util_str.c StrnCpy (char *dest, const char *src, size_t n)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L894'>src</a>               894 src/vfs/smbfs/helpers/lib/util_str.c     if (!src)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L899'>src</a>               899 src/vfs/smbfs/helpers/lib/util_str.c     while (n-- &amp;&amp; (*d++ = *src++));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L910'>src</a>               910 src/vfs/smbfs/helpers/lib/util_str.c strncpyn (char *dest, const char *src, size_t n, char c)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L915'>src</a>               915 src/vfs/smbfs/helpers/lib/util_str.c     p = strchr (src, c);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L922'>src</a>               922 src/vfs/smbfs/helpers/lib/util_str.c     str_len = PTR_DIFF (p, src);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L923'>src</a>               923 src/vfs/smbfs/helpers/lib/util_str.c     strncpy (dest, src, MIN (n, str_len));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L1017'>src</a>              1017 src/vfs/smbfs/helpers/lib/util_str.c string_init (char **dest, const char *src)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L1020'>src</a>              1020 src/vfs/smbfs/helpers/lib/util_str.c     if (!src)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L1021'>src</a>              1021 src/vfs/smbfs/helpers/lib/util_str.c         src = "";</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L1023'>src</a>              1023 src/vfs/smbfs/helpers/lib/util_str.c     l = strlen (src);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L1047'>src</a>              1047 src/vfs/smbfs/helpers/lib/util_str.c         pstrcpy (*dest, src);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L1072'>src</a>              1072 src/vfs/smbfs/helpers/lib/util_str.c string_set (char **dest, const char *src)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L1076'>src</a>              1076 src/vfs/smbfs/helpers/lib/util_str.c     return (string_init (dest, src));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbencrypt.c.html#L79'>src</a>                79 src/vfs/smbfs/helpers/libsmb/smbencrypt.c _my_mbstowcs (int16 * dst, uchar * src, int len)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbencrypt.c.html#L86'>src</a>                86 src/vfs/smbfs/helpers/libsmb/smbencrypt.c         val = *src;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbencrypt.c.html#L89'>src</a>                89 src/vfs/smbfs/helpers/libsmb/smbencrypt.c         src++;</span>
+</pre>
+</body>
+</html>

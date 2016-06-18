@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>mod</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L997'>mod</a>               997 lib/tty/key.c      unsigned int mod = code &amp; KEY_M_MASK;       /* modifier */</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1009'>mod</a>              1009 lib/tty/key.c          mod |= get_modifier ();</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1024'>mod</a>              1024 lib/tty/key.c          mod = KEY_M_SHIFT;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1041'>mod</a>              1041 lib/tty/key.c          mod &amp;= ~KEY_M_CTRL;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1045'>mod</a>              1045 lib/tty/key.c          mod |= KEY_M_CTRL;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1051'>mod</a>              1051 lib/tty/key.c      if ((c == 127) &amp;&amp; (mod == 0))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1053'>mod</a>              1053 lib/tty/key.c          mod |= get_modifier ();</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1057'>mod</a>              1057 lib/tty/key.c      if ((c == '0') &amp;&amp; (mod == 0))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1061'>mod</a>              1061 lib/tty/key.c              mod = KEY_M_SHIFT;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1066'>mod</a>              1066 lib/tty/key.c      if ((c == '.') &amp;&amp; (mod == 0))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1070'>mod</a>              1070 lib/tty/key.c              mod = KEY_M_SHIFT;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1087'>mod</a>              1087 lib/tty/key.c          mod &amp;= ~KEY_M_CTRL;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1094'>mod</a>              1094 lib/tty/key.c          mod &amp;= ~KEY_M_CTRL;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1099'>mod</a>              1099 lib/tty/key.c      if (c == KEY_BACKSPACE &amp;&amp; (mod &amp; KEY_M_SHIFT))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1101'>mod</a>              1101 lib/tty/key.c          mod &amp;= ~KEY_M_SHIFT;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1105'>mod</a>              1105 lib/tty/key.c      if (c &gt;= KEY_F (1) &amp;&amp; c &lt;= KEY_F (10) &amp;&amp; (mod &amp; KEY_M_SHIFT))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1113'>mod</a>              1113 lib/tty/key.c          mod &amp;= ~KEY_M_SHIFT;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1132'>mod</a>              1132 lib/tty/key.c      return (mod | c);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1584'>mod</a>              1584 lib/tty/key.c      unsigned int mod = keycode &amp; KEY_M_MASK;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1595'>mod</a>              1595 lib/tty/key.c          if (mod &amp; KEY_M_ALT)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1603'>mod</a>              1603 lib/tty/key.c          if (mod &amp; KEY_M_CTRL)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1615'>mod</a>              1615 lib/tty/key.c          if (mod &amp; KEY_M_SHIFT)</span>
+</pre>
+</body>
+</html>

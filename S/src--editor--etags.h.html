@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>src/editor/etags.h</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<!-- beginning of fixed guide -->
+<div id='guide'><ul>
+<li><a href='#TOP'><img class='icon' src='../icons/first.png' alt='[^]' /></a></li>
+<li><a href='#BOTTOM'><img class='icon' src='../icons/last.png' alt='[v]' /></a></li>
+<li><a href='#TOP'><img class='icon' src='../icons/top.png' alt='[top]' /></a></li>
+<li><a href='#BOTTOM'><img class='icon' src='../icons/bottom.png' alt='[bottom]' /></a></li>
+<li><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a></li>
+<li><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a></li>
+<li class='standout'><span><a href='../files/src.html'>src</a>/<a href='../files/src--editor.html'>editor</a>/etags.h</span></li>
+</ul></div>
+<!-- end of fixed guide -->
+<a id='TOP' name='TOP'></a><h2 class='header'><a href='../mains.html'>root</a>/<a href='../files/src.html'>src</a>/<a href='../files/src--editor.html'>editor</a>/etags.h</h2>
+<em class='comment'>/* <img class='icon' src='../icons/n_left.png' alt='[previous]' /><img class='icon' src='../icons/n_right.png' alt='[next]' /><img class='icon' src='../icons/n_first.png' alt='[first]' /><img class='icon' src='../icons/n_last.png' alt='[last]' /><img class='icon' src='../icons/n_top.png' alt='[top]' /><a href='#BOTTOM'><img class='icon' src='../icons/bottom.png' alt='[bottom]' /></a><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a>&nbsp;<em class='position'>[+1 src/editor/etags.h]</em> */</em>
+<hr />
+<h2 class='header'><a href='../J/etags.h.html' title='Multiple included from 3 places.'>INCLUDED FROM</a></h2>
+<hr />
+<pre>
+<a id='L1' name='L1'></a>   1 <em class='sharp'>#ifndef</em> <a href='../S/src--editor--etags.h.html#L2' title='Defined at 2 in src/editor/etags.h.'>MC__EDIT_ETAGS_H</a>
+<a id='L2' name='L2'></a>   2 <em class='sharp'>#define</em> <a href='../S/src--editor--etags.h.html#L1' title='Referred from 1 in src/editor/etags.h.'>MC__EDIT_ETAGS_H</a> 1
+<a id='L3' name='L3'></a>   3 
+<a id='L4' name='L4'></a>   4 <em class='sharp'>#include</em> &lt;sys/types.h&gt;          <em class='comment'>/* size_t */</em>
+<a id='L5' name='L5'></a>   5 <em class='sharp'>#include</em> "<a href='lib--global.h.html'>lib/global.h</a>"         <em class='comment'>/* include &lt;glib.h&gt; */</em>
+<a id='L6' name='L6'></a>   6 
+<a id='L7' name='L7'></a>   7 <em class='comment'>/*** typedefs(not structures) and defined constants **********************************************/</em>
+<a id='L8' name='L8'></a>   8 
+<a id='L9' name='L9'></a>   9 <em class='sharp'>#define</em> <a href='../S/src--editor--editcmd.c.html#L3556' title='Referred from 3556 in src/editor/editcmd.c.'>MAX_WIDTH_DEF_DIALOG</a> 60 <em class='comment'>/* max width def dialog */</em>
+<a id='L10' name='L10'></a>  10 <em class='sharp'>#define</em> <a href='../R/MAX_DEFINITIONS.html' title='Multiple referred from 4 places.'>MAX_DEFINITIONS</a> 60      <em class='comment'>/* count found entries show */</em>
+<a id='L11' name='L11'></a>  11 <em class='sharp'>#define</em> <a href='../R/SHORT_DEF_LEN.html' title='Multiple referred from 3 places.'>SHORT_DEF_LEN</a>   30
+<a id='L12' name='L12'></a>  12 <em class='sharp'>#define</em> <a href='../R/LONG_DEF_LEN.html' title='Multiple referred from 2 places.'>LONG_DEF_LEN</a>    40
+<a id='L13' name='L13'></a>  13 <em class='sharp'>#define</em> <a href='../R/LINE_DEF_LEN.html' title='Multiple referred from 2 places.'>LINE_DEF_LEN</a>    16
+<a id='L14' name='L14'></a>  14 
+<a id='L15' name='L15'></a>  15 <em class='comment'>/*** enums ***************************************************************************************/</em>
+<a id='L16' name='L16'></a>  16 
+<a id='L17' name='L17'></a>  17 <em class='comment'>/*** structures declarations (and typedefs of structures)*****************************************/</em>
+<a id='L18' name='L18'></a>  18 
+<a id='L19' name='L19'></a>  19 <strong class='reserved'>typedef</strong> <strong class='reserved'>struct</strong> <a href='../R/etags_hash_struct.html' title='Multiple referred from 2 places.'>etags_hash_struct</a>
+<a id='L20' name='L20'></a>  20 <em class='brace'>{</em>
+<a id='L21' name='L21'></a>  21     <a href='../Y/size_t.html' title='Multiple used in 700 places.'>size_t</a> <a href='../Y/filename_len.html' title='Multiple used in 7 places.'>filename_len</a>;
+<a id='L22' name='L22'></a>  22     <strong class='reserved'>char</strong> *<a href='../Y/fullpath.html' title='Multiple used in 9 places.'>fullpath</a>;
+<a id='L23' name='L23'></a>  23     <strong class='reserved'>char</strong> *<a href='../Y/filename.html' title='Multiple used in 154 places.'>filename</a>;
+<a id='L24' name='L24'></a>  24     <strong class='reserved'>char</strong> *<a href='../Y/short_define.html' title='Multiple used in 4 places.'>short_define</a>;
+<a id='L25' name='L25'></a>  25     <strong class='reserved'>long</strong> <a href='../Y/line.html' title='Multiple used in 293 places.'>line</a>;
+<a id='L26' name='L26'></a>  26 <em class='brace'>}</em> <a href='../R/etags_hash_t.html' title='Multiple referred from 8 places.'>etags_hash_t</a>;
+<a id='L27' name='L27'></a>  27 
+<a id='L28' name='L28'></a>  28 <em class='comment'>/*** global variables defined in .c file *********************************************************/</em>
+<a id='L29' name='L29'></a>  29 
+<a id='L30' name='L30'></a>  30 <em class='comment'>/*** declarations of public functions ************************************************************/</em>
+<a id='L31' name='L31'></a>  31 
+<a id='L32' name='L32'></a>  32 
+<a id='L33' name='L33'></a>  33 <strong class='reserved'>int</strong> <a href='../S/src--editor--etags.c.html#L173' title='Defined at 173 in src/editor/etags.c.'>etags_set_definition_hash</a> (<strong class='reserved'>const</strong> <strong class='reserved'>char</strong> *<a href='../Y/tagfile.html' title='Multiple used in 11 places.'>tagfile</a>, <strong class='reserved'>const</strong> <strong class='reserved'>char</strong> *<a href='../Y/start_path.html' title='Multiple used in 3 places.'>start_path</a>,
+<a id='L34' name='L34'></a>  34                                <strong class='reserved'>const</strong> <strong class='reserved'>char</strong> *<a href='../Y/match_func.html' title='Multiple used in 4 places.'>match_func</a>, <a href='../S/src--editor--etags.h.html#L26' title='Defined at 26 in src/editor/etags.h.'>etags_hash_t</a> * <a href='../Y/def_hash.html' title='Multiple used in 18 places.'>def_hash</a>);
+<a id='L35' name='L35'></a>  35 
+<a id='L36' name='L36'></a>  36 <em class='comment'>/*** inline functions ****************************************************************************/</em>
+<a id='L37' name='L37'></a>  37 <em class='sharp'>#endif</em> <em class='comment'>/* MC__EDIT_ETAGS_H */</em>
+</pre>
+<hr />
+<a id='BOTTOM' name='BOTTOM'></a>
+<em class='comment'>/* <img class='icon' src='../icons/n_left.png' alt='[previous]' /><img class='icon' src='../icons/n_right.png' alt='[next]' /><img class='icon' src='../icons/n_first.png' alt='[first]' /><img class='icon' src='../icons/n_last.png' alt='[last]' /><a href='#TOP'><img class='icon' src='../icons/top.png' alt='[top]' /></a><img class='icon' src='../icons/n_bottom.png' alt='[bottom]' /><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a>&nbsp;<em class='position'>[+37 src/editor/etags.h]</em> */</em>
+</body>
+</html>

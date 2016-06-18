@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>S_ISDIR</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--filehighlight--get-color.c.html#L70'>S_ISDIR</a>            70 lib/filehighlight/get-color.c     return S_ISDIR (fe-&gt;st.st_mode);</span>
+<span class='curline'><a href='../S/lib--fs.h.html#L24'>S_ISDIR</a>            24 lib/fs.h       #ifdef S_ISDIR</span>
+<span class='curline'><a href='../S/lib--stat-size.h.html#L65'>S_ISDIR</a>            65 lib/stat-size.h   (S_ISREG ((statbuf).st_mode) || S_ISDIR ((statbuf).st_mode) ? \</span>
+<span class='curline'><a href='../S/lib--stat-size.h.html#L92'>S_ISDIR</a>            92 lib/stat-size.h   (S_ISREG ((statbuf).st_mode) || S_ISDIR ((statbuf).st_mode) \</span>
+<span class='curline'><a href='../S/lib--util.c.html#L525'>S_ISDIR</a>           525 lib/util.c         if (S_ISDIR (mode_bits))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L411'>S_ISDIR</a>           411 lib/vfs/direntry.c     if (!S_ISDIR (dir-&gt;st.st_mode))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1268'>S_ISDIR</a>          1268 lib/vfs/direntry.c     if (S_ISDIR (ino-&gt;st.st_mode))</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L845'>S_ISDIR</a>           845 lib/vfs/interface.c     if (tmpdir &amp;&amp; lstat (tmpdir, &amp;st) == 0 &amp;&amp; S_ISDIR (st.st_mode) &amp;&amp;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L868'>S_ISDIR</a>           868 lib/vfs/interface.c             if (!S_ISDIR (st.st_mode))</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L700'>S_ISDIR</a>           700 lib/vfs/parse_ls_vga.c         if (S_ISDIR (s-&gt;st_mode))</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L246'>S_ISDIR</a>           246 lib/widget/input_complete.c                 if (!S_ISDIR (tempstat.st_mode))</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3550'>S_ISDIR</a>          3550 src/diffviewer/ydiff.c             is_dir0 = S_ISDIR (selection (panel0)-&gt;st.st_mode);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3560'>S_ISDIR</a>          3560 src/diffviewer/ydiff.c             is_dir1 = S_ISDIR (selection (panel1)-&gt;st.st_mode);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3580'>S_ISDIR</a>          3580 src/diffviewer/ydiff.c                 is_dir0 = S_ISDIR (st.st_mode);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3597'>S_ISDIR</a>          3597 src/diffviewer/ydiff.c                 is_dir1 = S_ISDIR (st.st_mode);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L129'>S_ISDIR</a>           129 src/filemanager/cmd.c     if (S_ISDIR (selection (current_panel)-&gt;st.st_mode) || link_isdir (selection (current_panel)))</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L286'>S_ISDIR</a>           286 src/filemanager/cmd.c         if (S_ISDIR (source-&gt;st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1435'>S_ISDIR</a>          1435 src/filemanager/cmd.c     if ((S_ISDIR (entry-&gt;st.st_mode) &amp;&amp; DIR_IS_DOTDOT (entry-&gt;fname)) || panel-&gt;dirs_marked)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1450'>S_ISDIR</a>          1450 src/filemanager/cmd.c     if (S_ISDIR (entry-&gt;st.st_mode) &amp;&amp; !DIR_IS_DOTDOT (entry-&gt;fname))</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1500'>S_ISDIR</a>          1500 src/filemanager/cmd.c         if (S_ISDIR (panel-&gt;dir.list[i].st.st_mode)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L58'>S_ISDIR</a>            58 src/filemanager/dir.c     (is_exe (x-&gt;st.st_mode) &amp;&amp; !(S_ISDIR (x-&gt;st.st_mode) || x-&gt;f.link_to_dir) &amp;&amp; exec_first) \</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L60'>S_ISDIR</a>            60 src/filemanager/dir.c         : ( (S_ISDIR (x-&gt;st.st_mode) || x-&gt;f.link_to_dir) ? 2 : 0) )</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L172'>S_ISDIR</a>           172 src/filemanager/dir.c     if (S_ISDIR (buf1-&gt;st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L183'>S_ISDIR</a>           183 src/filemanager/dir.c             *link_to_dir = S_ISDIR (buf2.st_mode) != 0;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L190'>S_ISDIR</a>           190 src/filemanager/dir.c     return (S_ISDIR (buf1-&gt;st_mode) || *link_to_dir != 0 || fltr == NULL</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L600'>S_ISDIR</a>           600 src/filemanager/dir.c     if (S_ISDIR (buf1-&gt;st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L611'>S_ISDIR</a>           611 src/filemanager/dir.c             *link_to_dir = S_ISDIR (buf2.st_mode) != 0;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L923'>S_ISDIR</a>           923 src/filemanager/ext.c                 if (S_ISDIR (mystat.st_mode)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L570'>S_ISDIR</a>           570 src/filemanager/file.c             if (S_ISDIR (s.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L964'>S_ISDIR</a>           964 src/filemanager/file.c         if (S_ISDIR (dst_stats.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1140'>S_ISDIR</a>          1140 src/filemanager/file.c         if (S_ISDIR (buf.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1294'>S_ISDIR</a>          1294 src/filemanager/file.c         if (S_ISDIR (s-&gt;st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1442'>S_ISDIR</a>          1442 src/filemanager/file.c         cp = S_ISDIR (src_stat-&gt;st_mode) ? prompt_parts[2] : prompt_parts[0];</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1523'>S_ISDIR</a>          1523 src/filemanager/file.c         if (S_ISDIR (dst_stat.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2077'>S_ISDIR</a>          2077 src/filemanager/file.c     if (!S_ISDIR (cbuf.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2127'>S_ISDIR</a>          2127 src/filemanager/file.c         if (!S_ISDIR (buf.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2219'>S_ISDIR</a>          2219 src/filemanager/file.c         if (S_ISDIR (buf.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2255'>S_ISDIR</a>          2255 src/filemanager/file.c             else if (S_ISDIR (buf.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2358'>S_ISDIR</a>          2358 src/filemanager/file.c             if (S_ISDIR (dbuf.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2414'>S_ISDIR</a>          2414 src/filemanager/file.c             if (S_ISDIR (lp-&gt;st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2805'>S_ISDIR</a>          2805 src/filemanager/file.c         else if (single_entry &amp;&amp; S_ISDIR (selection (panel)-&gt;st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2860'>S_ISDIR</a>          2860 src/filemanager/file.c                 if (S_ISDIR (src_stat.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2898'>S_ISDIR</a>          2898 src/filemanager/file.c                         if (S_ISDIR (src_stat.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2909'>S_ISDIR</a>          2909 src/filemanager/file.c                         if (S_ISDIR (src_stat.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2941'>S_ISDIR</a>          2941 src/filemanager/file.c             if ((dst_result != 0) || S_ISDIR (dst_stat.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2973'>S_ISDIR</a>          2973 src/filemanager/file.c                     if (S_ISDIR (src_stat.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3016'>S_ISDIR</a>          3016 src/filemanager/file.c                             if (S_ISDIR (src_stat.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3025'>S_ISDIR</a>          3025 src/filemanager/file.c                             if (S_ISDIR (src_stat.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L574'>S_ISDIR</a>           574 src/filemanager/filegui.c     if (!S_ISDIR (ui-&gt;d_stat-&gt;st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1340'>S_ISDIR</a>          1340 src/filemanager/filegui.c                     || (mc_stat (vpath, &amp;buf) == 0 &amp;&amp; S_ISDIR (buf.st_mode))))</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1343'>S_ISDIR</a>          1343 src/filemanager/filegui.c                     || (only_one &amp;&amp; mc_stat (vpath, &amp;buf) == 0 &amp;&amp; S_ISDIR (buf.st_mode)))))</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1372'>S_ISDIR</a>          1372 src/filemanager/find.c                     if (mc_lstat (tmp_vpath, &amp;tmp_stat) == 0 &amp;&amp; S_ISDIR (tmp_stat.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L940'>S_ISDIR</a>           940 src/filemanager/mountlist.c                 if (lstat (name, &amp;statbuf) &gt;= 0 &amp;&amp; S_ISDIR (statbuf.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L532'>S_ISDIR</a>           532 src/filemanager/panel.c     if ((S_ISDIR (fe-&gt;st.st_mode) || fe-&gt;f.link_to_dir) &amp;&amp; !DIR_IS_DOTDOT (fe-&gt;fname))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L548'>S_ISDIR</a>           548 src/filemanager/panel.c     if (S_ISDIR (fe-&gt;st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1996'>S_ISDIR</a>          1996 src/filemanager/panel.c         if (S_ISDIR (selection (current_panel)-&gt;st.st_mode)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2068'>S_ISDIR</a>          2068 src/filemanager/panel.c         if (DIR_IS_DOTDOT (file_entry-&gt;fname) || S_ISDIR (file_entry-&gt;st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2333'>S_ISDIR</a>          2333 src/filemanager/panel.c     if ((S_ISDIR (selection (panel)-&gt;st.st_mode) || link_isdir (selection (panel))))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2568'>S_ISDIR</a>          2568 src/filemanager/panel.c         if (S_ISDIR (panel-&gt;dir.list[i].st.st_mode) &amp;&amp; files_only != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2615'>S_ISDIR</a>          2615 src/filemanager/panel.c         if (!panels_options.reverse_files_only || !S_ISDIR (file-&gt;st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2795'>S_ISDIR</a>          2795 src/filemanager/panel.c     if (S_ISDIR (fe-&gt;st.st_mode) || link_isdir (fe) || (fe-&gt;st.st_mode == 0))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2880'>S_ISDIR</a>          2880 src/filemanager/panel.c     if (S_ISDIR (entry-&gt;st.st_mode) || entry-&gt;f.link_to_dir)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2949'>S_ISDIR</a>          2949 src/filemanager/panel.c     if (!S_ISDIR (st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4620'>S_ISDIR</a>          4620 src/filemanager/panel.c         if (S_ISDIR (panel-&gt;dir.list[idx].st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4633'>S_ISDIR</a>          4633 src/filemanager/panel.c         if (S_ISDIR (panel-&gt;dir.list[idx].st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L769'>S_ISDIR</a>           769 src/filemanager/tree.c     if (!S_ISDIR (buf.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L814'>S_ISDIR</a>           814 src/filemanager/treestore.c         if (!S_ISDIR (s.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L927'>S_ISDIR</a>           927 src/filemanager/treestore.c             if (mc_lstat (tmp_vpath, &amp;buf) != -1 &amp;&amp; S_ISDIR (buf.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L175'>S_ISDIR</a>           175 src/filemanager/usermenu.c             result |= !S_ISDIR (st_mode);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L181'>S_ISDIR</a>           181 src/filemanager/usermenu.c             result |= S_ISDIR (st_mode);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L452'>S_ISDIR</a>           452 src/vfs/cpio/cpio.c         if (!S_ISDIR (entry-&gt;ino-&gt;st.st_mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L230'>S_ISDIR</a>           230 src/vfs/extfs/extfs.c     if (S_ISDIR (mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L278'>S_ISDIR</a>           278 src/vfs/extfs/extfs.c                 if (!S_ISDIR (pent-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L294'>S_ISDIR</a>           294 src/vfs/extfs/extfs.c                             notadir = !S_ISDIR (pent-&gt;inode-&gt;mode);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L543'>S_ISDIR</a>           543 src/vfs/extfs/extfs.c                 if (S_ISDIR (hstat.st_mode) &amp;&amp; (DIR_IS_DOT (p) || DIR_IS_DOTDOT (p)))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L613'>S_ISDIR</a>           613 src/vfs/extfs/extfs.c                     if (S_ISDIR (hstat.st_mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L917'>S_ISDIR</a>           917 src/vfs/extfs/extfs.c     if (S_ISDIR (entry-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1043'>S_ISDIR</a>          1043 src/vfs/extfs/extfs.c     if (!S_ISDIR (entry-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1247'>S_ISDIR</a>          1247 src/vfs/extfs/extfs.c     if (S_ISDIR (entry-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1295'>S_ISDIR</a>          1295 src/vfs/extfs/extfs.c     if (!S_ISDIR (entry-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1331'>S_ISDIR</a>          1331 src/vfs/extfs/extfs.c     if (!S_ISDIR (entry-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1369'>S_ISDIR</a>          1369 src/vfs/extfs/extfs.c     if ((entry == NULL) || (!S_ISDIR (entry-&gt;inode-&gt;mode)))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1416'>S_ISDIR</a>          1416 src/vfs/extfs/extfs.c     if (S_ISDIR (e-&gt;inode-&gt;mode) &amp;&amp; e-&gt;inode-&gt;first_in_subdir != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1460'>S_ISDIR</a>          1460 src/vfs/extfs/extfs.c     if (S_ISDIR (e-&gt;inode-&gt;mode) &amp;&amp; e-&gt;inode-&gt;first_in_subdir != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1590'>S_ISDIR</a>          1590 src/vfs/extfs/extfs.c             &amp;&amp; S_ISREG (s.st_mode) &amp;&amp; !S_ISDIR (s.st_mode)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L142'>S_ISDIR</a>           142 src/vfs/sftpfs/vfs_class.c     if (S_ISDIR (path_inode-&gt;st.st_mode))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L945'>S_ISDIR</a>           945 src/vfs/smbfs/helpers/include/smb.h #define VALID_STAT_OF_DIR(st) (VALID_STAT(st) &amp;&amp; S_ISDIR(st.st_mode))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L1379'>S_ISDIR</a>          1379 src/vfs/smbfs/helpers/include/smb.h #ifndef S_ISDIR</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L578'>S_ISDIR</a>           578 src/vfs/smbfs/helpers/lib/time.c     if (S_ISDIR (st-&gt;st_mode) &amp;&amp; fake_dirs)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L414'>S_ISDIR</a>           414 src/vfs/smbfs/helpers/lib/util.c     ret = S_ISDIR (st-&gt;st_mode);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L710'>S_ISDIR</a>           710 src/vfs/tar/tar.c         if (S_ISDIR (st.st_mode))</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L272'>S_ISDIR</a>           272 src/vfs/undelfs/undelfs.c         if (S_ISDIR (inode.i_mode))</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L342'>S_ISDIR</a>           342 src/viewer/actions_cmd.c         if (!S_ISDIR (view-&gt;dir-&gt;list[i].st.st_mode))</span>
+</pre>
+</body>
+</html>

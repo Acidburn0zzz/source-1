@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>cfn</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L523'>cfn</a>               523 src/vfs/extfs/extfs.c             char *p, *q, *cfn = current_file_name;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L525'>cfn</a>               525 src/vfs/extfs/extfs.c             if (*cfn != '\0')</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L527'>cfn</a>               527 src/vfs/extfs/extfs.c                 if (IS_PATH_SEP (*cfn))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L528'>cfn</a>               528 src/vfs/extfs/extfs.c                     cfn++;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L529'>cfn</a>               529 src/vfs/extfs/extfs.c                 p = strchr (cfn, '\0');</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L530'>cfn</a>               530 src/vfs/extfs/extfs.c                 if (p != cfn &amp;&amp; IS_PATH_SEP (p[-1]))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L532'>cfn</a>               532 src/vfs/extfs/extfs.c                 p = strrchr (cfn, PATH_SEP);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L535'>cfn</a>               535 src/vfs/extfs/extfs.c                     p = cfn;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L536'>cfn</a>               536 src/vfs/extfs/extfs.c                     q = strchr (cfn, '\0');</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L541'>cfn</a>               541 src/vfs/extfs/extfs.c                     q = cfn;</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>dirname</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L256'>dirname</a>           256 lib/vfs/direntry.c         char *dirname, *name;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L259'>dirname</a>           259 lib/vfs/direntry.c         dirname = g_path_get_dirname (path);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L261'>dirname</a>           261 lib/vfs/direntry.c         ino = vfs_s_find_inode (me, root-&gt;super, dirname, follow, flags | FL_DIR);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L263'>dirname</a>           263 lib/vfs/direntry.c         g_free (dirname);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1226'>dirname</a>          1226 lib/vfs/direntry.c         char *dirname, *name;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1234'>dirname</a>          1234 lib/vfs/direntry.c         dirname = g_path_get_dirname (q);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1236'>dirname</a>          1236 lib/vfs/direntry.c         dir = vfs_s_find_inode (path_element-&gt;class, super, dirname, LINK_FOLLOW, FL_DIR);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1239'>dirname</a>          1239 lib/vfs/direntry.c             g_free (dirname);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1256'>dirname</a>          1256 lib/vfs/direntry.c                 g_free (dirname);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1263'>dirname</a>          1263 lib/vfs/direntry.c         g_free (dirname);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L140'>dirname</a>           140 lib/widget/input_complete.c     static char *dirname = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L172'>dirname</a>           172 lib/widget/input_complete.c         g_free (dirname);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L180'>dirname</a>           180 lib/widget/input_complete.c             dirname = g_strndup (text, temp - text);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L184'>dirname</a>           184 lib/widget/input_complete.c             dirname = g_strdup (".");</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L191'>dirname</a>           191 lib/widget/input_complete.c         users_dirname = dirname;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L192'>dirname</a>           192 lib/widget/input_complete.c         dirname = tilde_expand (dirname);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L193'>dirname</a>           193 lib/widget/input_complete.c         canonicalize_pathname (dirname);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L194'>dirname</a>           194 lib/widget/input_complete.c         dirname_vpath = vfs_path_from_str (dirname);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L235'>dirname</a>           235 lib/widget/input_complete.c             tmp_vpath = vfs_path_build_filename (dirname, entry-&gt;d_name, (char *) NULL);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L280'>dirname</a>           280 lib/widget/input_complete.c         MC_PTR_FREE (dirname);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2504'>dirname</a>          2504 src/filemanager/file.c     dsm-&gt;dirname = label_new (2, 3, "");</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2505'>dirname</a>          2505 src/filemanager/file.c     add_widget (sm-&gt;dlg, dsm-&gt;dirname);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2544'>dirname</a>          2544 src/filemanager/file.c     label_set_text (dsm-&gt;dirname, str_trunc (vfs_path_as_str (dsm-&gt;dirname_vpath), wd-&gt;cols - 6));</span>
+<span class='curline'><a href='../S/src--filemanager--file.h.html#L29'>dirname</a>            29 src/filemanager/file.h     WLabel *dirname;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L895'>dirname</a>           895 src/filemanager/find.c     static char *dirname = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L907'>dirname</a>           907 src/filemanager/find.c             dirname = add_to_list (dir, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L913'>dirname</a>           913 src/filemanager/find.c         dirname = add_to_list (dir, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L918'>dirname</a>           918 src/filemanager/find.c     location-&gt;dir = dirname;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1710'>dirname</a>          1710 src/filemanager/find.c          const char *pattern, const char *content, char **dirname, char **filename)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1736'>dirname</a>          1736 src/filemanager/find.c         *dirname = g_strdup (dir_tmp);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1853'>dirname</a>          1853 src/filemanager/find.c         char *filename = NULL, *dirname = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1862'>dirname</a>          1862 src/filemanager/find.c             v = do_find (start_dir, start_dir_len, ignore_dirs, pattern, content, &amp;dirname,</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1872'>dirname</a>          1872 src/filemanager/find.c             if (dirname != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1876'>dirname</a>          1876 src/filemanager/find.c                 dirname_vpath = vfs_path_from_str (dirname);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1895'>dirname</a>          1895 src/filemanager/find.c         g_free (dirname);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1561'>dirname</a>          1561 src/vfs/extfs/extfs.c     char *dirname;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1565'>dirname</a>          1565 src/vfs/extfs/extfs.c     dirname = g_build_path (PATH_SEP_STR, where, MC_EXTFS_DIR, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1566'>dirname</a>          1566 src/vfs/extfs/extfs.c     dir = g_dir_open (dirname, 0, NULL);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1574'>dirname</a>          1574 src/vfs/extfs/extfs.c             fprintf (stderr, _("Warning: cannot open %s directory\n"), dirname);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1575'>dirname</a>          1575 src/vfs/extfs/extfs.c         g_free (dirname);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1587'>dirname</a>          1587 src/vfs/extfs/extfs.c         g_snprintf (fullname, sizeof (fullname), "%s" PATH_SEP_STR "%s", dirname, filename);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1611'>dirname</a>          1611 src/vfs/extfs/extfs.c                 info.path = g_strconcat (dirname, PATH_SEP_STR, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1651'>dirname</a>          1651 src/vfs/extfs/extfs.c     g_free (dirname);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L121'>dirname</a>           121 src/vfs/sftpfs/vfs_class.c         char *dirname, *name;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L125'>dirname</a>           125 src/vfs/sftpfs/vfs_class.c         dirname = g_path_get_dirname (path_super);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L127'>dirname</a>           127 src/vfs/sftpfs/vfs_class.c         dir = vfs_s_find_inode (path_element-&gt;class, super, dirname, LINK_FOLLOW, FL_DIR);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L130'>dirname</a>           130 src/vfs/sftpfs/vfs_class.c             g_free (dirname);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L137'>dirname</a>           137 src/vfs/sftpfs/vfs_class.c         g_free (dirname);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L116'>dirname</a>           116 src/vfs/smbfs/smbfs.c     char *dirname;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L821'>dirname</a>           821 src/vfs/smbfs/smbfs.c     const char *info_dirname = smbfs_info-&gt;dirname;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L829'>dirname</a>           829 src/vfs/smbfs/smbfs.c         DEBUG (3, ("smbfs_loaddir: new:'%s', cached:'%s'\n", info_dirname, current_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L831'>dirname</a>           831 src/vfs/smbfs/smbfs.c         if (smbfs_fs (info_dirname) &gt; smbfs_fs (current_info-&gt;dirname))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L888'>dirname</a>           888 src/vfs/smbfs/smbfs.c         smbfs_info-&gt;dirname = smbfs_info-&gt;conn-&gt;service;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L926'>dirname</a>           926 src/vfs/smbfs/smbfs.c     DEBUG (4, ("smbfs_readdir(%s)\n", smbfs_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L955'>dirname</a>           955 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_closedir(%s)\n", smbfs_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1417'>dirname</a>          1417 src/vfs/smbfs/smbfs.c     smbfs_info-&gt;dirname = remote_dir;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1597'>dirname</a>          1597 src/vfs/smbfs/smbfs.c                mypath, current_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1602'>dirname</a>          1602 src/vfs/smbfs/smbfs.c                    current_info-&gt;dirname, path));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1616'>dirname</a>          1616 src/vfs/smbfs/smbfs.c         mdp = mydir = g_strdup (current_info-&gt;dirname);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1627'>dirname</a>          1627 src/vfs/smbfs/smbfs.c             DEBUG (1, ("	PARENT:found in %s\n", current_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1634'>dirname</a>          1634 src/vfs/smbfs/smbfs.c         char *dnp = current_info-&gt;dirname;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1636'>dirname</a>          1636 src/vfs/smbfs/smbfs.c                    mypath, current_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1648'>dirname</a>          1648 src/vfs/smbfs/smbfs.c             DEBUG (1, ("	CURRENT:found in %s\n", current_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1652'>dirname</a>          1652 src/vfs/smbfs/smbfs.c     DEBUG (3, ("'%s' not found in current_info '%s'\n", path, current_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1658'>dirname</a>          1658 src/vfs/smbfs/smbfs.c         DEBUG (3, ("'%s' not found in previous_info '%s'\n", path, previous_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1665'>dirname</a>          1665 src/vfs/smbfs/smbfs.c         DEBUG (3, ("'%s' not found in share_info '%s'\n", path, current_share_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1672'>dirname</a>          1672 src/vfs/smbfs/smbfs.c         DEBUG (3, ("'%s' not found in server_info '%s'\n", path, current_server_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1814'>dirname</a>          1814 src/vfs/smbfs/smbfs.c     pp = current_info-&gt;dirname;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1825'>dirname</a>          1825 src/vfs/smbfs/smbfs.c         DEBUG (6, ("loaded dir: '%s'\n", current_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L153'>dirname</a>           153 src/vfs/undelfs/undelfs.c     const char *p, *dirname;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L163'>dirname</a>           163 src/vfs/undelfs/undelfs.c     dirname = path_element-&gt;path;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L167'>dirname</a>           167 src/vfs/undelfs/undelfs.c     if (strncmp (dirname, "undel://", 8) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L170'>dirname</a>           170 src/vfs/undelfs/undelfs.c     dirname += 8;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L174'>dirname</a>           174 src/vfs/undelfs/undelfs.c     if (*dirname == 0)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L177'>dirname</a>           177 src/vfs/undelfs/undelfs.c     p = dirname + strlen (dirname);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L181'>dirname</a>           181 src/vfs/undelfs/undelfs.c     if (p - dirname &gt; 2 &amp;&amp; IS_PATH_SEP (p[-1]) &amp;&amp; p[-2] == '.')</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L185'>dirname</a>           185 src/vfs/undelfs/undelfs.c     while (p &gt; dirname)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L192'>dirname</a>           192 src/vfs/undelfs/undelfs.c             tmp = g_strndup (dirname, p - dirname);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L200'>dirname</a>           200 src/vfs/undelfs/undelfs.c     *fsname = g_strconcat ("/dev/", dirname, (char *) NULL);</span>
+</pre>
+</body>
+</html>

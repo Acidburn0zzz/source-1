@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>COLS</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L74'>COLS</a>               74 lib/tty/tty-ncurses.c     (y &gt;= 0 &amp;&amp; y &lt; LINES &amp;&amp; x &gt;= 0 &amp;&amp; x &lt; COLS)</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L278'>COLS</a>              278 lib/tty/tty-ncurses.c         COLS = winsz.ws_col;</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L403'>COLS</a>              403 lib/tty/tty-ncurses.c     if (x &gt;= COLS)</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L404'>COLS</a>              404 lib/tty/tty-ncurses.c         x = COLS - 1;</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L425'>COLS</a>              425 lib/tty/tty-ncurses.c     if (y &lt; 0 || y &gt;= LINES || x &gt;= COLS)</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L456'>COLS</a>              456 lib/tty/tty-ncurses.c     if (x &lt; 0 || x &gt;= COLS || y &gt;= LINES)</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L509'>COLS</a>              509 lib/tty/tty-ncurses.c     if (x + cols &gt; COLS)</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L510'>COLS</a>              510 lib/tty/tty-ncurses.c         cols = COLS - x;</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L635'>COLS</a>              635 lib/tty/tty-ncurses.c     if (mc_curs_row &lt; 0 || mc_curs_row &gt;= LINES || mc_curs_col + len &lt;= 0 || mc_curs_col &gt;= COLS)</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L650'>COLS</a>              650 lib/tty/tty-ncurses.c     if (mc_curs_col &gt;= COLS)</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L651'>COLS</a>              651 lib/tty/tty-ncurses.c         len = COLS - (mc_curs_col - len);</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L280'>COLS</a>              280 lib/tty/tty-slang.c     if ((COLS &lt; 10) || (LINES &lt; 5)</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L281'>COLS</a>              281 lib/tty/tty-slang.c         || (COLS &gt; SLTT_MAX_SCREEN_COLS) || (LINES &gt; SLTT_MAX_SCREEN_ROWS))</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L285'>COLS</a>              285 lib/tty/tty-slang.c                    "Check the TERM environment variable.\n"), COLS, LINES);</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L542'>COLS</a>              542 lib/tty/tty-slang.c     if (y &lt; 0 || y &gt;= LINES || x &gt;= COLS)</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L578'>COLS</a>              578 lib/tty/tty-slang.c     if (x &lt; 0 || x &gt;= COLS || y &gt;= LINES)</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L250'>COLS</a>              250 lib/tty/tty.c      tty_size.ws_col = COLS;</span>
+<span class='curline'><a href='../S/lib--tty--win.c.html#L110'>COLS</a>              110 lib/tty/win.c      bytes = (y2 - y1) * (COLS + 1) + 1; /* *should* be the number of bytes read */</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L68'>COLS</a>               68 lib/widget/buttonbar.c     if (COLS &lt; BUTTONBAR_LABELS_NUM * 7)</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L72'>COLS</a>               72 lib/widget/buttonbar.c             if (pos + 7 &lt;= COLS)</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L85'>COLS</a>               85 lib/widget/buttonbar.c         dv = COLS / BUTTONBAR_LABELS_NUM;</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L86'>COLS</a>               86 lib/widget/buttonbar.c         md = COLS % BUTTONBAR_LABELS_NUM;</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L251'>COLS</a>              251 lib/widget/buttonbar.c     widget_init (w, LINES - 1, 0, 1, COLS, buttonbar_callback, buttonbar_mouse_callback);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L235'>COLS</a>              235 lib/widget/dialog-switch.c     cols = COLS * 2 / 3;</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L332'>COLS</a>              332 lib/widget/dialog-switch.c     tty_fill_region (0, 0, LINES, COLS, ' ');</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L767'>COLS</a>              767 lib/widget/dialog.c         cols = COLS;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L772'>COLS</a>              772 lib/widget/dialog.c             x = (COLS - cols) / 2;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L851'>COLS</a>              851 lib/widget/dialog.c         cols = COLS;</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L104'>COLS</a>              104 lib/widget/history.c     if ((wi + x) &gt; COLS)</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L106'>COLS</a>              106 lib/widget/history.c         wi = MIN (wi, COLS);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L107'>COLS</a>              107 lib/widget/history.c         x = COLS - wi;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1262'>COLS</a>             1262 lib/widget/input_complete.c             if (x + w &gt; COLS)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1263'>COLS</a>             1263 lib/widget/input_complete.c                 x = COLS - w;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1266'>COLS</a>             1266 lib/widget/input_complete.c             if (x + w &gt; COLS)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1267'>COLS</a>             1267 lib/widget/input_complete.c                 w = COLS;</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L79'>COLS</a>               79 lib/widget/listbox-window.c     cols = MIN (cols, COLS - 6);</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L99'>COLS</a>               99 lib/widget/listbox-window.c         if (xpos + cols &gt;= COLS)</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L100'>COLS</a>              100 lib/widget/listbox-window.c             xpos = COLS - cols - space;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L101'>COLS</a>              101 lib/widget/wtools.c             xpos = COLS / 2 - w-&gt;cols / 2;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L221'>COLS</a>              221 lib/widget/wtools.c             -1, -1, COLS / 2, header,</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L589'>COLS</a>              589 lib/widget/wtools.c     sm-&gt;dlg = dlg_create (TRUE, 0, 0, 7, MIN (MAX (40, COLS / 2), COLS), WPOS_CENTER, FALSE,</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L123'>COLS</a>              123 src/cons.handler.c         if ((i % COLS) == 0)</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L124'>COLS</a>              124 src/cons.handler.c             tty_gotoyx (starty + (i / COLS), 0);</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L411'>COLS</a>              411 src/cons.handler.c         for (col = 0; col &lt; MIN (COLS, screen_info.mv_csz); col++)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2275'>COLS</a>             2275 src/diffviewer/ydiff.c     dview-&gt;half1 = COLS / 2;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2276'>COLS</a>             2276 src/diffviewer/ydiff.c     dview-&gt;half2 = COLS - dview-&gt;half1;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2827'>COLS</a>             2827 src/diffviewer/ydiff.c         width1 = COLS;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3386'>COLS</a>             3386 src/diffviewer/ydiff.c     widget_set_size (WIDGET (dview), 0, 0, LINES - 1, COLS);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3387'>COLS</a>             3387 src/diffviewer/ydiff.c     widget_set_size (WIDGET (bar), LINES - 1, 0, 1, COLS);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3469'>COLS</a>             3469 src/diffviewer/ydiff.c     widget_init (w, 0, 0, LINES - 1, COLS, dview_callback, dview_mouse_callback);</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L369'>COLS</a>              369 src/editor/editcmd_dialogs.c     if (compl_dlg_w &gt; COLS)</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L370'>COLS</a>              370 src/editor/editcmd_dialogs.c         compl_dlg_w = COLS;</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L374'>COLS</a>              374 src/editor/editcmd_dialogs.c     offset = start_x + compl_dlg_w - COLS;</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L436'>COLS</a>              436 src/editor/editcmd_dialogs.c     if (def_dlg_w &gt; COLS)</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L437'>COLS</a>              437 src/editor/editcmd_dialogs.c         def_dlg_w = COLS;</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L441'>COLS</a>              441 src/editor/editcmd_dialogs.c     offset = start_x + def_dlg_w - COLS;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L331'>COLS</a>              331 src/editor/editwidget.c     cols = COLS * 2 / 3;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L786'>COLS</a>              786 src/editor/editwidget.c         w-&gt;cols = COLS;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1233'>COLS</a>             1233 src/editor/editwidget.c     menubar = menubar_new (0, 0, COLS, NULL, TRUE);</span>
+<span class='curline'><a href='../S/src--editor--spell_dialogs.c.html#L87'>COLS</a>               87 src/editor/spell_dialogs.c     xpos = (COLS - sug_dlg_w) / 2;</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L338'>COLS</a>              338 src/filemanager/achown.c         lxx = (COLS - 74) / 2 + (is_owner ? 35 : 53);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L198'>COLS</a>              198 src/filemanager/boxes.c     lxx = COLS / 2;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L351'>COLS</a>              351 src/filemanager/boxes.c             dlg_set_size (h, LINES - 9, COLS - 20);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1023'>COLS</a>             1023 src/filemanager/boxes.c     dlg = dlg_create (TRUE, 0, 0, LINES - 9, COLS - 20, WPOS_CENTER, FALSE, dialog_colors,</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L300'>COLS</a>              300 src/filemanager/chmod.c     if (cols &gt; COLS)</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L303'>COLS</a>              303 src/filemanager/chmod.c         cols = COLS;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2503'>COLS</a>             2503 src/filemanager/file.c     ui_width = MAX (COLS / 2, b_width + 6);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L524'>COLS</a>              524 src/filemanager/filegui.c         rd_xlen = MAX (rd_xlen, MIN (COLS, stripped_name_len + 8));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L851'>COLS</a>              851 src/filemanager/filegui.c     dlg_set_size (ui-&gt;op_dlg, y + 3, MAX (COLS * 2 / 3, buttons_width + 6));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1207'>COLS</a>             1207 src/filemanager/filegui.c         max_len = COLS - 2 - 6;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1224'>COLS</a>             1224 src/filemanager/filegui.c         fmd_xlen = COLS * 2 / 3;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1526'>COLS</a>             1526 src/filemanager/find.c         dlg_set_size (h, LINES - 4, COLS - 16);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1615'>COLS</a>             1615 src/filemanager/find.c     cols = COLS - 16;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L594'>COLS</a>              594 src/filemanager/hotlist.c         dlg_set_size (h, LINES - (h == hotlist_dlg ? 2 : 6), COLS - 6);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L742'>COLS</a>              742 src/filemanager/hotlist.c     cols = init_i18n_stuff (list_type, COLS - 6);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L825'>COLS</a>              825 src/filemanager/hotlist.c     cols = init_i18n_stuff (LIST_MOVELIST, COLS - 6);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1588'>COLS</a>             1588 src/filemanager/hotlist.c     lc_prompt = g_strdup_printf (cp, str_trunc (label_string, COLS - 2 * UX - (l + 8)));</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L208'>COLS</a>              208 src/filemanager/layout.c             layout-&gt;left_panel_size = COLS / 2;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L211'>COLS</a>              211 src/filemanager/layout.c         else if (layout-&gt;left_panel_size &gt; COLS - MINWIDTH)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L212'>COLS</a>              212 src/filemanager/layout.c             layout-&gt;left_panel_size = COLS - MINWIDTH;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L243'>COLS</a>              243 src/filemanager/layout.c         tty_printf ("%03d", COLS - panels_layout.left_panel_size);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L391'>COLS</a>              391 src/filemanager/layout.c                         panels_layout.left_panel_size = COLS / 2;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L717'>COLS</a>              717 src/filemanager/layout.c     widget_set_size (WIDGET (the_menubar), 0, 0, 1, COLS);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L729'>COLS</a>              729 src/filemanager/layout.c         widget_set_size (WIDGET (the_prompt), LINES, COLS, 0, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L732'>COLS</a>              732 src/filemanager/layout.c     widget_set_size (WIDGET (the_bar), LINES - 1, 0, mc_global.keybar_visible, COLS);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L745'>COLS</a>              745 src/filemanager/layout.c         widget_set_size (WIDGET (the_hint), height + start_y, 0, 1, COLS);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L825'>COLS</a>              825 src/filemanager/layout.c     if (COLS &gt; 8 &amp;&amp; prompt_width &gt; COLS - 8)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L829'>COLS</a>              829 src/filemanager/layout.c         prompt_width = COLS - 8;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L847'>COLS</a>              847 src/filemanager/layout.c     widget_set_size (WIDGET (cmdline), y, prompt_width, 1, COLS - prompt_width);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L970'>COLS</a>              970 src/filemanager/layout.c                 cols = COLS;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L975'>COLS</a>              975 src/filemanager/layout.c                 cols = COLS - panels_layout.left_panel_size;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L551'>COLS</a>              551 src/filemanager/midnight.c         tty_print_string (str_fit_to_term (event_data-&gt;msg, COLS - 1, J_LEFT));</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L706'>COLS</a>              706 src/filemanager/midnight.c     WIDGET (the_hint)-&gt;cols = COLS;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L708'>COLS</a>              708 src/filemanager/midnight.c     the_menubar = menubar_new (0, 0, COLS, NULL, menubar_visible);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1417'>COLS</a>             1417 src/filemanager/midnight.c         w-&gt;cols = COLS;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4513'>COLS</a>             4513 src/filemanager/panel.c         widget-&gt;cols = COLS;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4519'>COLS</a>             4519 src/filemanager/panel.c         cols = COLS;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4529'>COLS</a>             4529 src/filemanager/panel.c         cols = COLS - panels_layout.left_panel_size;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L167'>COLS</a>              167 src/filemanager/panelize.c     panelize_cols = COLS - 6;</span>
+<span class='curline'><a href='../S/src--help.c.html#L76'>COLS</a>               76 src/help.c     #define HELP_WINDOW_WIDTH MIN(80, COLS - 16)</span>
+<span class='curline'><a href='../S/src--help.c.html#L873'>COLS</a>              873 src/help.c                 widget_set_size (WIDGET (bb), LINES - 1, 0, 1, COLS);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L596'>COLS</a>              596 src/viewer/actions_cmd.c     widget_set_size (WIDGET (view), 0, 0, LINES - 1, COLS);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L597'>COLS</a>              597 src/viewer/actions_cmd.c     widget_set_size (WIDGET (b), LINES - 1, 0, 1, COLS);</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L239'>COLS</a>              239 src/viewer/mcviewer.c     lc_mcview = mcview_new (0, 0, LINES - 1, COLS, FALSE);</span>
+</pre>
+</body>
+</html>

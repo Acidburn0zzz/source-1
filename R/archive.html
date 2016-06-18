@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>archive</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L824'>archive</a>           824 lib/vfs/direntry.c     struct vfs_s_super *archive = NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L827'>archive</a>           827 lib/vfs/direntry.c     p = vfs_s_get_path (vpath, &amp;archive, FL_NO_OPEN);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L831'>archive</a>           831 lib/vfs/direntry.c     return (vfsid) archive;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1101'>archive</a>          1101 lib/vfs/direntry.c vfs_s_get_path (const vfs_path_t * vpath, struct vfs_s_super **archive, int flags)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1152'>archive</a>          1152 lib/vfs/direntry.c     *archive = super;</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L180'>archive</a>           180 lib/vfs/xdirentry.h const char *vfs_s_get_path (const vfs_path_t * vpath, struct vfs_s_super **archive, int flags);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L85'>archive</a>            85 src/vfs/extfs/extfs.c     struct archive *archive;    /* And this is an archive structure */</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L108'>archive</a>           108 src/vfs/extfs/extfs.c     struct archive *archive;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L124'>archive</a>           124 src/vfs/extfs/extfs.c     struct archive *next;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L142'>archive</a>           142 src/vfs/extfs/extfs.c static struct archive *first_archive = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L192'>archive</a>           192 src/vfs/extfs/extfs.c extfs_generate_entry (struct archive *archive,</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L215'>archive</a>           215 src/vfs/extfs/extfs.c     inode-&gt;inode = (archive-&gt;inode_counter)++;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L216'>archive</a>           216 src/vfs/extfs/extfs.c     inode-&gt;dev = archive-&gt;rdev;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L217'>archive</a>           217 src/vfs/extfs/extfs.c     inode-&gt;archive = archive;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L250'>archive</a>           250 src/vfs/extfs/extfs.c         dir = dir-&gt;inode-&gt;archive-&gt;root_entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L304'>archive</a>           304 src/vfs/extfs/extfs.c                     pent = extfs_generate_entry (dir-&gt;inode-&gt;archive, p, pdir, S_IFDIR | 0777);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L306'>archive</a>           306 src/vfs/extfs/extfs.c                     pent = extfs_generate_entry (dir-&gt;inode-&gt;archive, p, pdir, S_IFREG | 0666);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L349'>archive</a>           349 src/vfs/extfs/extfs.c     struct archive *a = first_archive;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L371'>archive</a>           371 src/vfs/extfs/extfs.c extfs_free_archive (struct archive *archive)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L373'>archive</a>           373 src/vfs/extfs/extfs.c     extfs_free_entry (archive-&gt;root_entry);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L374'>archive</a>           374 src/vfs/extfs/extfs.c     if (archive-&gt;local_name != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L379'>archive</a>           379 src/vfs/extfs/extfs.c         local_name_vpath = vfs_path_from_str (archive-&gt;local_name);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L380'>archive</a>           380 src/vfs/extfs/extfs.c         name_vpath = vfs_path_from_str (archive-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L383'>archive</a>           383 src/vfs/extfs/extfs.c                            archive-&gt;local_stat.st_mtime != my.st_mtime);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L386'>archive</a>           386 src/vfs/extfs/extfs.c         g_free (archive-&gt;local_name);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L388'>archive</a>           388 src/vfs/extfs/extfs.c     g_free (archive-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L389'>archive</a>           389 src/vfs/extfs/extfs.c     g_free (archive);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L395'>archive</a>           395 src/vfs/extfs/extfs.c extfs_open_archive (int fstype, const char *name, struct archive **pparc)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L403'>archive</a>           403 src/vfs/extfs/extfs.c     struct archive *current_archive;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L450'>archive</a>           450 src/vfs/extfs/extfs.c     current_archive = g_new (struct archive, 1);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L495'>archive</a>           495 src/vfs/extfs/extfs.c extfs_read_archive (int fstype, const char *name, struct archive **pparc)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L500'>archive</a>           500 src/vfs/extfs/extfs.c     struct archive *current_archive;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L587'>archive</a>           587 src/vfs/extfs/extfs.c                     inode-&gt;archive = current_archive;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L667'>archive</a>           667 src/vfs/extfs/extfs.c extfs_get_path_int (const vfs_path_t * vpath, struct archive **archive, gboolean do_not_open)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L671'>archive</a>           671 src/vfs/extfs/extfs.c     struct archive *parc;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L707'>archive</a>           707 src/vfs/extfs/extfs.c     *archive = parc;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L718'>archive</a>           718 src/vfs/extfs/extfs.c extfs_get_path (const vfs_path_t * vpath, struct archive **archive, gboolean do_not_open)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L720'>archive</a>           720 src/vfs/extfs/extfs.c     return g_strdup (extfs_get_path_int (vpath, archive, do_not_open));</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L797'>archive</a>           797 src/vfs/extfs/extfs.c extfs_get_archive_name (struct archive *archive)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L801'>archive</a>           801 src/vfs/extfs/extfs.c     if (archive-&gt;local_name)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L802'>archive</a>           802 src/vfs/extfs/extfs.c         archive_name = archive-&gt;local_name;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L804'>archive</a>           804 src/vfs/extfs/extfs.c         archive_name = archive-&gt;name;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L826'>archive</a>           826 src/vfs/extfs/extfs.c extfs_cmd (const char *str_extfs_cmd, struct archive *archive,</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L841'>archive</a>           841 src/vfs/extfs/extfs.c     archive_name = extfs_get_archive_name (archive);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L845'>archive</a>           845 src/vfs/extfs/extfs.c     info = &amp;g_array_index (extfs_plugins, extfs_plugin_info_t, archive-&gt;fstype);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L864'>archive</a>           864 src/vfs/extfs/extfs.c     struct archive *archive = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L869'>archive</a>           869 src/vfs/extfs/extfs.c     p = extfs_get_path (vpath, &amp;archive, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L875'>archive</a>           875 src/vfs/extfs/extfs.c     archive_name = extfs_get_archive_name (archive);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L878'>archive</a>           878 src/vfs/extfs/extfs.c     info = &amp;g_array_index (extfs_plugins, extfs_plugin_info_t, archive-&gt;fstype);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L893'>archive</a>           893 src/vfs/extfs/extfs.c     struct archive *archive = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L899'>archive</a>           899 src/vfs/extfs/extfs.c     q = extfs_get_path (vpath, &amp;archive, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L902'>archive</a>           902 src/vfs/extfs/extfs.c     entry = extfs_find_entry (archive-&gt;root_entry, q, FALSE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L906'>archive</a>           906 src/vfs/extfs/extfs.c         entry = extfs_find_entry (archive-&gt;root_entry, q, FALSE, TRUE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L933'>archive</a>           933 src/vfs/extfs/extfs.c             &amp;&amp; extfs_cmd (" copyout ", archive, entry, local_filename))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L957'>archive</a>           957 src/vfs/extfs/extfs.c     extfs_info-&gt;archive = archive;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L963'>archive</a>           963 src/vfs/extfs/extfs.c     vfs_rmstamp (&amp;vfs_extfs_ops, (vfsid) archive);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L964'>archive</a>           964 src/vfs/extfs/extfs.c     archive-&gt;fd_usage++;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L994'>archive</a>           994 src/vfs/extfs/extfs.c         if (extfs_cmd (" copyin ", file-&gt;archive, file-&gt;entry, file-&gt;entry-&gt;inode-&gt;local_filename))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1005'>archive</a>          1005 src/vfs/extfs/extfs.c     if (--file-&gt;archive-&gt;fd_usage == 0)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1006'>archive</a>          1006 src/vfs/extfs/extfs.c         vfs_stamp_create (&amp;vfs_extfs_ops, file-&gt;archive);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1028'>archive</a>          1028 src/vfs/extfs/extfs.c     struct archive *archive = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1033'>archive</a>          1033 src/vfs/extfs/extfs.c     q = extfs_get_path (vpath, &amp;archive, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1036'>archive</a>          1036 src/vfs/extfs/extfs.c     entry = extfs_find_entry (archive-&gt;root_entry, q, FALSE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1111'>archive</a>          1111 src/vfs/extfs/extfs.c     struct archive *archive;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1116'>archive</a>          1116 src/vfs/extfs/extfs.c     q = extfs_get_path_int (vpath, &amp;archive, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1119'>archive</a>          1119 src/vfs/extfs/extfs.c     entry = extfs_find_entry (archive-&gt;root_entry, q, FALSE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1166'>archive</a>          1166 src/vfs/extfs/extfs.c     struct archive *archive;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1172'>archive</a>          1172 src/vfs/extfs/extfs.c     q = extfs_get_path_int (vpath, &amp;archive, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1175'>archive</a>          1175 src/vfs/extfs/extfs.c     entry = extfs_find_entry (archive-&gt;root_entry, q, FALSE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1233'>archive</a>          1233 src/vfs/extfs/extfs.c     struct archive *archive;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1238'>archive</a>          1238 src/vfs/extfs/extfs.c     q = extfs_get_path_int (vpath, &amp;archive, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1241'>archive</a>          1241 src/vfs/extfs/extfs.c     entry = extfs_find_entry (archive-&gt;root_entry, q, FALSE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1255'>archive</a>          1255 src/vfs/extfs/extfs.c     if (extfs_cmd (" rm ", archive, entry, ""))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1271'>archive</a>          1271 src/vfs/extfs/extfs.c     struct archive *archive;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1280'>archive</a>          1280 src/vfs/extfs/extfs.c     q = extfs_get_path_int (vpath, &amp;archive, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1283'>archive</a>          1283 src/vfs/extfs/extfs.c     entry = extfs_find_entry (archive-&gt;root_entry, q, FALSE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1289'>archive</a>          1289 src/vfs/extfs/extfs.c     entry = extfs_find_entry (archive-&gt;root_entry, q, TRUE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1301'>archive</a>          1301 src/vfs/extfs/extfs.c     if (extfs_cmd (" mkdir ", archive, entry, ""))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1317'>archive</a>          1317 src/vfs/extfs/extfs.c     struct archive *archive;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1322'>archive</a>          1322 src/vfs/extfs/extfs.c     q = extfs_get_path_int (vpath, &amp;archive, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1325'>archive</a>          1325 src/vfs/extfs/extfs.c     entry = extfs_find_entry (archive-&gt;root_entry, q, FALSE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1340'>archive</a>          1340 src/vfs/extfs/extfs.c     if (extfs_cmd (" rmdir ", archive, entry, ""))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1356'>archive</a>          1356 src/vfs/extfs/extfs.c     struct archive *archive = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1361'>archive</a>          1361 src/vfs/extfs/extfs.c     q = extfs_get_path (vpath, &amp;archive, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1364'>archive</a>          1364 src/vfs/extfs/extfs.c     entry = extfs_find_entry (archive-&gt;root_entry, q, FALSE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1390'>archive</a>          1390 src/vfs/extfs/extfs.c     struct archive *archive = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1393'>archive</a>          1393 src/vfs/extfs/extfs.c     p = extfs_get_path (vpath, &amp;archive, TRUE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1397'>archive</a>          1397 src/vfs/extfs/extfs.c     return (vfsid) archive;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1405'>archive</a>          1405 src/vfs/extfs/extfs.c     return (((struct archive *) id)-&gt;fd_usage &lt;= 0);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1488'>archive</a>          1488 src/vfs/extfs/extfs.c     struct archive *archive = (struct archive *) id;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1490'>archive</a>          1490 src/vfs/extfs/extfs.c     if (archive == first_archive)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1492'>archive</a>          1492 src/vfs/extfs/extfs.c         first_archive = archive-&gt;next;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1496'>archive</a>          1496 src/vfs/extfs/extfs.c         struct archive *parc;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1498'>archive</a>          1498 src/vfs/extfs/extfs.c             if (parc-&gt;next == archive)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1500'>archive</a>          1500 src/vfs/extfs/extfs.c                 parc-&gt;next = archive-&gt;next;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1504'>archive</a>          1504 src/vfs/extfs/extfs.c     extfs_free_archive (archive);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1524'>archive</a>          1524 src/vfs/extfs/extfs.c     fp-&gt;archive-&gt;fd_usage++;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1542'>archive</a>          1542 src/vfs/extfs/extfs.c         fp-&gt;archive-&gt;fd_usage--;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1679'>archive</a>          1679 src/vfs/extfs/extfs.c     struct archive *ar;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L265'>archive</a>           265 src/vfs/tar/tar.c tar_free_archive (struct vfs_class *me, struct vfs_s_super *archive)</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L269'>archive</a>           269 src/vfs/tar/tar.c     if (archive-&gt;data != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L271'>archive</a>           271 src/vfs/tar/tar.c         tar_super_data_t *arch = (tar_super_data_t *) archive-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L275'>archive</a>           275 src/vfs/tar/tar.c         g_free (archive-&gt;data);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L283'>archive</a>           283 src/vfs/tar/tar.c tar_open_archive_int (struct vfs_class *me, const vfs_path_t * vpath, struct vfs_s_super *archive)</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L297'>archive</a>           297 src/vfs/tar/tar.c     archive-&gt;name = g_strdup (vfs_path_as_str (vpath));</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L298'>archive</a>           298 src/vfs/tar/tar.c     archive-&gt;data = g_new (tar_super_data_t, 1);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L299'>archive</a>           299 src/vfs/tar/tar.c     arch = (tar_super_data_t *) archive-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L305'>archive</a>           305 src/vfs/tar/tar.c     type = get_compression_type (result, archive-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L314'>archive</a>           314 src/vfs/tar/tar.c         s = g_strconcat (archive-&gt;name, decompress_extension (type), (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L323'>archive</a>           323 src/vfs/tar/tar.c             MC_PTR_FREE (archive-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L338'>archive</a>           338 src/vfs/tar/tar.c     root = vfs_s_new_inode (me, archive, &amp;arch-&gt;st);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L344'>archive</a>           344 src/vfs/tar/tar.c     archive-&gt;root = root;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L352'>archive</a>           352 src/vfs/tar/tar.c tar_get_next_record (struct vfs_s_super *archive, int tard)</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L356'>archive</a>           356 src/vfs/tar/tar.c     (void) archive;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L368'>archive</a>           368 src/vfs/tar/tar.c tar_skip_n_records (struct vfs_s_super *archive, int tard, size_t n)</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L370'>archive</a>           370 src/vfs/tar/tar.c     (void) archive;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L379'>archive</a>           379 src/vfs/tar/tar.c tar_fill_stat (struct vfs_s_super *archive, struct stat *st, union record *header, size_t h_size)</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L381'>archive</a>           381 src/vfs/tar/tar.c     tar_super_data_t *arch = (tar_super_data_t *) archive-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L451'>archive</a>           451 src/vfs/tar/tar.c tar_read_header (struct vfs_class *me, struct vfs_s_super *archive, int tard, size_t * h_size)</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L453'>archive</a>           453 src/vfs/tar/tar.c     tar_super_data_t *arch = (tar_super_data_t *) archive-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L463'>archive</a>           463 src/vfs/tar/tar.c     header = tar_get_next_record (archive, tard);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L586'>archive</a>           586 src/vfs/tar/tar.c             data = tar_get_next_record (archive, tard)-&gt;charptr;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L686'>archive</a>           686 src/vfs/tar/tar.c         parent = vfs_s_find_inode (me, archive, q, LINK_NO_FOLLOW, FL_MKDIR);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L695'>archive</a>           695 src/vfs/tar/tar.c             inode = vfs_s_find_inode (me, archive, current_link_name, LINK_NO_FOLLOW, 0);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L709'>archive</a>           709 src/vfs/tar/tar.c         tar_fill_stat (archive, &amp;st, header, *h_size);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L716'>archive</a>           716 src/vfs/tar/tar.c         inode = vfs_s_new_inode (me, archive, &amp;st);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L737'>archive</a>           737 src/vfs/tar/tar.c             while (tar_get_next_record (archive, tard)-&gt;ext_hdr.isextended != 0)</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L753'>archive</a>           753 src/vfs/tar/tar.c tar_open_archive (struct vfs_s_super *archive, const vfs_path_t * vpath,</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L762'>archive</a>           762 src/vfs/tar/tar.c     tard = tar_open_archive_int (vpath_element-&gt;class, vpath, archive);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L771'>archive</a>           771 src/vfs/tar/tar.c         status = tar_read_header (vpath_element-&gt;class, archive, tard, &amp;h_size);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L776'>archive</a>           776 src/vfs/tar/tar.c             tar_skip_n_records (archive, tard, (h_size + RECORDSIZE - 1) / RECORDSIZE);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L139'>archive</a>           139 tests/lib/vfs/vfs_s_get_path.c     struct vfs_s_super *archive;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L147'>archive</a>           147 tests/lib/vfs/vfs_s_get_path.c     result = vfs_s_get_path (vpath, &amp;archive, 0);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L151'>archive</a>           151 tests/lib/vfs/vfs_s_get_path.c     mctest_assert_str_eq (archive-&gt;name, "/" ETALON_VFS_URL_NAME ARCH_NAME);</span>
+</pre>
+</body>
+</html>

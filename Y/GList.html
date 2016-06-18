@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>GList</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--glibcompat.c.html#L84'>GList</a>              84 lib/glibcompat.c g_list_free_full (GList * list, GDestroyNotify free_func)</span>
+<span class='curline'><a href='../S/lib--glibcompat.h.html#L16'>GList</a>              16 lib/glibcompat.h void g_list_free_full (GList * list, GDestroyNotify free_func);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1075'>GList</a>            1075 lib/util.c     GList *</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1076'>GList</a>            1076 lib/util.c     list_append_unique (GList * list, char *text)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1078'>GList</a>            1078 lib/util.c         GList *lc_link;</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1091'>GList</a>            1091 lib/util.c             GList *newlink;</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1096'>GList</a>            1096 lib/util.c                 GList *tmp;</span>
+<span class='curline'><a href='../S/lib--util.h.html#L225'>GList</a>             225 lib/util.h     GList *list_append_unique (GList * list, char *text);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L89'>GList</a>              89 lib/vfs/direntry.c     GList *cur;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L192'>GList</a>             192 lib/vfs/direntry.c         GList *iter;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L246'>GList</a>             246 lib/vfs/direntry.c     GList *iter;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L712'>GList</a>             712 lib/vfs/direntry.c     GList *iter;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1047'>GList</a>            1047 lib/vfs/direntry.c     GList *iter;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1585'>GList</a>            1585 lib/vfs/direntry.c     GList *iter;</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L95'>GList</a>              95 lib/vfs/xdirentry.h     GList *subdir;              /* If this is a directory, its entry. List of vfs_s_entry */</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L120'>GList</a>             120 lib/vfs/xdirentry.h     GList *supers;</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L52'>GList</a>              52 lib/widget/dialog-switch.c static GList *mc_dialogs = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L54'>GList</a>              54 lib/widget/dialog-switch.c static GList *mc_current = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L81'>GList</a>              81 lib/widget/dialog-switch.c dialog_switch_goto (GList * dlg)</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L136'>GList</a>             136 lib/widget/dialog-switch.c     GList *dlg;</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L157'>GList</a>             157 lib/widget/dialog-switch.c     GList *this;</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L190'>GList</a>             190 lib/widget/dialog-switch.c     GList *next;</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L207'>GList</a>             207 lib/widget/dialog-switch.c     GList *prev;</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L227'>GList</a>             227 lib/widget/dialog-switch.c     GList *h;</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L305'>GList</a>             305 lib/widget/dialog-switch.c     GList *dlg;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L58'>GList</a>              58 lib/widget/dialog.c GList *top_dlg = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L88'>GList</a>              88 lib/widget/dialog.c static GList *</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L89'>GList</a>              89 lib/widget/dialog.c dlg_widget_next (WDialog * h, GList * l)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L91'>GList</a>              91 lib/widget/dialog.c     GList *next;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L102'>GList</a>             102 lib/widget/dialog.c static GList *</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L103'>GList</a>             103 lib/widget/dialog.c dlg_widget_prev (WDialog * h, GList * l)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L105'>GList</a>             105 lib/widget/dialog.c     GList *prev;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L124'>GList</a>             124 lib/widget/dialog.c     GList *p, *first;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L223'>GList</a>             223 lib/widget/dialog.c do_select_widget (WDialog * h, GList * w, select_dir_t dir)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L388'>GList</a>             388 lib/widget/dialog.c     GList *p;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L437'>GList</a>             437 lib/widget/dialog.c     GList *hot_cur;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L620'>GList</a>             620 lib/widget/dialog.c     GList *l;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L705'>GList</a>             705 lib/widget/dialog.c         GList *w;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L962'>GList</a>             962 lib/widget/dialog.c         GList *b;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1014'>GList</a>            1014 lib/widget/dialog.c     GList *d;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1044'>GList</a>            1044 lib/widget/dialog.c     GList *d = top_dlg;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1105'>GList</a>            1105 lib/widget/dialog.c     GList *w;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1118'>GList</a>            1118 lib/widget/dialog.c     GList *w;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1190'>GList</a>            1190 lib/widget/dialog.c     GList *p = h-&gt;current;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L77'>GList</a>              77 lib/widget/dialog.h     GList *widgets;             /* widgets list */</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L78'>GList</a>              78 lib/widget/dialog.h     GList *current;             /* Currently active widget */</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L94'>GList</a>              94 lib/widget/dialog.h extern GList *top_dlg;</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L139'>GList</a>             139 lib/widget/history.c GList *</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L142'>GList</a>             142 lib/widget/history.c     GList *hist = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L167'>GList</a>             167 lib/widget/history.c GList *</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L171'>GList</a>             171 lib/widget/history.c     GList *hist = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L231'>GList</a>             231 lib/widget/history.c history_save (mc_config_t * cfg, const char *name, GList * h)</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L288'>GList</a>             288 lib/widget/history.c history_show (GList ** history, Widget * widget, int current)</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L290'>GList</a>             290 lib/widget/history.c     GList *z, *hlist = NULL, *hi;</span>
+<span class='curline'><a href='../S/lib--widget--history.h.html#L24'>GList</a>              24 lib/widget/history.h GList *history_get (const char *input_name);</span>
+<span class='curline'><a href='../S/lib--widget--history.h.html#L26'>GList</a>              26 lib/widget/history.h GList *history_load (mc_config_t * cfg, const char *name);</span>
+<span class='curline'><a href='../S/lib--widget--history.h.html#L28'>GList</a>              28 lib/widget/history.h void history_save (mc_config_t * cfg, const char *name, GList * h);</span>
+<span class='curline'><a href='../S/lib--widget--history.h.html#L31'>GList</a>              31 lib/widget/history.h char *history_show (GList ** history, Widget * widget, int current);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L90'>GList</a>              90 lib/widget/input.c get_history_length (const GList * history)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L94'>GList</a>              94 lib/widget/input.c     for (; history != NULL; history = (const GList *) g_list_previous (history))</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L618'>GList</a>             618 lib/widget/input.c     GList *prev;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L641'>GList</a>             641 lib/widget/input.c     GList *next;</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L69'>GList</a>              69 lib/widget/input.h         GList *list;            /* the history */</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L70'>GList</a>              70 lib/widget/input.h         GList *current;         /* current history item */</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1063'>GList</a>            1063 lib/widget/input_complete.c                 GList *e;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1101'>GList</a>            1101 lib/widget/input_complete.c                 GList *e;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L138'>GList</a>             138 lib/widget/listbox.c     GList *le = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L206'>GList</a>             206 lib/widget/listbox.c         GList *le;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L578'>GList</a>             578 lib/widget/listbox.c         GList *le;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L622'>GList</a>             622 lib/widget/listbox.c     GList *le;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L683'>GList</a>             683 lib/widget/listbox.c         GList *item;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L695'>GList</a>             695 lib/widget/listbox.c GList *</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L708'>GList</a>             708 lib/widget/listbox.c         GList *current;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L735'>GList</a>             735 lib/widget/listbox.c listbox_set_list (WListbox * l, GList * list)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L741'>GList</a>             741 lib/widget/listbox.c         GList *ll;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L73'>GList</a>              73 lib/widget/listbox.h GList *listbox_get_first_link (const WListbox * l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L76'>GList</a>              76 lib/widget/listbox.h void listbox_set_list (WListbox * l, GList * list);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L67'>GList</a>              67 lib/widget/menu.c     GList *entries;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L84'>GList</a>              84 lib/widget/menu.c         GList *i;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L215'>GList</a>             215 lib/widget/menu.c     GList *i;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L498'>GList</a>             498 lib/widget/menu.c         GList *i;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L521'>GList</a>             521 lib/widget/menu.c         GList *i;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L641'>GList</a>             641 lib/widget/menu.c     GList *menu;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L848'>GList</a>             848 lib/widget/menu.c create_menu (const char *name, GList * entries, const char *help_node)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L887'>GList</a>             887 lib/widget/menu.c menubar_new (int y, int x, int cols, GList * menu, gboolean visible)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L906'>GList</a>             906 lib/widget/menu.c menubar_set_menu (WMenuBar * menubar, GList * menu)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L944'>GList</a>             944 lib/widget/menu.c     GList *i;</span>
+<span class='curline'><a href='../S/lib--widget--menu.h.html#L36'>GList</a>              36 lib/widget/menu.h     GList *menu;                /* The actual menus */</span>
+<span class='curline'><a href='../S/lib--widget--menu.h.html#L48'>GList</a>              48 lib/widget/menu.h menu_t *create_menu (const char *name, GList * entries, const char *help_node);</span>
+<span class='curline'><a href='../S/lib--widget--menu.h.html#L52'>GList</a>              52 lib/widget/menu.h WMenuBar *menubar_new (int y, int x, int cols, GList * menu, gboolean visible);</span>
+<span class='curline'><a href='../S/lib--widget--menu.h.html#L53'>GList</a>              53 lib/widget/menu.h void menubar_set_menu (WMenuBar * menubar, GList * menu);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L185'>GList</a>             185 lib/widget/quick.c     GList *input_labels = NULL; /* Widgets not directly requested by the user. */</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L85'>GList</a>              85 lib/widget/wtools.c                     GList *p;</span>
+<span class='curline'><a href='../S/src--args.c.html#L517'>GList</a>             517 src/args.c     static GList *</span>
+<span class='curline'><a href='../S/src--args.c.html#L520'>GList</a>             520 src/args.c         GList *flist = NULL;</span>
+<span class='curline'><a href='../S/src--args.c.html#L603'>GList</a>             603 src/args.c             GList *l;</span>
+<span class='curline'><a href='../S/src--editor--edit.h.html#L70'>GList</a>              70 src/editor/edit.h gboolean edit_files (const GList * files);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2792'>GList</a>            2792 src/editor/editcmd.c         GList *history;</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L68'>GList</a>              68 src/editor/editmenu.c static GList *</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L71'>GList</a>              71 src/editor/editmenu.c     GList *entries = NULL;</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L94'>GList</a>              94 src/editor/editmenu.c static GList *</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L97'>GList</a>              97 src/editor/editmenu.c     GList *entries = NULL;</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L126'>GList</a>             126 src/editor/editmenu.c static GList *</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L129'>GList</a>             129 src/editor/editmenu.c     GList *entries = NULL;</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L145'>GList</a>             145 src/editor/editmenu.c static GList *</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L148'>GList</a>             148 src/editor/editmenu.c     GList *entries = NULL;</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L200'>GList</a>             200 src/editor/editmenu.c static GList *</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L203'>GList</a>             203 src/editor/editmenu.c     GList *entries = NULL;</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L225'>GList</a>             225 src/editor/editmenu.c static GList *</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L228'>GList</a>             228 src/editor/editmenu.c     GList *entries = NULL;</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L244'>GList</a>             244 src/editor/editmenu.c static GList *</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L247'>GList</a>             247 src/editor/editmenu.c     GList *entries = NULL;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L326'>GList</a>             326 src/editor/editwidget.c     GList *w;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L641'>GList</a>             641 src/editor/editwidget.c     GList *l;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L889'>GList</a>             889 src/editor/editwidget.c             GList *l;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L890'>GList</a>             890 src/editor/editwidget.c             GList *top = NULL;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1186'>GList</a>            1186 src/editor/editwidget.c     GList *files;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1199'>GList</a>            1199 src/editor/editwidget.c edit_files (const GList * files)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1204'>GList</a>            1204 src/editor/editwidget.c     const GList *file;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1745'>GList</a>            1745 src/filemanager/find.c         GList *entry;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L192'>GList</a>             192 src/filemanager/midnight.c static GList *</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L195'>GList</a>             195 src/filemanager/midnight.c     GList *entries = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L231'>GList</a>             231 src/filemanager/midnight.c static GList *</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L234'>GList</a>             234 src/filemanager/midnight.c     GList *entries = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L267'>GList</a>             267 src/filemanager/midnight.c static GList *</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L274'>GList</a>             274 src/filemanager/midnight.c     GList *entries = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L325'>GList</a>             325 src/filemanager/midnight.c static GList *</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L328'>GList</a>             328 src/filemanager/midnight.c     GList *entries = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L986'>GList</a>             986 src/filemanager/midnight.c         ret = edit_files ((GList *) mc_run_param0);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3323'>GList</a>            3323 src/filemanager/panel.c         GList *next;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3350'>GList</a>            3350 src/filemanager/panel.c         GList *prev;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3405'>GList</a>            3405 src/filemanager/panel.c             GList *prev;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L100'>GList</a>             100 src/filemanager/panel.h     GList *dir_history;         /* directory history */</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L101'>GList</a>             101 src/filemanager/panel.h     GList *dir_history_current; /* pointer to the current history item */</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L531'>GList</a>             531 src/filemanager/treestore.c process_special_dirs (GList ** special_dirs, const char *file)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L561'>GList</a>             561 src/filemanager/treestore.c     static GList *special_dirs = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L562'>GList</a>             562 src/filemanager/treestore.c     GList *l;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L857'>GList</a>             857 src/filemanager/treestore.c     GList *the_queue;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.h.html#L40'>GList</a>              40 src/filemanager/treestore.h     GList *add_queue_vpath;     /* List of vfs_path_t objects of added directories */</span>
+<span class='curline'><a href='../S/src--main.c.html#L477'>GList</a>             477 src/main.c             g_list_free_full ((GList *) mc_run_param0, (GDestroyNotify) mcedit_arg_free);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1549'>GList</a>            1549 src/vfs/fish/fish.c     GList *iter;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2254'>GList</a>            2254 src/vfs/ftpfs/ftpfs.c     GList *iter;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L650'>GList</a>             650 src/vfs/sftpfs/vfs_class.c     GList *iter;</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L140'>GList</a>             140 src/viewer/actions_cmd.c         GList *history;</span>
+</pre>
+</body>
+</html>

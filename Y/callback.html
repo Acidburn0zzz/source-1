@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>callback</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--event--internal.h.html#L13'>callback</a>           13 lib/event/internal.h     mc_event_callback_func_t callback;</span>
+<span class='curline'><a href='../S/lib--event--manage.c.html#L93'>callback</a>           93 lib/event/manage.c         cb-&gt;callback = event_callback;</span>
+<span class='curline'><a href='../S/lib--event--manage.c.html#L219'>callback</a>          219 lib/event/manage.c         if (cb-&gt;callback == event_callback &amp;&amp; cb-&gt;init_data == event_init_data)</span>
+<span class='curline'><a href='../S/lib--event--raise.c.html#L69'>callback</a>           69 lib/event/raise.c         if (!(*cb-&gt;callback) (event_group_name, event_name, cb-&gt;init_data, event_data))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L258'>callback</a>          258 lib/tty/key.c      select_fn callback;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L592'>callback</a>          592 lib/tty/key.c                      (*p-&gt;callback) (p-&gt;fd, p-&gt;info);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1399'>callback</a>         1399 lib/tty/key.c  add_select_channel (int fd, select_fn callback, void *info)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1405'>callback</a>         1405 lib/tty/key.c      new-&gt;callback = callback;</span>
+<span class='curline'><a href='../S/lib--tty--key.h.html#L89'>callback</a>           89 lib/tty/key.h  void add_select_channel (int fd, select_fn callback, void *info);</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L95'>callback</a>           95 lib/widget/button.c         if (b-&gt;callback == NULL || b-&gt;callback (b, b-&gt;action) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L202'>callback</a>          202 lib/widget/button.c button_new (int y, int x, int action, button_flags_t flags, const char *text, bcback_fn callback)</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L215'>callback</a>          215 lib/widget/button.c     b-&gt;callback = callback;</span>
+<span class='curline'><a href='../S/lib--widget--button.h.html#L40'>callback</a>           40 lib/widget/button.h     bcback_fn callback;         /* callback function */</span>
+<span class='curline'><a href='../S/lib--widget--button.h.html#L48'>callback</a>           48 lib/widget/button.h                      bcback_fn callback);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L213'>callback</a>          213 lib/widget/dialog.c     return (w-&gt;callback == f) ? 0 : 1;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L840'>callback</a>          840 lib/widget/dialog.c             gboolean compact, const int *colors, widget_cb_fn callback,</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L856'>callback</a>          856 lib/widget/dialog.c     widget_init (w, y1, x1, lines, cols, (callback != NULL) ? callback : dlg_default_callback,</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1103'>callback</a>         1103 lib/widget/dialog.c find_widget_type (const WDialog * h, widget_cb_fn callback)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1107'>callback</a>         1107 lib/widget/dialog.c     w = g_list_find_custom (h-&gt;widgets, (gconstpointer) callback, dlg_find_widget_callback);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L109'>callback</a>          109 lib/widget/dialog.h                      const int *colors, widget_cb_fn callback, widget_mouse_cb_fn mouse_callback,</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L155'>callback</a>          155 lib/widget/dialog.h Widget *find_widget_type (const WDialog * h, widget_cb_fn callback);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L405'>callback</a>          405 lib/widget/listbox.c     if (l-&gt;callback != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L406'>callback</a>          406 lib/widget/listbox.c         action = l-&gt;callback (l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L546'>callback</a>          546 lib/widget/listbox.c listbox_new (int y, int x, int height, int width, gboolean deletable, lcback_fn callback)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L561'>callback</a>          561 lib/widget/listbox.c     l-&gt;callback = callback;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L56'>callback</a>           56 lib/widget/listbox.h     lcback_fn callback;         /* The callback function */</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L66'>callback</a>           66 lib/widget/listbox.h WListbox *listbox_new (int y, int x, int height, int width, gboolean deletable, lcback_fn callback);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L225'>callback</a>          225 lib/widget/quick.c                                               quick_widget-&gt;u.button.callback));</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L369'>callback</a>          369 lib/widget/quick.c                                                   quick_widget-&gt;u.button.callback));</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L410'>callback</a>          410 lib/widget/quick.c                          dialog_colors, quick_dlg-&gt;callback, quick_dlg-&gt;mouse_callback,</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L414'>callback</a>          414 lib/widget/quick.c                          WPOS_KEEP_DEFAULT, FALSE, dialog_colors, quick_dlg-&gt;callback,</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L36'>callback</a>           36 lib/widget/quick.h             .callback = cb                                                      \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L289'>callback</a>          289 lib/widget/quick.h             bcback_fn callback;</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L338'>callback</a>          338 lib/widget/quick.h     widget_cb_fn callback;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L141'>callback</a>          141 lib/widget/widget-common.c              widget_cb_fn callback, widget_mouse_cb_fn mouse_callback)</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L148'>callback</a>          148 lib/widget/widget-common.c     w-&gt;callback = callback;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L333'>callback</a>          333 lib/widget/widget-common.c             w-&gt;callback (w, NULL, MSG_DRAW, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.h.html#L132'>callback</a>          132 lib/widget/widget-common.h     widget_cb_fn callback;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.h.html#L174'>callback</a>          174 lib/widget/widget-common.h                   widget_cb_fn callback, widget_mouse_cb_fn mouse_callback);</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.h.html#L205'>callback</a>          205 lib/widget/widget-common.h         ret = WIDGET (w)-&gt;callback (WIDGET (w), WIDGET (sender), msg, parm, data);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1289'>callback</a>         1289 src/editor/editwidget.c     return (w != NULL &amp;&amp; w-&gt;callback == edit_callback);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1360'>callback</a>         1360 src/editor/editwidget.c     w-&gt;callback = edit_callback;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1208'>callback</a>         1208 src/filemanager/boxes.c         bcback_fn callback;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1257'>callback</a>         1257 src/filemanager/boxes.c                                 job_but[i].callback));</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L483'>callback</a>          483 src/filemanager/command.c     WIDGET (cmd)-&gt;callback = command_callback;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L186'>callback</a>          186 src/filemanager/find.c     bcback_fn callback;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1647'>callback</a>         1647 src/filemanager/find.c                          fbuts[i].callback));</span>
+<span class='curline'><a href='../S/src--filemanager--listmode.c.html#L77'>callback</a>           77 src/filemanager/listmode.c     bcback callback;</span>
+<span class='curline'><a href='../S/src--filemanager--listmode.c.html#L213'>callback</a>          213 src/filemanager/listmode.c                                 listmode_but[i].text, listmode_but[i].callback));</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L664'>callback</a>          664 src/filemanager/treestore.c tree_store_add_entry_remove_hook (tree_store_remove_fn callback, void *data)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L666'>callback</a>          666 src/filemanager/treestore.c     add_hook (&amp;remove_entry_hooks, (void (*)(void *)) callback, data);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L672'>callback</a>          672 src/filemanager/treestore.c tree_store_remove_entry_remove_hook (tree_store_remove_fn callback)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L674'>callback</a>          674 src/filemanager/treestore.c     delete_hook (&amp;remove_entry_hooks, (void (*)(void *)) callback);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.h.html#L59'>callback</a>           59 src/filemanager/treestore.h void tree_store_add_entry_remove_hook (tree_store_remove_fn callback, void *data);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.h.html#L60'>callback</a>           60 src/filemanager/treestore.h void tree_store_remove_entry_remove_hook (tree_store_remove_fn callback);</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>k</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1184'>k</a>                1184 lib/tty/key.c  k_dispose (key_def * k)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1186'>k</a>                1186 lib/tty/key.c      if (k != NULL)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1188'>k</a>                1188 lib/tty/key.c          k_dispose (k-&gt;child);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1189'>k</a>                1189 lib/tty/key.c          k_dispose (k-&gt;next);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1190'>k</a>                1190 lib/tty/key.c          g_free (k);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1468'>k</a>                1468 lib/tty/key.c      int k = -1;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1499'>k</a>                1499 lib/tty/key.c                  k = key;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1509'>k</a>                1509 lib/tty/key.c      if (k &lt;= 0)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1530'>k</a>                1530 lib/tty/key.c              if (k &lt; 127)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1531'>k</a>                1531 lib/tty/key.c                  g_string_append_c (s, (gchar) g_ascii_toupper ((gchar) k));</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1539'>k</a>                1539 lib/tty/key.c          else if (k &lt; 128)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1541'>k</a>                1541 lib/tty/key.c              if ((k &gt;= 'A') || (lc_index &lt; 0) || (key_conv_tab_sorted[lc_index]-&gt;shortcut == NULL))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1542'>k</a>                1542 lib/tty/key.c                  g_string_append_c (s, (gchar) g_ascii_tolower ((gchar) k));</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1556'>k</a>                1556 lib/tty/key.c          if (k &lt; 127 &amp;&amp; k &gt; 31)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1557'>k</a>                1557 lib/tty/key.c              k = g_ascii_toupper ((gchar) k);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1559'>k</a>                1559 lib/tty/key.c              k |= KEY_M_SHIFT;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1564'>k</a>                1564 lib/tty/key.c          if (k &lt; 256)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1565'>k</a>                1565 lib/tty/key.c              k = XCTRL (k);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1567'>k</a>                1567 lib/tty/key.c              k |= KEY_M_CTRL;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1571'>k</a>                1571 lib/tty/key.c          k = ALT (k);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1573'>k</a>                1573 lib/tty/key.c      return (long) k;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1582'>k</a>                1582 lib/tty/key.c      unsigned int k = keycode &amp; ~KEY_M_MASK;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1593'>k</a>                1593 lib/tty/key.c      if (lookup_keycode (k, &amp;key_idx) || (k &gt; 0 &amp;&amp; k &lt; 256))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1606'>k</a>                1606 lib/tty/key.c              if (k &lt; 32)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1607'>k</a>                1607 lib/tty/key.c                  k += 64;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1619'>k</a>                1619 lib/tty/key.c                  if (k &lt; 127)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1620'>k</a>                1620 lib/tty/key.c                      g_string_append_c (s, (gchar) g_ascii_toupper ((gchar) k));</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1629'>k</a>                1629 lib/tty/key.c          else if (k &lt; 128)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1631'>k</a>                1631 lib/tty/key.c              if ((k &gt;= 'A') || (key_idx &lt; 0) || (key_conv_tab_sorted[key_idx]-&gt;name == NULL))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1632'>k</a>                1632 lib/tty/key.c                  g_string_append_c (s, (gchar) k);</span>
+<span class='curline'><a href='../S/lib--tty--win.c.html#L98'>k</a>                  98 lib/tty/win.c      unsigned char *k;</span>
+<span class='curline'><a href='../S/lib--tty--win.c.html#L112'>k</a>                 112 lib/tty/win.c      k = g_malloc (bytes);</span>
+<span class='curline'><a href='../S/lib--tty--win.c.html#L121'>k</a>                 121 lib/tty/win.c              k[j++] = c;</span>
+<span class='curline'><a href='../S/lib--tty--win.c.html#L128'>k</a>                 128 lib/tty/win.c                  k[j++] = c;</span>
+<span class='curline'><a href='../S/lib--tty--win.c.html#L135'>k</a>                 135 lib/tty/win.c          tty_print_char (is_printable (k[i]) ? k[i] : ' ');</span>
+<span class='curline'><a href='../S/lib--tty--win.c.html#L137'>k</a>                 137 lib/tty/win.c      g_free (k);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1085'>k</a>                1085 src/diffviewer/ydiff.c                     size_t k;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1090'>k</a>                1090 src/diffviewer/ydiff.c                     for (k = 0; k &lt; ret-&gt;len; k++)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1092'>k</a>                1092 src/diffviewer/ydiff.c                         PAIR *p = (PAIR *) g_array_index (ret, PAIR, k);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1096'>k</a>                1096 src/diffviewer/ydiff.c                     if (k == ret-&gt;len)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1149'>k</a>                1149 src/diffviewer/ydiff.c             size_t k = 0;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1160'>k</a>                1160 src/diffviewer/ydiff.c             for (k = 0; k &lt; ret-&gt;len - 1; k++)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1162'>k</a>                1162 src/diffviewer/ydiff.c                 data = (const PAIR *) &amp;g_array_index (ret, PAIR, k);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1163'>k</a>                1163 src/diffviewer/ydiff.c                 data2 = (const PAIR *) &amp;g_array_index (ret, PAIR, k + 1);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1171'>k</a>                1171 src/diffviewer/ydiff.c             data = (const PAIR *) &amp;g_array_index (ret, PAIR, k);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1245'>k</a>                1245 src/diffviewer/ydiff.c is_inside (int k, GArray * hdiff, diff_place_t ord)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1257'>k</a>                1257 src/diffviewer/ydiff.c         if (k &gt;= start &amp;&amp; k &lt; end)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1468'>k</a>                1468 src/diffviewer/ydiff.c         int i, k;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1472'>k</a>                1472 src/diffviewer/ydiff.c         for (i = 0, k = 0; dstsize != 0 &amp;&amp; srcsize != 0 &amp;&amp; *src != '\n'; i++, k++, src++, srcsize--)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1487'>k</a>                1487 src/diffviewer/ydiff.c                         *att++ = is_inside (k, hdiff, ord);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1499'>k</a>                1499 src/diffviewer/ydiff.c                         *att++ = is_inside (k, hdiff, ord);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1501'>k</a>                1501 src/diffviewer/ydiff.c                         *att++ = is_inside (k, hdiff, ord);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1507'>k</a>                1507 src/diffviewer/ydiff.c                         *att++ = is_inside (k, hdiff, ord);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1529'>k</a>                1529 src/diffviewer/ydiff.c                 *att++ = is_inside (k, hdiff, ord);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2524'>k</a>                2524 src/diffviewer/ydiff.c     size_t i, k;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2602'>k</a>                2602 src/diffviewer/ydiff.c                         k = dview_str_utf8_offset_to_pos (p-&gt;p, width);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2605'>k</a>                2605 src/diffviewer/ydiff.c                         k = width;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2607'>k</a>                2607 src/diffviewer/ydiff.c                     cvt_mgeta (p-&gt;p, p-&gt;u.len, buf, k, skip, tab_size, show_cr,</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2661'>k</a>                2661 src/diffviewer/ydiff.c                     k = dview_str_utf8_offset_to_pos (p-&gt;p, width);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2664'>k</a>                2664 src/diffviewer/ydiff.c                     k = width;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2665'>k</a>                2665 src/diffviewer/ydiff.c                 cvt_mget (p-&gt;p, p-&gt;u.len, buf, k, skip, tab_size, show_cr);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2731'>k</a>                2731 src/diffviewer/ydiff.c     k = width;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2733'>k</a>                2733 src/diffviewer/ydiff.c         k = xwidth - 1;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2734'>k</a>                2734 src/diffviewer/ydiff.c     memset (buf, ' ', k);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2735'>k</a>                2735 src/diffviewer/ydiff.c     buf[k] = '\0';</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L147'>k</a>                 147 src/editor/syntax.c     syntax_keyword_t *k = SYNTAX_KEYWORD (keyword);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L149'>k</a>                 149 src/editor/syntax.c     g_free (k-&gt;keyword);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L150'>k</a>                 150 src/editor/syntax.c     g_free (k-&gt;whole_word_chars_left);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L151'>k</a>                 151 src/editor/syntax.c     g_free (k-&gt;whole_word_chars_right);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L152'>k</a>                 152 src/editor/syntax.c     g_free (k);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L449'>k</a>                 449 src/editor/syntax.c                 syntax_keyword_t *k;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L454'>k</a>                 454 src/editor/syntax.c                 k = SYNTAX_KEYWORD (g_ptr_array_index (r-&gt;keyword, count));</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L455'>k</a>                 455 src/editor/syntax.c                 e = compare_word_to_right (edit, i, k-&gt;keyword, k-&gt;whole_word_chars_left,</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L456'>k</a>                 456 src/editor/syntax.c                                            k-&gt;whole_word_chars_right, k-&gt;line_start);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L550'>k</a>                 550 src/editor/syntax.c             syntax_keyword_t *k;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L555'>k</a>                 555 src/editor/syntax.c             k = SYNTAX_KEYWORD (g_ptr_array_index (r-&gt;keyword, count));</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L556'>k</a>                 556 src/editor/syntax.c             e = compare_word_to_right (edit, i, k-&gt;keyword, k-&gt;whole_word_chars_left,</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L557'>k</a>                 557 src/editor/syntax.c                                        k-&gt;whole_word_chars_right, k-&gt;line_start);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L635'>k</a>                 635 src/editor/syntax.c     syntax_keyword_t *k;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L639'>k</a>                 639 src/editor/syntax.c     k = SYNTAX_KEYWORD (g_ptr_array_index (r-&gt;keyword, rule-&gt;keyword));</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L641'>k</a>                 641 src/editor/syntax.c     return k-&gt;color;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1026'>k</a>                1026 src/editor/syntax.c             syntax_keyword_t *k;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1088'>k</a>                1088 src/editor/syntax.c             k = g_new0 (syntax_keyword_t, 1);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1089'>k</a>                1089 src/editor/syntax.c             g_ptr_array_add (c-&gt;keyword, k);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1104'>k</a>                1104 src/editor/syntax.c             k-&gt;color = this_try_alloc_color_pair (fg, bg, attrs);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1105'>k</a>                1105 src/editor/syntax.c             k-&gt;keyword = g_strdup (" ");</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1120'>k</a>                1120 src/editor/syntax.c             syntax_keyword_t *k;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1126'>k</a>                1126 src/editor/syntax.c             k = g_new0 (syntax_keyword_t, 1);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1127'>k</a>                1127 src/editor/syntax.c             g_ptr_array_add (last_rule-&gt;keyword, k);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1131'>k</a>                1131 src/editor/syntax.c                 k-&gt;whole_word_chars_left = g_strdup (whole_left);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1132'>k</a>                1132 src/editor/syntax.c                 k-&gt;whole_word_chars_right = g_strdup (whole_right);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1137'>k</a>                1137 src/editor/syntax.c                 k-&gt;whole_word_chars_left = g_strdup (whole_left);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1142'>k</a>                1142 src/editor/syntax.c                 k-&gt;whole_word_chars_right = g_strdup (whole_right);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1148'>k</a>                1148 src/editor/syntax.c                 k-&gt;line_start = 1;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1155'>k</a>                1155 src/editor/syntax.c             k-&gt;keyword = g_strdup (*a++);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1172'>k</a>                1172 src/editor/syntax.c             k-&gt;color = this_try_alloc_color_pair (fg, bg, attrs);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1239'>k</a>                1239 src/editor/syntax.c                 syntax_keyword_t *k;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1241'>k</a>                1241 src/editor/syntax.c                 k = SYNTAX_KEYWORD (g_ptr_array_index (c-&gt;keyword, j));</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1242'>k</a>                1242 src/editor/syntax.c                 g_string_append_c (first_chars, k-&gt;keyword[0]);</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L565'>k</a>                 565 src/keybind-defaults.c                                const global_keymap_ini_t * k)</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L569'>k</a>                 569 src/keybind-defaults.c     for (i = 0; k[i].key != NULL; i++)</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L570'>k</a>                 570 src/keybind-defaults.c         mc_config_set_string_raw (keymap, section, k[i].key, k[i].value);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charcnv.c.html#L41'>k</a>                  41 src/vfs/smbfs/helpers/lib/charcnv.c     int k;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charcnv.c.html#L43'>k</a>                  43 src/vfs/smbfs/helpers/lib/charcnv.c     for (k = 0; k &lt; 256; k++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charcnv.c.html#L44'>k</a>                  44 src/vfs/smbfs/helpers/lib/charcnv.c         unix2dos[k] = k;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charcnv.c.html#L45'>k</a>                  45 src/vfs/smbfs/helpers/lib/charcnv.c     for (k = 0; k &lt; 256; k++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charcnv.c.html#L46'>k</a>                  46 src/vfs/smbfs/helpers/lib/charcnv.c         dos2unix[k] = k;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--md4.c.html#L61'>k</a>                  61 src/vfs/smbfs/helpers/lib/md4.c #define ROUND1(a,b,c,d,k,s) a = lshift(a + F(b,c,d) + X[k], s)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--md4.c.html#L62'>k</a>                  62 src/vfs/smbfs/helpers/lib/md4.c #define ROUND2(a,b,c,d,k,s) a = lshift(a + G(b,c,d) + X[k] + (uint32)0x5A827999,s)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--md4.c.html#L63'>k</a>                  63 src/vfs/smbfs/helpers/lib/md4.c #define ROUND3(a,b,c,d,k,s) a = lshift(a + H(b,c,d) + X[k] + (uint32)0x6ED9EBA1,s)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L201'>k</a>                 201 src/vfs/smbfs/helpers/libsmb/smbdes.c     int i, j, k;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L249'>k</a>                 249 src/vfs/smbfs/helpers/libsmb/smbdes.c             for (k = 0; k &lt; 6; k++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L250'>k</a>                 250 src/vfs/smbfs/helpers/libsmb/smbdes.c                 b[j][k] = erk[j * 6 + k];</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L259'>k</a>                 259 src/vfs/smbfs/helpers/libsmb/smbdes.c             for (k = 0; k &lt; 4; k++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L260'>k</a>                 260 src/vfs/smbfs/helpers/libsmb/smbdes.c                 b[j][k] = (sbox[j][m][n] &amp; (1 &lt;&lt; (3 - k))) ? 1 : 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L264'>k</a>                 264 src/vfs/smbfs/helpers/libsmb/smbdes.c             for (k = 0; k &lt; 4; k++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L265'>k</a>                 265 src/vfs/smbfs/helpers/libsmb/smbdes.c                 cb[j * 4 + k] = b[j][k];</span>
+</pre>
+</body>
+</html>

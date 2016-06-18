@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>ino</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L146'>ino</a>               146 lib/vfs/direntry.c     if (!S_ISLNK (entry-&gt;ino-&gt;st.st_mode))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L149'>ino</a>               149 lib/vfs/direntry.c     linkname = entry-&gt;ino-&gt;linkname;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L231'>ino</a>               231 lib/vfs/direntry.c         root = ent-&gt;ino;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L257'>ino</a>               257 lib/vfs/direntry.c         struct vfs_s_inode *ino;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L261'>ino</a>               261 lib/vfs/direntry.c         ino = vfs_s_find_inode (me, root-&gt;super, dirname, follow, flags | FL_DIR);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L262'>ino</a>               262 lib/vfs/direntry.c         ent = vfs_s_find_entry_tree (me, ino, name, follow, flags);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L272'>ino</a>               272 lib/vfs/direntry.c     if (ent != NULL &amp;&amp; !MEDATA-&gt;dir_uptodate (me, ent-&gt;ino))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L283'>ino</a>               283 lib/vfs/direntry.c         struct vfs_s_inode *ino;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L285'>ino</a>               285 lib/vfs/direntry.c         ino = vfs_s_new_inode (me, root-&gt;super, vfs_s_default_stat (me, S_IFDIR | 0755));</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L286'>ino</a>               286 lib/vfs/direntry.c         ent = vfs_s_new_entry (me, path, ino);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L287'>ino</a>               287 lib/vfs/direntry.c         if (MEDATA-&gt;dir_load (me, ino, path) == -1)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L374'>ino</a>               374 lib/vfs/direntry.c     struct vfs_s_inode *ino;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L384'>ino</a>               384 lib/vfs/direntry.c     ino =</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L388'>ino</a>               388 lib/vfs/direntry.c     if ((!ino) &amp;&amp; (!*q))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L390'>ino</a>               390 lib/vfs/direntry.c         ino =</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L394'>ino</a>               394 lib/vfs/direntry.c     return ino;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L488'>ino</a>               488 lib/vfs/direntry.c     struct vfs_s_inode *ino;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L490'>ino</a>               490 lib/vfs/direntry.c     ino = vfs_s_inode_from_path (vpath, flag);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L491'>ino</a>               491 lib/vfs/direntry.c     if (ino == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L493'>ino</a>               493 lib/vfs/direntry.c     *buf = ino-&gt;st;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L518'>ino</a>               518 lib/vfs/direntry.c     *buf = FH-&gt;ino-&gt;st;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L527'>ino</a>               527 lib/vfs/direntry.c     struct vfs_s_inode *ino;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L533'>ino</a>               533 lib/vfs/direntry.c     ino = vfs_s_inode_from_path (vpath, 0);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L534'>ino</a>               534 lib/vfs/direntry.c     if (!ino)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L537'>ino</a>               537 lib/vfs/direntry.c     if (!S_ISLNK (ino-&gt;st.st_mode))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L543'>ino</a>               543 lib/vfs/direntry.c     if (ino-&gt;linkname == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L549'>ino</a>               549 lib/vfs/direntry.c     len = strlen (ino-&gt;linkname);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L553'>ino</a>               553 lib/vfs/direntry.c     memcpy (buf, ino-&gt;linkname, len);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L618'>ino</a>               618 lib/vfs/direntry.c     off_t size = FH-&gt;ino-&gt;st.st_size;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L627'>ino</a>               627 lib/vfs/direntry.c             FH-&gt;ino-&gt;super-&gt;me-&gt;verrno = errno;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L672'>ino</a>               672 lib/vfs/direntry.c         char *s = vfs_s_fullpath (me, FH-&gt;ino);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L677'>ino</a>               677 lib/vfs/direntry.c             res = MEDATA-&gt;file_store (me, fh, s, FH-&gt;ino-&gt;localname);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L685'>ino</a>               685 lib/vfs/direntry.c     vfs_s_free_inode (me, FH-&gt;ino);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L756'>ino</a>               756 lib/vfs/direntry.c         if ((MEDATA-&gt;flags &amp; VFS_S_USETMP) != 0 &amp;&amp; (fh-&gt;ino != NULL))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L757'>ino</a>               757 lib/vfs/direntry.c             local = vfs_path_from_str_flags (fh-&gt;ino-&gt;localname, VPF_NO_CANON);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L793'>ino</a>               793 lib/vfs/direntry.c             struct vfs_s_inode *ino;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L795'>ino</a>               795 lib/vfs/direntry.c             ino = vfs_s_inode_from_path (vpath, 0);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L796'>ino</a>               796 lib/vfs/direntry.c             if (ino == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L799'>ino</a>               799 lib/vfs/direntry.c                 ino-&gt;super-&gt;want_stale = 1;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L802'>ino</a>               802 lib/vfs/direntry.c                 ino-&gt;super-&gt;want_stale = 0;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L803'>ino</a>               803 lib/vfs/direntry.c                 vfs_s_invalidate (path_element-&gt;class, ino-&gt;super);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L855'>ino</a>               855 lib/vfs/direntry.c vfs_s_dir_uptodate (struct vfs_class *me, struct vfs_s_inode *ino)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L866'>ino</a>               866 lib/vfs/direntry.c     if (tim.tv_sec &lt; ino-&gt;timestamp.tv_sec)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L879'>ino</a>               879 lib/vfs/direntry.c     struct vfs_s_inode *ino;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L881'>ino</a>               881 lib/vfs/direntry.c     ino = g_try_new0 (struct vfs_s_inode, 1);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L882'>ino</a>               882 lib/vfs/direntry.c     if (ino == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L886'>ino</a>               886 lib/vfs/direntry.c         ino-&gt;st = *initstat;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L887'>ino</a>               887 lib/vfs/direntry.c     ino-&gt;super = super;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L888'>ino</a>               888 lib/vfs/direntry.c     ino-&gt;st.st_nlink = 0;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L889'>ino</a>               889 lib/vfs/direntry.c     ino-&gt;st.st_ino = MEDATA-&gt;inode_counter++;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L890'>ino</a>               890 lib/vfs/direntry.c     ino-&gt;st.st_dev = MEDATA-&gt;rdev;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L894'>ino</a>               894 lib/vfs/direntry.c     CALL (init_inode) (me, ino);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L896'>ino</a>               896 lib/vfs/direntry.c     return ino;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L902'>ino</a>               902 lib/vfs/direntry.c vfs_s_free_inode (struct vfs_class *me, struct vfs_s_inode *ino)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L904'>ino</a>               904 lib/vfs/direntry.c     if (ino == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L908'>ino</a>               908 lib/vfs/direntry.c     if (ino-&gt;st.st_nlink &gt; 1)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L910'>ino</a>               910 lib/vfs/direntry.c         ino-&gt;st.st_nlink--;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L914'>ino</a>               914 lib/vfs/direntry.c     while (ino-&gt;subdir != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L915'>ino</a>               915 lib/vfs/direntry.c         vfs_s_free_entry (me, (struct vfs_s_entry *) ino-&gt;subdir-&gt;data);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L917'>ino</a>               917 lib/vfs/direntry.c     CALL (free_inode) (me, ino);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L918'>ino</a>               918 lib/vfs/direntry.c     g_free (ino-&gt;linkname);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L919'>ino</a>               919 lib/vfs/direntry.c     if ((MEDATA-&gt;flags &amp; VFS_S_USETMP) != 0 &amp;&amp; ino-&gt;localname != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L921'>ino</a>               921 lib/vfs/direntry.c         unlink (ino-&gt;localname);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L922'>ino</a>               922 lib/vfs/direntry.c         g_free (ino-&gt;localname);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L924'>ino</a>               924 lib/vfs/direntry.c     ino-&gt;super-&gt;ino_usage--;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L925'>ino</a>               925 lib/vfs/direntry.c     g_free (ino);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L938'>ino</a>               938 lib/vfs/direntry.c     entry-&gt;ino = inode;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L939'>ino</a>               939 lib/vfs/direntry.c     entry-&gt;ino-&gt;ent = entry;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L956'>ino</a>               956 lib/vfs/direntry.c     if (ent-&gt;ino != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L958'>ino</a>               958 lib/vfs/direntry.c         ent-&gt;ino-&gt;ent = NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L959'>ino</a>               959 lib/vfs/direntry.c         vfs_s_free_inode (me, ent-&gt;ino);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L974'>ino</a>               974 lib/vfs/direntry.c     ent-&gt;ino-&gt;st.st_nlink++;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1031'>ino</a>              1031 lib/vfs/direntry.c     return (ent != NULL) ? ent-&gt;ino : NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1171'>ino</a>              1171 lib/vfs/direntry.c vfs_s_fullpath (struct vfs_class *me, struct vfs_s_inode *ino)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1173'>ino</a>              1173 lib/vfs/direntry.c     if (!ino-&gt;ent)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1180'>ino</a>              1180 lib/vfs/direntry.c         char *path = g_strdup (ino-&gt;ent-&gt;name);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1183'>ino</a>              1183 lib/vfs/direntry.c             ino = ino-&gt;ent-&gt;dir;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1184'>ino</a>              1184 lib/vfs/direntry.c             if (ino == ino-&gt;super-&gt;root)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1186'>ino</a>              1186 lib/vfs/direntry.c             newpath = g_strconcat (ino-&gt;ent-&gt;name, PATH_SEP_STR, path, (char *) NULL);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1194'>ino</a>              1194 lib/vfs/direntry.c     if ((!ino-&gt;ent-&gt;dir) || (!ino-&gt;ent-&gt;dir-&gt;ent))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1195'>ino</a>              1195 lib/vfs/direntry.c         return g_strdup (ino-&gt;ent-&gt;name);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1197'>ino</a>              1197 lib/vfs/direntry.c     return g_strconcat (ino-&gt;ent-&gt;dir-&gt;ent-&gt;name, PATH_SEP_STR, ino-&gt;ent-&gt;name, (char *) NULL);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1210'>ino</a>              1210 lib/vfs/direntry.c     struct vfs_s_inode *ino;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1218'>ino</a>              1218 lib/vfs/direntry.c     ino = vfs_s_find_inode (path_element-&gt;class, super, q, LINK_FOLLOW, FL_NONE);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1219'>ino</a>              1219 lib/vfs/direntry.c     if (ino &amp;&amp; ((flags &amp; (O_CREAT | O_EXCL)) == (O_CREAT | O_EXCL)))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1224'>ino</a>              1224 lib/vfs/direntry.c     if (!ino)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1244'>ino</a>              1244 lib/vfs/direntry.c         ino = ent-&gt;ino;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1252'>ino</a>              1252 lib/vfs/direntry.c             ino-&gt;localname = g_strdup (vfs_path_as_str (tmp_vpath));</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1268'>ino</a>              1268 lib/vfs/direntry.c     if (S_ISDIR (ino-&gt;st.st_mode))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1276'>ino</a>              1276 lib/vfs/direntry.c     fh-&gt;ino = ino;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1304'>ino</a>              1304 lib/vfs/direntry.c     if ((VFSDATA (path_element)-&gt;flags &amp; VFS_S_USETMP) != 0 &amp;&amp; fh-&gt;ino-&gt;localname != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1306'>ino</a>              1306 lib/vfs/direntry.c         fh-&gt;handle = open (fh-&gt;ino-&gt;localname, NO_LINEAR (flags), mode);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1318'>ino</a>              1318 lib/vfs/direntry.c     fh-&gt;ino-&gt;st.st_nlink++;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1325'>ino</a>              1325 lib/vfs/direntry.c vfs_s_retrieve_file (struct vfs_class *me, struct vfs_s_inode *ino)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1332'>ino</a>              1332 lib/vfs/direntry.c     off_t stat_size = ino-&gt;st.st_size;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1341'>ino</a>              1341 lib/vfs/direntry.c     fh.ino = ino;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1344'>ino</a>              1344 lib/vfs/direntry.c     handle = vfs_mkstemps (&amp;tmp_vpath, me-&gt;name, ino-&gt;ent-&gt;name);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1345'>ino</a>              1345 lib/vfs/direntry.c     ino-&gt;localname = g_strdup (vfs_path_as_str (tmp_vpath));</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1367'>ino</a>              1367 lib/vfs/direntry.c         vfs_s_print_stats (me-&gt;name, _("Getting file"), ino-&gt;ent-&gt;name, total, stat_size);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1392'>ino</a>              1392 lib/vfs/direntry.c     unlink (ino-&gt;localname);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1394'>ino</a>              1394 lib/vfs/direntry.c     MC_PTR_FREE (ino-&gt;localname);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1590'>ino</a>              1590 lib/vfs/direntry.c         if ((size_t) entry-&gt;ino-&gt;data_offset &gt; final_num_spaces)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1593'>ino</a>              1593 lib/vfs/direntry.c             char *spacer = g_strnfill (entry-&gt;ino-&gt;data_offset - final_num_spaces, ' ');</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1598'>ino</a>              1598 lib/vfs/direntry.c         entry-&gt;ino-&gt;data_offset = -1;</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L42'>ino</a>                42 lib/vfs/xdirentry.h #define FH_SUPER FH-&gt;ino-&gt;super</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L85'>ino</a>                85 lib/vfs/xdirentry.h     struct vfs_s_inode *ino;    /* ... and its inode */</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L106'>ino</a>               106 lib/vfs/xdirentry.h     struct vfs_s_inode *ino;</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L128'>ino</a>               128 lib/vfs/xdirentry.h     int (*init_inode) (struct vfs_class * me, struct vfs_s_inode * ino);        /* optional */</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L129'>ino</a>               129 lib/vfs/xdirentry.h     void (*free_inode) (struct vfs_class * me, struct vfs_s_inode * ino);       /* optional */</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L146'>ino</a>               146 lib/vfs/xdirentry.h     int (*dir_load) (struct vfs_class * me, struct vfs_s_inode * ino, char *path);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L147'>ino</a>               147 lib/vfs/xdirentry.h     int (*dir_uptodate) (struct vfs_class * me, struct vfs_s_inode * ino);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L163'>ino</a>               163 lib/vfs/xdirentry.h void vfs_s_free_inode (struct vfs_class *me, struct vfs_s_inode *ino);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L184'>ino</a>               184 lib/vfs/xdirentry.h char *vfs_s_fullpath (struct vfs_class *me, struct vfs_s_inode *ino);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L191'>ino</a>               191 lib/vfs/xdirentry.h int vfs_s_retrieve_file (struct vfs_class *me, struct vfs_s_inode *ino);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L200'>ino</a>               200 lib/vfs/xdirentry.h     entry-&gt;ino-&gt;data_offset = (off_t) position;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L115'>ino</a>               115 src/filemanager/file.c     ino_t ino;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L294'>ino</a>               294 src/filemanager/file.c     ino_t ino = sb-&gt;st_ino;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L303'>ino</a>               303 src/filemanager/file.c         if (lnk-&gt;vfs == class &amp;&amp; lnk-&gt;ino == ino &amp;&amp; lnk-&gt;dev == dev)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L324'>ino</a>               324 src/filemanager/file.c     ino_t ino = pstat-&gt;st_ino;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L337'>ino</a>               337 src/filemanager/file.c         if (lnk-&gt;vfs == my_vfs &amp;&amp; lnk-&gt;ino == ino &amp;&amp; lnk-&gt;dev == dev)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L345'>ino</a>               345 src/filemanager/file.c             if (stat_result == 0 &amp;&amp; link_stat.st_ino == ino</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L368'>ino</a>               368 src/filemanager/file.c         lnk-&gt;ino = ino;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2102'>ino</a>              2102 src/filemanager/file.c     lp-&gt;ino = cbuf.st_ino;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2176'>ino</a>              2176 src/filemanager/file.c         lp-&gt;ino = buf.st_ino;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L910'>ino</a>               910 src/filemanager/mountlist.c             ino_t ino;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L945'>ino</a>               945 src/filemanager/mountlist.c                     re-&gt;ino = statbuf.st_ino;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L965'>ino</a>               965 src/filemanager/mountlist.c                     if (re-&gt;dev == fi.dev &amp;&amp; re-&gt;ino == fi.root)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L452'>ino</a>               452 src/vfs/cpio/cpio.c         if (!S_ISDIR (entry-&gt;ino-&gt;st.st_mode))</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L460'>ino</a>               460 src/vfs/cpio/cpio.c             entry-&gt;ino-&gt;st.st_mode = st-&gt;st_mode;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L461'>ino</a>               461 src/vfs/cpio/cpio.c             entry-&gt;ino-&gt;st.st_uid = st-&gt;st_uid;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L462'>ino</a>               462 src/vfs/cpio/cpio.c             entry-&gt;ino-&gt;st.st_gid = st-&gt;st_gid;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L463'>ino</a>               463 src/vfs/cpio/cpio.c             entry-&gt;ino-&gt;st.st_atime = st-&gt;st_atime;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L464'>ino</a>               464 src/vfs/cpio/cpio.c             entry-&gt;ino-&gt;st.st_mtime = st-&gt;st_mtime;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L465'>ino</a>               465 src/vfs/cpio/cpio.c             entry-&gt;ino-&gt;st.st_ctime = st-&gt;st_ctime;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L822'>ino</a>               822 src/vfs/cpio/cpio.c     off_t begin = FH-&gt;ino-&gt;data_offset;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L830'>ino</a>               830 src/vfs/cpio/cpio.c     count = MIN (count, (size_t) (FH-&gt;ino-&gt;st.st_size - FH-&gt;pos));</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L708'>ino</a>               708 src/vfs/fish/fish.c #define ST ent-&gt;ino-&gt;st</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L759'>ino</a>               759 src/vfs/fish/fish.c                     ent-&gt;ino-&gt;linkname = g_strndup (linkname, linkname_bound - linkname);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L760'>ino</a>               760 src/vfs/fish/fish.c                     temp = ent-&gt;ino-&gt;linkname;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L761'>ino</a>               761 src/vfs/fish/fish.c                     ent-&gt;ino-&gt;linkname = strutils_shell_unescape (ent-&gt;ino-&gt;linkname);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L995'>ino</a>               995 src/vfs/fish/fish.c     name = vfs_s_fullpath (me, fh-&gt;ino);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1516'>ino</a>              1516 src/vfs/fish/fish.c         if (!fh-&gt;ino-&gt;localname)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1521'>ino</a>              1521 src/vfs/fish/fish.c             tmp_handle = vfs_mkstemps (&amp;vpath, me-&gt;name, fh-&gt;ino-&gt;ent-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1527'>ino</a>              1527 src/vfs/fish/fish.c             fh-&gt;ino-&gt;localname = g_strdup (vfs_path_as_str (vpath));</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1533'>ino</a>              1533 src/vfs/fish/fish.c     if (!fh-&gt;ino-&gt;localname &amp;&amp; vfs_s_retrieve_file (me, fh-&gt;ino) == -1)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1535'>ino</a>              1535 src/vfs/fish/fish.c     if (!fh-&gt;ino-&gt;localname)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1740'>ino</a>              1740 src/vfs/ftpfs/ftpfs.c         i = ent-&gt;ino-&gt;st.st_nlink;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1742'>ino</a>              1742 src/vfs/ftpfs/ftpfs.c             (lc_buffer, &amp;ent-&gt;ino-&gt;st, &amp;ent-&gt;name, &amp;ent-&gt;ino-&gt;linkname, &amp;count_spaces))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1747'>ino</a>              1747 src/vfs/ftpfs/ftpfs.c         ent-&gt;ino-&gt;st.st_nlink = i;      /* Ouch, we need to preserve our counts :-( */</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1901'>ino</a>              1901 src/vfs/ftpfs/ftpfs.c     name = vfs_s_fullpath (me, fh-&gt;ino);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2159'>ino</a>              2159 src/vfs/ftpfs/ftpfs.c             if (!fh-&gt;ino-&gt;localname)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2164'>ino</a>              2164 src/vfs/ftpfs/ftpfs.c                 handle = vfs_mkstemps (&amp;vpath, me-&gt;name, fh-&gt;ino-&gt;ent-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2171'>ino</a>              2171 src/vfs/ftpfs/ftpfs.c                 fh-&gt;ino-&gt;localname = g_strdup (vfs_path_as_str (vpath));</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2177'>ino</a>              2177 src/vfs/ftpfs/ftpfs.c         name = vfs_s_fullpath (me, fh-&gt;ino);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2181'>ino</a>              2181 src/vfs/ftpfs/ftpfs.c             ftpfs_open_data_connection (me, fh-&gt;ino-&gt;super,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2193'>ino</a>              2193 src/vfs/ftpfs/ftpfs.c         if (fh-&gt;ino-&gt;localname)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2195'>ino</a>              2195 src/vfs/ftpfs/ftpfs.c             unlink (fh-&gt;ino-&gt;localname);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2196'>ino</a>              2196 src/vfs/ftpfs/ftpfs.c             MC_PTR_FREE (fh-&gt;ino-&gt;localname);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2201'>ino</a>              2201 src/vfs/ftpfs/ftpfs.c     if (!fh-&gt;ino-&gt;localname &amp;&amp; vfs_s_retrieve_file (me, fh-&gt;ino) == -1)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2203'>ino</a>              2203 src/vfs/ftpfs/ftpfs.c     if (!fh-&gt;ino-&gt;localname)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2217'>ino</a>              2217 src/vfs/ftpfs/ftpfs.c     if (fh-&gt;handle != -1 &amp;&amp; !fh-&gt;ino-&gt;localname)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2219'>ino</a>              2219 src/vfs/ftpfs/ftpfs.c         ftp_super_data_t *ftp = (ftp_super_data_t *) fh-&gt;ino-&gt;super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L103'>ino</a>               103 src/vfs/sftpfs/file.c     name = vfs_s_fullpath (&amp;sftpfs_class, file_handler-&gt;ino);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L107'>ino</a>               107 src/vfs/sftpfs/file.c     super_data = (sftpfs_super_data_t *) file_handler-&gt;ino-&gt;super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L181'>ino</a>               181 src/vfs/sftpfs/file.c     struct vfs_s_super *super = fh-&gt;ino-&gt;super;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L257'>ino</a>               257 src/vfs/sftpfs/file.c     super_data = (sftpfs_super_data_t *) file_handler-&gt;ino-&gt;super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L305'>ino</a>               305 src/vfs/sftpfs/file.c     super_data = (sftpfs_super_data_t *) file_handler-&gt;ino-&gt;super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L395'>ino</a>               395 src/vfs/sftpfs/file.c         if (file_handler-&gt;pos &gt; file_handler-&gt;ino-&gt;st.st_size - offset)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L400'>ino</a>               400 src/vfs/sftpfs/file.c         file_handler-&gt;pos = file_handler-&gt;ino-&gt;st.st_size - offset;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L135'>ino</a>               135 src/vfs/sftpfs/vfs_class.c         path_inode = ent-&gt;ino;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L150'>ino</a>               150 src/vfs/sftpfs/vfs_class.c     file_handler-&gt;ino = path_inode;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L165'>ino</a>               165 src/vfs/sftpfs/vfs_class.c     file_handler-&gt;ino-&gt;st.st_nlink++;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L485'>ino</a>               485 src/vfs/sftpfs/vfs_class.c     super = file_handler-&gt;ino-&gt;super;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L497'>ino</a>               497 src/vfs/sftpfs/vfs_class.c     vfs_s_free_inode (&amp;sftpfs_class, file_handler-&gt;ino);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L287'>ino</a>               287 src/vfs/smbfs/helpers/include/proto.h                      time_t * w_time, size_t * size, uint16 * mode, SMB_INO_T * ino);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L291'>ino</a>               291 src/vfs/smbfs/helpers/include/proto.h                     time_t * w_time, SMB_INO_T * ino);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1879'>ino</a>              1879 src/vfs/smbfs/helpers/libsmb/clientgen.c                 time_t * w_time, size_t * size, uint16 * mode, SMB_INO_T * ino)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1937'>ino</a>              1937 src/vfs/smbfs/helpers/libsmb/clientgen.c     if (ino)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1939'>ino</a>              1939 src/vfs/smbfs/helpers/libsmb/clientgen.c         *ino = IVAL (rdata, 64);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1956'>ino</a>              1956 src/vfs/smbfs/helpers/libsmb/clientgen.c                time_t * c_time, time_t * a_time, time_t * m_time, time_t * w_time, SMB_INO_T * ino)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2019'>ino</a>              2019 src/vfs/smbfs/helpers/libsmb/clientgen.c     if (ino)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2021'>ino</a>              2021 src/vfs/smbfs/helpers/libsmb/clientgen.c         *ino = IVAL (rdata, 64);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L868'>ino</a>               868 src/vfs/tar/tar.c     off_t begin = FH-&gt;ino-&gt;data_offset;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L876'>ino</a>               876 src/vfs/tar/tar.c     count = MIN (count, (size_t) (FH-&gt;ino-&gt;st.st_size - FH-&gt;pos));</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L85'>ino</a>                85 src/vfs/undelfs/undelfs.c     ext2_ino_t ino;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L234'>ino</a>               234 src/vfs/undelfs/undelfs.c     ext2_ino_t ino;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L258'>ino</a>               258 src/vfs/undelfs/undelfs.c     retval = ext2fs_get_next_inode (scan, &amp;ino, &amp;inode);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L265'>ino</a>               265 src/vfs/undelfs/undelfs.c     while (ino)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L275'>ino</a>               275 src/vfs/undelfs/undelfs.c         lsd.inode = ino;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L280'>ino</a>               280 src/vfs/undelfs/undelfs.c         retval = ext2fs_block_iterate (fs, ino, 0, block_buf, undelfs_lsdel_proc, &amp;lsd);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L302'>ino</a>               302 src/vfs/undelfs/undelfs.c             delarray[num_delarray].ino = ino;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L314'>ino</a>               314 src/vfs/undelfs/undelfs.c         retval = ext2fs_get_next_inode (scan, &amp;ino, &amp;inode);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L414'>ino</a>               414 src/vfs/undelfs/undelfs.c                     (long) delarray[readdir_ptr].ino, delarray[readdir_ptr].num_blocks);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L461'>ino</a>               461 src/vfs/undelfs/undelfs.c         if (inode != delarray[i].ino)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L616'>ino</a>               616 src/vfs/undelfs/undelfs.c         if (delarray[i].ino == inode)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L628'>ino</a>               628 src/vfs/undelfs/undelfs.c     buf-&gt;st_ino = delarray[inode_index].ino;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L291'>ino</a>               291 tests/lib/vfs/vfs_parse_ls_lga.c         ("drwxrwxr-x   10 500      500          4096 Jun 23 17:09      build_root1", &amp;ent1-&gt;ino-&gt;st,</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L292'>ino</a>               292 tests/lib/vfs/vfs_parse_ls_lga.c          &amp;ent1-&gt;name, &amp;ent1-&gt;ino-&gt;linkname, &amp;filepos);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L300'>ino</a>               300 tests/lib/vfs/vfs_parse_ls_lga.c                       &amp;ent2-&gt;ino-&gt;st, &amp;ent2-&gt;name, &amp;ent2-&gt;ino-&gt;linkname, &amp;filepos);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L307'>ino</a>               307 tests/lib/vfs/vfs_parse_ls_lga.c                       &amp;ent3-&gt;ino-&gt;st, &amp;ent3-&gt;name, &amp;ent3-&gt;ino-&gt;linkname, &amp;filepos);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L326'>ino</a>               326 tests/lib/vfs/vfs_parse_ls_lga.c     &amp;ent[ent_index]-&gt;ino-&gt;st, &amp;ent[ent_index]-&gt;name, &amp;ent[ent_index]-&gt;ino-&gt;linkname, &amp;filepos))\</span>
+</pre>
+</body>
+</html>

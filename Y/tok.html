@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>tok</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L180'>tok</a>               180 src/vfs/smbfs/helpers/include/proto.h BOOL setfilepwpos (void *vp, SMB_BIG_UINT tok);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L318'>tok</a>               318 src/vfs/smbfs/helpers/lib/username.c     pstring tok;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L321'>tok</a>               321 src/vfs/smbfs/helpers/lib/username.c     while (next_token (&amp;p, tok, LIST_SEP, sizeof (tok)))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L326'>tok</a>               326 src/vfs/smbfs/helpers/lib/username.c         if (strequal (user, tok))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L334'>tok</a>               334 src/vfs/smbfs/helpers/lib/username.c         if (*tok == '@')</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L340'>tok</a>               340 src/vfs/smbfs/helpers/lib/username.c             if (user_in_netgroup_list (user, &amp;tok[1]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L342'>tok</a>               342 src/vfs/smbfs/helpers/lib/username.c             if (user_in_group_list (user, &amp;tok[1]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L345'>tok</a>               345 src/vfs/smbfs/helpers/lib/username.c         else if (*tok == '+')</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L347'>tok</a>               347 src/vfs/smbfs/helpers/lib/username.c             if (tok[1] == '&amp;')</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L352'>tok</a>               352 src/vfs/smbfs/helpers/lib/username.c                 if (user_in_group_list (user, &amp;tok[2]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L354'>tok</a>               354 src/vfs/smbfs/helpers/lib/username.c                 if (user_in_netgroup_list (user, &amp;tok[2]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L362'>tok</a>               362 src/vfs/smbfs/helpers/lib/username.c                 if (user_in_group_list (user, &amp;tok[1]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L366'>tok</a>               366 src/vfs/smbfs/helpers/lib/username.c         else if (*tok == '&amp;')</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L368'>tok</a>               368 src/vfs/smbfs/helpers/lib/username.c             if (tok[1] == '&amp;')</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L373'>tok</a>               373 src/vfs/smbfs/helpers/lib/username.c                 if (user_in_netgroup_list (user, &amp;tok[2]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L375'>tok</a>               375 src/vfs/smbfs/helpers/lib/username.c                 if (user_in_group_list (user, &amp;tok[2]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L383'>tok</a>               383 src/vfs/smbfs/helpers/lib/username.c                 if (user_in_netgroup_list (user, &amp;tok[1]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L192'>tok</a>               192 src/vfs/smbfs/helpers/lib/util_file.c setfilepwpos (void *vp, SMB_BIG_UINT tok)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L194'>tok</a>               194 src/vfs/smbfs/helpers/lib/util_file.c     return !sys_fseek ((FILE *) vp, (SMB_OFF_T) tok, SEEK_SET);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L133'>tok</a>               133 src/vfs/smbfs/helpers/lib/util_sock.c     fstring tok;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L135'>tok</a>               135 src/vfs/smbfs/helpers/lib/util_sock.c     while (next_token (&amp;options, tok, " \t,", sizeof (tok)))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L142'>tok</a>               142 src/vfs/smbfs/helpers/lib/util_sock.c         if ((p = strchr (tok, '=')))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L150'>tok</a>               150 src/vfs/smbfs/helpers/lib/util_sock.c             if (strequal (socket_options[i].name, tok))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L155'>tok</a>               155 src/vfs/smbfs/helpers/lib/util_sock.c             DEBUG (0, ("Unknown socket option %s\n", tok));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L169'>tok</a>               169 src/vfs/smbfs/helpers/lib/util_sock.c                 DEBUG (0, ("syntax error - %s does not take a value\n", tok));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L180'>tok</a>               180 src/vfs/smbfs/helpers/lib/util_sock.c             DEBUG (0, ("Failed to set socket option %s\n", tok));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L987'>tok</a>               987 src/vfs/smbfs/helpers/lib/util_str.c     pstring tok;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L993'>tok</a>               993 src/vfs/smbfs/helpers/lib/util_str.c     while (next_token (&amp;p, tok, LIST_SEP, sizeof (tok)))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L997'>tok</a>               997 src/vfs/smbfs/helpers/lib/util_str.c             if (strcmp (tok, s) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L1002'>tok</a>              1002 src/vfs/smbfs/helpers/lib/util_str.c             if (StrCaseCmp (tok, s) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L522'>tok</a>               522 src/vfs/smbfs/helpers/libsmb/namequery.c     fstring tok;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L552'>tok</a>               552 src/vfs/smbfs/helpers/libsmb/namequery.c     while (next_token (&amp;ptr, tok, LIST_SEP, sizeof (tok)))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L554'>tok</a>               554 src/vfs/smbfs/helpers/libsmb/namequery.c         if ((strequal (tok, "host") || strequal (tok, "hosts")))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L561'>tok</a>               561 src/vfs/smbfs/helpers/libsmb/namequery.c         else if (strequal (tok, "lmhosts"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L568'>tok</a>               568 src/vfs/smbfs/helpers/libsmb/namequery.c         else if (strequal (tok, "wins"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L576'>tok</a>               576 src/vfs/smbfs/helpers/libsmb/namequery.c         else if (strequal (tok, "bcast"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L585'>tok</a>               585 src/vfs/smbfs/helpers/libsmb/namequery.c             DEBUG (0, ("resolve_name: unknown name switch type %s\n", tok));</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>check_options</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L123'>check_options</a>     123 src/filemanager/layout.c #define LAYOUT_OPTIONS_COUNT  G_N_ELEMENTS (check_options)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L161'>check_options</a>     161 src/filemanager/layout.c } check_options[] =</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L226'>check_options</a>     226 src/filemanager/layout.c         check_options[0].widget-&gt;state = panels_layout.horizontal_equal ? 1 : 0;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L228'>check_options</a>     228 src/filemanager/layout.c         check_options[0].widget-&gt;state = panels_layout.vertical_equal ? 1 : 0;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L229'>check_options</a>     229 src/filemanager/layout.c     widget_redraw (WIDGET (check_options[0].widget));</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L231'>check_options</a>     231 src/filemanager/layout.c     tty_setcolor ((check_options[0].widget-&gt;state &amp; C_BOOL) ? DISABLED_COLOR : COLOR_NORMAL);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L336'>check_options</a>     336 src/filemanager/layout.c             _menubar_visible = check_options[1].widget-&gt;state &amp; C_BOOL;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L337'>check_options</a>     337 src/filemanager/layout.c             _command_prompt = check_options[2].widget-&gt;state &amp; C_BOOL;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L338'>check_options</a>     338 src/filemanager/layout.c             _keybar_visible = check_options[3].widget-&gt;state &amp; C_BOOL;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L339'>check_options</a>     339 src/filemanager/layout.c             _message_visible = check_options[4].widget-&gt;state &amp; C_BOOL;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L407'>check_options</a>     407 src/filemanager/layout.c         if (sender == WIDGET (check_options[0].widget))</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L413'>check_options</a>     413 src/filemanager/layout.c                 panels_layout.horizontal_equal = check_options[0].widget-&gt;state &amp; C_BOOL;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L418'>check_options</a>     418 src/filemanager/layout.c                 panels_layout.vertical_equal = check_options[0].widget-&gt;state &amp; C_BOOL;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L482'>check_options</a>     482 src/filemanager/layout.c                 check_options[i].text = _(check_options[i].text);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L497'>check_options</a>     497 src/filemanager/layout.c         l1 = max (l1, str_term_width1 (check_options[i].text) + 7);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L516'>check_options</a>     516 src/filemanager/layout.c #define XTRACT(i) *check_options[i].variable, check_options[i].text</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L525'>check_options</a>     525 src/filemanager/layout.c     check_options[0].widget = check_new (5, 5, XTRACT (0));</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L526'>check_options</a>     526 src/filemanager/layout.c     add_widget (layout_dlg, check_options[0].widget);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L566'>check_options</a>     566 src/filemanager/layout.c         check_options[i].widget = check_new (i + 2, 6 + l1, XTRACT (i));</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L567'>check_options</a>     567 src/filemanager/layout.c         add_widget (layout_dlg, check_options[i].widget);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L652'>check_options</a>     652 src/filemanager/layout.c             if (check_options[i].widget != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L653'>check_options</a>     653 src/filemanager/layout.c                 *check_options[i].variable = check_options[i].widget-&gt;state &amp; C_BOOL;</span>
+</pre>
+</body>
+</html>

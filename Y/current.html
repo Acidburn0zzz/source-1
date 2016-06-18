@@ -1,0 +1,477 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>current</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--hook.c.html#L107'>current</a>           107 lib/hook.c         hook_t *current, *next;</span>
+<span class='curline'><a href='../S/lib--hook.c.html#L109'>current</a>           109 lib/hook.c         for (current = *hook_list; current != NULL; current = next)</span>
+<span class='curline'><a href='../S/lib--hook.c.html#L111'>current</a>           111 lib/hook.c             next = current-&gt;next;</span>
+<span class='curline'><a href='../S/lib--hook.c.html#L112'>current</a>           112 lib/hook.c             if (current-&gt;hook_fn == hook_fn)</span>
+<span class='curline'><a href='../S/lib--hook.c.html#L113'>current</a>           113 lib/hook.c                 g_free (current);</span>
+<span class='curline'><a href='../S/lib--hook.c.html#L115'>current</a>           115 lib/hook.c                 add_hook (&amp;new_list, current-&gt;hook_fn, current-&gt;hook_data);</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L243'>current</a>           243 lib/strutil/strescape.c strutils_is_char_escaped (const char *start, const char *current)</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L247'>current</a>           247 lib/strutil/strescape.c     if (start == NULL || current == NULL || current &lt;= start)</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L250'>current</a>           250 lib/strutil/strescape.c     current--;</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L251'>current</a>           251 lib/strutil/strescape.c     while (current &gt;= start &amp;&amp; *current == '\\')</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L254'>current</a>           254 lib/strutil/strescape.c         current--;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1812'>current</a>          1812 lib/tty/key.c                  struct timeval current, time_out;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1816'>current</a>          1816 lib/tty/key.c                  GET_TIME (current);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1824'>current</a>          1824 lib/tty/key.c                  if (current.tv_sec &lt; time_out.tv_sec)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1826'>current</a>          1826 lib/tty/key.c                  if (current.tv_sec == time_out.tv_sec &amp;&amp; current.tv_usec &lt; time_out.tv_usec)</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L71'>current</a>            71 lib/widget/button.c         if (parm == '\n' &amp;&amp; WIDGET (h-&gt;current-&gt;data) == WIDGET (b))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L129'>current</a>           129 lib/widget/dialog.c     if (h-&gt;current == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L130'>current</a>           130 lib/widget/dialog.c         h-&gt;current = h-&gt;widgets;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L133'>current</a>           133 lib/widget/dialog.c         p = dlg_widget_prev (h, h-&gt;current);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L135'>current</a>           135 lib/widget/dialog.c         p = dlg_widget_next (h, h-&gt;current);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L185'>current</a>           185 lib/widget/dialog.c     if (h-&gt;current != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L191'>current</a>           191 lib/widget/dialog.c             Widget *current = WIDGET (h-&gt;current-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L193'>current</a>           193 lib/widget/dialog.c             if (send_message (current, NULL, MSG_UNFOCUS, 0, NULL) == MSG_HANDLED)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L195'>current</a>           195 lib/widget/dialog.c                 send_message (h, current, MSG_UNFOCUS, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L225'>current</a>           225 lib/widget/dialog.c     Widget *w0 = WIDGET (h-&gt;current-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L230'>current</a>           230 lib/widget/dialog.c     h-&gt;current = w;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L240'>current</a>           240 lib/widget/dialog.c             h-&gt;current = g_list_find (h-&gt;widgets, w0);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L247'>current</a>           247 lib/widget/dialog.c             h-&gt;current = dlg_widget_next (h, h-&gt;current);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L250'>current</a>           250 lib/widget/dialog.c             h-&gt;current = dlg_widget_prev (h, h-&gt;current);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L256'>current</a>           256 lib/widget/dialog.c     while (h-&gt;current != w);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L258'>current</a>           258 lib/widget/dialog.c     if (widget_overlapped (w0, WIDGET (h-&gt;current-&gt;data)))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L260'>current</a>           260 lib/widget/dialog.c         send_message (h-&gt;current-&gt;data, NULL, MSG_DRAW, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L261'>current</a>           261 lib/widget/dialog.c         send_message (h-&gt;current-&gt;data, NULL, MSG_FOCUS, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L438'>current</a>           438 lib/widget/dialog.c     Widget *current;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L445'>current</a>           445 lib/widget/dialog.c     if (h-&gt;current == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L446'>current</a>           446 lib/widget/dialog.c         h-&gt;current = h-&gt;widgets;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L453'>current</a>           453 lib/widget/dialog.c     current = WIDGET (h-&gt;current-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L455'>current</a>           455 lib/widget/dialog.c     if (widget_get_state (current, WST_DISABLED))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L458'>current</a>           458 lib/widget/dialog.c     if (widget_get_options (current, WOP_IS_INPUT))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L472'>current</a>           472 lib/widget/dialog.c     if (widget_get_options (current, WOP_WANT_HOTKEY))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L473'>current</a>           473 lib/widget/dialog.c         handled = send_message (current, NULL, MSG_HOTKEY, d_key, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L479'>current</a>           479 lib/widget/dialog.c     hot_cur = dlg_widget_next (h, h-&gt;current);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L482'>current</a>           482 lib/widget/dialog.c     while (h-&gt;current != hot_cur &amp;&amp; handled == MSG_NOT_HANDLED)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L484'>current</a>           484 lib/widget/dialog.c         current = WIDGET (hot_cur-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L486'>current</a>           486 lib/widget/dialog.c         if (widget_get_options (current, WOP_WANT_HOTKEY)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L487'>current</a>           487 lib/widget/dialog.c             &amp;&amp; !widget_get_state (current, WST_DISABLED))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L488'>current</a>           488 lib/widget/dialog.c             handled = send_message (current, NULL, MSG_HOTKEY, d_key, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L510'>current</a>           510 lib/widget/dialog.c     if (h-&gt;current == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L511'>current</a>           511 lib/widget/dialog.c         h-&gt;current = h-&gt;widgets;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L539'>current</a>           539 lib/widget/dialog.c         handled = send_message (h-&gt;current-&gt;data, NULL, MSG_KEY, d_key, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L694'>current</a>           694 lib/widget/dialog.c     if (h-&gt;current == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L695'>current</a>           695 lib/widget/dialog.c         h-&gt;current = h-&gt;widgets;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L958'>current</a>           958 lib/widget/dialog.c         h-&gt;current = g_list_last (h-&gt;widgets);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L973'>current</a>           973 lib/widget/dialog.c             h-&gt;current = g_list_previous (b);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L975'>current</a>           975 lib/widget/dialog.c             h-&gt;current = g_list_last (h-&gt;widgets);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L996'>current</a>           996 lib/widget/dialog.c                                h-&gt;current != NULL ? h-&gt;current-&gt;data : NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1023'>current</a>          1023 lib/widget/dialog.c     if (d == h-&gt;current)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1024'>current</a>          1024 lib/widget/dialog.c         h-&gt;current = dlg_widget_next (h, d);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1079'>current</a>          1079 lib/widget/dialog.c     if (h-&gt;current != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1085'>current</a>          1085 lib/widget/dialog.c             Widget *current = WIDGET (h-&gt;current-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1087'>current</a>          1087 lib/widget/dialog.c             if (!widget_get_state (current, WST_DISABLED)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1088'>current</a>          1088 lib/widget/dialog.c                 &amp;&amp; (send_message (current, NULL, MSG_FOCUS, 0, NULL) == MSG_HANDLED))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1090'>current</a>          1090 lib/widget/dialog.c                 send_message (h, current, MSG_FOCUS, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1172'>current</a>          1172 lib/widget/dialog.c         do_select_widget (h, dlg_widget_prev (h, h-&gt;current), SELECT_PREV);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1182'>current</a>          1182 lib/widget/dialog.c         do_select_widget (h, dlg_widget_next (h, h-&gt;current), SELECT_NEXT);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1190'>current</a>          1190 lib/widget/dialog.c     GList *p = h-&gt;current;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1204'>current</a>          1204 lib/widget/dialog.c                 if (p == h-&gt;current)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1279'>current</a>          1279 lib/widget/dialog.c     while (h-&gt;current != NULL &amp;&amp; !dlg_focus (h))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1280'>current</a>          1280 lib/widget/dialog.c         h-&gt;current = dlg_widget_next (h, h-&gt;current);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1313'>current</a>          1313 lib/widget/dialog.c         send_message (h, h-&gt;current-&gt;data, MSG_END, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L78'>current</a>            78 lib/widget/dialog.h     GList *current;             /* Currently active widget */</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L172'>current</a>           172 lib/widget/dialog.h     return WIDGET (h-&gt;current-&gt;data)-&gt;id;</span>
+<span class='curline'><a href='../S/lib--widget--gauge.c.html#L84'>current</a>            84 lib/widget/gauge.c             int done = g-&gt;current;</span>
+<span class='curline'><a href='../S/lib--widget--gauge.c.html#L133'>current</a>           133 lib/widget/gauge.c gauge_new (int y, int x, int cols, gboolean shown, int max, int current)</span>
+<span class='curline'><a href='../S/lib--widget--gauge.c.html#L146'>current</a>           146 lib/widget/gauge.c     g-&gt;current = current;</span>
+<span class='curline'><a href='../S/lib--widget--gauge.c.html#L155'>current</a>           155 lib/widget/gauge.c gauge_set_value (WGauge * g, int max, int current)</span>
+<span class='curline'><a href='../S/lib--widget--gauge.c.html#L157'>current</a>           157 lib/widget/gauge.c     if (g-&gt;current == current &amp;&amp; g-&gt;max == max)</span>
+<span class='curline'><a href='../S/lib--widget--gauge.c.html#L162'>current</a>           162 lib/widget/gauge.c     g-&gt;current = current;</span>
+<span class='curline'><a href='../S/lib--widget--gauge.h.html#L22'>current</a>            22 lib/widget/gauge.h     int current;</span>
+<span class='curline'><a href='../S/lib--widget--gauge.h.html#L30'>current</a>            30 lib/widget/gauge.h WGauge *gauge_new (int y, int x, int cols, gboolean shown, int max, int current);</span>
+<span class='curline'><a href='../S/lib--widget--gauge.h.html#L31'>current</a>            31 lib/widget/gauge.h void gauge_set_value (WGauge * g, int max, int current);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L288'>current</a>           288 lib/widget/history.c history_show (GList ** history, Widget * widget, int current)</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L344'>current</a>           344 lib/widget/history.c         if (current &lt; 0 || (size_t) current &gt;= count)</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L347'>current</a>           347 lib/widget/history.c             listbox_select_entry (query_list, count - 1 - (size_t) current);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L355'>current</a>           355 lib/widget/history.c         if (current &gt; 0)</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L356'>current</a>           356 lib/widget/history.c             listbox_select_entry (query_list, current);</span>
+<span class='curline'><a href='../S/lib--widget--history.h.html#L31'>current</a>            31 lib/widget/history.h char *history_show (GList ** history, Widget * widget, int current);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L108'>current</a>           108 lib/widget/input.c     if (g_list_next (in-&gt;history.current) == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L110'>current</a>           110 lib/widget/input.c     else if (g_list_previous (in-&gt;history.current) == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L264'>current</a>           264 lib/widget/input.c         in-&gt;history.current = in-&gt;history.list;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L626'>current</a>           626 lib/widget/input.c     prev = g_list_previous (in-&gt;history.current);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L630'>current</a>           630 lib/widget/input.c         in-&gt;history.current = prev;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L653'>current</a>           653 lib/widget/input.c     next = g_list_next (in-&gt;history.current);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L657'>current</a>           657 lib/widget/input.c         in-&gt;history.current = in-&gt;history.list;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L662'>current</a>           662 lib/widget/input.c         in-&gt;history.current = next;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L845'>current</a>           845 lib/widget/input.c     in-&gt;history.current = in-&gt;history.list;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1022'>current</a>          1022 lib/widget/input.c     in-&gt;history.current = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L70'>current</a>            70 lib/widget/input.h         GList *current;         /* current history item */</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1067'>current</a>          1067 lib/widget/input_complete.c                 for (i = 0, e = listbox_get_first_link (LISTBOX (h-&gt;current-&gt;data));</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1074'>current</a>          1074 lib/widget/input_complete.c                         listbox_select_entry (LISTBOX (h-&gt;current-&gt;data), i);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1077'>current</a>          1077 lib/widget/input_complete.c                         widget_redraw (WIDGET (h-&gt;current-&gt;data));</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1121'>current</a>          1121 lib/widget/input_complete.c                 for (i = 0, e = listbox_get_first_link (LISTBOX (h-&gt;current-&gt;data));</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1132'>current</a>          1132 lib/widget/input_complete.c                             listbox_select_entry (LISTBOX (h-&gt;current-&gt;data), i);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1183'>current</a>          1183 lib/widget/input_complete.c                     widget_redraw (WIDGET (h-&gt;current-&gt;data));</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L708'>current</a>           708 lib/widget/listbox.c         GList *current;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L711'>current</a>           711 lib/widget/listbox.c         current = g_queue_peek_nth_link (l-&gt;list, (guint) l-&gt;pos);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L712'>current</a>           712 lib/widget/listbox.c         listbox_entry_free (LENTRY (current-&gt;data));</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L713'>current</a>           713 lib/widget/listbox.c         g_queue_delete_link (l-&gt;list, current);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L199'>current</a>           199 lib/widget/menu.c menubar_set_color (WMenuBar * menubar, gboolean current, gboolean hotkey)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L203'>current</a>           203 lib/widget/menu.c     else if (current)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L267'>current</a>           267 lib/widget/menu.c     h-&gt;current = g_list_find (h-&gt;widgets, dlg_find_by_id (h, menubar-&gt;previous_widget));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L274'>current</a>           274 lib/widget/menu.c     h-&gt;current = g_list_find (h-&gt;widgets, menubar);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L575'>current</a>           575 lib/widget/quick.c         dd-&gt;current = g_list_next (dd-&gt;current);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L576'>current</a>           576 lib/widget/quick.c         if (dd-&gt;current == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L577'>current</a>           577 lib/widget/quick.c             dd-&gt;current = dd-&gt;widgets;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L320'>current</a>           320 lib/widget/widget-common.c     return (w == CONST_WIDGET (w)-&gt;owner-&gt;current-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L354'>current</a>           354 lib/widget/widget-common.c     if (h-&gt;current == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L355'>current</a>           355 lib/widget/widget-common.c         h-&gt;current = h-&gt;widgets;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L357'>current</a>           357 lib/widget/widget-common.c     if (old_w == h-&gt;current-&gt;data)</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L364'>current</a>           364 lib/widget/widget-common.c         h-&gt;current-&gt;data = new_w;</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L148'>current</a>           148 src/editor/edit-impl.h off_t edit_move_forward3 (const WEdit * edit, off_t current, long cols, off_t upto);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1487'>current</a>          1487 src/editor/edit.c             off_t current = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1490'>current</a>          1490 src/editor/edit.c             edit_cursor_move (edit, current - edit-&gt;buffer.curs1 + 1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1942'>current</a>          1942 src/editor/edit.c     off_t current;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1946'>current</a>          1946 src/editor/edit.c     current = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1960'>current</a>          1960 src/editor/edit.c                 ins_len = edit-&gt;buffer.curs1 - current;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2034'>current</a>          2034 src/editor/edit.c                 edit_set_markers (edit, edit-&gt;buffer.curs1, current, 0, 0);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2043'>current</a>          2043 src/editor/edit.c                 ins_len = edit-&gt;buffer.curs1 - current;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2751'>current</a>          2751 src/editor/edit.c edit_move_forward3 (const WEdit * edit, off_t current, long cols, off_t upto)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2764'>current</a>          2764 src/editor/edit.c     for (col = 0, p = current; p &lt; q; p++)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L354'>current</a>           354 src/editor/editbuffer.c edit_buffer_get_bol (const edit_buffer_t * buf, off_t current)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L356'>current</a>           356 src/editor/editbuffer.c     if (current &lt;= 0)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L359'>current</a>           359 src/editor/editbuffer.c     for (; edit_buffer_get_byte (buf, current - 1) != '\n'; current--)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L362'>current</a>           362 src/editor/editbuffer.c     return current;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L376'>current</a>           376 src/editor/editbuffer.c edit_buffer_get_eol (const edit_buffer_t * buf, off_t current)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L378'>current</a>           378 src/editor/editbuffer.c     if (current &gt;= buf-&gt;size)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L381'>current</a>           381 src/editor/editbuffer.c     for (; edit_buffer_get_byte (buf, current) != '\n'; current++)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L384'>current</a>           384 src/editor/editbuffer.c     return current;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L594'>current</a>           594 src/editor/editbuffer.c edit_buffer_get_forward_offset (const edit_buffer_t * buf, off_t current, long lines, off_t upto)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L597'>current</a>           597 src/editor/editbuffer.c         return (off_t) edit_buffer_count_lines (buf, current, upto);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L605'>current</a>           605 src/editor/editbuffer.c         next = edit_buffer_get_eol (buf, current) + 1;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L608'>current</a>           608 src/editor/editbuffer.c         current = next;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L611'>current</a>           611 src/editor/editbuffer.c     return current;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L626'>current</a>           626 src/editor/editbuffer.c edit_buffer_get_backward_offset (const edit_buffer_t * buf, off_t current, long lines)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L629'>current</a>           629 src/editor/editbuffer.c     current = edit_buffer_get_bol (buf, current);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L631'>current</a>           631 src/editor/editbuffer.c     while (lines-- != 0 &amp;&amp; current != 0)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L632'>current</a>           632 src/editor/editbuffer.c         current = edit_buffer_get_bol (buf, current - 1);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L634'>current</a>           634 src/editor/editbuffer.c     return current;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L47'>current</a>            47 src/editor/editbuffer.h off_t edit_buffer_get_bol (const edit_buffer_t * buf, off_t current);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L48'>current</a>            48 src/editor/editbuffer.h off_t edit_buffer_get_eol (const edit_buffer_t * buf, off_t current);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L57'>current</a>            57 src/editor/editbuffer.h off_t edit_buffer_get_forward_offset (const edit_buffer_t * buf, off_t current, long lines,</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L59'>current</a>            59 src/editor/editbuffer.h off_t edit_buffer_get_backward_offset (const edit_buffer_t * buf, off_t current, long lines);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2259'>current</a>          2259 src/editor/editcmd.c         if (edit_widget_is_editor (CONST_WIDGET (h-&gt;current-&gt;data)))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2260'>current</a>          2260 src/editor/editcmd.c             edit = (WEdit *) h-&gt;current-&gt;data;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2345'>current</a>          2345 src/editor/editcmd.c     off_t start_mark, end_mark, current = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2385'>current</a>          2385 src/editor/editcmd.c     else if (start_mark &lt; current &amp;&amp; end_mark &gt; current)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2397'>current</a>          2397 src/editor/editcmd.c     off_t current;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2448'>current</a>          2448 src/editor/editcmd.c         current = edit_move_forward3 (edit, edit_buffer_get_current_bol (&amp;edit-&gt;buffer), x, 0);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2449'>current</a>          2449 src/editor/editcmd.c         edit_cursor_move (edit, current - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2463'>current</a>          2463 src/editor/editcmd.c         current = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2473'>current</a>          2473 src/editor/editcmd.c                           current - edit-&gt;buffer.curs1 -</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2474'>current</a>          2474 src/editor/editcmd.c                           (((current - edit-&gt;buffer.curs1) &gt; 0) ? end_mark - start_mark : 0));</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L353'>current</a>           353 src/editor/editwidget.c     rv = g_list_position (h-&gt;widgets, h-&gt;current) - offset;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L431'>current</a>           431 src/editor/editwidget.c         if (edit_widget_is_editor (CONST_WIDGET (h-&gt;current-&gt;data)) &amp;&amp;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L432'>current</a>           432 src/editor/editwidget.c             edit_close_cmd ((WEdit *) h-&gt;current-&gt;data) &amp;&amp; find_editor (h) == NULL)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L446'>current</a>           446 src/editor/editwidget.c             Widget *w = WIDGET (h-&gt;current-&gt;data);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L480'>current</a>           480 src/editor/editwidget.c         if (edit_widget_is_editor (CONST_WIDGET (h-&gt;current-&gt;data)))</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L481'>current</a>           481 src/editor/editwidget.c             edit_handle_move_resize ((WEdit *) h-&gt;current-&gt;data, command);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L488'>current</a>           488 src/editor/editwidget.c         dlg_select_widget (h-&gt;current-&gt;data);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L492'>current</a>           492 src/editor/editwidget.c         dlg_select_widget (h-&gt;current-&gt;data);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L804'>current</a>           804 src/editor/editwidget.c                 result = send_message (h-&gt;current-&gt;data, NULL, MSG_ACTION, parm, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L811'>current</a>           811 src/editor/editwidget.c             Widget *we = WIDGET (h-&gt;current-&gt;data);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L857'>current</a>           857 src/editor/editwidget.c         return send_message (h-&gt;current-&gt;data, NULL, MSG_IDLE, 0, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L906'>current</a>           906 src/editor/editwidget.c                 if (top != h-&gt;current)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1273'>current</a>          1273 src/editor/editwidget.c     if (edit_widget_is_editor (CONST_WIDGET (h-&gt;current-&gt;data)))</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1274'>current</a>          1274 src/editor/editwidget.c         return (WEdit *) h-&gt;current-&gt;data;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1301'>current</a>          1301 src/editor/editwidget.c     edit_status (e, (void *) e == h-&gt;current-&gt;data);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L287'>current</a>           287 src/filemanager/achown.c     send_message (h-&gt;current-&gt;data, NULL, MSG_FOCUS, 0, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L554'>current</a>           554 src/filemanager/achown.c             send_message (h-&gt;current-&gt;data, NULL, MSG_FOCUS, 0, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L570'>current</a>           570 src/filemanager/achown.c             send_message (h-&gt;current-&gt;data, NULL, MSG_FOCUS, 0, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L583'>current</a>           583 src/filemanager/achown.c             if (BUTTON (h-&gt;current-&gt;data)-&gt;text.start[(flag_pos % 3)] == '-')</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1638'>current</a>          1638 src/filemanager/cmd.c     int current;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1641'>current</a>          1641 src/filemanager/cmd.c     current = get_current_index ();</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1642'>current</a>          1642 src/filemanager/cmd.c     p = PANEL (get_panel_widget (current));</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1644'>current</a>          1644 src/filemanager/cmd.c     set_basic_panel_listing_to (current, (p-&gt;list_type + 1) % LIST_TYPES);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L403'>current</a>           403 src/filemanager/filegui.c                         rd_widgets [i].pos_flags, ui-&gt;replace_dlg-&gt;current-&gt;data)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L409'>current</a>           409 src/filemanager/filegui.c                         ui-&gt;replace_dlg-&gt;current != NULL ? ui-&gt;replace_dlg-&gt;current-&gt;data : NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L522'>current</a>           522 src/filemanager/find.c         if (h-&gt;current-&gt;data == in_name)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L524'>current</a>           524 src/filemanager/find.c         else if (h-&gt;current-&gt;data == in_with)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L279'>current</a>           279 src/filemanager/hotlist.c     struct hotlist *current;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L284'>current</a>           284 src/filemanager/hotlist.c     for (current = current_group-&gt;head; current != NULL; current = current-&gt;next)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L285'>current</a>           285 src/filemanager/hotlist.c         switch (current-&gt;type)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L292'>current</a>           292 src/filemanager/hotlist.c                 g_string_append (buff, current-&gt;label);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L293'>current</a>           293 src/filemanager/hotlist.c                 listbox_add_item (list, LISTBOX_APPEND_AT_END, 0, buff-&gt;str, current, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L298'>current</a>           298 src/filemanager/hotlist.c             listbox_add_item (list, LISTBOX_APPEND_AT_END, 0, current-&gt;label, current, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L311'>current</a>           311 src/filemanager/hotlist.c     struct hotlist *current = current_group-&gt;head;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L313'>current</a>           313 src/filemanager/hotlist.c     if (current == entry)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L317'>current</a>           317 src/filemanager/hotlist.c         while (current != NULL &amp;&amp; current-&gt;next != entry)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L318'>current</a>           318 src/filemanager/hotlist.c             current = current-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L319'>current</a>           319 src/filemanager/hotlist.c         if (current != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L320'>current</a>           320 src/filemanager/hotlist.c             current-&gt;next = entry-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L893'>current</a>           893 src/filemanager/hotlist.c     struct hotlist *current = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L902'>current</a>           902 src/filemanager/hotlist.c     listbox_get_current (l_hotlist, NULL, (void **) &amp;current);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L905'>current</a>           905 src/filemanager/hotlist.c     if ((current != NULL) &amp;&amp; (current-&gt;type == HL_TYPE_DOTDOT))</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L929'>current</a>           929 src/filemanager/hotlist.c         new-&gt;next = current-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L930'>current</a>           930 src/filemanager/hotlist.c         current-&gt;next = new;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L932'>current</a>           932 src/filemanager/hotlist.c     else if (pos == LISTBOX_APPEND_BEFORE &amp;&amp; current == current_group-&gt;head)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L935'>current</a>           935 src/filemanager/hotlist.c         new-&gt;next = current;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L942'>current</a>           942 src/filemanager/hotlist.c         while (p-&gt;next != current)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L945'>current</a>           945 src/filemanager/hotlist.c         new-&gt;next = current;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1097'>current</a>          1097 src/filemanager/hotlist.c     struct hotlist *current = grp-&gt;head;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1099'>current</a>          1099 src/filemanager/hotlist.c     while (current != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1101'>current</a>          1101 src/filemanager/hotlist.c         struct hotlist *next = current-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1103'>current</a>          1103 src/filemanager/hotlist.c         if (current-&gt;type == HL_TYPE_GROUP)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1104'>current</a>          1104 src/filemanager/hotlist.c             remove_group (current);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1106'>current</a>          1106 src/filemanager/hotlist.c         g_free (current-&gt;label);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1107'>current</a>          1107 src/filemanager/hotlist.c         g_free (current-&gt;directory);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1108'>current</a>          1108 src/filemanager/hotlist.c         g_free (current);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1110'>current</a>          1110 src/filemanager/hotlist.c         current = next;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1178'>current</a>          1178 src/filemanager/hotlist.c     struct hotlist *current = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1201'>current</a>          1201 src/filemanager/hotlist.c     for (current = grp-&gt;head; current; current = current-&gt;next)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1202'>current</a>          1202 src/filemanager/hotlist.c         load_group (current);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1503'>current</a>          1503 src/filemanager/hotlist.c     struct hotlist *current;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1513'>current</a>          1513 src/filemanager/hotlist.c     for (current = grp-&gt;head; current != NULL; current = current-&gt;next)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1514'>current</a>          1514 src/filemanager/hotlist.c         switch (current-&gt;type)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1519'>current</a>          1519 src/filemanager/hotlist.c             for (s = current-&gt;label; *s != '\0'; s++)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1527'>current</a>          1527 src/filemanager/hotlist.c             hot_save_group (current);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1535'>current</a>          1535 src/filemanager/hotlist.c             for (s = current-&gt;label; *s != '\0'; s++)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1542'>current</a>          1542 src/filemanager/hotlist.c             for (s = current-&gt;directory; *s != '\0'; s++)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1551'>current</a>          1551 src/filemanager/hotlist.c             fprintf (hotlist_file, "#%s\n", current-&gt;label);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L148'>current</a>           148 src/filemanager/panelize.c     struct panelize *current;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L179'>current</a>           179 src/filemanager/panelize.c     for (current = panelize; current != NULL; current = current-&gt;next)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L180'>current</a>           180 src/filemanager/panelize.c         listbox_add_item (l_panelize, LISTBOX_APPEND_AT_END, 0, current-&gt;label, current, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L226'>current</a>           226 src/filemanager/panelize.c     struct panelize *current, *old;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L229'>current</a>           229 src/filemanager/panelize.c     current = panelize;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L230'>current</a>           230 src/filemanager/panelize.c     while (current &amp;&amp; strcmp (current-&gt;label, label) &lt;= 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L232'>current</a>           232 src/filemanager/panelize.c         old = current;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L233'>current</a>           233 src/filemanager/panelize.c         current = current-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L241'>current</a>           241 src/filemanager/panelize.c         panelize-&gt;next = current;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L250'>current</a>           250 src/filemanager/panelize.c         new-&gt;next = current;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L286'>current</a>           286 src/filemanager/panelize.c             struct panelize *current = panelize;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L287'>current</a>           287 src/filemanager/panelize.c             while (current &amp;&amp; current-&gt;next != entry)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L288'>current</a>           288 src/filemanager/panelize.c                 current = current-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L289'>current</a>           289 src/filemanager/panelize.c             if (current)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L291'>current</a>           291 src/filemanager/panelize.c                 current-&gt;next = entry-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L612'>current</a>           612 src/filemanager/panelize.c     struct panelize *current = panelize;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L615'>current</a>           615 src/filemanager/panelize.c     for (; current; current = current-&gt;next)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L617'>current</a>           617 src/filemanager/panelize.c         if (strcmp (current-&gt;label, _("Other command")))</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L619'>current</a>           619 src/filemanager/panelize.c                                   panelize_section, current-&gt;label, current-&gt;command);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L628'>current</a>           628 src/filemanager/panelize.c     struct panelize *current = panelize;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L631'>current</a>           631 src/filemanager/panelize.c     for (; current; current = next)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L633'>current</a>           633 src/filemanager/panelize.c         next = current-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L634'>current</a>           634 src/filemanager/panelize.c         g_free (current-&gt;label);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L635'>current</a>           635 src/filemanager/panelize.c         g_free (current-&gt;command);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L636'>current</a>           636 src/filemanager/panelize.c         g_free (current);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L274'>current</a>           274 src/filemanager/tree.c     tree_entry *current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L302'>current</a>           302 src/filemanager/tree.c     current = tree-&gt;selected_ptr;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L306'>current</a>           306 src/filemanager/tree.c         current = back_ptr (current, &amp;tree-&gt;topdiff);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L310'>current</a>           310 src/filemanager/tree.c         while (current-&gt;prev &amp;&amp; i &lt; tree-&gt;topdiff)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L312'>current</a>           312 src/filemanager/tree.c             current = current-&gt;prev;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L314'>current</a>           314 src/filemanager/tree.c             if (current-&gt;sublevel &lt; tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L316'>current</a>           316 src/filemanager/tree.c                 if (vfs_path_equal (current-&gt;name, tree-&gt;selected_ptr-&gt;name))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L319'>current</a>           319 src/filemanager/tree.c             else if (current-&gt;sublevel == tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L323'>current</a>           323 src/filemanager/tree.c                 cname = vfs_path_as_str (current-&gt;name);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L326'>current</a>           326 src/filemanager/tree.c                 if (vfs_path_equal_len (current-&gt;name, tree-&gt;selected_ptr-&gt;name, j))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L329'>current</a>           329 src/filemanager/tree.c             else if (current-&gt;sublevel == tree-&gt;selected_ptr-&gt;sublevel + 1)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L332'>current</a>           332 src/filemanager/tree.c                 if (j &gt; 1 &amp;&amp; vfs_path_equal_len (current-&gt;name, tree-&gt;selected_ptr-&gt;name, j))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L347'>current</a>           347 src/filemanager/tree.c         if (current == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L351'>current</a>           351 src/filemanager/tree.c             tty_setcolor (tree-&gt;active &amp;&amp; current == tree-&gt;selected_ptr</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L354'>current</a>           354 src/filemanager/tree.c             tty_setcolor (current == tree-&gt;selected_ptr ? TREE_CURRENTC (h) : TREE_NORMALC (h));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L356'>current</a>           356 src/filemanager/tree.c         tree-&gt;tree_shown[i] = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L357'>current</a>           357 src/filemanager/tree.c         if (current-&gt;sublevel == topsublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L360'>current</a>           360 src/filemanager/tree.c                               (vfs_path_as_str (current-&gt;name),</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L368'>current</a>           368 src/filemanager/tree.c             for (j = 0; j &lt; current-&gt;sublevel - topsublevel - 1; j++)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L373'>current</a>           373 src/filemanager/tree.c                 if (current-&gt;submask &amp; (1 &lt;&lt; (j + topsublevel + 1)))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L381'>current</a>           381 src/filemanager/tree.c             if (!current-&gt;next || !(current-&gt;next-&gt;submask &amp; (1 &lt;&lt; current-&gt;sublevel)))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L391'>current</a>           391 src/filemanager/tree.c                               (current-&gt;subname, tree_cols - x - 3 * j, J_LEFT_FIT));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L395'>current</a>           395 src/filemanager/tree.c         current = current-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L398'>current</a>           398 src/filemanager/tree.c             while (current != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L400'>current</a>           400 src/filemanager/tree.c                 if (current-&gt;sublevel &lt; tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L402'>current</a>           402 src/filemanager/tree.c                     if (vfs_path_equal_len (current-&gt;name, tree-&gt;selected_ptr-&gt;name,</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L403'>current</a>           403 src/filemanager/tree.c                                             vfs_path_len (current-&gt;name)))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L406'>current</a>           406 src/filemanager/tree.c                 else if (current-&gt;sublevel == tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L410'>current</a>           410 src/filemanager/tree.c                     cname = vfs_path_as_str (current-&gt;name);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L413'>current</a>           413 src/filemanager/tree.c                     if (vfs_path_equal_len (current-&gt;name, tree-&gt;selected_ptr-&gt;name, j))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L416'>current</a>           416 src/filemanager/tree.c                 else if (current-&gt;sublevel == tree-&gt;selected_ptr-&gt;sublevel + 1</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L419'>current</a>           419 src/filemanager/tree.c                     if (vfs_path_equal_len (current-&gt;name, tree-&gt;selected_ptr-&gt;name,</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L423'>current</a>           423 src/filemanager/tree.c                 current = current-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L451'>current</a>           451 src/filemanager/tree.c         tree_entry *current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L454'>current</a>           454 src/filemanager/tree.c         current = tree-&gt;selected_ptr;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L455'>current</a>           455 src/filemanager/tree.c         while (j &lt; i &amp;&amp; current-&gt;prev &amp;&amp; current-&gt;prev-&gt;sublevel &gt;= tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L457'>current</a>           457 src/filemanager/tree.c             current = current-&gt;prev;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L458'>current</a>           458 src/filemanager/tree.c             if (current-&gt;sublevel == tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L460'>current</a>           460 src/filemanager/tree.c                 tree-&gt;selected_ptr = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L480'>current</a>           480 src/filemanager/tree.c         tree_entry *current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L483'>current</a>           483 src/filemanager/tree.c         current = tree-&gt;selected_ptr;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L484'>current</a>           484 src/filemanager/tree.c         while (j &lt; i &amp;&amp; current-&gt;next &amp;&amp; current-&gt;next-&gt;sublevel &gt;= tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L486'>current</a>           486 src/filemanager/tree.c             current = current-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L487'>current</a>           487 src/filemanager/tree.c             if (current-&gt;sublevel == tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L489'>current</a>           489 src/filemanager/tree.c                 tree-&gt;selected_ptr = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L505'>current</a>           505 src/filemanager/tree.c     tree_entry *current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L511'>current</a>           511 src/filemanager/tree.c     current = tree-&gt;selected_ptr-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L513'>current</a>           513 src/filemanager/tree.c     if (current &amp;&amp; current-&gt;sublevel &gt; tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L516'>current</a>           516 src/filemanager/tree.c         tree-&gt;selected_ptr = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L524'>current</a>           524 src/filemanager/tree.c         current = tree-&gt;selected_ptr-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L525'>current</a>           525 src/filemanager/tree.c         if (current &amp;&amp; current-&gt;sublevel &gt; tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L527'>current</a>           527 src/filemanager/tree.c             tree-&gt;selected_ptr = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L539'>current</a>           539 src/filemanager/tree.c     tree_entry *current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L546'>current</a>           546 src/filemanager/tree.c     current = tree-&gt;selected_ptr-&gt;prev;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L547'>current</a>           547 src/filemanager/tree.c     while (current &amp;&amp; current-&gt;sublevel &gt;= tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L549'>current</a>           549 src/filemanager/tree.c         current = current-&gt;prev;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L552'>current</a>           552 src/filemanager/tree.c     if (!current)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L553'>current</a>           553 src/filemanager/tree.c         current = tree-&gt;store-&gt;tree_first;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L554'>current</a>           554 src/filemanager/tree.c     tree-&gt;selected_ptr = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L620'>current</a>           620 src/filemanager/tree.c     tree_entry *current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L626'>current</a>           626 src/filemanager/tree.c     current = tree-&gt;selected_ptr;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L628'>current</a>           628 src/filemanager/tree.c     while (!wrapped || current != tree-&gt;selected_ptr)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L630'>current</a>           630 src/filemanager/tree.c         if (strncmp (current-&gt;subname, text, len) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L632'>current</a>           632 src/filemanager/tree.c             tree-&gt;selected_ptr = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L636'>current</a>           636 src/filemanager/tree.c         current = current-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L637'>current</a>           637 src/filemanager/tree.c         if (!current)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L639'>current</a>           639 src/filemanager/tree.c             current = tree-&gt;store-&gt;tree_first;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1303'>current</a>          1303 src/filemanager/tree.c     tree_entry *current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1305'>current</a>          1305 src/filemanager/tree.c     current = tree_store_whereis (dir);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1306'>current</a>          1306 src/filemanager/tree.c     if (current != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1308'>current</a>          1308 src/filemanager/tree.c         tree-&gt;selected_ptr = current;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L328'>current</a>           328 src/filemanager/treestore.c     tree_entry *current;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L337'>current</a>           337 src/filemanager/treestore.c     current = ts.tree_first;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L338'>current</a>           338 src/filemanager/treestore.c     while (current)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L340'>current</a>           340 src/filemanager/treestore.c         if (vfs_file_is_local (current-&gt;name))</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L345'>current</a>           345 src/filemanager/treestore.c             if (current-&gt;prev &amp;&amp; (common = str_common (current-&gt;prev-&gt;name, current-&gt;name)) &gt; 2)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L347'>current</a>           347 src/filemanager/treestore.c                 char *encoded = encode (current-&gt;name, common);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L349'>current</a>           349 src/filemanager/treestore.c                 i = fprintf (file, "%d:%d %s\n", current-&gt;scanned ? 1 : 0, common, encoded);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L354'>current</a>           354 src/filemanager/treestore.c                 char *encoded = encode (current-&gt;name, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L356'>current</a>           356 src/filemanager/treestore.c                 i = fprintf (file, "%d:%s\n", current-&gt;scanned ? 1 : 0, encoded);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L367'>current</a>           367 src/filemanager/treestore.c         current = current-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L381'>current</a>           381 src/filemanager/treestore.c     tree_entry *current = ts.tree_first;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L390'>current</a>           390 src/filemanager/treestore.c     while (current != NULL &amp;&amp; (flag = pathcmp (current-&gt;name, name)) &lt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L392'>current</a>           392 src/filemanager/treestore.c         old = current;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L393'>current</a>           393 src/filemanager/treestore.c         current = current-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L397'>current</a>           397 src/filemanager/treestore.c         return current;         /* Already in the list */</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L401'>current</a>           401 src/filemanager/treestore.c     if (!current)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L461'>current</a>           461 src/filemanager/treestore.c     current = new-&gt;prev;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L462'>current</a>           462 src/filemanager/treestore.c     while (current &amp;&amp; current-&gt;sublevel &gt; new-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L464'>current</a>           464 src/filemanager/treestore.c         current-&gt;submask |= 1 &lt;&lt; new-&gt;sublevel;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L465'>current</a>           465 src/filemanager/treestore.c         current = current-&gt;prev;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L493'>current</a>           493 src/filemanager/treestore.c     tree_entry *current = entry-&gt;prev;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L502'>current</a>           502 src/filemanager/treestore.c     while (current &amp;&amp; current-&gt;sublevel &gt; entry-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L504'>current</a>           504 src/filemanager/treestore.c         submask |= 1 &lt;&lt; current-&gt;sublevel;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L505'>current</a>           505 src/filemanager/treestore.c         submask &amp;= (2 &lt;&lt; current-&gt;sublevel) - 1;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L506'>current</a>           506 src/filemanager/treestore.c         current-&gt;submask = submask;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L507'>current</a>           507 src/filemanager/treestore.c         current = current-&gt;prev;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L595'>current</a>           595 src/filemanager/treestore.c     tree_entry *current = ts.tree_first;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L598'>current</a>           598 src/filemanager/treestore.c     while (current &amp;&amp; (flag = pathcmp (current-&gt;name, name)) &lt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L599'>current</a>           599 src/filemanager/treestore.c         current = current-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L602'>current</a>           602 src/filemanager/treestore.c         return current;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L683'>current</a>           683 src/filemanager/treestore.c     tree_entry *current, *base;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L705'>current</a>           705 src/filemanager/treestore.c     current = base-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L706'>current</a>           706 src/filemanager/treestore.c     while (current != NULL &amp;&amp; vfs_path_equal_len (current-&gt;name, base-&gt;name, len))</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L712'>current</a>           712 src/filemanager/treestore.c         cname = vfs_path_as_str (current-&gt;name);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L717'>current</a>           717 src/filemanager/treestore.c         old = current;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L718'>current</a>           718 src/filemanager/treestore.c         current = current-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L732'>current</a>           732 src/filemanager/treestore.c     tree_entry *current, *base;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L753'>current</a>           753 src/filemanager/treestore.c     current = ts.check_start;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L754'>current</a>           754 src/filemanager/treestore.c     while (current &amp;&amp; (flag = pathcmp (current-&gt;name, name)) &lt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L755'>current</a>           755 src/filemanager/treestore.c         current = current-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L760'>current</a>           760 src/filemanager/treestore.c         current = tree_store_add_entry (name);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L767'>current</a>           767 src/filemanager/treestore.c     base = current;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L774'>current</a>           774 src/filemanager/treestore.c         current = base-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L775'>current</a>           775 src/filemanager/treestore.c         while (current != NULL &amp;&amp; vfs_path_equal_len (current-&gt;name, base-&gt;name, len))</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L779'>current</a>           779 src/filemanager/treestore.c             cname = vfs_path_as_str (current-&gt;name);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L784'>current</a>           784 src/filemanager/treestore.c             current-&gt;mark = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L785'>current</a>           785 src/filemanager/treestore.c             current = current-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L796'>current</a>           796 src/filemanager/treestore.c     tree_entry *current, *retval;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L806'>current</a>           806 src/filemanager/treestore.c     current = tree_store_whereis (vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L807'>current</a>           807 src/filemanager/treestore.c     if (!current)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L817'>current</a>           817 src/filemanager/treestore.c         current = tree_store_add_entry (vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L820'>current</a>           820 src/filemanager/treestore.c         return current;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L825'>current</a>           825 src/filemanager/treestore.c     retval = current;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L828'>current</a>           828 src/filemanager/treestore.c     ts.check_start = current-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L831'>current</a>           831 src/filemanager/treestore.c     current = ts.check_start;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L832'>current</a>           832 src/filemanager/treestore.c     while (current != NULL &amp;&amp; vfs_path_equal_len (current-&gt;name, ts.check_name, len))</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L837'>current</a>           837 src/filemanager/treestore.c         cname = vfs_path_as_str (current-&gt;name);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L842'>current</a>           842 src/filemanager/treestore.c         current-&gt;mark = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L843'>current</a>           843 src/filemanager/treestore.c         current = current-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L855'>current</a>           855 src/filemanager/treestore.c     tree_entry *current;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L867'>current</a>           867 src/filemanager/treestore.c     current = ts.check_start;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L868'>current</a>           868 src/filemanager/treestore.c     while (current != NULL &amp;&amp; vfs_path_equal_len (current-&gt;name, ts.check_name, len))</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L874'>current</a>           874 src/filemanager/treestore.c         cname = vfs_path_as_str (current-&gt;name);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L879'>current</a>           879 src/filemanager/treestore.c         old = current;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L880'>current</a>           880 src/filemanager/treestore.c         current = current-&gt;next;</span>
+<span class='curline'><a href='../S/src--learn.c.html#L141'>current</a>           141 src/learn.c            if (learnkeys[i].button == WIDGET (learn_dlg-&gt;current-&gt;data))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L120'>current</a>           120 src/vfs/smbfs/smbfs.c     dir_entry *current;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L539'>current</a>           539 src/vfs/smbfs/smbfs.c         current_info-&gt;current-&gt;next = new_entry;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L541'>current</a>           541 src/vfs/smbfs/smbfs.c     current_info-&gt;current = new_entry;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L895'>current</a>           895 src/vfs/smbfs/smbfs.c     smbfs_info-&gt;current = smbfs_info-&gt;entries;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L932'>current</a>           932 src/vfs/smbfs/smbfs.c     if (smbfs_info-&gt;current == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L941'>current</a>           941 src/vfs/smbfs/smbfs.c     g_strlcpy (dirent_dest, smbfs_info-&gt;current-&gt;text, MC_MAXPATHLEN);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L942'>current</a>           942 src/vfs/smbfs/smbfs.c     smbfs_info-&gt;current = smbfs_info-&gt;current-&gt;next;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1420'>current</a>          1420 src/vfs/smbfs/smbfs.c     smbfs_info-&gt;current = 0;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L109'>current</a>           109 src/vfs/undelfs/undelfs.c     off_t current;              /* used to determine current position in itereate */</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L525'>current</a>           525 src/vfs/undelfs/undelfs.c     if (p-&gt;pos + (off_t) p-&gt;count &lt; p-&gt;current)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L530'>current</a>           530 src/vfs/undelfs/undelfs.c     if (p-&gt;pos &gt; p-&gt;current + param_fs-&gt;blocksize)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L532'>current</a>           532 src/vfs/undelfs/undelfs.c         p-&gt;current += param_fs-&gt;blocksize;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L537'>current</a>           537 src/vfs/undelfs/undelfs.c     if (p-&gt;pos &gt;= p-&gt;current)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L541'>current</a>           541 src/vfs/undelfs/undelfs.c         if (p-&gt;pos + (off_t) p-&gt;count &lt;= p-&gt;current + param_fs-&gt;blocksize)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L550'>current</a>           550 src/vfs/undelfs/undelfs.c             copy_count = param_fs-&gt;blocksize - (p-&gt;pos - p-&gt;current);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L552'>current</a>           552 src/vfs/undelfs/undelfs.c         memcpy (p-&gt;dest_buffer, p-&gt;buf + (p-&gt;pos - p-&gt;current), copy_count);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L557'>current</a>           557 src/vfs/undelfs/undelfs.c         if (p-&gt;pos + (off_t) p-&gt;count &lt; p-&gt;current + param_fs-&gt;blocksize)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L559'>current</a>           559 src/vfs/undelfs/undelfs.c             copy_count = (p-&gt;pos + p-&gt;count) - p-&gt;current;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L569'>current</a>           569 src/vfs/undelfs/undelfs.c     p-&gt;current += param_fs-&gt;blocksize;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L586'>current</a>           586 src/vfs/undelfs/undelfs.c     p-&gt;current = 0;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L289'>current</a>           289 src/viewer/coord_cache.c     coord_cache_entry_t current, next, entry;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L308'>current</a>           308 src/viewer/coord_cache.c         current.cc_offset = 0;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L309'>current</a>           309 src/viewer/coord_cache.c         current.cc_line = 0;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L310'>current</a>           310 src/viewer/coord_cache.c         current.cc_column = 0;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L311'>current</a>           311 src/viewer/coord_cache.c         current.cc_nroff_column = 0;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L312'>current</a>           312 src/viewer/coord_cache.c         mcview_ccache_add_entry (cache, 0, &amp;current);</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L332'>current</a>           332 src/viewer/coord_cache.c     current = *cache-&gt;cache[i];</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L336'>current</a>           336 src/viewer/coord_cache.c         limit = current.cc_offset + VIEW_COORD_CACHE_GRANUL;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L338'>current</a>           338 src/viewer/coord_cache.c     entry = current;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L340'>current</a>           340 src/viewer/coord_cache.c     for (; current.cc_offset &lt; limit; current = next)</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L344'>current</a>           344 src/viewer/coord_cache.c         if (!mcview_get_byte (view, current.cc_offset, &amp;c))</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L347'>current</a>           347 src/viewer/coord_cache.c         if (!cmp_func (&amp;current, coord))</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L360'>current</a>           360 src/viewer/coord_cache.c         next.cc_offset = current.cc_offset + 1;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L361'>current</a>           361 src/viewer/coord_cache.c         next.cc_line = current.cc_line;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L362'>current</a>           362 src/viewer/coord_cache.c         next.cc_column = current.cc_column + 1;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L363'>current</a>           363 src/viewer/coord_cache.c         next.cc_nroff_column = current.cc_nroff_column + 1;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L370'>current</a>           370 src/viewer/coord_cache.c             mcview_get_byte_indexed (view, current.cc_offset, 1, &amp;nextc);</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L378'>current</a>           378 src/viewer/coord_cache.c                 next.cc_column = current.cc_column;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L379'>current</a>           379 src/viewer/coord_cache.c                 next.cc_nroff_column = current.cc_nroff_column;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L383'>current</a>           383 src/viewer/coord_cache.c                 next.cc_line = current.cc_line + 1;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L391'>current</a>           391 src/viewer/coord_cache.c             next.cc_nroff_column = current.cc_nroff_column - 1;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L396'>current</a>           396 src/viewer/coord_cache.c             next.cc_column = mcview_offset_rounddown (current.cc_column, 8) + 8;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L397'>current</a>           397 src/viewer/coord_cache.c             next.cc_nroff_column = mcview_offset_rounddown (current.cc_nroff_column, 8) + 8;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L402'>current</a>           402 src/viewer/coord_cache.c             next.cc_line = current.cc_line + 1;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L416'>current</a>           416 src/viewer/coord_cache.c             nroff_state = mcview_is_nroff_sequence (view, current.cc_offset)</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L446'>current</a>           446 src/viewer/coord_cache.c         coord-&gt;cc_offset = current.cc_offset;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L450'>current</a>           450 src/viewer/coord_cache.c         coord-&gt;cc_line = current.cc_line;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L451'>current</a>           451 src/viewer/coord_cache.c         coord-&gt;cc_column = current.cc_column;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L452'>current</a>           452 src/viewer/coord_cache.c         coord-&gt;cc_nroff_column = current.cc_nroff_column;</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L317'>current</a>           317 src/viewer/internal.h off_t mcview_bol (WView * view, off_t current, off_t limit);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L318'>current</a>           318 src/viewer/internal.h off_t mcview_eol (WView * view, off_t current, off_t limit);</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L324'>current</a>           324 src/viewer/lib.c mcview_bol (WView * view, off_t current, off_t limit)</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L329'>current</a>           329 src/viewer/lib.c     if (current &lt;= 0)</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L331'>current</a>           331 src/viewer/lib.c     if (current &gt; filesize)</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L333'>current</a>           333 src/viewer/lib.c     if (!mcview_get_byte (view, current, &amp;c))</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L334'>current</a>           334 src/viewer/lib.c         return current;</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L337'>current</a>           337 src/viewer/lib.c         if (!mcview_get_byte (view, current - 1, &amp;c))</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L338'>current</a>           338 src/viewer/lib.c             return current;</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L340'>current</a>           340 src/viewer/lib.c             current--;</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L342'>current</a>           342 src/viewer/lib.c     while (current &gt; 0 &amp;&amp; current &gt; limit)</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L344'>current</a>           344 src/viewer/lib.c         if (!mcview_get_byte (view, current - 1, &amp;c))</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L348'>current</a>           348 src/viewer/lib.c         current--;</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L350'>current</a>           350 src/viewer/lib.c     return current;</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L359'>current</a>           359 src/viewer/lib.c mcview_eol (WView * view, off_t current, off_t limit)</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L364'>current</a>           364 src/viewer/lib.c     if (current &lt; 0)</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L366'>current</a>           366 src/viewer/lib.c     if (current &gt;= filesize)</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L368'>current</a>           368 src/viewer/lib.c     while (current &lt; filesize &amp;&amp; current &lt; limit)</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L370'>current</a>           370 src/viewer/lib.c         if (!mcview_get_byte (view, current, &amp;c))</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L374'>current</a>           374 src/viewer/lib.c             current++;</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L381'>current</a>           381 src/viewer/lib.c         current++;</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L384'>current</a>           384 src/viewer/lib.c     return current;</span>
+</pre>
+</body>
+</html>

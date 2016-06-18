@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>mc_dialogs</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L52'>mc_dialogs</a>         52 lib/widget/dialog-switch.c static GList *mc_dialogs = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L138'>mc_dialogs</a>        138 lib/widget/dialog-switch.c     dlg = g_list_find (mc_dialogs, h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L144'>mc_dialogs</a>        144 lib/widget/dialog-switch.c         mc_dialogs = g_list_prepend (mc_dialogs, h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L145'>mc_dialogs</a>        145 lib/widget/dialog-switch.c         mc_current = mc_dialogs;</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L149'>mc_dialogs</a>        149 lib/widget/dialog-switch.c     g_list_foreach (mc_dialogs, dialog_switch_suspend, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L162'>mc_dialogs</a>        162 lib/widget/dialog-switch.c         this = g_list_find (mc_dialogs, h);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L164'>mc_dialogs</a>        164 lib/widget/dialog-switch.c     mc_dialogs = g_list_delete_link (mc_dialogs, this);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L168'>mc_dialogs</a>        168 lib/widget/dialog-switch.c         mc_current = g_list_find (mc_dialogs, DIALOG (top_dlg-&gt;data));</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L170'>mc_dialogs</a>        170 lib/widget/dialog-switch.c         mc_current = mc_dialogs;</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L182'>mc_dialogs</a>        182 lib/widget/dialog-switch.c     return g_list_length (mc_dialogs);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L197'>mc_dialogs</a>        197 lib/widget/dialog-switch.c         next = mc_dialogs;</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L214'>mc_dialogs</a>        214 lib/widget/dialog-switch.c         prev = g_list_last (mc_dialogs);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L224'>mc_dialogs</a>        224 lib/widget/dialog-switch.c     const size_t dlg_num = g_list_length (mc_dialogs);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L239'>mc_dialogs</a>        239 lib/widget/dialog-switch.c     for (h = mc_dialogs; h != NULL; h = g_list_next (h))</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L257'>mc_dialogs</a>        257 lib/widget/dialog-switch.c     listbox_select_entry (listbox-&gt;list, dlg_num - 1 - g_list_position (mc_dialogs, mc_current));</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L262'>mc_dialogs</a>        262 lib/widget/dialog-switch.c         h = g_list_nth (mc_dialogs, dlg_num - 1 - rv);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L289'>mc_dialogs</a>        289 lib/widget/dialog-switch.c                 mc_current = g_list_find (mc_dialogs, midnight_dlg);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L307'>mc_dialogs</a>        307 lib/widget/dialog-switch.c     for (dlg = mc_dialogs; dlg != NULL; dlg = g_list_next (dlg))</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L317'>mc_dialogs</a>        317 lib/widget/dialog-switch.c     while (mc_dialogs != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L319'>mc_dialogs</a>        319 lib/widget/dialog-switch.c         WDialog *dlg = DIALOG (mc_dialogs-&gt;data);</span>
+</pre>
+</body>
+</html>

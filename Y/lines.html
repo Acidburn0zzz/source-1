@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>lines</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--strutil.h.html#L544'>lines</a>             544 lib/strutil.h  void str_msg_term_size (const char *text, int *lines, int *columns);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L916'>lines</a>             916 lib/strutil/strutil.c str_msg_term_size (const char *text, int *lines, int *columns)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L922'>lines</a>             922 lib/strutil/strutil.c     *lines = 1;</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L948'>lines</a>             948 lib/strutil/strutil.c         (*lines)++;</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L225'>lines</a>             225 lib/widget/dialog-switch.c     int lines, cols;</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L234'>lines</a>             234 lib/widget/dialog-switch.c     lines = MIN ((size_t) (LINES * 2 / 3), dlg_num);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L237'>lines</a>             237 lib/widget/dialog-switch.c     listbox = create_listbox_window (lines, cols, _("Screens"), "[Screen selector]");</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L657'>lines</a>             657 lib/widget/dialog.c     tty_draw_box (wh-&gt;y + space, wh-&gt;x + space, wh-&gt;lines - 2 * space, wh-&gt;cols - 2 * space, FALSE);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L671'>lines</a>             671 lib/widget/dialog.c dlg_set_position (WDialog * h, int y, int x, int lines, int cols)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L683'>lines</a>             683 lib/widget/dialog.c     ol = wh-&gt;lines;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L687'>lines</a>             687 lib/widget/dialog.c     wh-&gt;lines = lines;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L701'>lines</a>             701 lib/widget/dialog.c     scale_y = wh-&gt;lines - ol;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L722'>lines</a>             722 lib/widget/dialog.c             int clines = c-&gt;lines;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L737'>lines</a>             737 lib/widget/dialog.c                 cy = wh-&gt;y + (wh-&gt;lines - c-&gt;lines) / 2;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L757'>lines</a>             757 lib/widget/dialog.c dlg_set_size (WDialog * h, int lines, int cols)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L766'>lines</a>             766 lib/widget/dialog.c         lines = LINES;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L777'>lines</a>             777 lib/widget/dialog.c             y = (LINES - lines) / 2;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L790'>lines</a>             790 lib/widget/dialog.c     dlg_set_position (h, y, x, lines, cols);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L826'>lines</a>             826 lib/widget/dialog.c         dlg_set_size (h, w-&gt;lines, w-&gt;cols);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L839'>lines</a>             839 lib/widget/dialog.c dlg_create (gboolean modal, int y1, int x1, int lines, int cols, widget_pos_flags_t pos_flags,</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L850'>lines</a>             850 lib/widget/dialog.c         lines = LINES;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L856'>lines</a>             856 lib/widget/dialog.c     widget_init (w, y1, x1, lines, cols, (callback != NULL) ? callback : dlg_default_callback,</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L870'>lines</a>             870 lib/widget/dialog.c     dlg_set_size (new_d, lines, cols);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L923'>lines</a>             923 lib/widget/dialog.c         tty_fill_region (wh-&gt;y, wh-&gt;x, wh-&gt;lines, wh-&gt;cols, ' ');</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L948'>lines</a>             948 lib/widget/dialog.c         widget-&gt;y = (wh-&gt;lines - widget-&gt;lines) / 2;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L107'>lines</a>             107 lib/widget/dialog.h WDialog *dlg_create (gboolean modal, int y1, int x1, int lines, int cols,</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L122'>lines</a>             122 lib/widget/dialog.h void dlg_set_size (WDialog * h, int lines, int cols);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L124'>lines</a>             124 lib/widget/dialog.h void dlg_set_position (WDialog * h, int y, int x, int lines, int cols);</span>
+<span class='curline'><a href='../S/lib--widget--groupbox.c.html#L76'>lines</a>              76 lib/widget/groupbox.c             tty_draw_box (w-&gt;y, w-&gt;x, w-&gt;lines, w-&gt;cols, TRUE);</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L131'>lines</a>             131 lib/widget/hline.c     int lines = 1;</span>
+<span class='curline'><a href='../S/lib--widget--hline.c.html#L135'>lines</a>             135 lib/widget/hline.c     widget_init (w, y, x, lines, width &lt; 0 ? 1 : width, hline_callback, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L138'>lines</a>             138 lib/widget/label.c     int lines = 1;</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L141'>lines</a>             141 lib/widget/label.c         str_msg_term_size (text, &amp;lines, &amp;cols);</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L145'>lines</a>             145 lib/widget/label.c     widget_init (w, y, x, lines, cols, label_callback, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L178'>lines</a>             178 lib/widget/label.c             if (newlines &gt; w-&gt;lines)</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L179'>lines</a>             179 lib/widget/label.c                 w-&gt;lines = newlines;</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L59'>lines</a>              59 lib/widget/listbox-window.c create_listbox_window_centered (int center_y, int center_x, int lines, int cols,</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L69'>lines</a>              69 lib/widget/listbox-window.c     lines = MIN (lines, LINES - 6);</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L91'>lines</a>              91 lib/widget/listbox-window.c         ypos -= lines / 2;</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L94'>lines</a>              94 lib/widget/listbox-window.c         if (ypos + lines &gt;= LINES)</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L95'>lines</a>              95 lib/widget/listbox-window.c             ypos = LINES - lines - space;</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L108'>lines</a>             108 lib/widget/listbox-window.c         dlg_create (TRUE, ypos, xpos, lines + space, cols + space, pos_flags, FALSE, listbox_colors,</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L111'>lines</a>             111 lib/widget/listbox-window.c     listbox-&gt;list = listbox_new (2, 2, lines, cols, FALSE, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L120'>lines</a>             120 lib/widget/listbox-window.c create_listbox_window (int lines, int cols, const char *title, const char *help)</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L122'>lines</a>             122 lib/widget/listbox-window.c     return create_listbox_window_centered (-1, -1, lines, cols, title, help);</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.h.html#L28'>lines</a>              28 lib/widget/listbox-window.h Listbox *create_listbox_window_centered (int center_y, int center_x, int lines, int cols,</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.h.html#L30'>lines</a>              30 lib/widget/listbox-window.h Listbox *create_listbox_window (int lines, int cols, const char *title, const char *help);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L93'>lines</a>              93 lib/widget/listbox.c     int max_line = w-&gt;lines - 1;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L109'>lines</a>             109 lib/widget/listbox.c     if (l-&gt;top + w-&gt;lines == length || w-&gt;lines &gt;= length)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L116'>lines</a>             116 lib/widget/listbox.c         line = 1 + ((l-&gt;pos * (w-&gt;lines - 2)) / length);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L162'>lines</a>             162 lib/widget/listbox.c     for (i = 0; i &lt; w-&gt;lines; i++)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L191'>lines</a>             191 lib/widget/listbox.c     if (l-&gt;scrollbar &amp;&amp; length &gt; w-&gt;lines)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L293'>lines</a>             293 lib/widget/listbox.c         listbox_back_n (l, w-&gt;lines - 1);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L296'>lines</a>             296 lib/widget/listbox.c         listbox_fwd_n (l, w-&gt;lines - 1);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L307'>lines</a>             307 lib/widget/listbox.c             is_more = (l-&gt;top + w-&gt;lines &gt;= length);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L607'>lines</a>             607 lib/widget/listbox.c     int lines = WIDGET (l)-&gt;lines;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L614'>lines</a>             614 lib/widget/listbox.c     l-&gt;top = length &gt; lines ? length - lines : 0;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L642'>lines</a>             642 lib/widget/listbox.c                 int lines = WIDGET (l)-&gt;lines;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L644'>lines</a>             644 lib/widget/listbox.c                 if (l-&gt;pos - l-&gt;top &gt;= lines)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L645'>lines</a>             645 lib/widget/listbox.c                     l-&gt;top = l-&gt;pos - lines + 1;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L309'>lines</a>             309 lib/widget/menu.c     w-&gt;lines = 1;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L588'>lines</a>             588 lib/widget/menu.c         w-&gt;lines = LINES;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L101'>lines</a>             101 lib/widget/quick.c         *y += label.widget-&gt;lines - 1;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L141'>lines</a>             141 lib/widget/quick.c         *y += label.widget-&gt;lines - 1;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L261'>lines</a>             261 lib/widget/quick.c             y += item.widget-&gt;lines - 1;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L287'>lines</a>             287 lib/widget/quick.c                 y += item.widget-&gt;lines - 1;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L313'>lines</a>             313 lib/widget/quick.c                 w-&gt;lines = y + 1 - w-&gt;y;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L140'>lines</a>             140 lib/widget/widget-common.c widget_init (Widget * w, int y, int x, int lines, int cols,</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L146'>lines</a>             146 lib/widget/widget-common.c     w-&gt;lines = lines;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L263'>lines</a>             263 lib/widget/widget-common.c widget_set_size (Widget * widget, int y, int x, int lines, int cols)</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L268'>lines</a>             268 lib/widget/widget-common.c     widget-&gt;lines = lines;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L306'>lines</a>             306 lib/widget/widget-common.c         tty_fill_region (w-&gt;y, w-&gt;x, w-&gt;lines, w-&gt;cols, ' ');</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L390'>lines</a>             390 lib/widget/widget-common.c              || (a-&gt;x &gt;= b-&gt;x + b-&gt;cols) || (b-&gt;y &gt;= a-&gt;y + a-&gt;lines) || (a-&gt;y &gt;= b-&gt;y + b-&gt;lines));</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L421'>lines</a>             421 lib/widget/widget-common.c         &amp;&amp; (event-&gt;y &lt;= w-&gt;y + w-&gt;lines);</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.h.html#L127'>lines</a>             127 lib/widget/widget-common.h     int cols, lines;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.h.html#L173'>lines</a>             173 lib/widget/widget-common.h void widget_init (Widget * w, int y, int x, int lines, int cols,</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.h.html#L180'>lines</a>             180 lib/widget/widget-common.h void widget_set_size (Widget * widget, int y, int x, int lines, int cols);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L97'>lines</a>              97 lib/widget/wtools.c                 ypos = LINES / 3 - (w-&gt;lines - 3) / 2;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L104'>lines</a>             104 lib/widget/wtools.c             dlg_set_position (h, ypos, xpos, w-&gt;lines, w-&gt;cols);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L280'>lines</a>             280 lib/widget/wtools.c     int cols, lines;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L302'>lines</a>             302 lib/widget/wtools.c     str_msg_term_size (text, &amp;lines, &amp;cols);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L304'>lines</a>             304 lib/widget/wtools.c     lines += 4 + (count &gt; 0 ? 2 : 0);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L308'>lines</a>             308 lib/widget/wtools.c         dlg_create (TRUE, 0, 0, lines, cols, pos_flags, FALSE, query_colors, query_default_callback,</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L317'>lines</a>             317 lib/widget/wtools.c         add_widget (query_dlg, hline_new (lines - 4, -1, -1));</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L331'>lines</a>             331 lib/widget/wtools.c             button = button_new (lines - 3, cols, B_USER + i, NORMAL_BUTTON, cur_name, NULL);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L139'>lines</a>             139 src/editor/edit-impl.h gboolean edit_add_window (WDialog * h, int y, int x, int lines, int cols,</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L184'>lines</a>             184 src/editor/edit-impl.h WEdit *edit_init (WEdit * edit, int y, int x, int lines, int cols,</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L163'>lines</a>             163 src/editor/edit.c         widget_set_size (wd, wd-&gt;y, wd-&gt;x, wd-&gt;lines, wd_width);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L164'>lines</a>             164 src/editor/edit.c         widget_set_size (lw, lw-&gt;y, wd-&gt;x + (wd-&gt;cols - lw-&gt;cols) / 2, lw-&gt;lines, lw-&gt;cols);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L487'>lines</a>             487 src/editor/edit.c     edit_move_display (edit, line - (WIDGET (edit)-&gt;lines / 2));</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L686'>lines</a>             686 src/editor/edit.c         edit-&gt;line_numbers[2] = edit-&gt;buffer.lines;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L690'>lines</a>             690 src/editor/edit.c     if (line &gt;= edit-&gt;buffer.lines)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L770'>lines</a>             770 src/editor/edit.c     if (edit-&gt;buffer.curs_line &gt;= edit-&gt;buffer.lines - 1)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L771'>lines</a>             771 src/editor/edit.c         i = edit-&gt;buffer.lines;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L775'>lines</a>             775 src/editor/edit.c             if (edit_line_is_blank (edit, i) || i &gt;= edit-&gt;buffer.lines)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L781'>lines</a>             781 src/editor/edit.c             if (!edit_line_is_blank (edit, i) || i &gt; edit-&gt;buffer.lines)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L790'>lines</a>             790 src/editor/edit.c             if (edit_line_is_blank (edit, i) || i &gt;= edit-&gt;buffer.lines)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L811'>lines</a>             811 src/editor/edit.c     edit_move_down (edit, WIDGET (edit)-&gt;lines - edit-&gt;curs_row - 1, FALSE);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L837'>lines</a>             837 src/editor/edit.c     if (edit-&gt;buffer.curs_line &lt; edit-&gt;buffer.lines)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L839'>lines</a>             839 src/editor/edit.c         edit_move_down (edit, edit-&gt;buffer.lines - edit-&gt;curs_row, FALSE);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L841'>lines</a>             841 src/editor/edit.c         edit-&gt;start_line = edit-&gt;buffer.lines;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L842'>lines</a>             842 src/editor/edit.c         edit_scroll_upward (edit, WIDGET (edit)-&gt;lines - 1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1050'>lines</a>            1050 src/editor/edit.c edit_move_updown (WEdit * edit, long lines, gboolean do_scroll, gboolean direction)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1053'>lines</a>            1053 src/editor/edit.c     long l = direction ? edit-&gt;buffer.curs_line : edit-&gt;buffer.lines - edit-&gt;buffer.curs_line;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1055'>lines</a>            1055 src/editor/edit.c     if (lines &gt; l)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1056'>lines</a>            1056 src/editor/edit.c         lines = l;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1058'>lines</a>            1058 src/editor/edit.c     if (lines == 0)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1061'>lines</a>            1061 src/editor/edit.c     if (lines &gt; 1)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1066'>lines</a>            1066 src/editor/edit.c             edit_scroll_upward (edit, lines);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1068'>lines</a>            1068 src/editor/edit.c             edit_scroll_downward (edit, lines);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1071'>lines</a>            1071 src/editor/edit.c     p = direction ? edit_buffer_get_backward_offset (&amp;edit-&gt;buffer, p, lines) :</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1072'>lines</a>            1072 src/editor/edit.c         edit_buffer_get_forward_offset (&amp;edit-&gt;buffer, p, lines, 0);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1546'>lines</a>            1546 src/editor/edit.c                 if (n++ &gt;= WIDGET (edit)-&gt;lines - edit-&gt;curs_row)       /* out of screen */</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2068'>lines</a>            2068 src/editor/edit.c edit_init (WEdit * edit, int y, int x, int lines, int cols, const vfs_path_t * filename_vpath,</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2099'>lines</a>            2099 src/editor/edit.c         widget_init (WIDGET (edit), y, x, lines, cols, NULL, NULL);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2235'>lines</a>            2235 src/editor/edit.c     if (edit_init (e, w-&gt;y, w-&gt;x, w-&gt;lines, w-&gt;cols, filename_vpath, line) == NULL)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2517'>lines</a>            2517 src/editor/edit.c         edit-&gt;buffer.lines++;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2551'>lines</a>            2551 src/editor/edit.c         edit-&gt;buffer.lines++;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2628'>lines</a>            2628 src/editor/edit.c         edit-&gt;buffer.lines--;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2688'>lines</a>            2688 src/editor/edit.c         edit-&gt;buffer.lines--;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2883'>lines</a>            2883 src/editor/edit.c     lines_below = edit-&gt;buffer.lines - edit-&gt;start_line - (WIDGET (edit)-&gt;lines - 1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3528'>lines</a>            3528 src/editor/edit.c         edit_move_up (edit, w-&gt;lines - 1, TRUE);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3534'>lines</a>            3534 src/editor/edit.c         edit_move_down (edit, w-&gt;lines - 1, TRUE);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3711'>lines</a>            3711 src/editor/edit.c                 if (p-&gt;line &gt;= edit-&gt;start_line + w-&gt;lines || p-&gt;line &lt; edit-&gt;start_line)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3712'>lines</a>            3712 src/editor/edit.c                     edit_move_display (edit, p-&gt;line - w-&gt;lines / 2);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3728'>lines</a>            3728 src/editor/edit.c                 if (p-&gt;line &gt;= edit-&gt;start_line + w-&gt;lines || p-&gt;line &lt; edit-&gt;start_line)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3729'>lines</a>            3729 src/editor/edit.c                     edit_move_display (edit, p-&gt;line - w-&gt;lines / 2);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L153'>lines</a>             153 src/editor/editbuffer.c     buf-&gt;lines = 0;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L331'>lines</a>             331 src/editor/editbuffer.c     long lines = 0;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L338'>lines</a>             338 src/editor/editbuffer.c             lines++;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L340'>lines</a>             340 src/editor/editbuffer.c     return lines;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L594'>lines</a>             594 src/editor/editbuffer.c edit_buffer_get_forward_offset (const edit_buffer_t * buf, off_t current, long lines, off_t upto)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L599'>lines</a>             599 src/editor/editbuffer.c     lines = MAX (lines, 0);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L601'>lines</a>             601 src/editor/editbuffer.c     while (lines-- != 0)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L626'>lines</a>             626 src/editor/editbuffer.c edit_buffer_get_backward_offset (const edit_buffer_t * buf, off_t current, long lines)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L628'>lines</a>             628 src/editor/editbuffer.c     lines = MAX (lines, 0);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L631'>lines</a>             631 src/editor/editbuffer.c     while (lines-- != 0 &amp;&amp; current != 0)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L661'>lines</a>             661 src/editor/editbuffer.c     buf-&gt;lines = 0;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L677'>lines</a>             677 src/editor/editbuffer.c                 buf-&gt;lines++;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L698'>lines</a>             698 src/editor/editbuffer.c                 buf-&gt;lines++;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L21'>lines</a>              21 src/editor/editbuffer.h     long lines;                 /* total lines in the file */</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L57'>lines</a>              57 src/editor/editbuffer.h off_t edit_buffer_get_forward_offset (const edit_buffer_t * buf, off_t current, long lines,</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L59'>lines</a>              59 src/editor/editbuffer.h off_t edit_buffer_get_backward_offset (const edit_buffer_t * buf, off_t current, long lines);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L149'>lines</a>             149 src/editor/editcmd.c         widget_set_size (wd, wd-&gt;y, wd-&gt;x, wd-&gt;lines, wd_width);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L150'>lines</a>             150 src/editor/editcmd.c         widget_set_size (lw, lw-&gt;y, wd-&gt;x + (wd-&gt;cols - lw-&gt;cols) / 2, lw-&gt;lines, lw-&gt;cols);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L532'>lines</a>             532 src/editor/editcmd.c     return edit_add_window (h, w-&gt;y + 1, w-&gt;x, w-&gt;lines - 2, w-&gt;cols, vpath, 0);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2651'>lines</a>            2651 src/editor/editcmd.c                 l = edit-&gt;curs_row - WIDGET (edit)-&gt;lines / 3;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3068'>lines</a>            3068 src/editor/editcmd.c         l = edit-&gt;buffer.lines + l + 2;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3069'>lines</a>            3069 src/editor/editcmd.c     edit_move_display (edit, l - WIDGET (edit)-&gt;lines / 2 - 1);</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L262'>lines</a>             262 src/editor/editcmd_dialogs.c         ypos = w-&gt;y + w-&gt;lines / 2;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L162'>lines</a>             162 src/editor/editdraw.c                     edit-&gt;buffer.lines + 1, (long) edit-&gt;buffer.curs1, (long) edit-&gt;buffer.size,</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L179'>lines</a>             179 src/editor/editdraw.c                     edit-&gt;buffer.lines + 1, (long) edit-&gt;buffer.curs1, (long) edit-&gt;buffer.size,</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L300'>lines</a>             300 src/editor/editdraw.c         edit_move (2, w-&gt;lines - 1);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L303'>lines</a>             303 src/editor/editdraw.c                     edit-&gt;buffer.curs_line + 1, edit-&gt;buffer.lines + 1, (long) edit-&gt;buffer.curs1,</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L314'>lines</a>             314 src/editor/editdraw.c         edit_move (32, w-&gt;lines - 1);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L356'>lines</a>             356 src/editor/editdraw.c     tty_draw_box (w-&gt;y, w-&gt;x, w-&gt;lines, w-&gt;cols, !active);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L361'>lines</a>             361 src/editor/editdraw.c         widget_move (w, w-&gt;lines - 1, w-&gt;cols - 1);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L525'>lines</a>             525 src/editor/editdraw.c     if (row &gt; w-&gt;lines - 1 - EDIT_TEXT_VERTICAL_OFFSET - 2 * (edit-&gt;fullscreen ? 0 : 1))</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L555'>lines</a>             555 src/editor/editdraw.c         if (cur_line &lt;= (unsigned int) edit-&gt;buffer.lines)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L574'>lines</a>             574 src/editor/editdraw.c         if (row &lt;= edit-&gt;buffer.lines - edit-&gt;start_line)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L869'>lines</a>             869 src/editor/editdraw.c     last_line = wh-&gt;y + wh-&gt;lines - 1;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L881'>lines</a>             881 src/editor/editdraw.c     y2 = w-&gt;y + w-&gt;lines - 1;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L895'>lines</a>             895 src/editor/editdraw.c             end_row = w-&gt;lines - 1;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L897'>lines</a>             897 src/editor/editdraw.c             end_row = wh-&gt;lines - 1 - y1 - 1;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L899'>lines</a>             899 src/editor/editdraw.c             end_row = start_row + wh-&gt;lines - 1 - 1;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L987'>lines</a>             987 src/editor/editdraw.c             if ((force &amp; REDRAW_LINE_BELOW) != 0 &amp;&amp; row &lt; w-&gt;lines - 1)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1075'>lines</a>            1075 src/editor/editdraw.c     if (w-&gt;lines &lt;= 0 || w-&gt;cols &lt;= 0)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1078'>lines</a>            1078 src/editor/editdraw.c     w-&gt;lines -= EDIT_TEXT_VERTICAL_OFFSET;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1086'>lines</a>            1086 src/editor/editdraw.c         w-&gt;lines -= 2;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1095'>lines</a>            1095 src/editor/editdraw.c         b_extreme = MAX (w-&gt;lines / 4, b_extreme);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1096'>lines</a>            1096 src/editor/editdraw.c         t_extreme = MAX (w-&gt;lines / 4, t_extreme);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1098'>lines</a>            1098 src/editor/editdraw.c     if (b_extreme + t_extreme + 1 &gt; w-&gt;lines)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1105'>lines</a>            1105 src/editor/editdraw.c         b_extreme = (b_extreme * (w-&gt;lines - 1)) / n;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1106'>lines</a>            1106 src/editor/editdraw.c         t_extreme = (t_extreme * (w-&gt;lines - 1)) / n;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1127'>lines</a>            1127 src/editor/editdraw.c     outby = p - w-&gt;lines + 1 + b_extreme;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1135'>lines</a>            1135 src/editor/editdraw.c     w-&gt;lines += EDIT_TEXT_VERTICAL_OFFSET;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1142'>lines</a>            1142 src/editor/editdraw.c         w-&gt;lines += 2;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L200'>lines</a>             200 src/editor/editwidget.c         w-&gt;lines = wh-&gt;lines - 2;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L244'>lines</a>             244 src/editor/editwidget.c         if (w-&gt;y &lt; wh-&gt;y + wh-&gt;lines - 2)       /* buttonbar */</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L280'>lines</a>             280 src/editor/editwidget.c         if (w-&gt;lines &gt; WINDOW_MIN_LINES)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L281'>lines</a>             281 src/editor/editwidget.c             w-&gt;lines--;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L284'>lines</a>             284 src/editor/editwidget.c         if (w-&gt;y + w-&gt;lines &lt; wh-&gt;y + wh-&gt;lines - 1)    /* buttonbar */</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L285'>lines</a>             285 src/editor/editwidget.c             w-&gt;lines++;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L324'>lines</a>             324 src/editor/editwidget.c     int lines, cols;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L330'>lines</a>             330 src/editor/editwidget.c     lines = MIN ((size_t) (LINES * 2 / 3), dlg_num);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L333'>lines</a>             333 src/editor/editwidget.c     listbox = create_listbox_window (lines, cols, _("Open files"), "[Open files]");</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L418'>lines</a>             418 src/editor/editwidget.c         edit_add_window (h, wh-&gt;y + 1, wh-&gt;x, wh-&gt;lines - 2, wh-&gt;cols, NULL, 0);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L785'>lines</a>             785 src/editor/editwidget.c         w-&gt;lines = LINES;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L787'>lines</a>             787 src/editor/editwidget.c         widget_set_size (WIDGET (buttonbar), w-&gt;lines - 1, w-&gt;x, 1, w-&gt;cols);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1039'>lines</a>            1039 src/editor/editwidget.c     global_y = CLAMP (global_y, h-&gt;y + 1, h-&gt;y + h-&gt;lines - 2); /* Status line, buttonbar */</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1049'>lines</a>            1049 src/editor/editwidget.c         w-&gt;lines = MAX (WINDOW_MIN_LINES, global_y - w-&gt;y + 1);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1111'>lines</a>            1111 src/editor/editwidget.c             if (event-&gt;y == w-&gt;lines - 1 &amp;&amp; event-&gt;x == w-&gt;cols - 1)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1245'>lines</a>            1245 src/editor/editwidget.c         f_ok = edit_add_window (edit_dlg, w-&gt;y + 1, w-&gt;x, w-&gt;lines - 2, w-&gt;cols, f-&gt;file_vpath,</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1330'>lines</a>            1330 src/editor/editwidget.c     edit-&gt;lines_prev = w-&gt;lines;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1350'>lines</a>            1350 src/editor/editwidget.c edit_add_window (WDialog * h, int y, int x, int lines, int cols, const vfs_path_t * f, long fline)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1355'>lines</a>            1355 src/editor/editwidget.c     edit = edit_init (NULL, y, x, lines, cols, f, fline);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1507'>lines</a>            1507 src/editor/editwidget.c         widget_set_size (w, h-&gt;y + 1, h-&gt;x, h-&gt;lines - 2, h-&gt;cols);</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L125'>lines</a>             125 src/editor/format.c begin_paragraph (WEdit * edit, gboolean force, long *lines)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L137'>lines</a>             137 src/editor/format.c     *lines = edit-&gt;buffer.curs_line - i;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L140'>lines</a>             140 src/editor/format.c                                             edit_buffer_get_current_bol (&amp;edit-&gt;buffer), *lines);</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L154'>lines</a>             154 src/editor/format.c     for (i = edit-&gt;buffer.curs_line + 1; i &lt;= edit-&gt;buffer.lines; i++)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L479'>lines</a>             479 src/editor/format.c     long lines;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L491'>lines</a>             491 src/editor/format.c     p = begin_paragraph (edit, force, &amp;lines);</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L531'>lines</a>             531 src/editor/format.c     edit_move_up (edit, lines, TRUE);</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L544'>lines</a>             544 src/editor/format.c     if (edit-&gt;buffer.curs_line &lt; edit-&gt;buffer.lines)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L552'>lines</a>             552 src/editor/format.c         while (edit-&gt;buffer.curs_line &lt; edit-&gt;buffer.lines</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1027'>lines</a>            1027 src/filemanager/boxes.c     mytree = tree_new (2, 2, wd-&gt;lines - 6, wd-&gt;cols - 5, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1029'>lines</a>            1029 src/filemanager/boxes.c     add_widget_autopos (dlg, hline_new (wd-&gt;lines - 4, 1, -1), WPOS_KEEP_BOTTOM, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1155'>lines</a>            1155 src/filemanager/boxes.c         w-&gt;y + w-&gt;lines - 6, w-&gt;x, w-&gt;cols,</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1225'>lines</a>            1225 src/filemanager/boxes.c     int lines = 15;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1243'>lines</a>            1243 src/filemanager/boxes.c     jobs_dlg = dlg_create (TRUE, 0, 0, lines, cols, WPOS_CENTER, FALSE, dialog_colors, NULL, NULL,</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1246'>lines</a>            1246 src/filemanager/boxes.c     bg_list = listbox_new (2, 2, lines - 6, cols - 6, FALSE, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1250'>lines</a>            1250 src/filemanager/boxes.c     add_widget (jobs_dlg, hline_new (lines - 4, -1, -1));</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1256'>lines</a>            1256 src/filemanager/boxes.c                     button_new (lines - 3, x, job_but[i].value, job_but[i].flags, job_but[i].name,</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L284'>lines</a>             284 src/filemanager/chmod.c     int lines, cols;</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L297'>lines</a>             297 src/filemanager/chmod.c     lines = single_set ? 20 : 23;</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L308'>lines</a>             308 src/filemanager/chmod.c         dlg_create (TRUE, 0, 0, lines, cols, WPOS_CENTER, FALSE, dialog_colors,</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L340'>lines</a>             340 src/filemanager/chmod.c         add_widget (ch_dlg, hline_new (lines - chmod_but[i].y - 1, -1, -1));</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L343'>lines</a>             343 src/filemanager/chmod.c             y = lines - chmod_but[i].y;</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L357'>lines</a>             357 src/filemanager/chmod.c     y = lines - chmod_but[i].y;</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L200'>lines</a>             200 src/filemanager/chown.c     int lines, cols;</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L213'>lines</a>             213 src/filemanager/chown.c     lines = GH + 4 + (single_set ? 2 : 4);</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L216'>lines</a>             216 src/filemanager/chown.c         dlg_create (TRUE, 0, 0, lines, cols, WPOS_CENTER, FALSE, dialog_colors, chown_callback,</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L253'>lines</a>             253 src/filemanager/chown.c         add_widget (ch_dlg, hline_new (lines - chown_but[0].y - 1, -1, -1));</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L255'>lines</a>             255 src/filemanager/chown.c         y = lines - chown_but[0].y;</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L268'>lines</a>             268 src/filemanager/chown.c     y = lines - chown_but[i].y;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L210'>lines</a>             210 src/filemanager/file.c                          dsm-&gt;abort_button-&gt;lines, dsm-&gt;abort_button-&gt;cols);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L219'>lines</a>             219 src/filemanager/file.c         widget_set_size (dsm-&gt;abort_button, y, x, dsm-&gt;abort_button-&gt;lines,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L222'>lines</a>             222 src/filemanager/file.c         widget_set_size (dsm-&gt;skip_button, y, x, dsm-&gt;skip_button-&gt;lines, dsm-&gt;skip_button-&gt;cols);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2538'>lines</a>            2538 src/filemanager/file.c         dlg_set_size (sm-&gt;dlg, wd-&gt;lines, WIDGET (dsm-&gt;count_size)-&gt;cols + 6);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L562'>lines</a>             562 src/filemanager/find.c     const int lines = 18;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L564'>lines</a>             564 src/filemanager/find.c     const int lines = 17;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L664'>lines</a>             664 src/filemanager/find.c         dlg_create (TRUE, 0, 0, lines, cols, WPOS_CENTER, FALSE, dialog_colors, find_parm_callback,</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1247'>lines</a>            1247 src/filemanager/find.c     widget_move (h, w-&gt;lines - 7, w-&gt;cols - 4);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1594'>lines</a>            1594 src/filemanager/find.c     int lines, cols;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1614'>lines</a>            1614 src/filemanager/find.c     lines = LINES - 4;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1618'>lines</a>            1618 src/filemanager/find.c         dlg_create (TRUE, 0, 0, lines, cols, WPOS_CENTER, FALSE, dialog_colors, find_callback, NULL,</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1624'>lines</a>            1624 src/filemanager/find.c     find_list = listbox_new (y, 2, lines - 10, cols - 4, FALSE, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1626'>lines</a>            1626 src/filemanager/find.c     y += WIDGET (find_list)-&gt;lines;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L733'>lines</a>             733 src/filemanager/hotlist.c     int lines, cols;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L741'>lines</a>             741 src/filemanager/hotlist.c     lines = LINES - 2;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L762'>lines</a>             762 src/filemanager/hotlist.c         dlg_create (TRUE, 0, 0, lines, cols, WPOS_CENTER, FALSE, dialog_colors, hotlist_callback,</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L766'>lines</a>             766 src/filemanager/hotlist.c     hotlist_group = groupbox_new (y, UX, lines - 10 + dh, cols - 2 * UX, _("Top level group"));</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L771'>lines</a>             771 src/filemanager/hotlist.c         listbox_new (y + 1, UX + 1, hotlist_widget-&gt;lines - 2, hotlist_widget-&gt;cols - 2, FALSE,</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L789'>lines</a>             789 src/filemanager/hotlist.c     y += hotlist_widget-&gt;lines;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L796'>lines</a>             796 src/filemanager/hotlist.c     y += WIDGET (path_box)-&gt;lines;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L818'>lines</a>             818 src/filemanager/hotlist.c     int lines, cols;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L824'>lines</a>             824 src/filemanager/hotlist.c     lines = LINES - 6;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L830'>lines</a>             830 src/filemanager/hotlist.c         dlg_create (TRUE, 0, 0, lines, cols, WPOS_CENTER, FALSE, dialog_colors, hotlist_callback,</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L836'>lines</a>             836 src/filemanager/hotlist.c     movelist_group = groupbox_new (y, UX, lines - 7, cols - 2 * UX, _("Directory label"));</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L841'>lines</a>             841 src/filemanager/hotlist.c         listbox_new (y + 1, UX + 1, movelist_widget-&gt;lines - 2, movelist_widget-&gt;cols - 2, FALSE,</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L847'>lines</a>             847 src/filemanager/hotlist.c     y += movelist_widget-&gt;lines;</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L89'>lines</a>              89 src/filemanager/info.c     tty_draw_box (w-&gt;y, w-&gt;x, w-&gt;lines, w-&gt;cols, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L151'>lines</a>             151 src/filemanager/info.c     switch (w-&gt;lines - 2)</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L334'>lines</a>             334 src/filemanager/info.c info_new (int y, int x, int lines, int cols)</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L341'>lines</a>             341 src/filemanager/info.c     widget_init (w, y, x, lines, cols, info_callback, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--info.h.html#L21'>lines</a>              21 src/filemanager/info.h WInfo *info_new (int y, int x, int lines, int cols);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L932'>lines</a>             932 src/filemanager/layout.c     int x = 0, y = 0, cols = 0, lines = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L962'>lines</a>             962 src/filemanager/layout.c         lines = w-&gt;lines;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L992'>lines</a>             992 src/filemanager/layout.c         widget_set_size (new_widget, y, x, lines, cols);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L996'>lines</a>             996 src/filemanager/layout.c         new_widget = WIDGET (info_new (y, x, lines, cols));</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1000'>lines</a>            1000 src/filemanager/layout.c         new_widget = WIDGET (tree_new (y, x, lines, cols, TRUE));</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1004'>lines</a>            1004 src/filemanager/layout.c         new_widget = WIDGET (mcview_new (y, x, lines, cols, TRUE));</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1140'>lines</a>            1140 src/filemanager/layout.c         int x, y, cols, lines;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1167'>lines</a>            1167 src/filemanager/layout.c         lines = panels[0].widget-&gt;lines;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1172'>lines</a>            1172 src/filemanager/layout.c         panels[0].widget-&gt;lines = panels[1].widget-&gt;lines;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1177'>lines</a>            1177 src/filemanager/layout.c         panels[1].widget-&gt;lines = lines;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1416'>lines</a>            1416 src/filemanager/midnight.c         w-&gt;lines = LINES;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L408'>lines</a>             408 src/filemanager/panel.c     return (CONST_WIDGET (p)-&gt;lines - 3 - (panels_options.show_mini_info ? 2 : 0));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1170'>lines</a>            1170 src/filemanager/panel.c         widget_move (w, w-&gt;lines - 1, w-&gt;cols - 2 - (int) strlen (tmp));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1266'>lines</a>            1266 src/filemanager/panel.c     tty_draw_box (w-&gt;y, w-&gt;x, w-&gt;lines, w-&gt;cols, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1329'>lines</a>            1329 src/filemanager/panel.c                 widget_move (w, w-&gt;lines - 1, 4);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1337'>lines</a>            1337 src/filemanager/panel.c             display_total_marked_size (panel, w-&gt;lines - 1, 2, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2087'>lines</a>            2087 src/filemanager/panel.c     int lines, top;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2089'>lines</a>            2089 src/filemanager/panel.c     lines = panel_lines (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2094'>lines</a>            2094 src/filemanager/panel.c         top += lines * ((panel-&gt;selected - top) / lines);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2096'>lines</a>            2096 src/filemanager/panel.c     return (panel-&gt;selected - top - lines / 2);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2165'>lines</a>            2165 src/filemanager/panel.c move_selection (WPanel * panel, int lines)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2170'>lines</a>            2170 src/filemanager/panel.c     new_pos = panel-&gt;selected + lines;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2182'>lines</a>            2182 src/filemanager/panel.c         panel-&gt;top_file += lines;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2188'>lines</a>            2188 src/filemanager/panel.c         panel-&gt;top_file += lines;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2481'>lines</a>            2481 src/filemanager/panel.c     int lines;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2486'>lines</a>            2486 src/filemanager/panel.c     lines = panel_lines (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2487'>lines</a>            2487 src/filemanager/panel.c     lines = MIN (lines, panel-&gt;dir.len - panel-&gt;selected - 1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2488'>lines</a>            2488 src/filemanager/panel.c     for (; lines != 0; lines--)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2501'>lines</a>            2501 src/filemanager/panel.c     int lines;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2506'>lines</a>            2506 src/filemanager/panel.c     lines = panel_lines (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2507'>lines</a>            2507 src/filemanager/panel.c     lines = MIN (lines, panel-&gt;selected + 1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2508'>lines</a>            2508 src/filemanager/panel.c     for (; lines != 0; lines--)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3887'>lines</a>            3887 src/filemanager/panel.c                     int width, lines;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3890'>lines</a>            3890 src/filemanager/panel.c                     lines = panel_lines (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3891'>lines</a>            3891 src/filemanager/panel.c                     my_index += lines * (event-&gt;x / width);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3916'>lines</a>            3916 src/filemanager/panel.c             int y, lines;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3919'>lines</a>            3919 src/filemanager/panel.c             lines = panel_lines (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3921'>lines</a>            3921 src/filemanager/panel.c             if (y &lt;= lines)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4066'>lines</a>            4066 src/filemanager/panel.c         panel-&gt;top_file = panel-&gt;selected - (WIDGET (panel)-&gt;lines - 2) / 2;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L184'>lines</a>             184 src/filemanager/panelize.c     y += WIDGET (l_panelize)-&gt;lines + 1;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L85'>lines</a>              85 src/filemanager/tree.c #define tlines(t) (t-&gt;is_panel ? WIDGET (t)-&gt;lines - 2 - \</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L86'>lines</a>              86 src/filemanager/tree.c                     (panels_options.show_mini_info ? 2 : 0) : WIDGET (t)-&gt;lines)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1119'>lines</a>            1119 src/filemanager/tree.c         tty_draw_box (w-&gt;y, w-&gt;x, w-&gt;lines, w-&gt;cols, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1128'>lines</a>            1128 src/filemanager/tree.c             y = w-&gt;lines - 3;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1232'>lines</a>            1232 src/filemanager/tree.c             int lines;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1234'>lines</a>            1234 src/filemanager/tree.c             lines = tlines (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1238'>lines</a>            1238 src/filemanager/tree.c                 tree_move_backward (tree, lines - 1);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1241'>lines</a>            1241 src/filemanager/tree.c             else if (y &gt;= lines)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1243'>lines</a>            1243 src/filemanager/tree.c                 tree_move_forward (tree, lines - 1);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1274'>lines</a>            1274 src/filemanager/tree.c tree_new (int y, int x, int lines, int cols, gboolean is_panel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1282'>lines</a>            1282 src/filemanager/tree.c     widget_init (w, y, x, lines, cols, tree_callback, tree_mouse_callback);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1290'>lines</a>            1290 src/filemanager/tree.c     tree-&gt;topdiff = w-&gt;lines / 2;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.h.html#L25'>lines</a>              25 src/filemanager/tree.h WTree *tree_new (int y, int x, int lines, int cols, gboolean is_panel);</span>
+<span class='curline'><a href='../S/src--help.c.html#L205'>lines</a>             205 src/help.c     move_forward2 (const char *c, int lines)</span>
+<span class='curline'><a href='../S/src--help.c.html#L213'>lines</a>             213 src/help.c             if (line == lines)</span>
+<span class='curline'><a href='../S/src--help.c.html#L225'>lines</a>             225 src/help.c     move_backward2 (const char *c, int lines)</span>
+<span class='curline'><a href='../S/src--help.c.html#L244'>lines</a>             244 src/help.c             if (line == lines)</span>
+<span class='curline'><a href='../S/src--help.c.html#L941'>lines</a>             941 src/help.c             w-&gt;lines = help_lines;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L775'>lines</a>             775 src/viewer/ascii.c     int lines = 0;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L781'>lines</a>             781 src/viewer/ascii.c         lines += mcview_display_line (view, state, row, &amp;paragraph_ended, NULL);</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L783'>lines</a>             783 src/viewer/ascii.c             return lines;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L790'>lines</a>             790 src/viewer/ascii.c                 return lines;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L811'>lines</a>             811 src/viewer/ascii.c     int lines = view-&gt;dpy_paragraph_skip_lines;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L820'>lines</a>             820 src/viewer/ascii.c     while (lines-- != 0)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L927'>lines</a>             927 src/viewer/ascii.c mcview_ascii_move_down (WView * view, off_t lines)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L929'>lines</a>             929 src/viewer/ascii.c     while (lines-- != 0)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L976'>lines</a>             976 src/viewer/ascii.c mcview_ascii_move_up (WView * view, off_t lines)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L980'>lines</a>             980 src/viewer/ascii.c         while (lines-- != 0)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L989'>lines</a>             989 src/viewer/ascii.c         while (lines &gt; view-&gt;dpy_paragraph_skip_lines)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L999'>lines</a>             999 src/viewer/ascii.c             lines -= view-&gt;dpy_paragraph_skip_lines;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L1017'>lines</a>            1017 src/viewer/ascii.c         view-&gt;dpy_paragraph_skip_lines -= lines;</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L276'>lines</a>             276 src/viewer/display.c     view_area.height = mcview_dimen_doz (WIDGET (view)-&gt;lines, 2 * view-&gt;dpy_frame_size);</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L367'>lines</a>             367 src/viewer/display.c         tty_draw_box (w-&gt;y, w-&gt;x, w-&gt;lines, w-&gt;cols, FALSE);</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L190'>lines</a>             190 src/viewer/mcviewer.c mcview_new (int y, int x, int lines, int cols, gboolean is_panel)</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L195'>lines</a>             195 src/viewer/mcviewer.c     widget_init (WIDGET (view), y, x, lines, cols, mcview_callback, mcview_mouse_callback);</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.h.html#L40'>lines</a>              40 src/viewer/mcviewer.h extern WView *mcview_new (int y, int x, int lines, int cols, gboolean is_panel);</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L110'>lines</a>             110 src/viewer/move.c mcview_move_up (WView * view, off_t lines)</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L114'>lines</a>             114 src/viewer/move.c         off_t bytes = lines * view-&gt;bytes_per_line;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L132'>lines</a>             132 src/viewer/move.c         mcview_ascii_move_up (view, lines);</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L140'>lines</a>             140 src/viewer/move.c mcview_move_down (WView * view, off_t lines)</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L150'>lines</a>             150 src/viewer/move.c         for (i = 0; i &lt; lines &amp;&amp; view-&gt;hex_cursor &lt; limit; i++)</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L153'>lines</a>             153 src/viewer/move.c             if (lines != 1)</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L163'>lines</a>             163 src/viewer/move.c         mcview_ascii_move_down (view, lines);</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L93'>lines</a>              93 src/viewer/search.c         widget_set_size (wd, wd-&gt;y, wd-&gt;x, wd-&gt;lines, wd_width);</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L94'>lines</a>              94 src/viewer/search.c         widget_set_size (lw, lw-&gt;y, wd-&gt;x + (wd-&gt;cols - lw-&gt;cols) / 2, lw-&gt;lines, lw-&gt;cols);</span>
+</pre>
+</body>
+</html>

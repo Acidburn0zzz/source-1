@@ -1,0 +1,1038 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>buffer</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--mcconfig--get.c.html#L86'>buffer</a>             86 lib/mcconfig/get.c     GString *buffer;</span>
+<span class='curline'><a href='../S/lib--mcconfig--get.c.html#L111'>buffer</a>            111 lib/mcconfig/get.c     buffer = g_string_new ("");</span>
+<span class='curline'><a href='../S/lib--mcconfig--get.c.html#L112'>buffer</a>            112 lib/mcconfig/get.c     conv_res = str_convert (conv, ret, buffer);</span>
+<span class='curline'><a href='../S/lib--mcconfig--get.c.html#L117'>buffer</a>            117 lib/mcconfig/get.c         g_string_free (buffer, TRUE);</span>
+<span class='curline'><a href='../S/lib--mcconfig--get.c.html#L123'>buffer</a>            123 lib/mcconfig/get.c     return g_string_free (buffer, FALSE);</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L44'>buffer</a>             44 lib/mcconfig/set.c     GString *buffer;</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L54'>buffer</a>             54 lib/mcconfig/set.c     buffer = g_string_new ("");</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L56'>buffer</a>             56 lib/mcconfig/set.c     ok = (str_convert (conv, value, buffer) != ESTR_FAILURE);</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L61'>buffer</a>             61 lib/mcconfig/set.c         g_string_free (buffer, TRUE);</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L65'>buffer</a>             65 lib/mcconfig/set.c     return g_string_free (buffer, FALSE);</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L100'>buffer</a>            100 lib/mcconfig/set.c     gchar *buffer;</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L105'>buffer</a>            105 lib/mcconfig/set.c     buffer = mc_config_normalize_before_save (value);</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L107'>buffer</a>            107 lib/mcconfig/set.c     g_key_file_set_string (mc_config-&gt;handle, group, param, buffer);</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L109'>buffer</a>            109 lib/mcconfig/set.c     g_free (buffer);</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L224'>buffer</a>            224 lib/search/search.c             gchar *buffer;</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L236'>buffer</a>            236 lib/search/search.c             buffer =</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L241'>buffer</a>            241 lib/search/search.c                              mc_search__cond_struct_new (lc_mc_search, buffer,</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L243'>buffer</a>            243 lib/search/search.c             g_free (buffer);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L149'>buffer</a>            149 lib/serialize.c         char buffer[BUF_TINY];</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L166'>buffer</a>            166 lib/serialize.c         strncpy (buffer, data + 1, semi_offset);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L167'>buffer</a>            167 lib/serialize.c         buffer[semi_offset] = '\0';</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L168'>buffer</a>            168 lib/serialize.c         data_len = atol (buffer);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L199'>buffer</a>            199 lib/serialize.c     GString *buffer;</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L201'>buffer</a>            201 lib/serialize.c     buffer = g_string_new ("");</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L212'>buffer</a>            212 lib/serialize.c             g_string_free (buffer, TRUE);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L216'>buffer</a>            216 lib/serialize.c         g_string_append (buffer, serialized_str);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L228'>buffer</a>            228 lib/serialize.c                 g_string_free (buffer, TRUE);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L233'>buffer</a>            233 lib/serialize.c             g_string_append (buffer, serialized_str);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L242'>buffer</a>            242 lib/serialize.c                 g_string_free (buffer, TRUE);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L248'>buffer</a>            248 lib/serialize.c             g_string_append (buffer, serialized_str);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L254'>buffer</a>            254 lib/serialize.c     return g_string_free (buffer, FALSE);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L110'>buffer</a>            110 lib/strutil.h        /*I*/ estr_t (*vfs_convert_to) (GIConv coder, const char *string, int size, GString * buffer);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L111'>buffer</a>            111 lib/strutil.h        /*I*/ void (*insert_replace_char) (GString * buffer);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L221'>buffer</a>            221 lib/strutil.h  void str_printf (GString * buffer, const char *format, ...) G_GNUC_PRINTF (2, 3);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L95'>buffer</a>             95 lib/strutil/strutil.c _str_convert (GIConv coder, const char *string, int size, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L107'>buffer</a>            107 lib/strutil/strutil.c     if (string == NULL || buffer == NULL)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L147'>buffer</a>            147 lib/strutil/strutil.c                 g_string_append (buffer, tmp_buff);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L160'>buffer</a>            160 lib/strutil/strutil.c                     g_string_append (buffer, tmp_buff);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L170'>buffer</a>            170 lib/strutil/strutil.c                 g_string_append_c (buffer, *(string - 1));</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L176'>buffer</a>            176 lib/strutil/strutil.c                 g_string_append (buffer, tmp_buff);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L182'>buffer</a>            182 lib/strutil/strutil.c                     g_string_append (buffer, tmp_buff);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L197'>buffer</a>            197 lib/strutil/strutil.c             g_string_append (buffer, string);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L203'>buffer</a>            203 lib/strutil/strutil.c             g_string_append (buffer, string);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L208'>buffer</a>            208 lib/strutil/strutil.c             g_string_append (buffer, tmp_buff);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L281'>buffer</a>            281 lib/strutil/strutil.c str_convert (GIConv coder, const char *string, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L283'>buffer</a>            283 lib/strutil/strutil.c     return _str_convert (coder, string, -1, buffer);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L289'>buffer</a>            289 lib/strutil/strutil.c str_nconvert (GIConv coder, const char *string, int size, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L291'>buffer</a>            291 lib/strutil/strutil.c     return _str_convert (coder, string, size, buffer);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L305'>buffer</a>            305 lib/strutil/strutil.c str_vfs_convert_from (GIConv coder, const char *string, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L310'>buffer</a>            310 lib/strutil/strutil.c         g_string_append (buffer, string != NULL ? string : "");</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L312'>buffer</a>            312 lib/strutil/strutil.c         result = _str_convert (coder, string, -1, buffer);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L320'>buffer</a>            320 lib/strutil/strutil.c str_vfs_convert_to (GIConv coder, const char *string, int size, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L322'>buffer</a>            322 lib/strutil/strutil.c     return used_class.vfs_convert_to (coder, string, size, buffer);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L328'>buffer</a>            328 lib/strutil/strutil.c str_printf (GString * buffer, const char *format, ...)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L333'>buffer</a>            333 lib/strutil/strutil.c     g_string_append_vprintf (buffer, format, ap);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L340'>buffer</a>            340 lib/strutil/strutil.c str_insert_replace_char (GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L342'>buffer</a>            342 lib/strutil/strutil.c     used_class.insert_replace_char (buffer);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L80'>buffer</a>             80 lib/strutil/strutil8bit.c str_8bit_insert_replace_char (GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L82'>buffer</a>             82 lib/strutil/strutil8bit.c     g_string_append_c (buffer, replch);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L273'>buffer</a>            273 lib/strutil/strutil8bit.c str_8bit_vfs_convert_to (GIConv coder, const char *string, int size, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L278'>buffer</a>            278 lib/strutil/strutil8bit.c         g_string_append_len (buffer, string, size);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L280'>buffer</a>            280 lib/strutil/strutil8bit.c         result = str_nconvert (coder, string, size, buffer);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L53'>buffer</a>             53 lib/strutil/strutilascii.c str_ascii_insert_replace_char (GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L55'>buffer</a>             55 lib/strutil/strutilascii.c     g_string_append_c (buffer, replch);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L225'>buffer</a>            225 lib/strutil/strutilascii.c str_ascii_vfs_convert_to (GIConv coder, const char *string, int size, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L228'>buffer</a>            228 lib/strutil/strutilascii.c     g_string_append_len (buffer, string, size);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L80'>buffer</a>             80 lib/strutil/strutilutf8.c str_utf8_insert_replace_char (GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L82'>buffer</a>             82 lib/strutil/strutilutf8.c     g_string_append (buffer, replch);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L398'>buffer</a>            398 lib/strutil/strutilutf8.c str_utf8_questmark_sustb (char **string, size_t * left, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L405'>buffer</a>            405 lib/strutil/strutilutf8.c     g_string_append_c (buffer, '?');</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L423'>buffer</a>            423 lib/strutil/strutilutf8.c str_utf8_vfs_convert_to (GIConv coder, const char *string, int size, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L428'>buffer</a>            428 lib/strutil/strutilutf8.c         g_string_append_len (buffer, string, size);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L430'>buffer</a>            430 lib/strutil/strutilutf8.c         result = str_nconvert (coder, string, size, buffer);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L666'>buffer</a>            666 lib/strutil/strutilutf8.c utf8_tool_compose (char *buffer, size_t size)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L670'>buffer</a>            670 lib/strutil/strutilutf8.c     composed = g_utf8_normalize (buffer, -1, G_NORMALIZE_DEFAULT_COMPOSE);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L671'>buffer</a>            671 lib/strutil/strutilutf8.c     g_strlcpy (buffer, composed, size);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L901'>buffer</a>            901 lib/strutil/strutilutf8.c         GString *buffer;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L903'>buffer</a>            903 lib/strutil/strutilutf8.c         buffer = g_string_new (text);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L904'>buffer</a>            904 lib/strutil/strutilutf8.c         str_utf8_fix_string (buffer-&gt;str);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L905'>buffer</a>            905 lib/strutil/strutilutf8.c         result = g_utf8_offset_to_pointer (buffer-&gt;str, length) - buffer-&gt;str;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L906'>buffer</a>            906 lib/strutil/strutilutf8.c         g_string_free (buffer, TRUE);</span>
+<span class='curline'><a href='../S/lib--timefmt.h.html#L21'>buffer</a>             21 lib/timefmt.h  #define FMT_LOCALTIME(buffer, bufsize, fmt, when)               \</span>
+<span class='curline'><a href='../S/lib--timefmt.h.html#L27'>buffer</a>             27 lib/timefmt.h              strncpy(buffer, INVALID_TIME_TEXT, bufsize);        \</span>
+<span class='curline'><a href='../S/lib--timefmt.h.html#L28'>buffer</a>             28 lib/timefmt.h              buffer[bufsize-1] = 0;                              \</span>
+<span class='curline'><a href='../S/lib--timefmt.h.html#L32'>buffer</a>             32 lib/timefmt.h              strftime(buffer, bufsize, fmt, whentm);             \</span>
+<span class='curline'><a href='../S/lib--timefmt.h.html#L36'>buffer</a>             36 lib/timefmt.h  #define FMT_LOCALTIME_CURRENT(buffer, bufsize, fmt)             \</span>
+<span class='curline'><a href='../S/lib--timefmt.h.html#L40'>buffer</a>             40 lib/timefmt.h          FMT_LOCALTIME(buffer,bufsize,fmt,__current_time);       \</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1158'>buffer</a>           1158 lib/tty/key.c  learn_store_key (char *buffer, char **p, int c)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1160'>buffer</a>           1160 lib/tty/key.c      if (*p - buffer &gt; 253)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2186'>buffer</a>           2186 lib/tty/key.c      char buffer[256];</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2187'>buffer</a>           2187 lib/tty/key.c      char *p = buffer;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2193'>buffer</a>           2193 lib/tty/key.c      learn_store_key (buffer, &amp;p, c);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2222'>buffer</a>           2222 lib/tty/key.c          learn_store_key (buffer, &amp;p, c);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2227'>buffer</a>           2227 lib/tty/key.c      return g_strdup (buffer);</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L217'>buffer</a>            217 lib/tty/tty.c      GString *buffer;</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L227'>buffer</a>            227 lib/tty/tty.c      buffer = g_string_new ("");</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L229'>buffer</a>            229 lib/tty/tty.c      if (str_convert (conv, str, buffer) == ESTR_FAILURE)</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L231'>buffer</a>            231 lib/tty/tty.c          g_string_free (buffer, TRUE);</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L237'>buffer</a>            237 lib/tty/tty.c      return g_string_free (buffer, FALSE);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L415'>buffer</a>            415 lib/util.c     size_trunc_len (char *buffer, unsigned int len, uintmax_t size, int units, gboolean use_si)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L493'>buffer</a>            493 lib/util.c                     g_snprintf (buffer, len + 1, "%s", "0");</span>
+<span class='curline'><a href='../S/lib--util.c.html#L498'>buffer</a>            498 lib/util.c                     g_snprintf (buffer, len + 1, (len &gt; 1) ? "~%s" : "%s", (j &gt; 1) ? sfx[j - 1] : "B");</span>
+<span class='curline'><a href='../S/lib--util.c.html#L505'>buffer</a>            505 lib/util.c                 g_snprintf (buffer, len + 1, "%" PRIuMAX "%s", size, sfx[j]);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L681'>buffer</a>            681 lib/util.c         static char buffer[BUF_LARGE];</span>
+<span class='curline'><a href='../S/lib--util.c.html#L685'>buffer</a>            685 lib/util.c         g_snprintf (buffer, sizeof (buffer), "%s (%d)", strerror_currentlocale, error_num);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L688'>buffer</a>            688 lib/util.c         return buffer;</span>
+<span class='curline'><a href='../S/lib--util.h.html#L153'>buffer</a>            153 lib/util.h     void size_trunc_len (char *buffer, unsigned int len, uintmax_t size, int units, gboolean use_si);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L560'>buffer</a>            560 lib/vfs/direntry.c vfs_s_read (void *fh, char *buffer, size_t count)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L574'>buffer</a>            574 lib/vfs/direntry.c         return MEDATA-&gt;linear_read (me, FH, buffer, count);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L580'>buffer</a>            580 lib/vfs/direntry.c         n = read (FH-&gt;handle, buffer, count);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L592'>buffer</a>            592 lib/vfs/direntry.c vfs_s_write (void *fh, const char *buffer, size_t count)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L604'>buffer</a>            604 lib/vfs/direntry.c         n = write (FH-&gt;handle, buffer, count);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1329'>buffer</a>           1329 lib/vfs/direntry.c     char buffer[8192];</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1360'>buffer</a>           1360 lib/vfs/direntry.c     while ((n = MEDATA-&gt;linear_read (me, &amp;fh, buffer, sizeof (buffer))))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1372'>buffer</a>           1372 lib/vfs/direntry.c         t = write (handle, buffer, n);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1535'>buffer</a>           1535 lib/vfs/direntry.c vfs_s_get_line_interruptible (struct vfs_class *me, char *buffer, int size, int fd)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1548'>buffer</a>           1548 lib/vfs/direntry.c         n = read (fd, &amp;buffer[i], 1);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1551'>buffer</a>           1551 lib/vfs/direntry.c             buffer[i] = '\0';</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1557'>buffer</a>           1557 lib/vfs/direntry.c             buffer[i] = '\0';</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1560'>buffer</a>           1560 lib/vfs/direntry.c         if (buffer[i] == '\n')</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1562'>buffer</a>           1562 lib/vfs/direntry.c             buffer[i] = '\0';</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1568'>buffer</a>           1568 lib/vfs/direntry.c     buffer[size - 1] = '\0';</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L86'>buffer</a>             86 lib/vfs/interface.c     char buffer[BUF_1K * 8];</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L97'>buffer</a>             97 lib/vfs/interface.c     while ((i = mc_read (fdin, buffer, sizeof (buffer))) &gt; 0)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L99'>buffer</a>             99 lib/vfs/interface.c         if (write (fdout, buffer, i) != i)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L141'>buffer</a>            141 lib/vfs/interface.c         char buffer[BUF_1K * 8];</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L153'>buffer</a>            153 lib/vfs/interface.c         while ((i = read (fdin, buffer, sizeof (buffer))) &gt; 0)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L154'>buffer</a>            154 lib/vfs/interface.c             if (mc_write (fdout, buffer, (size_t) i) != i)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L837'>buffer</a>            837 lib/vfs/interface.c     static char buffer[64];</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L856'>buffer</a>            856 lib/vfs/interface.c         g_snprintf (buffer, sizeof (buffer), "%s/mc-%s", sys_tmp, pwd-&gt;pw_name);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L858'>buffer</a>            858 lib/vfs/interface.c         g_snprintf (buffer, sizeof (buffer), "%s/mc-%lu", sys_tmp, (unsigned long) getuid ());</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L860'>buffer</a>            860 lib/vfs/interface.c     canonicalize_pathname (buffer);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L863'>buffer</a>            863 lib/vfs/interface.c     if (mkdir (buffer, S_IRWXU) != 0)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L865'>buffer</a>            865 lib/vfs/interface.c         if (errno == EEXIST &amp;&amp; lstat (buffer, &amp;st) == 0)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L872'>buffer</a>            872 lib/vfs/interface.c             else if (((st.st_mode &amp; 0777) != 0700) &amp;&amp; (chmod (buffer, 0700) != 0))</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L879'>buffer</a>            879 lib/vfs/interface.c                      buffer, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L892'>buffer</a>            892 lib/vfs/interface.c             fprintf (stderr, error, buffer);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L913'>buffer</a>            913 lib/vfs/interface.c             g_snprintf (buffer, sizeof (buffer), "%s", sys_tmp);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L919'>buffer</a>            919 lib/vfs/interface.c             g_snprintf (buffer, sizeof (buffer), "%s", "/dev/null/");</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L927'>buffer</a>            927 lib/vfs/interface.c     tmpdir = buffer;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L604'>buffer</a>            604 lib/vfs/path.c         g_string_append (buffer, stripped_home_str); \</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L610'>buffer</a>            610 lib/vfs/path.c             &amp;&amp; (buffer-&gt;len == 0 || !IS_PATH_SEP (buffer-&gt;str[buffer-&gt;len - 1]))) \</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L611'>buffer</a>            611 lib/vfs/path.c             g_string_append_c (buffer, PATH_SEP); \</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L612'>buffer</a>            612 lib/vfs/path.c         g_string_append (buffer, appendfrom); \</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L630'>buffer</a>            630 lib/vfs/path.c     GString *buffer;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L642'>buffer</a>            642 lib/vfs/path.c     buffer = g_string_new ("");</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L654'>buffer</a>            654 lib/vfs/path.c             if (!is_relative &amp;&amp; (buffer-&gt;len == 0 || !IS_PATH_SEP (buffer-&gt;str[buffer-&gt;len - 1])))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L655'>buffer</a>            655 lib/vfs/path.c                 g_string_append_c (buffer, PATH_SEP);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L657'>buffer</a>            657 lib/vfs/path.c             g_string_append (buffer, element-&gt;vfs_prefix);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L658'>buffer</a>            658 lib/vfs/path.c             g_string_append (buffer, VFS_PATH_URL_DELIMITER);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L664'>buffer</a>            664 lib/vfs/path.c                 g_string_append (buffer, url_str);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L665'>buffer</a>            665 lib/vfs/path.c                 g_string_append_c (buffer, PATH_SEP);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L677'>buffer</a>            677 lib/vfs/path.c                     &amp;&amp; (buffer-&gt;len == 0 || !IS_PATH_SEP (buffer-&gt;str[buffer-&gt;len - 1])))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L678'>buffer</a>            678 lib/vfs/path.c                     g_string_append (buffer, PATH_SEP_STR);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L679'>buffer</a>            679 lib/vfs/path.c                 g_string_append (buffer, VFS_ENCODING_PREFIX);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L680'>buffer</a>            680 lib/vfs/path.c                 g_string_append (buffer, element-&gt;encoding);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L693'>buffer</a>            693 lib/vfs/path.c     return g_string_free (buffer, FALSE);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1492'>buffer</a>           1492 lib/vfs/path.c     GString *buffer;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1497'>buffer</a>           1497 lib/vfs/path.c     buffer = g_string_new ("");</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1500'>buffer</a>           1500 lib/vfs/path.c         g_string_append (buffer, element-&gt;user);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1504'>buffer</a>           1504 lib/vfs/path.c         g_string_append_c (buffer, ':');</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1505'>buffer</a>           1505 lib/vfs/path.c         g_string_append (buffer, element-&gt;password);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1511'>buffer</a>           1511 lib/vfs/path.c             g_string_append_c (buffer, '@');</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1513'>buffer</a>           1513 lib/vfs/path.c             g_string_append_c (buffer, '[');</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1514'>buffer</a>           1514 lib/vfs/path.c         g_string_append (buffer, element-&gt;host);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1516'>buffer</a>           1516 lib/vfs/path.c             g_string_append_c (buffer, ']');</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1521'>buffer</a>           1521 lib/vfs/path.c         g_string_append_c (buffer, ':');</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1522'>buffer</a>           1522 lib/vfs/path.c         g_string_append_printf (buffer, "%d", element-&gt;port);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1525'>buffer</a>           1525 lib/vfs/path.c     return g_string_free (buffer, FALSE);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L114'>buffer</a>            114 lib/vfs/vfs.c  _vfs_translate_path (const char *path, int size, GIConv defcnv, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L137'>buffer</a>            137 lib/vfs/vfs.c          state = _vfs_translate_path (path, ms, defcnv, buffer);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L163'>buffer</a>            163 lib/vfs/vfs.c                  state = str_vfs_convert_to (coder, slash + 1, path + size - slash - 1, buffer);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L174'>buffer</a>            174 lib/vfs/vfs.c          state = str_vfs_convert_to (defcnv, path, size, buffer);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L180'>buffer</a>            180 lib/vfs/vfs.c      g_string_assign (buffer, path);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L157'>buffer</a>            157 lib/vfs/vfs.h      ssize_t (*read) (void *vfs_info, char *buffer, size_t count);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L280'>buffer</a>            280 lib/vfs/vfs.h  ssize_t mc_read (int handle, void *buffer, size_t count);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L281'>buffer</a>            281 lib/vfs/vfs.h  ssize_t mc_write (int handle, const void *buffer, size_t count);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L189'>buffer</a>            189 lib/vfs/xdirentry.h int vfs_s_get_line_interruptible (struct vfs_class *me, char *buffer, int size, int fd);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L175'>buffer</a>            175 lib/widget/history.c     GString *buffer;</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L189'>buffer</a>            189 lib/widget/history.c     buffer = g_string_sized_new (64);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L206'>buffer</a>            206 lib/widget/history.c             g_string_set_size (buffer, 0);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L207'>buffer</a>            207 lib/widget/history.c             if (str_convert (conv, this_entry, buffer) == ESTR_FAILURE)</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L211'>buffer</a>            211 lib/widget/history.c                 hist = list_append_unique (hist, g_strndup (buffer-&gt;str, buffer-&gt;len));</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L217'>buffer</a>            217 lib/widget/history.c     g_string_free (buffer, TRUE);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L234'>buffer</a>            234 lib/widget/history.c     GString *buffer;</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L255'>buffer</a>            255 lib/widget/history.c     buffer = g_string_sized_new (64);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L272'>buffer</a>            272 lib/widget/history.c             g_string_set_size (buffer, 0);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L273'>buffer</a>            273 lib/widget/history.c             if (str_convert (conv, text, buffer) == ESTR_FAILURE)</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L276'>buffer</a>            276 lib/widget/history.c                 mc_config_set_string_raw (cfg, name, key, buffer-&gt;str);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L280'>buffer</a>            280 lib/widget/history.c     g_string_free (buffer, TRUE);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L162'>buffer</a>            162 lib/widget/input.c     last = str_offset_to_pos (in-&gt;buffer, last);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L163'>buffer</a>            163 lib/widget/input.c     first = str_offset_to_pos (in-&gt;buffer, first);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L164'>buffer</a>            164 lib/widget/input.c     len = strlen (&amp;in-&gt;buffer[last]) + 1;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L165'>buffer</a>            165 lib/widget/input.c     memmove (&amp;in-&gt;buffer[first], &amp;in-&gt;buffer[last], len);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L281'>buffer</a>            281 lib/widget/input.c     str_len = str_length (in-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L285'>buffer</a>            285 lib/widget/input.c     pos = str_offset_to_pos (in-&gt;buffer, start);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L286'>buffer</a>            286 lib/widget/input.c     len = str_offset_to_pos (in-&gt;buffer, end) - pos;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L288'>buffer</a>            288 lib/widget/input.c     for (i = pos; in-&gt;buffer[i + len - 1]; i++)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L289'>buffer</a>            289 lib/widget/input.c         in-&gt;buffer[i] = in-&gt;buffer[i + len];</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L321'>buffer</a>            321 lib/widget/input.c     if (strlen (in-&gt;buffer) + 1 + in-&gt;charpoint &gt;= in-&gt;current_max_size)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L328'>buffer</a>            328 lib/widget/input.c         narea = g_try_renew (char, in-&gt;buffer, new_length);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L331'>buffer</a>            331 lib/widget/input.c             in-&gt;buffer = narea;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L336'>buffer</a>            336 lib/widget/input.c     if (strlen (in-&gt;buffer) + in-&gt;charpoint &lt; in-&gt;current_max_size)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L340'>buffer</a>            340 lib/widget/input.c         size_t ins_point = str_offset_to_pos (in-&gt;buffer, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L342'>buffer</a>            342 lib/widget/input.c         size_t rest_bytes = strlen (in-&gt;buffer + ins_point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L345'>buffer</a>            345 lib/widget/input.c             in-&gt;buffer[ins_point + i + in-&gt;charpoint - 1] = in-&gt;buffer[ins_point + i - 1];</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L347'>buffer</a>            347 lib/widget/input.c         memcpy (in-&gt;buffer + ins_point, in-&gt;charbuf, in-&gt;charpoint);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L369'>buffer</a>            369 lib/widget/input.c     in-&gt;point = str_length (in-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L380'>buffer</a>            380 lib/widget/input.c     act = in-&gt;buffer + str_offset_to_pos (in-&gt;buffer, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L382'>buffer</a>            382 lib/widget/input.c         in-&gt;point -= str_cprev_noncomb_char (&amp;act, in-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L393'>buffer</a>            393 lib/widget/input.c     act = in-&gt;buffer + str_offset_to_pos (in-&gt;buffer, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L406'>buffer</a>            406 lib/widget/input.c     p = in-&gt;buffer + str_offset_to_pos (in-&gt;buffer, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L426'>buffer</a>            426 lib/widget/input.c     p = in-&gt;buffer + str_offset_to_pos (in-&gt;buffer, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L428'>buffer</a>            428 lib/widget/input.c     while (p != in-&gt;buffer)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L441'>buffer</a>            441 lib/widget/input.c     while (p != in-&gt;buffer)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L456'>buffer</a>            456 lib/widget/input.c     const char *act = in-&gt;buffer + str_offset_to_pos (in-&gt;buffer, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L462'>buffer</a>            462 lib/widget/input.c     start = in-&gt;point - str_cprev_noncomb_char (&amp;act, in-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L477'>buffer</a>            477 lib/widget/input.c     act = in-&gt;buffer + str_offset_to_pos (in-&gt;buffer, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L504'>buffer</a>            504 lib/widget/input.c     first = str_offset_to_pos (in-&gt;buffer, first);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L505'>buffer</a>            505 lib/widget/input.c     last = str_offset_to_pos (in-&gt;buffer, last);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L507'>buffer</a>            507 lib/widget/input.c     kill_buffer = g_strndup (in-&gt;buffer + first, last - first);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L570'>buffer</a>            570 lib/widget/input.c     chp = str_offset_to_pos (in-&gt;buffer, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L572'>buffer</a>            572 lib/widget/input.c     kill_buffer = g_strdup (&amp;in-&gt;buffer[chp]);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L573'>buffer</a>            573 lib/widget/input.c     in-&gt;buffer[chp] = '\0';</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L583'>buffer</a>            583 lib/widget/input.c     in-&gt;buffer[0] = '\0';</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L624'>buffer</a>            624 lib/widget/input.c         push_history (in, in-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L645'>buffer</a>            645 lib/widget/input.c         push_history (in, in-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L673'>buffer</a>            673 lib/widget/input.c     in-&gt;buffer[0] = '\0';</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L876'>buffer</a>            876 lib/widget/input.c         push_history (in, in-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L906'>buffer</a>            906 lib/widget/input.c     g_free (in-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L923'>buffer</a>            923 lib/widget/input.c     if (x &lt; str_term_width1 (in-&gt;buffer))</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L924'>buffer</a>            924 lib/widget/input.c         return str_column_to_pos (in-&gt;buffer, x);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L926'>buffer</a>            926 lib/widget/input.c     return str_length (in-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1007'>buffer</a>           1007 lib/widget/input.c     in-&gt;buffer = g_new0 (char, in-&gt;current_max_size);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1095'>buffer</a>           1095 lib/widget/input.c         widget_move (in, 0, str_term_width2 (in-&gt;buffer, in-&gt;point) - in-&gt;term_first_shown);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1203'>buffer</a>           1203 lib/widget/input.c         in-&gt;buffer = g_realloc (in-&gt;buffer, buffer_len);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1204'>buffer</a>           1204 lib/widget/input.c     memmove (in-&gt;buffer, text, text_len + 1);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1205'>buffer</a>           1205 lib/widget/input.c     in-&gt;point = str_length (in-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1214'>buffer</a>           1214 lib/widget/input.c     return (in == NULL || in-&gt;buffer == NULL || in-&gt;buffer[0] == '\0');</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1239'>buffer</a>           1239 lib/widget/input.c     max_pos = str_length (in-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1269'>buffer</a>           1269 lib/widget/input.c     buf_len = str_length (in-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1274'>buffer</a>           1274 lib/widget/input.c     pw = str_term_width2 (in-&gt;buffer, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1299'>buffer</a>           1299 lib/widget/input.c             tty_print_string (str_term_substring (in-&gt;buffer, in-&gt;term_first_shown,</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1308'>buffer</a>           1308 lib/widget/input.c                 cp = str_term_substring (in-&gt;buffer, in-&gt;term_first_shown, w-&gt;cols - has_history);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1315'>buffer</a>           1315 lib/widget/input.c                                       (in-&gt;buffer, in-&gt;term_first_shown,</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1323'>buffer</a>           1323 lib/widget/input.c                     buf_width = str_term_width2 (in-&gt;buffer, m1);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1326'>buffer</a>           1326 lib/widget/input.c                     tty_print_string (str_term_substring (in-&gt;buffer, m1, sel_width));</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1335'>buffer</a>           1335 lib/widget/input.c         cp = str_term_substring (in-&gt;buffer, in-&gt;term_first_shown, w-&gt;cols - has_history);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1379'>buffer</a>           1379 lib/widget/input.c     push_history (in, in-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1381'>buffer</a>           1381 lib/widget/input.c     in-&gt;buffer[0] = '\0';</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L58'>buffer</a>             58 lib/widget/input.h     char *buffer;               /* pointer to editing buffer */</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L404'>buffer</a>            404 lib/widget/input_complete.c     char buffer[256];</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L413'>buffer</a>            413 lib/widget/input_complete.c     while (fgets (buffer, sizeof (buffer) - 1, file) != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L416'>buffer</a>            416 lib/widget/input_complete.c         for (bi = buffer; bi[0] != '\0' &amp;&amp; str_isspace (bi); str_next_char (&amp;bi))</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L994'>buffer</a>            994 lib/widget/input_complete.c     buff_len = str_length (in-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L996'>buffer</a>            996 lib/widget/input_complete.c     if (strlen (in-&gt;buffer) + size &gt;= (size_t) in-&gt;current_max_size)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1002'>buffer</a>           1002 lib/widget/input_complete.c         narea = g_try_realloc (in-&gt;buffer, in-&gt;current_max_size + size + w-&gt;cols);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1005'>buffer</a>           1005 lib/widget/input_complete.c             in-&gt;buffer = narea;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1009'>buffer</a>           1009 lib/widget/input_complete.c     if (strlen (in-&gt;buffer) + 1 &lt; (size_t) in-&gt;current_max_size)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1012'>buffer</a>           1012 lib/widget/input_complete.c             memmove (in-&gt;buffer + end + size, in-&gt;buffer + end, strlen (&amp;in-&gt;buffer[end]) + 1);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1013'>buffer</a>           1013 lib/widget/input_complete.c         memmove (in-&gt;buffer + start, text, size - (start - end));</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1014'>buffer</a>           1014 lib/widget/input_complete.c         in-&gt;point += str_length (in-&gt;buffer) - buff_len;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1054'>buffer</a>           1054 lib/widget/input_complete.c                 end = str_get_prev_char (&amp;input-&gt;buffer[end]) - input-&gt;buffer;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1065'>buffer</a>           1065 lib/widget/input_complete.c                 new_end = str_get_prev_char (&amp;input-&gt;buffer[end]) - input-&gt;buffer;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1072'>buffer</a>           1072 lib/widget/input_complete.c                     if (strncmp (input-&gt;buffer + start, le-&gt;text, new_end - start) == 0)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1126'>buffer</a>           1126 lib/widget/input_complete.c                     if (strncmp (input-&gt;buffer + start, le-&gt;text, end - start) == 0</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1206'>buffer</a>           1206 lib/widget/input_complete.c     if (in-&gt;completions != NULL &amp;&amp; str_offset_to_pos (in-&gt;buffer, in-&gt;point) != end)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1414'>buffer</a>           1414 lib/widget/input_complete.c     end = str_offset_to_pos (in-&gt;buffer, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1416'>buffer</a>           1416 lib/widget/input_complete.c     s = in-&gt;buffer;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1426'>buffer</a>           1426 lib/widget/input_complete.c     for (; s &gt;= in-&gt;buffer; str_prev_char (&amp;s))</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1428'>buffer</a>           1428 lib/widget/input_complete.c         start = s - in-&gt;buffer;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1429'>buffer</a>           1429 lib/widget/input_complete.c         if (strchr (word_separators, *s) != NULL &amp;&amp; !strutils_is_char_escaped (in-&gt;buffer, s))</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1436'>buffer</a>           1436 lib/widget/input_complete.c         start = s - in-&gt;buffer;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1439'>buffer</a>           1439 lib/widget/input_complete.c     in-&gt;completions = try_complete (in-&gt;buffer, &amp;start, &amp;end, in-&gt;completion_flags);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1450'>buffer</a>           1450 lib/widget/input_complete.c     if (!str_is_valid_string (in-&gt;buffer))</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L599'>buffer</a>            599 lib/widget/quick.c                         tilde_expand (INPUT (item-&gt;widget)-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L601'>buffer</a>            601 lib/widget/quick.c                     *item-&gt;quick_widget-&gt;u.input.result = g_strdup (INPUT (item-&gt;widget)-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--args.c.html#L422'>buffer</a>            422 src/args.c         GString *buffer;</span>
+<span class='curline'><a href='../S/src--args.c.html#L426'>buffer</a>            426 src/args.c         buffer = g_string_new ("");</span>
+<span class='curline'><a href='../S/src--args.c.html#L430'>buffer</a>            430 src/args.c         str_convert (conv, full_help_str, buffer);</span>
+<span class='curline'><a href='../S/src--args.c.html#L435'>buffer</a>            435 src/args.c         return g_string_free (buffer, FALSE);</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L89'>buffer</a>             89 src/consaver/cons.saver.c send_contents (char *buffer, unsigned int columns, unsigned int rows)</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L101'>buffer</a>            101 src/consaver/cons.saver.c             if (buffer[lc_index] != ' ')</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L129'>buffer</a>            129 src/consaver/cons.saver.c         *p++ = buffer[lc_index];</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L165'>buffer</a>            165 src/consaver/cons.saver.c     char *buffer, *tty_name, console_name[16], vcsa_name[16];</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L236'>buffer</a>            236 src/consaver/cons.saver.c     buffer = calloc (buffer_size, 1);</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L237'>buffer</a>            237 src/consaver/cons.saver.c     if (buffer == NULL)</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L254'>buffer</a>            254 src/consaver/cons.saver.c                 || read (vcsa_fd, buffer, buffer_size) != buffer_size</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L256'>buffer</a>            256 src/consaver/cons.saver.c                 memset (buffer, 0, buffer_size);</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L263'>buffer</a>            263 src/consaver/cons.saver.c                 if (write (vcsa_fd, buffer, buffer_size) != buffer_size)</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L269'>buffer</a>            269 src/consaver/cons.saver.c             send_contents (buffer + 4, winsz.ws_col, winsz.ws_row);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L626'>buffer</a>            626 src/diffviewer/ydiff.c         char *tmpbuf, *buffer;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L628'>buffer</a>            628 src/diffviewer/ydiff.c         buffer = tmpbuf = g_strdup (text);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L641'>buffer</a>            641 src/diffviewer/ydiff.c         g_free (buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L429'>buffer</a>            429 src/editor/edit.c         edit_buffer_init (&amp;edit-&gt;buffer, edit-&gt;stat1.st_size);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L431'>buffer</a>            431 src/editor/edit.c         if (!edit_load_file_fast (&amp;edit-&gt;buffer, edit-&gt;filename_vpath))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L439'>buffer</a>            439 src/editor/edit.c         edit_buffer_init (&amp;edit-&gt;buffer, 0);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L480'>buffer</a>            480 src/editor/edit.c         line = edit-&gt;buffer.curs_line;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L481'>buffer</a>            481 src/editor/edit.c         edit-&gt;search_start = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L486'>buffer</a>            486 src/editor/edit.c     edit_move_to_prev_col (edit, edit_buffer_get_current_bol (&amp;edit-&gt;buffer));</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L501'>buffer</a>            501 src/editor/edit.c     save_file_position (edit-&gt;filename_vpath, edit-&gt;buffer.curs_line + 1, edit-&gt;curs_col,</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L502'>buffer</a>            502 src/editor/edit.c                         edit-&gt;buffer.curs1, edit-&gt;serialized_bookmarks);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L684'>buffer</a>            684 src/editor/edit.c         edit-&gt;line_numbers[1] = edit-&gt;buffer.curs_line;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L685'>buffer</a>            685 src/editor/edit.c         edit-&gt;line_offsets[1] = edit_buffer_get_current_bol (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L686'>buffer</a>            686 src/editor/edit.c         edit-&gt;line_numbers[2] = edit-&gt;buffer.lines;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L687'>buffer</a>            687 src/editor/edit.c         edit-&gt;line_offsets[2] = edit_buffer_get_bol (&amp;edit-&gt;buffer, edit-&gt;buffer.size);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L690'>buffer</a>            690 src/editor/edit.c     if (line &gt;= edit-&gt;buffer.lines)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L714'>buffer</a>            714 src/editor/edit.c             edit_buffer_get_forward_offset (&amp;edit-&gt;buffer, edit-&gt;line_offsets[j],</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L718'>buffer</a>            718 src/editor/edit.c             edit_buffer_get_backward_offset (&amp;edit-&gt;buffer, edit-&gt;line_offsets[j],</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L733'>buffer</a>            733 src/editor/edit.c     if (edit-&gt;buffer.curs_line &gt; 1)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L735'>buffer</a>            735 src/editor/edit.c         if (!edit_line_is_blank (edit, edit-&gt;buffer.curs_line))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L737'>buffer</a>            737 src/editor/edit.c             for (i = edit-&gt;buffer.curs_line - 1; i != 0; i--)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L741'>buffer</a>            741 src/editor/edit.c         else if (edit_line_is_blank (edit, edit-&gt;buffer.curs_line - 1))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L743'>buffer</a>            743 src/editor/edit.c             for (i = edit-&gt;buffer.curs_line - 1; i != 0; i--)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L752'>buffer</a>            752 src/editor/edit.c             for (i = edit-&gt;buffer.curs_line - 1; i != 0; i--)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L758'>buffer</a>            758 src/editor/edit.c     edit_move_up (edit, edit-&gt;buffer.curs_line - i, do_scroll);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L770'>buffer</a>            770 src/editor/edit.c     if (edit-&gt;buffer.curs_line &gt;= edit-&gt;buffer.lines - 1)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L771'>buffer</a>            771 src/editor/edit.c         i = edit-&gt;buffer.lines;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L772'>buffer</a>            772 src/editor/edit.c     else if (!edit_line_is_blank (edit, edit-&gt;buffer.curs_line))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L774'>buffer</a>            774 src/editor/edit.c         for (i = edit-&gt;buffer.curs_line + 1; i != 0; i++)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L775'>buffer</a>            775 src/editor/edit.c             if (edit_line_is_blank (edit, i) || i &gt;= edit-&gt;buffer.lines)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L778'>buffer</a>            778 src/editor/edit.c     else if (edit_line_is_blank (edit, edit-&gt;buffer.curs_line + 1))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L780'>buffer</a>            780 src/editor/edit.c         for (i = edit-&gt;buffer.curs_line + 1; i != 0; i++)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L781'>buffer</a>            781 src/editor/edit.c             if (!edit_line_is_blank (edit, i) || i &gt; edit-&gt;buffer.lines)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L789'>buffer</a>            789 src/editor/edit.c         for (i = edit-&gt;buffer.curs_line + 1; i != 0; i++)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L790'>buffer</a>            790 src/editor/edit.c             if (edit_line_is_blank (edit, i) || i &gt;= edit-&gt;buffer.lines)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L793'>buffer</a>            793 src/editor/edit.c     edit_move_down (edit, i - edit-&gt;buffer.curs_line, do_scroll);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L821'>buffer</a>            821 src/editor/edit.c     if (edit-&gt;buffer.curs_line != 0)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L823'>buffer</a>            823 src/editor/edit.c         edit_cursor_move (edit, -edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L837'>buffer</a>            837 src/editor/edit.c     if (edit-&gt;buffer.curs_line &lt; edit-&gt;buffer.lines)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L839'>buffer</a>            839 src/editor/edit.c         edit_move_down (edit, edit-&gt;buffer.lines - edit-&gt;curs_row, FALSE);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L840'>buffer</a>            840 src/editor/edit.c         edit-&gt;start_display = edit-&gt;buffer.size;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L841'>buffer</a>            841 src/editor/edit.c         edit-&gt;start_line = edit-&gt;buffer.lines;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L853'>buffer</a>            853 src/editor/edit.c     edit_cursor_move (edit, edit_buffer_get_current_bol (&amp;edit-&gt;buffer) - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L854'>buffer</a>            854 src/editor/edit.c     edit-&gt;search_start = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L865'>buffer</a>            865 src/editor/edit.c     edit_cursor_move (edit, edit_buffer_get_current_eol (&amp;edit-&gt;buffer) - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L866'>buffer</a>            866 src/editor/edit.c     edit-&gt;search_start = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L925'>buffer</a>            925 src/editor/edit.c             &amp;&amp; edit-&gt;buffer.curs1 == edit_buffer_get_current_bol (&amp;edit-&gt;buffer))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L928'>buffer</a>            928 src/editor/edit.c         if (edit-&gt;buffer.curs1 == 0)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L930'>buffer</a>            930 src/editor/edit.c         c1 = edit_buffer_get_previous_byte (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L931'>buffer</a>            931 src/editor/edit.c         c2 = edit_buffer_get_current_byte (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L964'>buffer</a>            964 src/editor/edit.c             &amp;&amp; edit-&gt;buffer.curs1 == edit_buffer_get_current_eol (&amp;edit-&gt;buffer))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L967'>buffer</a>            967 src/editor/edit.c         if (edit-&gt;buffer.curs1 &gt;= edit-&gt;buffer.size)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L969'>buffer</a>            969 src/editor/edit.c         c1 = edit_buffer_get_previous_byte (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L970'>buffer</a>            970 src/editor/edit.c         c2 = edit_buffer_get_current_byte (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1002'>buffer</a>           1002 src/editor/edit.c         c = edit_buffer_get_utf (&amp;edit-&gt;buffer, edit-&gt;buffer.curs1, &amp;char_length);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1008'>buffer</a>           1008 src/editor/edit.c         c = edit_buffer_get_current_byte (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1026'>buffer</a>           1026 src/editor/edit.c         &amp;&amp; edit-&gt;over_col == 0 &amp;&amp; edit-&gt;buffer.curs1 == edit_buffer_get_current_bol (&amp;edit-&gt;buffer))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1031'>buffer</a>           1031 src/editor/edit.c         edit_buffer_get_prev_utf (&amp;edit-&gt;buffer, edit-&gt;buffer.curs1, &amp;char_length);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1053'>buffer</a>           1053 src/editor/edit.c     long l = direction ? edit-&gt;buffer.curs_line : edit-&gt;buffer.lines - edit-&gt;buffer.curs_line;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1070'>buffer</a>           1070 src/editor/edit.c     p = edit_buffer_get_current_bol (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1071'>buffer</a>           1071 src/editor/edit.c     p = direction ? edit_buffer_get_backward_offset (&amp;edit-&gt;buffer, p, lines) :</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1072'>buffer</a>           1072 src/editor/edit.c         edit_buffer_get_forward_offset (&amp;edit-&gt;buffer, p, lines, 0);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1073'>buffer</a>           1073 src/editor/edit.c     edit_cursor_move (edit, p - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1078'>buffer</a>           1078 src/editor/edit.c     if (edit-&gt;buffer.curs1 &gt; 0 &amp;&amp; edit-&gt;buffer.curs1 + 1 &lt; edit-&gt;buffer.size</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1079'>buffer</a>           1079 src/editor/edit.c         &amp;&amp; edit_buffer_get_current_byte (&amp;edit-&gt;buffer) &gt;= 256)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1086'>buffer</a>           1086 src/editor/edit.c     edit-&gt;search_start = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1095'>buffer</a>           1095 src/editor/edit.c     while (edit-&gt;buffer.curs1 &lt; edit-&gt;buffer.size)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1100'>buffer</a>           1100 src/editor/edit.c         c2 = edit_buffer_get_current_byte (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1115'>buffer</a>           1115 src/editor/edit.c     while (edit-&gt;buffer.curs1 &gt; 0)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1120'>buffer</a>           1120 src/editor/edit.c         c2 = edit_buffer_get_previous_byte (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1182'>buffer</a>           1182 src/editor/edit.c                 (long) edit_move_forward3 (edit, edit_buffer_get_bol (&amp;edit-&gt;buffer, edit-&gt;mark1),</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1189'>buffer</a>           1189 src/editor/edit.c                 (long) edit_move_forward3 (edit, edit_buffer_get_bol (&amp;edit-&gt;buffer, edit-&gt;mark2),</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1203'>buffer</a>           1203 src/editor/edit.c             edit_buffer_count_lines (&amp;edit-&gt;buffer, ac - KEY_PRESS, edit-&gt;start_display);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1209'>buffer</a>           1209 src/editor/edit.c             edit_buffer_count_lines (&amp;edit-&gt;buffer, edit-&gt;start_display, ac - KEY_PRESS);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1267'>buffer</a>           1267 src/editor/edit.c                 (long) edit_move_forward3 (edit, edit_buffer_get_bol (&amp;edit-&gt;buffer, edit-&gt;mark1),</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1274'>buffer</a>           1274 src/editor/edit.c                 (long) edit_move_forward3 (edit, edit_buffer_get_bol (&amp;edit-&gt;buffer, edit-&gt;mark2),</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1285'>buffer</a>           1285 src/editor/edit.c             edit_buffer_count_lines (&amp;edit-&gt;buffer, ac - KEY_PRESS, edit-&gt;start_display);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1291'>buffer</a>           1291 src/editor/edit.c             edit_buffer_count_lines (&amp;edit-&gt;buffer, edit-&gt;start_display, ac - KEY_PRESS);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1326'>buffer</a>           1326 src/editor/edit.c     while (edit_buffer_get_current_byte (&amp;edit-&gt;buffer) != '\n' &amp;&amp; edit-&gt;buffer.curs2 != 0)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1335'>buffer</a>           1335 src/editor/edit.c     while (edit_buffer_get_previous_byte (&amp;edit-&gt;buffer) != '\n' &amp;&amp; edit-&gt;buffer.curs1 != 0)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1359'>buffer</a>           1359 src/editor/edit.c         ch |= edit_buffer_get_byte (&amp;edit-&gt;buffer, edit-&gt;buffer.curs1 - i);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1372'>buffer</a>           1372 src/editor/edit.c         ch |= edit_buffer_get_byte (&amp;edit-&gt;buffer, edit-&gt;buffer.curs1 + i);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1384'>buffer</a>           1384 src/editor/edit.c     p = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1386'>buffer</a>           1386 src/editor/edit.c     p = edit_buffer_get_backward_offset (&amp;edit-&gt;buffer, p, 1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1392'>buffer</a>           1392 src/editor/edit.c         c = edit_buffer_get_byte (&amp;edit-&gt;buffer, p++);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1405'>buffer</a>           1405 src/editor/edit.c     if (edit_buffer_get_current_byte (&amp;edit-&gt;buffer) == '\n'</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1406'>buffer</a>           1406 src/editor/edit.c         || edit_buffer_get_byte (&amp;edit-&gt;buffer, edit-&gt;buffer.curs1 - 2) == '\n')</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1439'>buffer</a>           1439 src/editor/edit.c     if (option_fake_half_tabs &amp;&amp; is_in_indent (&amp;edit-&gt;buffer))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1473'>buffer</a>           1473 src/editor/edit.c     curs = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1479'>buffer</a>           1479 src/editor/edit.c         c = edit_buffer_get_byte (&amp;edit-&gt;buffer, curs);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1487'>buffer</a>           1487 src/editor/edit.c             off_t current = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1488'>buffer</a>           1488 src/editor/edit.c             edit_cursor_move (edit, curs - edit-&gt;buffer.curs1 + 1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1490'>buffer</a>           1490 src/editor/edit.c             edit_cursor_move (edit, current - edit-&gt;buffer.curs1 + 1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1515'>buffer</a>           1515 src/editor/edit.c     c = edit_buffer_get_current_byte (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1528'>buffer</a>           1528 src/editor/edit.c     for (q = edit-&gt;buffer.curs1 + inc;; q += inc)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1533'>buffer</a>           1533 src/editor/edit.c         if (q &gt;= edit-&gt;buffer.size || q &lt; 0)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1535'>buffer</a>           1535 src/editor/edit.c         a = edit_buffer_get_byte (&amp;edit-&gt;buffer, q);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1569'>buffer</a>           1569 src/editor/edit.c         edit-&gt;bracket = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1571'>buffer</a>           1571 src/editor/edit.c         edit_cursor_move (edit, q - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1586'>buffer</a>           1586 src/editor/edit.c     start_bol = edit_buffer_get_bol (&amp;edit-&gt;buffer, start_mark);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1587'>buffer</a>           1587 src/editor/edit.c     cur_bol = edit_buffer_get_bol (&amp;edit-&gt;buffer, end_mark - 1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1591'>buffer</a>           1591 src/editor/edit.c         edit_cursor_move (edit, cur_bol - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1592'>buffer</a>           1592 src/editor/edit.c         if (!edit_line_is_blank (edit, edit-&gt;buffer.curs_line))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1599'>buffer</a>           1599 src/editor/edit.c                               edit_buffer_get_bol (&amp;edit-&gt;buffer, cur_bol) - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1605'>buffer</a>           1605 src/editor/edit.c         cur_bol = edit_buffer_get_bol (&amp;edit-&gt;buffer, cur_bol - 1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1624'>buffer</a>           1624 src/editor/edit.c     start_bol = edit_buffer_get_bol (&amp;edit-&gt;buffer, start_mark);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1625'>buffer</a>           1625 src/editor/edit.c     cur_bol = edit_buffer_get_bol (&amp;edit-&gt;buffer, end_mark - 1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1632'>buffer</a>           1632 src/editor/edit.c         edit_cursor_move (edit, cur_bol - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1639'>buffer</a>           1639 src/editor/edit.c         next_char = edit_buffer_get_current_byte (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1647'>buffer</a>           1647 src/editor/edit.c                 next_char = edit_buffer_get_current_byte (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1653'>buffer</a>           1653 src/editor/edit.c         cur_bol = edit_buffer_get_bol (&amp;edit-&gt;buffer, cur_bol - 1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1689'>buffer</a>           1689 src/editor/edit.c     cursor = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1710'>buffer</a>           1710 src/editor/edit.c                 if (edit_buffer_get_current_byte (&amp;edit-&gt;buffer) != '\n')</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1714'>buffer</a>           1714 src/editor/edit.c                 for (p = edit-&gt;buffer.curs1;; p++)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1716'>buffer</a>           1716 src/editor/edit.c                     if (p == edit-&gt;buffer.size)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1718'>buffer</a>           1718 src/editor/edit.c                         edit_cursor_move (edit, edit-&gt;buffer.size - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1723'>buffer</a>           1723 src/editor/edit.c                     if (edit_buffer_get_byte (&amp;edit-&gt;buffer, p) == '\n')</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1730'>buffer</a>           1730 src/editor/edit.c                 edit_cursor_move (edit, edit_move_forward3 (edit, p, col, 0) - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1740'>buffer</a>           1740 src/editor/edit.c     *end_pos = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1741'>buffer</a>           1741 src/editor/edit.c     edit_cursor_move (edit, cursor - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1765'>buffer</a>           1765 src/editor/edit.c     curs = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1797'>buffer</a>           1797 src/editor/edit.c     edit_cursor_move (edit, curs - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1836'>buffer</a>           1836 src/editor/edit.c         for (i = 0; i &lt; edit-&gt;buffer.size; i++)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1837'>buffer</a>           1837 src/editor/edit.c             if (fputc (edit_buffer_get_byte (&amp;edit-&gt;buffer, i), f) &lt; 0)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1843'>buffer</a>           1843 src/editor/edit.c     for (i = 0; i &lt; edit-&gt;buffer.size; i++)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1847'>buffer</a>           1847 src/editor/edit.c         c = edit_buffer_get_byte (&amp;edit-&gt;buffer, i);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1858'>buffer</a>           1858 src/editor/edit.c             c1 = edit_buffer_get_byte (&amp;edit-&gt;buffer, i + 1);   /* next char */</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1924'>buffer</a>           1924 src/editor/edit.c     return edit-&gt;buffer.size;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1946'>buffer</a>           1946 src/editor/edit.c     current = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1960'>buffer</a>           1960 src/editor/edit.c                 ins_len = edit-&gt;buffer.curs1 - current;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2012'>buffer</a>           2012 src/editor/edit.c             edit_set_markers (edit, edit-&gt;buffer.curs1, mark2, c1, c2);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2034'>buffer</a>           2034 src/editor/edit.c                 edit_set_markers (edit, edit-&gt;buffer.curs1, current, 0, 0);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2043'>buffer</a>           2043 src/editor/edit.c                 ins_len = edit-&gt;buffer.curs1 - current;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2191'>buffer</a>           2191 src/editor/edit.c     edit_buffer_clean (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2501'>buffer</a>           2501 src/editor/edit.c     if (edit-&gt;buffer.curs1 &lt; edit-&gt;start_display)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2515'>buffer</a>           2515 src/editor/edit.c         book_mark_inc (edit, edit-&gt;buffer.curs_line);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2516'>buffer</a>           2516 src/editor/edit.c         edit-&gt;buffer.curs_line++;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2517'>buffer</a>           2517 src/editor/edit.c         edit-&gt;buffer.lines++;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2528'>buffer</a>           2528 src/editor/edit.c     edit-&gt;mark1 += (edit-&gt;mark1 &gt; edit-&gt;buffer.curs1) ? 1 : 0;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2529'>buffer</a>           2529 src/editor/edit.c     edit-&gt;mark2 += (edit-&gt;mark2 &gt; edit-&gt;buffer.curs1) ? 1 : 0;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2530'>buffer</a>           2530 src/editor/edit.c     edit-&gt;last_get_rule += (edit-&gt;last_get_rule &gt; edit-&gt;buffer.curs1) ? 1 : 0;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2532'>buffer</a>           2532 src/editor/edit.c     edit_buffer_insert (&amp;edit-&gt;buffer, c);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2541'>buffer</a>           2541 src/editor/edit.c     if (edit-&gt;buffer.curs1 &lt; edit-&gt;start_display)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2550'>buffer</a>           2550 src/editor/edit.c         book_mark_inc (edit, edit-&gt;buffer.curs_line);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2551'>buffer</a>           2551 src/editor/edit.c         edit-&gt;buffer.lines++;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2560'>buffer</a>           2560 src/editor/edit.c     edit-&gt;mark1 += (edit-&gt;mark1 &gt;= edit-&gt;buffer.curs1) ? 1 : 0;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2561'>buffer</a>           2561 src/editor/edit.c     edit-&gt;mark2 += (edit-&gt;mark2 &gt;= edit-&gt;buffer.curs1) ? 1 : 0;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2562'>buffer</a>           2562 src/editor/edit.c     edit-&gt;last_get_rule += (edit-&gt;last_get_rule &gt;= edit-&gt;buffer.curs1) ? 1 : 0;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2564'>buffer</a>           2564 src/editor/edit.c     edit_buffer_insert_ahead (&amp;edit-&gt;buffer, c);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2589'>buffer</a>           2589 src/editor/edit.c     if (edit-&gt;buffer.curs2 == 0)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2596'>buffer</a>           2596 src/editor/edit.c         edit_buffer_get_utf (&amp;edit-&gt;buffer, edit-&gt;buffer.curs1, &amp;char_length);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2609'>buffer</a>           2609 src/editor/edit.c         if (edit-&gt;mark1 &gt; edit-&gt;buffer.curs1)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2614'>buffer</a>           2614 src/editor/edit.c         if (edit-&gt;mark2 &gt; edit-&gt;buffer.curs1)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2616'>buffer</a>           2616 src/editor/edit.c         if (edit-&gt;last_get_rule &gt; edit-&gt;buffer.curs1)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2619'>buffer</a>           2619 src/editor/edit.c         p = edit_buffer_delete (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2627'>buffer</a>           2627 src/editor/edit.c         book_mark_dec (edit, edit-&gt;buffer.curs_line);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2628'>buffer</a>           2628 src/editor/edit.c         edit-&gt;buffer.lines--;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2631'>buffer</a>           2631 src/editor/edit.c     if (edit-&gt;buffer.curs1 &lt; edit-&gt;start_display)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2650'>buffer</a>           2650 src/editor/edit.c     if (edit-&gt;buffer.curs1 == 0)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2659'>buffer</a>           2659 src/editor/edit.c         edit_buffer_get_prev_utf (&amp;edit-&gt;buffer, edit-&gt;buffer.curs1, &amp;char_length);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2669'>buffer</a>           2669 src/editor/edit.c         if (edit-&gt;mark1 &gt;= edit-&gt;buffer.curs1)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2674'>buffer</a>           2674 src/editor/edit.c         if (edit-&gt;mark2 &gt;= edit-&gt;buffer.curs1)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2676'>buffer</a>           2676 src/editor/edit.c         if (edit-&gt;last_get_rule &gt;= edit-&gt;buffer.curs1)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2679'>buffer</a>           2679 src/editor/edit.c         p = edit_buffer_backspace (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2686'>buffer</a>           2686 src/editor/edit.c         book_mark_dec (edit, edit-&gt;buffer.curs_line);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2687'>buffer</a>           2687 src/editor/edit.c         edit-&gt;buffer.curs_line--;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2688'>buffer</a>           2688 src/editor/edit.c         edit-&gt;buffer.lines--;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2692'>buffer</a>           2692 src/editor/edit.c     if (edit-&gt;buffer.curs1 &lt; edit-&gt;start_display)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2710'>buffer</a>           2710 src/editor/edit.c         for (; increment &lt; 0 &amp;&amp; edit-&gt;buffer.curs1 != 0; increment++)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2716'>buffer</a>           2716 src/editor/edit.c             c = edit_buffer_get_previous_byte (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2717'>buffer</a>           2717 src/editor/edit.c             edit_buffer_insert_ahead (&amp;edit-&gt;buffer, c);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2718'>buffer</a>           2718 src/editor/edit.c             c = edit_buffer_backspace (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2721'>buffer</a>           2721 src/editor/edit.c                 edit-&gt;buffer.curs_line--;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2728'>buffer</a>           2728 src/editor/edit.c         for (; increment &gt; 0 &amp;&amp; edit-&gt;buffer.curs2 != 0; increment--)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2734'>buffer</a>           2734 src/editor/edit.c             c = edit_buffer_get_current_byte (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2735'>buffer</a>           2735 src/editor/edit.c             edit_buffer_insert (&amp;edit-&gt;buffer, c);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2736'>buffer</a>           2736 src/editor/edit.c             c = edit_buffer_delete (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2739'>buffer</a>           2739 src/editor/edit.c                 edit-&gt;buffer.curs_line++;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2762'>buffer</a>           2762 src/editor/edit.c         q = edit-&gt;buffer.size + 2;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2776'>buffer</a>           2776 src/editor/edit.c         orig_c = c = edit_buffer_get_byte (&amp;edit-&gt;buffer, p);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2784'>buffer</a>           2784 src/editor/edit.c             utf_ch = edit_buffer_get_utf (&amp;edit-&gt;buffer, p, &amp;char_length);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2823'>buffer</a>           2823 src/editor/edit.c     return (long) edit_move_forward3 (edit, edit_buffer_get_current_bol (&amp;edit-&gt;buffer), 0,</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2824'>buffer</a>           2824 src/editor/edit.c                                       edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2834'>buffer</a>           2834 src/editor/edit.c     edit-&gt;curs_row = edit-&gt;buffer.curs_line - edit-&gt;start_line;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2842'>buffer</a>           2842 src/editor/edit.c     edit-&gt;curs_col = (long) edit_move_forward3 (edit, edit_buffer_get_current_bol (&amp;edit-&gt;buffer),</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2843'>buffer</a>           2843 src/editor/edit.c                                                 0, edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2868'>buffer</a>           2868 src/editor/edit.c             edit_buffer_get_backward_offset (&amp;edit-&gt;buffer, edit-&gt;start_display, i);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2883'>buffer</a>           2883 src/editor/edit.c     lines_below = edit-&gt;buffer.lines - edit-&gt;start_line - (WIDGET (edit)-&gt;lines - 1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2890'>buffer</a>           2890 src/editor/edit.c             edit_buffer_get_forward_offset (&amp;edit-&gt;buffer, edit-&gt;start_display, i, 0);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2933'>buffer</a>           2933 src/editor/edit.c                       edit_move_forward3 (edit, p, prev + edit-&gt;over_col, 0) - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2939'>buffer</a>           2939 src/editor/edit.c         line_len = (long) edit_move_forward3 (edit, edit_buffer_get_current_bol (&amp;edit-&gt;buffer), 0,</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2940'>buffer</a>           2940 src/editor/edit.c                                               edit_buffer_get_current_eol (&amp;edit-&gt;buffer));</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2957'>buffer</a>           2957 src/editor/edit.c         if (option_fake_half_tabs &amp;&amp; is_in_indent (&amp;edit-&gt;buffer))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2970'>buffer</a>           2970 src/editor/edit.c                 p = edit_buffer_get_current_bol (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2973'>buffer</a>           2973 src/editor/edit.c                                                       0) - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2976'>buffer</a>           2976 src/editor/edit.c                                       edit_move_forward3 (edit, p, q, 0) - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2994'>buffer</a>           2994 src/editor/edit.c     return is_blank (&amp;edit-&gt;buffer, edit_find_line (edit, line));</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3003'>buffer</a>           3003 src/editor/edit.c     if (line &lt; e-&gt;buffer.curs_line)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3004'>buffer</a>           3004 src/editor/edit.c         edit_move_up (e, e-&gt;buffer.curs_line - line, FALSE);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3006'>buffer</a>           3006 src/editor/edit.c         edit_move_down (e, line - e-&gt;buffer.curs_line, FALSE);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3060'>buffer</a>           3060 src/editor/edit.c         edit_set_markers (edit, edit-&gt;buffer.curs1, -1, edit-&gt;curs_col + edit-&gt;over_col,</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3066'>buffer</a>           3066 src/editor/edit.c         edit-&gt;end_mark_curs = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3067'>buffer</a>           3067 src/editor/edit.c         edit_set_markers (edit, edit-&gt;mark1, edit-&gt;buffer.curs1, edit-&gt;column1,</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3080'>buffer</a>           3080 src/editor/edit.c     for (pos = edit-&gt;buffer.curs1; pos != 0; pos--)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3084'>buffer</a>           3084 src/editor/edit.c         c1 = edit_buffer_get_byte (&amp;edit-&gt;buffer, pos);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3085'>buffer</a>           3085 src/editor/edit.c         c2 = edit_buffer_get_byte (&amp;edit-&gt;buffer, pos - 1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3093'>buffer</a>           3093 src/editor/edit.c     for (; pos &lt; edit-&gt;buffer.size; pos++)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3097'>buffer</a>           3097 src/editor/edit.c         c1 = edit_buffer_get_byte (&amp;edit-&gt;buffer, pos);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3098'>buffer</a>           3098 src/editor/edit.c         c2 = edit_buffer_get_byte (&amp;edit-&gt;buffer, pos + 1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3104'>buffer</a>           3104 src/editor/edit.c     edit-&gt;mark2 = MIN (pos + 1, edit-&gt;buffer.size);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3114'>buffer</a>           3114 src/editor/edit.c     edit-&gt;mark1 = edit_buffer_get_current_bol (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3115'>buffer</a>           3115 src/editor/edit.c     edit-&gt;mark2 = edit_buffer_get_current_eol (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3130'>buffer</a>           3130 src/editor/edit.c     while (edit_buffer_get_current_byte (&amp;edit-&gt;buffer) != '\n')</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3144'>buffer</a>           3144 src/editor/edit.c     while (edit_buffer_get_previous_byte (&amp;edit-&gt;buffer) != '\n')</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3309'>buffer</a>           3309 src/editor/edit.c         edit-&gt;search_start = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3319'>buffer</a>           3319 src/editor/edit.c         edit-&gt;search_start = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3338'>buffer</a>           3338 src/editor/edit.c                 if (edit_buffer_get_current_byte (&amp;edit-&gt;buffer) != '\n')</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3381'>buffer</a>           3381 src/editor/edit.c         edit-&gt;search_start = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3449'>buffer</a>           3449 src/editor/edit.c         else if (option_backspace_through_tabs &amp;&amp; is_in_indent (&amp;edit-&gt;buffer))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3451'>buffer</a>           3451 src/editor/edit.c             while (edit_buffer_get_previous_byte (&amp;edit-&gt;buffer) != '\n' &amp;&amp; edit-&gt;buffer.curs1 &gt; 0)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3454'>buffer</a>           3454 src/editor/edit.c         else if (option_fake_half_tabs &amp;&amp; is_in_indent (&amp;edit-&gt;buffer)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3474'>buffer</a>           3474 src/editor/edit.c             if (option_fake_half_tabs &amp;&amp; is_in_indent (&amp;edit-&gt;buffer) &amp;&amp; left_of_four_spaces (edit))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3540'>buffer</a>           3540 src/editor/edit.c         if (option_fake_half_tabs &amp;&amp; is_in_indent (&amp;edit-&gt;buffer) &amp;&amp; right_of_four_spaces (edit))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3555'>buffer</a>           3555 src/editor/edit.c         if (option_fake_half_tabs &amp;&amp; is_in_indent (&amp;edit-&gt;buffer) &amp;&amp; left_of_four_spaces (edit))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3668'>buffer</a>           3668 src/editor/edit.c         edit_set_markers (edit, 0, edit-&gt;buffer.size, 0, 0);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3691'>buffer</a>           3691 src/editor/edit.c         book_mark_clear (edit, edit-&gt;buffer.curs_line, BOOK_MARK_FOUND_COLOR);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3692'>buffer</a>           3692 src/editor/edit.c         if (book_mark_query_color (edit, edit-&gt;buffer.curs_line, BOOK_MARK_COLOR))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3693'>buffer</a>           3693 src/editor/edit.c             book_mark_clear (edit, edit-&gt;buffer.curs_line, BOOK_MARK_COLOR);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3695'>buffer</a>           3695 src/editor/edit.c             book_mark_insert (edit, edit-&gt;buffer.curs_line, BOOK_MARK_COLOR);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3707'>buffer</a>           3707 src/editor/edit.c             p = book_mark_find (edit, edit-&gt;buffer.curs_line);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3722'>buffer</a>           3722 src/editor/edit.c             p = book_mark_find (edit, edit-&gt;buffer.curs_line);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3723'>buffer</a>           3723 src/editor/edit.c             while (p-&gt;line == edit-&gt;buffer.curs_line)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3948'>buffer</a>           3948 src/editor/edit.c         edit-&gt;search_start = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3954'>buffer</a>           3954 src/editor/edit.c         edit-&gt;search_start = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L139'>buffer</a>            139 src/editor/editcmd.c                          edit_buffer_calc_percent (&amp;esm-&gt;edit-&gt;buffer, esm-&gt;offset));</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L346'>buffer</a>            346 src/editor/editcmd.c         filelen = edit_buffer_write_file (&amp;edit-&gt;buffer, fd);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L348'>buffer</a>            348 src/editor/editcmd.c         if (filelen != edit-&gt;buffer.size)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L384'>buffer</a>            384 src/editor/editcmd.c     if (filelen != edit-&gt;buffer.size)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L546'>buffer</a>            546 src/editor/editcmd.c     n = edit_buffer_get_forward_offset (&amp;edit-&gt;buffer, m1, 0, m2) + 1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L547'>buffer</a>            547 src/editor/editcmd.c     c = (long) edit_move_forward3 (edit, edit_buffer_get_bol (&amp;edit-&gt;buffer, m1), 0, m1);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L548'>buffer</a>            548 src/editor/editcmd.c     d = (long) edit_move_forward3 (edit, edit_buffer_get_bol (&amp;edit-&gt;buffer, m2), 0, m2);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L554'>buffer</a>            554 src/editor/editcmd.c         r = edit_buffer_get_current_bol (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L561'>buffer</a>            561 src/editor/editcmd.c         edit_cursor_move (edit, p - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L565'>buffer</a>            565 src/editor/editcmd.c             if (edit_buffer_get_current_byte (&amp;edit-&gt;buffer) != '\n')</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L572'>buffer</a>            572 src/editor/editcmd.c                               edit_buffer_get_forward_offset (&amp;edit-&gt;buffer, edit-&gt;buffer.curs1, 1,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L573'>buffer</a>            573 src/editor/editcmd.c                                                               0) - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L611'>buffer</a>            611 src/editor/editcmd.c     curs_line = edit-&gt;buffer.curs_line;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L616'>buffer</a>            616 src/editor/editcmd.c     edit_cursor_move (edit, start_mark - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L631'>buffer</a>            631 src/editor/editcmd.c             line_width = edit_move_forward3 (edit, edit_buffer_get_current_bol (&amp;edit-&gt;buffer), 0,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L632'>buffer</a>            632 src/editor/editcmd.c                                              edit_buffer_get_current_eol (&amp;edit-&gt;buffer));</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L822'>buffer</a>            822 src/editor/editcmd.c     off_t end_mark = edit-&gt;buffer.size;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L839'>buffer</a>            839 src/editor/editcmd.c                 || edit_buffer_get_byte (&amp;edit-&gt;buffer, start_mark - 1) != end_string_symbol))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L841'>buffer</a>            841 src/editor/editcmd.c                 edit_calculate_start_of_next_line (&amp;edit-&gt;buffer, start_mark, edit-&gt;buffer.size,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L845'>buffer</a>            845 src/editor/editcmd.c             &amp;&amp; (end_mark - 1 != edit-&gt;buffer.size</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L846'>buffer</a>            846 src/editor/editcmd.c                 || edit_buffer_get_byte (&amp;edit-&gt;buffer, end_mark) != end_string_symbol))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L848'>buffer</a>            848 src/editor/editcmd.c                 edit_calculate_end_of_previous_line (&amp;edit-&gt;buffer, end_mark, end_string_symbol);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L857'>buffer</a>            857 src/editor/editcmd.c         end_mark = MAX (1, edit-&gt;buffer.curs1) - 1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L867'>buffer</a>            867 src/editor/editcmd.c                 edit_calculate_start_of_current_line (&amp;edit-&gt;buffer, search_start,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L889'>buffer</a>            889 src/editor/editcmd.c                     edit_calculate_start_of_previous_line (&amp;edit-&gt;buffer, search_start,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L902'>buffer</a>            902 src/editor/editcmd.c             edit_calculate_start_of_next_line (&amp;edit-&gt;buffer, search_start, end_mark,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L966'>buffer</a>            966 src/editor/editcmd.c         edit-&gt;search_start = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L986'>buffer</a>            986 src/editor/editcmd.c         while (mc_search_run (edit-&gt;search, (void *) &amp;esm, q, edit-&gt;buffer.size, &amp;len))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L991'>buffer</a>            991 src/editor/editcmd.c             l += edit_buffer_count_lines (&amp;edit-&gt;buffer, q, edit-&gt;search-&gt;normal_offset);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1004'>buffer</a>           1004 src/editor/editcmd.c             edit_cursor_move (edit, edit-&gt;search_start - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1021'>buffer</a>           1021 src/editor/editcmd.c             edit_cursor_move (edit, edit-&gt;search_start - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1030'>buffer</a>           1030 src/editor/editcmd.c             edit-&gt;search_start = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1072'>buffer</a>           1072 src/editor/editcmd.c             x = edit_move_forward3 (edit, edit_buffer_get_bol (&amp;edit-&gt;buffer, start), 0, start);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1073'>buffer</a>           1073 src/editor/editcmd.c             c = edit_buffer_get_byte (&amp;edit-&gt;buffer, start);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1087'>buffer</a>           1087 src/editor/editcmd.c             *s++ = edit_buffer_get_byte (&amp;edit-&gt;buffer, start++);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1202'>buffer</a>           1202 src/editor/editcmd.c     if (!mc_search_run (srch, (void *) esm, word_start, edit-&gt;buffer.size, &amp;len))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1211'>buffer</a>           1211 src/editor/editcmd.c         chr = edit_buffer_get_byte (&amp;edit-&gt;buffer, word_start + i);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1249'>buffer</a>           1249 src/editor/editcmd.c     last_byte = entire_file ? edit-&gt;buffer.size : word_start;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1276'>buffer</a>           1276 src/editor/editcmd.c             skip = edit_buffer_get_byte (&amp;edit-&gt;buffer, start + i);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1355'>buffer</a>           1355 src/editor/editcmd.c     cursor = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1367'>buffer</a>           1367 src/editor/editcmd.c             if (edit_buffer_get_current_byte (&amp;edit-&gt;buffer) != '\n')</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1372'>buffer</a>           1372 src/editor/editcmd.c             for (p = edit-&gt;buffer.curs1;; p++)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1374'>buffer</a>           1374 src/editor/editcmd.c                 if (p == edit-&gt;buffer.size)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1376'>buffer</a>           1376 src/editor/editcmd.c                     edit_cursor_move (edit, edit-&gt;buffer.size - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1381'>buffer</a>           1381 src/editor/editcmd.c                 if (edit_buffer_get_byte (&amp;edit-&gt;buffer, p) == '\n')</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1387'>buffer</a>           1387 src/editor/editcmd.c             edit_cursor_move (edit, edit_move_forward3 (edit, p, col, 0) - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1397'>buffer</a>           1397 src/editor/editcmd.c     *end_pos = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1398'>buffer</a>           1398 src/editor/editcmd.c     edit_cursor_move (edit, cursor - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1701'>buffer</a>           1701 src/editor/editcmd.c     if (!edit_check_newline (&amp;edit-&gt;buffer))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2076'>buffer</a>           2076 src/editor/editcmd.c     if (!edit_check_newline (&amp;edit-&gt;buffer))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2295'>buffer</a>           2295 src/editor/editcmd.c         end_mark_curs = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2320'>buffer</a>           2320 src/editor/editcmd.c         start_bol = edit_buffer_get_bol (&amp;edit-&gt;buffer, *start_mark);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2321'>buffer</a>           2321 src/editor/editcmd.c         start_eol = edit_buffer_get_eol (&amp;edit-&gt;buffer, start_bol - 1) + 1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2322'>buffer</a>           2322 src/editor/editcmd.c         end_bol = edit_buffer_get_bol (&amp;edit-&gt;buffer, *end_mark);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2323'>buffer</a>           2323 src/editor/editcmd.c         end_eol = edit_buffer_get_eol (&amp;edit-&gt;buffer, *end_mark);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2345'>buffer</a>           2345 src/editor/editcmd.c     off_t start_mark, end_mark, current = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2384'>buffer</a>           2384 src/editor/editcmd.c         edit_set_markers (edit, edit-&gt;buffer.curs1, mark2, c1, c2);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2404'>buffer</a>           2404 src/editor/editcmd.c     if (!edit-&gt;column_highlight &amp;&amp; edit-&gt;buffer.curs1 &gt; start_mark &amp;&amp; edit-&gt;buffer.curs1 &lt; end_mark)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2428'>buffer</a>           2428 src/editor/editcmd.c         if ((edit_buffer_get_eol (&amp;edit-&gt;buffer, edit-&gt;buffer.curs1) ==</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2429'>buffer</a>           2429 src/editor/editcmd.c              edit_buffer_get_eol (&amp;edit-&gt;buffer, start_mark)) &amp;&amp; x2 &gt; c1 &amp;&amp; x2 &lt;= c2)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2432'>buffer</a>           2432 src/editor/editcmd.c         if (edit-&gt;buffer.curs1 &gt; start_mark</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2433'>buffer</a>           2433 src/editor/editcmd.c             &amp;&amp; edit-&gt;buffer.curs1 &lt; edit_buffer_get_eol (&amp;edit-&gt;buffer, end_mark))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2448'>buffer</a>           2448 src/editor/editcmd.c         current = edit_move_forward3 (edit, edit_buffer_get_current_bol (&amp;edit-&gt;buffer), x, 0);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2449'>buffer</a>           2449 src/editor/editcmd.c         edit_cursor_move (edit, current - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2463'>buffer</a>           2463 src/editor/editcmd.c         current = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2465'>buffer</a>           2465 src/editor/editcmd.c         edit_cursor_move (edit, start_mark - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2473'>buffer</a>           2473 src/editor/editcmd.c                           current - edit-&gt;buffer.curs1 -</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2474'>buffer</a>           2474 src/editor/editcmd.c                           (((current - edit-&gt;buffer.curs1) &gt; 0) ? end_mark - start_mark : 0));</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2480'>buffer</a>           2480 src/editor/editcmd.c         edit_set_markers (edit, edit-&gt;buffer.curs1, edit-&gt;buffer.curs1 + end_mark - start_mark, 0,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2588'>buffer</a>           2588 src/editor/editcmd.c             edit-&gt;search_start = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2635'>buffer</a>           2635 src/editor/editcmd.c         if ((edit-&gt;search_start &gt;= 0) &amp;&amp; (edit-&gt;search_start &lt; edit-&gt;buffer.size))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2643'>buffer</a>           2643 src/editor/editcmd.c             edit_cursor_move (edit, edit-&gt;search_start - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2716'>buffer</a>           2716 src/editor/editcmd.c                 if (edit-&gt;search_start &gt;= edit-&gt;buffer.size)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2725'>buffer</a>           2725 src/editor/editcmd.c             edit-&gt;search_start = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2760'>buffer</a>           2760 src/editor/editcmd.c     *current_char = edit_buffer_get_byte (&amp;edit-&gt;buffer, (off_t) char_offset);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2884'>buffer</a>           2884 src/editor/editcmd.c         if (!mc_global.midnight_shutdown &amp;&amp; !edit_check_newline (&amp;edit-&gt;buffer))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2952'>buffer</a>           2952 src/editor/editcmd.c                 buf[i - start] = edit_buffer_get_byte (&amp;edit-&gt;buffer, i);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3068'>buffer</a>           3068 src/editor/editcmd.c         l = edit-&gt;buffer.lines + l + 2;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3316'>buffer</a>           3316 src/editor/editcmd.c         pipe_mail (&amp;edit-&gt;buffer, mail_to, mail_subject, mail_cc);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3343'>buffer</a>           3343 src/editor/editcmd.c     if (!edit_find_word_start (&amp;edit-&gt;buffer, &amp;word_start, &amp;word_len))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3350'>buffer</a>           3350 src/editor/editcmd.c         g_string_append_c (match_expr, edit_buffer_get_byte (&amp;edit-&gt;buffer, word_start + i));</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3523'>buffer</a>           3523 src/editor/editcmd.c     if (!edit_find_word_start (&amp;edit-&gt;buffer, &amp;word_start, &amp;word_len))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3529'>buffer</a>           3529 src/editor/editcmd.c         g_string_append_c (match_expr, edit_buffer_get_byte (&amp;edit-&gt;buffer, word_start + i));</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3579'>buffer</a>           3579 src/editor/editcmd.c     match_word = edit_buffer_get_word_from_pos (&amp;edit-&gt;buffer, edit-&gt;buffer.curs1, &amp;word_start,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3662'>buffer</a>           3662 src/editor/editcmd.c     if (edit-&gt;buffer.curs_line &gt; 0)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3664'>buffer</a>           3664 src/editor/editcmd.c         edit_cursor_move (edit, -edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3673'>buffer</a>           3673 src/editor/editcmd.c         c2 = edit_buffer_get_current_byte (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3677'>buffer</a>           3677 src/editor/editcmd.c             if (edit-&gt;buffer.curs1 &gt;= edit-&gt;buffer.size)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3682'>buffer</a>           3682 src/editor/editcmd.c             c2 = edit_buffer_get_current_byte (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L116'>buffer</a>            116 src/editor/editdraw.c     if (edit-&gt;buffer.curs1 &lt; edit-&gt;buffer.size)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L124'>buffer</a>            124 src/editor/editdraw.c             cur_utf = edit_buffer_get_utf (&amp;edit-&gt;buffer, edit-&gt;buffer.curs1, &amp;char_length);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L132'>buffer</a>            132 src/editor/editdraw.c                 cur_utf = edit_buffer_get_current_byte (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L142'>buffer</a>            142 src/editor/editdraw.c             cur_byte = edit_buffer_get_current_byte (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L161'>buffer</a>            161 src/editor/editdraw.c                     edit-&gt;buffer.curs_line + 1,</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L162'>buffer</a>            162 src/editor/editdraw.c                     edit-&gt;buffer.lines + 1, (long) edit-&gt;buffer.curs1, (long) edit-&gt;buffer.size,</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L178'>buffer</a>            178 src/editor/editdraw.c                     edit-&gt;buffer.curs_line + 1,</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L179'>buffer</a>            179 src/editor/editdraw.c                     edit-&gt;buffer.lines + 1, (long) edit-&gt;buffer.curs1, (long) edit-&gt;buffer.size,</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L242'>buffer</a>            242 src/editor/editdraw.c         percent = edit_buffer_calc_percent (&amp;edit-&gt;buffer, edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L303'>buffer</a>            303 src/editor/editdraw.c                     edit-&gt;buffer.curs_line + 1, edit-&gt;buffer.lines + 1, (long) edit-&gt;buffer.curs1,</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L304'>buffer</a>            304 src/editor/editdraw.c                     (long) edit-&gt;buffer.size);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L315'>buffer</a>            315 src/editor/editdraw.c         if (edit-&gt;buffer.curs1 &gt;= edit-&gt;buffer.size)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L323'>buffer</a>            323 src/editor/editdraw.c             cur_utf = edit_buffer_get_utf (&amp;edit-&gt;buffer, edit-&gt;buffer.curs1, &amp;char_length);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L325'>buffer</a>            325 src/editor/editdraw.c                 cur_utf = edit_buffer_get_current_byte (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L333'>buffer</a>            333 src/editor/editdraw.c             cur_byte = edit_buffer_get_current_byte (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L555'>buffer</a>            555 src/editor/editdraw.c         if (cur_line &lt;= (unsigned int) edit-&gt;buffer.lines)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L574'>buffer</a>            574 src/editor/editdraw.c         if (row &lt;= edit-&gt;buffer.lines - edit-&gt;start_line)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L581'>buffer</a>            581 src/editor/editdraw.c                 tws = edit_buffer_get_eol (&amp;edit-&gt;buffer, b);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L583'>buffer</a>            583 src/editor/editdraw.c                        &amp;&amp; ((c = edit_buffer_get_byte (&amp;edit-&gt;buffer, tws - 1)) == ' ' || c == '\t'))</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L596'>buffer</a>            596 src/editor/editdraw.c                 if (q == edit-&gt;buffer.curs1)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L621'>buffer</a>            621 src/editor/editdraw.c                     c = edit_buffer_get_utf (&amp;edit-&gt;buffer, q, &amp;char_length);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L624'>buffer</a>            624 src/editor/editdraw.c                     c = edit_buffer_get_byte (&amp;edit-&gt;buffer, q);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L844'>buffer</a>            844 src/editor/editdraw.c     off_t b = edit_buffer_get_bol (&amp;edit-&gt;buffer, curs);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L921'>buffer</a>            921 src/editor/editdraw.c             b = edit_buffer_get_forward_offset (&amp;edit-&gt;buffer, edit-&gt;start_display, start_row, 0);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L927'>buffer</a>            927 src/editor/editdraw.c                 b = edit_buffer_get_forward_offset (&amp;edit-&gt;buffer, b, 1, 0);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L946'>buffer</a>            946 src/editor/editdraw.c                     b = edit_buffer_get_forward_offset (&amp;edit-&gt;buffer, b, 1, 0);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L951'>buffer</a>            951 src/editor/editdraw.c             b = edit_buffer_get_current_bol (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L962'>buffer</a>            962 src/editor/editdraw.c                 b = edit_buffer_get_forward_offset (&amp;edit-&gt;buffer, b, 1, 0);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L968'>buffer</a>            968 src/editor/editdraw.c                     b = edit_buffer_get_forward_offset (&amp;edit-&gt;buffer, b, 1, 0);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L976'>buffer</a>            976 src/editor/editdraw.c                 b = edit_buffer_get_backward_offset (&amp;edit-&gt;buffer,</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L977'>buffer</a>            977 src/editor/editdraw.c                                                      edit_buffer_get_current_bol (&amp;edit-&gt;buffer),</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L990'>buffer</a>            990 src/editor/editdraw.c                 b = edit_buffer_get_current_bol (&amp;edit-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L991'>buffer</a>            991 src/editor/editdraw.c                 b = edit_buffer_get_forward_offset (&amp;edit-&gt;buffer, b, 1, 0);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1005'>buffer</a>           1005 src/editor/editdraw.c         edit_draw_this_char (edit, edit-&gt;buffer.curs1, edit-&gt;curs_row, start_column, end_column);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1009'>buffer</a>           1009 src/editor/editdraw.c         edit_draw_this_char (edit, edit-&gt;buffer.curs1, edit-&gt;curs_row, start_column, end_column);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1016'>buffer</a>           1016 src/editor/editdraw.c     prev_curs = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L724'>buffer</a>            724 src/editor/editwidget.c             edit_move_forward3 (edit, edit_buffer_get_current_bol (&amp;edit-&gt;buffer), 0,</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L725'>buffer</a>            725 src/editor/editwidget.c                                 edit_buffer_get_current_eol (&amp;edit-&gt;buffer));</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L744'>buffer</a>            744 src/editor/editwidget.c         edit_move_to_prev_col (edit, edit_buffer_get_current_bol (&amp;edit-&gt;buffer));</span>
+<span class='curline'><a href='../S/src--editor--editwidget.h.html#L78'>buffer</a>             78 src/editor/editwidget.h     edit_buffer_t buffer;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L129'>buffer</a>            129 src/editor/format.c     for (i = edit-&gt;buffer.curs_line - 1; i &gt;= 0; i--)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L131'>buffer</a>            131 src/editor/format.c             (force &amp;&amp; bad_line_start (&amp;edit-&gt;buffer, line_start (&amp;edit-&gt;buffer, i))))</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L137'>buffer</a>            137 src/editor/format.c     *lines = edit-&gt;buffer.curs_line - i;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L139'>buffer</a>            139 src/editor/format.c     return edit_buffer_get_backward_offset (&amp;edit-&gt;buffer,</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L140'>buffer</a>            140 src/editor/format.c                                             edit_buffer_get_current_bol (&amp;edit-&gt;buffer), *lines);</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L154'>buffer</a>            154 src/editor/format.c     for (i = edit-&gt;buffer.curs_line + 1; i &lt;= edit-&gt;buffer.lines; i++)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L156'>buffer</a>            156 src/editor/format.c             (force &amp;&amp; bad_line_start (&amp;edit-&gt;buffer, line_start (&amp;edit-&gt;buffer, i))))</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L162'>buffer</a>            162 src/editor/format.c     return edit_buffer_get_eol (&amp;edit-&gt;buffer,</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L163'>buffer</a>            163 src/editor/format.c                                 edit_buffer_get_forward_offset (&amp;edit-&gt;buffer,</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L165'>buffer</a>            165 src/editor/format.c                                                                 (&amp;edit-&gt;buffer),</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L166'>buffer</a>            166 src/editor/format.c                                                                 i - edit-&gt;buffer.curs_line, 0));</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L364'>buffer</a>            364 src/editor/format.c     edit_cursor_move (edit, q - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L377'>buffer</a>            377 src/editor/format.c     while (strchr ("\t ", edit_buffer_get_byte (&amp;edit-&gt;buffer, q)) != NULL</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L378'>buffer</a>            378 src/editor/format.c            &amp;&amp; q &lt; edit-&gt;buffer.size - 1)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L410'>buffer</a>            410 src/editor/format.c     cursor = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L412'>buffer</a>            412 src/editor/format.c         while (strchr ("\t ", edit_buffer_get_byte (&amp;edit-&gt;buffer, p)) != NULL)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L420'>buffer</a>            420 src/editor/format.c                 while (strchr ("\t ", edit_buffer_get_byte (&amp;edit-&gt;buffer, p)) != NULL)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L427'>buffer</a>            427 src/editor/format.c                 edit_cursor_move (edit, p - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L428'>buffer</a>            428 src/editor/format.c                 curs = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L431'>buffer</a>            431 src/editor/format.c                     cursor += edit-&gt;buffer.curs1 - p;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L432'>buffer</a>            432 src/editor/format.c                 p = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L436'>buffer</a>            436 src/editor/format.c                 edit_cursor_move (edit, p - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L437'>buffer</a>            437 src/editor/format.c                 while (strchr ("\t ", edit_buffer_get_byte (&amp;edit-&gt;buffer, p)) != NULL)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L440'>buffer</a>            440 src/editor/format.c                     if (cursor &gt; edit-&gt;buffer.curs1)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L443'>buffer</a>            443 src/editor/format.c                 p = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L447'>buffer</a>            447 src/editor/format.c         c = edit_buffer_get_byte (&amp;edit-&gt;buffer, p);</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L465'>buffer</a>            465 src/editor/format.c         if (edit_buffer_get_byte (&amp;edit-&gt;buffer, p - 1) == '\n'</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L488'>buffer</a>            488 src/editor/format.c     if (edit_line_is_blank (edit, edit-&gt;buffer.curs_line))</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L495'>buffer</a>            495 src/editor/format.c     t = get_paragraph (&amp;edit-&gt;buffer, p, q, indent != 0);</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L541'>buffer</a>            541 src/editor/format.c     edit_cursor_move (edit, q - edit-&gt;buffer.curs1);</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L544'>buffer</a>            544 src/editor/format.c     if (edit-&gt;buffer.curs_line &lt; edit-&gt;buffer.lines)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L552'>buffer</a>            552 src/editor/format.c         while (edit-&gt;buffer.curs_line &lt; edit-&gt;buffer.lines</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L553'>buffer</a>            553 src/editor/format.c                &amp;&amp; edit_line_is_blank (edit, edit-&gt;buffer.curs_line));</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L263'>buffer</a>            263 src/editor/syntax.c     c = xx_tolower (edit, edit_buffer_get_byte (&amp;edit-&gt;buffer, i - 1));</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L276'>buffer</a>            276 src/editor/syntax.c                 c = xx_tolower (edit, edit_buffer_get_byte (&amp;edit-&gt;buffer, i));</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L292'>buffer</a>            292 src/editor/syntax.c                 c = xx_tolower (edit, edit_buffer_get_byte (&amp;edit-&gt;buffer, i));</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L324'>buffer</a>            324 src/editor/syntax.c                 c = xx_tolower (edit, edit_buffer_get_byte (&amp;edit-&gt;buffer, i));</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L343'>buffer</a>            343 src/editor/syntax.c             c = xx_tolower (edit, edit_buffer_get_byte (&amp;edit-&gt;buffer, i));</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L353'>buffer</a>            353 src/editor/syntax.c             if (*p != xx_tolower (edit, edit_buffer_get_byte (&amp;edit-&gt;buffer, i)))</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L359'>buffer</a>            359 src/editor/syntax.c                     xx_tolower (edit, edit_buffer_get_byte (&amp;edit-&gt;buffer, i))) != NULL) ? -1 : i;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L387'>buffer</a>            387 src/editor/syntax.c     c = xx_tolower (edit, edit_buffer_get_byte (&amp;edit-&gt;buffer, i));</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L396'>buffer</a>            396 src/editor/syntax.c         if (edit_buffer_get_byte (&amp;edit-&gt;buffer, i - 1) == '\n')</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1399'>buffer</a>           1399 src/editor/syntax.c             s[i] = edit_buffer_get_byte (&amp;edit-&gt;buffer, i);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1423'>buffer</a>           1423 src/editor/syntax.c     if (edit-&gt;rules != NULL &amp;&amp; byte_index &lt; edit-&gt;buffer.size &amp;&amp; option_syntax_highlighting)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L270'>buffer</a>            270 src/filemanager/achown.c     char buffer[BUF_SMALL];</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L273'>buffer</a>            273 src/filemanager/achown.c     g_snprintf (buffer, sizeof (buffer), "Permissions (octal): %o", get_mode ());</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L274'>buffer</a>            274 src/filemanager/achown.c     label_set_text (l_mode, buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L844'>buffer</a>            844 src/filemanager/achown.c         char buffer[BUF_MEDIUM];</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L866'>buffer</a>            866 src/filemanager/achown.c         g_snprintf (buffer, sizeof (buffer), "%s (%d/%d)",</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L869'>buffer</a>            869 src/filemanager/achown.c         label_set_text (l_filename, buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L235'>buffer</a>            235 src/filemanager/chmod.c                 char buffer[BUF_TINY];</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L238'>buffer</a>            238 src/filemanager/chmod.c                 g_snprintf (buffer, sizeof (buffer), "%o", (unsigned int) c_stat);</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L239'>buffer</a>            239 src/filemanager/chmod.c                 label_set_text (statl, buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L289'>buffer</a>            289 src/filemanager/chmod.c     char buffer[BUF_TINY];</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L329'>buffer</a>            329 src/filemanager/chmod.c     g_snprintf (buffer, sizeof (buffer), "%o", (unsigned int) c_stat);</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L330'>buffer</a>            330 src/filemanager/chmod.c     statl = label_new (y + 2, cols, buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L338'>buffer</a>            338 src/filemanager/chown.c     char buffer[BUF_TINY];</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L371'>buffer</a>            371 src/filemanager/chown.c         size_trunc_len (buffer, GW - 4, sf_stat.st_size, 0, panels_options.kilobyte_si);</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L372'>buffer</a>            372 src/filemanager/chown.c         chown_label (3, buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L678'>buffer</a>            678 src/filemanager/cmd.c         initial_command = cmdline-&gt;buffer;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1270'>buffer</a>           1270 src/filemanager/cmd.c         char buffer[MC_MAXPATHLEN];</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1273'>buffer</a>           1273 src/filemanager/cmd.c         i = readlink (p, buffer, sizeof (buffer) - 1);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1278'>buffer</a>           1278 src/filemanager/cmd.c             buffer[i] = '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1282'>buffer</a>           1282 src/filemanager/cmd.c                 input_expand_dialog (_("Edit symlink"), q, MC_HISTORY_FM_EDIT_LINK, buffer,</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1286'>buffer</a>           1286 src/filemanager/cmd.c             if (dest != NULL &amp;&amp; *dest != '\0' &amp;&amp; strcmp (buffer, dest) != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L251'>buffer</a>            251 src/filemanager/command.c     char *cmd = lc_cmdline-&gt;buffer;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L91'>buffer</a>             91 src/filemanager/ext.c static char buffer[BUF_1K];</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L293'>buffer</a>            293 src/filemanager/ext.c                         pbuffer = buffer;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L388'>buffer</a>            388 src/filemanager/ext.c     pbuffer = buffer;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L343'>buffer</a>            343 src/filemanager/filegui.c file_frmt_time (char *buffer, double eta_secs)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L349'>buffer</a>            349 src/filemanager/filegui.c     g_snprintf (buffer, BUF_TINY, _("%d:%02d.%02d"), eta_hours, eta_mins, eta_s);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L355'>buffer</a>            355 src/filemanager/filegui.c file_eta_prepare_for_show (char *buffer, double eta_secs, gboolean always_show)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L360'>buffer</a>            360 src/filemanager/filegui.c         *buffer = '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L366'>buffer</a>            366 src/filemanager/filegui.c     g_snprintf (buffer, BUF_TINY, _("ETA %s"), _fmt_buff);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L372'>buffer</a>            372 src/filemanager/filegui.c file_bps_prepare_for_show (char *buffer, long bps)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L376'>buffer</a>            376 src/filemanager/filegui.c         g_snprintf (buffer, BUF_TINY, _("%.2f MB/s"), bps / (1024 * 1024.0));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L380'>buffer</a>            380 src/filemanager/filegui.c         g_snprintf (buffer, BUF_TINY, _("%.2f KB/s"), bps / 1024.0);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L384'>buffer</a>            384 src/filemanager/filegui.c         g_snprintf (buffer, BUF_TINY, _("%ld B/s"), bps);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L387'>buffer</a>            387 src/filemanager/filegui.c         *buffer = '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L406'>buffer</a>            406 src/filemanager/filegui.c     g_snprintf (buffer, sizeof (buffer), rd_widgets [i].text, p1, p2); \</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L407'>buffer</a>            407 src/filemanager/filegui.c     label2 = WIDGET (label_new (ypos, rd_widgets [i].xpos, buffer)); \</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L464'>buffer</a>            464 src/filemanager/filegui.c     char buffer[BUF_SMALL];</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L887'>buffer</a>            887 src/filemanager/filegui.c     char buffer[BUF_TINY];</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L912'>buffer</a>            912 src/filemanager/filegui.c             g_snprintf (buffer, sizeof (buffer), "%s %s", buffer2, stalled_msg);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L918'>buffer</a>            918 src/filemanager/filegui.c             g_snprintf (buffer, sizeof (buffer), "%s (%s) %s", buffer2, buffer3, stalled_msg);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L923'>buffer</a>            923 src/filemanager/filegui.c         g_snprintf (buffer, sizeof (buffer), "%s", stalled_msg);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L926'>buffer</a>            926 src/filemanager/filegui.c     label_set_text (ui-&gt;progress_file_label, buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L934'>buffer</a>            934 src/filemanager/filegui.c     char buffer[BUF_TINY];</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L945'>buffer</a>            945 src/filemanager/filegui.c         g_snprintf (buffer, sizeof (buffer), _("Files processed: %zu/%zu"), done, total);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L947'>buffer</a>            947 src/filemanager/filegui.c         g_snprintf (buffer, sizeof (buffer), _("Files processed: %zu"), done);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L948'>buffer</a>            948 src/filemanager/filegui.c     label_set_text (ui-&gt;total_files_processed_label, buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L957'>buffer</a>            957 src/filemanager/filegui.c     char buffer[BUF_TINY];</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L994'>buffer</a>            994 src/filemanager/filegui.c                 g_snprintf (buffer, sizeof (buffer), _("Time: %s %s"), buffer2, buffer3);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L999'>buffer</a>            999 src/filemanager/filegui.c                 g_snprintf (buffer, sizeof (buffer), _("Time: %s %s (%s)"), buffer2, buffer3,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1006'>buffer</a>           1006 src/filemanager/filegui.c                 g_snprintf (buffer, sizeof (buffer), _("Time: %s"), buffer2);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1010'>buffer</a>           1010 src/filemanager/filegui.c                 g_snprintf (buffer, sizeof (buffer), _("Time: %s (%s)"), buffer2, buffer4);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1014'>buffer</a>           1014 src/filemanager/filegui.c         label_set_text (ui-&gt;time_label, buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1021'>buffer</a>           1021 src/filemanager/filegui.c             g_snprintf (buffer, sizeof (buffer), _(" Total: %s "), buffer2);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1025'>buffer</a>           1025 src/filemanager/filegui.c             g_snprintf (buffer, sizeof (buffer), _(" Total: %s/%s "), buffer2, buffer3);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1028'>buffer</a>           1028 src/filemanager/filegui.c         hline_set_text (ui-&gt;total_bytes_label, buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L372'>buffer</a>            372 src/filemanager/find.c     char buffer[BUF_TINY];</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L373'>buffer</a>            373 src/filemanager/find.c     g_snprintf (buffer, sizeof (buffer), _("Found: %ld"), matches);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L374'>buffer</a>            374 src/filemanager/find.c     label_set_text (found_num_label, buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L427'>buffer</a>            427 src/filemanager/find.c     gboolean disable = in_name-&gt;buffer[0] == '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L441'>buffer</a>            441 src/filemanager/find.c     gboolean disable = in_with-&gt;buffer[0] == '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L499'>buffer</a>            499 src/filemanager/find.c             &amp;&amp; (in_name-&gt;buffer[0] != '\0') &amp;&amp; !find_check_regexp (in_name-&gt;buffer))</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L509'>buffer</a>            509 src/filemanager/find.c         if ((content_regexp_cbox-&gt;state &amp; C_BOOL) &amp;&amp; (in_with-&gt;buffer[0] != '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L510'>buffer</a>            510 src/filemanager/find.c             &amp;&amp; !find_check_regexp (in_with-&gt;buffer))</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L770'>buffer</a>            770 src/filemanager/find.c             temp_dir = in_start-&gt;buffer;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L808'>buffer</a>            808 src/filemanager/find.c             options.ignore_dirs = g_strdup (in_ignore-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L810'>buffer</a>            810 src/filemanager/find.c             *content = in_with-&gt;buffer[0] != '\0' ? g_strdup (in_with-&gt;buffer) : NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L811'>buffer</a>            811 src/filemanager/find.c             if (in_name-&gt;buffer[0] != '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L812'>buffer</a>            812 src/filemanager/find.c                 *pattern = g_strdup (in_name-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L815'>buffer</a>            815 src/filemanager/find.c             *start_dir = !input_is_empty (in_start) ? in_start-&gt;buffer : (char *) ".";</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L846'>buffer</a>            846 src/filemanager/find.c             if (!options.ignore_dirs_enable || in_ignore-&gt;buffer[0] == '\0'</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L847'>buffer</a>            847 src/filemanager/find.c                 || DIR_IS_DOT (in_ignore-&gt;buffer))</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L850'>buffer</a>            850 src/filemanager/find.c                 *ignore_dirs = g_strdup (in_ignore-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L985'>buffer</a>            985 src/filemanager/find.c     char buffer[BUF_4K];        /* raw input buffer */</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1025'>buffer</a>           1025 src/filemanager/find.c         g_snprintf (buffer, sizeof (buffer), _("Grepping in %s"), filename);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1026'>buffer</a>           1026 src/filemanager/find.c         status_update (str_trunc (buffer, WIDGET (h)-&gt;cols - 8));</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1070'>buffer</a>           1070 src/filemanager/find.c                     n_read = mc_read (file_fd, buffer, sizeof (buffer));</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1075'>buffer</a>           1075 src/filemanager/find.c                 ch = buffer[pos++];</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1333'>buffer</a>           1333 src/filemanager/find.c                     char buffer[BUF_MEDIUM];</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1335'>buffer</a>           1335 src/filemanager/find.c                     g_snprintf (buffer, sizeof (buffer), _("Searching %s"), directory);</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L235'>buffer</a>            235 src/filemanager/info.c             char buffer[10];</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L236'>buffer</a>            236 src/filemanager/info.c             size_trunc_len (buffer, 9, st.st_size, 0, panels_options.kilobyte_si);</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L237'>buffer</a>            237 src/filemanager/info.c             tty_printf (_("Size:       %s"), buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L909'>buffer</a>            909 src/filemanager/layout.c         static char buffer[BUF_SMALL];</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L911'>buffer</a>            911 src/filemanager/layout.c         g_snprintf (buffer, sizeof (buffer), "%ith Panel", num);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L912'>buffer</a>            912 src/filemanager/layout.c         return buffer;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L747'>buffer</a>            747 src/filemanager/midnight.c         char buffer[MC_MAXPATHLEN];</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L752'>buffer</a>            752 src/filemanager/midnight.c         i = mc_readlink (vpath, buffer, sizeof (buffer) - 1);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L757'>buffer</a>            757 src/filemanager/midnight.c             buffer[i] = '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L758'>buffer</a>            758 src/filemanager/midnight.c             command_insert (cmdline, buffer, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1465'>buffer</a>           1465 src/filemanager/midnight.c             for (i = 0; cmdline-&gt;buffer[i] != '\0' &amp;&amp;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1466'>buffer</a>           1466 src/filemanager/midnight.c                  (cmdline-&gt;buffer[i] == ' ' || cmdline-&gt;buffer[i] == '\t'); i++)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1469'>buffer</a>           1469 src/filemanager/midnight.c             if (cmdline-&gt;buffer[i] != '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1512'>buffer</a>           1512 src/filemanager/midnight.c             else if (!command_prompt || cmdline-&gt;buffer[0] == '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1660'>buffer</a>           1660 src/filemanager/midnight.c         GString *buffer;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1662'>buffer</a>           1662 src/filemanager/midnight.c         buffer = g_string_sized_new (len - start);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1663'>buffer</a>           1663 src/filemanager/midnight.c         if (str_convert (conv, &amp;data[start], buffer) != ESTR_FAILURE)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1664'>buffer</a>           1664 src/filemanager/midnight.c             result = g_string_free (buffer, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1666'>buffer</a>           1666 src/filemanager/midnight.c             g_string_free (buffer, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L459'>buffer</a>            459 src/filemanager/panel.c     static char buffer[MC_MAXPATHLEN * MB_LEN_MAX + 1];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L463'>buffer</a>            463 src/filemanager/panel.c     g_strlcpy (buffer, fe-&gt;fname, sizeof (buffer));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L464'>buffer</a>            464 src/filemanager/panel.c     return buffer;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L507'>buffer</a>            507 src/filemanager/panel.c     static char buffer[BUF_TINY];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L515'>buffer</a>            515 src/filemanager/panel.c         format_device_number (buffer, len + 1, fe-&gt;st.st_rdev);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L518'>buffer</a>            518 src/filemanager/panel.c         size_trunc_len (buffer, (unsigned int) len, fe-&gt;st.st_size, 0, panels_options.kilobyte_si);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L520'>buffer</a>            520 src/filemanager/panel.c     return buffer;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L544'>buffer</a>            544 src/filemanager/panel.c     static char buffer[2];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L549'>buffer</a>            549 src/filemanager/panel.c         buffer[0] = PATH_SEP;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L553'>buffer</a>            553 src/filemanager/panel.c             buffer[0] = '~';</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L555'>buffer</a>            555 src/filemanager/panel.c             buffer[0] = '!';</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L557'>buffer</a>            557 src/filemanager/panel.c             buffer[0] = '@';</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L560'>buffer</a>            560 src/filemanager/panel.c         buffer[0] = '-';</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L562'>buffer</a>            562 src/filemanager/panel.c         buffer[0] = '=';</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L564'>buffer</a>            564 src/filemanager/panel.c         buffer[0] = '&gt;';</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L566'>buffer</a>            566 src/filemanager/panel.c         buffer[0] = '+';</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L568'>buffer</a>            568 src/filemanager/panel.c         buffer[0] = '|';</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L570'>buffer</a>            570 src/filemanager/panel.c         buffer[0] = '#';</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L572'>buffer</a>            572 src/filemanager/panel.c         buffer[0] = '?';        /* non-regular of unknown kind */</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L574'>buffer</a>            574 src/filemanager/panel.c         buffer[0] = '*';</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L576'>buffer</a>            576 src/filemanager/panel.c         buffer[0] = ' ';</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L577'>buffer</a>            577 src/filemanager/panel.c     buffer[1] = '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L578'>buffer</a>            578 src/filemanager/panel.c     return buffer;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L631'>buffer</a>            631 src/filemanager/panel.c     static char buffer[10];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L635'>buffer</a>            635 src/filemanager/panel.c     g_snprintf (buffer, sizeof (buffer), "0%06lo", (unsigned long) fe-&gt;st.st_mode);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L636'>buffer</a>            636 src/filemanager/panel.c     return buffer;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L645'>buffer</a>            645 src/filemanager/panel.c     static char buffer[BUF_TINY];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L649'>buffer</a>            649 src/filemanager/panel.c     g_snprintf (buffer, sizeof (buffer), "%16d", (int) fe-&gt;st.st_nlink);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L650'>buffer</a>            650 src/filemanager/panel.c     return buffer;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L659'>buffer</a>            659 src/filemanager/panel.c     static char buffer[10];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L663'>buffer</a>            663 src/filemanager/panel.c     g_snprintf (buffer, sizeof (buffer), "%lu", (unsigned long) fe-&gt;st.st_ino);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L664'>buffer</a>            664 src/filemanager/panel.c     return buffer;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L673'>buffer</a>            673 src/filemanager/panel.c     static char buffer[10];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L677'>buffer</a>            677 src/filemanager/panel.c     g_snprintf (buffer, sizeof (buffer), "%lu", (unsigned long) fe-&gt;st.st_uid);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L678'>buffer</a>            678 src/filemanager/panel.c     return buffer;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L687'>buffer</a>            687 src/filemanager/panel.c     static char buffer[10];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L691'>buffer</a>            691 src/filemanager/panel.c     g_snprintf (buffer, sizeof (buffer), "%lu", (unsigned long) fe-&gt;st.st_gid);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L692'>buffer</a>            692 src/filemanager/panel.c     return buffer;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1072'>buffer</a>           1072 src/filemanager/panel.c     char buffer[BUF_SMALL], b_bytes[BUF_SMALL];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1079'>buffer</a>           1079 src/filemanager/panel.c     buf = size_only ? b_bytes : buffer;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1090'>buffer</a>           1090 src/filemanager/panel.c         g_snprintf (buffer, sizeof (buffer),</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1323'>buffer</a>           1323 src/filemanager/panel.c                 char buffer[BUF_SMALL];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1325'>buffer</a>           1325 src/filemanager/panel.c                 g_snprintf (buffer, sizeof (buffer), " %s ",</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1330'>buffer</a>           1330 src/filemanager/panel.c                 tty_print_string (buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1984'>buffer</a>           1984 src/filemanager/panel.c     if (panels_options.navigate_with_arrows &amp;&amp; (cmdline-&gt;buffer[0] == '\0'))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2017'>buffer</a>           2017 src/filemanager/panel.c     if (cmdline-&gt;buffer[0] == '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2926'>buffer</a>           2926 src/filemanager/panel.c     char buffer[MC_MAXPATHLEN];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2938'>buffer</a>           2938 src/filemanager/panel.c     i = readlink (selection (panel)-&gt;fname, buffer, MC_MAXPATHLEN - 1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2948'>buffer</a>           2948 src/filemanager/panel.c     buffer[i] = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2953'>buffer</a>           2953 src/filemanager/panel.c         p = strrchr (buffer, PATH_SEP);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2957'>buffer</a>           2957 src/filemanager/panel.c             p = strrchr (buffer, PATH_SEP);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2963'>buffer</a>           2963 src/filemanager/panel.c     if (IS_PATH_SEP (*buffer))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2964'>buffer</a>           2964 src/filemanager/panel.c         new_dir_vpath = vfs_path_from_str (buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2966'>buffer</a>           2966 src/filemanager/panel.c         new_dir_vpath = vfs_path_append_new (panel-&gt;cwd_vpath, buffer, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L269'>buffer</a>            269 src/filemanager/panelize.c             add2panelize (label, g_strdup (pname-&gt;buffer));</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L538'>buffer</a>            538 src/filemanager/panelize.c             cmd = g_strdup (pname-&gt;buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L585'>buffer</a>            585 src/filemanager/panelize.c             GString *buffer;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L588'>buffer</a>            588 src/filemanager/panelize.c                 buffer = g_string_new (*profile_keys);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L591'>buffer</a>            591 src/filemanager/panelize.c                 buffer = g_string_new ("");</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L592'>buffer</a>            592 src/filemanager/panelize.c                 if (str_convert (conv, *profile_keys, buffer) == ESTR_FAILURE)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L593'>buffer</a>            593 src/filemanager/panelize.c                     g_string_assign (buffer, *profile_keys);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L596'>buffer</a>            596 src/filemanager/panelize.c             add2panelize (g_string_free (buffer, FALSE),</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L166'>buffer</a>            166 src/filemanager/treestore.c decode (char *buffer)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L168'>buffer</a>            168 src/filemanager/treestore.c     char *res = g_strdup (buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L211'>buffer</a>            211 src/filemanager/treestore.c     char buffer[MC_MAXPATHLEN + 20];</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L221'>buffer</a>            221 src/filemanager/treestore.c         &amp;&amp; (fgets (buffer, sizeof (buffer), file) == NULL</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L222'>buffer</a>            222 src/filemanager/treestore.c             || strncmp (buffer, TREE_SIGNATURE, strlen (TREE_SIGNATURE)) != 0))</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L235'>buffer</a>            235 src/filemanager/treestore.c         while (fgets (buffer, MC_MAXPATHLEN, file))</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L242'>buffer</a>            242 src/filemanager/treestore.c             if ((buffer[0] != '0' &amp;&amp; buffer[0] != '1'))</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L245'>buffer</a>            245 src/filemanager/treestore.c             if (buffer[1] != ':')</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L248'>buffer</a>            248 src/filemanager/treestore.c             scanned = buffer[0] == '1';</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L250'>buffer</a>            250 src/filemanager/treestore.c             lc_name = decode (buffer + 2);</span>
+<span class='curline'><a href='../S/src--learn.c.html#L296'>buffer</a>            296 src/learn.c            char buffer[BUF_TINY];</span>
+<span class='curline'><a href='../S/src--learn.c.html#L306'>buffer</a>            306 src/learn.c            g_snprintf (buffer, sizeof (buffer), "%s%*s", label, padding, "");</span>
+<span class='curline'><a href='../S/src--learn.c.html#L309'>buffer</a>            309 src/learn.c                WIDGET (button_new (y, x, B_USER + i, NARROW_BUTTON, buffer, learn_button));</span>
+<span class='curline'><a href='../S/src--main.c.html#L287'>buffer</a>            287 src/main.c             char *buffer;</span>
+<span class='curline'><a href='../S/src--main.c.html#L290'>buffer</a>            290 src/main.c             buffer = mc_config_get_string (mc_global.panels_config, "Dirs", "other_dir", ".");</span>
+<span class='curline'><a href='../S/src--main.c.html#L291'>buffer</a>            291 src/main.c             vpath = vfs_path_from_str (buffer);</span>
+<span class='curline'><a href='../S/src--main.c.html#L293'>buffer</a>            293 src/main.c                 saved_other_dir = buffer;</span>
+<span class='curline'><a href='../S/src--main.c.html#L295'>buffer</a>            295 src/main.c                 g_free (buffer);</span>
+<span class='curline'><a href='../S/src--selcodepage.c.html#L80'>buffer</a>             80 src/selcodepage.c     char buffer[255];</span>
+<span class='curline'><a href='../S/src--selcodepage.c.html#L95'>buffer</a>             95 src/selcodepage.c         g_snprintf (buffer, sizeof (buffer), "%c  %s", get_hotkey (i), name);</span>
+<span class='curline'><a href='../S/src--selcodepage.c.html#L96'>buffer</a>             96 src/selcodepage.c         LISTBOX_APPEND_TEXT (listbox, get_hotkey (i), buffer, NULL, FALSE);</span>
+<span class='curline'><a href='../S/src--selcodepage.c.html#L101'>buffer</a>            101 src/selcodepage.c         g_snprintf (buffer, sizeof (buffer), "%c  %s", hotkey, _("Other 8 bit"));</span>
+<span class='curline'><a href='../S/src--selcodepage.c.html#L102'>buffer</a>            102 src/selcodepage.c         LISTBOX_APPEND_TEXT (listbox, hotkey, buffer, NULL, FALSE);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L792'>buffer</a>            792 src/setup.c        char *buffer;</span>
+<span class='curline'><a href='../S/src--setup.c.html#L797'>buffer</a>            797 src/setup.c        buffer = mc_config_get_string (mc_global.panels_config, section, "display", "listing");</span>
+<span class='curline'><a href='../S/src--setup.c.html#L800'>buffer</a>            800 src/setup.c            if (g_ascii_strcasecmp (panel_types[i].opt_name, buffer) == 0)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L806'>buffer</a>            806 src/setup.c        g_free (buffer);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1005'>buffer</a>           1005 src/setup.c        char *buffer;</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1108'>buffer</a>           1108 src/setup.c            buffer =</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1111'>buffer</a>           1111 src/setup.c            if (buffer[0] != '\0')</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1113'>buffer</a>           1113 src/setup.c                mc_global.display_codepage = get_codepage_index (buffer);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1116'>buffer</a>           1116 src/setup.c            g_free (buffer);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1117'>buffer</a>           1117 src/setup.c            buffer =</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1120'>buffer</a>           1120 src/setup.c            if (buffer[0] != '\0')</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1122'>buffer</a>           1122 src/setup.c                default_source_codepage = get_codepage_index (buffer);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1126'>buffer</a>           1126 src/setup.c            g_free (buffer);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1294'>buffer</a>           1294 src/setup.c        char *buffer;</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1296'>buffer</a>           1296 src/setup.c        buffer =</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1299'>buffer</a>           1299 src/setup.c        if ((buffer != NULL) &amp;&amp; (buffer[0] != '\0'))</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1300'>buffer</a>           1300 src/setup.c            return buffer;</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1302'>buffer</a>           1302 src/setup.c        g_free (buffer);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1427'>buffer</a>           1427 src/setup.c        char *buffer, buffer2[BUF_TINY];</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1437'>buffer</a>           1437 src/setup.c        buffer = mc_config_get_string (mc_global.panels_config, section, "sort_order", "name");</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1438'>buffer</a>           1438 src/setup.c        panel-&gt;sort_field = panel_get_field_by_id (buffer);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1442'>buffer</a>           1442 src/setup.c        g_free (buffer);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1445'>buffer</a>           1445 src/setup.c        buffer = mc_config_get_string (mc_global.panels_config, section, "list_mode", "full");</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1448'>buffer</a>           1448 src/setup.c            if (g_ascii_strcasecmp (list_types[i].key, buffer) == 0)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1453'>buffer</a>           1453 src/setup.c        g_free (buffer);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1479'>buffer</a>           1479 src/setup.c        char buffer[BUF_TINY];</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1502'>buffer</a>           1502 src/setup.c            g_snprintf (buffer, sizeof (buffer), "user_status%lld", (long long) i);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1503'>buffer</a>           1503 src/setup.c            mc_config_set_string (mc_global.panels_config, section, buffer,</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L157'>buffer</a>            157 src/vfs/cpio/cpio.c static ssize_t cpio_read (void *fh, char *buffer, size_t count);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L820'>buffer</a>            820 src/vfs/cpio/cpio.c cpio_read (void *fh, char *buffer, size_t count)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L832'>buffer</a>            832 src/vfs/cpio/cpio.c     res = mc_read (fd, buffer, count);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L499'>buffer</a>            499 src/vfs/extfs/extfs.c     char *buffer;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L513'>buffer</a>            513 src/vfs/extfs/extfs.c     buffer = g_malloc (BUF_4K);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L514'>buffer</a>            514 src/vfs/extfs/extfs.c     while (fgets (buffer, BUF_4K, extfsd) != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L519'>buffer</a>            519 src/vfs/extfs/extfs.c         if (vfs_parse_ls_lga (buffer, &amp;hstat, &amp;current_file_name, &amp;current_link_name, NULL))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L549'>buffer</a>            549 src/vfs/extfs/extfs.c                     g_free (buffer);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L570'>buffer</a>            570 src/vfs/extfs/extfs.c                         g_free (buffer);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L622'>buffer</a>            622 src/vfs/extfs/extfs.c     g_free (buffer);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L971'>buffer</a>            971 src/vfs/extfs/extfs.c extfs_read (void *data, char *buffer, size_t count)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L975'>buffer</a>            975 src/vfs/extfs/extfs.c     return read (file-&gt;local_handle, buffer, count);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L392'>buffer</a>            392 src/vfs/fish/fish.c             char buffer[BUF_8K];</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L394'>buffer</a>            394 src/vfs/fish/fish.c             res = vfs_s_get_line_interruptible (me, buffer, sizeof (buffer), SUP-&gt;sockr);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L397'>buffer</a>            397 src/vfs/fish/fish.c             if (strncmp (buffer, "### ", 4) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L399'>buffer</a>            399 src/vfs/fish/fish.c             SUP-&gt;host_flags = atol (buffer);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L650'>buffer</a>            650 src/vfs/fish/fish.c     char buffer[BUF_8K] = "\0";</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L682'>buffer</a>            682 src/vfs/fish/fish.c         res = vfs_s_get_line_interruptible (me, buffer, sizeof (buffer), SUP-&gt;sockr);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L692'>buffer</a>            692 src/vfs/fish/fish.c             fputs (buffer, logfile);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L696'>buffer</a>            696 src/vfs/fish/fish.c         if (!strncmp (buffer, "### ", 4))</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L698'>buffer</a>            698 src/vfs/fish/fish.c         if ((!buffer[0]))</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L710'>buffer</a>            710 src/vfs/fish/fish.c         switch (buffer[0])</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L715'>buffer</a>            715 src/vfs/fish/fish.c                 char *data_start = buffer + 1;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L786'>buffer</a>            786 src/vfs/fish/fish.c             ST.st_size = (off_t) g_ascii_strtoll (buffer + 1, NULL, 10);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L791'>buffer</a>            791 src/vfs/fish/fish.c                 vfs_parse_filemode (buffer + 1, &amp;skipped, &amp;ST.st_mode);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L801'>buffer</a>            801 src/vfs/fish/fish.c                 vfs_parse_raw_filemode (buffer + 1, &amp;skipped, &amp;ST.st_mode);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L806'>buffer</a>            806 src/vfs/fish/fish.c                 vfs_split_text (buffer + 1);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L816'>buffer</a>            816 src/vfs/fish/fish.c                 if (sscanf (buffer + 1, "%d %d %d %d %d %d", &amp;tim.tm_year, &amp;tim.tm_mon,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L826'>buffer</a>            826 src/vfs/fish/fish.c                 if (sscanf (buffer + 1, "%d,%d", &amp;maj, &amp;min) != 2)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L838'>buffer</a>            838 src/vfs/fish/fish.c     reply_code = fish_decode_reply (buffer + 4, 0);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L862'>buffer</a>            862 src/vfs/fish/fish.c     char buffer[BUF_8K];</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L941'>buffer</a>            941 src/vfs/fish/fish.c         while ((n = read (h, buffer, sizeof (buffer))) &lt; 0)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L953'>buffer</a>            953 src/vfs/fish/fish.c         t = write (SUP-&gt;sockw, buffer, n);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1037'>buffer</a>           1037 src/vfs/fish/fish.c     char buffer[BUF_8K];</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1044'>buffer</a>           1044 src/vfs/fish/fish.c         n = MIN ((off_t) sizeof (buffer), (fish-&gt;total - fish-&gt;got));</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1047'>buffer</a>           1047 src/vfs/fish/fish.c             n = read (SUP-&gt;sockr, buffer, n);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L244'>buffer</a>            244 src/vfs/ftpfs/ftpfs.c static char buffer[BUF_MEDIUM];</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1554'>buffer</a>           1554 src/vfs/ftpfs/ftpfs.c     char buffer[2048] = "", *filename;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1602'>buffer</a>           1602 src/vfs/ftpfs/ftpfs.c             if (fgets (buffer, sizeof (buffer), fp) == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1606'>buffer</a>           1606 src/vfs/ftpfs/ftpfs.c                 fputs (buffer, MEDATA-&gt;logfile);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1610'>buffer</a>           1610 src/vfs/ftpfs/ftpfs.c             if (vfs_parse_ls_lga (buffer, &amp;s, &amp;filename, NULL))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1635'>buffer</a>           1635 src/vfs/ftpfs/ftpfs.c     while (fgets (buffer, sizeof (buffer), fp) != NULL);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2288'>buffer</a>           2288 src/vfs/ftpfs/ftpfs.c     p = buffer;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2309'>buffer</a>           2309 src/vfs/ftpfs/ftpfs.c     if (!*buffer)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2313'>buffer</a>           2313 src/vfs/ftpfs/ftpfs.c         if (strcmp (keywords[i - 1], buffer) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2384'>buffer</a>           2384 src/vfs/ftpfs/ftpfs.c         if (g_ascii_strcasecmp (host, buffer) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2396'>buffer</a>           2396 src/vfs/ftpfs/ftpfs.c             if (g_ascii_strncasecmp (host, buffer, host_domain - host) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2488'>buffer</a>           2488 src/vfs/ftpfs/ftpfs.c             *login = g_strdup (buffer);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2510'>buffer</a>           2510 src/vfs/ftpfs/ftpfs.c                 tmp_pass = g_strdup (buffer);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L348'>buffer</a>            348 src/vfs/local/local.c local_read (void *data, char *buffer, size_t count)</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L355'>buffer</a>            355 src/vfs/local/local.c     while ((n = read (*((int *) data), buffer, count)) == -1)</span>
+<span class='curline'><a href='../S/src--vfs--local--local.h.html#L26'>buffer</a>             26 src/vfs/local/local.h extern ssize_t local_read (void *data, char *buffer, size_t count);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L146'>buffer</a>            146 src/vfs/sftpfs/config_parser.c sftpfs_fill_config_entity_from_string (sftpfs_ssh_config_entity_t * config_entity, char *buffer)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L152'>buffer</a>            152 src/vfs/sftpfs/config_parser.c         if (mc_search_run (config_variables[i].pattern_regexp, buffer, 0, strlen (buffer), NULL))</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L163'>buffer</a>            163 src/vfs/sftpfs/config_parser.c             value = &amp;buffer[value_offset];</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L209'>buffer</a>            209 src/vfs/sftpfs/config_parser.c     char buffer[BUF_MEDIUM];</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L225'>buffer</a>            225 src/vfs/sftpfs/config_parser.c         if (fgets (buffer, sizeof (buffer), ssh_config_handler) == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L243'>buffer</a>            243 src/vfs/sftpfs/config_parser.c         cr = strrchr (buffer, '\n');</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L247'>buffer</a>            247 src/vfs/sftpfs/config_parser.c         if (mc_search_run (host_regexp, buffer, 0, strlen (buffer), NULL))</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L257'>buffer</a>            257 src/vfs/sftpfs/config_parser.c             host_pattern = &amp;buffer[host_pattern_offset];</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L279'>buffer</a>            279 src/vfs/sftpfs/config_parser.c             sftpfs_fill_config_entity_from_string (config_entity, buffer);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L241'>buffer</a>            241 src/vfs/sftpfs/file.c sftpfs_read_file (vfs_file_handler_t * file_handler, char *buffer, size_t count, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L261'>buffer</a>            261 src/vfs/sftpfs/file.c         rc = libssh2_sftp_read (file_handler_data-&gt;handle, buffer, count);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L295'>buffer</a>            295 src/vfs/sftpfs/file.c sftpfs_write_file (vfs_file_handler_t * file_handler, const char *buffer, size_t count,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L311'>buffer</a>            311 src/vfs/sftpfs/file.c         rc = libssh2_sftp_write (file_handler_data-&gt;handle, buffer, count);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L95'>buffer</a>             95 src/vfs/sftpfs/internal.h ssize_t sftpfs_read_file (vfs_file_handler_t * file_handler, char *buffer, size_t count,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L97'>buffer</a>             97 src/vfs/sftpfs/internal.h ssize_t sftpfs_write_file (vfs_file_handler_t * file_handler, const char *buffer, size_t count,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L430'>buffer</a>            430 src/vfs/sftpfs/vfs_class.c sftpfs_cb_read (void *data, char *buffer, size_t count)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L442'>buffer</a>            442 src/vfs/sftpfs/vfs_class.c     rc = sftpfs_read_file (fh, buffer, count, &amp;mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L193'>buffer</a>            193 src/vfs/smbfs/helpers/include/proto.h ssize_t read_data (int fd, char *buffer, size_t N);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L194'>buffer</a>            194 src/vfs/smbfs/helpers/include/proto.h ssize_t write_data (int fd, char *buffer, size_t N);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L196'>buffer</a>            196 src/vfs/smbfs/helpers/include/proto.h BOOL receive_smb (int fd, char *buffer, unsigned int timeout);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L197'>buffer</a>            197 src/vfs/smbfs/helpers/include/proto.h BOOL client_receive_smb (int fd, char *buffer, unsigned int timeout);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L199'>buffer</a>            199 src/vfs/smbfs/helpers/include/proto.h BOOL send_smb (int fd, char *buffer);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2068'>buffer</a>           2068 src/vfs/smbfs/helpers/lib/util.c     char buffer[NIS_MAXATTRVAL + 1];</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2077'>buffer</a>           2077 src/vfs/smbfs/helpers/lib/util.c         slprintf (buffer, sizeof (buffer) - 1, "[%s=%s]%s.%s", "key", user_name, nis_map,</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2079'>buffer</a>           2079 src/vfs/smbfs/helpers/lib/util.c         DEBUG (5, ("NIS+ querystring: %s\n", buffer));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2081'>buffer</a>           2081 src/vfs/smbfs/helpers/lib/util.c         if (result = nis_list (buffer, RETURN_RESULT, NULL, NULL))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L409'>buffer</a>            409 src/vfs/smbfs/helpers/lib/util_sock.c read_data (int fd, char *buffer, size_t N)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L421'>buffer</a>            421 src/vfs/smbfs/helpers/lib/util_sock.c             ret = SSL_read (ssl, buffer + total, N - total);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L425'>buffer</a>            425 src/vfs/smbfs/helpers/lib/util_sock.c             ret = read (fd, buffer + total, N - total);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L428'>buffer</a>            428 src/vfs/smbfs/helpers/lib/util_sock.c         ret = read (fd, buffer + total, N - total);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L457'>buffer</a>            457 src/vfs/smbfs/helpers/lib/util_sock.c write_data (int fd, char *buffer, size_t N)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L467'>buffer</a>            467 src/vfs/smbfs/helpers/lib/util_sock.c             ret = SSL_write (ssl, buffer + total, N - total);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L471'>buffer</a>            471 src/vfs/smbfs/helpers/lib/util_sock.c             ret = write (fd, buffer + total, N - total);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L474'>buffer</a>            474 src/vfs/smbfs/helpers/lib/util_sock.c         ret = write (fd, buffer + total, N - total);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L565'>buffer</a>            565 src/vfs/smbfs/helpers/lib/util_sock.c receive_smb (int fd, char *buffer, unsigned int timeout)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L571'>buffer</a>            571 src/vfs/smbfs/helpers/lib/util_sock.c     memset (buffer, '\0', smb_size + 100);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L573'>buffer</a>            573 src/vfs/smbfs/helpers/lib/util_sock.c     len = read_smb_length_return_keepalive (fd, buffer, timeout);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L591'>buffer</a>            591 src/vfs/smbfs/helpers/lib/util_sock.c         ret = read_data (fd, buffer + 4, len);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L613'>buffer</a>            613 src/vfs/smbfs/helpers/lib/util_sock.c client_receive_smb (int fd, char *buffer, unsigned int timeout)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L619'>buffer</a>            619 src/vfs/smbfs/helpers/lib/util_sock.c         ret = receive_smb (fd, buffer, timeout);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L624'>buffer</a>            624 src/vfs/smbfs/helpers/lib/util_sock.c             show_msg (buffer);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L629'>buffer</a>            629 src/vfs/smbfs/helpers/lib/util_sock.c         if (CVAL (buffer, 0) != 0x85)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L632'>buffer</a>            632 src/vfs/smbfs/helpers/lib/util_sock.c     show_msg (buffer);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L647'>buffer</a>            647 src/vfs/smbfs/helpers/lib/util_sock.c     char *buffer = (char *) &amp;blank;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L651'>buffer</a>            651 src/vfs/smbfs/helpers/lib/util_sock.c         ret = write_socket (fd, buffer + nwritten, len - nwritten);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L671'>buffer</a>            671 src/vfs/smbfs/helpers/lib/util_sock.c send_smb (int fd, char *buffer)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L676'>buffer</a>            676 src/vfs/smbfs/helpers/lib/util_sock.c     len = smb_len (buffer) + 4;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L680'>buffer</a>            680 src/vfs/smbfs/helpers/lib/util_sock.c         ret = write_socket (fd, buffer + nwritten, len - nwritten);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L457'>buffer</a>            457 src/vfs/smbfs/smbfs.c smbfs_read (void *data, char *buffer, size_t count)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L463'>buffer</a>            463 src/vfs/smbfs/smbfs.c     n = cli_read (info-&gt;cli, info-&gt;fnum, buffer, info-&gt;nread, count);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L866'>buffer</a>            866 src/vfs/tar/tar.c tar_read (void *fh, char *buffer, size_t count)</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L878'>buffer</a>            878 src/vfs/tar/tar.c     res = mc_read (fd, buffer, count);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L580'>buffer</a>            580 src/vfs/undelfs/undelfs.c undelfs_read (void *vfs_info, char *buffer, size_t count)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L585'>buffer</a>            585 src/vfs/undelfs/undelfs.c     p-&gt;dest_buffer = buffer;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L602'>buffer</a>            602 src/vfs/undelfs/undelfs.c     p-&gt;pos = p-&gt;pos + (p-&gt;dest_buffer - buffer);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L603'>buffer</a>            603 src/vfs/undelfs/undelfs.c     return p-&gt;dest_buffer - buffer;</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L175'>buffer</a>            175 src/viewer/display.c             char buffer[BUF_TRUNC_LEN + 1];</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L177'>buffer</a>            177 src/viewer/display.c             size_trunc_len (buffer, BUF_TRUNC_LEN, mcview_get_filesize (view), 0,</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L180'>buffer</a>            180 src/viewer/display.c                         buffer, mcview_may_still_grow (view) ? "+" : " ",</span>
+<span class='curline'><a href='../S/tests--lib--widget--complete_engine.c.html#L202'>buffer</a>            202 tests/lib/widget/complete_engine.c     w_input-&gt;buffer = g_strdup (data-&gt;input_buffer);</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L273'>buffer</a>            273 tests/src/editor/editcmd__edit_complete_word_cmd.c                 edit_buffer_get_byte (&amp;test_edit-&gt;buffer,</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L347'>buffer</a>            347 tests/src/editor/editcmd__edit_complete_word_cmd.c                 edit_buffer_get_byte (&amp;test_edit-&gt;buffer,</span>
+</pre>
+</body>
+</html>

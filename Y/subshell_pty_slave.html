@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>subshell_pty_slave</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L139'>subshell_pty_slave</a>  139 src/subshell/common.c static int subshell_pty_slave = -1;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L235'>subshell_pty_slave</a>  235 src/subshell/common.c     ioctl (subshell_pty_slave, TIOCSCTTY, 0);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L241'>subshell_pty_slave</a>  241 src/subshell/common.c     if (tcsetattr (subshell_pty_slave, TCSANOW, &amp;shell_mode))</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L249'>subshell_pty_slave</a>  249 src/subshell/common.c     tty_resize (subshell_pty_slave);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L340'>subshell_pty_slave</a>  340 src/subshell/common.c     dup2 (subshell_pty_slave, STDIN_FILENO);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L341'>subshell_pty_slave</a>  341 src/subshell/common.c     dup2 (subshell_pty_slave, STDOUT_FILENO);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L342'>subshell_pty_slave</a>  342 src/subshell/common.c     dup2 (subshell_pty_slave, STDERR_FILENO);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L345'>subshell_pty_slave</a>  345 src/subshell/common.c     close (subshell_pty_slave); /* These may be FD_CLOEXEC, but just in case... */</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L482'>subshell_pty_slave</a>  482 src/subshell/common.c         tcflush (subshell_pty_slave, TCIFLUSH);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1029'>subshell_pty_slave</a> 1029 src/subshell/common.c         subshell_pty_slave = pty_open_slave (pty_name);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1030'>subshell_pty_slave</a> 1030 src/subshell/common.c         if (subshell_pty_slave == -1)</span>
+</pre>
+</body>
+</html>

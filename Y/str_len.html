@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>str_len</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L61'>str_len</a>            61 lib/search/lib.c mc_search__recode_str (const char *str, gsize str_len,</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L71'>str_len</a>            71 lib/search/lib.c         *bytes_written = str_len;</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L72'>str_len</a>            72 lib/search/lib.c         return g_strndup (str, str_len);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L78'>str_len</a>            78 lib/search/lib.c         *bytes_written = str_len;</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L79'>str_len</a>            79 lib/search/lib.c         return g_strndup (str, str_len);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L82'>str_len</a>            82 lib/search/lib.c     ret = g_convert_with_iconv (str, str_len, conv, &amp;bytes_read, bytes_written, NULL);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L87'>str_len</a>            87 lib/search/lib.c         *bytes_written = str_len;</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L88'>str_len</a>            88 lib/search/lib.c         return g_strndup (str, str_len);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L97'>str_len</a>            97 lib/search/lib.c mc_search__get_one_symbol (const char *charset, const char *str, gsize str_len,</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L111'>str_len</a>           111 lib/search/lib.c     converted_str = mc_search__recode_str (str, str_len, charset, cp_display, &amp;converted_str_len);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L115'>str_len</a>           115 lib/search/lib.c     converted_str = g_strndup (str, str_len);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L146'>str_len</a>           146 lib/search/lib.c mc_search__tolower_case_str (const char *charset, const char *str, gsize str_len)</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L158'>str_len</a>           158 lib/search/lib.c         mc_search__recode_str (str, str_len, charset, cp_display, &amp;converted_str_len);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L178'>str_len</a>           178 lib/search/lib.c     gsize converted_str_len = str_len + 1;</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L182'>str_len</a>           182 lib/search/lib.c     tmp_str2 = converted_str = g_strndup (str, str_len);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L187'>str_len</a>           187 lib/search/lib.c     ret = g_string_new_len (converted_str, str_len);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L196'>str_len</a>           196 lib/search/lib.c mc_search__toupper_case_str (const char *charset, const char *str, gsize str_len)</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L208'>str_len</a>           208 lib/search/lib.c         mc_search__recode_str (str, str_len, charset, cp_display, &amp;converted_str_len);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L230'>str_len</a>           230 lib/search/lib.c     gsize converted_str_len = str_len + 1;</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L234'>str_len</a>           234 lib/search/lib.c     tmp_str2 = converted_str = g_strndup (str, str_len);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L239'>str_len</a>           239 lib/search/lib.c     ret = g_string_new_len (converted_str, str_len);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L125'>str_len</a>           125 lib/search/regex.c                                           const char *one_char, gsize str_len)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L130'>str_len</a>           130 lib/search/regex.c     upp = mc_search__toupper_case_str (charset, one_char, str_len);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L131'>str_len</a>           131 lib/search/regex.c     low = mc_search__tolower_case_str (charset, one_char, str_len);</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L64'>str_len</a>            64 lib/search/search.c                             gsize str_len, const char *charset)</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L69'>str_len</a>            69 lib/search/search.c     mc_search_cond-&gt;str = g_string_new_len (str, str_len);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L819'>str_len</a>           819 lib/util.c         size_t str_len;</span>
+<span class='curline'><a href='../S/lib--util.c.html#L894'>str_len</a>           894 lib/util.c         str_len = strlen (name);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L896'>str_len</a>           896 lib/util.c         if ((str_len &gt; 5 &amp;&amp; strcmp (&amp;name[str_len - 5], ".lzma") == 0) ||</span>
+<span class='curline'><a href='../S/lib--util.c.html#L897'>str_len</a>           897 lib/util.c             (str_len &gt; 4 &amp;&amp; strcmp (&amp;name[str_len - 4], ".tlz") == 0))</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L279'>str_len</a>           279 lib/widget/input.c     int str_len;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L281'>str_len</a>           281 lib/widget/input.c     str_len = str_length (in-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L282'>str_len</a>           282 lib/widget/input.c     if (start &gt;= str_len || end &gt; str_len + 1)</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L179'>str_len</a>           179 src/clipboard.c     size_t str_len;</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L196'>str_len</a>           196 src/clipboard.c     str_len = strlen (text);</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L200'>str_len</a>           200 src/clipboard.c         ret = mc_write (file, text, str_len);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L828'>str_len</a>           828 src/filemanager/panel.c                 int str_len;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L833'>str_len</a>           833 src/filemanager/panel.c                 str_len = str_length (txt);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L834'>str_len</a>           834 src/filemanager/panel.c                 i = MAX (0, str_len - len);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L841'>str_len</a>           841 src/filemanager/panel.c                     if (str_len &gt; len)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L489'>str_len</a>           489 src/vfs/fish/fish.c             size_t str_len;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L491'>str_len</a>           491 src/vfs/fish/fish.c             str_len = strlen (super-&gt;path_element-&gt;password);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L492'>str_len</a>           492 src/vfs/fish/fish.c             if ((write (SUP.sockw, super-&gt;path_element-&gt;password, str_len) != (ssize_t) str_len)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L913'>str_len</a>           913 src/vfs/smbfs/helpers/lib/util_str.c     size_t str_len;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L922'>str_len</a>           922 src/vfs/smbfs/helpers/lib/util_str.c     str_len = PTR_DIFF (p, src);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L923'>str_len</a>           923 src/vfs/smbfs/helpers/lib/util_str.c     strncpy (dest, src, MIN (n, str_len));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L924'>str_len</a>           924 src/vfs/smbfs/helpers/lib/util_str.c     dest[str_len] = '\0';</span>
+</pre>
+</body>
+</html>

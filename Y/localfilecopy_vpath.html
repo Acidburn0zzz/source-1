@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>localfilecopy_vpath</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L90'>localfilecopy_vpath</a>   90 src/filemanager/ext.c static vfs_path_t *localfilecopy_vpath = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L120'>localfilecopy_vpath</a>  120 src/filemanager/ext.c     if (localfilecopy_vpath == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L127'>localfilecopy_vpath</a>  127 src/filemanager/ext.c         mc_stat (localfilecopy_vpath, &amp;mystat);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L130'>localfilecopy_vpath</a>  130 src/filemanager/ext.c     mc_ungetlocalcopy (filename_vpath, localfilecopy_vpath, has_changed);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L131'>localfilecopy_vpath</a>  131 src/filemanager/ext.c     vfs_path_free (localfilecopy_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L132'>localfilecopy_vpath</a>  132 src/filemanager/ext.c     localfilecopy_vpath = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L143'>localfilecopy_vpath</a>  143 src/filemanager/ext.c     if (localfilecopy_vpath == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L146'>localfilecopy_vpath</a>  146 src/filemanager/ext.c         localfilecopy_vpath = mc_getlocalcopy (filename_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L147'>localfilecopy_vpath</a>  147 src/filemanager/ext.c         if (localfilecopy_vpath == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L150'>localfilecopy_vpath</a>  150 src/filemanager/ext.c         mc_stat (localfilecopy_vpath, &amp;mystat);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L154'>localfilecopy_vpath</a>  154 src/filemanager/ext.c     return quote_func (vfs_path_get_last_path_str (localfilecopy_vpath), FALSE);</span>
+</pre>
+</body>
+</html>

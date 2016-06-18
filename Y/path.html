@@ -1,0 +1,505 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>path</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--lock.c.html#L122'>path</a>              122 lib/lock.c         elpath = vfs_path_get_by_index (fname_vpath, 0)-&gt;path;</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L212'>path</a>              212 lib/lock.c         elpath = vfs_path_get_by_index (fname_vpath, 0)-&gt;path;</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L288'>path</a>              288 lib/lock.c         elpath = vfs_path_get_by_index (fname_vpath, 0)-&gt;path;</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L68'>path</a>               68 lib/shell.c            mc_shell-&gt;path = g_strdup ("/bin/bash");</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L70'>path</a>               70 lib/shell.c            mc_shell-&gt;path = g_strdup ("/bin/ash");</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L72'>path</a>               72 lib/shell.c            mc_shell-&gt;path = g_strdup ("/bin/dash");</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L74'>path</a>               74 lib/shell.c            mc_shell-&gt;path = g_strdup ("/bin/busybox");</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L76'>path</a>               76 lib/shell.c            mc_shell-&gt;path = g_strdup ("/bin/zsh");</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L78'>path</a>               78 lib/shell.c            mc_shell-&gt;path = g_strdup ("/bin/tcsh");</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L80'>path</a>               80 lib/shell.c            mc_shell-&gt;path = g_strdup ("/bin/csh");</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L90'>path</a>               90 lib/shell.c            mc_shell-&gt;path = g_strdup ("/bin/sh");</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L134'>path</a>              134 lib/shell.c            mc_shell-&gt;path = shell_name;</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L145'>path</a>              145 lib/shell.c        if (strstr (mc_shell-&gt;path, "/zsh") != NULL || strstr (mc_shell-&gt;real_path, "/zsh") != NULL</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L152'>path</a>              152 lib/shell.c        else if (strstr (mc_shell-&gt;path, "/tcsh") != NULL</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L159'>path</a>              159 lib/shell.c        else if (strstr (mc_shell-&gt;path, "/csh") != NULL</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L165'>path</a>              165 lib/shell.c        else if (strstr (mc_shell-&gt;path, "/fish") != NULL</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L171'>path</a>              171 lib/shell.c        else if (strstr (mc_shell-&gt;path, "/dash") != NULL</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L188'>path</a>              188 lib/shell.c            mc_shell-&gt;name = mc_shell-&gt;path;</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L200'>path</a>              200 lib/shell.c        if (strstr (mc_shell-&gt;path, "/bash") != NULL || getenv ("BASH") != NULL)</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L205'>path</a>              205 lib/shell.c        else if (strstr (mc_shell-&gt;path, "/sh") != NULL || getenv ("SH") != NULL)</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L210'>path</a>              210 lib/shell.c        else if (strstr (mc_shell-&gt;path, "/ash") != NULL || getenv ("ASH") != NULL)</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L233'>path</a>              233 lib/shell.c        mc_shell-&gt;real_path = mc_realpath (mc_shell-&gt;path, rp_shell);</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L255'>path</a>              255 lib/shell.c            g_free (mc_global.shell-&gt;path);</span>
+<span class='curline'><a href='../S/lib--shell.h.html#L30'>path</a>               30 lib/shell.h        char *path;</span>
+<span class='curline'><a href='../S/lib--util.c.html#L326'>path</a>              326 lib/util.c     path_trunc (const char *path, size_t trunc_len)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L332'>path</a>              332 lib/util.c         vpath = vfs_path_from_str (path);</span>
+<span class='curline'><a href='../S/lib--util.h.html#L137'>path</a>              137 lib/util.h     const char *path_trunc (const char *path, size_t trunc_len);</span>
+<span class='curline'><a href='../S/lib--util.h.html#L217'>path</a>              217 lib/util.h     char *mc_realpath (const char *path, char *resolved_path);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L830'>path</a>              830 lib/utilunix.c custom_canonicalize_pathname (char *path, CANON_PATH_FLAGS flags)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L833'>path</a>              833 lib/utilunix.c     char *lpath = path;         /* path without leading UNC part */</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L837'>path</a>              837 lib/utilunix.c     if ((flags &amp; CANON_PATH_GUARDUNC) != 0 &amp;&amp; IS_PATH_SEP (path[0]) &amp;&amp; IS_PATH_SEP (path[1]))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L839'>path</a>              839 lib/utilunix.c         p = path + 2;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L842'>path</a>              842 lib/utilunix.c         if (IS_PATH_SEP (p[0]) &amp;&amp; p &gt; path + 2)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1078'>path</a>             1078 lib/utilunix.c canonicalize_pathname (char *path)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1080'>path</a>             1080 lib/utilunix.c     custom_canonicalize_pathname (path, CANON_PATH_ALL);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1097'>path</a>             1097 lib/utilunix.c mc_realpath (const char *path, char *resolved_path)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1110'>path</a>             1110 lib/utilunix.c     if (strlen (path) &gt;= PATH_MAX - 2)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1115'>path</a>             1115 lib/utilunix.c     strcpy (copy_path, path);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1116'>path</a>             1116 lib/utilunix.c     path = copy_path;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1119'>path</a>             1119 lib/utilunix.c     if (!IS_PATH_SEP (*path))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1140'>path</a>             1140 lib/utilunix.c         path++;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1143'>path</a>             1143 lib/utilunix.c     while (*path != '\0')</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1146'>path</a>             1146 lib/utilunix.c         if (IS_PATH_SEP (*path))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1148'>path</a>             1148 lib/utilunix.c             path++;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1151'>path</a>             1151 lib/utilunix.c         if (*path == '.')</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1154'>path</a>             1154 lib/utilunix.c             if (path[1] == '\0' || IS_PATH_SEP (path[1]))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1156'>path</a>             1156 lib/utilunix.c                 path++;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1159'>path</a>             1159 lib/utilunix.c             if (path[1] == '.')</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1161'>path</a>             1161 lib/utilunix.c                 if (path[2] == '\0' || IS_PATH_SEP (path[2]))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1163'>path</a>             1163 lib/utilunix.c                     path += 2;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1175'>path</a>             1175 lib/utilunix.c         while (*path != '\0' &amp;&amp; !IS_PATH_SEP (*path))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1177'>path</a>             1177 lib/utilunix.c             if (path &gt; max_path)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1182'>path</a>             1182 lib/utilunix.c             *new_path++ = *path++;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1217'>path</a>             1217 lib/utilunix.c             if (strlen (path) + n &gt;= PATH_MAX - 2)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1223'>path</a>             1223 lib/utilunix.c             strcat (link_path, path);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1225'>path</a>             1225 lib/utilunix.c             path = copy_path;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1304'>path</a>             1304 lib/utilunix.c     GString *path;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1310'>path</a>             1310 lib/utilunix.c     path = g_string_new ("");</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1332'>path</a>             1332 lib/utilunix.c             g_string_append (path, start);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1334'>path</a>             1334 lib/utilunix.c                 g_string_append_c (path, PATH_SEP);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1342'>path</a>             1342 lib/utilunix.c         g_string_prepend_c (path, PATH_SEP);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1344'>path</a>             1344 lib/utilunix.c     ret = g_string_free (path, FALSE);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L112'>path</a>              112 lib/vfs/direntry.c vfs_s_automake (struct vfs_class *me, struct vfs_s_inode *dir, char *path, int flags)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L117'>path</a>              117 lib/vfs/direntry.c     sep = strchr (path, PATH_SEP);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L121'>path</a>              121 lib/vfs/direntry.c     res = vfs_s_generate_entry (me, path, dir, (flags &amp; FL_MKDIR) != 0 ? (0777 | S_IFDIR) : 0777);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L185'>path</a>              185 lib/vfs/direntry.c     char *path = pathref;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L188'>path</a>              188 lib/vfs/direntry.c     custom_canonicalize_pathname (path, CANON_PATH_ALL &amp; (~CANON_PATH_REMDOUBLEDOTS));</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L194'>path</a>              194 lib/vfs/direntry.c         while (IS_PATH_SEP (*path))     /* Strip leading '/' */</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L195'>path</a>              195 lib/vfs/direntry.c             path++;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L197'>path</a>              197 lib/vfs/direntry.c         if (path[0] == '\0')</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L203'>path</a>              203 lib/vfs/direntry.c         for (pseg = 0; path[pseg] != '\0' &amp;&amp; !IS_PATH_SEP (path[pseg]); pseg++)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L209'>path</a>              209 lib/vfs/direntry.c             if (strlen (ent-&gt;name) == pseg &amp;&amp; strncmp (ent-&gt;name, path, pseg) == 0)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L217'>path</a>              217 lib/vfs/direntry.c             ent = vfs_s_automake (me, root, path, flags);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L224'>path</a>              224 lib/vfs/direntry.c         path += pseg;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L228'>path</a>              228 lib/vfs/direntry.c                                      strchr (path, PATH_SEP) != NULL ? LINK_FOLLOW : follow);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L245'>path</a>              245 lib/vfs/direntry.c     char *const path = g_strdup (a_path);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L252'>path</a>              252 lib/vfs/direntry.c     custom_canonicalize_pathname (path, CANON_PATH_ALL &amp; (~CANON_PATH_REMDOUBLEDOTS));</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L259'>path</a>              259 lib/vfs/direntry.c         dirname = g_path_get_dirname (path);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L260'>path</a>              260 lib/vfs/direntry.c         name = g_path_get_basename (path);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L265'>path</a>              265 lib/vfs/direntry.c         g_free (path);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L269'>path</a>              269 lib/vfs/direntry.c     iter = g_list_find_custom (root-&gt;subdir, path, (GCompareFunc) vfs_s_entry_compare);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L275'>path</a>              275 lib/vfs/direntry.c         vfs_print_message (_("Directory cache expired for %s"), path);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L286'>path</a>              286 lib/vfs/direntry.c         ent = vfs_s_new_entry (me, path, ino);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L287'>path</a>              287 lib/vfs/direntry.c         if (MEDATA-&gt;dir_load (me, ino, path) == -1)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L290'>path</a>              290 lib/vfs/direntry.c             g_free (path);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L296'>path</a>              296 lib/vfs/direntry.c         iter = g_list_find_custom (root-&gt;subdir, path, (GCompareFunc) vfs_s_entry_compare);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L305'>path</a>              305 lib/vfs/direntry.c         g_free (path);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L309'>path</a>              309 lib/vfs/direntry.c     g_free (path);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1023'>path</a>             1023 lib/vfs/direntry.c                   const char *path, int follow, int flags)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1027'>path</a>             1027 lib/vfs/direntry.c     if (((MEDATA-&gt;flags &amp; VFS_S_REMOTE) == 0) &amp;&amp; (*path == '\0'))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1030'>path</a>             1030 lib/vfs/direntry.c     ent = (MEDATA-&gt;find_entry) (me, super-&gt;root, path, follow, flags);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1111'>path</a>             1111 lib/vfs/direntry.c     if (path_element-&gt;path != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1112'>path</a>             1112 lib/vfs/direntry.c         retval = path_element-&gt;path;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1180'>path</a>             1180 lib/vfs/direntry.c         char *path = g_strdup (ino-&gt;ent-&gt;name);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1186'>path</a>             1186 lib/vfs/direntry.c             newpath = g_strconcat (ino-&gt;ent-&gt;name, PATH_SEP_STR, path, (char *) NULL);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1187'>path</a>             1187 lib/vfs/direntry.c             g_free (path);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1188'>path</a>             1188 lib/vfs/direntry.c             path = newpath;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1190'>path</a>             1190 lib/vfs/direntry.c         return path;</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L193'>path</a>              193 lib/vfs/gc.c   vfs_stamp_path (const char *path)</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L199'>path</a>              199 lib/vfs/gc.c       vpath = vfs_path_from_str (path);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L728'>path</a>              728 lib/vfs/interface.c         if (*path_element-&gt;path != '\0')</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L732'>path</a>              732 lib/vfs/interface.c             p = strchr (path_element-&gt;path, 0) - 1;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L733'>path</a>              733 lib/vfs/interface.c             if (IS_PATH_SEP (*p) &amp;&amp; p &gt; path_element-&gt;path)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L744'>path</a>              744 lib/vfs/interface.c                 g_free (super-&gt;path_element-&gt;path);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L745'>path</a>              745 lib/vfs/interface.c                 super-&gt;path_element-&gt;path = g_strdup (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L61'>path</a>               61 lib/vfs/path.c path_magic (const char *path)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L65'>path</a>               65 lib/vfs/path.c     return (stat (path, &amp;buf) != 0);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L83'>path</a>               83 lib/vfs/path.c _vfs_split_with_semi_skip_count (char *path, const char **inpath, const char **op,</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L90'>path</a>               90 lib/vfs/path.c     if (path == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L93'>path</a>               93 lib/vfs/path.c     semi = strrstr_skip_count (path, "#", skip_count);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L95'>path</a>               95 lib/vfs/path.c     if ((semi == NULL) || (!path_magic (path)))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L124'>path</a>              124 lib/vfs/path.c     ret = _vfs_split_with_semi_skip_count (path, inpath, op, skip_count + 1);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L136'>path</a>              136 lib/vfs/path.c vfs_canon (const char *path)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L140'>path</a>              140 lib/vfs/path.c     if (path == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L143'>path</a>              143 lib/vfs/path.c     if (!IS_PATH_SEP (*path))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L149'>path</a>              149 lib/vfs/path.c         if (g_str_has_prefix (path, VFS_ENCODING_PREFIX))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L155'>path</a>              155 lib/vfs/path.c             local = mc_build_filename (PATH_SEP_STR, path, (char *) NULL);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L162'>path</a>              162 lib/vfs/path.c             local = mc_build_filename (curr_dir, path, (char *) NULL);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L171'>path</a>              171 lib/vfs/path.c         result = g_strdup (path);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L190'>path</a>              190 lib/vfs/path.c vfs_get_encoding (const char *path, ssize_t len)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L195'>path</a>              195 lib/vfs/path.c     semi = g_strrstr_len (path, len, VFS_ENCODING_PREFIX);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L199'>path</a>              199 lib/vfs/path.c     if (semi == path || IS_PATH_SEP (semi[-1]))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L210'>path</a>              210 lib/vfs/path.c     return vfs_get_encoding (path, semi - path);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L236'>path</a>              236 lib/vfs/path.c vfs_path_url_split (vfs_path_element_t * path_element, const char *path)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L244'>path</a>              244 lib/vfs/path.c     pcopy = g_strdup (path);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L370'>path</a>              370 lib/vfs/path.c vfs_path_from_str_deprecated_parser (char *path, vfs_path_flag_t flags)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L380'>path</a>              380 lib/vfs/path.c     while ((class = _vfs_split_with_semi_skip_count (path, &amp;local, &amp;op, 0)) != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L387'>path</a>              387 lib/vfs/path.c         element-&gt;path = vfs_translate_path_n (local);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L406'>path</a>              406 lib/vfs/path.c         g_array_prepend_val (vpath-&gt;path, element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L408'>path</a>              408 lib/vfs/path.c     if (path[0] != '\0')</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L412'>path</a>              412 lib/vfs/path.c         element-&gt;path = vfs_translate_path_n (path);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L415'>path</a>              415 lib/vfs/path.c         element-&gt;encoding = vfs_get_encoding (path, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L419'>path</a>              419 lib/vfs/path.c         g_array_prepend_val (vpath-&gt;path, element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L435'>path</a>              435 lib/vfs/path.c vfs_path_from_str_uri_parser (char *path, vfs_path_flag_t flags)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L445'>path</a>              445 lib/vfs/path.c     while ((url_delimiter = g_strrstr (path, VFS_PATH_URL_DELIMITER)) != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L451'>path</a>              451 lib/vfs/path.c         while (real_vfs_prefix_start &gt; path &amp;&amp; !IS_PATH_SEP (*real_vfs_prefix_start))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L473'>path</a>              473 lib/vfs/path.c                 element-&gt;path = g_strdup ("");</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L477'>path</a>              477 lib/vfs/path.c                 element-&gt;path = vfs_translate_path_n (slash_pointer + 1);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L487'>path</a>              487 lib/vfs/path.c             element-&gt;path = vfs_translate_path_n (url_delimiter);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L496'>path</a>              496 lib/vfs/path.c         g_array_prepend_val (vpath-&gt;path, element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L498'>path</a>              498 lib/vfs/path.c         if ((real_vfs_prefix_start &gt; path &amp;&amp; IS_PATH_SEP (*real_vfs_prefix_start)) ||</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L499'>path</a>              499 lib/vfs/path.c             (real_vfs_prefix_start == path &amp;&amp; !IS_PATH_SEP (*real_vfs_prefix_start)))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L505'>path</a>              505 lib/vfs/path.c     if (path[0] != '\0')</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L509'>path</a>              509 lib/vfs/path.c         element-&gt;path = vfs_translate_path_n (path);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L511'>path</a>              511 lib/vfs/path.c         element-&gt;encoding = vfs_get_encoding (path, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L515'>path</a>              515 lib/vfs/path.c         g_array_prepend_val (vpath-&gt;path, element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L682'>path</a>              682 lib/vfs/path.c             str_vfs_convert_from (element-&gt;dir.converter, element-&gt;path, recode_buffer);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L689'>path</a>              689 lib/vfs/path.c             vfs_append_from_path (element-&gt;path, is_relative);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L728'>path</a>              728 lib/vfs/path.c     char *path;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L734'>path</a>              734 lib/vfs/path.c         path = vfs_canon (path_str);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L736'>path</a>              736 lib/vfs/path.c         path = g_strdup (path_str);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L738'>path</a>              738 lib/vfs/path.c     if (path == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L741'>path</a>              741 lib/vfs/path.c     if ((flags &amp; VPF_USE_DEPRECATED_PARSER) != 0 &amp;&amp; vfs_path_is_str_path_deprecated (path))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L742'>path</a>              742 lib/vfs/path.c         vpath = vfs_path_from_str_deprecated_parser (path, flags);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L744'>path</a>              744 lib/vfs/path.c         vpath = vfs_path_from_str_uri_parser (path, flags);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L747'>path</a>              747 lib/vfs/path.c     g_free (path);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L780'>path</a>              780 lib/vfs/path.c     vpath-&gt;path = g_array_new (FALSE, TRUE, sizeof (vfs_path_element_t *));</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L797'>path</a>              797 lib/vfs/path.c     return (vpath != NULL &amp;&amp; vpath-&gt;path != NULL) ? vpath-&gt;path-&gt;len : 0;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L810'>path</a>              810 lib/vfs/path.c     g_array_append_val (vpath-&gt;path, path_element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L837'>path</a>              837 lib/vfs/path.c     return g_array_index (vpath-&gt;path, vfs_path_element_t *, element_index);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L859'>path</a>              859 lib/vfs/path.c     new_element-&gt;path = g_strdup (element-&gt;path);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L891'>path</a>              891 lib/vfs/path.c     g_free (element-&gt;path);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L931'>path</a>              931 lib/vfs/path.c         g_array_append_val (new_vpath-&gt;path, path_element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L963'>path</a>              963 lib/vfs/path.c     g_array_free (vpath-&gt;path, TRUE);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L989'>path</a>              989 lib/vfs/path.c     vpath-&gt;path = g_array_remove_index (vpath-&gt;path, element_index);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1113'>path</a>             1113 lib/vfs/path.c         mc_config_set_string_raw (cpath, groupname, "path", element-&gt;path);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1187'>path</a>             1187 lib/vfs/path.c         element-&gt;path = mc_config_get_string_raw (cpath, groupname, "path", NULL);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1202'>path</a>             1202 lib/vfs/path.c         vpath-&gt;path = g_array_append_val (vpath-&gt;path, element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1315'>path</a>             1315 lib/vfs/path.c             g_array_append_val (ret_vpath-&gt;path, path_element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1353'>path</a>             1353 lib/vfs/path.c         for (prev_token = element-&gt;path; (token = strchr (prev_token, PATH_SEP)) != NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1419'>path</a>             1419 lib/vfs/path.c         path_tokens = g_strsplit (element-&gt;path, PATH_SEP_STR, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1550'>path</a>             1550 lib/vfs/path.c     if (!IS_PATH_SEP (*element-&gt;path))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1553'>path</a>             1553 lib/vfs/path.c     g_string_append (pretty_path, element-&gt;path);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L29'>path</a>               29 lib/vfs/path.h     GArray *path;</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L40'>path</a>               40 lib/vfs/path.h     char *path;</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L63'>path</a>               63 lib/vfs/path.h void vfs_path_free (vfs_path_t * path);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L64'>path</a>               64 lib/vfs/path.h int vfs_path_elements_count (const vfs_path_t * path);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L66'>path</a>               66 lib/vfs/path.h char *vfs_path_to_str_elements_count (const vfs_path_t * path, int elements_count);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L78'>path</a>               78 lib/vfs/path.h const vfs_path_element_t *vfs_path_get_by_index (const vfs_path_t * path, int element_index);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L117'>path</a>              117 lib/vfs/path.h     return (element != NULL) ? element-&gt;path : NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L236'>path</a>              236 lib/vfs/utilvfs.c vfs_url_split (const char *path, int default_port, vfs_url_flags_t flags)</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L248'>path</a>              248 lib/vfs/utilvfs.c     pcopy_len = strlen (path);</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L249'>path</a>              249 lib/vfs/utilvfs.c     pcopy = g_strndup (path, pcopy_len);</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L259'>path</a>              259 lib/vfs/utilvfs.c             path_element-&gt;path = g_strdup (PATH_SEP_STR);</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L262'>path</a>              262 lib/vfs/utilvfs.c             path_element-&gt;path = g_strndup (dir, pcopy_len - (size_t) (dir - pcopy));</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.h.html#L42'>path</a>               42 lib/vfs/utilvfs.h vfs_path_element_t *vfs_url_split (const char *path, int default_port, vfs_url_flags_t flags);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L114'>path</a>              114 lib/vfs/vfs.c  _vfs_translate_path (const char *path, int size, GIConv defcnv, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L123'>path</a>              123 lib/vfs/vfs.c      size = (size &gt; 0) ? size : (signed int) strlen (path);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L126'>path</a>              126 lib/vfs/vfs.c      semi = g_strrstr_len (path, size, VFS_ENCODING_PREFIX);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L127'>path</a>              127 lib/vfs/vfs.c      if (semi != NULL &amp;&amp; (semi == path || IS_PATH_SEP (semi[-1])))</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L135'>path</a>              135 lib/vfs/vfs.c          ms = semi - path;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L137'>path</a>              137 lib/vfs/vfs.c          state = _vfs_translate_path (path, ms, defcnv, buffer);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L146'>path</a>              146 lib/vfs/vfs.c          if (slash - path &gt;= size)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L152'>path</a>              152 lib/vfs/vfs.c          if (semi + ms &gt; path + size)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L153'>path</a>              153 lib/vfs/vfs.c              ms = path + size - semi;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L163'>path</a>              163 lib/vfs/vfs.c                  state = str_vfs_convert_to (coder, slash + 1, path + size - slash - 1, buffer);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L174'>path</a>              174 lib/vfs/vfs.c          state = str_vfs_convert_to (defcnv, path, size, buffer);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L180'>path</a>              180 lib/vfs/vfs.c      g_string_assign (buffer, path);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L336'>path</a>              336 lib/vfs/vfs.c  vfs_translate_path (const char *path)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L341'>path</a>              341 lib/vfs/vfs.c      state = _vfs_translate_path (path, -1, str_cnv_from_term, vfs_str_buffer);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L348'>path</a>              348 lib/vfs/vfs.c  vfs_translate_path_n (const char *path)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L352'>path</a>              352 lib/vfs/vfs.c      result = vfs_translate_path (path);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L153'>path</a>              153 lib/vfs/vfs.h      int (*which) (struct vfs_class * me, const char *path);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L250'>path</a>              250 lib/vfs/vfs.h  const char *vfs_translate_path (const char *path);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L252'>path</a>              252 lib/vfs/vfs.h  char *vfs_translate_path_n (const char *path);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L254'>path</a>              254 lib/vfs/vfs.h  void vfs_stamp_path (const char *path);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L145'>path</a>              145 lib/vfs/xdirentry.h                                        const char *path, int follow, int flags);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L146'>path</a>              146 lib/vfs/xdirentry.h     int (*dir_load) (struct vfs_class * me, struct vfs_s_inode * ino, char *path);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L148'>path</a>              148 lib/vfs/xdirentry.h     int (*file_store) (struct vfs_class * me, vfs_file_handler_t * fh, char *path, char *localname);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L175'>path</a>              175 lib/vfs/xdirentry.h                                       const char *path, int follow, int flags);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L566'>path</a>              566 lib/widget/input_complete.c     static char *path = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L604'>path</a>              604 lib/widget/input_complete.c             if (path == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L606'>path</a>              606 lib/widget/input_complete.c                 path = g_strdup (getenv ("PATH"));</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L607'>path</a>              607 lib/widget/input_complete.c                 if (path != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L609'>path</a>              609 lib/widget/input_complete.c                     p = path;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L655'>path</a>              655 lib/widget/input_complete.c         if (path == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L657'>path</a>              657 lib/widget/input_complete.c         cur_path = path;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L686'>path</a>              686 lib/widget/input_complete.c         MC_PTR_FREE (path);</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L88'>path</a>               88 src/clipboard.c         my_system (EXECUTE_AS_SHELL, mc_global.shell-&gt;path, cmd);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L136'>path</a>              136 src/diffviewer/ydiff.c     from_file_name = vfs_path_get_by_index (from_file_name_vpath, -1)-&gt;path;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2761'>path</a>             2761 src/diffviewer/ydiff.c     char *path;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2773'>path</a>             2773 src/diffviewer/ydiff.c     path = vfs_path_to_str_flags (vpath, 0, VPF_STRIP_HOME | VPF_STRIP_PASSWORD);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2775'>path</a>             2775 src/diffviewer/ydiff.c     buf = str_term_trim (path, filename_width);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2782'>path</a>             2782 src/diffviewer/ydiff.c     g_free (path);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L442'>path</a>              442 src/editor/edit.c             &amp;&amp; *(vfs_path_get_by_index (edit-&gt;filename_vpath, 0)-&gt;path) != '\0')</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L467'>path</a>              467 src/editor/edit.c         || *(vfs_path_get_by_index (edit-&gt;filename_vpath, 0)-&gt;path) == '\0')</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L497'>path</a>              497 src/editor/edit.c         || *(vfs_path_get_by_index (edit-&gt;filename_vpath, 0)-&gt;path) == '\0')</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1816'>path</a>             1816 src/editor/edit.c     writename = name_quote (path_element-&gt;path, FALSE);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L210'>path</a>              210 src/editor/editcmd.c     start_filename = vpath_element-&gt;path;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L367'>path</a>              367 src/editor/editcmd.c         file = (FILE *) fopen (path_element-&gt;path, "w");</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L377'>path</a>              377 src/editor/editcmd.c             msg = g_strdup_printf (_("Cannot open file for writing: %s"), path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L400'>path</a>              400 src/editor/editcmd.c         tmp_store_filename = last_vpath_element-&gt;path;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L401'>path</a>              401 src/editor/editcmd.c         last_vpath_element-&gt;path = g_strdup_printf ("%s%s", tmp_store_filename, option_backup_ext);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3511'>path</a>             3511 src/editor/editcmd.c     char *path = NULL;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3532'>path</a>             3532 src/editor/editcmd.c     path = g_strconcat (ptr, PATH_SEP_STR, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3538'>path</a>             3538 src/editor/editcmd.c         ptr = g_path_get_dirname (path);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3539'>path</a>             3539 src/editor/editcmd.c         g_free (path);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3540'>path</a>             3540 src/editor/editcmd.c         path = ptr;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3542'>path</a>             3542 src/editor/editcmd.c         tagfile = mc_build_filename (path, TAGS_NAME, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3546'>path</a>             3546 src/editor/editcmd.c     while (strcmp (path, PATH_SEP_STR) != 0);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3551'>path</a>             3551 src/editor/editcmd.c             etags_set_definition_hash (tagfile, path, match_expr-&gt;str, (etags_hash_t *) &amp; def_hash);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3554'>path</a>             3554 src/editor/editcmd.c     g_free (path);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L434'>path</a>              434 src/execute.c              do_execute (mc_global.shell-&gt;path, cmd ? cmd : command, flags | EXECUTE_AS_SHELL);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L439'>path</a>              439 src/execute.c          do_execute (mc_global.shell-&gt;path, cmd ? cmd : command, flags | EXECUTE_AS_SHELL);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L492'>path</a>              492 src/execute.c              my_system (EXECUTE_INTERNAL, mc_global.shell-&gt;path, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1536'>path</a>             1536 src/filemanager/cmd.c     const char *path;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1539'>path</a>             1539 src/filemanager/cmd.c     path = vfs_path_as_str (vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1542'>path</a>             1542 src/filemanager/cmd.c         message (D_NORMAL, _("Setup"), _("Setup saved to %s"), path);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1544'>path</a>             1544 src/filemanager/cmd.c         message (D_ERROR, _("Setup"), _("Unable to save setup to %s"), path);</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L103'>path</a>              103 src/filemanager/command.c     char *path_tilde, *path;</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L107'>path</a>              107 src/filemanager/command.c     path = strutils_shell_unescape (_path);</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L108'>path</a>              108 src/filemanager/command.c     path_tilde = tilde_expand (path);</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L109'>path</a>              109 src/filemanager/command.c     g_free (path);</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L200'>path</a>              200 src/filemanager/command.c handle_cdpath (const char *path)</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L205'>path</a>              205 src/filemanager/command.c     if (!IS_PATH_SEP (*path))</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L227'>path</a>              227 src/filemanager/command.c                 r_vpath = vfs_path_build_filename (p, path, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L414'>path</a>              414 src/filemanager/command.c                 strlen (vfs_path_get_by_index (current_panel-&gt;cwd_vpath, 0)-&gt;path) &gt; 1)</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L440'>path</a>              440 src/filemanager/command.c         char *path;</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L444'>path</a>              444 src/filemanager/command.c         path = examine_cd (&amp;cmd[operand_pos]);</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L446'>path</a>              446 src/filemanager/command.c         if (*path == '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L449'>path</a>              449 src/filemanager/command.c             q_vpath = vfs_path_from_str_flags (path, VPF_NO_CANON);</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L453'>path</a>              453 src/filemanager/command.c             ok = handle_cdpath (path);</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L466'>path</a>              466 src/filemanager/command.c         g_free (path);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L204'>path</a>              204 src/filemanager/dir.c         const char *path;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L206'>path</a>              206 src/filemanager/dir.c         path = vfs_path_get_by_index (vpath, 0)-&gt;path;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L207'>path</a>              207 src/filemanager/dir.c         if (path != NULL &amp;&amp; *path != '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L586'>path</a>              586 src/filemanager/dir.c handle_path (const char *path, struct stat * buf1, int *link_to_dir, int *stale_link)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L590'>path</a>              590 src/filemanager/dir.c     if (DIR_IS_DOT (path) || DIR_IS_DOTDOT (path))</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L593'>path</a>              593 src/filemanager/dir.c     vpath = vfs_path_from_str (path);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L601'>path</a>              601 src/filemanager/dir.c         tree_store_mark_checked (path);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L743'>path</a>              743 src/filemanager/dir.c     tmp_path = vfs_path_get_by_index (vpath, 0)-&gt;path;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.h.html#L58'>path</a>               58 src/filemanager/dir.h gboolean handle_path (const char *path, struct stat *buf1, int *link_to_dir, int *stale_link);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2205'>path</a>             2205 src/filemanager/file.c         char *path;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2215'>path</a>             2215 src/filemanager/file.c         path = mc_build_filename (s, next-&gt;d_name, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2216'>path</a>             2216 src/filemanager/file.c         tmp_vpath = vfs_path_from_str (path);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2231'>path</a>             2231 src/filemanager/file.c                 copy_dir_dir (tctx, ctx, path, mdpath, FALSE, FALSE, do_delete, parent_dirs);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2238'>path</a>             2238 src/filemanager/file.c             dest_file = mc_build_filename (d, x_basename (path), (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2239'>path</a>             2239 src/filemanager/file.c             return_status = copy_file_file (tctx, ctx, path, dest_file);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2243'>path</a>             2243 src/filemanager/file.c         g_free (path);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.h.html#L38'>path</a>               38 src/filemanager/filegui.h void file_progress_show_target (file_op_context_t * ctx, const vfs_path_t * path);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.h.html#L39'>path</a>               39 src/filemanager/filegui.h void file_progress_show_deleting (file_op_context_t * ctx, const char *path, size_t * count);</span>
+<span class='curline'><a href='../S/src--filemanager--filenot.c.html#L66'>path</a>               66 src/filemanager/filenot.c     if (IS_PATH_SEP (*vfs_path_get_by_index (vpath, 0)-&gt;path))</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L329'>path</a>              329 src/filemanager/hotlist.c add_name_to_list (const char *path)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L331'>path</a>              331 src/filemanager/hotlist.c     listbox_add_item (l_hotlist, LISTBOX_APPEND_AT_END, 0, path, NULL, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1351'>path</a>             1351 src/filemanager/layout.c title_path_prepare (char **path, char **login)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1357'>path</a>             1357 src/filemanager/layout.c     *path =</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1382'>path</a>             1382 src/filemanager/layout.c         char *path;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1385'>path</a>             1385 src/filemanager/layout.c         title_path_prepare (&amp;path, &amp;login);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1387'>path</a>             1387 src/filemanager/layout.c         p = g_strdup_printf ("mc [%s]:%s", login, path);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1389'>path</a>             1389 src/filemanager/layout.c         g_free (path);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.h.html#L93'>path</a>               93 src/filemanager/layout.h void title_path_prepare (char **path, char **login);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L435'>path</a>              435 src/filemanager/midnight.c     char *path;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L441'>path</a>              441 src/filemanager/midnight.c     title_path_prepare (&amp;path, &amp;login);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L443'>path</a>              443 src/filemanager/midnight.c     p = g_strdup_printf ("%s [%s]:%s", _("Panels:"), login, path);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L444'>path</a>              444 src/filemanager/midnight.c     g_free (path);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L446'>path</a>              446 src/filemanager/midnight.c     path = g_strdup (str_trunc (p, len - 4));</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L449'>path</a>              449 src/filemanager/midnight.c     return path;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L880'>path</a>              880 src/filemanager/mountlist.c             me-&gt;me_mountdir = g_strdup (fsd.fd_req.path);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1702'>path</a>             1702 src/filemanager/mountlist.c my_statfs (struct my_statfs *myfs_stats, const char *path)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1717'>path</a>             1717 src/filemanager/mountlist.c         if (i &gt; len &amp;&amp; (strncmp (path, me-&gt;me_mountdir, i) == 0) &amp;&amp;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1718'>path</a>             1718 src/filemanager/mountlist.c             (entry == NULL || IS_PATH_SEP (path[i]) || path[i] == '\0'))</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.h.html#L39'>path</a>               39 src/filemanager/mountlist.h void my_statfs (struct my_statfs *myfs_stats, const char *path);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1208'>path</a>             1208 src/filemanager/panel.c         archive_name = strrchr (prev_path_element-&gt;path, PATH_SEP);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1213'>path</a>             1213 src/filemanager/panel.c             last_vpath = vfs_path_from_str_flags (prev_path_element-&gt;path, VPF_NO_CANON);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3278'>path</a>             3278 src/filemanager/panel.c         if (strcmp (element-&gt;path, "-") == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4820'>path</a>             4820 src/filemanager/panel.c         str_vfs_convert_from (converter, path_element-&gt;path, tmp_conv);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4822'>path</a>             4822 src/filemanager/panel.c         g_free (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4823'>path</a>             4823 src/filemanager/panel.c         path_element-&gt;path = g_strndup (tmp_conv-&gt;str, tmp_conv-&gt;len);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L584'>path</a>              584 src/filemanager/usermenu.c menu_file_own (char *path)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L588'>path</a>              588 src/filemanager/usermenu.c     if (stat (path, &amp;st) == 0 &amp;&amp; (st.st_uid == 0 || (st.st_uid == geteuid ()) != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L595'>path</a>              595 src/filemanager/usermenu.c                    "Using it may compromise your security"), path);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L358'>path</a>              358 src/subshell/common.c         execl (mc_global.shell-&gt;path, "bash", "-rcfile", init_file, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L364'>path</a>              364 src/subshell/common.c         execl (mc_global.shell-&gt;path, "zsh", "-Z", "-g", (char *) NULL);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L372'>path</a>              372 src/subshell/common.c         execl (mc_global.shell-&gt;path, mc_global.shell-&gt;path, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L129'>path</a>              129 src/vfs/extfs/extfs.c     char *path;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L427'>path</a>              427 src/vfs/extfs/extfs.c     cmd = g_strconcat (info-&gt;path, info-&gt;prefix, " list ",</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L640'>path</a>              640 src/vfs/extfs/extfs.c extfs_which (struct vfs_class *me, const char *path)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L647'>path</a>              647 src/vfs/extfs/extfs.c     path_len = strlen (path);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L655'>path</a>              655 src/vfs/extfs/extfs.c         if ((strncmp (path, info-&gt;prefix, path_len) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L708'>path</a>              708 src/vfs/extfs/extfs.c     return path_element-&gt;path;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L816'>path</a>              816 src/vfs/extfs/extfs.c         ret_str = g_strdup (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L846'>path</a>              846 src/vfs/extfs/extfs.c     cmd = g_strconcat (info-&gt;path, info-&gt;prefix, str_extfs_cmd,</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L853'>path</a>              853 src/vfs/extfs/extfs.c     retval = my_system (EXECUTE_AS_SHELL, mc_global.shell-&gt;path, cmd);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L880'>path</a>              880 src/vfs/extfs/extfs.c         g_strconcat (info-&gt;path, info-&gt;prefix, " run ", quoted_archive_name, " ", q, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L930'>path</a>              930 src/vfs/extfs/extfs.c         local_filename = vfs_path_get_by_index (local_filename_vpath, -1)-&gt;path;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1611'>path</a>             1611 src/vfs/extfs/extfs.c                 info.path = g_strconcat (dirname, PATH_SEP_STR, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1626'>path</a>             1626 src/vfs/extfs/extfs.c                     if ((strcmp (info.path, p-&gt;path) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1636'>path</a>             1636 src/vfs/extfs/extfs.c                     g_free (info.path);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1694'>path</a>             1694 src/vfs/extfs/extfs.c         g_free (info-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L312'>path</a>              312 src/vfs/fish/fish.c fish_pipeopen (struct vfs_s_super *super, const char *path, const char *argv[])</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L343'>path</a>              343 src/vfs/fish/fish.c         execvp (path, const_cast (char **, argv));</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1235'>path</a>             1235 src/vfs/fish/fish.c     qsetto = strutils_shell_escape (vfs_path_get_by_index (vpath1, -1)-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1579'>path</a>             1579 src/vfs/fish/fish.c                          PATH_SEP_STR, super-&gt;path_element-&gt;path, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1695'>path</a>             1695 src/vfs/ftpfs/ftpfs.c         char *path;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1698'>path</a>             1698 src/vfs/ftpfs/ftpfs.c         path = mc_build_filename (remote_path, ".", (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1699'>path</a>             1699 src/vfs/ftpfs/ftpfs.c         sock = ftpfs_open_data_connection (me, super, "LIST -la", path, TYPE_ASCII, 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1700'>path</a>             1700 src/vfs/ftpfs/ftpfs.c         g_free (path);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2061'>path</a>             2061 src/vfs/ftpfs/ftpfs.c ftpfs_is_same_dir (struct vfs_class *me, struct vfs_s_super *super, const char *path)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2067'>path</a>             2067 src/vfs/ftpfs/ftpfs.c     return (strcmp (path, SUP-&gt;current_dir) == 0);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L71'>path</a>               71 src/vfs/local/local.c     fd = open (path_element-&gt;path, NO_LINEAR (flags), mode);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L91'>path</a>               91 src/vfs/local/local.c     dir = opendir (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L129'>path</a>              129 src/vfs/local/local.c     return stat (path_element-&gt;path, buf);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L141'>path</a>              141 src/vfs/local/local.c     return lstat (path_element-&gt;path, buf);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L143'>path</a>              143 src/vfs/local/local.c     return statlstat (path_element-&gt;path, buf);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L155'>path</a>              155 src/vfs/local/local.c     return chmod (path_element-&gt;path, mode);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L166'>path</a>              166 src/vfs/local/local.c     return chown (path_element-&gt;path, owner, group);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L177'>path</a>              177 src/vfs/local/local.c     return utime (path_element-&gt;path, times);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L188'>path</a>              188 src/vfs/local/local.c     return readlink (path_element-&gt;path, buf, size);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L199'>path</a>              199 src/vfs/local/local.c     return unlink (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L212'>path</a>              212 src/vfs/local/local.c     return symlink (path_element1-&gt;path, path_element2-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L252'>path</a>              252 src/vfs/local/local.c     return rename (path_element1-&gt;path, path_element2-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L263'>path</a>              263 src/vfs/local/local.c     return chdir (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L274'>path</a>              274 src/vfs/local/local.c     return mknod (path_element-&gt;path, mode, dev);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L287'>path</a>              287 src/vfs/local/local.c     return link (path_element1-&gt;path, path_element2-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L298'>path</a>              298 src/vfs/local/local.c     return mkdir (path_element-&gt;path, mode);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L309'>path</a>              309 src/vfs/local/local.c     return rmdir (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L335'>path</a>              335 src/vfs/local/local.c local_which (struct vfs_class *me, const char *path)</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L338'>path</a>              338 src/vfs/local/local.c     (void) path;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L182'>path</a>              182 src/vfs/sfs/sfs.c                 ptr = path_element-&gt;path;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L185'>path</a>              185 src/vfs/sfs/sfs.c                 ptr = vfs_path_get_by_index (cache_vpath, -1)-&gt;path;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L240'>path</a>              240 src/vfs/sfs/sfs.c     handle = vfs_mkstemps (&amp;cache_vpath, "sfs", path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L518'>path</a>              518 src/vfs/sfs/sfs.c sfs_which (struct vfs_class *me, const char *path)</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L527'>path</a>              527 src/vfs/sfs/sfs.c             if (!strcmp (path, sfs_prefix[i]))</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L530'>path</a>              530 src/vfs/sfs/sfs.c         else if (!strncmp (path, sfs_prefix[i], strlen (sfs_prefix[i])))</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L89'>path</a>               89 src/vfs/sftpfs/dir.c                                   sftpfs_fix_filename (path_element-&gt;path));</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L213'>path</a>              213 src/vfs/sftpfs/dir.c         fixfname = sftpfs_fix_filename (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L270'>path</a>              270 src/vfs/sftpfs/dir.c         fixfname = sftpfs_fix_filename (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L159'>path</a>              159 src/vfs/sftpfs/internal.c         fixfname = sftpfs_fix_filename (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L236'>path</a>              236 src/vfs/sftpfs/internal.c         fixfname = sftpfs_fix_filename (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L315'>path</a>              315 src/vfs/sftpfs/internal.c         fixfname = sftpfs_fix_filename (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L369'>path</a>              369 src/vfs/sftpfs/internal.c     tmp_path = g_strdup_printf ("%c%s", PATH_SEP, path_element2-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L376'>path</a>              376 src/vfs/sftpfs/internal.c         fixfname = sftpfs_fix_filename (path_element1-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L443'>path</a>              443 src/vfs/sftpfs/internal.c         fixfname = sftpfs_fix_filename (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L467'>path</a>              467 src/vfs/sftpfs/internal.c         fixfname = sftpfs_fix_filename (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L521'>path</a>              521 src/vfs/sftpfs/internal.c         fixfname = sftpfs_fix_filename (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L576'>path</a>              576 src/vfs/sftpfs/internal.c     tmp_path = g_strdup_printf ("%c%s", PATH_SEP, path_element2-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L583'>path</a>              583 src/vfs/sftpfs/internal.c         fixfname = sftpfs_fix_filename (path_element1-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L62'>path</a>               62 src/vfs/smbfs/helpers/include/proto.h int sys_open (const char *path, int oflag, mode_t mode);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L63'>path</a>               63 src/vfs/smbfs/helpers/include/proto.h FILE *sys_fopen (const char *path, const char *type);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L239'>path</a>              239 src/vfs/smbfs/helpers/include/proto.h void split_at_last_component (char *path, char *front, char sep, char *back);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L307'>path</a>              307 src/vfs/smbfs/helpers/include/proto.h BOOL cli_chkpath (struct cli_state *cli, char *path);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L935'>path</a>              935 src/vfs/smbfs/helpers/include/smb.h #define IS_HIDDEN_PATH(conn,path)  ((conn) &amp;&amp; is_in_path((path),(conn)-&gt;hide_list))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L936'>path</a>              936 src/vfs/smbfs/helpers/include/smb.h #define IS_VETO_PATH(conn,path)  ((conn) &amp;&amp; is_in_path((path),(conn)-&gt;veto_list))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L937'>path</a>              937 src/vfs/smbfs/helpers/include/smb.h #define IS_VETO_OPLOCK_PATH(conn,path)  ((conn) &amp;&amp; is_in_path((path),(conn)-&gt;veto_oplock_list))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L206'>path</a>              206 src/vfs/smbfs/helpers/lib/system.c sys_open (const char *path, int oflag, mode_t mode)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L208'>path</a>              208 src/vfs/smbfs/helpers/lib/system.c     return open (path, oflag, mode);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L216'>path</a>              216 src/vfs/smbfs/helpers/lib/system.c sys_fopen (const char *path, const char *type)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L218'>path</a>              218 src/vfs/smbfs/helpers/lib/system.c     return fopen (path, type);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L843'>path</a>              843 src/vfs/smbfs/helpers/lib/util.c dirname_dos (char *path, char *buf)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L845'>path</a>              845 src/vfs/smbfs/helpers/lib/util.c     split_at_last_component (path, buf, '\\', NULL);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L853'>path</a>              853 src/vfs/smbfs/helpers/lib/util.c filename_dos (char *path, char *buf)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L855'>path</a>              855 src/vfs/smbfs/helpers/lib/util.c     char *p = strrchr (path, '\\');</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L858'>path</a>              858 src/vfs/smbfs/helpers/lib/util.c         pstrcpy (buf, path);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L1162'>path</a>             1162 src/vfs/smbfs/helpers/lib/util_str.c split_at_last_component (char *path, char *front, char sep, char *back)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L1164'>path</a>             1164 src/vfs/smbfs/helpers/lib/util_str.c     char *p = strrchr (path, sep);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L1172'>path</a>             1172 src/vfs/smbfs/helpers/lib/util_str.c         pstrcpy (front, path);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2930'>path</a>             2930 src/vfs/smbfs/helpers/libsmb/clientgen.c cli_chkpath (struct cli_state * cli, char *path)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2935'>path</a>             2935 src/vfs/smbfs/helpers/libsmb/clientgen.c     safe_strcpy (path2, path, sizeof (pstring) - 1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L117'>path</a>              117 src/vfs/smbfs/smbfs.c     char *path;                 /* the dir originally passed to smbfs_opendir */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L434'>path</a>              434 src/vfs/smbfs/smbfs.c     char *path;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L442'>path</a>              442 src/vfs/smbfs/smbfs.c             path = g_strconcat (URL_HEADER,</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L446'>path</a>              446 src/vfs/smbfs/smbfs.c             (*func) (path);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L447'>path</a>              447 src/vfs/smbfs/smbfs.c             g_free (path);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L736'>path</a>              736 src/vfs/smbfs/smbfs.c smbfs_chkpath (struct cli_state *cli, const char *path, BOOL send_only)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L741'>path</a>              741 src/vfs/smbfs/smbfs.c     fstrcpy (path2, path);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L842'>path</a>              842 src/vfs/smbfs/smbfs.c         if (!strcmp (smbfs_info-&gt;path, URL_HEADER))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L976'>path</a>              976 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_chmod(path:%s, mode:%d)\n", path_element-&gt;path, (int) mode));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L990'>path</a>              990 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_chown(path:%s, owner:%d, group:%d)\n", path_element-&gt;path, owner, group));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1005'>path</a>             1005 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_utime(path:%s)\n", path_element-&gt;path));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1018'>path</a>             1018 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_readlink(path:%s, buf:%s, size:%zu)\n", path_element-&gt;path, buf, size));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1033'>path</a>             1033 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_symlink(n1:%s, n2:%s)\n", path_element1-&gt;path, path_element2-&gt;path));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1222'>path</a>             1222 src/vfs/smbfs/smbfs.c smbfs_open_link (char *host, char *path, const char *user, int *port, char *this_pass)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1229'>path</a>             1229 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_open_link(host:%s, path:%s)\n", host, path));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1231'>path</a>             1231 src/vfs/smbfs/smbfs.c     if (strcmp (host, path) == 0)       /* if host &amp; path are same: */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1236'>path</a>             1236 src/vfs/smbfs/smbfs.c         if ((p = strchr (path, '/')))   /* get share aka                            */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1262'>path</a>             1262 src/vfs/smbfs/smbfs.c             BOOL inshare = (*host != 0 &amp;&amp; *path != 0 &amp;&amp; strchr (path, '/'));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1337'>path</a>             1337 src/vfs/smbfs/smbfs.c     const char *path;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1340'>path</a>             1340 src/vfs/smbfs/smbfs.c     path = path_element-&gt;path;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1342'>path</a>             1342 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_get_path(%s)\n", path));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1347'>path</a>             1347 src/vfs/smbfs/smbfs.c     while (*path == '/')        /* '/' leading server name */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1348'>path</a>             1348 src/vfs/smbfs/smbfs.c         path++;                 /* probably came from server browsing */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1350'>path</a>             1350 src/vfs/smbfs/smbfs.c     url = vfs_url_split (path, SMB_PORT, URL_FLAGS_NONE);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1354'>path</a>             1354 src/vfs/smbfs/smbfs.c         *sc = smbfs_open_link (url-&gt;host, url-&gt;path, url-&gt;user, &amp;url-&gt;port, url-&gt;password);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1358'>path</a>             1358 src/vfs/smbfs/smbfs.c             remote_path = g_strdup (url-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1408'>path</a>             1408 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_opendir(dirname:%s)\n", path_element-&gt;path));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1416'>path</a>             1416 src/vfs/smbfs/smbfs.c     smbfs_info-&gt;path = g_strdup (path_element-&gt;path);   /* keep original */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1428'>path</a>             1428 src/vfs/smbfs/smbfs.c smbfs_fake_server_stat (const char *server_url, const char *path, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1435'>path</a>             1435 src/vfs/smbfs/smbfs.c     if ((p = strrchr (path, '/')))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1436'>path</a>             1436 src/vfs/smbfs/smbfs.c         path = p + 1;           /* advance until last '/' */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1447'>path</a>             1447 src/vfs/smbfs/smbfs.c         DEBUG (4, ("fake stat for SERVER \"%s\"\n", path));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1450'>path</a>             1450 src/vfs/smbfs/smbfs.c             if (strcmp (dentry-&gt;text, path) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1467'>path</a>             1467 src/vfs/smbfs/smbfs.c smbfs_fake_share_stat (const char *server_url, const char *path, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1470'>path</a>             1470 src/vfs/smbfs/smbfs.c     if (strlen (path) &lt; strlen (server_url))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1480'>path</a>             1480 src/vfs/smbfs/smbfs.c         vpath = vfs_path_from_str (path);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1497'>path</a>             1497 src/vfs/smbfs/smbfs.c     path += strlen (server_url);        /* we only want share name */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1498'>path</a>             1498 src/vfs/smbfs/smbfs.c     path++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1500'>path</a>             1500 src/vfs/smbfs/smbfs.c     if (*path == '/')           /* '/' leading server name */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1501'>path</a>             1501 src/vfs/smbfs/smbfs.c         path++;                 /* probably came from server browsing */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1509'>path</a>             1509 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_fake_share_stat: %s on %s\n", path, server_url));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1512'>path</a>             1512 src/vfs/smbfs/smbfs.c         if (strcmp (dentry-&gt;text, path) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1529'>path</a>             1529 src/vfs/smbfs/smbfs.c smbfs_get_remote_stat (smbfs_connection * sc, const char *path, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1534'>path</a>             1534 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_get_remote_stat(): mypath:%s\n", path));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1536'>path</a>             1536 src/vfs/smbfs/smbfs.c     mypath = smbfs_convert_path (path, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1585'>path</a>             1585 src/vfs/smbfs/smbfs.c smbfs_get_stat_info (smbfs_connection * sc, const char *path, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1591'>path</a>             1591 src/vfs/smbfs/smbfs.c     const char *mypath = path;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1602'>path</a>             1602 src/vfs/smbfs/smbfs.c                    current_info-&gt;dirname, path));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1652'>path</a>             1652 src/vfs/smbfs/smbfs.c     DEBUG (3, ("'%s' not found in current_info '%s'\n", path, current_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1658'>path</a>             1658 src/vfs/smbfs/smbfs.c         DEBUG (3, ("'%s' not found in previous_info '%s'\n", path, previous_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1665'>path</a>             1665 src/vfs/smbfs/smbfs.c         DEBUG (3, ("'%s' not found in share_info '%s'\n", path, current_share_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1672'>path</a>             1672 src/vfs/smbfs/smbfs.c         DEBUG (3, ("'%s' not found in server_info '%s'\n", path, current_server_info-&gt;dirname));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1675'>path</a>             1675 src/vfs/smbfs/smbfs.c     return smbfs_get_remote_stat (sc, path, buf);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1688'>path</a>             1688 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_chdir(path:%s)\n", path_element-&gt;path));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1706'>path</a>             1706 src/vfs/smbfs/smbfs.c     mypath = g_strdup (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1734'>path</a>             1734 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_stat(path:%s)\n", path_element-&gt;path));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1744'>path</a>             1744 src/vfs/smbfs/smbfs.c     p = path_element-&gt;path;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1776'>path</a>             1776 src/vfs/smbfs/smbfs.c         return smbfs_fake_server_stat (server_url, path_element-&gt;path, buf);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1781'>path</a>             1781 src/vfs/smbfs/smbfs.c         return smbfs_fake_share_stat (server_url, path_element-&gt;path, buf);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1829'>path</a>             1829 src/vfs/smbfs/smbfs.c     return smbfs_get_stat_info (sc, path_element-&gt;path, buf);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1879'>path</a>             1879 src/vfs/smbfs/smbfs.c            ("smbfs_mknod(path:%s, mode:%d, dev:%u)\n", path_element-&gt;path, mode,</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1896'>path</a>             1896 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_mkdir(path:%s, mode:%d)\n", path_element-&gt;path, (int) mode));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1900'>path</a>             1900 src/vfs/smbfs/smbfs.c     cpath = smbfs_convert_path (path_element-&gt;path, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1925'>path</a>             1925 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_rmdir(path:%s)\n", path_element-&gt;path));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1929'>path</a>             1929 src/vfs/smbfs/smbfs.c     cpath = smbfs_convert_path (path_element-&gt;path, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1954'>path</a>             1954 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_link(p1:%s, p2:%s)\n", path_element1-&gt;path, path_element2-&gt;path));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1978'>path</a>             1978 src/vfs/smbfs/smbfs.c     const char *path;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1984'>path</a>             1984 src/vfs/smbfs/smbfs.c     path = path_element-&gt;path;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1986'>path</a>             1986 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_forget(path:%s)\n", path));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1988'>path</a>             1988 src/vfs/smbfs/smbfs.c     while (*path == '/')        /* '/' leading server name */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1989'>path</a>             1989 src/vfs/smbfs/smbfs.c         path++;                 /* probably came from server browsing */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1991'>path</a>             1991 src/vfs/smbfs/smbfs.c     p = vfs_url_split (path, SMB_PORT, URL_FLAGS_NONE);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2026'>path</a>             2026 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_setctl(path:%s, ctlop:%d)\n", path_element-&gt;path, ctlop));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2109'>path</a>             2109 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_open(file:%s, flags:%d, mode:%o)\n", path_element-&gt;path, flags, mode));</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L163'>path</a>              163 src/vfs/undelfs/undelfs.c     dirname = path_element-&gt;path;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L609'>path</a>              609 src/vfs/undelfs/undelfs.c undelfs_getindex (char *path)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L611'>path</a>              611 src/vfs/undelfs/undelfs.c     ext2_ino_t inode = atol (path);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_recode.c.html#L154'>path</a>              154 tests/lib/vfs/path_recode.c     mctest_assert_str_eq (element-&gt;path, data-&gt;expected_element_path);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--relative_cd.c.html#L154'>path</a>              154 tests/lib/vfs/relative_cd.c         mctest_assert_str_eq (element-&gt;path, data-&gt;expected_element_path);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_get_encoding.c.html#L54'>path</a>               54 tests/lib/vfs/vfs_get_encoding.c     const char *path;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_get_encoding.c.html#L130'>path</a>              130 tests/lib/vfs/vfs_get_encoding.c     actual_encoding = vfs_get_encoding (data-&gt;path, -1);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_path_string_convert.c.html#L198'>path</a>              198 tests/lib/vfs/vfs_path_string_convert.c     mctest_assert_str_eq (path_element-&gt;path, data-&gt;expected_element_path);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_path_string_convert.c.html#L311'>path</a>              311 tests/lib/vfs/vfs_path_string_convert.c     mctest_assert_str_eq (element-&gt;path, "");</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_prefix_to_class.c.html#L42'>path</a>               42 tests/lib/vfs/vfs_prefix_to_class.c test_which (struct vfs_class *me, const char *path)</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_prefix_to_class.c.html#L46'>path</a>               46 tests/lib/vfs/vfs_prefix_to_class.c     if ((strcmp (path, "test_1:") == 0) ||</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_prefix_to_class.c.html#L47'>path</a>               47 tests/lib/vfs/vfs_prefix_to_class.c         (strcmp (path, "test_2:") == 0) ||</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_prefix_to_class.c.html#L48'>path</a>               48 tests/lib/vfs/vfs_prefix_to_class.c         (strcmp (path, "test_3:") == 0) || (strcmp (path, "test_4:") == 0))</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L73'>path</a>               73 tests/lib/vfs/vfs_s_get_path.c     if (strcmp (ARCH_NAME, path_element-&gt;path) != 0)</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_split.c.html#L182'>path</a>              182 tests/lib/vfs/vfs_split.c     char *path;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_split.c.html#L184'>path</a>              184 tests/lib/vfs/vfs_split.c     path = g_strdup (data-&gt;input_string);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_split.c.html#L187'>path</a>              187 tests/lib/vfs/vfs_split.c     actual_result = _vfs_split_with_semi_skip_count (path, &amp;local, &amp;op, 0);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_split.c.html#L191'>path</a>              191 tests/lib/vfs/vfs_split.c     mctest_assert_str_eq (path, data-&gt;expected_path);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_split.c.html#L194'>path</a>              194 tests/lib/vfs/vfs_split.c     g_free (path);</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>event_group_name</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--event.h.html#L16'>event_group_name</a>   16 lib/event.h        const char *event_group_name;</span>
+<span class='curline'><a href='../S/lib--event--event.c.html#L101'>event_group_name</a>  101 lib/event/event.c     for (array_index = 0; events[array_index].event_group_name != NULL; array_index++)</span>
+<span class='curline'><a href='../S/lib--event--event.c.html#L103'>event_group_name</a>  103 lib/event/event.c         if (!mc_event_add (events[array_index].event_group_name,</span>
+<span class='curline'><a href='../S/lib--event--event.c.html#L116'>event_group_name</a>  116 lib/event/event.c mc_event_present (const gchar * event_group_name, const gchar * event_name)</span>
+<span class='curline'><a href='../S/lib--event--event.c.html#L121'>event_group_name</a>  121 lib/event/event.c     if (mc_event_grouplist == NULL || event_group_name == NULL || event_name == NULL)</span>
+<span class='curline'><a href='../S/lib--event--event.c.html#L124'>event_group_name</a>  124 lib/event/event.c     event_group = mc_event_get_event_group_by_name (event_group_name, FALSE, NULL);</span>
+<span class='curline'><a href='../S/lib--event--internal.h.html#L23'>event_group_name</a>   23 lib/event/internal.h GTree *mc_event_get_event_group_by_name (const gchar * event_group_name, gboolean create_new,</span>
+<span class='curline'><a href='../S/lib--event--manage.c.html#L64'>event_group_name</a>   64 lib/event/manage.c mc_event_add (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/lib--event--manage.c.html#L74'>event_group_name</a>   74 lib/event/manage.c     if (mc_event_grouplist == NULL || event_group_name == NULL || event_name == NULL</span>
+<span class='curline'><a href='../S/lib--event--manage.c.html#L81'>event_group_name</a>   81 lib/event/manage.c     event_group = mc_event_get_event_group_by_name (event_group_name, TRUE, mcerror);</span>
+<span class='curline'><a href='../S/lib--event--manage.c.html#L103'>event_group_name</a>  103 lib/event/manage.c mc_event_del (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/lib--event--manage.c.html#L110'>event_group_name</a>  110 lib/event/manage.c     if (mc_event_grouplist == NULL || event_group_name == NULL || event_name == NULL</span>
+<span class='curline'><a href='../S/lib--event--manage.c.html#L114'>event_group_name</a>  114 lib/event/manage.c     event_group = mc_event_get_event_group_by_name (event_group_name, FALSE, NULL);</span>
+<span class='curline'><a href='../S/lib--event--manage.c.html#L134'>event_group_name</a>  134 lib/event/manage.c mc_event_destroy (const gchar * event_group_name, const gchar * event_name)</span>
+<span class='curline'><a href='../S/lib--event--manage.c.html#L138'>event_group_name</a>  138 lib/event/manage.c     if (mc_event_grouplist == NULL || event_group_name == NULL || event_name == NULL)</span>
+<span class='curline'><a href='../S/lib--event--manage.c.html#L141'>event_group_name</a>  141 lib/event/manage.c     event_group = mc_event_get_event_group_by_name (event_group_name, FALSE, NULL);</span>
+<span class='curline'><a href='../S/lib--event--manage.c.html#L148'>event_group_name</a>  148 lib/event/manage.c mc_event_group_del (const gchar * event_group_name)</span>
+<span class='curline'><a href='../S/lib--event--manage.c.html#L151'>event_group_name</a>  151 lib/event/manage.c     if (mc_event_grouplist != NULL &amp;&amp; event_group_name != NULL)</span>
+<span class='curline'><a href='../S/lib--event--manage.c.html#L152'>event_group_name</a>  152 lib/event/manage.c         g_tree_remove (mc_event_grouplist, (gconstpointer) event_group_name);</span>
+<span class='curline'><a href='../S/lib--event--manage.c.html#L158'>event_group_name</a>  158 lib/event/manage.c mc_event_get_event_group_by_name (const gchar * event_group_name, gboolean create_new,</span>
+<span class='curline'><a href='../S/lib--event--manage.c.html#L165'>event_group_name</a>  165 lib/event/manage.c     event_group = (GTree *) g_tree_lookup (mc_event_grouplist, (gconstpointer) event_group_name);</span>
+<span class='curline'><a href='../S/lib--event--manage.c.html#L176'>event_group_name</a>  176 lib/event/manage.c                                 event_group_name);</span>
+<span class='curline'><a href='../S/lib--event--manage.c.html#L179'>event_group_name</a>  179 lib/event/manage.c         g_tree_insert (mc_event_grouplist, g_strdup (event_group_name), (gpointer) event_group);</span>
+<span class='curline'><a href='../S/lib--event--raise.c.html#L49'>event_group_name</a>   49 lib/event/raise.c mc_event_raise (const gchar * event_group_name, const gchar * event_name, gpointer event_data)</span>
+<span class='curline'><a href='../S/lib--event--raise.c.html#L55'>event_group_name</a>   55 lib/event/raise.c     if (mc_event_grouplist == NULL || event_group_name == NULL || event_name == NULL)</span>
+<span class='curline'><a href='../S/lib--event--raise.c.html#L58'>event_group_name</a>   58 lib/event/raise.c     event_group = mc_event_get_event_group_by_name (event_group_name, FALSE, NULL);</span>
+<span class='curline'><a href='../S/lib--event--raise.c.html#L69'>event_group_name</a>   69 lib/event/raise.c         if (!(*cb-&gt;callback) (event_group_name, event_name, cb-&gt;init_data, event_data))</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L835'>event_group_name</a>  835 lib/widget/input.c input_load_history (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L841'>event_group_name</a>  841 lib/widget/input.c     (void) event_group_name;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L864'>event_group_name</a>  864 lib/widget/input.c input_save_history (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L869'>event_group_name</a>  869 lib/widget/input.c     (void) event_group_name;</span>
+<span class='curline'><a href='../S/src--background.c.html#L621'>event_group_name</a>  621 src/background.c background_parent_call (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--background.c.html#L626'>event_group_name</a>  626 src/background.c     (void) event_group_name;</span>
+<span class='curline'><a href='../S/src--background.c.html#L640'>event_group_name</a>  640 src/background.c background_parent_call_string (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--background.c.html#L645'>event_group_name</a>  645 src/background.c     (void) event_group_name;</span>
+<span class='curline'><a href='../S/src--background.h.html#L45'>event_group_name</a>   45 src/background.h gboolean background_parent_call (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--background.h.html#L49'>event_group_name</a>   49 src/background.h background_parent_call_string (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L70'>event_group_name</a>   70 src/clipboard.c clipboard_file_to_ext_clip (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L76'>event_group_name</a>   76 src/clipboard.c     (void) event_group_name;</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L99'>event_group_name</a>   99 src/clipboard.c clipboard_file_from_ext_clip (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L106'>event_group_name</a>  106 src/clipboard.c     (void) event_group_name;</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L174'>event_group_name</a>  174 src/clipboard.c clipboard_text_to_file (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L182'>event_group_name</a>  182 src/clipboard.c     (void) event_group_name;</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L211'>event_group_name</a>  211 src/clipboard.c clipboard_text_from_file (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L220'>event_group_name</a>  220 src/clipboard.c     (void) event_group_name;</span>
+<span class='curline'><a href='../S/src--clipboard.h.html#L21'>event_group_name</a>   21 src/clipboard.h gboolean clipboard_file_to_ext_clip (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--clipboard.h.html#L23'>event_group_name</a>   23 src/clipboard.h gboolean clipboard_file_from_ext_clip (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--clipboard.h.html#L26'>event_group_name</a>   26 src/clipboard.h gboolean clipboard_text_to_file (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--clipboard.h.html#L28'>event_group_name</a>   28 src/clipboard.h gboolean clipboard_text_from_file (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--execute.c.html#L566'>event_group_name</a>  566 src/execute.c  execute_suspend (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--execute.c.html#L569'>event_group_name</a>  569 src/execute.c      (void) event_group_name;</span>
+<span class='curline'><a href='../S/src--execute.h.html#L38'>event_group_name</a>   38 src/execute.h  gboolean execute_suspend (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L489'>event_group_name</a>  489 src/filemanager/midnight.c check_current_panel_timestamp (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L494'>event_group_name</a>  494 src/filemanager/midnight.c     (void) event_group_name;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L508'>event_group_name</a>  508 src/filemanager/midnight.c check_other_panel_timestamp (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L513'>event_group_name</a>  513 src/filemanager/midnight.c     (void) event_group_name;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L527'>event_group_name</a>  527 src/filemanager/midnight.c print_vfs_message (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L532'>event_group_name</a>  532 src/filemanager/midnight.c     (void) event_group_name;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1420'>event_group_name</a> 1420 src/filemanager/panel.c panel_load_history (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1426'>event_group_name</a> 1426 src/filemanager/panel.c     (void) event_group_name;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1446'>event_group_name</a> 1446 src/filemanager/panel.c panel_save_history (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1451'>event_group_name</a> 1451 src/filemanager/panel.c     (void) event_group_name;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4116'>event_group_name</a> 4116 src/filemanager/panel.c event_update_panels (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4119'>event_group_name</a> 4119 src/filemanager/panel.c     (void) event_group_name;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4133'>event_group_name</a> 4133 src/filemanager/panel.c panel_save_current_file_to_clip_file (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4136'>event_group_name</a> 4136 src/filemanager/panel.c     (void) event_group_name;</span>
+<span class='curline'><a href='../S/src--help.c.html#L1037'>event_group_name</a> 1037 src/help.c     help_interactive_display (const gchar * event_group_name, const gchar * event_name,</span>
+<span class='curline'><a href='../S/src--help.c.html#L1054'>event_group_name</a> 1054 src/help.c         (void) event_group_name;</span>
+<span class='curline'><a href='../S/src--help.h.html#L53'>event_group_name</a>   53 src/help.h     gboolean help_interactive_display (const gchar * event_group_name, const gchar * event_name,</span>
+</pre>
+</body>
+</html>

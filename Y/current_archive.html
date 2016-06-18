@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>current_archive</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L403'>current_archive</a>   403 src/vfs/extfs/extfs.c     struct archive *current_archive;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L450'>current_archive</a>   450 src/vfs/extfs/extfs.c     current_archive = g_new (struct archive, 1);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L451'>current_archive</a>   451 src/vfs/extfs/extfs.c     current_archive-&gt;fstype = fstype;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L452'>current_archive</a>   452 src/vfs/extfs/extfs.c     current_archive-&gt;name = g_strdup (name);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L453'>current_archive</a>   453 src/vfs/extfs/extfs.c     current_archive-&gt;local_name = g_strdup (vfs_path_get_last_path_str (local_name_vpath));</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L457'>current_archive</a>   457 src/vfs/extfs/extfs.c         mc_stat (local_name_vpath, &amp;current_archive-&gt;local_stat);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L460'>current_archive</a>   460 src/vfs/extfs/extfs.c     current_archive-&gt;inode_counter = 0;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L461'>current_archive</a>   461 src/vfs/extfs/extfs.c     current_archive-&gt;fd_usage = 0;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L462'>current_archive</a>   462 src/vfs/extfs/extfs.c     current_archive-&gt;rdev = archive_counter++;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L463'>current_archive</a>   463 src/vfs/extfs/extfs.c     current_archive-&gt;next = first_archive;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L464'>current_archive</a>   464 src/vfs/extfs/extfs.c     first_archive = current_archive;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L473'>current_archive</a>   473 src/vfs/extfs/extfs.c     root_entry = extfs_generate_entry (current_archive, PATH_SEP_STR, NULL, mode);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L479'>current_archive</a>   479 src/vfs/extfs/extfs.c     current_archive-&gt;root_entry = root_entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L481'>current_archive</a>   481 src/vfs/extfs/extfs.c     *pparc = current_archive;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L500'>current_archive</a>   500 src/vfs/extfs/extfs.c     struct archive *current_archive;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L505'>current_archive</a>   505 src/vfs/extfs/extfs.c     extfsd = extfs_open_archive (fstype, name, &amp;current_archive);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L545'>current_archive</a>   545 src/vfs/extfs/extfs.c                 pent = extfs_find_entry (current_archive-&gt;root_entry, q, TRUE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L565'>current_archive</a>   565 src/vfs/extfs/extfs.c                     pent = extfs_find_entry (current_archive-&gt;root_entry,</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L584'>current_archive</a>   584 src/vfs/extfs/extfs.c                     inode-&gt;inode = (current_archive-&gt;inode_counter)++;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L586'>current_archive</a>   586 src/vfs/extfs/extfs.c                     inode-&gt;dev = current_archive-&gt;rdev;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L587'>current_archive</a>   587 src/vfs/extfs/extfs.c                     inode-&gt;archive = current_archive;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L627'>current_archive</a>   627 src/vfs/extfs/extfs.c         extfs_free (current_archive);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L633'>current_archive</a>   633 src/vfs/extfs/extfs.c     *pparc = current_archive;</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>pname_vpath</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L795'>pname_vpath</a>       795 lib/vfs/interface.c mc_mkstemps (vfs_path_t ** pname_vpath, const char *prefix, const char *suffix)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L813'>pname_vpath</a>       813 lib/vfs/interface.c         *pname_vpath = vfs_path_from_str (p2);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L816'>pname_vpath</a>       816 lib/vfs/interface.c         *pname_vpath = NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L177'>pname_vpath</a>       177 lib/vfs/utilvfs.c vfs_mkstemps (vfs_path_t ** pname_vpath, const char *prefix, const char *param_basename)</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L208'>pname_vpath</a>       208 lib/vfs/utilvfs.c     fd = mc_mkstemps (pname_vpath, prefix, suffix);</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.h.html#L45'>pname_vpath</a>        45 lib/vfs/utilvfs.h int vfs_mkstemps (vfs_path_t ** pname_vpath, const char *prefix, const char *basename);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L308'>pname_vpath</a>       308 lib/vfs/vfs.h  int mc_mkstemps (vfs_path_t ** pname_vpath, const char *prefix, const char *suffix);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--tempdir.c.html#L101'>pname_vpath</a>       101 tests/lib/vfs/tempdir.c     vfs_path_t *pname_vpath = NULL;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--tempdir.c.html#L106'>pname_vpath</a>       106 tests/lib/vfs/tempdir.c     fd = mc_mkstemps (&amp;pname_vpath, "mctest-", NULL);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--tempdir.c.html#L113'>pname_vpath</a>       113 tests/lib/vfs/tempdir.c                  (vfs_path_as_str (pname_vpath), G_FILE_TEST_EXISTS | G_FILE_TEST_IS_REGULAR),</span>
+<span class='curline'><a href='../S/tests--lib--vfs--tempdir.c.html#L114'>pname_vpath</a>       114 tests/lib/vfs/tempdir.c                  "\nNo such file: %s\n", vfs_path_as_str (pname_vpath));</span>
+<span class='curline'><a href='../S/tests--lib--vfs--tempdir.c.html#L115'>pname_vpath</a>       115 tests/lib/vfs/tempdir.c     unlink (vfs_path_as_str (pname_vpath));</span>
+<span class='curline'><a href='../S/tests--lib--vfs--tempdir.c.html#L116'>pname_vpath</a>       116 tests/lib/vfs/tempdir.c     fail_unless (strncmp (vfs_path_as_str (pname_vpath), begin_pname, strlen (begin_pname)) == 0,</span>
+<span class='curline'><a href='../S/tests--lib--vfs--tempdir.c.html#L117'>pname_vpath</a>       117 tests/lib/vfs/tempdir.c                  "\nstart of %s should be equal to %s\n", vfs_path_as_str (pname_vpath),</span>
+<span class='curline'><a href='../S/tests--lib--vfs--tempdir.c.html#L119'>pname_vpath</a>       119 tests/lib/vfs/tempdir.c     vfs_path_free (pname_vpath);</span>
+</pre>
+</body>
+</html>

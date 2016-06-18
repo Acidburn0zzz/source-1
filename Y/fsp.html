@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>fsp</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L520'>fsp</a>               520 src/filemanager/mountlist.c fsp_to_string (const struct statfs *fsp)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L523'>fsp</a>               523 src/filemanager/mountlist.c     return (char *) (fsp-&gt;f_fstypename);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L525'>fsp</a>               525 src/filemanager/mountlist.c     return fstype_to_string (fsp-&gt;f_type);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L813'>fsp</a>               813 src/filemanager/mountlist.c         struct statfs *fsp;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L816'>fsp</a>               816 src/filemanager/mountlist.c         entries = getmntinfo (&amp;fsp, MNT_NOWAIT);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L819'>fsp</a>               819 src/filemanager/mountlist.c         for (; entries-- &gt; 0; fsp++)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L821'>fsp</a>               821 src/filemanager/mountlist.c             char *fs_type = fsp_to_string (fsp);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L824'>fsp</a>               824 src/filemanager/mountlist.c             me-&gt;me_devname = g_strdup (fsp-&gt;f_mntfromname);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L825'>fsp</a>               825 src/filemanager/mountlist.c             me-&gt;me_mountdir = g_strdup (fsp-&gt;f_mntonname);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L840'>fsp</a>               840 src/filemanager/mountlist.c         struct statvfs *fsp;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L843'>fsp</a>               843 src/filemanager/mountlist.c         entries = getmntinfo (&amp;fsp, MNT_NOWAIT);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L846'>fsp</a>               846 src/filemanager/mountlist.c         for (; entries-- &gt; 0; fsp++)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L849'>fsp</a>               849 src/filemanager/mountlist.c             me-&gt;me_devname = g_strdup (fsp-&gt;f_mntfromname);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L850'>fsp</a>               850 src/filemanager/mountlist.c             me-&gt;me_mountdir = g_strdup (fsp-&gt;f_mntonname);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L852'>fsp</a>               852 src/filemanager/mountlist.c             me-&gt;me_type = g_strdup (fsp-&gt;f_fstypename);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1489'>fsp</a>              1489 src/filemanager/mountlist.c get_fs_usage (char const *file, char const *disk, struct fs_usage *fsp)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1501'>fsp</a>              1501 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = (vfsd.f_frsize</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1505'>fsp</a>              1505 src/filemanager/mountlist.c         fsp-&gt;fsu_blocks = PROPAGATE_ALL_ONES (vfsd.f_blocks);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1506'>fsp</a>              1506 src/filemanager/mountlist.c         fsp-&gt;fsu_bfree = PROPAGATE_ALL_ONES (vfsd.f_bfree);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1507'>fsp</a>              1507 src/filemanager/mountlist.c         fsp-&gt;fsu_bavail = PROPAGATE_TOP_BIT (vfsd.f_bavail);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1508'>fsp</a>              1508 src/filemanager/mountlist.c         fsp-&gt;fsu_bavail_top_bit_set = EXTRACT_TOP_BIT (vfsd.f_bavail) != 0;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1509'>fsp</a>              1509 src/filemanager/mountlist.c         fsp-&gt;fsu_files = PROPAGATE_ALL_ONES (vfsd.f_files);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1510'>fsp</a>              1510 src/filemanager/mountlist.c         fsp-&gt;fsu_ffree = PROPAGATE_ALL_ONES (vfsd.f_ffree);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1525'>fsp</a>              1525 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = fsd.f_frsize</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1537'>fsp</a>              1537 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = 1024;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1538'>fsp</a>              1538 src/filemanager/mountlist.c         fsp-&gt;fsu_blocks = PROPAGATE_ALL_ONES (fsd.fd_req.btot);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1539'>fsp</a>              1539 src/filemanager/mountlist.c         fsp-&gt;fsu_bfree = PROPAGATE_ALL_ONES (fsd.fd_req.bfree);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1540'>fsp</a>              1540 src/filemanager/mountlist.c         fsp-&gt;fsu_bavail = PROPAGATE_TOP_BIT (fsd.fd_req.bfreen);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1541'>fsp</a>              1541 src/filemanager/mountlist.c         fsp-&gt;fsu_bavail_top_bit_set = EXTRACT_TOP_BIT (fsd.fd_req.bfreen) != 0;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1542'>fsp</a>              1542 src/filemanager/mountlist.c         fsp-&gt;fsu_files = PROPAGATE_ALL_ONES (fsd.fd_req.gtot);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1543'>fsp</a>              1543 src/filemanager/mountlist.c         fsp-&gt;fsu_ffree = PROPAGATE_ALL_ONES (fsd.fd_req.gfree);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1570'>fsp</a>              1570 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = (fsd.s_type == Fs2b ? 1024 : 512);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1571'>fsp</a>              1571 src/filemanager/mountlist.c         fsp-&gt;fsu_blocks = PROPAGATE_ALL_ONES (fsd.s_fsize);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1572'>fsp</a>              1572 src/filemanager/mountlist.c         fsp-&gt;fsu_bfree = PROPAGATE_ALL_ONES (fsd.s_tfree);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1573'>fsp</a>              1573 src/filemanager/mountlist.c         fsp-&gt;fsu_bavail = PROPAGATE_TOP_BIT (fsd.s_tfree);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1574'>fsp</a>              1574 src/filemanager/mountlist.c         fsp-&gt;fsu_bavail_top_bit_set = EXTRACT_TOP_BIT (fsd.s_tfree) != 0;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1575'>fsp</a>              1575 src/filemanager/mountlist.c         fsp-&gt;fsu_files = (fsd.s_isize == -1</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1577'>fsp</a>              1577 src/filemanager/mountlist.c         fsp-&gt;fsu_ffree = PROPAGATE_ALL_ONES (fsd.s_tinode);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1586'>fsp</a>              1586 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = PROPAGATE_ALL_ONES (fsd.f_fsize);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1595'>fsp</a>              1595 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = PROPAGATE_ALL_ONES (fsd.f_frsize);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1606'>fsp</a>              1606 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = PROPAGATE_ALL_ONES (fsd.f_bsize);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1630'>fsp</a>              1630 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = PROPAGATE_ALL_ONES (fsd.f_fsize);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1648'>fsp</a>              1648 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = PROPAGATE_ALL_ONES (fsd.f_bsize);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1650'>fsp</a>              1650 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = 512;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1659'>fsp</a>              1659 src/filemanager/mountlist.c         fsp-&gt;fsu_blocks = PROPAGATE_ALL_ONES (fsd.f_blocks);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1660'>fsp</a>              1660 src/filemanager/mountlist.c         fsp-&gt;fsu_bfree = PROPAGATE_ALL_ONES (fsd.f_bfree);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1661'>fsp</a>              1661 src/filemanager/mountlist.c         fsp-&gt;fsu_bavail = PROPAGATE_TOP_BIT (fsd.f_bavail);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1662'>fsp</a>              1662 src/filemanager/mountlist.c         fsp-&gt;fsu_bavail_top_bit_set = EXTRACT_TOP_BIT (fsd.f_bavail) != 0;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1663'>fsp</a>              1663 src/filemanager/mountlist.c         fsp-&gt;fsu_files = PROPAGATE_ALL_ONES (fsd.f_files);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1664'>fsp</a>              1664 src/filemanager/mountlist.c         fsp-&gt;fsu_ffree = PROPAGATE_ALL_ONES (fsd.f_ffree);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L900'>fsp</a>               900 src/vfs/smbfs/helpers/include/smb.h #define OPEN_FSP(fsp)    ((fsp) &amp;&amp; (fsp)-&gt;open &amp;&amp; !(fsp)-&gt;is_directory)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L904'>fsp</a>               904 src/vfs/smbfs/helpers/include/smb.h #define FNUM_OK(fsp,c) (OPEN_FSP(fsp) &amp;&amp; (c)==(fsp)-&gt;conn)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L906'>fsp</a>               906 src/vfs/smbfs/helpers/include/smb.h #define CHECK_FSP(fsp,conn) if (!FNUM_OK(fsp,conn)) \</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L908'>fsp</a>               908 src/vfs/smbfs/helpers/include/smb.h                             else if((fsp)-&gt;fd_ptr == NULL) \</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L911'>fsp</a>               911 src/vfs/smbfs/helpers/include/smb.h #define CHECK_READ(fsp) if (!(fsp)-&gt;can_read) \</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L913'>fsp</a>               913 src/vfs/smbfs/helpers/include/smb.h #define CHECK_WRITE(fsp) if (!(fsp)-&gt;can_write) \</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L915'>fsp</a>               915 src/vfs/smbfs/helpers/include/smb.h #define CHECK_ERROR(fsp) if (HAS_CACHED_ERROR(fsp)) \</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L916'>fsp</a>               916 src/vfs/smbfs/helpers/include/smb.h                                return(CACHED_ERROR(fsp))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L1537'>fsp</a>              1537 src/vfs/smbfs/helpers/include/smb.h #define HAS_CACHED_ERROR(fsp) ((fsp)-&gt;open &amp;&amp; (fsp)-&gt;wbmpx_ptr &amp;&amp; \</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L1538'>fsp</a>              1538 src/vfs/smbfs/helpers/include/smb.h 				(fsp)-&gt;wbmpx_ptr-&gt;wr_discard)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L1540'>fsp</a>              1540 src/vfs/smbfs/helpers/include/smb.h #define CACHED_ERROR(fsp) cached_error_packet(inbuf,outbuf,fsp,__LINE__)</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>termvalue</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L88'>termvalue</a>          88 lib/tty/tty.c      const char *termvalue;</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L91'>termvalue</a>          91 lib/tty/tty.c      termvalue = getenv ("TERM");</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L92'>termvalue</a>          92 lib/tty/tty.c      if (termvalue == NULL || *termvalue == '\0')</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L102'>termvalue</a>         102 lib/tty/tty.c      return force_xterm || strncmp (termvalue, "xterm", 5) == 0</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L103'>termvalue</a>         103 lib/tty/tty.c          || strncmp (termvalue, "konsole", 7) == 0</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L104'>termvalue</a>         104 lib/tty/tty.c          || strncmp (termvalue, "rxvt", 4) == 0</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L105'>termvalue</a>         105 lib/tty/tty.c          || strcmp (termvalue, "Eterm") == 0</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L106'>termvalue</a>         106 lib/tty/tty.c          || strcmp (termvalue, "dtterm") == 0</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L107'>termvalue</a>         107 lib/tty/tty.c          || (strncmp (termvalue, "screen", 6) == 0 &amp;&amp; xdisplay != NULL);</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L264'>termvalue</a>         264 lib/tty/tty.c      const char *termvalue;</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L266'>termvalue</a>         266 lib/tty/tty.c      termvalue = getenv ("TERM");</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L282'>termvalue</a>         282 lib/tty/tty.c      if (strcmp (termvalue, "cygwin") == 0)</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L303'>termvalue</a>         303 lib/tty/tty.c                  if (strncmp (termvalue, "rxvt", 4) == 0 ||</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L305'>termvalue</a>         305 lib/tty/tty.c                      strcmp (termvalue, "Eterm") == 0)</span>
+</pre>
+</body>
+</html>

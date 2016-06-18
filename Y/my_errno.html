@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>my_errno</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L72'>my_errno</a>           72 src/vfs/extfs/extfs.c #define ERRNOR(x,y) do { my_errno = x; return y; } while(0)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L143'>my_errno</a>          143 src/vfs/extfs/extfs.c static int my_errno = 0;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L319'>my_errno</a>          319 src/vfs/extfs/extfs.c         my_errno = ENOENT;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L337'>my_errno</a>          337 src/vfs/extfs/extfs.c             my_errno = ELOOP;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L339'>my_errno</a>          339 src/vfs/extfs/extfs.c             my_errno = ENOTDIR;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L768'>my_errno</a>          768 src/vfs/extfs/extfs.c             my_errno = ENOENT;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L787'>my_errno</a>          787 src/vfs/extfs/extfs.c             my_errno = ELOOP;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L789'>my_errno</a>          789 src/vfs/extfs/extfs.c             my_errno = ENOTDIR;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L937'>my_errno</a>          937 src/vfs/extfs/extfs.c             my_errno = EIO;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1020'>my_errno</a>         1020 src/vfs/extfs/extfs.c     return my_errno;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1257'>my_errno</a>         1257 src/vfs/extfs/extfs.c         my_errno = EIO;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1303'>my_errno</a>         1303 src/vfs/extfs/extfs.c         my_errno = EIO;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1342'>my_errno</a>         1342 src/vfs/extfs/extfs.c         my_errno = EIO;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1360'>my_errno</a>         1360 src/vfs/extfs/extfs.c     my_errno = ENOTDIR;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1371'>my_errno</a>         1371 src/vfs/extfs/extfs.c     my_errno = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L128'>my_errno</a>          128 src/vfs/smbfs/smbfs.c static int my_errno;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L498'>my_errno</a>          498 src/vfs/smbfs/smbfs.c         my_errno = EINVAL;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L518'>my_errno</a>          518 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_errno: %s\n", unix_error_string (my_errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L519'>my_errno</a>          519 src/vfs/smbfs/smbfs.c     return my_errno;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L783'>my_errno</a>          783 src/vfs/smbfs/smbfs.c     if ((my_errno = cli_error (cli, NULL, NULL, NULL)))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L785'>my_errno</a>          785 src/vfs/smbfs/smbfs.c         if (my_errno == 20 || my_errno == 13)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L787'>my_errno</a>          787 src/vfs/smbfs/smbfs.c         DEBUG (3, ("smbfs_chkpath: cli_error: %s\n", unix_error_string (my_errno)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L883'>my_errno</a>          883 src/vfs/smbfs/smbfs.c         my_errno = cli_error (smbfs_info-&gt;conn-&gt;cli, NULL, &amp;err, NULL);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L991'>my_errno</a>          991 src/vfs/smbfs/smbfs.c     my_errno = EOPNOTSUPP;      /* ready for your labotomy? */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1006'>my_errno</a>         1006 src/vfs/smbfs/smbfs.c     my_errno = EOPNOTSUPP;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1019'>my_errno</a>         1019 src/vfs/smbfs/smbfs.c     my_errno = EOPNOTSUPP;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1034'>my_errno</a>         1034 src/vfs/smbfs/smbfs.c     my_errno = EOPNOTSUPP;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1073'>my_errno</a>         1073 src/vfs/smbfs/smbfs.c             my_errno = ENOMEM;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1088'>my_errno</a>         1088 src/vfs/smbfs/smbfs.c             my_errno = cli_error (c, NULL, &amp;err, NULL);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1132'>my_errno</a>         1132 src/vfs/smbfs/smbfs.c         my_errno = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1136'>my_errno</a>         1136 src/vfs/smbfs/smbfs.c     my_errno = cli_error (c, NULL, &amp;err, NULL);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1313'>my_errno</a>         1313 src/vfs/smbfs/smbfs.c         if (my_errno != EPERM)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1390'>my_errno</a>         1390 src/vfs/smbfs/smbfs.c         return my_errno = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1392'>my_errno</a>         1392 src/vfs/smbfs/smbfs.c         my_errno = errno_num;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1460'>my_errno</a>         1460 src/vfs/smbfs/smbfs.c     my_errno = ENOENT;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1521'>my_errno</a>         1521 src/vfs/smbfs/smbfs.c     my_errno = ENOENT;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1550'>my_errno</a>         1550 src/vfs/smbfs/smbfs.c         my_errno = ENOENT;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1881'>my_errno</a>         1881 src/vfs/smbfs/smbfs.c     my_errno = EOPNOTSUPP;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1904'>my_errno</a>         1904 src/vfs/smbfs/smbfs.c         my_errno = cli_error (sc-&gt;cli, NULL, &amp;err, NULL);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1933'>my_errno</a>         1933 src/vfs/smbfs/smbfs.c         my_errno = cli_error (sc-&gt;cli, NULL, &amp;err, NULL);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1955'>my_errno</a>         1955 src/vfs/smbfs/smbfs.c     my_errno = EOPNOTSUPP;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2067'>my_errno</a>         2067 src/vfs/smbfs/smbfs.c         my_errno = cli_error (remote_handle-&gt;cli, NULL, &amp;err, NULL);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2082'>my_errno</a>         2082 src/vfs/smbfs/smbfs.c         my_errno = cli_error (remote_handle-&gt;cli, NULL, &amp;err, NULL);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2201'>my_errno</a>         2201 src/vfs/smbfs/smbfs.c         my_errno = EFAULT;</span>
+</pre>
+</body>
+</html>

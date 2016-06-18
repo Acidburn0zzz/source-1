@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>keymap</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--keybind.c.html#L398'>keymap</a>            398 lib/keybind.c  keymap_add (GArray * keymap, long key, long cmd, const char *caption)</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L407'>keymap</a>            407 lib/keybind.c          g_array_append_val (keymap, new_bind);</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L416'>keymap</a>            416 lib/keybind.c  keybind_cmd_bind (GArray * keymap, const char *keybind, long action)</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L422'>keymap</a>            422 lib/keybind.c      keymap_add (keymap, key, action, caption);</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L459'>keymap</a>            459 lib/keybind.c  keybind_lookup_keymap_shortcut (const global_keymap_t * keymap, long action)</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L461'>keymap</a>            461 lib/keybind.c      if (keymap != NULL)</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L465'>keymap</a>            465 lib/keybind.c          for (i = 0; keymap[i].key != 0; i++)</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L466'>keymap</a>            466 lib/keybind.c              if (keymap[i].command == action)</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L467'>keymap</a>            467 lib/keybind.c                  return (keymap[i].caption[0] != '\0') ? keymap[i].caption : NULL;</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L475'>keymap</a>            475 lib/keybind.c  keybind_lookup_keymap_command (const global_keymap_t * keymap, long key)</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L477'>keymap</a>            477 lib/keybind.c      if (keymap != NULL)</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L481'>keymap</a>            481 lib/keybind.c          for (i = 0; keymap[i].key != 0; i++)</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L482'>keymap</a>            482 lib/keybind.c              if (keymap[i].key == key)</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L483'>keymap</a>            483 lib/keybind.c                  return keymap[i].command;</span>
+<span class='curline'><a href='../S/lib--keybind.h.html#L348'>keymap</a>            348 lib/keybind.h      GArray *keymap;</span>
+<span class='curline'><a href='../S/lib--keybind.h.html#L365'>keymap</a>            365 lib/keybind.h  void keybind_cmd_bind (GArray * keymap, const char *keybind, long action);</span>
+<span class='curline'><a href='../S/lib--keybind.h.html#L368'>keymap</a>            368 lib/keybind.h  const char *keybind_lookup_keymap_shortcut (const global_keymap_t * keymap, long action);</span>
+<span class='curline'><a href='../S/lib--keybind.h.html#L369'>keymap</a>            369 lib/keybind.h  long keybind_lookup_keymap_command (const global_keymap_t * keymap, long key);</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L263'>keymap</a>            263 lib/widget/buttonbar.c buttonbar_set_label (WButtonBar * bb, int idx, const char *text, const global_keymap_t * keymap,</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L270'>keymap</a>            270 lib/widget/buttonbar.c         if (keymap != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L271'>keymap</a>            271 lib/widget/buttonbar.c             command = keybind_lookup_keymap_command (keymap, KEY_F (idx));</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.h.html#L41'>keymap</a>             41 lib/widget/buttonbar.h                           const global_keymap_t * keymap, Widget * receiver);</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L564'>keymap</a>            564 src/keybind-defaults.c create_default_keymap_section (mc_config_t * keymap, const char *section,</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L570'>keymap</a>            570 src/keybind-defaults.c         mc_config_set_string_raw (keymap, section, k[i].key, k[i].value);</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L580'>keymap</a>            580 src/keybind-defaults.c     mc_config_t *keymap;</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L582'>keymap</a>            582 src/keybind-defaults.c     keymap = mc_config_init (NULL, TRUE);</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L584'>keymap</a>            584 src/keybind-defaults.c     create_default_keymap_section (keymap, KEYMAP_SECTION_MAIN, default_main_keymap);</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L585'>keymap</a>            585 src/keybind-defaults.c     create_default_keymap_section (keymap, KEYMAP_SECTION_MAIN_EXT, default_main_x_keymap);</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L586'>keymap</a>            586 src/keybind-defaults.c     create_default_keymap_section (keymap, KEYMAP_SECTION_PANEL, default_panel_keymap);</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L587'>keymap</a>            587 src/keybind-defaults.c     create_default_keymap_section (keymap, KEYMAP_SECTION_DIALOG, default_dialog_keymap);</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L588'>keymap</a>            588 src/keybind-defaults.c     create_default_keymap_section (keymap, KEYMAP_SECTION_INPUT, default_input_keymap);</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L589'>keymap</a>            589 src/keybind-defaults.c     create_default_keymap_section (keymap, KEYMAP_SECTION_LISTBOX, default_listbox_keymap);</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L590'>keymap</a>            590 src/keybind-defaults.c     create_default_keymap_section (keymap, KEYMAP_SECTION_TREE, default_tree_keymap);</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L591'>keymap</a>            591 src/keybind-defaults.c     create_default_keymap_section (keymap, KEYMAP_SECTION_HELP, default_help_keymap);</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L593'>keymap</a>            593 src/keybind-defaults.c     create_default_keymap_section (keymap, KEYMAP_SECTION_EDITOR, default_editor_keymap);</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L594'>keymap</a>            594 src/keybind-defaults.c     create_default_keymap_section (keymap, KEYMAP_SECTION_EDITOR_EXT, default_editor_x_keymap);</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L596'>keymap</a>            596 src/keybind-defaults.c     create_default_keymap_section (keymap, KEYMAP_SECTION_VIEWER, default_viewer_keymap);</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L597'>keymap</a>            597 src/keybind-defaults.c     create_default_keymap_section (keymap, KEYMAP_SECTION_VIEWER_HEX, default_viewer_hex_keymap);</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L599'>keymap</a>            599 src/keybind-defaults.c     create_default_keymap_section (keymap, KEYMAP_SECTION_DIFFVIEWER, default_diff_keymap);</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L602'>keymap</a>            602 src/keybind-defaults.c     return keymap;</span>
+<span class='curline'><a href='../S/src--setup.c.html#L681'>keymap</a>            681 src/setup.c    load_keymap_from_section (const char *section_name, GArray * keymap, mc_config_t * cfg)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L705'>keymap</a>            705 src/setup.c                        keybind_cmd_bind (keymap, *curr_values, action);</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L83'>keymap</a>             83 src/viewer/display.c     const global_keymap_t *keymap = view-&gt;hex_mode ? viewer_hex_map : viewer_map;</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L85'>keymap</a>             85 src/viewer/display.c     buttonbar_set_label (b, 1, Q_ ("ButtonBar|Help"), keymap, WIDGET (view));</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L90'>keymap</a>             90 src/viewer/display.c             buttonbar_set_label (b, 2, Q_ ("ButtonBar|View"), keymap, WIDGET (view));</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L92'>keymap</a>             92 src/viewer/display.c             buttonbar_set_label (b, 2, Q_ ("ButtonBar|Edit"), keymap, WIDGET (view));</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L94'>keymap</a>             94 src/viewer/display.c             buttonbar_set_label (b, 2, "", keymap, WIDGET (view));</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L96'>keymap</a>             96 src/viewer/display.c         buttonbar_set_label (b, 4, Q_ ("ButtonBar|Ascii"), keymap, WIDGET (view));</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L97'>keymap</a>             97 src/viewer/display.c         buttonbar_set_label (b, 6, Q_ ("ButtonBar|Save"), keymap, WIDGET (view));</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L98'>keymap</a>             98 src/viewer/display.c         buttonbar_set_label (b, 7, Q_ ("ButtonBar|HxSrch"), keymap, WIDGET (view));</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L104'>keymap</a>            104 src/viewer/display.c                              : Q_ ("ButtonBar|Wrap"), keymap, WIDGET (view));</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L105'>keymap</a>            105 src/viewer/display.c         buttonbar_set_label (b, 4, Q_ ("ButtonBar|Hex"), keymap, WIDGET (view));</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L106'>keymap</a>            106 src/viewer/display.c         buttonbar_set_label (b, 6, "", keymap, WIDGET (view));</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L107'>keymap</a>            107 src/viewer/display.c         buttonbar_set_label (b, 7, Q_ ("ButtonBar|Search"), keymap, WIDGET (view));</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L110'>keymap</a>            110 src/viewer/display.c     buttonbar_set_label (b, 5, Q_ ("ButtonBar|Goto"), keymap, WIDGET (view));</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L112'>keymap</a>            112 src/viewer/display.c                          : Q_ ("ButtonBar|Parse"), keymap, WIDGET (view));</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L115'>keymap</a>            115 src/viewer/display.c         buttonbar_set_label (b, 10, "", keymap, WIDGET (view));</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L119'>keymap</a>            119 src/viewer/display.c         buttonbar_set_label (b, 3, Q_ ("ButtonBar|Quit"), keymap, WIDGET (view));</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L121'>keymap</a>            121 src/viewer/display.c                              : Q_ ("ButtonBar|Format"), keymap, WIDGET (view));</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L122'>keymap</a>            122 src/viewer/display.c         buttonbar_set_label (b, 10, Q_ ("ButtonBar|Quit"), keymap, WIDGET (view));</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>fp</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L687'>fp</a>                687 src/filemanager/mountlist.c         FILE *fp;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L696'>fp</a>                696 src/filemanager/mountlist.c         fp = fopen (mountinfo, "r");</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L697'>fp</a>                697 src/filemanager/mountlist.c         if (fp != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L702'>fp</a>                702 src/filemanager/mountlist.c             while (getline (&amp;line, &amp;buf_size, fp) != -1)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L764'>fp</a>                764 src/filemanager/mountlist.c             if (ferror (fp) != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L768'>fp</a>                768 src/filemanager/mountlist.c                 fclose (fp);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L773'>fp</a>                773 src/filemanager/mountlist.c             if (fclose (fp) == EOF)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L782'>fp</a>                782 src/filemanager/mountlist.c             fp = setmntent (table, "r");</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L783'>fp</a>                783 src/filemanager/mountlist.c             if (fp == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L786'>fp</a>                786 src/filemanager/mountlist.c             while ((mnt = getmntent (fp)) != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L805'>fp</a>                805 src/filemanager/mountlist.c             if (endmntent (fp) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1041'>fp</a>               1041 src/filemanager/mountlist.c         FILE *fp;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1043'>fp</a>               1043 src/filemanager/mountlist.c         fp = fopen (table, "r");</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1044'>fp</a>               1044 src/filemanager/mountlist.c         if (fp == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1047'>fp</a>               1047 src/filemanager/mountlist.c         while (fread (&amp;mnt, sizeof (mnt), 1, fp) &gt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1079'>fp</a>               1079 src/filemanager/mountlist.c         if (ferror (fp))</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1084'>fp</a>               1084 src/filemanager/mountlist.c             fclose (fp);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1089'>fp</a>               1089 src/filemanager/mountlist.c         if (fclose (fp) == EOF)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1120'>fp</a>               1120 src/filemanager/mountlist.c         FILE *fp;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1155'>fp</a>               1155 src/filemanager/mountlist.c         fp = fopen (table, "r");</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1156'>fp</a>               1156 src/filemanager/mountlist.c         if (fp == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1160'>fp</a>               1160 src/filemanager/mountlist.c             while ((ret = getmntent (fp, &amp;mnt)) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1175'>fp</a>               1175 src/filemanager/mountlist.c             ret = fclose (fp) == EOF ? errno : 0 &lt; ret ? 0 : -1;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1512'>fp</a>               1512 src/vfs/extfs/extfs.c     struct pseudofile *fp;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1515'>fp</a>               1515 src/vfs/extfs/extfs.c     fp = (struct pseudofile *) extfs_open (vpath, O_RDONLY, 0);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1516'>fp</a>               1516 src/vfs/extfs/extfs.c     if (fp == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1518'>fp</a>               1518 src/vfs/extfs/extfs.c     if (fp-&gt;entry-&gt;inode-&gt;local_filename == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1520'>fp</a>               1520 src/vfs/extfs/extfs.c         extfs_close ((void *) fp);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1523'>fp</a>               1523 src/vfs/extfs/extfs.c     p = vfs_path_from_str (fp-&gt;entry-&gt;inode-&gt;local_filename);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1524'>fp</a>               1524 src/vfs/extfs/extfs.c     fp-&gt;archive-&gt;fd_usage++;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1525'>fp</a>               1525 src/vfs/extfs/extfs.c     extfs_close ((void *) fp);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1534'>fp</a>               1534 src/vfs/extfs/extfs.c     struct pseudofile *fp;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1536'>fp</a>               1536 src/vfs/extfs/extfs.c     fp = (struct pseudofile *) extfs_open (vpath, O_RDONLY, 0);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1537'>fp</a>               1537 src/vfs/extfs/extfs.c     if (fp == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1540'>fp</a>               1540 src/vfs/extfs/extfs.c     if (strcmp (fp-&gt;entry-&gt;inode-&gt;local_filename, vfs_path_get_last_path_str (local)) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1542'>fp</a>               1542 src/vfs/extfs/extfs.c         fp-&gt;archive-&gt;fd_usage--;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1544'>fp</a>               1544 src/vfs/extfs/extfs.c             fp-&gt;has_changed = TRUE;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1545'>fp</a>               1545 src/vfs/extfs/extfs.c         extfs_close ((void *) fp);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1551'>fp</a>               1551 src/vfs/extfs/extfs.c         extfs_close ((void *) fp);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1556'>fp</a>               1556 src/vfs/ftpfs/ftpfs.c     FILE *fp;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1581'>fp</a>               1581 src/vfs/ftpfs/ftpfs.c     fp = fdopen (sock, "r");</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1582'>fp</a>               1582 src/vfs/ftpfs/ftpfs.c     if (fp == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1602'>fp</a>               1602 src/vfs/ftpfs/ftpfs.c             if (fgets (buffer, sizeof (buffer), fp) == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1635'>fp</a>               1635 src/vfs/ftpfs/ftpfs.c     while (fgets (buffer, sizeof (buffer), fp) != NULL);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1637'>fp</a>               1637 src/vfs/ftpfs/ftpfs.c     fclose (fp);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L60'>fp</a>                 60 src/vfs/smbfs/helpers/include/proto.h int sys_fseek (FILE * fp, SMB_OFF_T offset, int whence);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L61'>fp</a>                 61 src/vfs/smbfs/helpers/include/proto.h SMB_OFF_T sys_ftell (FILE * fp);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L318'>fp</a>                318 src/vfs/smbfs/helpers/include/proto.h BOOL getlmhostsent (FILE * fp, pstring name, int *name_type, struct in_addr *ipaddr);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L319'>fp</a>                319 src/vfs/smbfs/helpers/include/proto.h void endlmhosts (FILE * fp);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charset.c.html#L207'>fp</a>                207 src/vfs/smbfs/helpers/lib/charset.c     FILE *fp = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charset.c.html#L251'>fp</a>                251 src/vfs/smbfs/helpers/lib/charset.c     if ((fp = sys_fopen (codepage_file_name, "r")) == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charset.c.html#L258'>fp</a>                258 src/vfs/smbfs/helpers/lib/charset.c     if (fread (buf, 1, CODEPAGE_HEADER_SIZE, fp) != CODEPAGE_HEADER_SIZE)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charset.c.html#L306'>fp</a>                306 src/vfs/smbfs/helpers/lib/charset.c     if (fread ((char *) cp_p, 1, size, fp) != size)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charset.c.html#L316'>fp</a>                316 src/vfs/smbfs/helpers/lib/charset.c     fclose (fp);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charset.c.html#L323'>fp</a>                323 src/vfs/smbfs/helpers/lib/charset.c     if (fp != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charset.c.html#L324'>fp</a>                324 src/vfs/smbfs/helpers/lib/charset.c         fclose (fp);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L186'>fp</a>                186 src/vfs/smbfs/helpers/lib/system.c sys_fseek (FILE * fp, SMB_OFF_T offset, int whence)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L188'>fp</a>                188 src/vfs/smbfs/helpers/lib/system.c     return fseek (fp, offset, whence);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L196'>fp</a>                196 src/vfs/smbfs/helpers/lib/system.c sys_ftell (FILE * fp)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L198'>fp</a>                198 src/vfs/smbfs/helpers/lib/system.c     return (SMB_OFF_T) ftell (fp);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1527'>fp</a>               1527 src/vfs/smbfs/helpers/lib/util.c         char *fp, *rp, *cp2, *cp1;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1549'>fp</a>               1549 src/vfs/smbfs/helpers/lib/util.c                 fp = strchr (cp2, '.');</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1550'>fp</a>               1550 src/vfs/smbfs/helpers/lib/util.c                 if (fp)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1551'>fp</a>               1551 src/vfs/smbfs/helpers/lib/util.c                     *fp = '\0';</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1565'>fp</a>               1565 src/vfs/smbfs/helpers/lib/util.c                 cp2 = fp ? fp + 1 : "";</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1574'>fp</a>               1574 src/vfs/smbfs/helpers/lib/util.c                         fp = strchr (cp2, '.');</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1575'>fp</a>               1575 src/vfs/smbfs/helpers/lib/util.c                         if (fp)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1576'>fp</a>               1576 src/vfs/smbfs/helpers/lib/util.c                             *fp = '\0';</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1580'>fp</a>               1580 src/vfs/smbfs/helpers/lib/util.c                             cp2 = fp ? fp + 1 : "";</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1583'>fp</a>               1583 src/vfs/smbfs/helpers/lib/util.c                         cp2 = fp ? fp + 1 : "";</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L129'>fp</a>                129 src/vfs/smbfs/helpers/lib/util_file.c     FILE *fp = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L138'>fp</a>                138 src/vfs/smbfs/helpers/lib/util_file.c     fp = sys_fopen (pfile, update ? "r+b" : "rb");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L140'>fp</a>                140 src/vfs/smbfs/helpers/lib/util_file.c     if (fp == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L147'>fp</a>                147 src/vfs/smbfs/helpers/lib/util_file.c     setvbuf (fp, s_readbuf, _IOFBF, bufsize);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L149'>fp</a>                149 src/vfs/smbfs/helpers/lib/util_file.c     if (!file_lock (fileno (fp), (update ? F_WRLCK : F_RDLCK), 5, file_lock_depth))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L152'>fp</a>                152 src/vfs/smbfs/helpers/lib/util_file.c         fclose (fp);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L160'>fp</a>                160 src/vfs/smbfs/helpers/lib/util_file.c     return (void *) fp;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L169'>fp</a>                169 src/vfs/smbfs/helpers/lib/util_file.c     FILE *fp = (FILE *) vp;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L171'>fp</a>                171 src/vfs/smbfs/helpers/lib/util_file.c     file_unlock (fileno (fp), file_lock_depth);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L172'>fp</a>                172 src/vfs/smbfs/helpers/lib/util_file.c     fclose (fp);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L206'>fp</a>                206 src/vfs/smbfs/helpers/lib/util_file.c     FILE *fp = (FILE *) vp;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L211'>fp</a>                211 src/vfs/smbfs/helpers/lib/util_file.c     if (fp == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L220'>fp</a>                220 src/vfs/smbfs/helpers/lib/util_file.c     while (!feof (fp))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L224'>fp</a>                224 src/vfs/smbfs/helpers/lib/util_file.c         fgets (linebuf, linebuf_size, fp);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L225'>fp</a>                225 src/vfs/smbfs/helpers/lib/util_file.c         if (ferror (fp))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L239'>fp</a>                239 src/vfs/smbfs/helpers/lib/util_file.c             while (!ferror (fp) &amp;&amp; !feof (fp))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L241'>fp</a>                241 src/vfs/smbfs/helpers/lib/util_file.c                 c = fgetc (fp);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L256'>fp</a>                256 src/vfs/smbfs/helpers/lib/util_file.c         if ((linebuf[0] == 0) &amp;&amp; feof (fp))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L247'>fp</a>                247 src/vfs/smbfs/helpers/libsmb/namequery.c     FILE *fp = sys_fopen (fname, "r");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L248'>fp</a>                248 src/vfs/smbfs/helpers/libsmb/namequery.c     if (!fp)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L254'>fp</a>                254 src/vfs/smbfs/helpers/libsmb/namequery.c     return fp;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L261'>fp</a>                261 src/vfs/smbfs/helpers/libsmb/namequery.c getlmhostsent (FILE * fp, pstring name, int *name_type, struct in_addr * ipaddr)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L265'>fp</a>                265 src/vfs/smbfs/helpers/libsmb/namequery.c     while (!feof (fp) &amp;&amp; !ferror (fp))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L273'>fp</a>                273 src/vfs/smbfs/helpers/libsmb/namequery.c         if (!fgets_slash (line, sizeof (pstring), fp))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L348'>fp</a>                348 src/vfs/smbfs/helpers/libsmb/namequery.c endlmhosts (FILE * fp)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L350'>fp</a>                350 src/vfs/smbfs/helpers/libsmb/namequery.c     fclose (fp);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L465'>fp</a>                465 src/vfs/smbfs/helpers/libsmb/namequery.c     FILE *fp;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L471'>fp</a>                471 src/vfs/smbfs/helpers/libsmb/namequery.c     fp = startlmhosts (LMHOSTSFILE);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L472'>fp</a>                472 src/vfs/smbfs/helpers/libsmb/namequery.c     if (fp)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L474'>fp</a>                474 src/vfs/smbfs/helpers/libsmb/namequery.c         while (getlmhostsent (fp, lmhost_name, &amp;name_type2, return_ip))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L478'>fp</a>                478 src/vfs/smbfs/helpers/libsmb/namequery.c                 endlmhosts (fp);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L482'>fp</a>                482 src/vfs/smbfs/helpers/libsmb/namequery.c         endlmhosts (fp);</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L388'>fp</a>                388 src/viewer/hex.c         int fp;</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L396'>fp</a>                396 src/viewer/hex.c         fp = mc_open (view-&gt;filename_vpath, O_WRONLY);</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L397'>fp</a>                397 src/viewer/hex.c         if (fp != -1)</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L403'>fp</a>                403 src/viewer/hex.c                 if (mc_lseek (fp, curr-&gt;offset, SEEK_SET) == -1</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L404'>fp</a>                404 src/viewer/hex.c                     || mc_write (fp, &amp;(curr-&gt;value), 1) != 1)</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L419'>fp</a>                419 src/viewer/hex.c             if (mc_close (fp) == -1)</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L430'>fp</a>                430 src/viewer/hex.c         (void) mc_close (fp);</span>
+</pre>
+</body>
+</html>

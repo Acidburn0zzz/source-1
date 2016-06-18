@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>logfile</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L808'>logfile</a>           808 lib/vfs/direntry.c         ((struct vfs_s_subclass *) path_element-&gt;class-&gt;data)-&gt;logfile = fopen ((char *) arg, "w");</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1489'>logfile</a>          1489 lib/vfs/direntry.c     FILE *logfile = MEDATA-&gt;logfile;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1497'>logfile</a>          1497 lib/vfs/direntry.c         if (logfile)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1501'>logfile</a>          1501 lib/vfs/direntry.c             ret1 = fwrite (buf, 1, 1, logfile);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1502'>logfile</a>          1502 lib/vfs/direntry.c             ret2 = fflush (logfile);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1517'>logfile</a>          1517 lib/vfs/direntry.c         if (logfile)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1521'>logfile</a>          1521 lib/vfs/direntry.c             ret1 = fwrite (&amp;c, 1, 1, logfile);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1522'>logfile</a>          1522 lib/vfs/direntry.c             ret2 = fflush (logfile);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L124'>logfile</a>           124 lib/vfs/xdirentry.h     FILE *logfile;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L245'>logfile</a>           245 src/vfs/fish/fish.c     FILE *logfile = MEDATA-&gt;logfile;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L252'>logfile</a>           252 src/vfs/fish/fish.c     if (logfile)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L255'>logfile</a>           255 src/vfs/fish/fish.c         ret = fwrite (str, strlen (str), 1, logfile);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L256'>logfile</a>           256 src/vfs/fish/fish.c         ret = fflush (logfile);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L652'>logfile</a>           652 src/vfs/fish/fish.c     FILE *logfile;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L661'>logfile</a>           661 src/vfs/fish/fish.c     if (!(MEDATA-&gt;logfile))</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L663'>logfile</a>           663 src/vfs/fish/fish.c         MEDATA-&gt;logfile = fopen ("/tmp/mc-FISH.sh", "w");</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L666'>logfile</a>           666 src/vfs/fish/fish.c     logfile = MEDATA-&gt;logfile;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L690'>logfile</a>           690 src/vfs/fish/fish.c         if (logfile)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L692'>logfile</a>           692 src/vfs/fish/fish.c             fputs (buffer, logfile);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L693'>logfile</a>           693 src/vfs/fish/fish.c             fputs ("\n", logfile);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L694'>logfile</a>           694 src/vfs/fish/fish.c             fflush (logfile);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L283'>logfile</a>           283 src/vfs/ftpfs/ftpfs.c         if (MEDATA-&gt;logfile)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L285'>logfile</a>           285 src/vfs/ftpfs/ftpfs.c             fprintf (MEDATA-&gt;logfile, "MC -- ftpfs_translate_path: %s\n", remote_path);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L286'>logfile</a>           286 src/vfs/ftpfs/ftpfs.c             fflush (MEDATA-&gt;logfile);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L469'>logfile</a>           469 src/vfs/ftpfs/ftpfs.c     if (MEDATA-&gt;logfile)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L473'>logfile</a>           473 src/vfs/ftpfs/ftpfs.c             fputs ("PASS &lt;Password not logged&gt;\r\n", MEDATA-&gt;logfile);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L478'>logfile</a>           478 src/vfs/ftpfs/ftpfs.c             ret = fwrite (cmdstr, cmdlen, 1, MEDATA-&gt;logfile);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L482'>logfile</a>           482 src/vfs/ftpfs/ftpfs.c         fflush (MEDATA-&gt;logfile);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L607'>logfile</a>           607 src/vfs/ftpfs/ftpfs.c     if (!anon || MEDATA-&gt;logfile)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L635'>logfile</a>           635 src/vfs/ftpfs/ftpfs.c         if (MEDATA-&gt;logfile)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L637'>logfile</a>           637 src/vfs/ftpfs/ftpfs.c             fprintf (MEDATA-&gt;logfile, "MC -- remote_is_amiga =  %d\n", SUP-&gt;remote_is_amiga);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L638'>logfile</a>           638 src/vfs/ftpfs/ftpfs.c             fflush (MEDATA-&gt;logfile);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1604'>logfile</a>          1604 src/vfs/ftpfs/ftpfs.c             if (MEDATA-&gt;logfile)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1606'>logfile</a>          1606 src/vfs/ftpfs/ftpfs.c                 fputs (buffer, MEDATA-&gt;logfile);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1607'>logfile</a>          1607 src/vfs/ftpfs/ftpfs.c                 fflush (MEDATA-&gt;logfile);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1732'>logfile</a>          1732 src/vfs/ftpfs/ftpfs.c         if (MEDATA-&gt;logfile)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1734'>logfile</a>          1734 src/vfs/ftpfs/ftpfs.c             fputs (lc_buffer, MEDATA-&gt;logfile);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1735'>logfile</a>          1735 src/vfs/ftpfs/ftpfs.c             fputs ("\n", MEDATA-&gt;logfile);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1736'>logfile</a>          1736 src/vfs/ftpfs/ftpfs.c             fflush (MEDATA-&gt;logfile);</span>
+</pre>
+</body>
+</html>

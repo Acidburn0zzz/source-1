@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>lseek</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L625'>lseek</a>             625 lib/vfs/direntry.c         off_t retval = lseek (FH-&gt;handle, offset, whence);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1424'>lseek</a>            1424 lib/vfs/direntry.c     vclass-&gt;lseek = vfs_s_lseek;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L774'>lseek</a>             774 lib/vfs/interface.c     result = vfs-&gt;lseek ? (*vfs-&gt;lseek) (fsinfo, offset, whence) : -1;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L776'>lseek</a>             776 lib/vfs/interface.c         errno = vfs-&gt;lseek ? vfs_ferrno (vfs) : E_NOTSUPP;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L179'>lseek</a>             179 lib/vfs/vfs.h      off_t (*lseek) (void *vfs_info, off_t offset, int whence);</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L252'>lseek</a>             252 src/consaver/cons.saver.c                 || lseek (vcsa_fd, 0, 0) != 0</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L262'>lseek</a>             262 src/consaver/cons.saver.c                 &amp;&amp; lseek (vcsa_fd, 0, 0) == 0 &amp;&amp; fstat (console_fd, &amp;st) &gt;= 0 &amp;&amp; st.st_uid == uid)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L368'>lseek</a>             368 src/diffviewer/ydiff.c         rv = lseek (fs-&gt;fd, 0, SEEK_CUR);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L384'>lseek</a>             384 src/diffviewer/ydiff.c     rv = lseek (fs-&gt;fd, off, whence);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L405'>lseek</a>             405 src/diffviewer/ydiff.c     rv = lseek (fs-&gt;fd, 0, SEEK_SET);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L451'>lseek</a>             451 src/diffviewer/ydiff.c     off = lseek (fs-&gt;fd, 0, SEEK_CUR);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1562'>lseek</a>            1562 src/filemanager/mountlist.c         lseek (fd, (off_t) SUPERBOFF, 0);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1382'>lseek</a>            1382 src/vfs/extfs/extfs.c     return lseek (file-&gt;local_handle, offset, whence);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1745'>lseek</a>            1745 src/vfs/extfs/extfs.c     vfs_extfs_ops.lseek = extfs_lseek;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L410'>lseek</a>             410 src/vfs/local/local.c     return lseek (fd, offset, whence);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L441'>lseek</a>             441 src/vfs/local/local.c     vfs_local_ops.lseek = local_lseek;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L559'>lseek</a>             559 src/vfs/sfs/sfs.c     vfs_sfs_ops.lseek = local_lseek;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L718'>lseek</a>             718 src/vfs/sftpfs/vfs_class.c     sftpfs_class.lseek = sftpfs_cb_lseek;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2263'>lseek</a>            2263 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.lseek = smbfs_lseek;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L832'>lseek</a>             832 src/vfs/undelfs/undelfs.c     vfs_undelfs_ops.lseek = undelfs_lseek;</span>
+</pre>
+</body>
+</html>

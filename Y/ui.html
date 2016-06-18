@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>ui</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L400'>ui</a>                400 src/filemanager/filegui.c     add_widget_autopos (ui-&gt;replace_dlg, \</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L403'>ui</a>                403 src/filemanager/filegui.c                         rd_widgets [i].pos_flags, ui-&gt;replace_dlg-&gt;current-&gt;data)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L408'>ui</a>                408 src/filemanager/filegui.c     add_widget_autopos (ui-&gt;replace_dlg, label2, rd_widgets [i].pos_flags, \</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L409'>ui</a>                409 src/filemanager/filegui.c                         ui-&gt;replace_dlg-&gt;current != NULL ? ui-&gt;replace_dlg-&gt;current-&gt;data : NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L462'>ui</a>                462 src/filemanager/filegui.c     file_op_context_ui_t *ui = ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L480'>ui</a>                480 src/filemanager/filegui.c     stripped_vpath = vfs_path_from_str (ui-&gt;replace_filename);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L544'>ui</a>                544 src/filemanager/filegui.c     ui-&gt;replace_dlg =</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L554'>ui</a>                554 src/filemanager/filegui.c     add_widget (ui-&gt;replace_dlg, hline_new (y++, -1, -1));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L557'>ui</a>                557 src/filemanager/filegui.c     size_trunc_len (fsize_buffer, sizeof (fsize_buffer), ui-&gt;s_stat-&gt;st_size, 0,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L559'>ui</a>                559 src/filemanager/filegui.c     ADD_RD_LABEL (2, file_date (ui-&gt;s_stat-&gt;st_mtime), fsize_buffer, y++);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L562'>ui</a>                562 src/filemanager/filegui.c     size_trunc_len (fsize_buffer, sizeof (fsize_buffer), ui-&gt;d_stat-&gt;st_size, 0,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L564'>ui</a>                564 src/filemanager/filegui.c     ADD_RD_LABEL (3, file_date (ui-&gt;d_stat-&gt;st_mtime), fsize_buffer, y++);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L567'>ui</a>                567 src/filemanager/filegui.c     add_widget (ui-&gt;replace_dlg, hline_new (y++, -1, -1));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L574'>ui</a>                574 src/filemanager/filegui.c     if (!S_ISDIR (ui-&gt;d_stat-&gt;st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L578'>ui</a>                578 src/filemanager/filegui.c         if ((ctx-&gt;operation == OP_COPY) &amp;&amp; (ui-&gt;d_stat-&gt;st_size != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L579'>ui</a>                579 src/filemanager/filegui.c             &amp;&amp; (ui-&gt;s_stat-&gt;st_size &gt; ui-&gt;d_stat-&gt;st_size))</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L583'>ui</a>                583 src/filemanager/filegui.c     add_widget (ui-&gt;replace_dlg, hline_new (y++, -1, -1));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L591'>ui</a>                591 src/filemanager/filegui.c     add_widget (ui-&gt;replace_dlg, hline_new (y++, -1, -1));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L596'>ui</a>                596 src/filemanager/filegui.c     dlg_set_size (ui-&gt;replace_dlg, y + 3, rd_xlen);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L597'>ui</a>                597 src/filemanager/filegui.c     dlg_select_by_id (ui-&gt;replace_dlg, yes_id);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L598'>ui</a>                598 src/filemanager/filegui.c     result = dlg_run (ui-&gt;replace_dlg);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L599'>ui</a>                599 src/filemanager/filegui.c     dlg_destroy (ui-&gt;replace_dlg);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L672'>ui</a>                672 src/filemanager/filegui.c     file_op_context_ui_t *ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L674'>ui</a>                674 src/filemanager/filegui.c     if (ctx == NULL || ctx-&gt;ui == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L677'>ui</a>                677 src/filemanager/filegui.c     ui = ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L686'>ui</a>                686 src/filemanager/filegui.c     ui-&gt;op_dlg-&gt;ret_value = FILE_CONT;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L688'>ui</a>                688 src/filemanager/filegui.c     dlg_process_event (ui-&gt;op_dlg, c, &amp;event);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L689'>ui</a>                689 src/filemanager/filegui.c     switch (ui-&gt;op_dlg-&gt;ret_value)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L695'>ui</a>                695 src/filemanager/filegui.c             place_progress_buttons (ui-&gt;op_dlg, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L696'>ui</a>                696 src/filemanager/filegui.c             dlg_redraw (ui-&gt;op_dlg);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L706'>ui</a>                706 src/filemanager/filegui.c         place_progress_buttons (ui-&gt;op_dlg, ctx-&gt;suspended);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L707'>ui</a>                707 src/filemanager/filegui.c         dlg_redraw (ui-&gt;op_dlg);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L723'>ui</a>                723 src/filemanager/filegui.c     file_op_context_ui_t *ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L728'>ui</a>                728 src/filemanager/filegui.c     if (ctx == NULL || ctx-&gt;ui != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L743'>ui</a>                743 src/filemanager/filegui.c     ctx-&gt;ui = g_new0 (file_op_context_ui_t, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L745'>ui</a>                745 src/filemanager/filegui.c     ui = ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L746'>ui</a>                746 src/filemanager/filegui.c     ui-&gt;replace_result = REPLACE_YES;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L748'>ui</a>                748 src/filemanager/filegui.c     ui-&gt;op_dlg =</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L754'>ui</a>                754 src/filemanager/filegui.c         ui-&gt;showing_eta = with_eta &amp;&amp; ctx-&gt;progress_totals_computed;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L755'>ui</a>                755 src/filemanager/filegui.c         ui-&gt;showing_bps = with_eta;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L757'>ui</a>                757 src/filemanager/filegui.c         ui-&gt;src_file_label = label_new (y++, x, "");</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L758'>ui</a>                758 src/filemanager/filegui.c         add_widget (ui-&gt;op_dlg, ui-&gt;src_file_label);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L760'>ui</a>                760 src/filemanager/filegui.c         ui-&gt;src_file = label_new (y++, x, "");</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L761'>ui</a>                761 src/filemanager/filegui.c         add_widget (ui-&gt;op_dlg, ui-&gt;src_file);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L763'>ui</a>                763 src/filemanager/filegui.c         ui-&gt;tgt_file_label = label_new (y++, x, "");</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L764'>ui</a>                764 src/filemanager/filegui.c         add_widget (ui-&gt;op_dlg, ui-&gt;tgt_file_label);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L766'>ui</a>                766 src/filemanager/filegui.c         ui-&gt;tgt_file = label_new (y++, x, "");</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L767'>ui</a>                767 src/filemanager/filegui.c         add_widget (ui-&gt;op_dlg, ui-&gt;tgt_file);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L769'>ui</a>                769 src/filemanager/filegui.c         ui-&gt;progress_file_gauge = gauge_new (y++, x + 3, dlg_width - (x + 3) * 2, FALSE, 100, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L771'>ui</a>                771 src/filemanager/filegui.c             ui-&gt;progress_file_gauge-&gt;from_left_to_right = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L772'>ui</a>                772 src/filemanager/filegui.c         add_widget_autopos (ui-&gt;op_dlg, ui-&gt;progress_file_gauge, WPOS_KEEP_TOP | WPOS_KEEP_HORZ,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L775'>ui</a>                775 src/filemanager/filegui.c         ui-&gt;progress_file_label = label_new (y++, x, "");</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L776'>ui</a>                776 src/filemanager/filegui.c         add_widget (ui-&gt;op_dlg, ui-&gt;progress_file_label);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L780'>ui</a>                780 src/filemanager/filegui.c             ui-&gt;total_bytes_label = hline_new (y++, -1, -1);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L781'>ui</a>                781 src/filemanager/filegui.c             add_widget (ui-&gt;op_dlg, ui-&gt;total_bytes_label);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L785'>ui</a>                785 src/filemanager/filegui.c                 ui-&gt;progress_total_gauge =</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L788'>ui</a>                788 src/filemanager/filegui.c                     ui-&gt;progress_total_gauge-&gt;from_left_to_right = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L789'>ui</a>                789 src/filemanager/filegui.c                 add_widget_autopos (ui-&gt;op_dlg, ui-&gt;progress_total_gauge,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L793'>ui</a>                793 src/filemanager/filegui.c             ui-&gt;total_files_processed_label = label_new (y++, x, "");</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L794'>ui</a>                794 src/filemanager/filegui.c             add_widget (ui-&gt;op_dlg, ui-&gt;total_files_processed_label);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L796'>ui</a>                796 src/filemanager/filegui.c             ui-&gt;time_label = label_new (y++, x, "");</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L797'>ui</a>                797 src/filemanager/filegui.c             add_widget (ui-&gt;op_dlg, ui-&gt;time_label);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L802'>ui</a>                802 src/filemanager/filegui.c         ui-&gt;src_file = label_new (y++, x, "");</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L803'>ui</a>                803 src/filemanager/filegui.c         add_widget (ui-&gt;op_dlg, ui-&gt;src_file);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L805'>ui</a>                805 src/filemanager/filegui.c         ui-&gt;total_files_processed_label = label_new (y++, x, "");</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L806'>ui</a>                806 src/filemanager/filegui.c         add_widget (ui-&gt;op_dlg, ui-&gt;total_files_processed_label);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L809'>ui</a>                809 src/filemanager/filegui.c     add_widget (ui-&gt;op_dlg, hline_new (y++, -1, -1));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L842'>ui</a>                842 src/filemanager/filegui.c     add_widget (ui-&gt;op_dlg, progress_buttons[0].w);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L843'>ui</a>                843 src/filemanager/filegui.c     add_widget (ui-&gt;op_dlg, progress_buttons[1].w);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L844'>ui</a>                844 src/filemanager/filegui.c     add_widget (ui-&gt;op_dlg, progress_buttons[3].w);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L851'>ui</a>                851 src/filemanager/filegui.c     dlg_set_size (ui-&gt;op_dlg, y + 3, MAX (COLS * 2 / 3, buttons_width + 6));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L853'>ui</a>                853 src/filemanager/filegui.c     place_progress_buttons (ui-&gt;op_dlg, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L859'>ui</a>                859 src/filemanager/filegui.c     dlg_init (ui-&gt;op_dlg);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L867'>ui</a>                867 src/filemanager/filegui.c     if (ctx != NULL &amp;&amp; ctx-&gt;ui != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L869'>ui</a>                869 src/filemanager/filegui.c         file_op_context_ui_t *ui = (file_op_context_ui_t *) ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L871'>ui</a>                871 src/filemanager/filegui.c         dlg_run_done (ui-&gt;op_dlg);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L872'>ui</a>                872 src/filemanager/filegui.c         dlg_destroy (ui-&gt;op_dlg);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L873'>ui</a>                873 src/filemanager/filegui.c         MC_PTR_FREE (ctx-&gt;ui);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L886'>ui</a>                886 src/filemanager/filegui.c     file_op_context_ui_t *ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L889'>ui</a>                889 src/filemanager/filegui.c     if (!verbose || ctx == NULL || ctx-&gt;ui == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L892'>ui</a>                892 src/filemanager/filegui.c     ui = ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L896'>ui</a>                896 src/filemanager/filegui.c         gauge_show (ui-&gt;progress_file_gauge, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L900'>ui</a>                900 src/filemanager/filegui.c     gauge_set_value (ui-&gt;progress_file_gauge, 1024, (int) (1024 * done / total));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L901'>ui</a>                901 src/filemanager/filegui.c     gauge_show (ui-&gt;progress_file_gauge, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L906'>ui</a>                906 src/filemanager/filegui.c     if (ui-&gt;showing_eta &amp;&amp; ctx-&gt;eta_secs &gt; 0.5)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L926'>ui</a>                926 src/filemanager/filegui.c     label_set_text (ui-&gt;progress_file_label, buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L935'>ui</a>                935 src/filemanager/filegui.c     file_op_context_ui_t *ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L937'>ui</a>                937 src/filemanager/filegui.c     if (ctx == NULL || ctx-&gt;ui == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L940'>ui</a>                940 src/filemanager/filegui.c     ui = ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L941'>ui</a>                941 src/filemanager/filegui.c     if (ui-&gt;total_files_processed_label == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L948'>ui</a>                948 src/filemanager/filegui.c     label_set_text (ui-&gt;total_files_processed_label, buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L960'>ui</a>                960 src/filemanager/filegui.c     file_op_context_ui_t *ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L962'>ui</a>                962 src/filemanager/filegui.c     if (ctx == NULL || ctx-&gt;ui == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L965'>ui</a>                965 src/filemanager/filegui.c     ui = ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L967'>ui</a>                967 src/filemanager/filegui.c     if (ui-&gt;progress_total_gauge != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L970'>ui</a>                970 src/filemanager/filegui.c             gauge_show (ui-&gt;progress_total_gauge, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L973'>ui</a>                973 src/filemanager/filegui.c             gauge_set_value (ui-&gt;progress_total_gauge, 1024,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L975'>ui</a>                975 src/filemanager/filegui.c             gauge_show (ui-&gt;progress_total_gauge, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L982'>ui</a>                982 src/filemanager/filegui.c     if (ui-&gt;time_label != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1014'>ui</a>               1014 src/filemanager/filegui.c         label_set_text (ui-&gt;time_label, buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1017'>ui</a>               1017 src/filemanager/filegui.c     if (ui-&gt;total_bytes_label != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1028'>ui</a>               1028 src/filemanager/filegui.c         hline_set_text (ui-&gt;total_bytes_label, buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1039'>ui</a>               1039 src/filemanager/filegui.c     file_op_context_ui_t *ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1041'>ui</a>               1041 src/filemanager/filegui.c     if (ctx == NULL || ctx-&gt;ui == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1044'>ui</a>               1044 src/filemanager/filegui.c     ui = ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1051'>ui</a>               1051 src/filemanager/filegui.c         label_set_text (ui-&gt;src_file_label, _("Source"));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1052'>ui</a>               1052 src/filemanager/filegui.c         label_set_text (ui-&gt;src_file, truncFileString (ui-&gt;op_dlg, s));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1057'>ui</a>               1057 src/filemanager/filegui.c         label_set_text (ui-&gt;src_file_label, "");</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1058'>ui</a>               1058 src/filemanager/filegui.c         label_set_text (ui-&gt;src_file, "");</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1067'>ui</a>               1067 src/filemanager/filegui.c     file_op_context_ui_t *ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1069'>ui</a>               1069 src/filemanager/filegui.c     if (ctx == NULL || ctx-&gt;ui == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1072'>ui</a>               1072 src/filemanager/filegui.c     ui = ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1076'>ui</a>               1076 src/filemanager/filegui.c         label_set_text (ui-&gt;tgt_file_label, _("Target"));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1077'>ui</a>               1077 src/filemanager/filegui.c         label_set_text (ui-&gt;tgt_file,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1078'>ui</a>               1078 src/filemanager/filegui.c                         truncFileStringSecure (ui-&gt;op_dlg, vfs_path_as_str (s_vpath)));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1082'>ui</a>               1082 src/filemanager/filegui.c         label_set_text (ui-&gt;tgt_file_label, "");</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1083'>ui</a>               1083 src/filemanager/filegui.c         label_set_text (ui-&gt;tgt_file, "");</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1092'>ui</a>               1092 src/filemanager/filegui.c     file_op_context_ui_t *ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1094'>ui</a>               1094 src/filemanager/filegui.c     if (ctx == NULL || ctx-&gt;ui == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1097'>ui</a>               1097 src/filemanager/filegui.c     ui = ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1099'>ui</a>               1099 src/filemanager/filegui.c     if (ui-&gt;src_file_label != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1100'>ui</a>               1100 src/filemanager/filegui.c         label_set_text (ui-&gt;src_file_label, _("Deleting"));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1102'>ui</a>               1102 src/filemanager/filegui.c     label_set_text (ui-&gt;src_file, truncFileStringSecure (ui-&gt;op_dlg, s));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1115'>ui</a>               1115 src/filemanager/filegui.c     file_op_context_ui_t *ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1117'>ui</a>               1117 src/filemanager/filegui.c     if (ctx == NULL || ctx-&gt;ui == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1120'>ui</a>               1120 src/filemanager/filegui.c     ui = ctx-&gt;ui;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1122'>ui</a>               1122 src/filemanager/filegui.c     if (ui-&gt;replace_result &lt; REPLACE_ALWAYS)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1124'>ui</a>               1124 src/filemanager/filegui.c         ui-&gt;replace_filename = destname;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1125'>ui</a>               1125 src/filemanager/filegui.c         ui-&gt;s_stat = _s_stat;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1126'>ui</a>               1126 src/filemanager/filegui.c         ui-&gt;d_stat = _d_stat;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1127'>ui</a>               1127 src/filemanager/filegui.c         ui-&gt;replace_result = overwrite_query_dialog (ctx, mode);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1130'>ui</a>               1130 src/filemanager/filegui.c     switch (ui-&gt;replace_result)</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.h.html#L163'>ui</a>                163 src/filemanager/fileopctx.h     void *ui;</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>ngroups</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1251'>ngroups</a>          1251 lib/utilunix.c     static int ngroups;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1259'>ngroups</a>          1259 lib/utilunix.c         ngroups = getgroups (0, NULL);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1260'>ngroups</a>          1260 lib/utilunix.c         if (ngroups == -1)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1261'>ngroups</a>          1261 lib/utilunix.c             ngroups = 0;        /* ignore errors */</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1265'>ngroups</a>          1265 lib/utilunix.c         groups = g_new (gid_t, ngroups + 1);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1267'>ngroups</a>          1267 lib/utilunix.c         if (ngroups != 0)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1269'>ngroups</a>          1269 lib/utilunix.c             ngroups = getgroups (ngroups, groups);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1270'>ngroups</a>          1270 lib/utilunix.c             if (ngroups == -1)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1271'>ngroups</a>          1271 lib/utilunix.c                 ngroups = 0;    /* ignore errors */</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1276'>ngroups</a>          1276 lib/utilunix.c         groups[ngroups++] = getegid ();</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1284'>ngroups</a>          1284 lib/utilunix.c     for (i = 0; i &lt; ngroups; i++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L102'>ngroups</a>           102 src/vfs/smbfs/helpers/include/proto.h BOOL in_group (gid_t group, gid_t current_gid, int ngroups, gid_t * groups);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L572'>ngroups</a>           572 src/vfs/smbfs/helpers/include/smb.h     int ngroups;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L590'>ngroups</a>           590 src/vfs/smbfs/helpers/include/smb.h     int ngroups;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L139'>ngroups</a>           139 src/vfs/smbfs/helpers/lib/util.c in_group (gid_t group, gid_t current_gid, int ngroups, gid_t * groups)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L146'>ngroups</a>           146 src/vfs/smbfs/helpers/lib/util.c     for (i = 0; i &lt; ngroups; i++)</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L103'>ngroups</a>           103 src/viewer/hex.c     const int ngroups = view-&gt;bytes_per_line / 4;</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L110'>ngroups</a>           110 src/viewer/hex.c     const screen_dimen text_start = 8 + 13 * ngroups +</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L111'>ngroups</a>           111 src/viewer/hex.c         ((width &lt; 80) ? 0 : (width == 80) ? (ngroups - 1) : (ngroups - 1 + 1));</span>
+</pre>
+</body>
+</html>

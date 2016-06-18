@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>src/vfs/extfs/helpers/hp48+.in</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<!-- beginning of fixed guide -->
+<div id='guide'><ul>
+<li><a href='#TOP'><img class='icon' src='../icons/first.png' alt='[^]' /></a></li>
+<li><a href='#BOTTOM'><img class='icon' src='../icons/last.png' alt='[v]' /></a></li>
+<li><a href='#TOP'><img class='icon' src='../icons/top.png' alt='[top]' /></a></li>
+<li><a href='#BOTTOM'><img class='icon' src='../icons/bottom.png' alt='[bottom]' /></a></li>
+<li><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a></li>
+<li><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a></li>
+<li class='standout'><span><a href='../files/src.html'>src</a>/<a href='../files/src--vfs.html'>vfs</a>/<a href='../files/src--vfs--extfs.html'>extfs</a>/<a href='../files/src--vfs--extfs--helpers.html'>helpers</a>/hp48+.in</span></li>
+</ul></div>
+<!-- end of fixed guide -->
+<a id='TOP' name='TOP'></a><h2 class='header'><a href='../mains.html'>root</a>/<a href='../files/src.html'>src</a>/<a href='../files/src--vfs.html'>vfs</a>/<a href='../files/src--vfs--extfs.html'>extfs</a>/<a href='../files/src--vfs--extfs--helpers.html'>helpers</a>/hp48+.in</h2>
+<em class='comment'>/* <img class='icon' src='../icons/n_left.png' alt='[previous]' /><img class='icon' src='../icons/n_right.png' alt='[next]' /><img class='icon' src='../icons/n_first.png' alt='[first]' /><img class='icon' src='../icons/n_last.png' alt='[last]' /><img class='icon' src='../icons/n_top.png' alt='[top]' /><a href='#BOTTOM'><img class='icon' src='../icons/bottom.png' alt='[bottom]' /></a><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a>&nbsp;<em class='position'>[+1 src/vfs/extfs/helpers/hp48+.in]</em> */</em>
+<hr />
+<pre>
+<a id='L1' name='L1'></a>#!/bin/sh
+<a id='L2' name='L2'></a>#
+<a id='L3' name='L3'></a># Written by Christofer Edvardsen &lt;ce@earthling.net&gt;, Feb 1998
+<a id='L4' name='L4'></a>#
+<a id='L5' name='L5'></a># This script makes it possible to view and copy files to/from a hp48
+<a id='L6' name='L6'></a># (tested with a HP48G and the emulator x48)
+<a id='L7' name='L7'></a>#
+<a id='L8' name='L8'></a># To use the hp48 external filesystem:
+<a id='L9' name='L9'></a>#      - read the relevant parts of your HP48 manual
+<a id='L10' name='L10'></a>#      - install kermit
+<a id='L11' name='L11'></a>#      - connect the HP48 to your computer or start x48
+<a id='L12' name='L12'></a>#      - below change the line which reflects the serial device you use
+<a id='L13' name='L13'></a>#      - configure your HP48 (&lt;left shift&gt; - i/o - iopar): 
+<a id='L14' name='L14'></a>#        port: wire
+<a id='L15' name='L15'></a>#        baud: 9600 
+<a id='L16' name='L16'></a>#        transfer format: binary (fast transfers) or
+<a id='L17' name='L17'></a>#                         ascii (editable on the pc)
+<a id='L18' name='L18'></a>#      - start the server on the HP48: &lt;left shift&gt; - i/o - srvr - serve
+<a id='L19' name='L19'></a>#        or the shortcut &lt;right shift&gt; - &lt;right arrow&gt;
+<a id='L20' name='L20'></a>#      - on MC's commandline enter "cd hp48:"
+<a id='L21' name='L21'></a>#
+<a id='L22' name='L22'></a># Make sure you have kermit installed and that it's using the right serial
+<a id='L23' name='L23'></a># device by changing /dev/ttyXX on the next line
+<a id='L24' name='L24'></a>AWK=@AWK@
+<a id='L25' name='L25'></a>KERMIT="kermit -l /dev/ttyS1 -b 9600"
+<a id='L26' name='L26'></a> 
+<a id='L27' name='L27'></a>hp48_cmd()
+<a id='L28' name='L28'></a>{
+<a id='L29' name='L29'></a>$KERMIT -C "SET EXIT WARNING OFF,REMOTE $1,QUIT"
+<a id='L30' name='L30'></a>}
+<a id='L31' name='L31'></a> 
+<a id='L32' name='L32'></a>hp48_cd()
+<a id='L33' name='L33'></a>{
+<a id='L34' name='L34'></a>(echo SET EXIT WARNING OFF;echo REMOTE HOST HOME
+<a id='L35' name='L35'></a>for HP48_DIR in `echo "$1" | tr '/' ' '`;do
+<a id='L36' name='L36'></a>  if [ "x$HP48_DIR" != "x." ];then echo REMOTE HOST "$HP48_DIR"; fi
+<a id='L37' name='L37'></a>done
+<a id='L38' name='L38'></a>echo QUIT)| $KERMIT -B &gt;/dev/null
+<a id='L39' name='L39'></a>}
+<a id='L40' name='L40'></a> 
+<a id='L41' name='L41'></a>hp48_retdir()
+<a id='L42' name='L42'></a>{
+<a id='L43' name='L43'></a>echo "$1"
+<a id='L44' name='L44'></a>}
+<a id='L45' name='L45'></a> 
+<a id='L46' name='L46'></a>hp48_retsize()
+<a id='L47' name='L47'></a>{
+<a id='L48' name='L48'></a>printf "%d" "$2" 2&gt;/dev/null
+<a id='L49' name='L49'></a>}
+<a id='L50' name='L50'></a> 
+<a id='L51' name='L51'></a>hp48_parser()
+<a id='L52' name='L52'></a>{
+<a id='L53' name='L53'></a>HP48_DIRS=
+<a id='L54' name='L54'></a>read -r INPUT
+<a id='L55' name='L55'></a>while [ "x$INPUT" != "xEOF" ]
+<a id='L56' name='L56'></a>do
+<a id='L57' name='L57'></a>    case `echo "$INPUT" | $AWK '{if (int($2)) if ($3 == "Directory") print "dir";else print "file"}'` in
+<a id='L58' name='L58'></a>    dir) HP48_DIRS="$HP48_DIRS `hp48_retdir \"$INPUT\"`"
+<a id='L59' name='L59'></a>    printf "drwxr-xr-x   1 %-8d %-8d %8d %s %s\n" 0 0 `hp48_retsize "$INPUT"` "`date +\"%b %d %Y %k:%M\"`" "$HP48_CDIR/`hp48_retdir \"$INPUT\"`";;
+<a id='L60' name='L60'></a>    file) printf "-rw-r--r--   1 %-8d %-8d %8d %s %s\n" 0 0 `hp48_retsize "$INPUT"` "`date +\"%b %d %Y %k:%M\"`" "$HP48_CDIR/`hp48_retdir \"$INPUT\"`";;
+<a id='L61' name='L61'></a>    esac
+<a id='L62' name='L62'></a>    read -r INPUT
+<a id='L63' name='L63'></a>done
+<a id='L64' name='L64'></a>for HP48_DIR in $HP48_DIRS;
+<a id='L65' name='L65'></a>do 
+<a id='L66' name='L66'></a>    HP48_PDIR="$HP48_CDIR"
+<a id='L67' name='L67'></a>    HP48_CDIR="$HP48_CDIR/$HP48_DIR"; hp48_cmd "HOST $HP48_DIR" &gt;/dev/null
+<a id='L68' name='L68'></a>    hp48_list
+<a id='L69' name='L69'></a>    HP48_CDIR="$HP48_PDIR"; hp48_cmd "HOST UPDIR" &gt;/dev/null
+<a id='L70' name='L70'></a>done
+<a id='L71' name='L71'></a>}
+<a id='L72' name='L72'></a> 
+<a id='L73' name='L73'></a>hp48_list()
+<a id='L74' name='L74'></a>{
+<a id='L75' name='L75'></a>{ hp48_cmd "DIRECTORY"; echo; echo EOF; } | hp48_parser
+<a id='L76' name='L76'></a>}
+<a id='L77' name='L77'></a> 
+<a id='L78' name='L78'></a># override any locale for dates
+<a id='L79' name='L79'></a>LC_ALL=C
+<a id='L80' name='L80'></a>export LC_ALL
+<a id='L81' name='L81'></a> 
+<a id='L82' name='L82'></a>case "$1" in
+<a id='L83' name='L83'></a>list) HP48_CDIR=
+<a id='L84' name='L84'></a>    hp48_cmd "HOST HOME" &gt;/dev/null
+<a id='L85' name='L85'></a>    hp48_list
+<a id='L86' name='L86'></a>    exit 0;;
+<a id='L87' name='L87'></a>copyout)
+<a id='L88' name='L88'></a>    cd "`dirname "$4"`"
+<a id='L89' name='L89'></a>    hp48_cd "`dirname "$3"`"
+<a id='L90' name='L90'></a>    $KERMIT -B -g "`basename "$3"`" -a "$4" &gt;/dev/null
+<a id='L91' name='L91'></a>    exit 0;;
+<a id='L92' name='L92'></a>copyin) 
+<a id='L93' name='L93'></a>    cd "`dirname "$4"`"
+<a id='L94' name='L94'></a>    hp48_cd "`dirname "$3"`"
+<a id='L95' name='L95'></a>    $KERMIT -B -s "$4" -a "`basename "$3"`" &gt;/dev/null
+<a id='L96' name='L96'></a>    exit 0;;
+<a id='L97' name='L97'></a>esac
+<a id='L98' name='L98'></a>exit 1
+</pre>
+<hr />
+<a id='BOTTOM' name='BOTTOM'></a>
+<em class='comment'>/* <img class='icon' src='../icons/n_left.png' alt='[previous]' /><img class='icon' src='../icons/n_right.png' alt='[next]' /><img class='icon' src='../icons/n_first.png' alt='[first]' /><img class='icon' src='../icons/n_last.png' alt='[last]' /><a href='#TOP'><img class='icon' src='../icons/top.png' alt='[top]' /></a><img class='icon' src='../icons/n_bottom.png' alt='[bottom]' /><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a>&nbsp;<em class='position'>[+98 src/vfs/extfs/helpers/hp48+.in]</em> */</em>
+</body>
+</html>

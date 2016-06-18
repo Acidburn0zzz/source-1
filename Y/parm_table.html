@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>parm_table</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L454'>parm_table</a>        454 src/vfs/smbfs/helpers/param/loadparm.c #define NUMPARAMETERS (sizeof(parm_table) / sizeof(struct parm_struct))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L547'>parm_table</a>        547 src/vfs/smbfs/helpers/param/loadparm.c static struct parm_struct parm_table[] = {</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L921'>parm_table</a>        921 src/vfs/smbfs/helpers/param/loadparm.c         for (i = 0; parm_table[i].label; i++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L922'>parm_table</a>        922 src/vfs/smbfs/helpers/param/loadparm.c             if ((parm_table[i].type == P_STRING ||</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L923'>parm_table</a>        923 src/vfs/smbfs/helpers/param/loadparm.c                  parm_table[i].type == P_USTRING) &amp;&amp; parm_table[i].ptr)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L924'>parm_table</a>        924 src/vfs/smbfs/helpers/param/loadparm.c                 string_init (parm_table[i].ptr, "");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1426'>parm_table</a>       1426 src/vfs/smbfs/helpers/param/loadparm.c     for (i = 0; parm_table[i].label; i++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1427'>parm_table</a>       1427 src/vfs/smbfs/helpers/param/loadparm.c         if ((parm_table[i].type == P_STRING ||</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1428'>parm_table</a>       1428 src/vfs/smbfs/helpers/param/loadparm.c              parm_table[i].type == P_USTRING) &amp;&amp; parm_table[i].class == P_LOCAL)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1429'>parm_table</a>       1429 src/vfs/smbfs/helpers/param/loadparm.c             string_free ((char **) (((char *) pservice) + PTR_DIFF (parm_table[i].ptr, &amp;sDefault)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1597'>parm_table</a>       1597 src/vfs/smbfs/helpers/param/loadparm.c     for (iIndex = 0; parm_table[iIndex].label; iIndex++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1598'>parm_table</a>       1598 src/vfs/smbfs/helpers/param/loadparm.c         if (strwicmp (parm_table[iIndex].label, pszParmName) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1663'>parm_table</a>       1663 src/vfs/smbfs/helpers/param/loadparm.c     for (i = 0; parm_table[i].label; i++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1664'>parm_table</a>       1664 src/vfs/smbfs/helpers/param/loadparm.c         if (parm_table[i].ptr &amp;&amp; parm_table[i].class == P_LOCAL &amp;&amp; (bcopyall || pcopymapDest[i]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1666'>parm_table</a>       1666 src/vfs/smbfs/helpers/param/loadparm.c             void *def_ptr = parm_table[i].ptr;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1670'>parm_table</a>       1670 src/vfs/smbfs/helpers/param/loadparm.c             switch (parm_table[i].type)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1988'>parm_table</a>       1988 src/vfs/smbfs/helpers/param/loadparm.c     if (parm_table[parmnum].flags &amp; FLAG_DEPRECATED)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1993'>parm_table</a>       1993 src/vfs/smbfs/helpers/param/loadparm.c     def_ptr = parm_table[parmnum].ptr;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2002'>parm_table</a>       2002 src/vfs/smbfs/helpers/param/loadparm.c         if (parm_table[parmnum].class == P_GLOBAL)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2017'>parm_table</a>       2017 src/vfs/smbfs/helpers/param/loadparm.c         for (i = 0; parm_table[i].label; i++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2018'>parm_table</a>       2018 src/vfs/smbfs/helpers/param/loadparm.c             if (parm_table[i].ptr == parm_table[parmnum].ptr)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2023'>parm_table</a>       2023 src/vfs/smbfs/helpers/param/loadparm.c     if (parm_table[parmnum].special)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2025'>parm_table</a>       2025 src/vfs/smbfs/helpers/param/loadparm.c         parm_table[parmnum].special (pszParmValue, (char **) parm_ptr);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2030'>parm_table</a>       2030 src/vfs/smbfs/helpers/param/loadparm.c     switch (parm_table[parmnum].type)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2072'>parm_table</a>       2072 src/vfs/smbfs/helpers/param/loadparm.c         for (i = 0; parm_table[parmnum].enum_list[i].name; i++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2074'>parm_table</a>       2074 src/vfs/smbfs/helpers/param/loadparm.c             if (strequal (pszParmValue, parm_table[parmnum].enum_list[i].name))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2076'>parm_table</a>       2076 src/vfs/smbfs/helpers/param/loadparm.c                 *(int *) parm_ptr = parm_table[parmnum].enum_list[i].value;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2230'>parm_table</a>       2230 src/vfs/smbfs/helpers/param/loadparm.c         for (; parm_table[*i].label; (*i)++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2232'>parm_table</a>       2232 src/vfs/smbfs/helpers/param/loadparm.c             if (parm_table[*i].class == P_SEPARATOR)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2233'>parm_table</a>       2233 src/vfs/smbfs/helpers/param/loadparm.c                 return &amp;parm_table[(*i)++];</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2235'>parm_table</a>       2235 src/vfs/smbfs/helpers/param/loadparm.c             if (!parm_table[*i].ptr || (*parm_table[*i].label == '-'))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2238'>parm_table</a>       2238 src/vfs/smbfs/helpers/param/loadparm.c             if ((*i) &gt; 0 &amp;&amp; (parm_table[*i].ptr == parm_table[(*i) - 1].ptr))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2241'>parm_table</a>       2241 src/vfs/smbfs/helpers/param/loadparm.c             return &amp;parm_table[(*i)++];</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2248'>parm_table</a>       2248 src/vfs/smbfs/helpers/param/loadparm.c         for (; parm_table[*i].label; (*i)++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2250'>parm_table</a>       2250 src/vfs/smbfs/helpers/param/loadparm.c             if (parm_table[*i].class == P_SEPARATOR)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2251'>parm_table</a>       2251 src/vfs/smbfs/helpers/param/loadparm.c                 return &amp;parm_table[(*i)++];</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2253'>parm_table</a>       2253 src/vfs/smbfs/helpers/param/loadparm.c             if (parm_table[*i].class == P_LOCAL &amp;&amp;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2254'>parm_table</a>       2254 src/vfs/smbfs/helpers/param/loadparm.c                 parm_table[*i].ptr &amp;&amp;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2255'>parm_table</a>       2255 src/vfs/smbfs/helpers/param/loadparm.c                 (*parm_table[*i].label != '-') &amp;&amp;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2256'>parm_table</a>       2256 src/vfs/smbfs/helpers/param/loadparm.c                 ((*i) == 0 || (parm_table[*i].ptr != parm_table[(*i) - 1].ptr)))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2258'>parm_table</a>       2258 src/vfs/smbfs/helpers/param/loadparm.c                 int pdiff = PTR_DIFF (parm_table[*i].ptr, &amp;sDefault);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2261'>parm_table</a>       2261 src/vfs/smbfs/helpers/param/loadparm.c                     !equal_parameter (parm_table[*i].type,</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2264'>parm_table</a>       2264 src/vfs/smbfs/helpers/param/loadparm.c                     return &amp;parm_table[(*i)++];</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2356'>parm_table</a>       2356 src/vfs/smbfs/helpers/param/loadparm.c     for (i = 0; parm_table[i].label; i++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2358'>parm_table</a>       2358 src/vfs/smbfs/helpers/param/loadparm.c         if (i &gt; 0 &amp;&amp; parm_table[i].ptr == parm_table[i - 1].ptr)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2360'>parm_table</a>       2360 src/vfs/smbfs/helpers/param/loadparm.c         switch (parm_table[i].type)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2364'>parm_table</a>       2364 src/vfs/smbfs/helpers/param/loadparm.c             parm_table[i].def.svalue = strdup (*(char **) parm_table[i].ptr);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2368'>parm_table</a>       2368 src/vfs/smbfs/helpers/param/loadparm.c             parm_table[i].def.svalue = strdup ((char *) parm_table[i].ptr);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2372'>parm_table</a>       2372 src/vfs/smbfs/helpers/param/loadparm.c             parm_table[i].def.bvalue = *(BOOL *) parm_table[i].ptr;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2375'>parm_table</a>       2375 src/vfs/smbfs/helpers/param/loadparm.c             parm_table[i].def.cvalue = *(char *) parm_table[i].ptr;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2380'>parm_table</a>       2380 src/vfs/smbfs/helpers/param/loadparm.c             parm_table[i].def.ivalue = *(int *) parm_table[i].ptr;</span>
+</pre>
+</body>
+</html>

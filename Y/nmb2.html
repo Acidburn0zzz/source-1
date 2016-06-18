@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>nmb2</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L179'>nmb2</a>              179 src/vfs/smbfs/helpers/libsmb/namequery.c             struct nmb_packet *nmb2 = &amp;p2-&gt;packet.nmb;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L182'>nmb2</a>              182 src/vfs/smbfs/helpers/libsmb/namequery.c             if (nmb-&gt;header.name_trn_id != nmb2-&gt;header.name_trn_id || !nmb2-&gt;header.response)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L195'>nmb2</a>              195 src/vfs/smbfs/helpers/libsmb/namequery.c             if (nmb2-&gt;header.opcode != 0 ||</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L196'>nmb2</a>              196 src/vfs/smbfs/helpers/libsmb/namequery.c                 nmb2-&gt;header.nm_flags.bcast || nmb2-&gt;header.rcode || !nmb2-&gt;header.ancount)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L207'>nmb2</a>              207 src/vfs/smbfs/helpers/libsmb/namequery.c                                                   ((*count) + nmb2-&gt;answers-&gt;rdlength / 6));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L212'>nmb2</a>              212 src/vfs/smbfs/helpers/libsmb/namequery.c                 for (i = 0; i &lt; nmb2-&gt;answers-&gt;rdlength / 6; i++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L214'>nmb2</a>              214 src/vfs/smbfs/helpers/libsmb/namequery.c                     putip ((char *) &amp;ip_list[(*count)], &amp;nmb2-&gt;answers-&gt;rdata[2 + i * 6]);</span>
+</pre>
+</body>
+</html>

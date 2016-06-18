@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>stat</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--lock.c.html#L203'>stat</a>              203 lib/lock.c         struct stat statbuf;</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L282'>stat</a>              282 lib/lock.c         struct stat statbuf;</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L105'>stat</a>              105 lib/mcconfig/common.c     struct stat st;</span>
+<span class='curline'><a href='../S/lib--util.c.html#L116'>stat</a>              116 lib/util.c         struct stat mybuf;</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1314'>stat</a>             1314 lib/util.c         struct stat stat_buf;</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1330'>stat</a>             1330 lib/util.c             if (stat (file_name, &amp;stat_buf) == 0)</span>
+<span class='curline'><a href='../S/lib--util.h.html#L102'>stat</a>              102 lib/util.h         struct stat st;</span>
+<span class='curline'><a href='../S/lib--util.h.html#L181'>stat</a>              181 lib/util.h     int get_user_permissions (struct stat *buf);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1247'>stat</a>             1247 lib/utilunix.c get_user_permissions (struct stat *st)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L486'>stat</a>              486 lib/vfs/direntry.c vfs_s_internal_stat (const vfs_path_t * vpath, struct stat *buf, int flag)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L500'>stat</a>              500 lib/vfs/direntry.c vfs_s_stat (const vfs_path_t * vpath, struct stat *buf)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L508'>stat</a>              508 lib/vfs/direntry.c vfs_s_lstat (const vfs_path_t * vpath, struct stat *buf)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L516'>stat</a>              516 lib/vfs/direntry.c vfs_s_fstat (void *fh, struct stat *buf)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L877'>stat</a>              877 lib/vfs/direntry.c vfs_s_new_inode (struct vfs_class *me, struct vfs_s_super *super, struct stat *initstat)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L980'>stat</a>              980 lib/vfs/direntry.c struct stat *</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L983'>stat</a>              983 lib/vfs/direntry.c     static struct stat st;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1011'>stat</a>             1011 lib/vfs/direntry.c     struct stat *st;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1418'>stat</a>             1418 lib/vfs/direntry.c     vclass-&gt;stat = vfs_s_stat;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L87'>stat</a>               87 lib/vfs/interface.c     struct stat mystat;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L561'>stat</a>              561 lib/vfs/interface.c mc_stat (const vfs_path_t * vpath, struct stat *buf)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L573'>stat</a>              573 lib/vfs/interface.c         result = path_element-&gt;class-&gt;stat ? (*path_element-&gt;class-&gt;stat) (vpath, buf) : -1;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L584'>stat</a>              584 lib/vfs/interface.c mc_lstat (const vfs_path_t * vpath, struct stat *buf)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L607'>stat</a>              607 lib/vfs/interface.c mc_fstat (int handle, struct stat *buf)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L841'>stat</a>              841 lib/vfs/interface.c     struct stat st;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L676'>stat</a>              676 lib/vfs/parse_ls_vga.c vfs_parse_ls_lga (const char *p, struct stat * s, char **filename, char **linkname,</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L63'>stat</a>               63 lib/vfs/path.c     struct stat buf;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L65'>stat</a>               65 lib/vfs/path.c     return (stat (path, &amp;buf) != 0);</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.h.html#L57'>stat</a>               57 lib/vfs/utilvfs.h gboolean vfs_parse_ls_lga (const char *p, struct stat *s, char **filename, char **linkname,</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L557'>stat</a>              557 lib/vfs/vfs.c              struct stat my_stat, my_stat2;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L579'>stat</a>              579 lib/vfs/vfs.c              struct stat my_stat, my_stat2;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L164'>stat</a>              164 lib/vfs/vfs.h      int (*stat) (const vfs_path_t * vpath, struct stat * buf);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L165'>stat</a>              165 lib/vfs/vfs.h      int (*lstat) (const vfs_path_t * vpath, struct stat * buf);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L166'>stat</a>              166 lib/vfs/vfs.h      int (*fstat) (void *vfs_info, struct stat * buf);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L289'>stat</a>              289 lib/vfs/vfs.h  int mc_stat (const vfs_path_t * vpath, struct stat *buf);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L294'>stat</a>              294 lib/vfs/vfs.h  int mc_fstat (int fd, struct stat *buf);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L295'>stat</a>              295 lib/vfs/vfs.h  int mc_lstat (const vfs_path_t * vpath, struct stat *buf);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L96'>stat</a>               96 lib/vfs/xdirentry.h     struct stat st;             /* Parameters of this inode */</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L162'>stat</a>              162 lib/vfs/xdirentry.h                                      struct vfs_s_super *super, struct stat *initstat);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L169'>stat</a>              169 lib/vfs/xdirentry.h struct stat *vfs_s_default_stat (struct vfs_class *me, mode_t mode);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L232'>stat</a>              232 lib/widget/input_complete.c             struct stat tempstat;</span>
+<span class='curline'><a href='../S/src--args.c.html#L569'>stat</a>              569 src/args.c                 struct stat st;</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L163'>stat</a>              163 src/consaver/cons.saver.c     struct stat st;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3575'>stat</a>             3575 src/diffviewer/ydiff.c             struct stat st;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3626'>stat</a>             3626 src/diffviewer/ydiff.c             struct stat st0;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3627'>stat</a>             3627 src/diffviewer/ydiff.c             struct stat st1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L291'>stat</a>              291 src/editor/edit.c check_file_access (WEdit * edit, const vfs_path_t * filename_vpath, struct stat *st)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1760'>stat</a>             1760 src/editor/edit.c     struct stat status;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L204'>stat</a>              204 src/editor/editcmd.c     struct stat sb;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1718'>stat</a>             1718 src/editor/editcmd.c                 struct stat sb;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.h.html#L151'>stat</a>              151 src/editor/editwidget.h     struct stat stat1;          /* Result of mc_fstat() on the file */</span>
+<span class='curline'><a href='../S/src--execute.c.html#L182'>stat</a>              182 src/execute.c      struct stat st;</span>
+<span class='curline'><a href='../S/src--execute.c.html#L214'>stat</a>              214 src/execute.c          struct stat st;</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L112'>stat</a>              112 src/filemanager/achown.c static struct stat *sf_stat;</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L665'>stat</a>              665 src/filemanager/achown.c     sf_stat = g_new (struct stat, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L780'>stat</a>              780 src/filemanager/achown.c apply_advanced_chowns (struct stat *sf)</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L281'>stat</a>              281 src/filemanager/chmod.c init_chmod (const char *fname, const struct stat *sf_stat)</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L397'>stat</a>              397 src/filemanager/chmod.c do_chmod (struct stat *sf)</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L415'>stat</a>              415 src/filemanager/chmod.c apply_mask (struct stat *sf)</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L455'>stat</a>              455 src/filemanager/chmod.c         struct stat sf_stat;</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L335'>stat</a>              335 src/filemanager/chown.c     struct stat sf_stat;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L149'>stat</a>              149 src/filemanager/dir.c handle_dirent (struct dirent *dp, const char *fltr, struct stat *buf1, int *link_to_dir,</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L180'>stat</a>              180 src/filemanager/dir.c         struct stat buf2;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L198'>stat</a>              198 src/filemanager/dir.c dir_get_dotdot_stat (const vfs_path_t * vpath, struct stat *st)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L309'>stat</a>              309 src/filemanager/dir.c dir_list_append (dir_list * list, const char *fname, const struct stat * st,</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L586'>stat</a>              586 src/filemanager/dir.c handle_path (const char *path, struct stat * buf1, int *link_to_dir, int *stale_link)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L608'>stat</a>              608 src/filemanager/dir.c         struct stat buf2;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L630'>stat</a>              630 src/filemanager/dir.c     struct stat st;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L681'>stat</a>              681 src/filemanager/dir.c     struct stat b;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L698'>stat</a>              698 src/filemanager/dir.c     struct stat st;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.h.html#L48'>stat</a>               48 src/filemanager/dir.h gboolean dir_list_append (dir_list * list, const char *fname, const struct stat *st,</span>
+<span class='curline'><a href='../S/src--filemanager--dir.h.html#L58'>stat</a>               58 src/filemanager/dir.h gboolean handle_path (const char *path, struct stat *buf1, int *link_to_dir, int *stale_link);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L125'>stat</a>              125 src/filemanager/ext.c         struct stat mystat;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L145'>stat</a>              145 src/filemanager/ext.c         struct stat mystat;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L778'>stat</a>              778 src/filemanager/ext.c     struct stat mystat;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L291'>stat</a>              291 src/filemanager/file.c is_in_linklist (const GSList * lp, const vfs_path_t * vpath, const struct stat *sb)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L318'>stat</a>              318 src/filemanager/file.c check_hardlinks (const vfs_path_t * src_vpath, const vfs_path_t * dst_vpath, struct stat *pstat)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L326'>stat</a>              326 src/filemanager/file.c     struct stat link_stat;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L393'>stat</a>              393 src/filemanager/file.c     struct stat sb;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L532'>stat</a>              532 src/filemanager/file.c     struct stat s;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L790'>stat</a>              790 src/filemanager/file.c query_replace (file_op_context_t * ctx, const char *destname, struct stat *_s_stat,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L791'>stat</a>              791 src/filemanager/file.c                struct stat *_d_stat)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L798'>stat</a>              798 src/filemanager/file.c                                  struct stat *, struct stat *);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L806'>stat</a>              806 src/filemanager/file.c                             sizeof (struct stat), _s_stat, sizeof (struct stat), _d_stat);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L831'>stat</a>              831 src/filemanager/file.c query_replace (file_op_context_t * ctx, const char *destname, struct stat *_s_stat,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L832'>stat</a>              832 src/filemanager/file.c                struct stat *_d_stat)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L920'>stat</a>              920 src/filemanager/file.c     struct stat src_stats, dst_stats;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1070'>stat</a>             1070 src/filemanager/file.c     struct stat buf;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1128'>stat</a>             1128 src/filemanager/file.c         struct stat buf;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1287'>stat</a>             1287 src/filemanager/file.c         struct stat *s;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1384'>stat</a>             1384 src/filemanager/file.c                                const struct stat *src_stat)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1492'>stat</a>             1492 src/filemanager/file.c     struct stat src_stat, dst_stat;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2030'>stat</a>             2030 src/filemanager/file.c     struct stat buf, cbuf;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2298'>stat</a>             2298 src/filemanager/file.c     struct stat sbuf, dbuf;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2615'>stat</a>             2615 src/filemanager/file.c     struct stat src_stat;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2937'>stat</a>             2937 src/filemanager/file.c             struct stat dst_stat;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L241'>stat</a>              241 src/filemanager/filegui.c     struct stat *s_stat, *d_stat;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1113'>stat</a>             1113 src/filemanager/filegui.c                                   struct stat *_s_stat, struct stat *_d_stat)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1232'>stat</a>             1232 src/filemanager/filegui.c         struct stat buf;</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.h.html#L22'>stat</a>               22 src/filemanager/fileopctx.h typedef int (*mc_stat_fn) (const vfs_path_t * vpath, struct stat * buf);</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.h.html#L196'>stat</a>              196 src/filemanager/fileopctx.h                                                      struct stat *_s_stat, struct stat *_d_stat);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L984'>stat</a>              984 src/filemanager/find.c     struct stat s;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1261'>stat</a>             1261 src/filemanager/find.c     struct stat tmp_stat;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1744'>stat</a>             1744 src/filemanager/find.c         struct stat st;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1431'>stat</a>             1431 src/filemanager/hotlist.c     struct stat stat_buf;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1435'>stat</a>             1435 src/filemanager/hotlist.c         stat (hotlist_file_name, &amp;stat_buf);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1493'>stat</a>             1493 src/filemanager/hotlist.c     stat (hotlist_file_name, &amp;stat_buf);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1646'>stat</a>             1646 src/filemanager/hotlist.c     struct stat stat_buf;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1659'>stat</a>             1659 src/filemanager/hotlist.c             stat (hotlist_file_name, &amp;stat_buf);</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L110'>stat</a>              110 src/filemanager/info.c     struct stat st;</span>
+<span class='curline'><a href='../S/src--filemanager--ioblksize.h.html#L81'>stat</a>               81 src/filemanager/ioblksize.h io_blksize (struct stat sb)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L593'>stat</a>              593 src/filemanager/mountlist.c     struct stat stats;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L596'>stat</a>              596 src/filemanager/mountlist.c     if (stat (file, &amp;stats) != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L930'>stat</a>              930 src/filemanager/mountlist.c                 struct stat statbuf;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2928'>stat</a>             2928 src/filemanager/panel.c     struct stat st;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4404'>stat</a>             4404 src/filemanager/panel.c     struct stat current_stat;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4407'>stat</a>             4407 src/filemanager/panel.c     if (panels_options.fast_reload &amp;&amp; stat (vfs_path_as_str (panel-&gt;cwd_vpath), &amp;current_stat) == 0</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L130'>stat</a>              130 src/filemanager/panel.h     struct stat dir_stat;       /* Stat of current dir: used by execute () */</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L307'>stat</a>              307 src/filemanager/panelize.c     struct stat st;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L746'>stat</a>              746 src/filemanager/tree.c     struct stat buf;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L762'>stat</a>              762 src/filemanager/tree.c     if (stat (dest, &amp;buf))</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L809'>stat</a>              809 src/filemanager/treestore.c         struct stat s;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L900'>stat</a>              900 src/filemanager/treestore.c     struct stat buf;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L288'>stat</a>              288 src/filemanager/usermenu.c                 struct stat status;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L291'>stat</a>              291 src/filemanager/usermenu.c                 *condition = stat (arg, &amp;status) == 0 &amp;&amp; is_exe (status.st_mode);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L586'>stat</a>              586 src/filemanager/usermenu.c     struct stat st;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L588'>stat</a>              588 src/filemanager/usermenu.c     if (stat (path, &amp;st) == 0 &amp;&amp; (st.st_uid == 0 || (st.st_uid == geteuid ()) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L139'>stat</a>              139 src/vfs/cpio/cpio.c     struct stat st;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L367'>stat</a>              367 src/vfs/cpio/cpio.c cpio_create_entry (struct vfs_class *me, struct vfs_s_super *super, struct stat *st, char *name)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L545'>stat</a>              545 src/vfs/cpio/cpio.c     struct stat st;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L605'>stat</a>              605 src/vfs/cpio/cpio.c         struct stat st;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L672'>stat</a>              672 src/vfs/cpio/cpio.c         struct stat st;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L783'>stat</a>              783 src/vfs/cpio/cpio.c     static struct stat sb;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L796'>stat</a>              796 src/vfs/cpio/cpio.c     struct stat *archive_stat = cookie; /* stat of main archive */</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L119'>stat</a>              119 src/vfs/extfs/extfs.c     struct stat local_stat;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L376'>stat</a>              376 src/vfs/extfs/extfs.c         struct stat my;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L402'>stat</a>              402 src/vfs/extfs/extfs.c     struct stat mystat;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L516'>stat</a>              516 src/vfs/extfs/extfs.c         struct stat hstat;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L992'>stat</a>              992 src/vfs/extfs/extfs.c         struct stat file_status;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L997'>stat</a>              997 src/vfs/extfs/extfs.c         if (stat (file-&gt;entry-&gt;inode-&gt;local_filename, &amp;file_status) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1083'>stat</a>             1083 src/vfs/extfs/extfs.c extfs_stat_move (struct stat *buf, const struct inode *inode)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1109'>stat</a>             1109 src/vfs/extfs/extfs.c extfs_internal_stat (const vfs_path_t * vpath, struct stat *buf, gboolean resolve)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1137'>stat</a>             1137 src/vfs/extfs/extfs.c extfs_stat (const vfs_path_t * vpath, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1145'>stat</a>             1145 src/vfs/extfs/extfs.c extfs_lstat (const vfs_path_t * vpath, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1153'>stat</a>             1153 src/vfs/extfs/extfs.c extfs_fstat (void *data, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1585'>stat</a>             1585 src/vfs/extfs/extfs.c         struct stat s;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1589'>stat</a>             1589 src/vfs/extfs/extfs.c         if ((stat (fullname, &amp;s) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1736'>stat</a>             1736 src/vfs/extfs/extfs.c     vfs_extfs_ops.stat = extfs_stat;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L863'>stat</a>              863 src/vfs/fish/fish.c     struct stat s;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1533'>stat</a>             1533 src/vfs/ftpfs/ftpfs.c                         fel-&gt;l_stat = g_new (struct stat, 1);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1557'>stat</a>             1557 src/vfs/ftpfs/ftpfs.c     struct stat s;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1622'>stat</a>             1622 src/vfs/ftpfs/ftpfs.c                     fe-&gt;l_stat = g_new (struct stat, 1);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1811'>stat</a>             1811 src/vfs/ftpfs/ftpfs.c     struct stat s;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2324'>stat</a>             2324 src/vfs/ftpfs/ftpfs.c     struct stat mystat;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2326'>stat</a>             2326 src/vfs/ftpfs/ftpfs.c     if (stat (netrcname, &amp;mystat) &gt;= 0 &amp;&amp; (mystat.st_mode &amp; 077))</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L124'>stat</a>              124 src/vfs/local/local.c local_stat (const vfs_path_t * vpath, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L129'>stat</a>              129 src/vfs/local/local.c     return stat (path_element-&gt;path, buf);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L135'>stat</a>              135 src/vfs/local/local.c local_lstat (const vfs_path_t * vpath, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L397'>stat</a>              397 src/vfs/local/local.c local_fstat (void *data, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L428'>stat</a>              428 src/vfs/local/local.c     vfs_local_ops.stat = local_stat;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.h.html#L27'>stat</a>               27 src/vfs/local/local.h extern int local_fstat (void *data, struct stat *buf);</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L286'>stat</a>              286 src/vfs/sfs/sfs.c sfs_stat (const vfs_path_t * vpath, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L288'>stat</a>              288 src/vfs/sfs/sfs.c     return stat (sfs_redirect (vpath), buf);</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L294'>stat</a>              294 src/vfs/sfs/sfs.c sfs_lstat (const vfs_path_t * vpath, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L551'>stat</a>              551 src/vfs/sfs/sfs.c     vfs_sfs_ops.stat = sfs_stat;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L156'>stat</a>              156 src/vfs/sftpfs/file.c         struct stat file_info;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L175'>stat</a>              175 src/vfs/sftpfs/file.c sftpfs_fstat (void *data, struct stat *buf, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L133'>stat</a>              133 src/vfs/sftpfs/internal.c sftpfs_lstat (const vfs_path_t * vpath, struct stat *buf, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L210'>stat</a>              210 src/vfs/sftpfs/internal.c sftpfs_stat (const vfs_path_t * vpath, struct stat *buf, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L74'>stat</a>               74 src/vfs/sftpfs/internal.h int sftpfs_lstat (const vfs_path_t * vpath, struct stat *buf, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L75'>stat</a>               75 src/vfs/sftpfs/internal.h int sftpfs_stat (const vfs_path_t * vpath, struct stat *buf, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L100'>stat</a>              100 src/vfs/sftpfs/internal.h int sftpfs_fstat (void *data, struct stat *buf, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L252'>stat</a>              252 src/vfs/sftpfs/vfs_class.c sftpfs_cb_lstat (const vfs_path_t * vpath, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L272'>stat</a>              272 src/vfs/sftpfs/vfs_class.c sftpfs_cb_stat (const vfs_path_t * vpath, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L292'>stat</a>              292 src/vfs/sftpfs/vfs_class.c sftpfs_cb_fstat (void *data, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L703'>stat</a>              703 src/vfs/sftpfs/vfs_class.c     sftpfs_class.stat = sftpfs_cb_stat;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--includes.h.html#L380'>stat</a>              380 src/vfs/smbfs/helpers/include/includes.h #define SMB_STRUCT_STAT struct stat</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L168'>stat</a>              168 src/vfs/smbfs/helpers/lib/system.c     return stat (fname, sbuf);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L109'>stat</a>              109 src/vfs/smbfs/smbfs.c     struct stat my_stat;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1428'>stat</a>             1428 src/vfs/smbfs/smbfs.c smbfs_fake_server_stat (const char *server_url, const char *path, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1454'>stat</a>             1454 src/vfs/smbfs/smbfs.c                 memcpy (buf, &amp;dentry-&gt;my_stat, sizeof (struct stat));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1467'>stat</a>             1467 src/vfs/smbfs/smbfs.c smbfs_fake_share_stat (const char *server_url, const char *path, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1516'>stat</a>             1516 src/vfs/smbfs/smbfs.c             memcpy (buf, &amp;dentry-&gt;my_stat, sizeof (struct stat));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1529'>stat</a>             1529 src/vfs/smbfs/smbfs.c smbfs_get_remote_stat (smbfs_connection * sc, const char *path, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1555'>stat</a>             1555 src/vfs/smbfs/smbfs.c     memcpy (buf, &amp;single_entry-&gt;my_stat, sizeof (struct stat));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1567'>stat</a>             1567 src/vfs/smbfs/smbfs.c smbfs_search_dir_entry (dir_entry * dentry, const char *text, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1573'>stat</a>             1573 src/vfs/smbfs/smbfs.c             memcpy (buf, &amp;dentry-&gt;my_stat, sizeof (struct stat));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1574'>stat</a>             1574 src/vfs/smbfs/smbfs.c             memcpy (&amp;single_entry-&gt;my_stat, &amp;dentry-&gt;my_stat, sizeof (struct stat));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1585'>stat</a>             1585 src/vfs/smbfs/smbfs.c smbfs_get_stat_info (smbfs_connection * sc, const char *path, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1623'>stat</a>             1623 src/vfs/smbfs/smbfs.c             memset (buf, 0, sizeof (struct stat));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1625'>stat</a>             1625 src/vfs/smbfs/smbfs.c             memcpy (&amp;single_entry-&gt;my_stat, buf, sizeof (struct stat));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1645'>stat</a>             1645 src/vfs/smbfs/smbfs.c             memset (buf, 0, sizeof (struct stat));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1647'>stat</a>             1647 src/vfs/smbfs/smbfs.c             memcpy (&amp;single_entry-&gt;my_stat, buf, sizeof (struct stat));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1725'>stat</a>             1725 src/vfs/smbfs/smbfs.c smbfs_stat (const vfs_path_t * vpath, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1796'>stat</a>             1796 src/vfs/smbfs/smbfs.c             memset (buf, 0, sizeof (struct stat));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2190'>stat</a>             2190 src/vfs/smbfs/smbfs.c smbfs_fstat (void *data, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2198'>stat</a>             2198 src/vfs/smbfs/smbfs.c         memcpy (buf, &amp;single_entry-&gt;my_stat, sizeof (struct stat));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2250'>stat</a>             2250 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.stat = smbfs_stat;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L218'>stat</a>              218 src/vfs/tar/tar.c     struct stat st;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L379'>stat</a>              379 src/vfs/tar/tar.c tar_fill_stat (struct vfs_s_super *archive, struct stat *st, union record *header, size_t h_size)</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L612'>stat</a>              612 src/vfs/tar/tar.c         struct stat st;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L829'>stat</a>              829 src/vfs/tar/tar.c     static struct stat stat_buf;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L843'>stat</a>              843 src/vfs/tar/tar.c     struct stat *archive_stat = cookie; /* stat of main archive */</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L625'>stat</a>              625 src/vfs/undelfs/undelfs.c undelfs_stat_int (int inode_index, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L643'>stat</a>              643 src/vfs/undelfs/undelfs.c undelfs_lstat (const vfs_path_t * vpath, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L688'>stat</a>              688 src/vfs/undelfs/undelfs.c undelfs_fstat (void *vfs_info, struct stat *buf)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L828'>stat</a>              828 src/vfs/undelfs/undelfs.c     vfs_undelfs_ops.stat = undelfs_stat;</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L131'>stat</a>              131 src/viewer/datasource.c         struct stat st;</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L382'>stat</a>              382 src/viewer/datasource.c mcview_set_datasource_file (WView * view, int fd, const struct stat *st)</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L273'>stat</a>              273 src/viewer/internal.h void mcview_set_datasource_file (WView *, int, const struct stat *);</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L315'>stat</a>              315 src/viewer/mcviewer.c         struct stat st;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L56'>stat</a>               56 tests/lib/vfs/vfs_parse_ls_lga.c     static struct stat initstat;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L111'>stat</a>              111 tests/lib/vfs/vfs_parse_ls_lga.c fill_stat_struct (struct stat *etalon_stat, int iterator)</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L232'>stat</a>              232 tests/lib/vfs/vfs_parse_ls_lga.c     struct stat etalon_stat;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L233'>stat</a>              233 tests/lib/vfs/vfs_parse_ls_lga.c     static struct stat test_stat;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_setup_cwd.c.html#L52'>stat</a>               52 tests/lib/vfs/vfs_setup_cwd.c mc_stat (const vfs_path_t * vpath, struct stat *my_stat)</span>
+<span class='curline'><a href='../S/tests--src--execute__common.c.html#L177'>stat</a>              177 tests/src/execute__common.c mc_stat (const vfs_path_t * vpath, struct stat *stat_ignored)</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>hstat</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L516'>hstat</a>             516 src/vfs/extfs/extfs.c         struct stat hstat;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L519'>hstat</a>             519 src/vfs/extfs/extfs.c         if (vfs_parse_ls_lga (buffer, &amp;hstat, &amp;current_file_name, &amp;current_link_name, NULL))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L543'>hstat</a>             543 src/vfs/extfs/extfs.c                 if (S_ISDIR (hstat.st_mode) &amp;&amp; (DIR_IS_DOT (p) || DIR_IS_DOTDOT (p)))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L563'>hstat</a>             563 src/vfs/extfs/extfs.c                 if (!S_ISLNK (hstat.st_mode) &amp;&amp; (current_link_name != NULL))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L588'>hstat</a>             588 src/vfs/extfs/extfs.c                     inode-&gt;mode = hstat.st_mode;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L590'>hstat</a>             590 src/vfs/extfs/extfs.c                     inode-&gt;rdev = hstat.st_rdev;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L594'>hstat</a>             594 src/vfs/extfs/extfs.c                     inode-&gt;uid = hstat.st_uid;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L595'>hstat</a>             595 src/vfs/extfs/extfs.c                     inode-&gt;gid = hstat.st_gid;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L596'>hstat</a>             596 src/vfs/extfs/extfs.c                     inode-&gt;size = hstat.st_size;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L597'>hstat</a>             597 src/vfs/extfs/extfs.c                     inode-&gt;mtime = hstat.st_mtime;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L598'>hstat</a>             598 src/vfs/extfs/extfs.c                     inode-&gt;atime = hstat.st_atime;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L599'>hstat</a>             599 src/vfs/extfs/extfs.c                     inode-&gt;ctime = hstat.st_ctime;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L602'>hstat</a>             602 src/vfs/extfs/extfs.c                     if (current_link_name != NULL &amp;&amp; S_ISLNK (hstat.st_mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L609'>hstat</a>             609 src/vfs/extfs/extfs.c                         if (S_ISLNK (hstat.st_mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L613'>hstat</a>             613 src/vfs/extfs/extfs.c                     if (S_ISDIR (hstat.st_mode))</span>
+</pre>
+</body>
+</html>

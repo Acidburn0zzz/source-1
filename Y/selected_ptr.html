@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>selected_ptr</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L98'>selected_ptr</a>       98 src/filemanager/tree.c     tree_entry *selected_ptr;   /* The selected directory */</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L157'>selected_ptr</a>      157 src/filemanager/tree.c     if (tree-&gt;selected_ptr == entry)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L159'>selected_ptr</a>      159 src/filemanager/tree.c         if (tree-&gt;selected_ptr-&gt;next)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L160'>selected_ptr</a>      160 src/filemanager/tree.c             tree-&gt;selected_ptr = tree-&gt;selected_ptr-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L162'>selected_ptr</a>      162 src/filemanager/tree.c             tree-&gt;selected_ptr = tree-&gt;selected_ptr-&gt;prev;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L207'>selected_ptr</a>      207 src/filemanager/tree.c     tree-&gt;selected_ptr = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L220'>selected_ptr</a>      220 src/filemanager/tree.c     tree-&gt;selected_ptr = tree-&gt;store-&gt;tree_first;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L263'>selected_ptr</a>      263 src/filemanager/tree.c                           (vfs_path_as_str (tree-&gt;selected_ptr-&gt;name), tree_cols, J_LEFT_FIT));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L297'>selected_ptr</a>      297 src/filemanager/tree.c     if (!tree-&gt;selected_ptr)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L299'>selected_ptr</a>      299 src/filemanager/tree.c         tree-&gt;selected_ptr = tree-&gt;store-&gt;tree_first;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L302'>selected_ptr</a>      302 src/filemanager/tree.c     current = tree-&gt;selected_ptr;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L314'>selected_ptr</a>      314 src/filemanager/tree.c             if (current-&gt;sublevel &lt; tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L316'>selected_ptr</a>      316 src/filemanager/tree.c                 if (vfs_path_equal (current-&gt;name, tree-&gt;selected_ptr-&gt;name))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L319'>selected_ptr</a>      319 src/filemanager/tree.c             else if (current-&gt;sublevel == tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L326'>selected_ptr</a>      326 src/filemanager/tree.c                 if (vfs_path_equal_len (current-&gt;name, tree-&gt;selected_ptr-&gt;name, j))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L329'>selected_ptr</a>      329 src/filemanager/tree.c             else if (current-&gt;sublevel == tree-&gt;selected_ptr-&gt;sublevel + 1)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L331'>selected_ptr</a>      331 src/filemanager/tree.c                 j = vfs_path_len (tree-&gt;selected_ptr-&gt;name);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L332'>selected_ptr</a>      332 src/filemanager/tree.c                 if (j &gt; 1 &amp;&amp; vfs_path_equal_len (current-&gt;name, tree-&gt;selected_ptr-&gt;name, j))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L351'>selected_ptr</a>      351 src/filemanager/tree.c             tty_setcolor (tree-&gt;active &amp;&amp; current == tree-&gt;selected_ptr</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L354'>selected_ptr</a>      354 src/filemanager/tree.c             tty_setcolor (current == tree-&gt;selected_ptr ? TREE_CURRENTC (h) : TREE_NORMALC (h));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L400'>selected_ptr</a>      400 src/filemanager/tree.c                 if (current-&gt;sublevel &lt; tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L402'>selected_ptr</a>      402 src/filemanager/tree.c                     if (vfs_path_equal_len (current-&gt;name, tree-&gt;selected_ptr-&gt;name,</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L406'>selected_ptr</a>      406 src/filemanager/tree.c                 else if (current-&gt;sublevel == tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L413'>selected_ptr</a>      413 src/filemanager/tree.c                     if (vfs_path_equal_len (current-&gt;name, tree-&gt;selected_ptr-&gt;name, j))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L416'>selected_ptr</a>      416 src/filemanager/tree.c                 else if (current-&gt;sublevel == tree-&gt;selected_ptr-&gt;sublevel + 1</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L417'>selected_ptr</a>      417 src/filemanager/tree.c                          &amp;&amp; vfs_path_len (tree-&gt;selected_ptr-&gt;name) &gt; 1)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L419'>selected_ptr</a>      419 src/filemanager/tree.c                     if (vfs_path_equal_len (current-&gt;name, tree-&gt;selected_ptr-&gt;name,</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L420'>selected_ptr</a>      420 src/filemanager/tree.c                                             vfs_path_len (tree-&gt;selected_ptr-&gt;name)))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L448'>selected_ptr</a>      448 src/filemanager/tree.c         tree-&gt;selected_ptr = back_ptr (tree-&gt;selected_ptr, &amp;i);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L454'>selected_ptr</a>      454 src/filemanager/tree.c         current = tree-&gt;selected_ptr;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L455'>selected_ptr</a>      455 src/filemanager/tree.c         while (j &lt; i &amp;&amp; current-&gt;prev &amp;&amp; current-&gt;prev-&gt;sublevel &gt;= tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L458'>selected_ptr</a>      458 src/filemanager/tree.c             if (current-&gt;sublevel == tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L460'>selected_ptr</a>      460 src/filemanager/tree.c                 tree-&gt;selected_ptr = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L477'>selected_ptr</a>      477 src/filemanager/tree.c         tree-&gt;selected_ptr = forw_ptr (tree-&gt;selected_ptr, &amp;i);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L483'>selected_ptr</a>      483 src/filemanager/tree.c         current = tree-&gt;selected_ptr;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L484'>selected_ptr</a>      484 src/filemanager/tree.c         while (j &lt; i &amp;&amp; current-&gt;next &amp;&amp; current-&gt;next-&gt;sublevel &gt;= tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L487'>selected_ptr</a>      487 src/filemanager/tree.c             if (current-&gt;sublevel == tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L489'>selected_ptr</a>      489 src/filemanager/tree.c                 tree-&gt;selected_ptr = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L508'>selected_ptr</a>      508 src/filemanager/tree.c     if (!tree-&gt;selected_ptr)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L511'>selected_ptr</a>      511 src/filemanager/tree.c     current = tree-&gt;selected_ptr-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L513'>selected_ptr</a>      513 src/filemanager/tree.c     if (current &amp;&amp; current-&gt;sublevel &gt; tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L516'>selected_ptr</a>      516 src/filemanager/tree.c         tree-&gt;selected_ptr = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L524'>selected_ptr</a>      524 src/filemanager/tree.c         current = tree-&gt;selected_ptr-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L525'>selected_ptr</a>      525 src/filemanager/tree.c         if (current &amp;&amp; current-&gt;sublevel &gt; tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L527'>selected_ptr</a>      527 src/filemanager/tree.c             tree-&gt;selected_ptr = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L542'>selected_ptr</a>      542 src/filemanager/tree.c     if (!tree-&gt;selected_ptr)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L545'>selected_ptr</a>      545 src/filemanager/tree.c     old = tree-&gt;selected_ptr;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L546'>selected_ptr</a>      546 src/filemanager/tree.c     current = tree-&gt;selected_ptr-&gt;prev;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L547'>selected_ptr</a>      547 src/filemanager/tree.c     while (current &amp;&amp; current-&gt;sublevel &gt;= tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L554'>selected_ptr</a>      554 src/filemanager/tree.c     tree-&gt;selected_ptr = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L556'>selected_ptr</a>      556 src/filemanager/tree.c     return tree-&gt;selected_ptr != old;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L564'>selected_ptr</a>      564 src/filemanager/tree.c     tree-&gt;selected_ptr = tree-&gt;store-&gt;tree_first;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L573'>selected_ptr</a>      573 src/filemanager/tree.c     tree-&gt;selected_ptr = tree-&gt;store-&gt;tree_last;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L586'>selected_ptr</a>      586 src/filemanager/tree.c         if (do_cd (tree-&gt;selected_ptr-&gt;name, cd_exact))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L590'>selected_ptr</a>      590 src/filemanager/tree.c                      vfs_path_as_str (tree-&gt;selected_ptr-&gt;name), unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L626'>selected_ptr</a>      626 src/filemanager/tree.c     current = tree-&gt;selected_ptr;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L628'>selected_ptr</a>      628 src/filemanager/tree.c     while (!wrapped || current != tree-&gt;selected_ptr)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L632'>selected_ptr</a>      632 src/filemanager/tree.c             tree-&gt;selected_ptr = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L683'>selected_ptr</a>      683 src/filemanager/tree.c     if (tree-&gt;selected_ptr != NULL &amp;&amp; mc_chdir (tree-&gt;selected_ptr-&gt;name) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L687'>selected_ptr</a>      687 src/filemanager/tree.c         tree_store_rescan (tree-&gt;selected_ptr-&gt;name);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L700'>selected_ptr</a>      700 src/filemanager/tree.c     if (tree-&gt;selected_ptr)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L701'>selected_ptr</a>      701 src/filemanager/tree.c         tree_remove_entry (tree, tree-&gt;selected_ptr-&gt;name);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L712'>selected_ptr</a>      712 src/filemanager/tree.c     if (tree-&gt;selected_ptr == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L716'>selected_ptr</a>      716 src/filemanager/tree.c                 str_trunc (vfs_path_as_str (tree-&gt;selected_ptr-&gt;name), 50));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L730'>selected_ptr</a>      730 src/filemanager/tree.c         copy_dir_dir (tctx, ctx, vfs_path_as_str (tree-&gt;selected_ptr-&gt;name), dest, TRUE, FALSE,</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L750'>selected_ptr</a>      750 src/filemanager/tree.c     if (tree-&gt;selected_ptr == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L754'>selected_ptr</a>      754 src/filemanager/tree.c                 str_trunc (vfs_path_as_str (tree-&gt;selected_ptr-&gt;name), 50));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L778'>selected_ptr</a>      778 src/filemanager/tree.c     move_dir_dir (tctx, ctx, vfs_path_as_str (tree-&gt;selected_ptr-&gt;name), dest);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L794'>selected_ptr</a>      794 src/filemanager/tree.c     if (!tree-&gt;selected_ptr)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L796'>selected_ptr</a>      796 src/filemanager/tree.c     if (chdir (tree-&gt;selected_ptr-&gt;name))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L815'>selected_ptr</a>      815 src/filemanager/tree.c     if (!tree-&gt;selected_ptr)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L823'>selected_ptr</a>      823 src/filemanager/tree.c         buf = g_strdup_printf (_("Delete %s?"), vfs_path_as_str (tree-&gt;selected_ptr-&gt;name));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L835'>selected_ptr</a>      835 src/filemanager/tree.c     if (erase_dir (tctx, ctx, tree-&gt;selected_ptr-&gt;name) == FILE_CONT)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L945'>selected_ptr</a>      945 src/filemanager/tree.c         if (tree-&gt;selected_ptr == tree-&gt;store-&gt;tree_last)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1250'>selected_ptr</a>     1250 src/filemanager/tree.c                     tree-&gt;selected_ptr = tree-&gt;tree_shown[y];</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1284'>selected_ptr</a>     1284 src/filemanager/tree.c     tree-&gt;selected_ptr = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1308'>selected_ptr</a>     1308 src/filemanager/tree.c         tree-&gt;selected_ptr = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1319'>selected_ptr</a>     1319 src/filemanager/tree.c     return tree-&gt;selected_ptr-&gt;name;</span>
+</pre>
+</body>
+</html>

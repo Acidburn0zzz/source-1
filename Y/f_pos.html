@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>f_pos</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L133'>f_pos</a>             133 src/filemanager/achown.c inc_flag_pos (int f_pos)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L141'>f_pos</a>             141 src/filemanager/achown.c     if ((flag_pos % 3) == 0 || f_pos &gt; 2)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L149'>f_pos</a>             149 src/filemanager/achown.c dec_flag_pos (int f_pos)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L157'>f_pos</a>             157 src/filemanager/achown.c     if (((flag_pos + 1) % 3) == 0 || f_pos &gt; 2)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L320'>f_pos</a>             320 src/filemanager/achown.c do_enter_key (WDialog * h, int f_pos)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L335'>f_pos</a>             335 src/filemanager/achown.c         is_owner = (f_pos == 3);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L405'>f_pos</a>             405 src/filemanager/achown.c                     ch_flags[f_pos + 6] = '+';</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L417'>f_pos</a>             417 src/filemanager/achown.c                 f_pos--;</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L424'>f_pos</a>             424 src/filemanager/achown.c                 f_pos++;</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L464'>f_pos</a>             464 src/filemanager/achown.c b_setpos (int f_pos)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L469'>f_pos</a>             469 src/filemanager/achown.c     b_att[f_pos]-&gt;hotpos = (flag_pos % 3);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L479'>f_pos</a>             479 src/filemanager/achown.c     int f_pos;</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L488'>f_pos</a>             488 src/filemanager/achown.c     f_pos = i;</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L499'>f_pos</a>             499 src/filemanager/achown.c         if (f_pos &lt; 3)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L500'>f_pos</a>             500 src/filemanager/achown.c             b_setpos (f_pos);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L504'>f_pos</a>             504 src/filemanager/achown.c         if (f_pos &lt; 3)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L506'>f_pos</a>             506 src/filemanager/achown.c             if ((flag_pos / 3) != f_pos)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L507'>f_pos</a>             507 src/filemanager/achown.c                 flag_pos = f_pos * 3;</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L508'>f_pos</a>             508 src/filemanager/achown.c             b_setpos (f_pos);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L510'>f_pos</a>             510 src/filemanager/achown.c         else if (f_pos &lt; BUTTONS_PERM)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L511'>f_pos</a>             511 src/filemanager/achown.c             flag_pos = f_pos + 6;</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L519'>f_pos</a>             519 src/filemanager/achown.c             if (f_pos &lt; BUTTONS_PERM)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L520'>f_pos</a>             520 src/filemanager/achown.c                 return (dec_flag_pos (f_pos));</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L525'>f_pos</a>             525 src/filemanager/achown.c             if (f_pos &lt; BUTTONS_PERM)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L526'>f_pos</a>             526 src/filemanager/achown.c                 return (inc_flag_pos (f_pos));</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L530'>f_pos</a>             530 src/filemanager/achown.c             if (f_pos &lt; 3)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L536'>f_pos</a>             536 src/filemanager/achown.c             if (f_pos &lt;= 2 || f_pos &gt;= BUTTONS_PERM)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L538'>f_pos</a>             538 src/filemanager/achown.c             do_enter_key (h, f_pos);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L580'>f_pos</a>             580 src/filemanager/achown.c             if (f_pos &gt; 2)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L582'>f_pos</a>             582 src/filemanager/achown.c             flag_pos = f_pos * 3 + i;   /* (strchr(ch_perm,parm)-ch_perm); */</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L597'>f_pos</a>             597 src/filemanager/achown.c             if (f_pos &lt;= 2)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L599'>f_pos</a>             599 src/filemanager/achown.c                 flag_pos = i + f_pos * 3;</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L606'>f_pos</a>             606 src/filemanager/achown.c             if (f_pos &gt; 2)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L615'>f_pos</a>             615 src/filemanager/achown.c             if (f_pos &lt;= 4)</span>
+</pre>
+</body>
+</html>

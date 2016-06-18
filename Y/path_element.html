@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>path_element</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L360'>path_element</a>      360 lib/vfs/direntry.c     vfs_path_element_free (super-&gt;path_element);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L376'>path_element</a>      376 lib/vfs/direntry.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L382'>path_element</a>      382 lib/vfs/direntry.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L385'>path_element</a>      385 lib/vfs/direntry.c         vfs_s_find_inode (path_element-&gt;class, super, q,</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L391'>path_element</a>      391 lib/vfs/direntry.c             vfs_s_find_inode (path_element-&gt;class, super, q,</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L404'>path_element</a>      404 lib/vfs/direntry.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L406'>path_element</a>      406 lib/vfs/direntry.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L413'>path_element</a>      413 lib/vfs/direntry.c         path_element-&gt;class-&gt;verrno = ENOTDIR;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L421'>path_element</a>      421 lib/vfs/direntry.c         path_element-&gt;class-&gt;verrno = EAGAIN;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L529'>path_element</a>      529 lib/vfs/direntry.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L531'>path_element</a>      531 lib/vfs/direntry.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L539'>path_element</a>      539 lib/vfs/direntry.c         path_element-&gt;class-&gt;verrno = EINVAL;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L545'>path_element</a>      545 lib/vfs/direntry.c         path_element-&gt;class-&gt;verrno = EFAULT;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L785'>path_element</a>      785 lib/vfs/direntry.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L787'>path_element</a>      787 lib/vfs/direntry.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L803'>path_element</a>      803 lib/vfs/direntry.c                 vfs_s_invalidate (path_element-&gt;class, ino-&gt;super);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L808'>path_element</a>      808 lib/vfs/direntry.c         ((struct vfs_s_subclass *) path_element-&gt;class-&gt;data)-&gt;logfile = fopen ((char *) arg, "w");</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L811'>path_element</a>      811 lib/vfs/direntry.c         ((struct vfs_s_subclass *) path_element-&gt;class-&gt;data)-&gt;flush = 1;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1049'>path_element</a>     1049 lib/vfs/direntry.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1054'>path_element</a>     1054 lib/vfs/direntry.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1055'>path_element</a>     1055 lib/vfs/direntry.c     subclass = ((struct vfs_s_subclass *) path_element-&gt;class-&gt;data);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1076'>path_element</a>     1076 lib/vfs/direntry.c         i = subclass-&gt;archive_same (path_element, super, vpath_archive, cookie);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1106'>path_element</a>     1106 lib/vfs/direntry.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1109'>path_element</a>     1109 lib/vfs/direntry.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1111'>path_element</a>     1111 lib/vfs/direntry.c     if (path_element-&gt;path != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1112'>path_element</a>     1112 lib/vfs/direntry.c         retval = path_element-&gt;path;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1120'>path_element</a>     1120 lib/vfs/direntry.c         path_element-&gt;class-&gt;verrno = EIO;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1124'>path_element</a>     1124 lib/vfs/direntry.c     super = vfs_s_new_super (path_element-&gt;class);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1126'>path_element</a>     1126 lib/vfs/direntry.c     subclass = ((struct vfs_s_subclass *) path_element-&gt;class-&gt;data);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1134'>path_element</a>     1134 lib/vfs/direntry.c         result = subclass-&gt;open_archive (super, vpath_archive, path_element);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1139'>path_element</a>     1139 lib/vfs/direntry.c         vfs_s_free_super (path_element-&gt;class, super);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1140'>path_element</a>     1140 lib/vfs/direntry.c         path_element-&gt;class-&gt;verrno = EIO;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1148'>path_element</a>     1148 lib/vfs/direntry.c     vfs_s_insert_super (path_element-&gt;class, super);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1149'>path_element</a>     1149 lib/vfs/direntry.c     vfs_stamp_create (path_element-&gt;class, super);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1211'>path_element</a>     1211 lib/vfs/direntry.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1213'>path_element</a>     1213 lib/vfs/direntry.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1218'>path_element</a>     1218 lib/vfs/direntry.c     ino = vfs_s_find_inode (path_element-&gt;class, super, q, LINK_FOLLOW, FL_NONE);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1221'>path_element</a>     1221 lib/vfs/direntry.c         path_element-&gt;class-&gt;verrno = EEXIST;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1231'>path_element</a>     1231 lib/vfs/direntry.c         if (!(flags &amp; O_CREAT) || !(path_element-&gt;class-&gt;write))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1236'>path_element</a>     1236 lib/vfs/direntry.c         dir = vfs_s_find_inode (path_element-&gt;class, super, dirname, LINK_FOLLOW, FL_DIR);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1243'>path_element</a>     1243 lib/vfs/direntry.c         ent = vfs_s_generate_entry (path_element-&gt;class, name, dir, 0755);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1245'>path_element</a>     1245 lib/vfs/direntry.c         vfs_s_insert_entry (path_element-&gt;class, dir, ent);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1246'>path_element</a>     1246 lib/vfs/direntry.c         if ((VFSDATA (path_element)-&gt;flags &amp; VFS_S_USETMP) != 0)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1251'>path_element</a>     1251 lib/vfs/direntry.c             tmp_handle = vfs_mkstemps (&amp;tmp_vpath, path_element-&gt;class-&gt;name, name);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1270'>path_element</a>     1270 lib/vfs/direntry.c         path_element-&gt;class-&gt;verrno = EISDIR;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1284'>path_element</a>     1284 lib/vfs/direntry.c         if (VFSDATA (path_element)-&gt;linear_start)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1294'>path_element</a>     1294 lib/vfs/direntry.c         s = VFSDATA (path_element);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1295'>path_element</a>     1295 lib/vfs/direntry.c         if (s-&gt;fh_open != NULL &amp;&amp; s-&gt;fh_open (path_element-&gt;class, fh, flags, mode) != 0)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1304'>path_element</a>     1304 lib/vfs/direntry.c     if ((VFSDATA (path_element)-&gt;flags &amp; VFS_S_USETMP) != 0 &amp;&amp; fh-&gt;ino-&gt;localname != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1310'>path_element</a>     1310 lib/vfs/direntry.c             path_element-&gt;class-&gt;verrno = errno;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1316'>path_element</a>     1316 lib/vfs/direntry.c     vfs_rmstamp (path_element-&gt;class, (vfsid) super);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1448'>path_element</a>     1448 lib/vfs/direntry.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1450'>path_element</a>     1450 lib/vfs/direntry.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1451'>path_element</a>     1451 lib/vfs/direntry.c     if (!vfs_path_element_valid (path_element) || path_element-&gt;class-&gt;getid == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1454'>path_element</a>     1454 lib/vfs/direntry.c     return (*path_element-&gt;class-&gt;getid) (vpath);</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L197'>path_element</a>      197 lib/vfs/gc.c       const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L200'>path_element</a>      200 lib/vfs/gc.c       path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L203'>path_element</a>      203 lib/vfs/gc.c       vfs_addstamp (path_element-&gt;class, id);</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L219'>path_element</a>      219 lib/vfs/gc.c       const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L230'>path_element</a>      230 lib/vfs/gc.c       path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L233'>path_element</a>      233 lib/vfs/gc.c       vfs_rmstamp (path_element-&gt;class, nvfsid);</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L235'>path_element</a>      235 lib/vfs/gc.c       if (!(id == NULL || (path_element-&gt;class == vclass &amp;&amp; nvfsid == id)))</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L308'>path_element</a>      308 lib/vfs/gc.c       const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L310'>path_element</a>      310 lib/vfs/gc.c       path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L311'>path_element</a>      311 lib/vfs/gc.c       vfs_stamp_create (path_element-&gt;class, vfs_getid (vpath));</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L193'>path_element</a>      193 lib/vfs/interface.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L210'>path_element</a>      210 lib/vfs/interface.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L211'>path_element</a>      211 lib/vfs/interface.c     if (vfs_path_element_valid (path_element) &amp;&amp; path_element-&gt;class-&gt;open != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L215'>path_element</a>      215 lib/vfs/interface.c         info = path_element-&gt;class-&gt;open (vpath, flags, mode);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L217'>path_element</a>      217 lib/vfs/interface.c             errno = vfs_ferrno (path_element-&gt;class);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L219'>path_element</a>      219 lib/vfs/interface.c             result = vfs_new_handle (path_element-&gt;class, info);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L235'>path_element</a>      235 lib/vfs/interface.c     const vfs_path_element_t *path_element; \</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L240'>path_element</a>      240 lib/vfs/interface.c     path_element = vfs_path_get_by_index (vpath, -1); \</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L241'>path_element</a>      241 lib/vfs/interface.c     if (!vfs_path_element_valid (path_element)) \</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L246'>path_element</a>      246 lib/vfs/interface.c     result = path_element-&gt;class-&gt;name != NULL ? path_element-&gt;class-&gt;name callarg : -1; \</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L248'>path_element</a>      248 lib/vfs/interface.c         errno = path_element-&gt;class-&gt;name != NULL ? vfs_ferrno (path_element-&gt;class) : E_NOTSUPP; \</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L275'>path_element</a>      275 lib/vfs/interface.c         const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L277'>path_element</a>      277 lib/vfs/interface.c         path_element = vfs_path_get_by_index (vpath2, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L278'>path_element</a>      278 lib/vfs/interface.c         if (vfs_path_element_valid (path_element))</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L281'>path_element</a>      281 lib/vfs/interface.c                 path_element-&gt;class-&gt;symlink != NULL ?</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L282'>path_element</a>      282 lib/vfs/interface.c                 path_element-&gt;class-&gt;symlink (vpath1, vpath2) : -1;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L286'>path_element</a>      286 lib/vfs/interface.c                     path_element-&gt;class-&gt;symlink != NULL ?</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L287'>path_element</a>      287 lib/vfs/interface.c                     vfs_ferrno (path_element-&gt;class) : E_NOTSUPP;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L377'>path_element</a>      377 lib/vfs/interface.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L382'>path_element</a>      382 lib/vfs/interface.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L383'>path_element</a>      383 lib/vfs/interface.c     if (vfs_path_element_valid (path_element))</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L385'>path_element</a>      385 lib/vfs/interface.c             path_element-&gt;class-&gt;setctl != NULL ? path_element-&gt;class-&gt;setctl (vpath,</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L427'>path_element</a>      427 lib/vfs/interface.c     vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L432'>path_element</a>      432 lib/vfs/interface.c     path_element = (vfs_path_element_t *) vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L434'>path_element</a>      434 lib/vfs/interface.c     if (!vfs_path_element_valid (path_element))</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L440'>path_element</a>      440 lib/vfs/interface.c     info = path_element-&gt;class-&gt;opendir ? (*path_element-&gt;class-&gt;opendir) (vpath) : NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L444'>path_element</a>      444 lib/vfs/interface.c         errno = path_element-&gt;class-&gt;opendir ? vfs_ferrno (path_element-&gt;class) : E_NOTSUPP;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L448'>path_element</a>      448 lib/vfs/interface.c     path_element-&gt;dir.info = info;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L451'>path_element</a>      451 lib/vfs/interface.c     path_element-&gt;dir.converter = (path_element-&gt;encoding != NULL) ?</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L452'>path_element</a>      452 lib/vfs/interface.c         str_crt_conv_from (path_element-&gt;encoding) : str_cnv_from_term;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L453'>path_element</a>      453 lib/vfs/interface.c     if (path_element-&gt;dir.converter == INVALID_CONV)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L454'>path_element</a>      454 lib/vfs/interface.c         path_element-&gt;dir.converter = str_cnv_from_term;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L457'>path_element</a>      457 lib/vfs/interface.c     handle = vfs_new_handle (path_element-&gt;class, vfs_path_element_clone (path_element));</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L564'>path_element</a>      564 lib/vfs/interface.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L569'>path_element</a>      569 lib/vfs/interface.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L571'>path_element</a>      571 lib/vfs/interface.c     if (vfs_path_element_valid (path_element))</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L573'>path_element</a>      573 lib/vfs/interface.c         result = path_element-&gt;class-&gt;stat ? (*path_element-&gt;class-&gt;stat) (vpath, buf) : -1;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L575'>path_element</a>      575 lib/vfs/interface.c             errno = path_element-&gt;class-&gt;name ? vfs_ferrno (path_element-&gt;class) : E_NOTSUPP;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L587'>path_element</a>      587 lib/vfs/interface.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L592'>path_element</a>      592 lib/vfs/interface.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L594'>path_element</a>      594 lib/vfs/interface.c     if (vfs_path_element_valid (path_element))</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L596'>path_element</a>      596 lib/vfs/interface.c         result = path_element-&gt;class-&gt;lstat ? (*path_element-&gt;class-&gt;lstat) (vpath, buf) : -1;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L598'>path_element</a>      598 lib/vfs/interface.c             errno = path_element-&gt;class-&gt;name ? vfs_ferrno (path_element-&gt;class) : E_NOTSUPP;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L632'>path_element</a>      632 lib/vfs/interface.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L637'>path_element</a>      637 lib/vfs/interface.c     path_element = vfs_path_get_by_index (pathname_vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L639'>path_element</a>      639 lib/vfs/interface.c     if (vfs_path_element_valid (path_element))</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L641'>path_element</a>      641 lib/vfs/interface.c         result = path_element-&gt;class-&gt;getlocalcopy != NULL ?</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L642'>path_element</a>      642 lib/vfs/interface.c             path_element-&gt;class-&gt;getlocalcopy (pathname_vpath) :</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L645'>path_element</a>      645 lib/vfs/interface.c             errno = vfs_ferrno (path_element-&gt;class);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L657'>path_element</a>      657 lib/vfs/interface.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L662'>path_element</a>      662 lib/vfs/interface.c     path_element = vfs_path_get_by_index (pathname_vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L664'>path_element</a>      664 lib/vfs/interface.c     if (vfs_path_element_valid (path_element))</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L665'>path_element</a>      665 lib/vfs/interface.c         return_value = path_element-&gt;class-&gt;ungetlocalcopy != NULL ?</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L666'>path_element</a>      666 lib/vfs/interface.c             path_element-&gt;class-&gt;ungetlocalcopy (pathname_vpath, local_vpath, has_changed) :</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L687'>path_element</a>      687 lib/vfs/interface.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L698'>path_element</a>      698 lib/vfs/interface.c     path_element = vfs_path_get_by_index (cd_vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L700'>path_element</a>      700 lib/vfs/interface.c     if (!vfs_path_element_valid (path_element) || path_element-&gt;class-&gt;chdir == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L705'>path_element</a>      705 lib/vfs/interface.c     result = (*path_element-&gt;class-&gt;chdir) (cd_vpath);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L709'>path_element</a>      709 lib/vfs/interface.c         errno = vfs_ferrno (path_element-&gt;class);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L719'>path_element</a>      719 lib/vfs/interface.c     current_vfs = path_element-&gt;class;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L725'>path_element</a>      725 lib/vfs/interface.c     path_element = vfs_path_get_by_index (vfs_get_raw_current_dir (), -1);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L726'>path_element</a>      726 lib/vfs/interface.c     if (vfs_path_element_valid (path_element))</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L728'>path_element</a>      728 lib/vfs/interface.c         if (*path_element-&gt;path != '\0')</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L732'>path_element</a>      732 lib/vfs/interface.c             p = strchr (path_element-&gt;path, 0) - 1;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L733'>path_element</a>      733 lib/vfs/interface.c             if (IS_PATH_SEP (*p) &amp;&amp; p &gt; path_element-&gt;path)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L742'>path_element</a>      742 lib/vfs/interface.c             if (super != NULL &amp;&amp; super-&gt;path_element != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L744'>path_element</a>      744 lib/vfs/interface.c                 g_free (super-&gt;path_element-&gt;path);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L745'>path_element</a>      745 lib/vfs/interface.c                 super-&gt;path_element-&gt;path = g_strdup (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L236'>path_element</a>      236 lib/vfs/path.c vfs_path_url_split (vfs_path_element_t * path_element, const char *path)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L242'>path_element</a>      242 lib/vfs/path.c     path_element-&gt;port = 0;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L263'>path_element</a>      263 lib/vfs/path.c             path_element-&gt;password = g_strdup (inner_colon);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L267'>path_element</a>      267 lib/vfs/path.c             path_element-&gt;user = g_strdup (pcopy);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L286'>path_element</a>      286 lib/vfs/path.c             path_element-&gt;ipv6 = TRUE;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L294'>path_element</a>      294 lib/vfs/path.c         if (sscanf (colon + 1, "%d", &amp;path_element-&gt;port) == 1)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L296'>path_element</a>      296 lib/vfs/path.c             if (path_element-&gt;port &lt;= 0 || path_element-&gt;port &gt;= 65536)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L297'>path_element</a>      297 lib/vfs/path.c                 path_element-&gt;port = 0;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L305'>path_element</a>      305 lib/vfs/path.c                     path_element-&gt;port = 1;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L308'>path_element</a>      308 lib/vfs/path.c                     path_element-&gt;port = 2;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L315'>path_element</a>      315 lib/vfs/path.c     path_element-&gt;host = g_strdup (rest);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L808'>path_element</a>      808 lib/vfs/path.c vfs_path_add_element (vfs_path_t * vpath, const vfs_path_element_t * path_element)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L810'>path_element</a>      810 lib/vfs/path.c     g_array_append_val (vpath-&gt;path, path_element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L928'>path_element</a>      928 lib/vfs/path.c         vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L930'>path_element</a>      930 lib/vfs/path.c         path_element = vfs_path_element_clone (vfs_path_get_by_index (vpath, vpath_element_index));</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L931'>path_element</a>      931 lib/vfs/path.c         g_array_append_val (new_vpath-&gt;path, path_element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L957'>path_element</a>      957 lib/vfs/path.c         vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L959'>path_element</a>      959 lib/vfs/path.c         path_element = (vfs_path_element_t *) vfs_path_get_by_index (vpath, vpath_element_index);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L960'>path_element</a>      960 lib/vfs/path.c         vfs_path_element_free (path_element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1053'>path_element</a>     1053 lib/vfs/path.c     vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1055'>path_element</a>     1055 lib/vfs/path.c     path_element = (vfs_path_element_t *) vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1057'>path_element</a>     1057 lib/vfs/path.c     if ((path_element-&gt;encoding != NULL) &amp;&amp; (strcmp (encoding, path_element-&gt;encoding) == 0))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1060'>path_element</a>     1060 lib/vfs/path.c     g_free (path_element-&gt;encoding);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1061'>path_element</a>     1061 lib/vfs/path.c     path_element-&gt;encoding = g_strdup (encoding);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1063'>path_element</a>     1063 lib/vfs/path.c     if (vfs_path_element_need_cleanup_converter (path_element))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1064'>path_element</a>     1064 lib/vfs/path.c         str_close_conv (path_element-&gt;dir.converter);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1066'>path_element</a>     1066 lib/vfs/path.c     path_element-&gt;dir.converter = str_crt_conv_from (path_element-&gt;encoding);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1312'>path_element</a>     1312 lib/vfs/path.c             vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1314'>path_element</a>     1314 lib/vfs/path.c             path_element = vfs_path_element_clone (vfs_path_get_by_index (current_vpath, vindex));</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1315'>path_element</a>     1315 lib/vfs/path.c             g_array_append_val (ret_vpath-&gt;path, path_element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L77'>path_element</a>       77 lib/vfs/path.h void vfs_path_add_element (vfs_path_t * vpath, const vfs_path_element_t * path_element);</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L238'>path_element</a>      238 lib/vfs/utilvfs.c     vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L245'>path_element</a>      245 lib/vfs/utilvfs.c     path_element = g_new0 (vfs_path_element_t, 1);</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L246'>path_element</a>      246 lib/vfs/utilvfs.c     path_element-&gt;port = default_port;</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L259'>path_element</a>      259 lib/vfs/utilvfs.c             path_element-&gt;path = g_strdup (PATH_SEP_STR);</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L262'>path_element</a>      262 lib/vfs/utilvfs.c             path_element-&gt;path = g_strndup (dir, pcopy_len - (size_t) (dir - pcopy));</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L283'>path_element</a>      283 lib/vfs/utilvfs.c             path_element-&gt;password = g_strdup (inner_colon);</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L287'>path_element</a>      287 lib/vfs/utilvfs.c             path_element-&gt;user = g_strdup (pcopy);</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L296'>path_element</a>      296 lib/vfs/utilvfs.c         path_element-&gt;user = vfs_get_local_username ();</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L312'>path_element</a>      312 lib/vfs/utilvfs.c             vfs_path_element_free (path_element);</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L321'>path_element</a>      321 lib/vfs/utilvfs.c         if (sscanf (colon + 1, "%d", &amp;path_element-&gt;port) == 1)</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L323'>path_element</a>      323 lib/vfs/utilvfs.c             if (path_element-&gt;port &lt;= 0 || path_element-&gt;port &gt;= 65536)</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L324'>path_element</a>      324 lib/vfs/utilvfs.c                 path_element-&gt;port = default_port;</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L332'>path_element</a>      332 lib/vfs/utilvfs.c                     path_element-&gt;port = 1;</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L335'>path_element</a>      335 lib/vfs/utilvfs.c                     path_element-&gt;port = 2;</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L343'>path_element</a>      343 lib/vfs/utilvfs.c     path_element-&gt;host = g_strdup (rest);</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L345'>path_element</a>      345 lib/vfs/utilvfs.c     path_element-&gt;dir.converter = INVALID_CONV;</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L348'>path_element</a>      348 lib/vfs/utilvfs.c     return path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L423'>path_element</a>      423 lib/vfs/vfs.c      const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L425'>path_element</a>      425 lib/vfs/vfs.c      path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L426'>path_element</a>      426 lib/vfs/vfs.c      if (!vfs_path_element_valid (path_element))</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L429'>path_element</a>      429 lib/vfs/vfs.c      return path_element-&gt;class-&gt;flags;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L452'>path_element</a>      452 lib/vfs/vfs.c      const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L462'>path_element</a>      462 lib/vfs/vfs.c      path_element = vfs_path_get_by_index (current_path, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L463'>path_element</a>      463 lib/vfs/vfs.c      current_vfs = path_element-&gt;class;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L544'>path_element</a>      544 lib/vfs/vfs.c      const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L569'>path_element</a>      569 lib/vfs/vfs.c      path_element = vfs_path_get_by_index (vfs_get_raw_current_dir (), -1);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L571'>path_element</a>      571 lib/vfs/vfs.c      if ((path_element-&gt;class-&gt;flags &amp; VFSF_LOCAL) != 0)</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L71'>path_element</a>       71 lib/vfs/xdirentry.h     vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1809'>path_element</a>     1809 src/editor/edit.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1815'>path_element</a>     1815 src/editor/edit.c     path_element = vfs_path_get_by_index (write_name_vpath, -1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1816'>path_element</a>     1816 src/editor/edit.c     writename = name_quote (path_element-&gt;path, FALSE);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L362'>path_element</a>      362 src/editor/editcmd.c         const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L366'>path_element</a>      366 src/editor/editcmd.c         path_element = vfs_path_get_by_index (savename_vpath, -1);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L367'>path_element</a>      367 src/editor/editcmd.c         file = (FILE *) fopen (path_element-&gt;path, "w");</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L377'>path_element</a>      377 src/editor/editcmd.c             msg = g_strdup_printf (_("Cannot open file for writing: %s"), path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L472'>path_element</a>      472 src/filemanager/midnight.c         const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L474'>path_element</a>      474 src/filemanager/midnight.c         path_element = vfs_path_get_by_index (panel-&gt;cwd_vpath, -1);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L476'>path_element</a>      476 src/filemanager/midnight.c         if (path_element-&gt;class != vclass)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1190'>path_element</a>     1190 src/filemanager/panel.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1197'>path_element</a>     1197 src/filemanager/panel.c     path_element = vfs_path_element_clone (vfs_path_get_by_index (panel-&gt;cwd_vpath, -1));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1199'>path_element</a>     1199 src/filemanager/panel.c     if (elements_count &gt; 1 &amp;&amp; (strcmp (path_element-&gt;class-&gt;name, "cpiofs") == 0 ||</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1200'>path_element</a>     1200 src/filemanager/panel.c                                strcmp (path_element-&gt;class-&gt;name, "extfs") == 0 ||</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1201'>path_element</a>     1201 src/filemanager/panel.c                                strcmp (path_element-&gt;class-&gt;name, "tarfs") == 0))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1223'>path_element</a>     1223 src/filemanager/panel.c     vfs_path_add_element (last_vpath, path_element);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1246'>path_element</a>     1246 src/filemanager/panel.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1248'>path_element</a>     1248 src/filemanager/panel.c     path_element = vfs_path_get_by_index (panel-&gt;cwd_vpath, -1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1249'>path_element</a>     1249 src/filemanager/panel.c     if (path_element-&gt;encoding != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1250'>path_element</a>     1250 src/filemanager/panel.c         ret_str = g_strdup_printf ("[%s]", path_element-&gt;encoding);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4363'>path_element</a>     4363 src/filemanager/panel.c         const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4365'>path_element</a>     4365 src/filemanager/panel.c         path_element = vfs_path_get_by_index (panel-&gt;cwd_vpath, -1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4366'>path_element</a>     4366 src/filemanager/panel.c         if (path_element-&gt;encoding != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4367'>path_element</a>     4367 src/filemanager/panel.c             panel-&gt;codepage = get_codepage_index (path_element-&gt;encoding);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4801'>path_element</a>     4801 src/filemanager/panel.c         vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4803'>path_element</a>     4803 src/filemanager/panel.c         path_element = vfs_path_element_clone (vfs_path_get_by_index (vpath, indx));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4805'>path_element</a>     4805 src/filemanager/panel.c         if (path_element-&gt;encoding == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4807'>path_element</a>     4807 src/filemanager/panel.c             vfs_path_add_element (ret_vpath, path_element);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4811'>path_element</a>     4811 src/filemanager/panel.c         converter = str_crt_conv_to (path_element-&gt;encoding);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4814'>path_element</a>     4814 src/filemanager/panel.c             vfs_path_add_element (ret_vpath, path_element);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4818'>path_element</a>     4818 src/filemanager/panel.c         MC_PTR_FREE (path_element-&gt;encoding);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4820'>path_element</a>     4820 src/filemanager/panel.c         str_vfs_convert_from (converter, path_element-&gt;path, tmp_conv);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4822'>path_element</a>     4822 src/filemanager/panel.c         g_free (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4823'>path_element</a>     4823 src/filemanager/panel.c         path_element-&gt;path = g_strndup (tmp_conv-&gt;str, tmp_conv-&gt;len);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4828'>path_element</a>     4828 src/filemanager/panel.c         str_close_conv (path_element-&gt;dir.converter);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4829'>path_element</a>     4829 src/filemanager/panel.c         path_element-&gt;dir.converter = INVALID_CONV;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4830'>path_element</a>     4830 src/filemanager/panel.c         vfs_path_add_element (ret_vpath, path_element);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L5061'>path_element</a>     5061 src/filemanager/panel.c         const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L5063'>path_element</a>     5063 src/filemanager/panel.c         path_element = vfs_path_get_by_index (current_panel-&gt;cwd_vpath, -1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L5064'>path_element</a>     5064 src/filemanager/panel.c         if (path_element-&gt;encoding != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L5065'>path_element</a>     5065 src/filemanager/panel.c             current_panel-&gt;codepage = get_codepage_index (path_element-&gt;encoding);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L673'>path_element</a>      673 src/vfs/extfs/extfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L675'>path_element</a>      675 src/vfs/extfs/extfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L677'>path_element</a>      677 src/vfs/extfs/extfs.c     fstype = extfs_which (path_element-&gt;class, path_element-&gt;vfs_prefix);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L702'>path_element</a>      702 src/vfs/extfs/extfs.c         path_element-&gt;class-&gt;verrno = EIO;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L708'>path_element</a>      708 src/vfs/extfs/extfs.c     return path_element-&gt;path;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L812'>path_element</a>      812 src/vfs/extfs/extfs.c         const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L815'>path_element</a>      815 src/vfs/extfs/extfs.c         path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L816'>path_element</a>      816 src/vfs/extfs/extfs.c         ret_str = g_strdup (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1180'>path_element</a>     1180 src/vfs/extfs/extfs.c         const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1182'>path_element</a>     1182 src/vfs/extfs/extfs.c         path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1183'>path_element</a>     1183 src/vfs/extfs/extfs.c         path_element-&gt;class-&gt;verrno = EINVAL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1249'>path_element</a>     1249 src/vfs/extfs/extfs.c         const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1251'>path_element</a>     1251 src/vfs/extfs/extfs.c         path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1252'>path_element</a>     1252 src/vfs/extfs/extfs.c         path_element-&gt;class-&gt;verrno = EISDIR;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1275'>path_element</a>     1275 src/vfs/extfs/extfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1279'>path_element</a>     1279 src/vfs/extfs/extfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1286'>path_element</a>     1286 src/vfs/extfs/extfs.c         path_element-&gt;class-&gt;verrno = EEXIST;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1297'>path_element</a>     1297 src/vfs/extfs/extfs.c         path_element-&gt;class-&gt;verrno = ENOTDIR;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1333'>path_element</a>     1333 src/vfs/extfs/extfs.c         const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1335'>path_element</a>     1335 src/vfs/extfs/extfs.c         path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1336'>path_element</a>     1336 src/vfs/extfs/extfs.c         path_element-&gt;class-&gt;verrno = ENOTDIR;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L414'>path_element</a>      414 src/vfs/fish/fish.c     const char *xsh = (super-&gt;path_element-&gt;port == FISH_FLAG_RSH ? "rsh" : "ssh");</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L418'>path_element</a>      418 src/vfs/fish/fish.c     if (super-&gt;path_element-&gt;port == FISH_FLAG_COMPRESSED)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L421'>path_element</a>      421 src/vfs/fish/fish.c     if (super-&gt;path_element-&gt;port &gt; FISH_FLAG_RSH)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L424'>path_element</a>      424 src/vfs/fish/fish.c         g_snprintf (gbuf, sizeof (gbuf), "%d", super-&gt;path_element-&gt;port);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L435'>path_element</a>      435 src/vfs/fish/fish.c     if (super-&gt;path_element-&gt;user != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L438'>path_element</a>      438 src/vfs/fish/fish.c         argv[i++] = super-&gt;path_element-&gt;user;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L443'>path_element</a>      443 src/vfs/fish/fish.c         super-&gt;path_element-&gt;user = vfs_get_local_username ();</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L446'>path_element</a>      446 src/vfs/fish/fish.c     argv[i++] = super-&gt;path_element-&gt;host;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L474'>path_element</a>      474 src/vfs/fish/fish.c         if (super-&gt;path_element-&gt;password == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L477'>path_element</a>      477 src/vfs/fish/fish.c             p = g_strdup_printf (_("fish: Password is required for %s"), super-&gt;path_element-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L482'>path_element</a>      482 src/vfs/fish/fish.c             super-&gt;path_element-&gt;password = op;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L491'>path_element</a>      491 src/vfs/fish/fish.c             str_len = strlen (super-&gt;path_element-&gt;password);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L492'>path_element</a>      492 src/vfs/fish/fish.c             if ((write (SUP.sockw, super-&gt;path_element-&gt;password, str_len) != (ssize_t) str_len)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L549'>path_element</a>      549 src/vfs/fish/fish.c         g_strconcat ("sh://", super-&gt;path_element-&gt;user, "@", super-&gt;path_element-&gt;host,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L568'>path_element</a>      568 src/vfs/fish/fish.c     super-&gt;path_element = vfs_path_element_clone (vpath_element);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L571'>path_element</a>      571 src/vfs/fish/fish.c         super-&gt;path_element-&gt;port = FISH_FLAG_RSH;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L574'>path_element</a>      574 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_LS_FILE, FISH_LS_DEF_CONTENT);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L576'>path_element</a>      576 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_EXISTS_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L579'>path_element</a>      579 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_MKDIR_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L582'>path_element</a>      582 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_UNLINK_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L585'>path_element</a>      585 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_CHOWN_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L588'>path_element</a>      588 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_CHMOD_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L591'>path_element</a>      591 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_UTIME_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L594'>path_element</a>      594 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_RMDIR_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L597'>path_element</a>      597 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_LN_FILE, FISH_LN_DEF_CONTENT);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L599'>path_element</a>      599 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_MV_FILE, FISH_MV_DEF_CONTENT);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L601'>path_element</a>      601 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_HARDLINK_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L604'>path_element</a>      604 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_GET_FILE, FISH_GET_DEF_CONTENT);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L606'>path_element</a>      606 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_SEND_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L609'>path_element</a>      609 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_APPEND_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L612'>path_element</a>      612 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_INFO_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L624'>path_element</a>      624 src/vfs/fish/fish.c     vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L630'>path_element</a>      630 src/vfs/fish/fish.c     path_element = vfs_path_element_clone (vpath_element);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L632'>path_element</a>      632 src/vfs/fish/fish.c     if (path_element-&gt;user == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L633'>path_element</a>      633 src/vfs/fish/fish.c         path_element-&gt;user = vfs_get_local_username ();</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L635'>path_element</a>      635 src/vfs/fish/fish.c     result = ((strcmp (path_element-&gt;host, super-&gt;path_element-&gt;host) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L636'>path_element</a>      636 src/vfs/fish/fish.c               &amp;&amp; (strcmp (path_element-&gt;user, super-&gt;path_element-&gt;user) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L637'>path_element</a>      637 src/vfs/fish/fish.c               &amp;&amp; (path_element-&gt;port == super-&gt;path_element-&gt;port)) ? 1 : 0;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L639'>path_element</a>      639 src/vfs/fish/fish.c     vfs_path_element_free (path_element);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1158'>path_element</a>     1158 src/vfs/fish/fish.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1160'>path_element</a>     1160 src/vfs/fish/fish.c     path_element = vfs_path_get_by_index (vpath1, -1);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1178'>path_element</a>     1178 src/vfs/fish/fish.c     return fish_send_command (path_element-&gt;class, super2, buf, OPT_FLUSH);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1191'>path_element</a>     1191 src/vfs/fish/fish.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1193'>path_element</a>     1193 src/vfs/fish/fish.c     path_element = vfs_path_get_by_index (vpath1, -1);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1211'>path_element</a>     1211 src/vfs/fish/fish.c     return fish_send_command (path_element-&gt;class, super2, buf, OPT_FLUSH);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1226'>path_element</a>     1226 src/vfs/fish/fish.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1228'>path_element</a>     1228 src/vfs/fish/fish.c     path_element = vfs_path_get_by_index (vpath2, -1);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1243'>path_element</a>     1243 src/vfs/fish/fish.c     return fish_send_command (path_element-&gt;class, super, buf, OPT_FLUSH);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1256'>path_element</a>     1256 src/vfs/fish/fish.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1258'>path_element</a>     1258 src/vfs/fish/fish.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1270'>path_element</a>     1270 src/vfs/fish/fish.c     return fish_send_command (path_element-&gt;class, super, buf, OPT_FLUSH);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1299'>path_element</a>     1299 src/vfs/fish/fish.c         const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1301'>path_element</a>     1301 src/vfs/fish/fish.c         path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1313'>path_element</a>     1313 src/vfs/fish/fish.c         fish_send_command (path_element-&gt;class, super, buf, OPT_FLUSH);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1317'>path_element</a>     1317 src/vfs/fish/fish.c         return fish_send_command (path_element-&gt;class, super, buf, OPT_FLUSH);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1334'>path_element</a>     1334 src/vfs/fish/fish.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1336'>path_element</a>     1336 src/vfs/fish/fish.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1360'>path_element</a>     1360 src/vfs/fish/fish.c     return fish_send_command (path_element-&gt;class, super, buf, OPT_FLUSH);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1374'>path_element</a>     1374 src/vfs/fish/fish.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1376'>path_element</a>     1376 src/vfs/fish/fish.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1388'>path_element</a>     1388 src/vfs/fish/fish.c     return fish_send_command (path_element-&gt;class, super, buf, OPT_FLUSH);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1402'>path_element</a>     1402 src/vfs/fish/fish.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1404'>path_element</a>     1404 src/vfs/fish/fish.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1417'>path_element</a>     1417 src/vfs/fish/fish.c     return (fish_send_command (path_element-&gt;class, super, buf, OPT_FLUSH) == 0) ? 1 : 0;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1431'>path_element</a>     1431 src/vfs/fish/fish.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1435'>path_element</a>     1435 src/vfs/fish/fish.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1448'>path_element</a>     1448 src/vfs/fish/fish.c     ret_code = fish_send_command (path_element-&gt;class, super, buf, OPT_FLUSH);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1455'>path_element</a>     1455 src/vfs/fish/fish.c         path_element-&gt;class-&gt;verrno = EACCES;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1471'>path_element</a>     1471 src/vfs/fish/fish.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1473'>path_element</a>     1473 src/vfs/fish/fish.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1485'>path_element</a>     1485 src/vfs/fish/fish.c     return fish_send_command (path_element-&gt;class, super, buf, OPT_FLUSH);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1559'>path_element</a>     1559 src/vfs/fish/fish.c         switch (super-&gt;path_element-&gt;port)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1568'>path_element</a>     1568 src/vfs/fish/fish.c             if (super-&gt;path_element-&gt;port &gt; FISH_FLAG_RSH)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1570'>path_element</a>     1570 src/vfs/fish/fish.c                 g_snprintf (gbuf, sizeof (gbuf), ":%d", super-&gt;path_element-&gt;port);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1578'>path_element</a>     1578 src/vfs/fish/fish.c                          super-&gt;path_element-&gt;user, "@", super-&gt;path_element-&gt;host, flags,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1579'>path_element</a>     1579 src/vfs/fish/fish.c                          PATH_SEP_STR, super-&gt;path_element-&gt;path, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L331'>path_element</a>      331 src/vfs/ftpfs/ftpfs.c     vfs_path_element_t *path_element = vfs_path_element_clone (velement);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L333'>path_element</a>      333 src/vfs/ftpfs/ftpfs.c     if (path_element-&gt;port == 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L334'>path_element</a>      334 src/vfs/ftpfs/ftpfs.c         path_element-&gt;port = FTP_COMMAND_PORT;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L336'>path_element</a>      336 src/vfs/ftpfs/ftpfs.c     if (path_element-&gt;user == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L340'>path_element</a>      340 src/vfs/ftpfs/ftpfs.c             ftpfs_netrc_lookup (path_element-&gt;host, &amp;path_element-&gt;user, &amp;path_element-&gt;password);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L342'>path_element</a>      342 src/vfs/ftpfs/ftpfs.c     if (path_element-&gt;user == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L343'>path_element</a>      343 src/vfs/ftpfs/ftpfs.c         path_element-&gt;user = g_strdup ("anonymous");</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L346'>path_element</a>      346 src/vfs/ftpfs/ftpfs.c     if (ftpfs_use_netrc &amp;&amp; path_element-&gt;user != NULL &amp;&amp; path_element-&gt;password != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L351'>path_element</a>      351 src/vfs/ftpfs/ftpfs.c         ftpfs_netrc_lookup (path_element-&gt;host, &amp;new_user, &amp;new_passwd);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L354'>path_element</a>      354 src/vfs/ftpfs/ftpfs.c         if (new_user != NULL &amp;&amp; strcmp (path_element-&gt;user, new_user) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L355'>path_element</a>      355 src/vfs/ftpfs/ftpfs.c             MC_PTR_FREE (path_element-&gt;password);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L361'>path_element</a>      361 src/vfs/ftpfs/ftpfs.c     return path_element;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L432'>path_element</a>      432 src/vfs/ftpfs/ftpfs.c         if (ftpfs_login_server (me, super, super-&gt;path_element-&gt;password) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L547'>path_element</a>      547 src/vfs/ftpfs/ftpfs.c         vfs_print_message (_("ftpfs: Disconnecting from %s"), super-&gt;path_element-&gt;host);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L583'>path_element</a>      583 src/vfs/ftpfs/ftpfs.c     if (super-&gt;path_element-&gt;password != NULL)  /* explicit password */</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L584'>path_element</a>      584 src/vfs/ftpfs/ftpfs.c         op = g_strdup (super-&gt;path_element-&gt;password);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L587'>path_element</a>      587 src/vfs/ftpfs/ftpfs.c     else if (strcmp (super-&gt;path_element-&gt;user, "anonymous") == 0</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L588'>path_element</a>      588 src/vfs/ftpfs/ftpfs.c              || strcmp (super-&gt;path_element-&gt;user, "ftp") == 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L599'>path_element</a>      599 src/vfs/ftpfs/ftpfs.c         p = g_strdup_printf (_("FTP: Password required for %s"), super-&gt;path_element-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L604'>path_element</a>      604 src/vfs/ftpfs/ftpfs.c         super-&gt;path_element-&gt;password = g_strdup (op);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L618'>path_element</a>      618 src/vfs/ftpfs/ftpfs.c             g_strconcat (super-&gt;path_element-&gt;user, "@",</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L619'>path_element</a>      619 src/vfs/ftpfs/ftpfs.c                          super-&gt;path_element-&gt;host[0] ==</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L620'>path_element</a>      620 src/vfs/ftpfs/ftpfs.c                          '!' ? super-&gt;path_element-&gt;host + 1 : super-&gt;path_element-&gt;host,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L623'>path_element</a>      623 src/vfs/ftpfs/ftpfs.c         name = g_strdup (super-&gt;path_element-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L653'>path_element</a>      653 src/vfs/ftpfs/ftpfs.c                                      super-&gt;path_element-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L675'>path_element</a>      675 src/vfs/ftpfs/ftpfs.c             wipe_password (super-&gt;path_element-&gt;password);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L676'>path_element</a>      676 src/vfs/ftpfs/ftpfs.c             super-&gt;path_element-&gt;password = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L683'>path_element</a>      683 src/vfs/ftpfs/ftpfs.c              super-&gt;path_element-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L786'>path_element</a>      786 src/vfs/ftpfs/ftpfs.c     vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L788'>path_element</a>      788 src/vfs/ftpfs/ftpfs.c     path_element = vfs_url_split (proxy, FTP_COMMAND_PORT, URL_USE_ANONYMOUS);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L789'>path_element</a>      789 src/vfs/ftpfs/ftpfs.c     *host = g_strdup (path_element-&gt;host);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L790'>path_element</a>      790 src/vfs/ftpfs/ftpfs.c     *port = path_element-&gt;port;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L791'>path_element</a>      791 src/vfs/ftpfs/ftpfs.c     vfs_path_element_free (path_element);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L809'>path_element</a>      809 src/vfs/ftpfs/ftpfs.c     host = g_strdup (super-&gt;path_element-&gt;host);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L820'>path_element</a>      820 src/vfs/ftpfs/ftpfs.c     tmp_port = super-&gt;path_element-&gt;port;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L984'>path_element</a>      984 src/vfs/ftpfs/ftpfs.c     super-&gt;path_element = ftpfs_correct_url_parameters (vpath_element);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L986'>path_element</a>      986 src/vfs/ftpfs/ftpfs.c     if (ftpfs_check_proxy (super-&gt;path_element-&gt;host))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1007'>path_element</a>     1007 src/vfs/ftpfs/ftpfs.c     vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1013'>path_element</a>     1013 src/vfs/ftpfs/ftpfs.c     path_element = ftpfs_correct_url_parameters (vpath_element);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1015'>path_element</a>     1015 src/vfs/ftpfs/ftpfs.c     result = ((strcmp (path_element-&gt;host, super-&gt;path_element-&gt;host) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1016'>path_element</a>     1016 src/vfs/ftpfs/ftpfs.c               &amp;&amp; (strcmp (path_element-&gt;user, super-&gt;path_element-&gt;user) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1017'>path_element</a>     1017 src/vfs/ftpfs/ftpfs.c               &amp;&amp; (path_element-&gt;port == super-&gt;path_element-&gt;port)) ? 1 : 0;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1019'>path_element</a>     1019 src/vfs/ftpfs/ftpfs.c     vfs_path_element_free (path_element);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1987'>path_element</a>     1987 src/vfs/ftpfs/ftpfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1990'>path_element</a>     1990 src/vfs/ftpfs/ftpfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1996'>path_element</a>     1996 src/vfs/ftpfs/ftpfs.c     p = ftpfs_translate_path (path_element-&gt;class, super, rpath);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1997'>path_element</a>     1997 src/vfs/ftpfs/ftpfs.c     r = ftpfs_command (path_element-&gt;class, super, WAIT_REPLY, cmd, p);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2004'>path_element</a>     2004 src/vfs/ftpfs/ftpfs.c         path_element-&gt;class-&gt;verrno = EPERM;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2008'>path_element</a>     2008 src/vfs/ftpfs/ftpfs.c         vfs_s_invalidate (path_element-&gt;class, super);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2261'>path_element</a>     2261 src/vfs/ftpfs/ftpfs.c         name = vfs_path_element_build_pretty_path_str (super-&gt;path_element);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L68'>path_element</a>       68 src/vfs/local/local.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L70'>path_element</a>       70 src/vfs/local/local.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L71'>path_element</a>       71 src/vfs/local/local.c     fd = open (path_element-&gt;path, NO_LINEAR (flags), mode);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L88'>path_element</a>       88 src/vfs/local/local.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L90'>path_element</a>       90 src/vfs/local/local.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L91'>path_element</a>       91 src/vfs/local/local.c     dir = opendir (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L126'>path_element</a>      126 src/vfs/local/local.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L128'>path_element</a>      128 src/vfs/local/local.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L129'>path_element</a>      129 src/vfs/local/local.c     return stat (path_element-&gt;path, buf);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L137'>path_element</a>      137 src/vfs/local/local.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L139'>path_element</a>      139 src/vfs/local/local.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L141'>path_element</a>      141 src/vfs/local/local.c     return lstat (path_element-&gt;path, buf);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L143'>path_element</a>      143 src/vfs/local/local.c     return statlstat (path_element-&gt;path, buf);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L152'>path_element</a>      152 src/vfs/local/local.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L154'>path_element</a>      154 src/vfs/local/local.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L155'>path_element</a>      155 src/vfs/local/local.c     return chmod (path_element-&gt;path, mode);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L163'>path_element</a>      163 src/vfs/local/local.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L165'>path_element</a>      165 src/vfs/local/local.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L166'>path_element</a>      166 src/vfs/local/local.c     return chown (path_element-&gt;path, owner, group);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L174'>path_element</a>      174 src/vfs/local/local.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L176'>path_element</a>      176 src/vfs/local/local.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L177'>path_element</a>      177 src/vfs/local/local.c     return utime (path_element-&gt;path, times);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L185'>path_element</a>      185 src/vfs/local/local.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L187'>path_element</a>      187 src/vfs/local/local.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L188'>path_element</a>      188 src/vfs/local/local.c     return readlink (path_element-&gt;path, buf, size);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L196'>path_element</a>      196 src/vfs/local/local.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L198'>path_element</a>      198 src/vfs/local/local.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L199'>path_element</a>      199 src/vfs/local/local.c     return unlink (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L260'>path_element</a>      260 src/vfs/local/local.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L262'>path_element</a>      262 src/vfs/local/local.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L263'>path_element</a>      263 src/vfs/local/local.c     return chdir (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L271'>path_element</a>      271 src/vfs/local/local.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L273'>path_element</a>      273 src/vfs/local/local.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L274'>path_element</a>      274 src/vfs/local/local.c     return mknod (path_element-&gt;path, mode, dev);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L295'>path_element</a>      295 src/vfs/local/local.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L297'>path_element</a>      297 src/vfs/local/local.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L298'>path_element</a>      298 src/vfs/local/local.c     return mkdir (path_element-&gt;path, mode);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L306'>path_element</a>      306 src/vfs/local/local.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L308'>path_element</a>      308 src/vfs/local/local.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L309'>path_element</a>      309 src/vfs/local/local.c     return rmdir (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L132'>path_element</a>      132 src/vfs/sfs/sfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L134'>path_element</a>      134 src/vfs/sfs/sfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L138'>path_element</a>      138 src/vfs/sfs/sfs.c     w = (*path_element-&gt;class-&gt;which) (path_element-&gt;class, path_element-&gt;vfs_prefix);</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L182'>path_element</a>      182 src/vfs/sfs/sfs.c                 ptr = path_element-&gt;path;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L228'>path_element</a>      228 src/vfs/sfs/sfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L230'>path_element</a>      230 src/vfs/sfs/sfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L240'>path_element</a>      240 src/vfs/sfs/sfs.c     handle = vfs_mkstemps (&amp;cache_vpath, "sfs", path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L364'>path_element</a>      364 src/vfs/sftpfs/config_parser.c     config_entity = sftpfs_get_config_entity (super-&gt;path_element, mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L373'>path_element</a>      373 src/vfs/sftpfs/config_parser.c     if (super-&gt;path_element-&gt;port == 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L374'>path_element</a>      374 src/vfs/sftpfs/config_parser.c         super-&gt;path_element-&gt;port = config_entity-&gt;port;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L376'>path_element</a>      376 src/vfs/sftpfs/config_parser.c     if (super-&gt;path_element-&gt;user == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L377'>path_element</a>      377 src/vfs/sftpfs/config_parser.c         super-&gt;path_element-&gt;user = g_strdup (config_entity-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L381'>path_element</a>      381 src/vfs/sftpfs/config_parser.c         g_free (super-&gt;path_element-&gt;host);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L382'>path_element</a>      382 src/vfs/sftpfs/config_parser.c         super-&gt;path_element-&gt;host = g_strdup (config_entity-&gt;real_host);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L76'>path_element</a>       76 src/vfs/sftpfs/connection.c     if (super-&gt;path_element-&gt;host == NULL || *super-&gt;path_element-&gt;host == '\0')</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L82'>path_element</a>       82 src/vfs/sftpfs/connection.c     sprintf (port, "%hu", (unsigned short) super-&gt;path_element-&gt;port);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L97'>path_element</a>       97 src/vfs/sftpfs/connection.c     e = getaddrinfo (super-&gt;path_element-&gt;host, port, &amp;hints, &amp;res);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L104'>path_element</a>      104 src/vfs/sftpfs/connection.c         e = getaddrinfo (super-&gt;path_element-&gt;host, port, &amp;hints, &amp;res);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L131'>path_element</a>      131 src/vfs/sftpfs/connection.c         vfs_print_message (_("sftp: making connection to %s"), super-&gt;path_element-&gt;host);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L178'>path_element</a>      178 src/vfs/sftpfs/connection.c     userauthlist = libssh2_userauth_list (super_data-&gt;session, super-&gt;path_element-&gt;user,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L179'>path_element</a>      179 src/vfs/sftpfs/connection.c                                           strlen (super-&gt;path_element-&gt;user));</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L237'>path_element</a>      237 src/vfs/sftpfs/connection.c         if (libssh2_agent_userauth (super_data-&gt;agent, super-&gt;path_element-&gt;user, identity) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L272'>path_element</a>      272 src/vfs/sftpfs/connection.c     if (libssh2_userauth_publickey_fromfile (super_data-&gt;session, super-&gt;path_element-&gt;user,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L274'>path_element</a>      274 src/vfs/sftpfs/connection.c                                              super-&gt;path_element-&gt;password) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L277'>path_element</a>      277 src/vfs/sftpfs/connection.c     p = g_strdup_printf (_("sftp: Enter passphrase for %s "), super-&gt;path_element-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L286'>path_element</a>      286 src/vfs/sftpfs/connection.c                                                           super-&gt;path_element-&gt;user,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L319'>path_element</a>      319 src/vfs/sftpfs/connection.c     if (super-&gt;path_element-&gt;password != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L321'>path_element</a>      321 src/vfs/sftpfs/connection.c         while ((rc = libssh2_userauth_password (super_data-&gt;session, super-&gt;path_element-&gt;user,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L322'>path_element</a>      322 src/vfs/sftpfs/connection.c                                                 super-&gt;path_element-&gt;password)) ==</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L328'>path_element</a>      328 src/vfs/sftpfs/connection.c     p = g_strdup_printf (_("sftp: Enter password for %s "), super-&gt;path_element-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L336'>path_element</a>      336 src/vfs/sftpfs/connection.c         while ((rc = libssh2_userauth_password (super_data-&gt;session, super-&gt;path_element-&gt;user,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L343'>path_element</a>      343 src/vfs/sftpfs/connection.c             g_free (super-&gt;path_element-&gt;password);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L344'>path_element</a>      344 src/vfs/sftpfs/connection.c             super-&gt;path_element-&gt;password = passwd;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L71'>path_element</a>       71 src/vfs/sftpfs/dir.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L76'>path_element</a>       76 src/vfs/sftpfs/dir.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L89'>path_element</a>       89 src/vfs/sftpfs/dir.c                                   sftpfs_fix_filename (path_element-&gt;path));</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L193'>path_element</a>      193 src/vfs/sftpfs/dir.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L197'>path_element</a>      197 src/vfs/sftpfs/dir.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L213'>path_element</a>      213 src/vfs/sftpfs/dir.c         fixfname = sftpfs_fix_filename (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L250'>path_element</a>      250 src/vfs/sftpfs/dir.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L254'>path_element</a>      254 src/vfs/sftpfs/dir.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L270'>path_element</a>      270 src/vfs/sftpfs/dir.c         fixfname = sftpfs_fix_filename (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L139'>path_element</a>      139 src/vfs/sftpfs/internal.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L143'>path_element</a>      143 src/vfs/sftpfs/internal.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L159'>path_element</a>      159 src/vfs/sftpfs/internal.c         fixfname = sftpfs_fix_filename (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L216'>path_element</a>      216 src/vfs/sftpfs/internal.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L220'>path_element</a>      220 src/vfs/sftpfs/internal.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L236'>path_element</a>      236 src/vfs/sftpfs/internal.c         fixfname = sftpfs_fix_filename (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L295'>path_element</a>      295 src/vfs/sftpfs/internal.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L299'>path_element</a>      299 src/vfs/sftpfs/internal.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L315'>path_element</a>      315 src/vfs/sftpfs/internal.c         fixfname = sftpfs_fix_filename (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L423'>path_element</a>      423 src/vfs/sftpfs/internal.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L427'>path_element</a>      427 src/vfs/sftpfs/internal.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L443'>path_element</a>      443 src/vfs/sftpfs/internal.c         fixfname = sftpfs_fix_filename (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L467'>path_element</a>      467 src/vfs/sftpfs/internal.c         fixfname = sftpfs_fix_filename (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L501'>path_element</a>      501 src/vfs/sftpfs/internal.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L505'>path_element</a>      505 src/vfs/sftpfs/internal.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L521'>path_element</a>      521 src/vfs/sftpfs/internal.c         fixfname = sftpfs_fix_filename (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L99'>path_element</a>       99 src/vfs/sftpfs/vfs_class.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L106'>path_element</a>      106 src/vfs/sftpfs/vfs_class.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L112'>path_element</a>      112 src/vfs/sftpfs/vfs_class.c     path_inode = vfs_s_find_inode (path_element-&gt;class, super, path_super, LINK_FOLLOW, FL_NONE);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L115'>path_element</a>      115 src/vfs/sftpfs/vfs_class.c         path_element-&gt;class-&gt;verrno = EEXIST;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L127'>path_element</a>      127 src/vfs/sftpfs/vfs_class.c         dir = vfs_s_find_inode (path_element-&gt;class, super, dirname, LINK_FOLLOW, FL_DIR);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L134'>path_element</a>      134 src/vfs/sftpfs/vfs_class.c         ent = vfs_s_generate_entry (path_element-&gt;class, name, dir, 0755);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L136'>path_element</a>      136 src/vfs/sftpfs/vfs_class.c         vfs_s_insert_entry (path_element-&gt;class, dir, ent);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L144'>path_element</a>      144 src/vfs/sftpfs/vfs_class.c         path_element-&gt;class-&gt;verrno = EISDIR;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L163'>path_element</a>      163 src/vfs/sftpfs/vfs_class.c     vfs_rmstamp (path_element-&gt;class, (vfsid) super);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L659'>path_element</a>      659 src/vfs/sftpfs/vfs_class.c         name = vfs_path_element_build_pretty_path_str (super-&gt;path_element);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L110'>path_element</a>      110 src/vfs/sftpfs/vfs_subclass.c     super-&gt;path_element = vfs_path_element_clone (vpath_element);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L973'>path_element</a>      973 src/vfs/smbfs/smbfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L975'>path_element</a>      975 src/vfs/smbfs/smbfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L976'>path_element</a>      976 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_chmod(path:%s, mode:%d)\n", path_element-&gt;path, (int) mode));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L987'>path_element</a>      987 src/vfs/smbfs/smbfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L989'>path_element</a>      989 src/vfs/smbfs/smbfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L990'>path_element</a>      990 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_chown(path:%s, owner:%d, group:%d)\n", path_element-&gt;path, owner, group));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1000'>path_element</a>     1000 src/vfs/smbfs/smbfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1004'>path_element</a>     1004 src/vfs/smbfs/smbfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1005'>path_element</a>     1005 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_utime(path:%s)\n", path_element-&gt;path));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1015'>path_element</a>     1015 src/vfs/smbfs/smbfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1017'>path_element</a>     1017 src/vfs/smbfs/smbfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1018'>path_element</a>     1018 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_readlink(path:%s, buf:%s, size:%zu)\n", path_element-&gt;path, buf, size));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1336'>path_element</a>     1336 src/vfs/smbfs/smbfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1339'>path_element</a>     1339 src/vfs/smbfs/smbfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1340'>path_element</a>     1340 src/vfs/smbfs/smbfs.c     path = path_element-&gt;path;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1344'>path_element</a>     1344 src/vfs/smbfs/smbfs.c     if (path_element-&gt;class != &amp;vfs_smbfs_ops)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1405'>path_element</a>     1405 src/vfs/smbfs/smbfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1407'>path_element</a>     1407 src/vfs/smbfs/smbfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1408'>path_element</a>     1408 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_opendir(dirname:%s)\n", path_element-&gt;path));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1416'>path_element</a>     1416 src/vfs/smbfs/smbfs.c     smbfs_info-&gt;path = g_strdup (path_element-&gt;path);   /* keep original */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1685'>path_element</a>     1685 src/vfs/smbfs/smbfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1687'>path_element</a>     1687 src/vfs/smbfs/smbfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1688'>path_element</a>     1688 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_chdir(path:%s)\n", path_element-&gt;path));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1703'>path_element</a>     1703 src/vfs/smbfs/smbfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1705'>path_element</a>     1705 src/vfs/smbfs/smbfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1706'>path_element</a>     1706 src/vfs/smbfs/smbfs.c     mypath = g_strdup (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1731'>path_element</a>     1731 src/vfs/smbfs/smbfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1733'>path_element</a>     1733 src/vfs/smbfs/smbfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1734'>path_element</a>     1734 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_stat(path:%s)\n", path_element-&gt;path));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1744'>path_element</a>     1744 src/vfs/smbfs/smbfs.c     p = path_element-&gt;path;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1745'>path_element</a>     1745 src/vfs/smbfs/smbfs.c     if (path_element-&gt;class != &amp;vfs_smbfs_ops)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1776'>path_element</a>     1776 src/vfs/smbfs/smbfs.c         return smbfs_fake_server_stat (server_url, path_element-&gt;path, buf);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1781'>path_element</a>     1781 src/vfs/smbfs/smbfs.c         return smbfs_fake_share_stat (server_url, path_element-&gt;path, buf);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1829'>path_element</a>     1829 src/vfs/smbfs/smbfs.c     return smbfs_get_stat_info (sc, path_element-&gt;path, buf);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1875'>path_element</a>     1875 src/vfs/smbfs/smbfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1877'>path_element</a>     1877 src/vfs/smbfs/smbfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1879'>path_element</a>     1879 src/vfs/smbfs/smbfs.c            ("smbfs_mknod(path:%s, mode:%d, dev:%u)\n", path_element-&gt;path, mode,</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1893'>path_element</a>     1893 src/vfs/smbfs/smbfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1895'>path_element</a>     1895 src/vfs/smbfs/smbfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1896'>path_element</a>     1896 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_mkdir(path:%s, mode:%d)\n", path_element-&gt;path, (int) mode));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1900'>path_element</a>     1900 src/vfs/smbfs/smbfs.c     cpath = smbfs_convert_path (path_element-&gt;path, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1922'>path_element</a>     1922 src/vfs/smbfs/smbfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1924'>path_element</a>     1924 src/vfs/smbfs/smbfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1925'>path_element</a>     1925 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_rmdir(path:%s)\n", path_element-&gt;path));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1929'>path_element</a>     1929 src/vfs/smbfs/smbfs.c     cpath = smbfs_convert_path (path_element-&gt;path, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1976'>path_element</a>     1976 src/vfs/smbfs/smbfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1980'>path_element</a>     1980 src/vfs/smbfs/smbfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1981'>path_element</a>     1981 src/vfs/smbfs/smbfs.c     if (path_element-&gt;class != &amp;vfs_smbfs_ops)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1984'>path_element</a>     1984 src/vfs/smbfs/smbfs.c     path = path_element-&gt;path;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2021'>path_element</a>     2021 src/vfs/smbfs/smbfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2025'>path_element</a>     2025 src/vfs/smbfs/smbfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2026'>path_element</a>     2026 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_setctl(path:%s, ctlop:%d)\n", path_element-&gt;path, ctlop));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2106'>path_element</a>     2106 src/vfs/smbfs/smbfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2108'>path_element</a>     2108 src/vfs/smbfs/smbfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2109'>path_element</a>     2109 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_open(file:%s, flags:%d, mode:%o)\n", path_element-&gt;path, flags, mode));</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L154'>path_element</a>      154 src/vfs/undelfs/undelfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L156'>path_element</a>      156 src/vfs/undelfs/undelfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L163'>path_element</a>      163 src/vfs/undelfs/undelfs.c     dirname = path_element-&gt;path;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L340'>path_element</a>      340 src/vfs/undelfs/undelfs.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L342'>path_element</a>      342 src/vfs/undelfs/undelfs.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L386'>path_element</a>      386 src/vfs/undelfs/undelfs.c     vfs_print_message (_("%s: done."), path_element-&gt;class-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L389'>path_element</a>      389 src/vfs/undelfs/undelfs.c     vfs_print_message (_("%s: failure"), path_element-&gt;class-&gt;name);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--relative_cd.c.html#L174'>path_element</a>      174 tests/lib/vfs/relative_cd.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--relative_cd.c.html#L178'>path_element</a>      178 tests/lib/vfs/relative_cd.c     path_element = vfs_path_element_clone (vfs_path_get_by_index (vpath, -1));</span>
+<span class='curline'><a href='../S/tests--lib--vfs--relative_cd.c.html#L184'>path_element</a>      184 tests/lib/vfs/relative_cd.c     vfs_path_add_element (last_vpath, path_element);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_path_string_convert.c.html#L184'>path_element</a>      184 tests/lib/vfs/vfs_path_string_convert.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_path_string_convert.c.html#L192'>path_element</a>      192 tests/lib/vfs/vfs_path_string_convert.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_path_string_convert.c.html#L197'>path_element</a>      197 tests/lib/vfs/vfs_path_string_convert.c     mctest_assert_ptr_eq (path_element-&gt;class, data-&gt;expected_vfs_class);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_path_string_convert.c.html#L198'>path_element</a>      198 tests/lib/vfs/vfs_path_string_convert.c     mctest_assert_str_eq (path_element-&gt;path, data-&gt;expected_element_path);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L66'>path_element</a>       66 tests/lib/vfs/vfs_s_get_path.c     const vfs_path_element_t *path_element;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L72'>path_element</a>       72 tests/lib/vfs/vfs_s_get_path.c     path_element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L73'>path_element</a>       73 tests/lib/vfs/vfs_s_get_path.c     if (strcmp (ARCH_NAME, path_element-&gt;path) != 0)</span>
+</pre>
+</body>
+</html>

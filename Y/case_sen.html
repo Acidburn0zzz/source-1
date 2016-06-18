@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>case_sen</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--strutil.h.html#L152'>case_sen</a>          152 lib/strutil.h        /*I*/ char *(*create_key) (const char *text, int case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L153'>case_sen</a>          153 lib/strutil.h        /*I*/ char *(*create_key_for_filename) (const char *text, int case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L154'>case_sen</a>          154 lib/strutil.h        /*I*/ int (*key_collate) (const char *t1, const char *t2, int case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L155'>case_sen</a>          155 lib/strutil.h        /*I*/ void (*release_key) (char *key, int case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L461'>case_sen</a>          461 lib/strutil.h  char *str_create_search_needle (const char *needle, int case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L465'>case_sen</a>          465 lib/strutil.h  void str_release_search_needle (char *needle, int case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L469'>case_sen</a>          469 lib/strutil.h  const char *str_search_first (const char *text, const char *needle, int case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L473'>case_sen</a>          473 lib/strutil.h  const char *str_search_last (const char *text, const char *needle, int case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L513'>case_sen</a>          513 lib/strutil.h  char *str_create_key (const char *text, int case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L519'>case_sen</a>          519 lib/strutil.h  char *str_create_key_for_filename (const char *text, int case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L526'>case_sen</a>          526 lib/strutil.h  int str_key_collate (const char *t1, const char *t2, int case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L531'>case_sen</a>          531 lib/strutil.h  void str_release_key (char *key, int case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L788'>case_sen</a>          788 lib/strutil/strutil.c str_create_search_needle (const char *needle, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L790'>case_sen</a>          790 lib/strutil/strutil.c     return used_class.create_search_needle (needle, case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L796'>case_sen</a>          796 lib/strutil/strutil.c str_release_search_needle (char *needle, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L798'>case_sen</a>          798 lib/strutil/strutil.c     used_class.release_search_needle (needle, case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L804'>case_sen</a>          804 lib/strutil/strutil.c str_search_first (const char *text, const char *search, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L806'>case_sen</a>          806 lib/strutil/strutil.c     return used_class.search_first (text, search, case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L812'>case_sen</a>          812 lib/strutil/strutil.c str_search_last (const char *text, const char *search, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L814'>case_sen</a>          814 lib/strutil/strutil.c     return used_class.search_last (text, search, case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L884'>case_sen</a>          884 lib/strutil/strutil.c str_create_key (const char *text, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L886'>case_sen</a>          886 lib/strutil/strutil.c     return used_class.create_key (text, case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L892'>case_sen</a>          892 lib/strutil/strutil.c str_create_key_for_filename (const char *text, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L894'>case_sen</a>          894 lib/strutil/strutil.c     return used_class.create_key_for_filename (text, case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L900'>case_sen</a>          900 lib/strutil/strutil.c str_key_collate (const char *t1, const char *t2, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L902'>case_sen</a>          902 lib/strutil/strutil.c     return used_class.key_collate (t1, t2, case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L908'>case_sen</a>          908 lib/strutil/strutil.c str_release_key (char *key, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L910'>case_sen</a>          910 lib/strutil/strutil.c     used_class.release_key (key, case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L556'>case_sen</a>          556 lib/strutil/strutil8bit.c str_8bit_create_search_needle (const char *needle, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L558'>case_sen</a>          558 lib/strutil/strutil8bit.c     (void) case_sen;</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L565'>case_sen</a>          565 lib/strutil/strutil8bit.c str_8bit_release_search_needle (char *needle, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L567'>case_sen</a>          567 lib/strutil/strutil8bit.c     (void) case_sen;</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L592'>case_sen</a>          592 lib/strutil/strutil8bit.c str_8bit_search_first (const char *text, const char *search, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L598'>case_sen</a>          598 lib/strutil/strutil8bit.c     fold_text = (case_sen) ? (char *) text : str_8bit_strdown (text);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L599'>case_sen</a>          599 lib/strutil/strutil8bit.c     fold_search = (case_sen) ? (char *) search : str_8bit_strdown (search);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L610'>case_sen</a>          610 lib/strutil/strutil8bit.c     if (!case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L622'>case_sen</a>          622 lib/strutil/strutil8bit.c str_8bit_search_last (const char *text, const char *search, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L628'>case_sen</a>          628 lib/strutil/strutil8bit.c     fold_text = (case_sen) ? (char *) text : str_8bit_strdown (text);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L629'>case_sen</a>          629 lib/strutil/strutil8bit.c     fold_search = (case_sen) ? (char *) search : str_8bit_strdown (search);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L640'>case_sen</a>          640 lib/strutil/strutil8bit.c     if (!case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L778'>case_sen</a>          778 lib/strutil/strutil8bit.c str_8bit_create_key (const char *text, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L780'>case_sen</a>          780 lib/strutil/strutil8bit.c     return (case_sen) ? (char *) text : str_8bit_strdown (text);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L786'>case_sen</a>          786 lib/strutil/strutil8bit.c str_8bit_key_collate (const char *t1, const char *t2, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L788'>case_sen</a>          788 lib/strutil/strutil8bit.c     if (case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L797'>case_sen</a>          797 lib/strutil/strutil8bit.c str_8bit_release_key (char *key, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L799'>case_sen</a>          799 lib/strutil/strutil8bit.c     if (!case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L554'>case_sen</a>          554 lib/strutil/strutilascii.c str_ascii_create_search_needle (const char *needle, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L556'>case_sen</a>          556 lib/strutil/strutilascii.c     (void) case_sen;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L563'>case_sen</a>          563 lib/strutil/strutilascii.c str_ascii_release_search_needle (char *needle, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L565'>case_sen</a>          565 lib/strutil/strutilascii.c     (void) case_sen;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L573'>case_sen</a>          573 lib/strutil/strutilascii.c str_ascii_search_first (const char *text, const char *search, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L579'>case_sen</a>          579 lib/strutil/strutilascii.c     fold_text = (case_sen) ? (char *) text : g_ascii_strdown (text, -1);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L580'>case_sen</a>          580 lib/strutil/strutilascii.c     fold_search = (case_sen) ? (char *) search : g_ascii_strdown (search, -1);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L591'>case_sen</a>          591 lib/strutil/strutilascii.c     if (!case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L603'>case_sen</a>          603 lib/strutil/strutilascii.c str_ascii_search_last (const char *text, const char *search, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L609'>case_sen</a>          609 lib/strutil/strutilascii.c     fold_text = (case_sen) ? (char *) text : g_ascii_strdown (text, -1);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L610'>case_sen</a>          610 lib/strutil/strutilascii.c     fold_search = (case_sen) ? (char *) search : g_ascii_strdown (search, -1);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L621'>case_sen</a>          621 lib/strutil/strutilascii.c     if (!case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L674'>case_sen</a>          674 lib/strutil/strutilascii.c str_ascii_create_key (const char *text, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L676'>case_sen</a>          676 lib/strutil/strutilascii.c     (void) case_sen;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L683'>case_sen</a>          683 lib/strutil/strutilascii.c str_ascii_key_collate (const char *t1, const char *t2, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L685'>case_sen</a>          685 lib/strutil/strutilascii.c     return (case_sen) ? strcmp (t1, t2) : g_ascii_strcasecmp (t1, t2);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L691'>case_sen</a>          691 lib/strutil/strutilascii.c str_ascii_release_key (char *key, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L694'>case_sen</a>          694 lib/strutil/strutilascii.c     (void) case_sen;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L959'>case_sen</a>          959 lib/strutil/strutilutf8.c str_utf8_create_search_needle (const char *needle, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L966'>case_sen</a>          966 lib/strutil/strutilutf8.c     if (case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L979'>case_sen</a>          979 lib/strutil/strutilutf8.c str_utf8_release_search_needle (char *needle, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L981'>case_sen</a>          981 lib/strutil/strutilutf8.c     (void) case_sen;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L988'>case_sen</a>          988 lib/strutil/strutilutf8.c str_utf8_search_first (const char *text, const char *search, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L996'>case_sen</a>          996 lib/strutil/strutilutf8.c     fold_text = (case_sen) ? (char *) text : g_utf8_casefold (text, -1);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1023'>case_sen</a>         1023 lib/strutil/strutilutf8.c     if (!case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1032'>case_sen</a>         1032 lib/strutil/strutilutf8.c str_utf8_search_last (const char *text, const char *search, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1040'>case_sen</a>         1040 lib/strutil/strutilutf8.c     fold_text = (case_sen) ? (char *) text : g_utf8_casefold (text, -1);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1066'>case_sen</a>         1066 lib/strutil/strutilutf8.c     if (!case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1327'>case_sen</a>         1327 lib/strutil/strutilutf8.c str_utf8_create_key_gen (const char *text, int case_sen,</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1332'>case_sen</a>         1332 lib/strutil/strutilutf8.c     if (case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1401'>case_sen</a>         1401 lib/strutil/strutilutf8.c str_utf8_create_key (const char *text, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1403'>case_sen</a>         1403 lib/strutil/strutilutf8.c     return str_utf8_create_key_gen (text, case_sen, g_utf8_collate_key);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1410'>case_sen</a>         1410 lib/strutil/strutilutf8.c str_utf8_create_key_for_filename (const char *text, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1412'>case_sen</a>         1412 lib/strutil/strutilutf8.c     return str_utf8_create_key_gen (text, case_sen, g_utf8_collate_key_for_filename);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1419'>case_sen</a>         1419 lib/strutil/strutilutf8.c str_utf8_key_collate (const char *t1, const char *t2, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1421'>case_sen</a>         1421 lib/strutil/strutilutf8.c     (void) case_sen;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1428'>case_sen</a>         1428 lib/strutil/strutilutf8.c str_utf8_release_key (char *key, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1430'>case_sen</a>         1430 lib/strutil/strutilutf8.c     (void) case_sen;</span>
+</pre>
+</body>
+</html>

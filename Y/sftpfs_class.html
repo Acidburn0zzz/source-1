@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>sftpfs_class</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L103'>sftpfs_class</a>      103 src/vfs/sftpfs/file.c     name = vfs_s_fullpath (&amp;sftpfs_class, file_handler-&gt;ino);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--init.c.html#L61'>sftpfs_class</a>       61 src/vfs/sftpfs/init.c     vfs_s_init_class (&amp;sftpfs_class, &amp;sftpfs_subclass);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--init.c.html#L66'>sftpfs_class</a>       66 src/vfs/sftpfs/init.c     vfs_register_class (&amp;sftpfs_class);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L57'>sftpfs_class</a>       57 src/vfs/sftpfs/internal.h extern struct vfs_class sftpfs_class;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L39'>sftpfs_class</a>       39 src/vfs/sftpfs/vfs_class.c struct vfs_class sftpfs_class;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L489'>sftpfs_class</a>      489 src/vfs/sftpfs/vfs_class.c         vfs_stamp_create (&amp;sftpfs_class, super);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L497'>sftpfs_class</a>      497 src/vfs/sftpfs/vfs_class.c     vfs_s_free_inode (&amp;sftpfs_class, file_handler-&gt;ino);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L678'>sftpfs_class</a>      678 src/vfs/sftpfs/vfs_class.c     memset (&amp;sftpfs_class, 0, sizeof (sftpfs_class));</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L679'>sftpfs_class</a>      679 src/vfs/sftpfs/vfs_class.c     sftpfs_class.name = "sftpfs";</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L680'>sftpfs_class</a>      680 src/vfs/sftpfs/vfs_class.c     sftpfs_class.prefix = "sftp";</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L681'>sftpfs_class</a>      681 src/vfs/sftpfs/vfs_class.c     sftpfs_class.flags = VFSF_NOLINKS;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L692'>sftpfs_class</a>      692 src/vfs/sftpfs/vfs_class.c     sftpfs_class.init = sftpfs_cb_init;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L693'>sftpfs_class</a>      693 src/vfs/sftpfs/vfs_class.c     sftpfs_class.done = sftpfs_cb_done;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L695'>sftpfs_class</a>      695 src/vfs/sftpfs/vfs_class.c     sftpfs_class.fill_names = sftpfs_cb_fill_names;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L697'>sftpfs_class</a>      697 src/vfs/sftpfs/vfs_class.c     sftpfs_class.opendir = sftpfs_cb_opendir;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L698'>sftpfs_class</a>      698 src/vfs/sftpfs/vfs_class.c     sftpfs_class.readdir = sftpfs_cb_readdir;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L699'>sftpfs_class</a>      699 src/vfs/sftpfs/vfs_class.c     sftpfs_class.closedir = sftpfs_cb_closedir;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L700'>sftpfs_class</a>      700 src/vfs/sftpfs/vfs_class.c     sftpfs_class.mkdir = sftpfs_cb_mkdir;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L701'>sftpfs_class</a>      701 src/vfs/sftpfs/vfs_class.c     sftpfs_class.rmdir = sftpfs_cb_rmdir;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L703'>sftpfs_class</a>      703 src/vfs/sftpfs/vfs_class.c     sftpfs_class.stat = sftpfs_cb_stat;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L704'>sftpfs_class</a>      704 src/vfs/sftpfs/vfs_class.c     sftpfs_class.lstat = sftpfs_cb_lstat;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L705'>sftpfs_class</a>      705 src/vfs/sftpfs/vfs_class.c     sftpfs_class.fstat = sftpfs_cb_fstat;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L706'>sftpfs_class</a>      706 src/vfs/sftpfs/vfs_class.c     sftpfs_class.readlink = sftpfs_cb_readlink;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L707'>sftpfs_class</a>      707 src/vfs/sftpfs/vfs_class.c     sftpfs_class.symlink = sftpfs_cb_symlink;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L708'>sftpfs_class</a>      708 src/vfs/sftpfs/vfs_class.c     sftpfs_class.link = sftpfs_cb_link;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L709'>sftpfs_class</a>      709 src/vfs/sftpfs/vfs_class.c     sftpfs_class.utime = sftpfs_cb_utime;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L710'>sftpfs_class</a>      710 src/vfs/sftpfs/vfs_class.c     sftpfs_class.mknod = sftpfs_cb_mknod;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L711'>sftpfs_class</a>      711 src/vfs/sftpfs/vfs_class.c     sftpfs_class.chown = sftpfs_cb_chown;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L712'>sftpfs_class</a>      712 src/vfs/sftpfs/vfs_class.c     sftpfs_class.chmod = sftpfs_cb_chmod;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L714'>sftpfs_class</a>      714 src/vfs/sftpfs/vfs_class.c     sftpfs_class.open = sftpfs_cb_open;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L715'>sftpfs_class</a>      715 src/vfs/sftpfs/vfs_class.c     sftpfs_class.read = sftpfs_cb_read;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L716'>sftpfs_class</a>      716 src/vfs/sftpfs/vfs_class.c     sftpfs_class.write = sftpfs_cb_write;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L717'>sftpfs_class</a>      717 src/vfs/sftpfs/vfs_class.c     sftpfs_class.close = sftpfs_cb_close;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L718'>sftpfs_class</a>      718 src/vfs/sftpfs/vfs_class.c     sftpfs_class.lseek = sftpfs_cb_lseek;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L719'>sftpfs_class</a>      719 src/vfs/sftpfs/vfs_class.c     sftpfs_class.unlink = sftpfs_cb_unlink;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L720'>sftpfs_class</a>      720 src/vfs/sftpfs/vfs_class.c     sftpfs_class.rename = sftpfs_cb_rename;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L721'>sftpfs_class</a>      721 src/vfs/sftpfs/vfs_class.c     sftpfs_class.ferrno = sftpfs_cb_errno;</span>
+</pre>
+</body>
+</html>

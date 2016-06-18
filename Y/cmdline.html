@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>cmdline</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L675'>cmdline</a>           675 src/filemanager/cmd.c     if (input_is_empty (cmdline))</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L678'>cmdline</a>           678 src/filemanager/cmd.c         initial_command = cmdline-&gt;buffer;</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L63'>cmdline</a>            63 src/filemanager/command.c WInput *cmdline;</span>
+<span class='curline'><a href='../S/src--filemanager--command.h.html#L18'>cmdline</a>            18 src/filemanager/command.h extern WInput *cmdline;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L556'>cmdline</a>           556 src/filemanager/hotlist.c                     input_insert (cmdline, tmp, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L728'>cmdline</a>           728 src/filemanager/layout.c         widget_set_size (WIDGET (cmdline), 0, 0, 0, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L847'>cmdline</a>           847 src/filemanager/layout.c     widget_set_size (WIDGET (cmdline), y, prompt_width, 1, COLS - prompt_width);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L698'>cmdline</a>           698 src/filemanager/midnight.c     cmdline = command_new (0, 0, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L730'>cmdline</a>           730 src/filemanager/midnight.c     command_insert (cmdline, cwd_vpath_str, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L733'>cmdline</a>           733 src/filemanager/midnight.c         command_insert (cmdline, PATH_SEP_STR, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L758'>cmdline</a>           758 src/filemanager/midnight.c             command_insert (cmdline, buffer, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L803'>cmdline</a>           803 src/filemanager/midnight.c     command_insert (cmdline, tmp, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L813'>cmdline</a>           813 src/filemanager/midnight.c     input_disable_update (cmdline);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L821'>cmdline</a>           821 src/filemanager/midnight.c                 command_insert (cmdline, panel-&gt;dir.list[i].fname, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L826'>cmdline</a>           826 src/filemanager/midnight.c         command_insert (cmdline, panel-&gt;dir.list[panel-&gt;selected].fname, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L828'>cmdline</a>           828 src/filemanager/midnight.c     input_enable_update (cmdline);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L945'>cmdline</a>           945 src/filemanager/midnight.c     add_widget (midnight_dlg, cmdline);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1232'>cmdline</a>          1232 src/filemanager/midnight.c         send_message (cmdline, NULL, MSG_ACTION, CK_History, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1449'>cmdline</a>          1449 src/filemanager/midnight.c             input_free_completions (cmdline);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1465'>cmdline</a>          1465 src/filemanager/midnight.c             for (i = 0; cmdline-&gt;buffer[i] != '\0' &amp;&amp;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1466'>cmdline</a>          1466 src/filemanager/midnight.c                  (cmdline-&gt;buffer[i] == ' ' || cmdline-&gt;buffer[i] == '\t'); i++)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1469'>cmdline</a>          1469 src/filemanager/midnight.c             if (cmdline-&gt;buffer[i] != '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1471'>cmdline</a>          1471 src/filemanager/midnight.c                 send_message (cmdline, NULL, MSG_KEY, parm, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1475'>cmdline</a>          1475 src/filemanager/midnight.c             input_insert (cmdline, "", FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1476'>cmdline</a>          1476 src/filemanager/midnight.c             cmdline-&gt;point = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1512'>cmdline</a>          1512 src/filemanager/midnight.c             else if (!command_prompt || cmdline-&gt;buffer[0] == '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1555'>cmdline</a>          1555 src/filemanager/midnight.c                 v = send_message (cmdline, NULL, MSG_KEY, parm, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1719'>cmdline</a>          1719 src/filemanager/midnight.c     input_free_completions (cmdline);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1984'>cmdline</a>          1984 src/filemanager/panel.c     if (panels_options.navigate_with_arrows &amp;&amp; (cmdline-&gt;buffer[0] == '\0'))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2017'>cmdline</a>          2017 src/filemanager/panel.c     if (cmdline-&gt;buffer[0] == '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3288'>cmdline</a>          3288 src/filemanager/panel.c     input_free_completions (cmdline);</span>
+</pre>
+</body>
+</html>

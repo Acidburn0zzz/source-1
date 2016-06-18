@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>element</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1303'>element</a>          1303 lib/utilunix.c     const char *element = first_element;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1307'>element</a>          1307 lib/utilunix.c     if (element == NULL)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1316'>element</a>          1316 lib/utilunix.c         if (*element == '\0')</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1317'>element</a>          1317 lib/utilunix.c             element = va_arg (args, char *);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1324'>element</a>          1324 lib/utilunix.c             tmp_element = g_strdup (element);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1326'>element</a>          1326 lib/utilunix.c             element = va_arg (args, char *);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1333'>element</a>          1333 lib/utilunix.c             if (!IS_PATH_SEP (tmp_element[len - 1]) &amp;&amp; element != NULL)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1339'>element</a>          1339 lib/utilunix.c     while (element != NULL);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L373'>element</a>           373 lib/vfs/path.c     vfs_path_element_t *element;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L383'>element</a>           383 lib/vfs/path.c         element = g_new0 (vfs_path_element_t, 1);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L384'>element</a>           384 lib/vfs/path.c         element-&gt;class = class;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L387'>element</a>           387 lib/vfs/path.c         element-&gt;path = vfs_translate_path_n (local);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L390'>element</a>           390 lib/vfs/path.c         element-&gt;encoding = vfs_get_encoding (local, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L391'>element</a>           391 lib/vfs/path.c         element-&gt;dir.converter =</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L392'>element</a>           392 lib/vfs/path.c             (element-&gt;encoding != NULL) ? str_crt_conv_from (element-&gt;encoding) : INVALID_CONV;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L400'>element</a>           400 lib/vfs/path.c             vfs_path_url_split (element, url_params);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L404'>element</a>           404 lib/vfs/path.c             element-&gt;vfs_prefix = g_strdup (op);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L406'>element</a>           406 lib/vfs/path.c         g_array_prepend_val (vpath-&gt;path, element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L410'>element</a>           410 lib/vfs/path.c         element = g_new0 (vfs_path_element_t, 1);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L411'>element</a>           411 lib/vfs/path.c         element-&gt;class = g_ptr_array_index (vfs__classes_list, 0);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L412'>element</a>           412 lib/vfs/path.c         element-&gt;path = vfs_translate_path_n (path);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L415'>element</a>           415 lib/vfs/path.c         element-&gt;encoding = vfs_get_encoding (path, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L416'>element</a>           416 lib/vfs/path.c         element-&gt;dir.converter =</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L417'>element</a>           417 lib/vfs/path.c             (element-&gt;encoding != NULL) ? str_crt_conv_from (element-&gt;encoding) : INVALID_CONV;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L419'>element</a>           419 lib/vfs/path.c         g_array_prepend_val (vpath-&gt;path, element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L438'>element</a>           438 lib/vfs/path.c     vfs_path_element_t *element;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L460'>element</a>           460 lib/vfs/path.c         element = g_new0 (vfs_path_element_t, 1);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L461'>element</a>           461 lib/vfs/path.c         element-&gt;class = vfs_prefix_to_class (vfs_prefix_start);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L462'>element</a>           462 lib/vfs/path.c         element-&gt;vfs_prefix = g_strdup (vfs_prefix_start);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L465'>element</a>           465 lib/vfs/path.c         sub = VFSDATA (element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L473'>element</a>           473 lib/vfs/path.c                 element-&gt;path = g_strdup ("");</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L477'>element</a>           477 lib/vfs/path.c                 element-&gt;path = vfs_translate_path_n (slash_pointer + 1);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L479'>element</a>           479 lib/vfs/path.c                 element-&gt;encoding = vfs_get_encoding (slash_pointer, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L483'>element</a>           483 lib/vfs/path.c             vfs_path_url_split (element, url_delimiter);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L487'>element</a>           487 lib/vfs/path.c             element-&gt;path = vfs_translate_path_n (url_delimiter);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L489'>element</a>           489 lib/vfs/path.c             element-&gt;encoding = vfs_get_encoding (url_delimiter, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L493'>element</a>           493 lib/vfs/path.c         element-&gt;dir.converter =</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L494'>element</a>           494 lib/vfs/path.c             (element-&gt;encoding != NULL) ? str_crt_conv_from (element-&gt;encoding) : INVALID_CONV;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L496'>element</a>           496 lib/vfs/path.c         g_array_prepend_val (vpath-&gt;path, element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L507'>element</a>           507 lib/vfs/path.c         element = g_new0 (vfs_path_element_t, 1);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L508'>element</a>           508 lib/vfs/path.c         element-&gt;class = g_ptr_array_index (vfs__classes_list, 0);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L509'>element</a>           509 lib/vfs/path.c         element-&gt;path = vfs_translate_path_n (path);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L511'>element</a>           511 lib/vfs/path.c         element-&gt;encoding = vfs_get_encoding (path, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L512'>element</a>           512 lib/vfs/path.c         element-&gt;dir.converter =</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L513'>element</a>           513 lib/vfs/path.c             (element-&gt;encoding != NULL) ? str_crt_conv_from (element-&gt;encoding) : INVALID_CONV;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L515'>element</a>           515 lib/vfs/path.c         g_array_prepend_val (vpath-&gt;path, element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L532'>element</a>           532 lib/vfs/path.c vfs_path_tokens_add_class_info (const vfs_path_element_t * element, GString * ret_tokens,</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L535'>element</a>           535 lib/vfs/path.c     if (((element-&gt;class-&gt;flags &amp; VFSF_LOCAL) == 0 || ret_tokens-&gt;len &gt; 0)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L543'>element</a>           543 lib/vfs/path.c         g_string_append (ret_tokens, element-&gt;vfs_prefix);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L546'>element</a>           546 lib/vfs/path.c         url_str = vfs_path_build_url_params_str (element, TRUE);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L557'>element</a>           557 lib/vfs/path.c     if (element-&gt;encoding != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L562'>element</a>           562 lib/vfs/path.c         g_string_append (ret_tokens, element-&gt;encoding);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L600'>element</a>           600 lib/vfs/path.c     if ((flags &amp; VPF_STRIP_HOME) &amp;&amp; element_index == 0 &amp;&amp; (element-&gt;class-&gt;flags &amp; VFSF_LOCAL) != 0) \</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L647'>element</a>           647 lib/vfs/path.c         const vfs_path_element_t *element;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L650'>element</a>           650 lib/vfs/path.c         element = vfs_path_get_by_index (vpath, element_index);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L651'>element</a>           651 lib/vfs/path.c         if (element-&gt;vfs_prefix != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L657'>element</a>           657 lib/vfs/path.c             g_string_append (buffer, element-&gt;vfs_prefix);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L660'>element</a>           660 lib/vfs/path.c             url_str = vfs_path_build_url_params_str (element, !(flags &amp; VPF_STRIP_PASSWORD));</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L672'>element</a>           672 lib/vfs/path.c         if ((flags &amp; VPF_RECODE) == 0 &amp;&amp; vfs_path_element_need_cleanup_converter (element))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L680'>element</a>           680 lib/vfs/path.c                 g_string_append (buffer, element-&gt;encoding);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L682'>element</a>           682 lib/vfs/path.c             str_vfs_convert_from (element-&gt;dir.converter, element-&gt;path, recode_buffer);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L689'>element</a>           689 lib/vfs/path.c             vfs_append_from_path (element-&gt;path, is_relative);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L850'>element</a>           850 lib/vfs/path.c vfs_path_element_clone (const vfs_path_element_t * element)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L854'>element</a>           854 lib/vfs/path.c     new_element-&gt;user = g_strdup (element-&gt;user);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L855'>element</a>           855 lib/vfs/path.c     new_element-&gt;password = g_strdup (element-&gt;password);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L856'>element</a>           856 lib/vfs/path.c     new_element-&gt;host = g_strdup (element-&gt;host);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L857'>element</a>           857 lib/vfs/path.c     new_element-&gt;ipv6 = element-&gt;ipv6;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L858'>element</a>           858 lib/vfs/path.c     new_element-&gt;port = element-&gt;port;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L859'>element</a>           859 lib/vfs/path.c     new_element-&gt;path = g_strdup (element-&gt;path);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L860'>element</a>           860 lib/vfs/path.c     new_element-&gt;class = element-&gt;class;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L861'>element</a>           861 lib/vfs/path.c     new_element-&gt;vfs_prefix = g_strdup (element-&gt;vfs_prefix);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L863'>element</a>           863 lib/vfs/path.c     new_element-&gt;encoding = g_strdup (element-&gt;encoding);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L864'>element</a>           864 lib/vfs/path.c     if (vfs_path_element_need_cleanup_converter (element) &amp;&amp; new_element-&gt;encoding != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L867'>element</a>           867 lib/vfs/path.c         new_element-&gt;dir.converter = element-&gt;dir.converter;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L869'>element</a>           869 lib/vfs/path.c     new_element-&gt;dir.info = element-&gt;dir.info;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L883'>element</a>           883 lib/vfs/path.c vfs_path_element_free (vfs_path_element_t * element)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L885'>element</a>           885 lib/vfs/path.c     if (element == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L888'>element</a>           888 lib/vfs/path.c     g_free (element-&gt;user);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L889'>element</a>           889 lib/vfs/path.c     g_free (element-&gt;password);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L890'>element</a>           890 lib/vfs/path.c     g_free (element-&gt;host);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L891'>element</a>           891 lib/vfs/path.c     g_free (element-&gt;path);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L892'>element</a>           892 lib/vfs/path.c     g_free (element-&gt;vfs_prefix);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L895'>element</a>           895 lib/vfs/path.c     g_free (element-&gt;encoding);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L897'>element</a>           897 lib/vfs/path.c     if (vfs_path_element_need_cleanup_converter (element))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L898'>element</a>           898 lib/vfs/path.c         str_close_conv (element-&gt;dir.converter);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L901'>element</a>           901 lib/vfs/path.c     g_free (element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L980'>element</a>           980 lib/vfs/path.c     vfs_path_element_t *element;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L988'>element</a>           988 lib/vfs/path.c     element = (vfs_path_element_t *) vfs_path_get_by_index (vpath, element_index);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L990'>element</a>           990 lib/vfs/path.c     vfs_path_element_free (element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1036'>element</a>          1036 lib/vfs/path.c vfs_path_element_need_cleanup_converter (const vfs_path_element_t * element)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1038'>element</a>          1038 lib/vfs/path.c     return (element-&gt;dir.converter != str_cnv_from_term &amp;&amp; element-&gt;dir.converter != INVALID_CONV);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1107'>element</a>          1107 lib/vfs/path.c         const vfs_path_element_t *element;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1110'>element</a>          1110 lib/vfs/path.c         element = vfs_path_get_by_index (vpath, element_index);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1113'>element</a>          1113 lib/vfs/path.c         mc_config_set_string_raw (cpath, groupname, "path", element-&gt;path);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1114'>element</a>          1114 lib/vfs/path.c         mc_config_set_string_raw (cpath, groupname, "class-name", element-&gt;class-&gt;name);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1116'>element</a>          1116 lib/vfs/path.c         mc_config_set_string_raw (cpath, groupname, "encoding", element-&gt;encoding);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1118'>element</a>          1118 lib/vfs/path.c         mc_config_set_string_raw (cpath, groupname, "vfs_prefix", element-&gt;vfs_prefix);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1120'>element</a>          1120 lib/vfs/path.c         mc_config_set_string_raw (cpath, groupname, "user", element-&gt;user);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1121'>element</a>          1121 lib/vfs/path.c         mc_config_set_string_raw (cpath, groupname, "password", element-&gt;password);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1122'>element</a>          1122 lib/vfs/path.c         mc_config_set_string_raw (cpath, groupname, "host", element-&gt;host);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1123'>element</a>          1123 lib/vfs/path.c         if (element-&gt;port != 0)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1124'>element</a>          1124 lib/vfs/path.c             mc_config_set_int (cpath, groupname, "port", element-&gt;port);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1161'>element</a>          1161 lib/vfs/path.c         vfs_path_element_t *element;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1172'>element</a>          1172 lib/vfs/path.c         element = g_new0 (vfs_path_element_t, 1);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1175'>element</a>          1175 lib/vfs/path.c         element-&gt;class = vfs_get_class_by_name (cfg_value);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1176'>element</a>          1176 lib/vfs/path.c         if (element-&gt;class == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1178'>element</a>          1178 lib/vfs/path.c             g_free (element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1187'>element</a>          1187 lib/vfs/path.c         element-&gt;path = mc_config_get_string_raw (cpath, groupname, "path", NULL);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1190'>element</a>          1190 lib/vfs/path.c         element-&gt;encoding = mc_config_get_string_raw (cpath, groupname, "encoding", NULL);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1191'>element</a>          1191 lib/vfs/path.c         element-&gt;dir.converter =</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1192'>element</a>          1192 lib/vfs/path.c             (element-&gt;encoding != NULL) ? str_crt_conv_from (element-&gt;encoding) : INVALID_CONV;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1195'>element</a>          1195 lib/vfs/path.c         element-&gt;vfs_prefix = mc_config_get_string_raw (cpath, groupname, "vfs_prefix", NULL);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1197'>element</a>          1197 lib/vfs/path.c         element-&gt;user = mc_config_get_string_raw (cpath, groupname, "user", NULL);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1198'>element</a>          1198 lib/vfs/path.c         element-&gt;password = mc_config_get_string_raw (cpath, groupname, "password", NULL);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1199'>element</a>          1199 lib/vfs/path.c         element-&gt;host = mc_config_get_string_raw (cpath, groupname, "host", NULL);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1200'>element</a>          1200 lib/vfs/path.c         element-&gt;port = mc_config_get_int (cpath, groupname, "port", 0);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1202'>element</a>          1202 lib/vfs/path.c         vpath-&gt;path = g_array_append_val (vpath-&gt;path, element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1348'>element</a>          1348 lib/vfs/path.c         const vfs_path_element_t *element;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1351'>element</a>          1351 lib/vfs/path.c         element = vfs_path_get_by_index (vpath, element_index);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1353'>element</a>          1353 lib/vfs/path.c         for (prev_token = element-&gt;path; (token = strchr (prev_token, PATH_SEP)) != NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1414'>element</a>          1414 lib/vfs/path.c         const vfs_path_element_t *element;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1418'>element</a>          1418 lib/vfs/path.c         element = vfs_path_get_by_index (vpath, element_index);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1419'>element</a>          1419 lib/vfs/path.c         path_tokens = g_strsplit (element-&gt;path, PATH_SEP_STR, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1429'>element</a>          1429 lib/vfs/path.c                         vfs_path_tokens_add_class_info (element, ret_tokens, element_tokens);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1444'>element</a>          1444 lib/vfs/path.c         vfs_path_tokens_add_class_info (element, ret_tokens, element_tokens);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1490'>element</a>          1490 lib/vfs/path.c vfs_path_build_url_params_str (const vfs_path_element_t * element, gboolean keep_password)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1494'>element</a>          1494 lib/vfs/path.c     if (element == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1499'>element</a>          1499 lib/vfs/path.c     if (element-&gt;user != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1500'>element</a>          1500 lib/vfs/path.c         g_string_append (buffer, element-&gt;user);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1502'>element</a>          1502 lib/vfs/path.c     if (element-&gt;password != NULL &amp;&amp; keep_password)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1505'>element</a>          1505 lib/vfs/path.c         g_string_append (buffer, element-&gt;password);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1508'>element</a>          1508 lib/vfs/path.c     if (element-&gt;host != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1510'>element</a>          1510 lib/vfs/path.c         if ((element-&gt;user != NULL) || (element-&gt;password != NULL))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1512'>element</a>          1512 lib/vfs/path.c         if (element-&gt;ipv6)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1514'>element</a>          1514 lib/vfs/path.c         g_string_append (buffer, element-&gt;host);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1515'>element</a>          1515 lib/vfs/path.c         if (element-&gt;ipv6)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1519'>element</a>          1519 lib/vfs/path.c     if ((element-&gt;port) != 0 &amp;&amp; (element-&gt;host != NULL))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1522'>element</a>          1522 lib/vfs/path.c         g_string_append_printf (buffer, "%d", element-&gt;port);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1538'>element</a>          1538 lib/vfs/path.c vfs_path_element_build_pretty_path_str (const vfs_path_element_t * element)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1543'>element</a>          1543 lib/vfs/path.c     pretty_path = g_string_new (element-&gt;class-&gt;prefix);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1546'>element</a>          1546 lib/vfs/path.c     url_params = vfs_path_build_url_params_str (element, FALSE);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1550'>element</a>          1550 lib/vfs/path.c     if (!IS_PATH_SEP (*element-&gt;path))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1553'>element</a>          1553 lib/vfs/path.c     g_string_append (pretty_path, element-&gt;path);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L79'>element</a>            79 lib/vfs/path.h vfs_path_element_t *vfs_path_element_clone (const vfs_path_element_t * element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L80'>element</a>            80 lib/vfs/path.h void vfs_path_element_free (vfs_path_element_t * element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L85'>element</a>            85 lib/vfs/path.h gboolean vfs_path_element_need_cleanup_converter (const vfs_path_element_t * element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L92'>element</a>            92 lib/vfs/path.h char *vfs_path_build_url_params_str (const vfs_path_element_t * element, gboolean keep_password);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L93'>element</a>            93 lib/vfs/path.h char *vfs_path_element_build_pretty_path_str (const vfs_path_element_t * element);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L103'>element</a>           103 lib/vfs/path.h vfs_path_element_valid (const vfs_path_element_t * element)</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L105'>element</a>           105 lib/vfs/path.h     return (element != NULL &amp;&amp; element-&gt;class != NULL);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L113'>element</a>           113 lib/vfs/path.h     const vfs_path_element_t *element;</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L116'>element</a>           116 lib/vfs/path.h     element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L117'>element</a>           117 lib/vfs/path.h     return (element != NULL) ? element-&gt;path : NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L125'>element</a>           125 lib/vfs/path.h     const vfs_path_element_t *element;</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L128'>element</a>           128 lib/vfs/path.h     element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L129'>element</a>           129 lib/vfs/path.h     return (element != NULL) ? element-&gt;class : NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3275'>element</a>          3275 src/filemanager/panel.c         const vfs_path_element_t *element;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3277'>element</a>          3277 src/filemanager/panel.c         element = vfs_path_get_by_index (new_dir_vpath, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3278'>element</a>          3278 src/filemanager/panel.c         if (strcmp (element-&gt;path, "-") == 0)</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_recode.c.html#L142'>element</a>           142 tests/lib/vfs/path_recode.c     const vfs_path_element_t *element;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_recode.c.html#L149'>element</a>           149 tests/lib/vfs/path_recode.c     element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_recode.c.html#L154'>element</a>           154 tests/lib/vfs/path_recode.c     mctest_assert_str_eq (element-&gt;path, data-&gt;expected_element_path);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--relative_cd.c.html#L150'>element</a>           150 tests/lib/vfs/relative_cd.c         const vfs_path_element_t *element;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--relative_cd.c.html#L153'>element</a>           153 tests/lib/vfs/relative_cd.c         element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--relative_cd.c.html#L154'>element</a>           154 tests/lib/vfs/relative_cd.c         mctest_assert_str_eq (element-&gt;path, data-&gt;expected_element_path);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_path_string_convert.c.html#L301'>element</a>           301 tests/lib/vfs/vfs_path_string_convert.c     const vfs_path_element_t *element;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_path_string_convert.c.html#L308'>element</a>           308 tests/lib/vfs/vfs_path_string_convert.c     element = vfs_path_get_by_index (vpath, -1);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_path_string_convert.c.html#L311'>element</a>           311 tests/lib/vfs/vfs_path_string_convert.c     mctest_assert_str_eq (element-&gt;path, "");</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_path_string_convert.c.html#L312'>element</a>           312 tests/lib/vfs/vfs_path_string_convert.c     mctest_assert_not_null (element-&gt;encoding);</span>
+</pre>
+</body>
+</html>

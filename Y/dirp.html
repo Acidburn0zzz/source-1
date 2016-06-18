@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>dirp</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L467'>dirp</a>              467 lib/vfs/interface.c mc_readdir (DIR * dirp)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L490'>dirp</a>              490 lib/vfs/interface.c     if (!dirp)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L495'>dirp</a>              495 lib/vfs/interface.c     handle = *(int *) dirp;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L525'>dirp</a>              525 lib/vfs/interface.c mc_closedir (DIR * dirp)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L532'>dirp</a>              532 lib/vfs/interface.c     if (dirp == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L535'>dirp</a>              535 lib/vfs/interface.c     handle = *(int *) dirp;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L554'>dirp</a>              554 lib/vfs/interface.c     g_free (dirp);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L287'>dirp</a>              287 lib/vfs/vfs.h  struct dirent *mc_readdir (DIR * dirp);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L627'>dirp</a>              627 src/filemanager/dir.c     DIR *dirp;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L642'>dirp</a>              642 src/filemanager/dir.c     dirp = mc_opendir (vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L643'>dirp</a>              643 src/filemanager/dir.c     if (dirp == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L656'>dirp</a>              656 src/filemanager/dir.c     while ((dp = mc_readdir (dirp)) != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L671'>dirp</a>              671 src/filemanager/dir.c     mc_closedir (dirp);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L695'>dirp</a>              695 src/filemanager/dir.c     DIR *dirp;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L703'>dirp</a>              703 src/filemanager/dir.c     dirp = mc_opendir (vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L704'>dirp</a>              704 src/filemanager/dir.c     if (dirp == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L767'>dirp</a>              767 src/filemanager/dir.c     while ((dp = mc_readdir (dirp)) != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L776'>dirp</a>              776 src/filemanager/dir.c             mc_closedir (dirp);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L809'>dirp</a>              809 src/filemanager/dir.c     mc_closedir (dirp);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1259'>dirp</a>             1259 src/filemanager/find.c     static DIR *dirp = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1267'>dirp</a>             1267 src/filemanager/find.c         if (dirp != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1269'>dirp</a>             1269 src/filemanager/find.c             mc_closedir (dirp);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1270'>dirp</a>             1270 src/filemanager/find.c             dirp = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1281'>dirp</a>             1281 src/filemanager/find.c             if (dirp != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1283'>dirp</a>             1283 src/filemanager/find.c                 mc_closedir (dirp);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1284'>dirp</a>             1284 src/filemanager/find.c                 dirp = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1287'>dirp</a>             1287 src/filemanager/find.c             while (dirp == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1339'>dirp</a>             1339 src/filemanager/find.c                 dirp = mc_opendir (tmp_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1344'>dirp</a>             1344 src/filemanager/find.c             while ((dp = mc_readdir (dirp)) != NULL &amp;&amp; !str_is_valid_string (dp-&gt;d_name))</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1351'>dirp</a>             1351 src/filemanager/find.c             while ((dp = mc_readdir (dirp)) != NULL &amp;&amp; !str_is_valid_string (dp-&gt;d_name))</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1392'>dirp</a>             1392 src/filemanager/find.c         while ((dp = mc_readdir (dirp)) != NULL &amp;&amp; !str_is_valid_string (dp-&gt;d_name))</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L905'>dirp</a>              905 src/filemanager/mountlist.c         DIR *dirp;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L922'>dirp</a>              922 src/filemanager/mountlist.c         dirp = opendir (PATH_SEP_STR);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L923'>dirp</a>              923 src/filemanager/mountlist.c         if (dirp)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L927'>dirp</a>              927 src/filemanager/mountlist.c             while ((d = readdir (dirp)) != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L954'>dirp</a>              954 src/filemanager/mountlist.c             closedir (dirp);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1256'>dirp</a>             1256 src/filemanager/mountlist.c         DIR *dirp = opendir ("/dev/fs");</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1259'>dirp</a>             1259 src/filemanager/mountlist.c         if (!dirp)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1268'>dirp</a>             1268 src/filemanager/mountlist.c             if (readdir_r (dirp, &amp;entry, &amp;result) || result == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1289'>dirp</a>             1289 src/filemanager/mountlist.c         closedir (dirp);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L899'>dirp</a>              899 src/filemanager/treestore.c     DIR *dirp;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L914'>dirp</a>              914 src/filemanager/treestore.c     dirp = mc_opendir (vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L915'>dirp</a>              915 src/filemanager/treestore.c     if (dirp)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L919'>dirp</a>              919 src/filemanager/treestore.c         for (dp = mc_readdir (dirp); dp; dp = mc_readdir (dirp))</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L931'>dirp</a>              931 src/filemanager/treestore.c         mc_closedir (dirp);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L64'>dirp</a>               64 src/vfs/smbfs/helpers/include/proto.h SMB_STRUCT_DIRENT *sys_readdir (DIR * dirp);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L227'>dirp</a>              227 src/vfs/smbfs/helpers/lib/system.c sys_readdir (DIR * dirp)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L229'>dirp</a>              229 src/vfs/smbfs/helpers/lib/system.c     return readdir (dirp);</span>
+</pre>
+</body>
+</html>

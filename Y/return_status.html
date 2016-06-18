@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>return_status</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L392'>return_status</a>     392 src/filemanager/file.c     FileProgressStatus return_status;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L408'>return_status</a>     408 src/filemanager/file.c             return_status = FILE_SKIPALL;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L411'>return_status</a>     411 src/filemanager/file.c             return_status = file_error (_("Cannot read source link \"%s\"\n%s"), src_path);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L412'>return_status</a>     412 src/filemanager/file.c             if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L414'>return_status</a>     414 src/filemanager/file.c             if (return_status == FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L479'>return_status</a>     479 src/filemanager/file.c         return_status = FILE_CONT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L492'>return_status</a>     492 src/filemanager/file.c                 return_status = FILE_CONT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L497'>return_status</a>     497 src/filemanager/file.c         return_status = FILE_SKIPALL;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L500'>return_status</a>     500 src/filemanager/file.c         return_status = file_error (_("Cannot create target symlink \"%s\"\n%s"), dst_path);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L501'>return_status</a>     501 src/filemanager/file.c         if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L503'>return_status</a>     503 src/filemanager/file.c         if (return_status == FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L511'>return_status</a>     511 src/filemanager/file.c     return return_status;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L921'>return_status</a>     921 src/filemanager/file.c     FileProgressStatus return_status = FILE_CONT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L934'>return_status</a>     934 src/filemanager/file.c         return_status = FILE_ABORT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L944'>return_status</a>     944 src/filemanager/file.c             return_status = FILE_SKIPALL;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L947'>return_status</a>     947 src/filemanager/file.c             return_status = file_error (_("Cannot stat file \"%s\"\n%s"), s);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L948'>return_status</a>     948 src/filemanager/file.c             if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L952'>return_status</a>     952 src/filemanager/file.c         if (return_status != FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L960'>return_status</a>     960 src/filemanager/file.c             return_status = warn_same_file (_("\"%s\"\nand\n\"%s\"\nare the same file"), s, d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L968'>return_status</a>     968 src/filemanager/file.c             return_status = FILE_SKIP;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L974'>return_status</a>     974 src/filemanager/file.c             return_status = query_replace (ctx, d, &amp;src_stats, &amp;dst_stats);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L975'>return_status</a>     975 src/filemanager/file.c             if (return_status != FILE_CONT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L985'>return_status</a>     985 src/filemanager/file.c             return_status = make_symlink (ctx, s, d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L986'>return_status</a>     986 src/filemanager/file.c             if (return_status == FILE_CONT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L993'>return_status</a>     993 src/filemanager/file.c             return_status = progress_update_one (tctx, ctx, src_stats.st_size);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1008'>return_status</a>    1008 src/filemanager/file.c             return_status = FILE_SKIPALL;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1011'>return_status</a>    1011 src/filemanager/file.c             return_status = files_error (_("Cannot move file \"%s\" to \"%s\"\n%s"), s, d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1012'>return_status</a>    1012 src/filemanager/file.c             if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1014'>return_status</a>    1014 src/filemanager/file.c             if (return_status == FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1025'>return_status</a>    1025 src/filemanager/file.c     return_status = copy_file_file (tctx, ctx, s, d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1027'>return_status</a>    1027 src/filemanager/file.c     if (return_status != FILE_CONT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1035'>return_status</a>    1035 src/filemanager/file.c     return_status = check_progress_buttons (ctx);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1036'>return_status</a>    1036 src/filemanager/file.c     if (return_status != FILE_CONT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1043'>return_status</a>    1043 src/filemanager/file.c         return_status = file_error (_("Cannot remove file \"%s\"\n%s"), s);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1044'>return_status</a>    1044 src/filemanager/file.c         if (return_status == FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1046'>return_status</a>    1046 src/filemanager/file.c         if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1052'>return_status</a>    1052 src/filemanager/file.c         return_status = progress_update_one (tctx, ctx, src_stats.st_size);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1058'>return_status</a>    1058 src/filemanager/file.c     return return_status;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1087'>return_status</a>    1087 src/filemanager/file.c         int return_status;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1089'>return_status</a>    1089 src/filemanager/file.c         return_status = file_error (_("Cannot delete file \"%s\"\n%s"), vfs_path_as_str (vpath));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1090'>return_status</a>    1090 src/filemanager/file.c         if (return_status == FILE_ABORT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1091'>return_status</a>    1091 src/filemanager/file.c             return return_status;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1092'>return_status</a>    1092 src/filemanager/file.c         if (return_status == FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1094'>return_status</a>    1094 src/filemanager/file.c         if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1119'>return_status</a>    1119 src/filemanager/file.c     FileProgressStatus return_status = FILE_CONT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1125'>return_status</a>    1125 src/filemanager/file.c     while ((next = mc_readdir (reading)) &amp;&amp; return_status != FILE_ABORT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1141'>return_status</a>    1141 src/filemanager/file.c             return_status = recursive_erase (tctx, ctx, tmp_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1143'>return_status</a>    1143 src/filemanager/file.c             return_status = erase_file (tctx, ctx, tmp_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1148'>return_status</a>    1148 src/filemanager/file.c     if (return_status == FILE_ABORT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1162'>return_status</a>    1162 src/filemanager/file.c         return_status = file_error (_("Cannot remove directory \"%s\"\n%s"), s);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1163'>return_status</a>    1163 src/filemanager/file.c         if (return_status == FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1165'>return_status</a>    1165 src/filemanager/file.c         if (return_status == FILE_ABORT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1167'>return_status</a>    1167 src/filemanager/file.c         if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1172'>return_status</a>    1172 src/filemanager/file.c     return return_status;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1496'>return_status</a>    1496 src/filemanager/file.c     FileProgressStatus return_status, temp_status;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1505'>return_status</a>    1505 src/filemanager/file.c     return_status = FILE_RETRY;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1515'>return_status</a>    1515 src/filemanager/file.c         return_status = FILE_ABORT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1526'>return_status</a>    1526 src/filemanager/file.c                 return_status = FILE_SKIPALL;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1529'>return_status</a>    1529 src/filemanager/file.c                 return_status = file_error (_("Cannot overwrite directory \"%s\"\n%s"), dst_path);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1530'>return_status</a>    1530 src/filemanager/file.c                 if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1532'>return_status</a>    1532 src/filemanager/file.c                 if (return_status == FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1545'>return_status</a>    1545 src/filemanager/file.c             return_status = FILE_SKIPALL;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1548'>return_status</a>    1548 src/filemanager/file.c             return_status = file_error (_("Cannot stat source file \"%s\"\n%s"), src_path);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1549'>return_status</a>    1549 src/filemanager/file.c             if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1553'>return_status</a>    1553 src/filemanager/file.c         if (return_status != FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1562'>return_status</a>    1562 src/filemanager/file.c             return_status = warn_same_file (_("\"%s\"\nand\n\"%s\"\nare the same file"),</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1571'>return_status</a>    1571 src/filemanager/file.c             return_status = query_replace (ctx, dst_path, &amp;src_stat, &amp;dst_stat);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1572'>return_status</a>    1572 src/filemanager/file.c             if (return_status != FILE_CONT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1584'>return_status</a>    1584 src/filemanager/file.c             return_status = FILE_CONT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1590'>return_status</a>    1590 src/filemanager/file.c             return_status = make_symlink (ctx, src_path, dst_path);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1600'>return_status</a>    1600 src/filemanager/file.c                 return_status = file_error (_("Cannot create special file \"%s\"\n%s"), dst_path);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1601'>return_status</a>    1601 src/filemanager/file.c                 if (return_status == FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1603'>return_status</a>    1603 src/filemanager/file.c                 if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1619'>return_status</a>    1619 src/filemanager/file.c                     return_status = temp_status;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1634'>return_status</a>    1634 src/filemanager/file.c                     return_status = temp_status;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1639'>return_status</a>    1639 src/filemanager/file.c             return_status = FILE_CONT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1648'>return_status</a>    1648 src/filemanager/file.c         return_status = file_error (_("Cannot open source file \"%s\"\n%s"), src_path);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1649'>return_status</a>    1649 src/filemanager/file.c         if (return_status == FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1651'>return_status</a>    1651 src/filemanager/file.c         if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1653'>return_status</a>    1653 src/filemanager/file.c         if (return_status == FILE_SKIP)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1672'>return_status</a>    1672 src/filemanager/file.c             return_status = FILE_SKIPALL;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1675'>return_status</a>    1675 src/filemanager/file.c             return_status = file_error (_("Cannot fstat source file \"%s\"\n%s"), src_path);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1676'>return_status</a>    1676 src/filemanager/file.c             if (return_status == FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1678'>return_status</a>    1678 src/filemanager/file.c             if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1710'>return_status</a>    1710 src/filemanager/file.c                 return_status = FILE_SKIPALL;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1713'>return_status</a>    1713 src/filemanager/file.c                 return_status = file_error (_("Cannot create target file \"%s\"\n%s"), dst_path);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1714'>return_status</a>    1714 src/filemanager/file.c                 if (return_status == FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1716'>return_status</a>    1716 src/filemanager/file.c                 if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1732'>return_status</a>    1732 src/filemanager/file.c             return_status = FILE_SKIPALL;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1735'>return_status</a>    1735 src/filemanager/file.c             return_status = file_error (_("Cannot fstat target file \"%s\"\n%s"), dst_path);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1736'>return_status</a>    1736 src/filemanager/file.c             if (return_status == FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1738'>return_status</a>    1738 src/filemanager/file.c             if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1750'>return_status</a>    1750 src/filemanager/file.c             return_status = FILE_CONT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1754'>return_status</a>    1754 src/filemanager/file.c         return_status =</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1757'>return_status</a>    1757 src/filemanager/file.c         if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1760'>return_status</a>    1760 src/filemanager/file.c         if (ctx-&gt;skip_all || return_status == FILE_SKIP)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1763'>return_status</a>    1763 src/filemanager/file.c             return_status = FILE_CONT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1767'>return_status</a>    1767 src/filemanager/file.c         if (return_status == FILE_ABORT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1786'>return_status</a>    1786 src/filemanager/file.c     return_status = check_progress_buttons (ctx);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1789'>return_status</a>    1789 src/filemanager/file.c     if (return_status == FILE_CONT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1811'>return_status</a>    1811 src/filemanager/file.c                     return_status = file_error (_("Cannot read source file \"%s\"\n%s"), src_path);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1812'>return_status</a>    1812 src/filemanager/file.c                     if (return_status == FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1814'>return_status</a>    1814 src/filemanager/file.c                     if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1853'>return_status</a>    1853 src/filemanager/file.c                         return_status = FILE_SKIPALL;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1855'>return_status</a>    1855 src/filemanager/file.c                         return_status =</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1858'>return_status</a>    1858 src/filemanager/file.c                     if (return_status == FILE_SKIP)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1864'>return_status</a>    1864 src/filemanager/file.c                     if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1870'>return_status</a>    1870 src/filemanager/file.c                     if (return_status != FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1911'>return_status</a>    1911 src/filemanager/file.c             return_status = check_progress_buttons (ctx);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1913'>return_status</a>    1913 src/filemanager/file.c             if (return_status != FILE_CONT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1933'>return_status</a>    1933 src/filemanager/file.c             return_status = temp_status;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1946'>return_status</a>    1946 src/filemanager/file.c         return_status = temp_status;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1970'>return_status</a>    1970 src/filemanager/file.c                     return_status = FILE_CONT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1973'>return_status</a>    1973 src/filemanager/file.c                     return_status = FILE_CONT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1990'>return_status</a>    1990 src/filemanager/file.c                         return_status = FILE_CONT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1993'>return_status</a>    1993 src/filemanager/file.c                         return_status = FILE_CONT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2008'>return_status</a>    2008 src/filemanager/file.c     if (return_status == FILE_CONT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2009'>return_status</a>    2009 src/filemanager/file.c         return_status = progress_update_one (tctx, ctx, file_size);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2014'>return_status</a>    2014 src/filemanager/file.c     return return_status;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2032'>return_status</a>    2032 src/filemanager/file.c     FileProgressStatus return_status = FILE_CONT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2046'>return_status</a>    2046 src/filemanager/file.c             return_status = FILE_SKIPALL;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2049'>return_status</a>    2049 src/filemanager/file.c             return_status = file_error (_("Cannot stat source directory \"%s\"\n%s"), s);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2050'>return_status</a>    2050 src/filemanager/file.c             if (return_status == FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2052'>return_status</a>    2052 src/filemanager/file.c             if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2063'>return_status</a>    2063 src/filemanager/file.c         return_status = FILE_CONT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2080'>return_status</a>    2080 src/filemanager/file.c             return_status = FILE_SKIPALL;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2083'>return_status</a>    2083 src/filemanager/file.c             return_status = file_error (_("Source \"%s\" is not a directory\n%s"), s);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2084'>return_status</a>    2084 src/filemanager/file.c             if (return_status == FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2086'>return_status</a>    2086 src/filemanager/file.c             if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2096'>return_status</a>    2096 src/filemanager/file.c         return_status = FILE_SKIP;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2113'>return_status</a>    2113 src/filemanager/file.c             return_status = FILE_CONT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2130'>return_status</a>    2130 src/filemanager/file.c                 return_status = FILE_SKIPALL;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2133'>return_status</a>    2133 src/filemanager/file.c                 return_status = file_error (_("Destination \"%s\" must be a directory\n%s"), d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2134'>return_status</a>    2134 src/filemanager/file.c                 if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2136'>return_status</a>    2136 src/filemanager/file.c                 if (return_status == FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2162'>return_status</a>    2162 src/filemanager/file.c                 return_status = FILE_SKIPALL;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2165'>return_status</a>    2165 src/filemanager/file.c                 return_status = file_error (_("Cannot create target directory \"%s\"\n%s"), d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2166'>return_status</a>    2166 src/filemanager/file.c                 if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2169'>return_status</a>    2169 src/filemanager/file.c             if (return_status != FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2186'>return_status</a>    2186 src/filemanager/file.c                 return_status = FILE_SKIPALL;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2189'>return_status</a>    2189 src/filemanager/file.c                 return_status = file_error (_("Cannot chown target directory \"%s\"\n%s"), d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2190'>return_status</a>    2190 src/filemanager/file.c                 if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2193'>return_status</a>    2193 src/filemanager/file.c             if (return_status != FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2203'>return_status</a>    2203 src/filemanager/file.c     while ((next = mc_readdir (reading)) &amp;&amp; return_status != FILE_ABORT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2230'>return_status</a>    2230 src/filemanager/file.c             return_status =</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2239'>return_status</a>    2239 src/filemanager/file.c             return_status = copy_file_file (tctx, ctx, path, dest_file);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2245'>return_status</a>    2245 src/filemanager/file.c         if (do_delete &amp;&amp; return_status == FILE_CONT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2256'>return_status</a>    2256 src/filemanager/file.c                 return_status = erase_dir_iff_empty (ctx, tmp_vpath, tctx-&gt;progress_count);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2258'>return_status</a>    2258 src/filemanager/file.c                 return_status = erase_file (tctx, ctx, tmp_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2287'>return_status</a>    2287 src/filemanager/file.c     return return_status;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2299'>return_status</a>    2299 src/filemanager/file.c     FileProgressStatus return_status = FILE_CONT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2312'>return_status</a>    2312 src/filemanager/file.c         return_status = FILE_ABORT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2323'>return_status</a>    2323 src/filemanager/file.c         return_status = warn_same_file (_("\"%s\"\nand\n\"%s\"\nare the same directory"), s, d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2348'>return_status</a>    2348 src/filemanager/file.c             return_status = copy_dir_dir (tctx, ctx, s, d, FALSE, TRUE, TRUE, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2350'>return_status</a>    2350 src/filemanager/file.c             if (return_status != FILE_CONT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2355'>return_status</a>    2355 src/filemanager/file.c             return_status = FILE_SKIPALL;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2359'>return_status</a>    2359 src/filemanager/file.c                 return_status = file_error (_("Cannot overwrite directory \"%s\"\n%s"), d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2361'>return_status</a>    2361 src/filemanager/file.c                 return_status = file_error (_("Cannot overwrite file \"%s\"\n%s"), d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2362'>return_status</a>    2362 src/filemanager/file.c             if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2364'>return_status</a>    2364 src/filemanager/file.c             if (return_status == FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2374'>return_status</a>    2374 src/filemanager/file.c         return_status = FILE_CONT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2382'>return_status</a>    2382 src/filemanager/file.c             return_status = files_error (_("Cannot move directory \"%s\" to \"%s\"\n%s"), s, d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2383'>return_status</a>    2383 src/filemanager/file.c             if (return_status == FILE_SKIPALL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2385'>return_status</a>    2385 src/filemanager/file.c             if (return_status == FILE_RETRY)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2391'>return_status</a>    2391 src/filemanager/file.c     return_status = copy_dir_dir (tctx, ctx, s, d, FALSE, FALSE, TRUE, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2393'>return_status</a>    2393 src/filemanager/file.c     if (return_status != FILE_CONT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2400'>return_status</a>    2400 src/filemanager/file.c     return_status = check_progress_buttons (ctx);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2401'>return_status</a>    2401 src/filemanager/file.c     if (return_status != FILE_CONT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2410'>return_status</a>    2410 src/filemanager/file.c         while (erase_list != NULL &amp;&amp; return_status != FILE_ABORT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2415'>return_status</a>    2415 src/filemanager/file.c                 return_status = erase_dir_iff_empty (ctx, lp-&gt;src_vpath, tctx-&gt;progress_count);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2417'>return_status</a>    2417 src/filemanager/file.c                 return_status = erase_file (tctx, ctx, lp-&gt;src_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2433'>return_status</a>    2433 src/filemanager/file.c     return return_status;</span>
+</pre>
+</body>
+</html>

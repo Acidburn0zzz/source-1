@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>error_pipe</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L120'>error_pipe</a>        120 lib/utilunix.c static int error_pipe[2];       /* File descriptors of error pipe */</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L718'>error_pipe</a>        718 lib/utilunix.c     if (pipe (error_pipe) &lt; 0)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L723'>error_pipe</a>        723 lib/utilunix.c     if (old_error &lt; 0 || close (STDERR_FILENO) != 0 || dup (error_pipe[1]) != STDERR_FILENO)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L727'>error_pipe</a>        727 lib/utilunix.c         close (error_pipe[0]);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L728'>error_pipe</a>        728 lib/utilunix.c         error_pipe[0] = -1;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L741'>error_pipe</a>        741 lib/utilunix.c         fd_flags = fcntl (error_pipe[0], F_GETFL, NULL);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L745'>error_pipe</a>        745 lib/utilunix.c             if (fcntl (error_pipe[0], F_SETFL, fd_flags) == -1)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L752'>error_pipe</a>        752 lib/utilunix.c     close (error_pipe[1]);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L753'>error_pipe</a>        753 lib/utilunix.c     error_pipe[1] = -1;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L774'>error_pipe</a>        774 lib/utilunix.c     if (error_pipe[0] == -1)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L792'>error_pipe</a>        792 lib/utilunix.c         len = read (error_pipe[0], msg, sizeof (msg) - 1);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L796'>error_pipe</a>        796 lib/utilunix.c         close (error_pipe[0]);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L797'>error_pipe</a>        797 lib/utilunix.c         error_pipe[0] = -1;</span>
+</pre>
+</body>
+</html>

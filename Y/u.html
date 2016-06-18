@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>u</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L73'>u</a>                  73 lib/widget/quick.c     in = input_new (y, x, input_colors, 8, qw-&gt;u.input.text, qw-&gt;u.input.histname,</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L74'>u</a>                  74 lib/widget/quick.c                     qw-&gt;u.input.completion_flags);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L76'>u</a>                  76 lib/widget/quick.c     in-&gt;is_password = qw-&gt;u.input.is_passwd;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L77'>u</a>                  77 lib/widget/quick.c     in-&gt;strip_password = qw-&gt;u.input.strip_passwd;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L97'>u</a>                  97 lib/widget/quick.c     switch (quick_widget-&gt;u.input.label_location)</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L100'>u</a>                 100 lib/widget/quick.c         label.widget = WIDGET (label_new (*y, x, I18N (quick_widget-&gt;u.input.label_text)));</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L112'>u</a>                 112 lib/widget/quick.c         label.widget = WIDGET (label_new (*y, x, I18N (quick_widget-&gt;u.input.label_text)));</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L129'>u</a>                 129 lib/widget/quick.c                     (*y, x + in.widget-&gt;cols + 1, I18N (quick_widget-&gt;u.input.label_text)));</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L140'>u</a>                 140 lib/widget/quick.c         label.widget = WIDGET (label_new (++(*y), x, I18N (quick_widget-&gt;u.input.label_text)));</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L153'>u</a>                 153 lib/widget/quick.c     label.quick_widget-&gt;u.label.input = in.quick_widget;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L154'>u</a>                 154 lib/widget/quick.c     in.quick_widget-&gt;u.input.label = label.quick_widget;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L207'>u</a>                 207 lib/widget/quick.c                         (++y, x, *quick_widget-&gt;u.checkbox.state,</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L208'>u</a>                 208 lib/widget/quick.c                          I18N (quick_widget-&gt;u.checkbox.text)));</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L221'>u</a>                 221 lib/widget/quick.c             item.widget = WIDGET (button_new (++y, x, quick_widget-&gt;u.button.action,</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L222'>u</a>                 222 lib/widget/quick.c                                               quick_widget-&gt;u.button.action == B_ENTER ?</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L224'>u</a>                 224 lib/widget/quick.c                                               I18N (quick_widget-&gt;u.button.text),</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L225'>u</a>                 225 lib/widget/quick.c                                               quick_widget-&gt;u.button.callback));</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L237'>u</a>                 237 lib/widget/quick.c             *quick_widget-&gt;u.input.result = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L239'>u</a>                 239 lib/widget/quick.c             if (quick_widget-&gt;u.input.label_location != input_label_none)</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L242'>u</a>                 242 lib/widget/quick.c                 input_labels = g_list_prepend (input_labels, quick_widget-&gt;u.input.label);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L259'>u</a>                 259 lib/widget/quick.c             item.widget = WIDGET (label_new (++y, x, I18N (quick_widget-&gt;u.label.text)));</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L277'>u</a>                 277 lib/widget/quick.c                 items = g_new (char *, quick_widget-&gt;u.radio.count + 1);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L278'>u</a>                 278 lib/widget/quick.c                 for (i = 0; i &lt; (size_t) quick_widget-&gt;u.radio.count; i++)</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L279'>u</a>                 279 lib/widget/quick.c                     items[i] = g_strdup (_(quick_widget-&gt;u.radio.items[i]));</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L282'>u</a>                 282 lib/widget/quick.c                 r = radio_new (++y, x, quick_widget-&gt;u.radio.count, (const char **) items);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L283'>u</a>                 283 lib/widget/quick.c                 r-&gt;pos = r-&gt;sel = *quick_widget-&gt;u.radio.value;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L299'>u</a>                 299 lib/widget/quick.c             I18N (quick_widget-&gt;u.groupbox.title);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L300'>u</a>                 300 lib/widget/quick.c             len = str_term_width1 (quick_widget-&gt;u.groupbox.title);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L301'>u</a>                 301 lib/widget/quick.c             g = groupbox_new (++y, x, 1, len + 4, quick_widget-&gt;u.groupbox.title);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L322'>u</a>                 322 lib/widget/quick.c             if (quick_widget-&gt;u.separator.line)</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L350'>u</a>                 350 lib/widget/quick.c             if (quick_widget-&gt;u.separator.space)</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L354'>u</a>                 354 lib/widget/quick.c                 if (quick_widget-&gt;u.separator.line)</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L365'>u</a>                 365 lib/widget/quick.c                 item.widget = WIDGET (button_new (y, x++, quick_widget-&gt;u.button.action,</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L366'>u</a>                 366 lib/widget/quick.c                                                   quick_widget-&gt;u.button.action == B_ENTER ?</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L368'>u</a>                 368 lib/widget/quick.c                                                   I18N (quick_widget-&gt;u.button.text),</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L369'>u</a>                 369 lib/widget/quick.c                                                   quick_widget-&gt;u.button.callback));</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L436'>u</a>                 436 lib/widget/quick.c                 quick_widget_t *input = item-&gt;quick_widget-&gt;u.label.input;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L438'>u</a>                 438 lib/widget/quick.c                 if (input != NULL &amp;&amp; input-&gt;u.input.label_location == input_label_right)</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L476'>u</a>                 476 lib/widget/quick.c                 switch (item-&gt;quick_widget-&gt;u.input.label_location)</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L593'>u</a>                 593 lib/widget/quick.c                 *item-&gt;quick_widget-&gt;u.checkbox.state = CHECK (item-&gt;widget)-&gt;state &amp; C_BOOL;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L597'>u</a>                 597 lib/widget/quick.c                 if ((quick_widget-&gt;u.input.completion_flags &amp; INPUT_COMPLETE_CD) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L598'>u</a>                 598 lib/widget/quick.c                     *item-&gt;quick_widget-&gt;u.input.result =</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L601'>u</a>                 601 lib/widget/quick.c                     *item-&gt;quick_widget-&gt;u.input.result = g_strdup (INPUT (item-&gt;widget)-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L605'>u</a>                 605 lib/widget/quick.c                 *item-&gt;quick_widget-&gt;u.radio.value = RADIO (item-&gt;widget)-&gt;sel;</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L18'>u</a>                  18 lib/widget/quick.h     .u = {                                                                      \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L32'>u</a>                  32 lib/widget/quick.h     .u = {                                                                      \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L47'>u</a>                  47 lib/widget/quick.h     .u = {                                                                      \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L68'>u</a>                  68 lib/widget/quick.h     .u = {                                                                      \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L89'>u</a>                  89 lib/widget/quick.h     .u = {                                                                      \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L103'>u</a>                 103 lib/widget/quick.h     .u = {                                                                      \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L118'>u</a>                 118 lib/widget/quick.h     .u = {                                                                      \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L131'>u</a>                 131 lib/widget/quick.h     .u = {                                                                      \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L146'>u</a>                 146 lib/widget/quick.h     .u = {                                                                      \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L160'>u</a>                 160 lib/widget/quick.h     .u = {                                                                      \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L175'>u</a>                 175 lib/widget/quick.h     .u = {                                                                      \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L190'>u</a>                 190 lib/widget/quick.h     .u = {                                                                      \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L205'>u</a>                 205 lib/widget/quick.h     .u = {                                                                      \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L224'>u</a>                 224 lib/widget/quick.h     .u = {                                                                      \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L328'>u</a>                 328 lib/widget/quick.h     } u;</span>
+<span class='curline'><a href='../S/src--diffviewer--internal.h.html#L74'>u</a>                  74 src/diffviewer/internal.h     } u;</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L161'>u</a>                 161 src/diffviewer/search.c         if (p-&gt;u.len == 0)</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L164'>u</a>                 164 src/diffviewer/search.c         if (mc_search_run (dview-&gt;search.handle, p-&gt;p, 0, p-&gt;u.len, NULL))</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L196'>u</a>                 196 src/diffviewer/search.c         if (p-&gt;u.len == 0)</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L199'>u</a>                 199 src/diffviewer/search.c         if (mc_search_run (dview-&gt;search.handle, p-&gt;p, 0, p-&gt;u.len, NULL))</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1691'>u</a>                1691 src/diffviewer/ydiff.c         p.u.off = off;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1698'>u</a>                1698 src/diffviewer/ydiff.c             p.u.len = sz;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1714'>u</a>                1714 src/diffviewer/ydiff.c             new_size = p-&gt;u.len + sz;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1716'>u</a>                1716 src/diffviewer/ydiff.c             memcpy (q + p-&gt;u.len, str, sz);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1719'>u</a>                1719 src/diffviewer/ydiff.c         p-&gt;u.len += sz;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1818'>u</a>                1818 src/diffviewer/ydiff.c                             hdiff_scan (p-&gt;p, p-&gt;u.len, q-&gt;p, q-&gt;u.len, HDIFF_MINCTX, h,</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2607'>u</a>                2607 src/diffviewer/ydiff.c                     cvt_mgeta (p-&gt;p, p-&gt;u.len, buf, k, skip, tab_size, show_cr,</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2665'>u</a>                2665 src/diffviewer/ydiff.c                 cvt_mget (p-&gt;p, p-&gt;u.len, buf, k, skip, tab_size, show_cr);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2668'>u</a>                2668 src/diffviewer/ydiff.c                 cvt_fget (f, p-&gt;u.off, buf, width, skip, tab_size, show_cr);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L759'>u</a>                 759 src/filemanager/achown.c do_chown (uid_t u, gid_t g)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L761'>u</a>                 761 src/filemanager/achown.c     chown (current_panel-&gt;dir.list[current_file].fname, u, g);</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L297'>u</a>                 297 src/filemanager/chown.c do_chown (uid_t u, gid_t g)</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L302'>u</a>                 302 src/filemanager/chown.c     if (mc_chown (vpath, u, g) == -1)</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L313'>u</a>                 313 src/filemanager/chown.c apply_chowns (uid_t u, gid_t g)</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L317'>u</a>                 317 src/filemanager/chown.c     do_chown (u, g);</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L322'>u</a>                 322 src/filemanager/chown.c         do_chown (u, g);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L540'>u</a>                 540 src/vfs/cpio/cpio.c     } u;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L547'>u</a>                 547 src/vfs/cpio/cpio.c     len = mc_read (arch-&gt;fd, (char *) &amp;u.buf, HEAD_LENGTH);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L555'>u</a>                 555 src/vfs/cpio/cpio.c             u.shorts[i] = GUINT16_SWAP_LE_BE_CONSTANT (u.shorts[i]);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L558'>u</a>                 558 src/vfs/cpio/cpio.c     if (u.buf.c_magic != 070707 || u.buf.c_namesize == 0 || u.buf.c_namesize &gt; MC_MAXPATHLEN)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L563'>u</a>                 563 src/vfs/cpio/cpio.c     name = g_malloc (u.buf.c_namesize);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L564'>u</a>                 564 src/vfs/cpio/cpio.c     len = mc_read (arch-&gt;fd, name, u.buf.c_namesize);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L565'>u</a>                 565 src/vfs/cpio/cpio.c     if (len &lt; u.buf.c_namesize)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L570'>u</a>                 570 src/vfs/cpio/cpio.c     name[u.buf.c_namesize - 1] = '\0';</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L580'>u</a>                 580 src/vfs/cpio/cpio.c     st.st_dev = u.buf.c_dev;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L581'>u</a>                 581 src/vfs/cpio/cpio.c     st.st_ino = u.buf.c_ino;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L582'>u</a>                 582 src/vfs/cpio/cpio.c     st.st_mode = u.buf.c_mode;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L583'>u</a>                 583 src/vfs/cpio/cpio.c     st.st_nlink = u.buf.c_nlink;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L584'>u</a>                 584 src/vfs/cpio/cpio.c     st.st_uid = u.buf.c_uid;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L585'>u</a>                 585 src/vfs/cpio/cpio.c     st.st_gid = u.buf.c_gid;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L586'>u</a>                 586 src/vfs/cpio/cpio.c     st.st_rdev = u.buf.c_rdev;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L587'>u</a>                 587 src/vfs/cpio/cpio.c     st.st_size = (u.buf.c_filesizes[0] &lt;&lt; 16) | u.buf.c_filesizes[1];</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L588'>u</a>                 588 src/vfs/cpio/cpio.c     st.st_atime = st.st_mtime = st.st_ctime = (u.buf.c_mtimes[0] &lt;&lt; 16) | u.buf.c_mtimes[1];</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L607'>u</a>                 607 src/vfs/cpio/cpio.c     } u;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L611'>u</a>                 611 src/vfs/cpio/cpio.c     if (mc_read (arch-&gt;fd, u.buf, HEAD_LENGTH) != HEAD_LENGTH)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L614'>u</a>                 614 src/vfs/cpio/cpio.c     u.buf[HEAD_LENGTH] = 0;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L616'>u</a>                 616 src/vfs/cpio/cpio.c     if (sscanf (u.buf, "070707%6lo%6lo%6lo%6lo%6lo%6lo%6lo%11lo%6lo%11lo",</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L647'>u</a>                 647 src/vfs/cpio/cpio.c     u.st.st_dev = hd.c_dev;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L648'>u</a>                 648 src/vfs/cpio/cpio.c     u.st.st_ino = hd.c_ino;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L649'>u</a>                 649 src/vfs/cpio/cpio.c     u.st.st_mode = hd.c_mode;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L650'>u</a>                 650 src/vfs/cpio/cpio.c     u.st.st_nlink = hd.c_nlink;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L651'>u</a>                 651 src/vfs/cpio/cpio.c     u.st.st_uid = hd.c_uid;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L652'>u</a>                 652 src/vfs/cpio/cpio.c     u.st.st_gid = hd.c_gid;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L653'>u</a>                 653 src/vfs/cpio/cpio.c     u.st.st_rdev = hd.c_rdev;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L654'>u</a>                 654 src/vfs/cpio/cpio.c     u.st.st_size = hd.c_filesize;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L655'>u</a>                 655 src/vfs/cpio/cpio.c     u.st.st_atime = u.st.st_mtime = u.st.st_ctime = hd.c_mtime;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L657'>u</a>                 657 src/vfs/cpio/cpio.c     return cpio_create_entry (me, super, &amp;u.st, name);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L674'>u</a>                 674 src/vfs/cpio/cpio.c     } u;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L678'>u</a>                 678 src/vfs/cpio/cpio.c     if (mc_read (arch-&gt;fd, u.buf, HEAD_LENGTH) != HEAD_LENGTH)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L682'>u</a>                 682 src/vfs/cpio/cpio.c     u.buf[HEAD_LENGTH] = '\0';</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L684'>u</a>                 684 src/vfs/cpio/cpio.c     if (sscanf (u.buf, "%6ho%8lx%8lx%8lx%8lx%8lx%8lx%8lx%8lx%8lx%8lx%8lx%8lx%8lx",</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L723'>u</a>                 723 src/vfs/cpio/cpio.c     u.st.st_dev = makedev (hd.c_dev, hd.c_devmin);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L724'>u</a>                 724 src/vfs/cpio/cpio.c     u.st.st_ino = hd.c_ino;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L725'>u</a>                 725 src/vfs/cpio/cpio.c     u.st.st_mode = hd.c_mode;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L726'>u</a>                 726 src/vfs/cpio/cpio.c     u.st.st_nlink = hd.c_nlink;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L727'>u</a>                 727 src/vfs/cpio/cpio.c     u.st.st_uid = hd.c_uid;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L728'>u</a>                 728 src/vfs/cpio/cpio.c     u.st.st_gid = hd.c_gid;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L729'>u</a>                 729 src/vfs/cpio/cpio.c     u.st.st_rdev = makedev (hd.c_rdev, hd.c_rdevmin);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L730'>u</a>                 730 src/vfs/cpio/cpio.c     u.st.st_size = hd.c_filesize;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L731'>u</a>                 731 src/vfs/cpio/cpio.c     u.st.st_atime = u.st.st_mtime = u.st.st_ctime = hd.c_mtime;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L733'>u</a>                 733 src/vfs/cpio/cpio.c     return cpio_create_entry (me, super, &amp;u.st, name);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1121'>u</a>                1121 src/vfs/fish/fish.c             v = vfs_s_select_on_two (FH_SUPER-&gt;u.fish.sockr, 0);</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>numsys</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L995'>numsys</a>            995 src/filemanager/mountlist.c         int numsys, counter;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L999'>numsys</a>            999 src/filemanager/mountlist.c         numsys = getfsstat (NULL, 0L, MNT_NOWAIT);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1000'>numsys</a>           1000 src/filemanager/mountlist.c         if (numsys &lt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1002'>numsys</a>           1002 src/filemanager/mountlist.c         if (SIZE_MAX / sizeof (*stats) &lt;= numsys)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1008'>numsys</a>           1008 src/filemanager/mountlist.c         bufsize = (1 + numsys) * sizeof (*stats);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1010'>numsys</a>           1010 src/filemanager/mountlist.c         numsys = getfsstat (stats, bufsize, MNT_NOWAIT);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1012'>numsys</a>           1012 src/filemanager/mountlist.c         if (numsys &lt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1018'>numsys</a>           1018 src/filemanager/mountlist.c         for (counter = 0; counter &lt; numsys; counter++)</span>
+</pre>
+</body>
+</html>

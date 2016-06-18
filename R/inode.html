@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>inode</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L931'>inode</a>             931 lib/vfs/direntry.c vfs_s_new_entry (struct vfs_class *me, const char *name, struct vfs_s_inode *inode)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L938'>inode</a>             938 lib/vfs/direntry.c     entry-&gt;ino = inode;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1010'>inode</a>            1010 lib/vfs/direntry.c     struct vfs_s_inode *inode;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1014'>inode</a>            1014 lib/vfs/direntry.c     inode = vfs_s_new_inode (me, parent-&gt;super, st);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1016'>inode</a>            1016 lib/vfs/direntry.c     return vfs_s_new_entry (me, name, inode);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L166'>inode</a>             166 lib/vfs/xdirentry.h                                      struct vfs_s_inode *inode);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L133'>inode</a>             133 src/vfs/cpio/cpio.c     struct vfs_s_inode *inode;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L370'>inode</a>             370 src/vfs/cpio/cpio.c     struct vfs_s_inode *inode = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L411'>inode</a>             411 src/vfs/cpio/cpio.c             inode = ((defer_inode *) l-&gt;data)-&gt;inode;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L412'>inode</a>             412 src/vfs/cpio/cpio.c             if (inode-&gt;st.st_size != 0 &amp;&amp; st-&gt;st_size != 0 &amp;&amp; (inode-&gt;st.st_size != st-&gt;st_size))</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L417'>inode</a>             417 src/vfs/cpio/cpio.c                 inode = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L419'>inode</a>             419 src/vfs/cpio/cpio.c             else if (inode-&gt;st.st_size == 0)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L420'>inode</a>             420 src/vfs/cpio/cpio.c                 inode-&gt;st.st_size = st-&gt;st_size;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L478'>inode</a>             478 src/vfs/cpio/cpio.c             if (inode == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L480'>inode</a>             480 src/vfs/cpio/cpio.c                 inode = vfs_s_new_inode (me, super, st);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L489'>inode</a>             489 src/vfs/cpio/cpio.c                     i-&gt;inode = inode;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L496'>inode</a>             496 src/vfs/cpio/cpio.c                 inode-&gt;data_offset = CPIO_POS (super);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L498'>inode</a>             498 src/vfs/cpio/cpio.c             entry = vfs_s_new_entry (me, tn, inode);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L508'>inode</a>             508 src/vfs/cpio/cpio.c             if (inode != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L512'>inode</a>             512 src/vfs/cpio/cpio.c                 inode-&gt;linkname = g_malloc (st-&gt;st_size + 1);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L514'>inode</a>             514 src/vfs/cpio/cpio.c                 if (mc_read (arch-&gt;fd, inode-&gt;linkname, st-&gt;st_size) &lt; st-&gt;st_size)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L516'>inode</a>             516 src/vfs/cpio/cpio.c                     inode-&gt;linkname[0] = '\0';</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L520'>inode</a>             520 src/vfs/cpio/cpio.c                 inode-&gt;linkname[st-&gt;st_size] = '\0';    /* Linkname stored without terminating \0 !!! */</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L83'>inode</a>              83 src/vfs/extfs/extfs.c     ino_t inode;                /* This is inode # */</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L103'>inode</a>             103 src/vfs/extfs/extfs.c     struct inode *inode;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L160'>inode</a>             160 src/vfs/extfs/extfs.c     struct inode *inode = ent-&gt;inode, *parent;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L162'>inode</a>             162 src/vfs/extfs/extfs.c     parent = (parentry != NULL) ? parentry-&gt;inode : NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L164'>inode</a>             164 src/vfs/extfs/extfs.c     entry-&gt;inode = inode;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L166'>inode</a>             166 src/vfs/extfs/extfs.c     inode-&gt;local_filename = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L167'>inode</a>             167 src/vfs/extfs/extfs.c     inode-&gt;first_in_subdir = entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L168'>inode</a>             168 src/vfs/extfs/extfs.c     inode-&gt;nlink++;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L173'>inode</a>             173 src/vfs/extfs/extfs.c     inode-&gt;last_in_subdir = entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L177'>inode</a>             177 src/vfs/extfs/extfs.c         entry-&gt;inode = parent;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L183'>inode</a>             183 src/vfs/extfs/extfs.c         entry-&gt;inode = inode;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L185'>inode</a>             185 src/vfs/extfs/extfs.c         inode-&gt;nlink++;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L196'>inode</a>             196 src/vfs/extfs/extfs.c     struct inode *inode, *parent;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L199'>inode</a>             199 src/vfs/extfs/extfs.c     parent = (parentry != NULL) ? parentry-&gt;inode : NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L210'>inode</a>             210 src/vfs/extfs/extfs.c     inode = g_new (struct inode, 1);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L211'>inode</a>             211 src/vfs/extfs/extfs.c     entry-&gt;inode = inode;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L212'>inode</a>             212 src/vfs/extfs/extfs.c     inode-&gt;local_filename = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L213'>inode</a>             213 src/vfs/extfs/extfs.c     inode-&gt;linkname = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L214'>inode</a>             214 src/vfs/extfs/extfs.c     inode-&gt;last_in_subdir = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L215'>inode</a>             215 src/vfs/extfs/extfs.c     inode-&gt;inode = (archive-&gt;inode_counter)++;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L216'>inode</a>             216 src/vfs/extfs/extfs.c     inode-&gt;dev = archive-&gt;rdev;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L217'>inode</a>             217 src/vfs/extfs/extfs.c     inode-&gt;archive = archive;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L220'>inode</a>             220 src/vfs/extfs/extfs.c     inode-&gt;mode = mode &amp; ~myumask;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L221'>inode</a>             221 src/vfs/extfs/extfs.c     mode = inode-&gt;mode;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L222'>inode</a>             222 src/vfs/extfs/extfs.c     inode-&gt;rdev = 0;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L223'>inode</a>             223 src/vfs/extfs/extfs.c     inode-&gt;uid = getuid ();</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L224'>inode</a>             224 src/vfs/extfs/extfs.c     inode-&gt;gid = getgid ();</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L225'>inode</a>             225 src/vfs/extfs/extfs.c     inode-&gt;size = 0;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L226'>inode</a>             226 src/vfs/extfs/extfs.c     inode-&gt;mtime = time (NULL);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L227'>inode</a>             227 src/vfs/extfs/extfs.c     inode-&gt;atime = inode-&gt;mtime;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L228'>inode</a>             228 src/vfs/extfs/extfs.c     inode-&gt;ctime = inode-&gt;mtime;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L229'>inode</a>             229 src/vfs/extfs/extfs.c     inode-&gt;nlink = 1;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L250'>inode</a>             250 src/vfs/extfs/extfs.c         dir = dir-&gt;inode-&gt;archive-&gt;root_entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L278'>inode</a>             278 src/vfs/extfs/extfs.c                 if (!S_ISDIR (pent-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L286'>inode</a>             286 src/vfs/extfs/extfs.c                 for (pent = pent-&gt;inode-&gt;first_in_subdir; pent != NULL; pent = pent-&gt;next_in_dir)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L294'>inode</a>             294 src/vfs/extfs/extfs.c                             notadir = !S_ISDIR (pent-&gt;inode-&gt;mode);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L304'>inode</a>             304 src/vfs/extfs/extfs.c                     pent = extfs_generate_entry (dir-&gt;inode-&gt;archive, p, pdir, S_IFDIR | 0777);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L306'>inode</a>             306 src/vfs/extfs/extfs.c                     pent = extfs_generate_entry (dir-&gt;inode-&gt;archive, p, pdir, S_IFREG | 0666);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L474'>inode</a>             474 src/vfs/extfs/extfs.c     root_entry-&gt;inode-&gt;uid = mystat.st_uid;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L475'>inode</a>             475 src/vfs/extfs/extfs.c     root_entry-&gt;inode-&gt;gid = mystat.st_gid;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L476'>inode</a>             476 src/vfs/extfs/extfs.c     root_entry-&gt;inode-&gt;atime = mystat.st_atime;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L477'>inode</a>             477 src/vfs/extfs/extfs.c     root_entry-&gt;inode-&gt;ctime = mystat.st_ctime;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L478'>inode</a>             478 src/vfs/extfs/extfs.c     root_entry-&gt;inode-&gt;mtime = mystat.st_mtime;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L522'>inode</a>             522 src/vfs/extfs/extfs.c             struct inode *inode;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L558'>inode</a>             558 src/vfs/extfs/extfs.c                 if (pent-&gt;inode-&gt;last_in_subdir)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L560'>inode</a>             560 src/vfs/extfs/extfs.c                     pent-&gt;inode-&gt;last_in_subdir-&gt;next_in_dir = entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L561'>inode</a>             561 src/vfs/extfs/extfs.c                     pent-&gt;inode-&gt;last_in_subdir = entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L576'>inode</a>             576 src/vfs/extfs/extfs.c                     entry-&gt;inode = pent-&gt;inode;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L577'>inode</a>             577 src/vfs/extfs/extfs.c                     pent-&gt;inode-&gt;nlink++;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L581'>inode</a>             581 src/vfs/extfs/extfs.c                     inode = g_new (struct inode, 1);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L582'>inode</a>             582 src/vfs/extfs/extfs.c                     entry-&gt;inode = inode;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L583'>inode</a>             583 src/vfs/extfs/extfs.c                     inode-&gt;local_filename = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L584'>inode</a>             584 src/vfs/extfs/extfs.c                     inode-&gt;inode = (current_archive-&gt;inode_counter)++;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L585'>inode</a>             585 src/vfs/extfs/extfs.c                     inode-&gt;nlink = 1;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L586'>inode</a>             586 src/vfs/extfs/extfs.c                     inode-&gt;dev = current_archive-&gt;rdev;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L587'>inode</a>             587 src/vfs/extfs/extfs.c                     inode-&gt;archive = current_archive;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L588'>inode</a>             588 src/vfs/extfs/extfs.c                     inode-&gt;mode = hstat.st_mode;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L590'>inode</a>             590 src/vfs/extfs/extfs.c                     inode-&gt;rdev = hstat.st_rdev;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L592'>inode</a>             592 src/vfs/extfs/extfs.c                     inode-&gt;rdev = 0;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L594'>inode</a>             594 src/vfs/extfs/extfs.c                     inode-&gt;uid = hstat.st_uid;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L595'>inode</a>             595 src/vfs/extfs/extfs.c                     inode-&gt;gid = hstat.st_gid;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L596'>inode</a>             596 src/vfs/extfs/extfs.c                     inode-&gt;size = hstat.st_size;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L597'>inode</a>             597 src/vfs/extfs/extfs.c                     inode-&gt;mtime = hstat.st_mtime;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L598'>inode</a>             598 src/vfs/extfs/extfs.c                     inode-&gt;atime = hstat.st_atime;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L599'>inode</a>             599 src/vfs/extfs/extfs.c                     inode-&gt;ctime = hstat.st_ctime;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L600'>inode</a>             600 src/vfs/extfs/extfs.c                     inode-&gt;first_in_subdir = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L601'>inode</a>             601 src/vfs/extfs/extfs.c                     inode-&gt;last_in_subdir = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L604'>inode</a>             604 src/vfs/extfs/extfs.c                         inode-&gt;linkname = current_link_name;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L610'>inode</a>             610 src/vfs/extfs/extfs.c                             inode-&gt;mode &amp;= ~S_IFLNK;    /* You *DON'T* want to do this always */</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L611'>inode</a>             611 src/vfs/extfs/extfs.c                         inode-&gt;linkname = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L751'>inode</a>             751 src/vfs/extfs/extfs.c     if (!S_ISLNK (entry-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L764'>inode</a>             764 src/vfs/extfs/extfs.c         pent = extfs_find_entry_int (entry-&gt;dir, entry-&gt;inode-&gt;linkname, looping, FALSE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L917'>inode</a>             917 src/vfs/extfs/extfs.c     if (S_ISDIR (entry-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L920'>inode</a>             920 src/vfs/extfs/extfs.c     if (entry-&gt;inode-&gt;local_filename == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L940'>inode</a>             940 src/vfs/extfs/extfs.c         entry-&gt;inode-&gt;local_filename = g_strdup (local_filename);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L944'>inode</a>             944 src/vfs/extfs/extfs.c     local_handle = open (entry-&gt;inode-&gt;local_filename, NO_LINEAR (flags), mode);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L950'>inode</a>             950 src/vfs/extfs/extfs.c         local_handle = open (entry-&gt;inode-&gt;local_filename, flags, mode);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L994'>inode</a>             994 src/vfs/extfs/extfs.c         if (extfs_cmd (" copyin ", file-&gt;archive, file-&gt;entry, file-&gt;entry-&gt;inode-&gt;local_filename))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L997'>inode</a>             997 src/vfs/extfs/extfs.c         if (stat (file-&gt;entry-&gt;inode-&gt;local_filename, &amp;file_status) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1000'>inode</a>            1000 src/vfs/extfs/extfs.c             file-&gt;entry-&gt;inode-&gt;size = file_status.st_size;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1002'>inode</a>            1002 src/vfs/extfs/extfs.c         file-&gt;entry-&gt;inode-&gt;mtime = time (NULL);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1043'>inode</a>            1043 src/vfs/extfs/extfs.c     if (!S_ISDIR (entry-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1047'>inode</a>            1047 src/vfs/extfs/extfs.c     info[0] = entry-&gt;inode-&gt;first_in_subdir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1048'>inode</a>            1048 src/vfs/extfs/extfs.c     info[1] = entry-&gt;inode-&gt;first_in_subdir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1083'>inode</a>            1083 src/vfs/extfs/extfs.c extfs_stat_move (struct stat *buf, const struct inode *inode)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1085'>inode</a>            1085 src/vfs/extfs/extfs.c     buf-&gt;st_dev = inode-&gt;dev;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1086'>inode</a>            1086 src/vfs/extfs/extfs.c     buf-&gt;st_ino = inode-&gt;inode;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1087'>inode</a>            1087 src/vfs/extfs/extfs.c     buf-&gt;st_mode = inode-&gt;mode;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1088'>inode</a>            1088 src/vfs/extfs/extfs.c     buf-&gt;st_nlink = inode-&gt;nlink;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1089'>inode</a>            1089 src/vfs/extfs/extfs.c     buf-&gt;st_uid = inode-&gt;uid;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1090'>inode</a>            1090 src/vfs/extfs/extfs.c     buf-&gt;st_gid = inode-&gt;gid;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1092'>inode</a>            1092 src/vfs/extfs/extfs.c     buf-&gt;st_rdev = inode-&gt;rdev;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1094'>inode</a>            1094 src/vfs/extfs/extfs.c     buf-&gt;st_size = inode-&gt;size;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1099'>inode</a>            1099 src/vfs/extfs/extfs.c     buf-&gt;st_blocks = (inode-&gt;size + RECORDSIZE - 1) / RECORDSIZE;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1101'>inode</a>            1101 src/vfs/extfs/extfs.c     buf-&gt;st_atime = inode-&gt;atime;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1102'>inode</a>            1102 src/vfs/extfs/extfs.c     buf-&gt;st_mtime = inode-&gt;mtime;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1103'>inode</a>            1103 src/vfs/extfs/extfs.c     buf-&gt;st_ctime = inode-&gt;ctime;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1128'>inode</a>            1128 src/vfs/extfs/extfs.c     extfs_stat_move (buf, entry-&gt;inode);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1157'>inode</a>            1157 src/vfs/extfs/extfs.c     extfs_stat_move (buf, file-&gt;entry-&gt;inode);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1178'>inode</a>            1178 src/vfs/extfs/extfs.c     if (!S_ISLNK (entry-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1186'>inode</a>            1186 src/vfs/extfs/extfs.c     len = strlen (entry-&gt;inode-&gt;linkname);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1191'>inode</a>            1191 src/vfs/extfs/extfs.c     memcpy (buf, entry-&gt;inode-&gt;linkname, result);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1247'>inode</a>            1247 src/vfs/extfs/extfs.c     if (S_ISDIR (entry-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1295'>inode</a>            1295 src/vfs/extfs/extfs.c     if (!S_ISDIR (entry-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1331'>inode</a>            1331 src/vfs/extfs/extfs.c     if (!S_ISDIR (entry-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1369'>inode</a>            1369 src/vfs/extfs/extfs.c     if ((entry == NULL) || (!S_ISDIR (entry-&gt;inode-&gt;mode)))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1413'>inode</a>            1413 src/vfs/extfs/extfs.c     int i = --e-&gt;inode-&gt;nlink;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1416'>inode</a>            1416 src/vfs/extfs/extfs.c     if (S_ISDIR (e-&gt;inode-&gt;mode) &amp;&amp; e-&gt;inode-&gt;first_in_subdir != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1418'>inode</a>            1418 src/vfs/extfs/extfs.c         struct entry *f = e-&gt;inode-&gt;first_in_subdir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1419'>inode</a>            1419 src/vfs/extfs/extfs.c         e-&gt;inode-&gt;first_in_subdir = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1423'>inode</a>            1423 src/vfs/extfs/extfs.c     if (e == pe-&gt;inode-&gt;first_in_subdir)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1424'>inode</a>            1424 src/vfs/extfs/extfs.c         pe-&gt;inode-&gt;first_in_subdir = e-&gt;next_in_dir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1427'>inode</a>            1427 src/vfs/extfs/extfs.c     for (ent = pe-&gt;inode-&gt;first_in_subdir; ent &amp;&amp; ent-&gt;next_in_dir; ent = ent-&gt;next_in_dir)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1435'>inode</a>            1435 src/vfs/extfs/extfs.c     if (e == pe-&gt;inode-&gt;last_in_subdir)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1436'>inode</a>            1436 src/vfs/extfs/extfs.c         pe-&gt;inode-&gt;last_in_subdir = prev;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1440'>inode</a>            1440 src/vfs/extfs/extfs.c         if (e-&gt;inode-&gt;local_filename != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1442'>inode</a>            1442 src/vfs/extfs/extfs.c             unlink (e-&gt;inode-&gt;local_filename);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1443'>inode</a>            1443 src/vfs/extfs/extfs.c             g_free (e-&gt;inode-&gt;local_filename);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1445'>inode</a>            1445 src/vfs/extfs/extfs.c         g_free (e-&gt;inode-&gt;linkname);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1446'>inode</a>            1446 src/vfs/extfs/extfs.c         g_free (e-&gt;inode);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1458'>inode</a>            1458 src/vfs/extfs/extfs.c     int i = --e-&gt;inode-&gt;nlink;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1460'>inode</a>            1460 src/vfs/extfs/extfs.c     if (S_ISDIR (e-&gt;inode-&gt;mode) &amp;&amp; e-&gt;inode-&gt;first_in_subdir != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1462'>inode</a>            1462 src/vfs/extfs/extfs.c         struct entry *f = e-&gt;inode-&gt;first_in_subdir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1464'>inode</a>            1464 src/vfs/extfs/extfs.c         e-&gt;inode-&gt;first_in_subdir = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1469'>inode</a>            1469 src/vfs/extfs/extfs.c         if (e-&gt;inode-&gt;local_filename != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1471'>inode</a>            1471 src/vfs/extfs/extfs.c             unlink (e-&gt;inode-&gt;local_filename);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1472'>inode</a>            1472 src/vfs/extfs/extfs.c             g_free (e-&gt;inode-&gt;local_filename);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1474'>inode</a>            1474 src/vfs/extfs/extfs.c         g_free (e-&gt;inode-&gt;linkname);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1475'>inode</a>            1475 src/vfs/extfs/extfs.c         g_free (e-&gt;inode);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1518'>inode</a>            1518 src/vfs/extfs/extfs.c     if (fp-&gt;entry-&gt;inode-&gt;local_filename == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1523'>inode</a>            1523 src/vfs/extfs/extfs.c     p = vfs_path_from_str (fp-&gt;entry-&gt;inode-&gt;local_filename);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1540'>inode</a>            1540 src/vfs/extfs/extfs.c     if (strcmp (fp-&gt;entry-&gt;inode-&gt;local_filename, vfs_path_get_last_path_str (local)) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L517'>inode</a>             517 src/vfs/smbfs/helpers/include/smb.h     SMB_INO_T inode;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L614'>inode</a>             614 src/vfs/tar/tar.c         struct vfs_s_inode *inode = NULL, *parent;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L695'>inode</a>             695 src/vfs/tar/tar.c             inode = vfs_s_find_inode (me, archive, current_link_name, LINK_NO_FOLLOW, 0);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L696'>inode</a>             696 src/vfs/tar/tar.c             if (inode == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L702'>inode</a>             702 src/vfs/tar/tar.c                 entry = vfs_s_new_entry (me, p, inode);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L716'>inode</a>             716 src/vfs/tar/tar.c         inode = vfs_s_new_inode (me, archive, &amp;st);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L718'>inode</a>             718 src/vfs/tar/tar.c         inode-&gt;data_offset = data_position;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L721'>inode</a>             721 src/vfs/tar/tar.c             inode-&gt;linkname = current_link_name;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L727'>inode</a>             727 src/vfs/tar/tar.c         entry = vfs_s_new_entry (me, p, inode);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L740'>inode</a>             740 src/vfs/tar/tar.c             if (inode != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L741'>inode</a>             741 src/vfs/tar/tar.c                 inode-&gt;data_offset = current_tar_position;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L97'>inode</a>              97 src/vfs/undelfs/undelfs.c     ext2_ino_t inode;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L111'>inode</a>             111 src/vfs/undelfs/undelfs.c     ext2_ino_t inode;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L235'>inode</a>             235 src/vfs/undelfs/undelfs.c     struct ext2_inode inode;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L258'>inode</a>             258 src/vfs/undelfs/undelfs.c     retval = ext2fs_get_next_inode (scan, &amp;ino, &amp;inode);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L269'>inode</a>             269 src/vfs/undelfs/undelfs.c         if (inode.i_dtime == 0)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L272'>inode</a>             272 src/vfs/undelfs/undelfs.c         if (S_ISDIR (inode.i_mode))</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L275'>inode</a>             275 src/vfs/undelfs/undelfs.c         lsd.inode = ino;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L303'>inode</a>             303 src/vfs/undelfs/undelfs.c             delarray[num_delarray].mode = inode.i_mode;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L304'>inode</a>             304 src/vfs/undelfs/undelfs.c             delarray[num_delarray].uid = inode.i_uid;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L305'>inode</a>             305 src/vfs/undelfs/undelfs.c             delarray[num_delarray].gid = inode.i_gid;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L306'>inode</a>             306 src/vfs/undelfs/undelfs.c             delarray[num_delarray].size = inode.i_size;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L307'>inode</a>             307 src/vfs/undelfs/undelfs.c             delarray[num_delarray].dtime = inode.i_dtime;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L314'>inode</a>             314 src/vfs/undelfs/undelfs.c         retval = ext2fs_get_next_inode (scan, &amp;ino, &amp;inode);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L436'>inode</a>             436 src/vfs/undelfs/undelfs.c     ext2_ino_t inode, i;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L456'>inode</a>             456 src/vfs/undelfs/undelfs.c     inode = atol (f);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L461'>inode</a>             461 src/vfs/undelfs/undelfs.c         if (inode != delarray[i].ino)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L480'>inode</a>             480 src/vfs/undelfs/undelfs.c         p-&gt;inode = inode;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L594'>inode</a>             594 src/vfs/undelfs/undelfs.c     retval = ext2fs_block_iterate (fs, p-&gt;inode, 0, NULL, undelfs_dump_read, p);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L611'>inode</a>             611 src/vfs/undelfs/undelfs.c     ext2_ino_t inode = atol (path);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L616'>inode</a>             616 src/vfs/undelfs/undelfs.c         if (delarray[i].ino == inode)</span>
+</pre>
+</body>
+</html>

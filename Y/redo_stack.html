@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>redo_stack</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L567'>redo_stack</a>        567 src/editor/edit.c     c = edit-&gt;redo_stack[sp];</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L577'>redo_stack</a>        577 src/editor/edit.c     c = edit-&gt;redo_stack[(sp - 1) &amp; edit-&gt;redo_stack_size_mask];</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L578'>redo_stack</a>        578 src/editor/edit.c     if (edit-&gt;redo_stack[sp] == -2)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L581'>redo_stack</a>        581 src/editor/edit.c         edit-&gt;redo_stack[sp]++;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2127'>redo_stack</a>       2127 src/editor/edit.c     edit-&gt;redo_stack = g_malloc0 ((edit-&gt;redo_stack_size + 10) * sizeof (long));</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2194'>redo_stack</a>       2194 src/editor/edit.c     g_free (edit-&gt;redo_stack);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2425'>redo_stack</a>       2425 src/editor/edit.c             t = g_realloc (edit-&gt;redo_stack, (edit-&gt;redo_stack_size * 2 + 10) * sizeof (long));</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2428'>redo_stack</a>       2428 src/editor/edit.c                 edit-&gt;redo_stack = t;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2441'>redo_stack</a>       2441 src/editor/edit.c         if (edit-&gt;redo_stack[spm1] &lt; 0)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2443'>redo_stack</a>       2443 src/editor/edit.c             d = edit-&gt;redo_stack[(sp - 2) &amp; edit-&gt;redo_stack_size_mask];</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2444'>redo_stack</a>       2444 src/editor/edit.c             if (d == c &amp;&amp; edit-&gt;redo_stack[spm1] &gt; -1000000000)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2447'>redo_stack</a>       2447 src/editor/edit.c                     edit-&gt;redo_stack[spm1]--;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2453'>redo_stack</a>       2453 src/editor/edit.c             d = edit-&gt;redo_stack[spm1];</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2458'>redo_stack</a>       2458 src/editor/edit.c                 edit-&gt;redo_stack[sp] = -2;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2463'>redo_stack</a>       2463 src/editor/edit.c     edit-&gt;redo_stack[sp] = c;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2478'>redo_stack</a>       2478 src/editor/edit.c         while (edit-&gt;redo_stack[edit-&gt;redo_stack_bottom] &lt; KEY_PRESS</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2488'>redo_stack</a>       2488 src/editor/edit.c         &amp;&amp; edit-&gt;redo_stack[edit-&gt;redo_stack_bottom] &lt; KEY_PRESS)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.h.html#L145'>redo_stack</a>        145 src/editor/editwidget.h     long *redo_stack;</span>
+</pre>
+</body>
+</html>

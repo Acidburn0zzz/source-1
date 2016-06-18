@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>case_sig</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L135'>case_sig</a>          135 src/vfs/smbfs/helpers/include/proto.h BOOL do_match (char *str, char *regexp, int case_sig);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L136'>case_sig</a>          136 src/vfs/smbfs/helpers/include/proto.h BOOL mask_match (char *str, char *regexp, int case_sig, BOOL trans2);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1224'>case_sig</a>         1224 src/vfs/smbfs/helpers/lib/util.c unix_do_match (char *str, char *regexp, int case_sig)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1245'>case_sig</a>         1245 src/vfs/smbfs/helpers/lib/util.c                 while (*str &amp;&amp; (case_sig ? (*p != *str) : (toupper (*p) != toupper (*str))))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1247'>case_sig</a>         1247 src/vfs/smbfs/helpers/lib/util.c                 if (unix_do_match (str, p, case_sig))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1257'>case_sig</a>         1257 src/vfs/smbfs/helpers/lib/util.c             if (case_sig)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1298'>case_sig</a>         1298 src/vfs/smbfs/helpers/lib/util.c unix_mask_match (char *str, char *regexp, int case_sig, BOOL trans2)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1323'>case_sig</a>         1323 src/vfs/smbfs/helpers/lib/util.c     DEBUG (8, ("unix_mask_match str=&lt;%s&gt; regexp=&lt;%s&gt;, case_sig = %d\n", p2, p1, case_sig));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1357'>case_sig</a>         1357 src/vfs/smbfs/helpers/lib/util.c     matched = unix_do_match (sbase, ebase, case_sig) &amp;&amp;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1358'>case_sig</a>         1358 src/vfs/smbfs/helpers/lib/util.c         (trans2 || unix_do_match (sext, eext, case_sig));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1372'>case_sig</a>         1372 src/vfs/smbfs/helpers/lib/util.c do_match (char *str, char *regexp, int case_sig)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1393'>case_sig</a>         1393 src/vfs/smbfs/helpers/lib/util.c                 while (*str &amp;&amp; (case_sig ? (*p != *str) : (toupper (*p) != toupper (*str))))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1397'>case_sig</a>         1397 src/vfs/smbfs/helpers/lib/util.c                 while (*str &amp;&amp; (case_sig ? (*p == *str) : (toupper (*p) == toupper (*str))))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1400'>case_sig</a>         1400 src/vfs/smbfs/helpers/lib/util.c                 if (do_match (str, p, case_sig))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1416'>case_sig</a>         1416 src/vfs/smbfs/helpers/lib/util.c             if (case_sig)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1468'>case_sig</a>         1468 src/vfs/smbfs/helpers/lib/util.c mask_match (char *str, char *regexp, int case_sig, BOOL trans2)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1519'>case_sig</a>         1519 src/vfs/smbfs/helpers/lib/util.c            ("mask_match str=&lt;%s&gt; regexp=&lt;%s&gt;, case_sig = %d\n", t_filename, t_pattern, case_sig));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1544'>case_sig</a>         1544 src/vfs/smbfs/helpers/lib/util.c             matched = do_match (te_filename, te_pattern, case_sig);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1561'>case_sig</a>         1561 src/vfs/smbfs/helpers/lib/util.c                 if (!do_match (cp2, cp1, case_sig))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1578'>case_sig</a>         1578 src/vfs/smbfs/helpers/lib/util.c                         if ((cp1 != NULL) &amp;&amp; do_match (cp2, cp1, case_sig))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1674'>case_sig</a>         1674 src/vfs/smbfs/helpers/lib/util.c                     matched = do_match (sbase, ebase, case_sig) &amp;&amp; do_match (sext, eext, case_sig);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1680'>case_sig</a>         1680 src/vfs/smbfs/helpers/lib/util.c                     matched = do_match (str, ebase, case_sig);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1693'>case_sig</a>         1693 src/vfs/smbfs/helpers/lib/util.c                     matched = do_match (sbase, ebase, case_sig) &amp;&amp; do_match (sext, eext, case_sig);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1697'>case_sig</a>         1697 src/vfs/smbfs/helpers/lib/util.c                     matched = do_match (sbase, ebase, case_sig);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1709'>case_sig</a>         1709 src/vfs/smbfs/helpers/lib/util.c                         matched = do_match (sbase, ebase, case_sig);</span>
+</pre>
+</body>
+</html>

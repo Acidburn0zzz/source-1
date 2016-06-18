@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>gid</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--util.h.html#L184'>gid</a>               184 lib/util.h     const char *get_group (gid_t gid);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L314'>gid</a>               314 lib/utilunix.c get_group (gid_t gid)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L320'>gid</a>               320 lib/utilunix.c     name = i_cache_match ((int) gid, gid_cache, GID_CACHE_SIZE);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L324'>gid</a>               324 lib/utilunix.c     grp = getgrgid (gid);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L327'>gid</a>               327 lib/utilunix.c         i_cache_add ((int) gid, gid_cache, GID_CACHE_SIZE, grp-&gt;gr_name, (int *) &amp;gid_last);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L334'>gid</a>               334 lib/utilunix.c         g_snprintf (gbuf, sizeof (gbuf), "%d", (int) gid);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L89'>gid</a>                89 src/vfs/extfs/extfs.c     gid_t gid;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L224'>gid</a>               224 src/vfs/extfs/extfs.c     inode-&gt;gid = getgid ();</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L475'>gid</a>               475 src/vfs/extfs/extfs.c     root_entry-&gt;inode-&gt;gid = mystat.st_gid;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L595'>gid</a>               595 src/vfs/extfs/extfs.c                     inode-&gt;gid = hstat.st_gid;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1090'>gid</a>              1090 src/vfs/extfs/extfs.c     buf-&gt;st_gid = inode-&gt;gid;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L209'>gid</a>               209 src/vfs/sftpfs/file.c         buf-&gt;st_gid = attrs.gid;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L180'>gid</a>               180 src/vfs/sftpfs/internal.c         buf-&gt;st_gid = attrs.gid;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L259'>gid</a>               259 src/vfs/sftpfs/internal.c         buf-&gt;st_gid = attrs.gid;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--client.h.html#L24'>gid</a>                24 src/vfs/smbfs/helpers/include/client.h     gid_t gid;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L66'>gid</a>                66 src/vfs/smbfs/helpers/include/proto.h int sys_chown (const char *fname, uid_t uid, gid_t gid);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L151'>gid</a>               151 src/vfs/smbfs/helpers/include/proto.h char *gidtoname (gid_t gid);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L565'>gid</a>               565 src/vfs/smbfs/helpers/include/smb.h     gid_t gid;                  /* gid of user who *opened* this connection */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L589'>gid</a>               589 src/vfs/smbfs/helpers/include/smb.h     gid_t gid;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L639'>gid</a>               639 src/vfs/smbfs/helpers/include/smb.h     gid_t gid;                  /* gid of a validated user */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L819'>gid</a>               819 src/vfs/smbfs/helpers/include/smb.h     gid_t gid;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L252'>gid</a>               252 src/vfs/smbfs/helpers/lib/system.c sys_chown (const char *fname, uid_t uid, gid_t gid)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L262'>gid</a>               262 src/vfs/smbfs/helpers/lib/system.c     return (chown (fname, uid, gid));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2392'>gid</a>              2392 src/vfs/smbfs/helpers/lib/util.c             string_sub (p, "%g", gidtoname (conn-&gt;gid));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2522'>gid</a>              2522 src/vfs/smbfs/helpers/lib/util.c gidtoname (gid_t gid)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2525'>gid</a>              2525 src/vfs/smbfs/helpers/lib/util.c     struct group *grp = getgrgid (gid);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2528'>gid</a>              2528 src/vfs/smbfs/helpers/lib/util.c     slprintf (name, sizeof (name) - 1, "%d", (int) gid);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L603'>gid</a>               603 src/vfs/smbfs/smbfs.c     new_entry-&gt;my_stat.st_gid = finfo-&gt;gid;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L161'>gid</a>               161 src/vfs/tar/tar.c         char gid[8];</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L416'>gid</a>               416 src/vfs/tar/tar.c             : tar_from_oct (8,header-&gt;header.gid);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L431'>gid</a>               431 src/vfs/tar/tar.c         st-&gt;st_gid = tar_from_oct (8, header-&gt;header.gid);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L88'>gid</a>                88 src/vfs/undelfs/undelfs.c     unsigned short gid;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L305'>gid</a>               305 src/vfs/undelfs/undelfs.c             delarray[num_delarray].gid = inode.i_gid;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L632'>gid</a>               632 src/vfs/undelfs/undelfs.c     buf-&gt;st_gid = delarray[inode_index].gid;</span>
+</pre>
+</body>
+</html>

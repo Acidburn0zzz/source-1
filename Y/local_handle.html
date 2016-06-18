@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>local_handle</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L110'>local_handle</a>      110 src/vfs/extfs/extfs.c     int local_handle;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L896'>local_handle</a>      896 src/vfs/extfs/extfs.c     int local_handle;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L925'>local_handle</a>      925 src/vfs/extfs/extfs.c         local_handle = vfs_mkstemps (&amp;local_filename_vpath, "extfs", entry-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L927'>local_handle</a>      927 src/vfs/extfs/extfs.c         if (local_handle == -1)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L929'>local_handle</a>      929 src/vfs/extfs/extfs.c         close (local_handle);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L944'>local_handle</a>      944 src/vfs/extfs/extfs.c     local_handle = open (entry-&gt;inode-&gt;local_filename, NO_LINEAR (flags), mode);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L946'>local_handle</a>      946 src/vfs/extfs/extfs.c     if (local_handle == -1)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L950'>local_handle</a>      950 src/vfs/extfs/extfs.c         local_handle = open (entry-&gt;inode-&gt;local_filename, flags, mode);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L953'>local_handle</a>      953 src/vfs/extfs/extfs.c     if (local_handle == -1)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L960'>local_handle</a>      960 src/vfs/extfs/extfs.c     extfs_info-&gt;local_handle = local_handle;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L975'>local_handle</a>      975 src/vfs/extfs/extfs.c     return read (file-&gt;local_handle, buffer, count);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L987'>local_handle</a>      987 src/vfs/extfs/extfs.c     close (file-&gt;local_handle);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1225'>local_handle</a>     1225 src/vfs/extfs/extfs.c     return write (file-&gt;local_handle, buf, nbyte);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1382'>local_handle</a>     1382 src/vfs/extfs/extfs.c     return lseek (file-&gt;local_handle, offset, whence);</span>
+</pre>
+</body>
+</html>

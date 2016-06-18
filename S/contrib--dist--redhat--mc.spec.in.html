@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>contrib/dist/redhat/mc.spec.in</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<!-- beginning of fixed guide -->
+<div id='guide'><ul>
+<li><a href='#TOP'><img class='icon' src='../icons/first.png' alt='[^]' /></a></li>
+<li><a href='#BOTTOM'><img class='icon' src='../icons/last.png' alt='[v]' /></a></li>
+<li><a href='#TOP'><img class='icon' src='../icons/top.png' alt='[top]' /></a></li>
+<li><a href='#BOTTOM'><img class='icon' src='../icons/bottom.png' alt='[bottom]' /></a></li>
+<li><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a></li>
+<li><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a></li>
+<li class='standout'><span><a href='../files/contrib.html'>contrib</a>/<a href='../files/contrib--dist.html'>dist</a>/<a href='../files/contrib--dist--redhat.html'>redhat</a>/mc.spec.in</span></li>
+</ul></div>
+<!-- end of fixed guide -->
+<a id='TOP' name='TOP'></a><h2 class='header'><a href='../mains.html'>root</a>/<a href='../files/contrib.html'>contrib</a>/<a href='../files/contrib--dist.html'>dist</a>/<a href='../files/contrib--dist--redhat.html'>redhat</a>/mc.spec.in</h2>
+<em class='comment'>/* <img class='icon' src='../icons/n_left.png' alt='[previous]' /><img class='icon' src='../icons/n_right.png' alt='[next]' /><img class='icon' src='../icons/n_first.png' alt='[first]' /><img class='icon' src='../icons/n_last.png' alt='[last]' /><img class='icon' src='../icons/n_top.png' alt='[top]' /><a href='#BOTTOM'><img class='icon' src='../icons/bottom.png' alt='[bottom]' /></a><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a>&nbsp;<em class='position'>[+1 contrib/dist/redhat/mc.spec.in]</em> */</em>
+<hr />
+<pre>
+<a id='L1' name='L1'></a># Note that this is NOT a relocatable package
+<a id='L2' name='L2'></a> 
+<a id='L3' name='L3'></a>%define legacy_rhel 0%{?el4}%{?el3}
+<a id='L4' name='L4'></a> 
+<a id='L5' name='L5'></a>%if %{legacy_rhel}
+<a id='L6' name='L6'></a>        %define _with_screen --with-screen=ncurses
+<a id='L7' name='L7'></a>        %define _with_glib_static --with-glib-static
+<a id='L8' name='L8'></a>        %define glib_version 2.12
+<a id='L9' name='L9'></a>        %define glib_stepping .3
+<a id='L10' name='L10'></a>%else
+<a id='L11' name='L11'></a>        %define _with_screen --with-screen=slang
+<a id='L12' name='L12'></a>%endif
+<a id='L13' name='L13'></a> 
+<a id='L14' name='L14'></a>%define mc_version @DISTR_VERSION@
+<a id='L15' name='L15'></a>%define mc_release @DISTR_RELEASE@
+<a id='L16' name='L16'></a>%define mc_tarball @VERSION@
+<a id='L17' name='L17'></a> 
+<a id='L18' name='L18'></a>Summary:        User-friendly text console file manager and visual shell
+<a id='L19' name='L19'></a>Name:           mc
+<a id='L20' name='L20'></a>Version:        %{mc_version}
+<a id='L21' name='L21'></a>Release:        %{mc_release}%{?dist}
+<a id='L22' name='L22'></a>Epoch:          3
+<a id='L23' name='L23'></a>License:        GPL3+
+<a id='L24' name='L24'></a>Group:          System Environment/Shells
+<a id='L25' name='L25'></a>Source0:        %{name}-%{mc_tarball}.tar.gz
+<a id='L26' name='L26'></a> 
+<a id='L27' name='L27'></a>%if %{legacy_rhel}
+<a id='L28' name='L28'></a>Source1:        http://ftp.gnome.org/pub/gnome/sources/glib/%{glib_version}/glib-%{glib_version}%{?glib_stepping}.tar.bz2
+<a id='L29' name='L29'></a>Patch0:         glib2-CVE-2008-4316.patch
+<a id='L30' name='L30'></a>%endif
+<a id='L31' name='L31'></a> 
+<a id='L32' name='L32'></a>URL:            http://www.midnight-commander.org/
+<a id='L33' name='L33'></a>BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+<a id='L34' name='L34'></a>BuildRequires:  e2fsprogs-devel gpm-devel perl
+<a id='L35' name='L35'></a> 
+<a id='L36' name='L36'></a>%if %{legacy_rhel}%{?el5}
+<a id='L37' name='L37'></a>BuildRequires:  pcre-devel
+<a id='L38' name='L38'></a>%endif
+<a id='L39' name='L39'></a> 
+<a id='L40' name='L40'></a>%if %{legacy_rhel}
+<a id='L41' name='L41'></a> 
+<a id='L42' name='L42'></a>BuildRequires:  ncurses-devel
+<a id='L43' name='L43'></a> 
+<a id='L44' name='L44'></a># From Glib
+<a id='L45' name='L45'></a>BuildRequires:  pkgconfig gettext
+<a id='L46' name='L46'></a> 
+<a id='L47' name='L47'></a>%else
+<a id='L48' name='L48'></a>BuildRequires:  glib2-devel slang-devel
+<a id='L49' name='L49'></a>%endif
+<a id='L50' name='L50'></a> 
+<a id='L51' name='L51'></a>%description
+<a id='L52' name='L52'></a>GNU Midnight Commander is a visual file manager. It's a feature rich
+<a id='L53' name='L53'></a>full-screen text mode application that allows you to copy, move and
+<a id='L54' name='L54'></a>delete files and whole directory trees, search for files and run
+<a id='L55' name='L55'></a>commands in the subshell. Internal viewer and editor are included. Mouse
+<a id='L56' name='L56'></a>is supported on Linux console. VFS (Virtual Filesystem) allows you to
+<a id='L57' name='L57'></a>view archives and files on remote servers (via SAMBA, FTP or SSH).
+<a id='L58' name='L58'></a> 
+<a id='L59' name='L59'></a>%prep
+<a id='L60' name='L60'></a> 
+<a id='L61' name='L61'></a>%setup -q -n %{name}-%{mc_tarball}
+<a id='L62' name='L62'></a> 
+<a id='L63' name='L63'></a>%if %{legacy_rhel}
+<a id='L64' name='L64'></a> 
+<a id='L65' name='L65'></a>%setup -q -T -D -a 1 -n %{name}-%{mc_tarball}
+<a id='L66' name='L66'></a> 
+<a id='L67' name='L67'></a>cd glib-%{glib_version}%{?glib_stepping}
+<a id='L68' name='L68'></a>%patch0 -p1 -b .CVE-2008-4316
+<a id='L69' name='L69'></a> 
+<a id='L70' name='L70'></a>%endif
+<a id='L71' name='L71'></a> 
+<a id='L72' name='L72'></a>%build
+<a id='L73' name='L73'></a> 
+<a id='L74' name='L74'></a>%if %{legacy_rhel}
+<a id='L75' name='L75'></a> 
+<a id='L76' name='L76'></a>pushd glib-%{glib_version}%{?glib_stepping}
+<a id='L77' name='L77'></a>RESULT_DIR=`pwd`/result
+<a id='L78' name='L78'></a> 
+<a id='L79' name='L79'></a>./configure \
+<a id='L80' name='L80'></a>        --disable-gtk-doc \
+<a id='L81' name='L81'></a>        --disable-shared \
+<a id='L82' name='L82'></a>        --enable-static \
+<a id='L83' name='L83'></a>        --prefix="$RESULT_DIR" \
+<a id='L84' name='L84'></a>        --exec-prefix="$RESULT_DIR" \
+<a id='L85' name='L85'></a>        --libdir="$RESULT_DIR/usr/%{_lib}"
+<a id='L86' name='L86'></a> 
+<a id='L87' name='L87'></a>%{__make} %{?_smp_mflags} CFLAGS="%{optflags} -fno-strict-aliasing" install
+<a id='L88' name='L88'></a>popd
+<a id='L89' name='L89'></a> 
+<a id='L90' name='L90'></a>PKG_CONFIG_PATH="$RESULT_DIR/usr/%{_lib}/pkgconfig:$PKG_CONFIG_PATH" ; export PKG_CONFIG_PATH ;
+<a id='L91' name='L91'></a>%endif
+<a id='L92' name='L92'></a> 
+<a id='L93' name='L93'></a>%configure \
+<a id='L94' name='L94'></a>        %{_with_screen} \
+<a id='L95' name='L95'></a>        %{?_with_glib_static} \
+<a id='L96' name='L96'></a>        --enable-charset \
+<a id='L97' name='L97'></a>        --enable-vfs-smb \
+<a id='L98' name='L98'></a>        --without-x \
+<a id='L99' name='L99'></a>        --with-gpm-mouse \
+<a id='L100' name='L100'></a>        --disable-doxygen-doc
+<a id='L101' name='L101'></a> 
+<a id='L102' name='L102'></a>%{__make} %{?_smp_mflags} CFLAGS="%{optflags}"
+<a id='L103' name='L103'></a> 
+<a id='L104' name='L104'></a>%install
+<a id='L105' name='L105'></a>rm -rf $RPM_BUILD_ROOT
+<a id='L106' name='L106'></a> 
+<a id='L107' name='L107'></a>make install DESTDIR="$RPM_BUILD_ROOT"
+<a id='L108' name='L108'></a> 
+<a id='L109' name='L109'></a>install -d -m 755 $RPM_BUILD_ROOT%{_sysconfdir}/profile.d
+<a id='L110' name='L110'></a>install contrib/{mc.sh,mc.csh} $RPM_BUILD_ROOT%{_sysconfdir}/profile.d
+<a id='L111' name='L111'></a> 
+<a id='L112' name='L112'></a>%find_lang %{name}
+<a id='L113' name='L113'></a> 
+<a id='L114' name='L114'></a>%clean
+<a id='L115' name='L115'></a>rm -rf $RPM_BUILD_ROOT
+<a id='L116' name='L116'></a> 
+<a id='L117' name='L117'></a>%files -f %{name}.lang
+<a id='L118' name='L118'></a>%defattr(-, root, root)
+<a id='L119' name='L119'></a> 
+<a id='L120' name='L120'></a>%doc doc/FAQ doc/COPYING doc/NEWS doc/README
+<a id='L121' name='L121'></a>%{_bindir}/mc
+<a id='L122' name='L122'></a>%{_bindir}/mcedit
+<a id='L123' name='L123'></a>%{_bindir}/mcview
+<a id='L124' name='L124'></a>%{_bindir}/mcdiff
+<a id='L125' name='L125'></a> 
+<a id='L126' name='L126'></a>%dir %{_libexecdir}/mc
+<a id='L127' name='L127'></a>%dir %{_libexecdir}/mc/extfs.d
+<a id='L128' name='L128'></a>%dir %{_libexecdir}/mc/fish
+<a id='L129' name='L129'></a>%attr(4511, vcsa, tty) %{_libexecdir}/mc/cons.saver
+<a id='L130' name='L130'></a>%{_libexecdir}/mc/mc*sh
+<a id='L131' name='L131'></a>%{_libexecdir}/mc/extfs.d/*
+<a id='L132' name='L132'></a>%{_libexecdir}/mc/fish/*
+<a id='L133' name='L133'></a> 
+<a id='L134' name='L134'></a>%{_mandir}/man1/*
+<a id='L135' name='L135'></a>%lang(es) %{_mandir}/es/man1/mc.1*
+<a id='L136' name='L136'></a>%lang(hu) %{_mandir}/hu/man1/mc.1*
+<a id='L137' name='L137'></a>%lang(it) %{_mandir}/it/man1/mc.1*
+<a id='L138' name='L138'></a>%lang(pl) %{_mandir}/pl/man1/mc.1*
+<a id='L139' name='L139'></a>%lang(ru) %{_mandir}/ru/man1/mc.1*
+<a id='L140' name='L140'></a>%lang(sr) %{_mandir}/sr/man1/mc.1*
+<a id='L141' name='L141'></a> 
+<a id='L142' name='L142'></a>%{_sysconfdir}/profile.d/*
+<a id='L143' name='L143'></a> 
+<a id='L144' name='L144'></a>%config(noreplace) %{_sysconfdir}/mc/filehighlight.ini
+<a id='L145' name='L145'></a>%config(noreplace) %{_sysconfdir}/mc/*edit*
+<a id='L146' name='L146'></a>%config(noreplace) %{_sysconfdir}/mc/mc.ext
+<a id='L147' name='L147'></a>%config(noreplace) %{_sysconfdir}/mc/mc.menu
+<a id='L148' name='L148'></a>%config(noreplace) %{_sysconfdir}/mc/mc.menu.*
+<a id='L149' name='L149'></a>%config(noreplace) %{_sysconfdir}/mc/sfs.ini
+<a id='L150' name='L150'></a>%config(noreplace) %{_sysconfdir}/mc/mc.keymap
+<a id='L151' name='L151'></a>%config(noreplace) %{_sysconfdir}/mc/mc.keymap.*
+<a id='L152' name='L152'></a> 
+<a id='L153' name='L153'></a>%dir %{_datadir}/mc
+<a id='L154' name='L154'></a>%{_datadir}/mc/*
+<a id='L155' name='L155'></a> 
+<a id='L156' name='L156'></a>%changelog
+<a id='L157' name='L157'></a> 
+<a id='L158' name='L158'></a>* Fri Oct 14 2011 Slava Zanko &lt;slavazanko@gmail.com&gt;
+<a id='L159' name='L159'></a>- Changed License version
+<a id='L160' name='L160'></a> 
+<a id='L161' name='L161'></a>* Thu Jul 14 2011 Slava Zanko &lt;slavazanko@gmail.com&gt;
+<a id='L162' name='L162'></a>- Added %{_libexecdir}/mc/fish directory to spec file
+<a id='L163' name='L163'></a> 
+<a id='L164' name='L164'></a>* Thu Sep 16 2010 Andrew Borodin &lt;aborodin@vmail.ru&gt;
+<a id='L165' name='L165'></a>- Some files are installed now into %%{_datadir}/mc instead of %%{_sysconfdir}/mc.
+<a id='L166' name='L166'></a> 
+<a id='L167' name='L167'></a>* Wed Apr 28 2010 Yury V. Zaytsev &lt;yury@shurup.com&gt;
+<a id='L168' name='L168'></a>- Added mcdiff to the list of packaged files.
+<a id='L169' name='L169'></a> 
+<a id='L170' name='L170'></a>* Tue Feb 09 2010 Andrew Borodin &lt;aborodin@vmail.ru&gt;
+<a id='L171' name='L171'></a>- Fixed file list because of EXTFS VFS reorganizing.
+<a id='L172' name='L172'></a> 
+<a id='L173' name='L173'></a>* Wed Dec 30 2009 Yury V. Zaytsev &lt;yury@shurup.com&gt;
+<a id='L174' name='L174'></a>- Bumped the epoch again and changed the versioning scheme.
+<a id='L175' name='L175'></a>- Thanks to Slava Zanko for all his hard work on m4 vodoo!
+<a id='L176' name='L176'></a> 
+<a id='L177' name='L177'></a>* Fri Dec 25 2009 Yury V. Zaytsev &lt;yury@shurup.com&gt;
+<a id='L178' name='L178'></a>- Had to bump the epoch because of the braindead versioning scheme used.
+<a id='L179' name='L179'></a> 
+<a id='L180' name='L180'></a>* Fri Nov 27 2009 Yury V. Zaytsev &lt;yury@shurup.com&gt;
+<a id='L181' name='L181'></a>- Fixed debug info generation for legacy distros.
+<a id='L182' name='L182'></a>- Rewritten and simplified static build procedure.
+<a id='L183' name='L183'></a> 
+<a id='L184' name='L184'></a>* Mon Oct 26 2009 Andrew Borodin &lt;aborodin@vmail.ru&gt;
+<a id='L185' name='L185'></a>- Added new %%{_sysconfdir}/mc/mc.keymap.* files.
+<a id='L186' name='L186'></a> 
+<a id='L187' name='L187'></a>* Fri Sep 04 2009 Slava Zanko &lt;slavazanko@gmail.com&gt;
+<a id='L188' name='L188'></a>- Add new file %%{_sysconfdir}/mc/filehighlight.ini.
+<a id='L189' name='L189'></a> 
+<a id='L190' name='L190'></a>* Sat Aug 01 2009 Yury V. Zaytsev &lt;yury@shurup.com&gt;
+<a id='L191' name='L191'></a>- Fixed EL4 (and supposedly EL3) builds.
+<a id='L192' name='L192'></a>- Fixed some of the rpmlint warnings.
+<a id='L193' name='L193'></a> 
+<a id='L194' name='L194'></a>* Sat Jul 04 2009 Yury V. Zaytsev &lt;yury@shurup.com&gt;
+<a id='L195' name='L195'></a>- Fix the issue when wrappers were left unpackaged.
+<a id='L196' name='L196'></a> 
+<a id='L197' name='L197'></a>* Thu May 21 2009 Slava Zanko &lt;slavazanko@gmail.com&gt;
+<a id='L198' name='L198'></a>- Fix install patches: use %%{_sysconfdir}/mc directory.
+<a id='L199' name='L199'></a> 
+<a id='L200' name='L200'></a>* Fri May 8 2009 Slava Zanko &lt;slavazanko@gmail.com&gt;
+<a id='L201' name='L201'></a>- Reviewed spec-file to build on the current distributions.
+<a id='L202' name='L202'></a>- Changed build rules.
+<a id='L203' name='L203'></a>- Fixed install paths.
+<a id='L204' name='L204'></a> 
+<a id='L205' name='L205'></a>* Fri Jun 22 2007 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L206' name='L206'></a>- Made cons.saver suid vcsa, it's needed for Fedora 7.
+<a id='L207' name='L207'></a> 
+<a id='L208' name='L208'></a>* Thu Dec 21 2006 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L209' name='L209'></a>- Don't rely on brace expansion, it may be disabled.
+<a id='L210' name='L210'></a> 
+<a id='L211' name='L211'></a>* Mon Jan 30 2006 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L212' name='L212'></a>- Avoid using %%{_prefix} where more specialized macros are available.
+<a id='L213' name='L213'></a> 
+<a id='L214' name='L214'></a>* Tue Aug 02 2005 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L215' name='L215'></a>- Replace obsolete "Copyright" with "License".
+<a id='L216' name='L216'></a> 
+<a id='L217' name='L217'></a>* Thu Mar 31 2005 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L218' name='L218'></a>- Comment out build dependencies - they are too distribution specific.
+<a id='L219' name='L219'></a> 
+<a id='L220' name='L220'></a>* Tue Sep 23 2003 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L221' name='L221'></a>- Remove term directory, it's obsolete and irrelevant on modern systems.
+<a id='L222' name='L222'></a>- Include translated menu files.
+<a id='L223' name='L223'></a> 
+<a id='L224' name='L224'></a>* Sun Feb 16 2003 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L225' name='L225'></a>- Remove obsolete dependency on /sbin/chkconfig.
+<a id='L226' name='L226'></a> 
+<a id='L227' name='L227'></a>* Tue Dec 24 2002 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L228' name='L228'></a>- Work around bug in rpm 4.1 that expands defines in comments.
+<a id='L229' name='L229'></a>- Handle --without-x.
+<a id='L230' name='L230'></a> 
+<a id='L231' name='L231'></a>* Mon Nov 04 2002 Andrew V. Samoilov &lt;sav@bcs.zp.ua&gt;
+<a id='L232' name='L232'></a>- Handle --with ext2undel.
+<a id='L233' name='L233'></a> 
+<a id='L234' name='L234'></a>* Fri Nov 01 2002 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L235' name='L235'></a>- Add wrappers to support setting last directory on exit.  Keep all
+<a id='L236' name='L236'></a>  scripts in their original directory, just copy them.
+<a id='L237' name='L237'></a> 
+<a id='L238' name='L238'></a>* Tue Oct 22 2002 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L239' name='L239'></a>- Don't use the included S-Lang, there is a workaround for Red Hat 8.0
+<a id='L240' name='L240'></a>  S-Lang, and binary compatibility with Red Hat 7.x doesn't work anyway.
+<a id='L241' name='L241'></a> 
+<a id='L242' name='L242'></a>* Tue Oct 08 2002 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L243' name='L243'></a>- Use the included S-Lang again, since we include a better version now.
+<a id='L244' name='L244'></a>  This should avoid incompatibility with Red Hat 7.x.
+<a id='L245' name='L245'></a>- Add _with_glib2 option.
+<a id='L246' name='L246'></a> 
+<a id='L247' name='L247'></a>* Mon Oct 07 2002 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L248' name='L248'></a>- Remove installed mc.sh and mc.csh from %%{_prefix}/share/mc/bin to
+<a id='L249' name='L249'></a>  suppress a warning about installed but unpackaged files.
+<a id='L250' name='L250'></a> 
+<a id='L251' name='L251'></a>* Mon Sep 30 2002 Andrew V. Samoilov &lt;sav@bcs.zp.ua&gt;
+<a id='L252' name='L252'></a>- Don't require slang-devel if _with_ncurses.
+<a id='L253' name='L253'></a>- Handle --with samba.
+<a id='L254' name='L254'></a> 
+<a id='L255' name='L255'></a>* Sun Sep 29 2002 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L256' name='L256'></a>- Use --with-screen instead of --with-ncurses and --with-included-slang.
+<a id='L257' name='L257'></a> 
+<a id='L258' name='L258'></a>* Mon Sep 23 2002 Andrew V. Samoilov &lt;sav@bcs.zp.ua&gt;
+<a id='L259' name='L259'></a>- Restore %%config for %%{_prefix}/share/mc/mc.charsets.
+<a id='L260' name='L260'></a>- Restore %%{_prefix}/share/mc/edit.spell.rc.
+<a id='L261' name='L261'></a> 
+<a id='L262' name='L262'></a>* Sat Sep 21 2002 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L263' name='L263'></a>- Use FHS-compliant paths.
+<a id='L264' name='L264'></a>- Drop %%config from files under /usr/share - users are not supposed to
+<a id='L265' name='L265'></a>  edit them.  Local copies under ~/.mc should be used for that.
+<a id='L266' name='L266'></a> 
+<a id='L267' name='L267'></a>* Wed Aug 21 2002 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L268' name='L268'></a>- Change description, update URLs, allow dash in the version.
+<a id='L269' name='L269'></a> 
+<a id='L270' name='L270'></a>* Tue Aug 20 2002 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L271' name='L271'></a>- Support conditional builds.
+<a id='L272' name='L272'></a> 
+<a id='L273' name='L273'></a>* Tue Aug 20 2002 Andrew V. Samoilov &lt;sav@bcs.zp.ua&gt;
+<a id='L274' name='L274'></a>- Add /usr/lib/mc/mc.charsets.
+<a id='L275' name='L275'></a>- Add %%{_mandir}/*/man1/*.
+<a id='L276' name='L276'></a> 
+<a id='L277' name='L277'></a>* Fri Aug 16 2002 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L278' name='L278'></a>- Remove mc.global.
+<a id='L279' name='L279'></a> 
+<a id='L280' name='L280'></a>* Mon Jan 21 2002 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L281' name='L281'></a>- Remove --with-gnome and --with-included-slang from configure options.
+<a id='L282' name='L282'></a>- Add BuildPrereq.
+<a id='L283' name='L283'></a> 
+<a id='L284' name='L284'></a>* Fri Aug 24 2001 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L285' name='L285'></a>- Remove gmc.  Reunite mc and mc-common.
+<a id='L286' name='L286'></a> 
+<a id='L287' name='L287'></a>* Sun Aug 05 2001 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L288' name='L288'></a>- Set epoch.
+<a id='L289' name='L289'></a> 
+<a id='L290' name='L290'></a>* Sun Jul 15 2001 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L291' name='L291'></a>- Remove /usr/lib/mc/layout.
+<a id='L292' name='L292'></a> 
+<a id='L293' name='L293'></a>* Sat Jun 09 2001 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L294' name='L294'></a>- Use %%{_prefix} and %%{_mandir}. Specify --mandir to configure.
+<a id='L295' name='L295'></a> 
+<a id='L296' name='L296'></a>* Fri May 25 2001 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L297' name='L297'></a>- Change groups. Don't include locale directories. More config files.
+<a id='L298' name='L298'></a> 
+<a id='L299' name='L299'></a>* Sun May 20 2001 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L300' name='L300'></a>- Don't require stylesheets, since HTML files are now in the tarball.
+<a id='L301' name='L301'></a> 
+<a id='L302' name='L302'></a>* Thu Apr 19 2001 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L303' name='L303'></a>- Remove package mcserv. Drop dependency on PAM.
+<a id='L304' name='L304'></a> 
+<a id='L305' name='L305'></a>* Mon Feb 26 2001 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L306' name='L306'></a>- Remove mc-gnome.ext.
+<a id='L307' name='L307'></a> 
+<a id='L308' name='L308'></a>* Thu Jan 11 2001 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L309' name='L309'></a>- Include mcview.
+<a id='L310' name='L310'></a> 
+<a id='L311' name='L311'></a>* Mon Oct 23 2000 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L312' name='L312'></a>- Allow mcserv.8 to be gzipped.
+<a id='L313' name='L313'></a> 
+<a id='L314' name='L314'></a>* Sat Sep 30 2000 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L315' name='L315'></a>- New package mc-common.
+<a id='L316' name='L316'></a>- Use DESTDIR instead of misusing prefix.
+<a id='L317' name='L317'></a>- Don't install old icons - they don't exist
+<a id='L318' name='L318'></a> 
+<a id='L319' name='L319'></a>* Sat Sep 23 2000 Pavel Roskin &lt;proski@gnu.org&gt;
+<a id='L320' name='L320'></a>- Include translations with mc, not gmc.
+<a id='L321' name='L321'></a>- chkconfig --del in %%preun, not %%postun.
+<a id='L322' name='L322'></a>- --without-debug not needed.
+<a id='L323' name='L323'></a>- /etc/X11/wmconfig not needed.
+<a id='L324' name='L324'></a>- /etc/pam.d/mcserv shouldn't be executable.
+<a id='L325' name='L325'></a>- New files in %%{prefix}/lib/mc/ - translated hints, editor files.
+<a id='L326' name='L326'></a> 
+<a id='L327' name='L327'></a>* Thu Sep 09 1999 Elliot Lee &lt;sopwith@redhat.com&gt;
+<a id='L328' name='L328'></a>- Include .idl files in the package.
+<a id='L329' name='L329'></a> 
+<a id='L330' name='L330'></a>* Sat Sep 04 1999 Gregory McLean &lt;gregm@comstar.net&gt;
+<a id='L331' name='L331'></a>- Added a build prereq so that rpms get built with documentation ;)
+<a id='L332' name='L332'></a> 
+<a id='L333' name='L333'></a>* Mon Jul 12 1999 Kjartan Maraas  &lt;kmaraas@online.no&gt;
+<a id='L334' name='L334'></a>- Added help and locale files to %%files.
+<a id='L335' name='L335'></a> 
+<a id='L336' name='L336'></a>* Tue Jun 22 1999 Vladimir Kondratiev &lt;vkondra@iil.intel.com&gt;
+<a id='L337' name='L337'></a>- Added syntax files to %%files.
+<a id='L338' name='L338'></a> 
+<a id='L339' name='L339'></a>* Wed May 26 1999 Cody Russell &lt;bratsche@dfw.net&gt;
+<a id='L340' name='L340'></a>- Chmod cons.saver at $RPM_BUILD_ROOT%%{prefix}/lib rather than at
+<a id='L341' name='L341'></a>  $RPM_BUILD_ROOT/usr/lib. We can now install to somewhere other than /usr.
+<a id='L342' name='L342'></a> 
+<a id='L343' name='L343'></a>* Sun Apr 18 1999 Gregory McLean &lt;gregm@comstar.net&gt;
+<a id='L344' name='L344'></a>- Updated the specfile, removed some kludges.
+<a id='L345' name='L345'></a> 
+<a id='L346' name='L346'></a>* Thu Aug 20 1998 Michael Fulbright &lt;msf@redhat.com&gt;
+<a id='L347' name='L347'></a>- Rebuilt against gnome-libs 0.27 and gtk+-1.1.
+<a id='L348' name='L348'></a> 
+<a id='L349' name='L349'></a>* Thu Jul 09 1998 Michael Fulbright &lt;msf@redhat.com&gt;
+<a id='L350' name='L350'></a>- Made cons.saver not setuid.
+<a id='L351' name='L351'></a> 
+<a id='L352' name='L352'></a>* Sun Apr 19 1998 Marc Ewing &lt;marc@redhat.com&gt;
+<a id='L353' name='L353'></a>- Removed tkmc.
+<a id='L354' name='L354'></a> 
+<a id='L355' name='L355'></a>* Wed Apr 8 1998 Marc Ewing &lt;marc@redhat.com&gt;
+<a id='L356' name='L356'></a>- Add /usr/lib/mc/layout to gmc.
+<a id='L357' name='L357'></a> 
+</pre>
+<hr />
+<a id='BOTTOM' name='BOTTOM'></a>
+<em class='comment'>/* <img class='icon' src='../icons/n_left.png' alt='[previous]' /><img class='icon' src='../icons/n_right.png' alt='[next]' /><img class='icon' src='../icons/n_first.png' alt='[first]' /><img class='icon' src='../icons/n_last.png' alt='[last]' /><a href='#TOP'><img class='icon' src='../icons/top.png' alt='[top]' /></a><img class='icon' src='../icons/n_bottom.png' alt='[bottom]' /><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a>&nbsp;<em class='position'>[+357 contrib/dist/redhat/mc.spec.in]</em> */</em>
+</body>
+</html>

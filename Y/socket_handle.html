@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>socket_handle</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L378'>socket_handle</a>     378 src/vfs/sftpfs/connection.c     super_data-&gt;socket_handle = sftpfs_open_socket (super, mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L379'>socket_handle</a>     379 src/vfs/sftpfs/connection.c     if (super_data-&gt;socket_handle == LIBSSH2_INVALID_SOCKET)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L391'>socket_handle</a>     391 src/vfs/sftpfs/connection.c     rc = libssh2_session_startup (super_data-&gt;session, super_data-&gt;socket_handle);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L394'>socket_handle</a>     394 src/vfs/sftpfs/connection.c                                     (libssh2_socket_t) super_data-&gt;socket_handle);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L470'>socket_handle</a>     470 src/vfs/sftpfs/connection.c     if (super_data-&gt;socket_handle != LIBSSH2_INVALID_SOCKET)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L472'>socket_handle</a>     472 src/vfs/sftpfs/connection.c         close (super_data-&gt;socket_handle);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L473'>socket_handle</a>     473 src/vfs/sftpfs/connection.c         super_data-&gt;socket_handle = LIBSSH2_INVALID_SOCKET;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L108'>socket_handle</a>     108 src/vfs/sftpfs/internal.c     FD_SET (super_data-&gt;socket_handle, &amp;fd);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L119'>socket_handle</a>     119 src/vfs/sftpfs/internal.c     return select (super_data-&gt;socket_handle + 1, readfd, writefd, NULL, &amp;timeout);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L49'>socket_handle</a>      49 src/vfs/sftpfs/internal.h     int socket_handle;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L107'>socket_handle</a>     107 src/vfs/sftpfs/vfs_subclass.c     sftpfs_super_data-&gt;socket_handle = LIBSSH2_INVALID_SOCKET;</span>
+</pre>
+</body>
+</html>

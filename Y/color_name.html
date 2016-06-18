@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>color_name</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L100'>color_name</a>        100 lib/tty/color-internal.c parse_256_color_name (const char *color_name)</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L106'>color_name</a>        106 lib/tty/color-internal.c     if (sscanf (color_name, "color%d%c", &amp;i, &amp;dummy) == 1 &amp;&amp; i &gt;= 0 &amp;&amp; i &lt; 256)</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L111'>color_name</a>        111 lib/tty/color-internal.c     if (sscanf (color_name, "gray%d%c", &amp;i, &amp;dummy) == 1 &amp;&amp; i &gt;= 0 &amp;&amp; i &lt; 24)</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L115'>color_name</a>        115 lib/tty/color-internal.c     if (strncmp (color_name, "rgb", 3) == 0 &amp;&amp;</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L116'>color_name</a>        116 lib/tty/color-internal.c         color_name[3] &gt;= '0' &amp;&amp; color_name[3] &lt; '6' &amp;&amp;</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L117'>color_name</a>        117 lib/tty/color-internal.c         color_name[4] &gt;= '0' &amp;&amp; color_name[4] &lt; '6' &amp;&amp;</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L118'>color_name</a>        118 lib/tty/color-internal.c         color_name[5] &gt;= '0' &amp;&amp; color_name[5] &lt; '6' &amp;&amp; color_name[6] == '\0')</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L120'>color_name</a>        120 lib/tty/color-internal.c         return 16 + 36 * (color_name[3] - '0') + 6 * (color_name[4] - '0') + (color_name[5] - '0');</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L161'>color_name</a>        161 lib/tty/color-internal.c tty_color_get_index_by_name (const char *color_name)</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L163'>color_name</a>        163 lib/tty/color-internal.c     if (color_name != NULL)</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L168'>color_name</a>        168 lib/tty/color-internal.c             if (strcmp (color_name, color_table[i].name) == 0)</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L170'>color_name</a>        170 lib/tty/color-internal.c         return parse_256_color_name (color_name);</span>
+</pre>
+</body>
+</html>

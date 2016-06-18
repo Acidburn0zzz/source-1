@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>d</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1763'>d</a>                1763 lib/tty/key.c          int d;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1766'>d</a>                1766 lib/tty/key.c          d = *pending_keys++;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1767'>d</a>                1767 lib/tty/key.c          while (d == ESC_CHAR)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1768'>d</a>                1768 lib/tty/key.c              d = ALT (*pending_keys++);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1789'>d</a>                1789 lib/tty/key.c          if (d &gt; 127 &amp;&amp; d &lt; 256 &amp;&amp; use_8th_bit_as_meta)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1790'>d</a>                1790 lib/tty/key.c              d = ALT (d &amp; 0x7f);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1793'>d</a>                1793 lib/tty/key.c          return correct_key_code (d);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L380'>d</a>                 380 lib/util.c         char *d;</span>
+<span class='curline'><a href='../S/lib--util.c.html#L384'>d</a>                 384 lib/util.c         d = x + sizeof (x) - 1;</span>
+<span class='curline'><a href='../S/lib--util.c.html#L385'>d</a>                 385 lib/util.c         *d-- = '\0';</span>
+<span class='curline'><a href='../S/lib--util.c.html#L387'>d</a>                 387 lib/util.c             *d-- = *p--;</span>
+<span class='curline'><a href='../S/lib--util.c.html#L392'>d</a>                 392 lib/util.c                 *d-- = ',';</span>
+<span class='curline'><a href='../S/lib--util.c.html#L395'>d</a>                 395 lib/util.c             *d-- = *p--;</span>
+<span class='curline'><a href='../S/lib--util.c.html#L397'>d</a>                 397 lib/util.c         d++;</span>
+<span class='curline'><a href='../S/lib--util.c.html#L398'>d</a>                 398 lib/util.c         if (*d == ',')</span>
+<span class='curline'><a href='../S/lib--util.c.html#L399'>d</a>                 399 lib/util.c             d++;</span>
+<span class='curline'><a href='../S/lib--util.c.html#L400'>d</a>                 400 lib/util.c         return d;</span>
+<span class='curline'><a href='../S/lib--util.c.html#L579'>d</a>                 579 lib/util.c         const char *d = strrchr (filename, '.');</span>
+<span class='curline'><a href='../S/lib--util.c.html#L580'>d</a>                 580 lib/util.c         return (d != NULL) ? d + 1 : "";</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L522'>d</a>                 522 lib/vfs/parse_ls_vga.c     int d[3];</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L574'>d</a>                 574 lib/vfs/parse_ls_vga.c             if (sscanf (p, "%2d-%2d-%d", &amp;d[0], &amp;d[1], &amp;d[2]) == 3)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L577'>d</a>                 577 lib/vfs/parse_ls_vga.c                 if (d[0] &gt; 0)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L578'>d</a>                 578 lib/vfs/parse_ls_vga.c                     d[0]--;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L580'>d</a>                 580 lib/vfs/parse_ls_vga.c                 if (d[2] &gt; 1900)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L582'>d</a>                 582 lib/vfs/parse_ls_vga.c                     d[2] -= 1900;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L587'>d</a>                 587 lib/vfs/parse_ls_vga.c                     if (d[2] &lt; 70)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L588'>d</a>                 588 lib/vfs/parse_ls_vga.c                         d[2] += 100;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L591'>d</a>                 591 lib/vfs/parse_ls_vga.c                 tim.tm_mon = d[0];</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L592'>d</a>                 592 lib/vfs/parse_ls_vga.c                 tim.tm_mday = d[1];</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L593'>d</a>                 593 lib/vfs/parse_ls_vga.c                 tim.tm_year = d[2];</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L119'>d</a>                 119 lib/widget/dialog-switch.c     WDialog *d = data;</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L123'>d</a>                 123 lib/widget/dialog-switch.c     if (widget_get_state (WIDGET (d), WST_ACTIVE))</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L124'>d</a>                 124 lib/widget/dialog-switch.c         send_message (d, NULL, MSG_RESIZE, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L126'>d</a>                 126 lib/widget/dialog-switch.c         d-&gt;winch_pending = TRUE;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1014'>d</a>                1014 lib/widget/dialog.c     GList *d;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1022'>d</a>                1022 lib/widget/dialog.c     d = g_list_find (h-&gt;widgets, w);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1023'>d</a>                1023 lib/widget/dialog.c     if (d == h-&gt;current)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1024'>d</a>                1024 lib/widget/dialog.c         h-&gt;current = dlg_widget_next (h, d);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1026'>d</a>                1026 lib/widget/dialog.c     h-&gt;widgets = g_list_remove_link (h-&gt;widgets, d);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1027'>d</a>                1027 lib/widget/dialog.c     send_message (d-&gt;data, NULL, MSG_DESTROY, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1028'>d</a>                1028 lib/widget/dialog.c     g_free (d-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1029'>d</a>                1029 lib/widget/dialog.c     g_list_free_1 (d);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1044'>d</a>                1044 lib/widget/dialog.c     GList *d = top_dlg;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1048'>d</a>                1048 lib/widget/dialog.c         if ((d != NULL) &amp;&amp; (d-&gt;data != NULL))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1049'>d</a>                1049 lib/widget/dialog.c             dlg_redraw (DIALOG (d-&gt;data));</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1054'>d</a>                1054 lib/widget/dialog.c         for (; d != NULL; d = g_list_next (d))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1055'>d</a>                1055 lib/widget/dialog.c             if (d-&gt;data != NULL &amp;&amp; (WIDGET (d-&gt;data)-&gt;pos_flags &amp; WPOS_FULLSCREEN) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1058'>d</a>                1058 lib/widget/dialog.c         for (; d != NULL; d = g_list_previous (d))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1059'>d</a>                1059 lib/widget/dialog.c             if (d-&gt;data != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1060'>d</a>                1060 lib/widget/dialog.c                 dlg_redraw (DIALOG (d-&gt;data));</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L127'>d</a>                 127 lib/widget/dialog.h int dlg_run (WDialog * d);</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.h.html#L10'>d</a>                  10 lib/widget/listbox-window.h #define LISTBOX_APPEND_TEXT(l,h,t,d,f) \</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.h.html#L11'>d</a>                  11 lib/widget/listbox-window.h     listbox_add_item (l-&gt;list, LISTBOX_APPEND_AT_END, h, t, d, f)</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L122'>d</a>                 122 lib/widget/wtools.c     WDialog *d;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L127'>d</a>                 127 lib/widget/wtools.c     d = last_query_dlg;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L130'>d</a>                 130 lib/widget/wtools.c     send_message (d, NULL, MSG_RESIZE, 0, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L132'>d</a>                 132 lib/widget/wtools.c     dlg_init (d);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L135'>d</a>                 135 lib/widget/wtools.c     return d;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L147'>d</a>                 147 lib/widget/wtools.c     WDialog *d;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L149'>d</a>                 149 lib/widget/wtools.c     d = do_create_message (flags, title, text);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L151'>d</a>                 151 lib/widget/wtools.c     dlg_run_done (d);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L152'>d</a>                 152 lib/widget/wtools.c     dlg_destroy (d);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L386'>d</a>                 386 lib/widget/wtools.c     WDialog *d;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L393'>d</a>                 393 lib/widget/wtools.c     d = do_create_message (flags, title, p);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L396'>d</a>                 396 lib/widget/wtools.c     return d;</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L74'>d</a>                  74 src/clipboard.c     const char *d = getenv ("DISPLAY");</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L81'>d</a>                  81 src/clipboard.c     if (d == NULL || clipboard_store_path == NULL || clipboard_store_path[0] == '\0')</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L104'>d</a>                 104 src/clipboard.c     const char *d = getenv ("DISPLAY");</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L111'>d</a>                 111 src/clipboard.c     if (d == NULL || clipboard_paste_path == NULL || clipboard_paste_path[0] == '\0')</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1869'>d</a>                1869 src/diffviewer/ydiff.c     int d = 1;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1872'>d</a>                1872 src/diffviewer/ydiff.c         d++;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1873'>d</a>                1873 src/diffviewer/ydiff.c     return d;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2965'>d</a>                2965 src/diffviewer/ydiff.c     Widget *d;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2969'>d</a>                2969 src/diffviewer/ydiff.c     d = WIDGET (dview);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2970'>d</a>                2970 src/diffviewer/ydiff.c     h = d-&gt;owner;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2973'>d</a>                2973 src/diffviewer/ydiff.c     buttonbar_set_label (b, 1, Q_ ("ButtonBar|Help"), diff_map, d);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2974'>d</a>                2974 src/diffviewer/ydiff.c     buttonbar_set_label (b, 2, Q_ ("ButtonBar|Save"), diff_map, d);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2975'>d</a>                2975 src/diffviewer/ydiff.c     buttonbar_set_label (b, 4, Q_ ("ButtonBar|Edit"), diff_map, d);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2976'>d</a>                2976 src/diffviewer/ydiff.c     buttonbar_set_label (b, 5, Q_ ("ButtonBar|Merge"), diff_map, d);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2977'>d</a>                2977 src/diffviewer/ydiff.c     buttonbar_set_label (b, 7, Q_ ("ButtonBar|Search"), diff_map, d);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2978'>d</a>                2978 src/diffviewer/ydiff.c     buttonbar_set_label (b, 9, Q_ ("ButtonBar|Options"), diff_map, d);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2979'>d</a>                2979 src/diffviewer/ydiff.c     buttonbar_set_label (b, 10, Q_ ("ButtonBar|Quit"), diff_map, d);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1510'>d</a>                1510 src/editor/edit.c     int i = 1, inc = -1, c, d, n = 0;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1521'>d</a>                1521 src/editor/edit.c     d = p[1];</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1550'>d</a>                1550 src/editor/edit.c         i += (a == c) - (a == d);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2361'>d</a>                2361 src/editor/edit.c         long d;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2364'>d</a>                2364 src/editor/edit.c             d = edit-&gt;undo_stack[(sp - 2) &amp; edit-&gt;undo_stack_size_mask];</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2365'>d</a>                2365 src/editor/edit.c             if (d == c &amp;&amp; edit-&gt;undo_stack[spm1] &gt; -1000000000)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2374'>d</a>                2374 src/editor/edit.c             d = edit-&gt;undo_stack[spm1];</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2375'>d</a>                2375 src/editor/edit.c             if (d == c)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2440'>d</a>                2440 src/editor/edit.c         long d;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2443'>d</a>                2443 src/editor/edit.c             d = edit-&gt;redo_stack[(sp - 2) &amp; edit-&gt;redo_stack_size_mask];</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2444'>d</a>                2444 src/editor/edit.c             if (d == c &amp;&amp; edit-&gt;redo_stack[spm1] &gt; -1000000000)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2453'>d</a>                2453 src/editor/edit.c             d = edit-&gt;redo_stack[spm1];</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2454'>d</a>                2454 src/editor/edit.c             if (d == c)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L543'>d</a>                 543 src/editor/editcmd.c     long b, c, d;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L548'>d</a>                 548 src/editor/editcmd.c     d = (long) edit_move_forward3 (edit, edit_buffer_get_bol (&amp;edit-&gt;buffer, m2), 0, m2);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L549'>d</a>                 549 src/editor/editcmd.c     b = MAX (MIN (c, d), MIN (edit-&gt;column1, edit-&gt;column2));</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L258'>d</a>                 258 src/editor/syntax.c     int c, d, j;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L323'>d</a>                 323 src/editor/syntax.c                 d = c;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L337'>d</a>                 337 src/editor/syntax.c             if (p[1] == d)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L581'>d</a>                 581 src/editor/syntax.c             off_t d = SYNTAX_MARKER_DENSITY;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L586'>d</a>                 586 src/editor/syntax.c                 d += ((syntax_marker_t *) edit-&gt;syntax_marker-&gt;data)-&gt;offset;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L588'>d</a>                 588 src/editor/syntax.c             if (i &gt; d)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L369'>d</a>                 369 src/filemanager/cmd.c         vfs_path_t *s, *d;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L376'>d</a>                 376 src/filemanager/cmd.c             d = vfs_path_append_new (other_panel-&gt;cwd_vpath, fname, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L378'>d</a>                 378 src/filemanager/cmd.c             d = vfs_path_from_str (fname);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L390'>d</a>                 390 src/filemanager/cmd.c         symlink_dialog (s, d, &amp;dest, &amp;src);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L391'>d</a>                 391 src/filemanager/cmd.c         vfs_path_free (d);</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L457'>d</a>                 457 src/filemanager/command.c             char *d;</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L459'>d</a>                 459 src/filemanager/command.c             d = vfs_path_to_str_flags (q_vpath, 0, VPF_STRIP_PASSWORD);</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L460'>d</a>                 460 src/filemanager/command.c             message (D_ERROR, MSG_ERROR, _("Cannot chdir to \"%s\"\n%s"), d,</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L462'>d</a>                 462 src/filemanager/command.c             g_free (d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L918'>d</a>                 918 src/filemanager/file.c                 const char *d)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L927'>d</a>                 927 src/filemanager/file.c     dst_vpath = vfs_path_from_str (d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L960'>d</a>                 960 src/filemanager/file.c             return_status = warn_same_file (_("\"%s\"\nand\n\"%s\"\nare the same file"), s, d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L966'>d</a>                 966 src/filemanager/file.c             message (D_ERROR, MSG_ERROR, _("Cannot overwrite directory \"%s\""), d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L974'>d</a>                 974 src/filemanager/file.c             return_status = query_replace (ctx, d, &amp;src_stats, &amp;dst_stats);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L985'>d</a>                 985 src/filemanager/file.c             return_status = make_symlink (ctx, s, d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1011'>d</a>                1011 src/filemanager/file.c             return_status = files_error (_("Cannot move file \"%s\" to \"%s\"\n%s"), s, d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1025'>d</a>                1025 src/filemanager/file.c     return_status = copy_file_file (tctx, ctx, s, d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1183'>d</a>                1183 src/filemanager/file.c     struct dirent *d;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1190'>d</a>                1190 src/filemanager/file.c     for (d = mc_readdir (dir); d != NULL; d = mc_readdir (dir))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1191'>d</a>                1191 src/filemanager/file.c         if (!DIR_IS_DOT (d-&gt;d_name) &amp;&amp; !DIR_IS_DOTDOT (d-&gt;d_name))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2026'>d</a>                2026 src/filemanager/file.c copy_dir_dir (file_op_total_context_t * tctx, file_op_context_t * ctx, const char *s, const char *d,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2038'>d</a>                2038 src/filemanager/file.c     dst_vpath = vfs_path_from_str (d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2133'>d</a>                2133 src/filemanager/file.c                 return_status = file_error (_("Destination \"%s\" must be a directory\n%s"), d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2155'>d</a>                2155 src/filemanager/file.c     d = vfs_path_as_str (dst_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2165'>d</a>                2165 src/filemanager/file.c                 return_status = file_error (_("Cannot create target directory \"%s\"\n%s"), d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2189'>d</a>                2189 src/filemanager/file.c                 return_status = file_error (_("Cannot chown target directory \"%s\"\n%s"), d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2223'>d</a>                2223 src/filemanager/file.c             mdpath = mc_build_filename (d, next-&gt;d_name, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2238'>d</a>                2238 src/filemanager/file.c             dest_file = mc_build_filename (d, x_basename (path), (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2296'>d</a>                2296 src/filemanager/file.c move_dir_dir (file_op_total_context_t * tctx, file_op_context_t * ctx, const char *s, const char *d)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2305'>d</a>                2305 src/filemanager/file.c     dst_vpath = vfs_path_from_str (d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2323'>d</a>                2323 src/filemanager/file.c         return_status = warn_same_file (_("\"%s\"\nand\n\"%s\"\nare the same directory"), s, d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2340'>d</a>                2340 src/filemanager/file.c     d = vfs_path_as_str (dst_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2348'>d</a>                2348 src/filemanager/file.c             return_status = copy_dir_dir (tctx, ctx, s, d, FALSE, TRUE, TRUE, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2359'>d</a>                2359 src/filemanager/file.c                 return_status = file_error (_("Cannot overwrite directory \"%s\"\n%s"), d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2361'>d</a>                2361 src/filemanager/file.c                 return_status = file_error (_("Cannot overwrite file \"%s\"\n%s"), d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2382'>d</a>                2382 src/filemanager/file.c             return_status = files_error (_("Cannot move directory \"%s\" to \"%s\"\n%s"), s, d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2391'>d</a>                2391 src/filemanager/file.c     return_status = copy_dir_dir (tctx, ctx, s, d, FALSE, FALSE, TRUE, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.h.html#L45'>d</a>                  45 src/filemanager/file.h                                  const char *s, const char *d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.h.html#L47'>d</a>                  47 src/filemanager/file.h                                  const char *s, const char *d,</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1214'>d</a>                1214 src/filemanager/find.c                     char *d;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1216'>d</a>                1216 src/filemanager/find.c                     d = strstr (dir, *ignore_dir);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1217'>d</a>                1217 src/filemanager/find.c                     if (d != NULL &amp;&amp; IS_PATH_SEP (d[-1])</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1218'>d</a>                1218 src/filemanager/find.c                         &amp;&amp; (d[ilen] == '\0' || IS_PATH_SEP (d[ilen])))</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L892'>d</a>                 892 src/filemanager/midnight.c     char *d;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L895'>d</a>                 895 src/filemanager/midnight.c     d = _vfs_get_cwd ();</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L897'>d</a>                 897 src/filemanager/midnight.c     vpath = vfs_path_from_str (d);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L901'>d</a>                 901 src/filemanager/midnight.c     g_free (d);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L925'>d</a>                 925 src/filemanager/mountlist.c             struct dirent *d;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L927'>d</a>                 927 src/filemanager/mountlist.c             while ((d = readdir (dirp)) != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L932'>d</a>                 932 src/filemanager/mountlist.c                 if (DIR_IS_DOT (d-&gt;d_name))</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L935'>d</a>                 935 src/filemanager/mountlist.c                 if (DIR_IS_DOTDOT (d-&gt;d_name))</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L938'>d</a>                 938 src/filemanager/mountlist.c                     name = g_strconcat (PATH_SEP_STR, d-&gt;d_name, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--help.c.html#L128'>d</a>                 128 src/help.c         char *d = local_text;</span>
+<span class='curline'><a href='../S/src--help.c.html#L133'>d</a>                 133 src/help.c         while (*d != '\0')</span>
+<span class='curline'><a href='../S/src--help.c.html#L135'>d</a>                 135 src/help.c             if (*d == '\n')</span>
+<span class='curline'><a href='../S/src--help.c.html#L136'>d</a>                 136 src/help.c                 *d = ' ';</span>
+<span class='curline'><a href='../S/src--help.c.html#L137'>d</a>                 137 src/help.c             str_next_char (&amp;d);</span>
+<span class='curline'><a href='../S/src--help.c.html#L141'>d</a>                 141 src/help.c         for (d = local_text; *e; e++)</span>
+<span class='curline'><a href='../S/src--help.c.html#L143'>d</a>                 143 src/help.c             if (*d == *e)</span>
+<span class='curline'><a href='../S/src--help.c.html#L144'>d</a>                 144 src/help.c                 d++;</span>
+<span class='curline'><a href='../S/src--help.c.html#L146'>d</a>                 146 src/help.c                 d = local_text;</span>
+<span class='curline'><a href='../S/src--help.c.html#L147'>d</a>                 147 src/help.c             if (*d == '\0')</span>
+<span class='curline'><a href='../S/src--help.c.html#L167'>d</a>                 167 src/help.c         const char *d = text;</span>
+<span class='curline'><a href='../S/src--help.c.html#L173'>d</a>                 173 src/help.c                 if (*d == *e)</span>
+<span class='curline'><a href='../S/src--help.c.html#L174'>d</a>                 174 src/help.c                     d++;</span>
+<span class='curline'><a href='../S/src--help.c.html#L176'>d</a>                 176 src/help.c                     d = text;</span>
+<span class='curline'><a href='../S/src--help.c.html#L177'>d</a>                 177 src/help.c                 if (*d == '\0')</span>
+<span class='curline'><a href='../S/src--learn.c.html#L84'>d</a>                  84 src/learn.c        WDialog *d;</span>
+<span class='curline'><a href='../S/src--learn.c.html#L89'>d</a>                  89 src/learn.c        d = create_message (D_ERROR, _("Teach me a key"),</span>
+<span class='curline'><a href='../S/src--learn.c.html#L124'>d</a>                 124 src/learn.c        dlg_run_done (d);</span>
+<span class='curline'><a href='../S/src--learn.c.html#L125'>d</a>                 125 src/learn.c        dlg_destroy (d);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--includes.h.html#L459'>d</a>                 459 src/vfs/smbfs/helpers/include/includes.h #define pstrcpy(d,s) safe_strcpy((d),(s),sizeof(pstring)-1)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--includes.h.html#L460'>d</a>                 460 src/vfs/smbfs/helpers/include/includes.h #define pstrcat(d,s) safe_strcat((d),(s),sizeof(pstring)-1)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--includes.h.html#L461'>d</a>                 461 src/vfs/smbfs/helpers/include/includes.h #define fstrcpy(d,s) safe_strcpy((d),(s),sizeof(fstring)-1)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--includes.h.html#L462'>d</a>                 462 src/vfs/smbfs/helpers/include/includes.h #define fstrcat(d,s) safe_strcat((d),(s),sizeof(fstring)-1)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--md4.c.html#L61'>d</a>                  61 src/vfs/smbfs/helpers/lib/md4.c #define ROUND1(a,b,c,d,k,s) a = lshift(a + F(b,c,d) + X[k], s)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--md4.c.html#L62'>d</a>                  62 src/vfs/smbfs/helpers/lib/md4.c #define ROUND2(a,b,c,d,k,s) a = lshift(a + G(b,c,d) + X[k] + (uint32)0x5A827999,s)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--md4.c.html#L63'>d</a>                  63 src/vfs/smbfs/helpers/lib/md4.c #define ROUND3(a,b,c,d,k,s) a = lshift(a + H(b,c,d) + X[k] + (uint32)0x6ED9EBA1,s)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L238'>d</a>                 238 src/vfs/smbfs/helpers/lib/time.c     int d = TimeZoneFaster (lt);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L239'>d</a>                 239 src/vfs/smbfs/helpers/lib/time.c     time_t t = lt + d;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L242'>d</a>                 242 src/vfs/smbfs/helpers/lib/time.c     if (((lte &lt; lt) ^ (extra_time_offset &lt; 0)) | ((t &lt; lt) ^ (d &lt; 0)))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L277'>d</a>                 277 src/vfs/smbfs/helpers/lib/time.c     double d;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L287'>d</a>                 287 src/vfs/smbfs/helpers/lib/time.c     d = ((double) nt-&gt;high) * 4.0 * (double) (1 &lt;&lt; 30);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L288'>d</a>                 288 src/vfs/smbfs/helpers/lib/time.c     d += (nt-&gt;low &amp; 0xFFF00000);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L289'>d</a>                 289 src/vfs/smbfs/helpers/lib/time.c     d *= 1.0e-7;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L292'>d</a>                 292 src/vfs/smbfs/helpers/lib/time.c     d -= TIME_FIXUP_CONSTANT;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L294'>d</a>                 294 src/vfs/smbfs/helpers/lib/time.c     if (!(l_time_min &lt;= d &amp;&amp; d &lt;= l_time_max))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L297'>d</a>                 297 src/vfs/smbfs/helpers/lib/time.c     ret = (time_t) (d + 0.5);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L327'>d</a>                 327 src/vfs/smbfs/helpers/lib/time.c     double d;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L339'>d</a>                 339 src/vfs/smbfs/helpers/lib/time.c     d = (double) (t);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L340'>d</a>                 340 src/vfs/smbfs/helpers/lib/time.c     d += TIME_FIXUP_CONSTANT;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L341'>d</a>                 341 src/vfs/smbfs/helpers/lib/time.c     d *= 1.0e7;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L343'>d</a>                 343 src/vfs/smbfs/helpers/lib/time.c     nt-&gt;high = (uint32) (d * (1.0 / (4.0 * (double) (1 &lt;&lt; 30))));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--time.c.html#L344'>d</a>                 344 src/vfs/smbfs/helpers/lib/time.c     nt-&gt;low = (uint32) (d - ((double) nt-&gt;high) * 4.0 * (double) (1 &lt;&lt; 30));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1157'>d</a>                1157 src/vfs/smbfs/helpers/lib/util.c     int d = PTR_DIFF (p, buf + ofs);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1159'>d</a>                1159 src/vfs/smbfs/helpers/lib/util.c     if (d &lt; -50 || d &gt; 50)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L869'>d</a>                 869 src/vfs/smbfs/helpers/lib/util_str.c     char *d = dest;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L881'>d</a>                 881 src/vfs/smbfs/helpers/lib/util_str.c     while ((*d++ = *src++));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L891'>d</a>                 891 src/vfs/smbfs/helpers/lib/util_str.c     char *d = dest;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L899'>d</a>                 899 src/vfs/smbfs/helpers/lib/util_str.c     while (n-- &amp;&amp; (*d++ = *src++));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L900'>d</a>                 900 src/vfs/smbfs/helpers/lib/util_str.c     *d = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L171'>d</a>                 171 src/vfs/smbfs/helpers/libsmb/smbdes.c lshift (char *d, int count, int n)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L176'>d</a>                 176 src/vfs/smbfs/helpers/libsmb/smbdes.c         out[i] = d[(i + count) % n];</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L178'>d</a>                 178 src/vfs/smbfs/helpers/libsmb/smbdes.c         d[i] = out[i];</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L204'>d</a>                 204 src/vfs/smbfs/helpers/libsmb/smbdes.c     char d[28];</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L216'>d</a>                 216 src/vfs/smbfs/helpers/libsmb/smbdes.c         d[i] = pk1[i + 28];</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L221'>d</a>                 221 src/vfs/smbfs/helpers/libsmb/smbdes.c         lshift (d, sc[i], 28);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L223'>d</a>                 223 src/vfs/smbfs/helpers/libsmb/smbdes.c         concat (cd, c, d, 28, 28);</span>
+<span class='curline'><a href='../S/tests--lib--search--regex_replace_esc_seq.c.html#L33'>d</a>                  33 tests/lib/search/regex_replace_esc_seq.c #define test_helper_check_valid_data( a, b, c, d, e, f ) \</span>
+<span class='curline'><a href='../S/tests--lib--search--regex_replace_esc_seq.c.html#L36'>d</a>                  36 tests/lib/search/regex_replace_esc_seq.c     fail_unless( c == d, "skip_len(%d) != %d", c, d ); \</span>
+</pre>
+</body>
+</html>

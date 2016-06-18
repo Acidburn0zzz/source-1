@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>winsz</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L261'>winsz</a>             261 lib/tty/tty-ncurses.c     struct winsize winsz;</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L263'>winsz</a>             263 lib/tty/tty-ncurses.c     winsz.ws_col = winsz.ws_row = 0;</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L271'>winsz</a>             271 lib/tty/tty-ncurses.c     ioctl (fileno (stdout), TIOCGWINSZ, &amp;winsz);</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L272'>winsz</a>             272 lib/tty/tty-ncurses.c     if (winsz.ws_col != 0 &amp;&amp; winsz.ws_row != 0)</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L275'>winsz</a>             275 lib/tty/tty-ncurses.c         resizeterm (winsz.ws_row, winsz.ws_col);</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L278'>winsz</a>             278 lib/tty/tty-ncurses.c         COLS = winsz.ws_col;</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L279'>winsz</a>             279 lib/tty/tty-ncurses.c         LINES = winsz.ws_row;</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L167'>winsz</a>             167 src/consaver/cons.saver.c     struct winsize winsz;</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L230'>winsz</a>             230 src/consaver/cons.saver.c     winsz.ws_col = winsz.ws_row = 0;</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L231'>winsz</a>             231 src/consaver/cons.saver.c     if (ioctl (console_fd, TIOCGWINSZ, &amp;winsz) &lt; 0</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L232'>winsz</a>             232 src/consaver/cons.saver.c         || winsz.ws_col &lt;= 0 || winsz.ws_row &lt;= 0 || winsz.ws_col &gt;= 256 || winsz.ws_row &gt;= 256)</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L235'>winsz</a>             235 src/consaver/cons.saver.c     buffer_size = 4 + 2 * winsz.ws_col * winsz.ws_row;</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L269'>winsz</a>             269 src/consaver/cons.saver.c             send_contents (buffer + 4, winsz.ws_col, winsz.ws_row);</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>IS_PATH_SEP</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--util.c.html#L156'>IS_PATH_SEP</a>       156 lib/util.c                 if (IS_PATH_SEP (*buf2))</span>
+<span class='curline'><a href='../S/lib--util.c.html#L163'>IS_PATH_SEP</a>       163 lib/util.c             if (*r == '\0' || !IS_PATH_SEP (r[-1]))</span>
+<span class='curline'><a href='../S/lib--util.c.html#L176'>IS_PATH_SEP</a>       176 lib/util.c         else if (IS_PATH_SEP (r[-1]) &amp;&amp; r != buf + 1)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L660'>IS_PATH_SEP</a>       660 lib/util.c             if (!IS_PATH_SEP (s[strlen (s) - 1]))</span>
+<span class='curline'><a href='../S/lib--util.c.html#L663'>IS_PATH_SEP</a>       663 lib/util.c             while (--path_sep &gt; s &amp;&amp; !IS_PATH_SEP (*path_sep))</span>
+<span class='curline'><a href='../S/lib--util.c.html#L668'>IS_PATH_SEP</a>       668 lib/util.c         while (--url_delim &gt; s &amp;&amp; !IS_PATH_SEP (*url_delim))</span>
+<span class='curline'><a href='../S/lib--util.c.html#L670'>IS_PATH_SEP</a>       670 lib/util.c         while (--url_delim &gt; s &amp;&amp; !IS_PATH_SEP (*url_delim))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L678'>IS_PATH_SEP</a>       678 lib/utilunix.c     if (*p == '\0' || IS_PATH_SEP (*p))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L681'>IS_PATH_SEP</a>       681 lib/utilunix.c         q = IS_PATH_SEP (*p) ? p + 1 : "";</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L837'>IS_PATH_SEP</a>       837 lib/utilunix.c     if ((flags &amp; CANON_PATH_GUARDUNC) != 0 &amp;&amp; IS_PATH_SEP (path[0]) &amp;&amp; IS_PATH_SEP (path[1]))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L840'>IS_PATH_SEP</a>       840 lib/utilunix.c         while (p[0] != '\0' &amp;&amp; !IS_PATH_SEP (p[0]))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L842'>IS_PATH_SEP</a>       842 lib/utilunix.c         if (IS_PATH_SEP (p[0]) &amp;&amp; p &gt; path + 2)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L855'>IS_PATH_SEP</a>       855 lib/utilunix.c             if (IS_PATH_SEP (p[0]) &amp;&amp; IS_PATH_SEP (p[1]) &amp;&amp; (p == lpath || *(p - 1) != ':'))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L858'>IS_PATH_SEP</a>       858 lib/utilunix.c                 while (IS_PATH_SEP (*(++s)))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L872'>IS_PATH_SEP</a>       872 lib/utilunix.c             if (IS_PATH_SEP (p[0]) &amp;&amp; p[1] == '.' &amp;&amp; IS_PATH_SEP (p[2]))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L885'>IS_PATH_SEP</a>       885 lib/utilunix.c         while (p &gt; lpath &amp;&amp; IS_PATH_SEP (*p))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L894'>IS_PATH_SEP</a>       894 lib/utilunix.c         if (lpath[0] == '.' &amp;&amp; IS_PATH_SEP (lpath[1]))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L911'>IS_PATH_SEP</a>       911 lib/utilunix.c         if (IS_PATH_SEP (lpath[len - 1])</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L920'>IS_PATH_SEP</a>       920 lib/utilunix.c             if (lpath[len - 1] == '.' &amp;&amp; IS_PATH_SEP (lpath[len - 2]))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L945'>IS_PATH_SEP</a>       945 lib/utilunix.c             if (!IS_PATH_SEP (p[0]) || p[1] != '.' || p[2] != '.'</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L946'>IS_PATH_SEP</a>       946 lib/utilunix.c                 || (!IS_PATH_SEP (p[3]) &amp;&amp; p[3] != '\0'))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L958'>IS_PATH_SEP</a>       958 lib/utilunix.c                 while (s &gt;= lpath &amp;&amp; !IS_PATH_SEP (*s--))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L970'>IS_PATH_SEP</a>       970 lib/utilunix.c                     while (vfs_prefix &gt; lpath &amp;&amp; !IS_PATH_SEP (*--vfs_prefix))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L972'>IS_PATH_SEP</a>       972 lib/utilunix.c                     if (IS_PATH_SEP (*vfs_prefix))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L990'>IS_PATH_SEP</a>       990 lib/utilunix.c                 if (IS_PATH_SEP (*s))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1007'>IS_PATH_SEP</a>      1007 lib/utilunix.c                 if (s == lpath &amp;&amp; IS_PATH_SEP (*s))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1032'>IS_PATH_SEP</a>      1032 lib/utilunix.c                 if (!IS_PATH_SEP (lpath[0]))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1053'>IS_PATH_SEP</a>      1053 lib/utilunix.c                     while (p &gt;= lpath &amp;&amp; !IS_PATH_SEP (*p))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1119'>IS_PATH_SEP</a>      1119 lib/utilunix.c     if (!IS_PATH_SEP (*path))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1134'>IS_PATH_SEP</a>      1134 lib/utilunix.c         if (!IS_PATH_SEP (new_path[-1]))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1146'>IS_PATH_SEP</a>      1146 lib/utilunix.c         if (IS_PATH_SEP (*path))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1154'>IS_PATH_SEP</a>      1154 lib/utilunix.c             if (path[1] == '\0' || IS_PATH_SEP (path[1]))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1161'>IS_PATH_SEP</a>      1161 lib/utilunix.c                 if (path[2] == '\0' || IS_PATH_SEP (path[2]))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1168'>IS_PATH_SEP</a>      1168 lib/utilunix.c                     while (!IS_PATH_SEP ((--new_path)[-1]))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1175'>IS_PATH_SEP</a>      1175 lib/utilunix.c         while (*path != '\0' &amp;&amp; !IS_PATH_SEP (*path))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1209'>IS_PATH_SEP</a>      1209 lib/utilunix.c             if (IS_PATH_SEP (*link_path))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1214'>IS_PATH_SEP</a>      1214 lib/utilunix.c                 while (!IS_PATH_SEP (*(--new_path)))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1231'>IS_PATH_SEP</a>      1231 lib/utilunix.c     if (new_path != got_path + 1 &amp;&amp; IS_PATH_SEP (new_path[-1]))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1312'>IS_PATH_SEP</a>      1312 lib/utilunix.c     absolute = IS_PATH_SEP (*first_element);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1330'>IS_PATH_SEP</a>      1330 lib/utilunix.c             start = IS_PATH_SEP (tmp_element[0]) ? tmp_element + 1 : tmp_element;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1333'>IS_PATH_SEP</a>      1333 lib/utilunix.c             if (!IS_PATH_SEP (tmp_element[len - 1]) &amp;&amp; element != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L154'>IS_PATH_SEP</a>       154 lib/vfs/direntry.c     if (!IS_PATH_SEP (*linkname))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L194'>IS_PATH_SEP</a>       194 lib/vfs/direntry.c         while (IS_PATH_SEP (*path))     /* Strip leading '/' */</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L203'>IS_PATH_SEP</a>       203 lib/vfs/direntry.c         for (pseg = 0; path[pseg] != '\0' &amp;&amp; !IS_PATH_SEP (path[pseg]); pseg++)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L733'>IS_PATH_SEP</a>       733 lib/vfs/interface.c             if (IS_PATH_SEP (*p) &amp;&amp; p &gt; path_element-&gt;path)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L850'>IS_PATH_SEP</a>       850 lib/vfs/interface.c     if (sys_tmp == NULL || !IS_PATH_SEP (sys_tmp[0]))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L143'>IS_PATH_SEP</a>       143 lib/vfs/path.c     if (!IS_PATH_SEP (*path))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L199'>IS_PATH_SEP</a>       199 lib/vfs/path.c     if (semi == path || IS_PATH_SEP (semi[-1]))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L451'>IS_PATH_SEP</a>       451 lib/vfs/path.c         while (real_vfs_prefix_start &gt; path &amp;&amp; !IS_PATH_SEP (*real_vfs_prefix_start))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L455'>IS_PATH_SEP</a>       455 lib/vfs/path.c         if (IS_PATH_SEP (*vfs_prefix_start))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L498'>IS_PATH_SEP</a>       498 lib/vfs/path.c         if ((real_vfs_prefix_start &gt; path &amp;&amp; IS_PATH_SEP (*real_vfs_prefix_start)) ||</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L499'>IS_PATH_SEP</a>       499 lib/vfs/path.c             (real_vfs_prefix_start == path &amp;&amp; !IS_PATH_SEP (*real_vfs_prefix_start)))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L540'>IS_PATH_SEP</a>       540 lib/vfs/path.c         if (ret_tokens-&gt;len &gt; 0 &amp;&amp; !IS_PATH_SEP (ret_tokens-&gt;str[ret_tokens-&gt;len - 1]))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L559'>IS_PATH_SEP</a>       559 lib/vfs/path.c         if (ret_tokens-&gt;len &gt; 0 &amp;&amp; !IS_PATH_SEP (ret_tokens-&gt;str[ret_tokens-&gt;len - 1]))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L587'>IS_PATH_SEP</a>       587 lib/vfs/path.c         if (strncmp (dir, home_dir, len) == 0 &amp;&amp; (IS_PATH_SEP (dir[len]) || dir[len] == '\0'))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L609'>IS_PATH_SEP</a>       609 lib/vfs/path.c         if (!is_relative &amp;&amp; !IS_PATH_SEP (*appendfrom) &amp;&amp; *appendfrom != '\0' \</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L610'>IS_PATH_SEP</a>       610 lib/vfs/path.c             &amp;&amp; (buffer-&gt;len == 0 || !IS_PATH_SEP (buffer-&gt;str[buffer-&gt;len - 1]))) \</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L654'>IS_PATH_SEP</a>       654 lib/vfs/path.c             if (!is_relative &amp;&amp; (buffer-&gt;len == 0 || !IS_PATH_SEP (buffer-&gt;str[buffer-&gt;len - 1])))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L677'>IS_PATH_SEP</a>       677 lib/vfs/path.c                     &amp;&amp; (buffer-&gt;len == 0 || !IS_PATH_SEP (buffer-&gt;str[buffer-&gt;len - 1])))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1550'>IS_PATH_SEP</a>      1550 lib/vfs/path.c     if (!IS_PATH_SEP (*element-&gt;path))</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L256'>IS_PATH_SEP</a>       256 lib/vfs/utilvfs.c         while (!IS_PATH_SEP (*dir) &amp;&amp; *dir != '\0')</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L82'>IS_PATH_SEP</a>        82 lib/vfs/vfs.c  #define ISSLASH(a) (a == '\0' || IS_PATH_SEP (a))</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L127'>IS_PATH_SEP</a>       127 lib/vfs/vfs.c      if (semi != NULL &amp;&amp; (semi == path || IS_PATH_SEP (semi[-1])))</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L298'>IS_PATH_SEP</a>       298 lib/widget/input_complete.c             if (!IS_PATH_SEP (temp-&gt;str[temp-&gt;len - 1]))</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L933'>IS_PATH_SEP</a>       933 lib/widget/input_complete.c         if (matches == NULL &amp;&amp; state-&gt;is_cd &amp;&amp; !IS_PATH_SEP (*state-&gt;word) &amp;&amp; *state-&gt;word != '~')</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L214'>IS_PATH_SEP</a>       214 src/editor/editcmd.c     if (!IS_PATH_SEP (*start_filename) &amp;&amp; edit-&gt;dir_vpath != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L446'>IS_PATH_SEP</a>       446 src/filemanager/cmd.c     if (!IS_PATH_SEP (*cd_path))</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L866'>IS_PATH_SEP</a>       866 src/filemanager/cmd.c         if (IS_PATH_SEP (dir[0]) || dir[0] == '~')</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L205'>IS_PATH_SEP</a>       205 src/filemanager/command.c     if (!IS_PATH_SEP (*path))</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L426'>IS_PATH_SEP</a>       426 src/filemanager/command.c             if (IS_PATH_SEP (cmd[operand_pos]))</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L653'>IS_PATH_SEP</a>       653 src/filemanager/dir.c     if (IS_PATH_SEP (vpath_str[0]) &amp;&amp; vpath_str[1] == '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L744'>IS_PATH_SEP</a>       744 src/filemanager/dir.c     if (vfs_path_elements_count (vpath) == 1 &amp;&amp; IS_PATH_SEP (tmp_path[0]) &amp;&amp; tmp_path[1] == '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2705'>IS_PATH_SEP</a>      2705 src/filemanager/file.c             &amp;&amp; !IS_PATH_SEP (tmp_dest_dir[strlen (tmp_dest_dir) - 1]))</span>
+<span class='curline'><a href='../S/src--filemanager--filenot.c.html#L66'>IS_PATH_SEP</a>        66 src/filemanager/filenot.c     if (IS_PATH_SEP (*vfs_path_get_by_index (vpath, 0)-&gt;path))</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L898'>IS_PATH_SEP</a>       898 src/filemanager/find.c     while (IS_PATH_SEP (dir[0]) &amp;&amp; IS_PATH_SEP (dir[1]))</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1208'>IS_PATH_SEP</a>      1208 src/filemanager/find.c                     if (dir[ilen] == '\0' || IS_PATH_SEP (dir[ilen]))</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1217'>IS_PATH_SEP</a>      1217 src/filemanager/find.c                     if (d != NULL &amp;&amp; IS_PATH_SEP (d[-1])</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1218'>IS_PATH_SEP</a>      1218 src/filemanager/find.c                         &amp;&amp; (d[ilen] == '\0' || IS_PATH_SEP (d[ilen])))</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1774'>IS_PATH_SEP</a>      1774 src/filemanager/find.c                 if (IS_PATH_SEP (*p))</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L732'>IS_PATH_SEP</a>       732 src/filemanager/midnight.c     if (!IS_PATH_SEP (cwd_vpath_str[strlen (cwd_vpath_str) - 1]))</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1718'>IS_PATH_SEP</a>      1718 src/filemanager/mountlist.c             (entry == NULL || IS_PATH_SEP (path[i]) || path[i] == '\0'))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2963'>IS_PATH_SEP</a>      2963 src/filemanager/panel.c     if (IS_PATH_SEP (*buffer))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3230'>IS_PATH_SEP</a>      3230 src/filemanager/panel.c             &amp;&amp; (clen == (size_t) (p - lwd) || (p == lwd &amp;&amp; IS_PATH_SEP (cwd[0]) &amp;&amp; cwd[1] == '\0')))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3237'>IS_PATH_SEP</a>      3237 src/filemanager/panel.c     while (--p &gt; lwd &amp;&amp; !IS_PATH_SEP (*p))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3240'>IS_PATH_SEP</a>      3240 src/filemanager/panel.c     while (--p &gt; lwd &amp;&amp; !IS_PATH_SEP (*p))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3244'>IS_PATH_SEP</a>      3244 src/filemanager/panel.c     return (p != lwd || IS_PATH_SEP (*p)) ? p + 1 : p;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4192'>IS_PATH_SEP</a>      4192 src/filemanager/panel.c         if (IS_PATH_SEP (panel_cwd_path[0]) &amp;&amp; panel_cwd_path[1] == '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L341'>IS_PATH_SEP</a>       341 src/filemanager/panelize.c         if (line[0] == '.' &amp;&amp; IS_PATH_SEP (line[1]))</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L362'>IS_PATH_SEP</a>       362 src/filemanager/panelize.c     else if (IS_PATH_SEP (list-&gt;list[0].fname[0]))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L324'>IS_PATH_SEP</a>       324 src/filemanager/tree.c                 for (j = strlen (cname) - 1; !IS_PATH_SEP (cname[j]); j--)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L411'>IS_PATH_SEP</a>       411 src/filemanager/tree.c                     for (j = strlen (cname) - 1; !IS_PATH_SEP (cname[j]); j--)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L153'>IS_PATH_SEP</a>       153 src/filemanager/treestore.c     else if (IS_PATH_SEP (*p1))</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L155'>IS_PATH_SEP</a>       155 src/filemanager/treestore.c     else if (IS_PATH_SEP (*p2))</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L251'>IS_PATH_SEP</a>       251 src/filemanager/treestore.c             if (!IS_PATH_SEP (lc_name[0]))</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L694'>IS_PATH_SEP</a>       694 src/filemanager/treestore.c         is_root = (IS_PATH_SEP (name_vpath_str[0]) &amp;&amp; name_vpath_str[1] == '\0');</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L713'>IS_PATH_SEP</a>       713 src/filemanager/treestore.c         ok = (cname[len] == '\0' || IS_PATH_SEP (cname[len]));</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L747'>IS_PATH_SEP</a>       747 src/filemanager/treestore.c     if (IS_PATH_SEP (cname[0]) &amp;&amp; cname[1] == '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L780'>IS_PATH_SEP</a>       780 src/filemanager/treestore.c             ok = (cname[len] == '\0' || IS_PATH_SEP (cname[len]) || len == 1);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L838'>IS_PATH_SEP</a>       838 src/filemanager/treestore.c         ok = (cname[len] == '\0' || IS_PATH_SEP (cname[len]) || len == 1);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L875'>IS_PATH_SEP</a>       875 src/filemanager/treestore.c         ok = (cname[len] == '\0' || IS_PATH_SEP (cname[len]) || len == 1);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L91'>IS_PATH_SEP</a>        91 src/filemanager/usermenu.c         if (IS_PATH_SEP (*s) &amp;&amp; e != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L425'>IS_PATH_SEP</a>       425 src/vfs/cpio/cpio.c     for (tn = name + strlen (name) - 1; tn &gt;= name &amp;&amp; IS_PATH_SEP (*tn); tn--)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L527'>IS_PATH_SEP</a>       527 src/vfs/extfs/extfs.c                 if (IS_PATH_SEP (*cfn))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L530'>IS_PATH_SEP</a>       530 src/vfs/extfs/extfs.c                 if (p != cfn &amp;&amp; IS_PATH_SEP (p[-1]))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L290'>IS_PATH_SEP</a>       290 src/vfs/ftpfs/ftpfs.c         while (IS_PATH_SEP (*remote_path))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L304'>IS_PATH_SEP</a>       304 src/vfs/ftpfs/ftpfs.c         if (p != NULL &amp;&amp; IS_PATH_SEP (p[1]))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1048'>IS_PATH_SEP</a>      1048 src/vfs/ftpfs/ftpfs.c                         if (!IS_PATH_SEP (bufq[-1]))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1054'>IS_PATH_SEP</a>      1054 src/vfs/ftpfs/ftpfs.c                         if (IS_PATH_SEP (*bufp))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1386'>IS_PATH_SEP</a>      1386 src/vfs/ftpfs/ftpfs.c                            IS_PATH_SEP (*remote_path) ? remote_path + 1 : remote_path);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1489'>IS_PATH_SEP</a>      1489 src/vfs/ftpfs/ftpfs.c             if (IS_PATH_SEP (fel-&gt;linkname[0]))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1513'>IS_PATH_SEP</a>      1513 src/vfs/ftpfs/ftpfs.c                         if (IS_PATH_SEP (fe-&gt;linkname[0]))</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L443'>IS_PATH_SEP</a>       443 src/vfs/sfs/sfs.c             if (*c == ':' || IS_PATH_SEP (*c))</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L446'>IS_PATH_SEP</a>       446 src/vfs/sfs/sfs.c                 if (IS_PATH_SEP (*c))</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L529'>IS_PATH_SEP</a>       529 src/vfs/tar/tar.c         if (len != 0 &amp;&amp; IS_PATH_SEP (header-&gt;header.arch_name[len - 1]))</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L623'>IS_PATH_SEP</a>       623 src/vfs/tar/tar.c         if (len &gt; 1 &amp;&amp; IS_PATH_SEP (current_link_name[len - 1]))</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L181'>IS_PATH_SEP</a>       181 src/vfs/undelfs/undelfs.c     if (p - dirname &gt; 2 &amp;&amp; IS_PATH_SEP (p[-1]) &amp;&amp; p[-2] == '.')</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L187'>IS_PATH_SEP</a>       187 src/vfs/undelfs/undelfs.c         if (IS_PATH_SEP (*p))</span>
+</pre>
+</body>
+</html>

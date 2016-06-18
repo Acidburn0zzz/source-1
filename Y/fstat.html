@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>fstat</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1420'>fstat</a>            1420 lib/vfs/direntry.c     vclass-&gt;fstat = vfs_s_fstat;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L620'>fstat</a>             620 lib/vfs/interface.c     result = vfs-&gt;fstat ? (*vfs-&gt;fstat) (fsinfo, buf) : -1;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L622'>fstat</a>             622 lib/vfs/interface.c         errno = vfs-&gt;fstat ? vfs_ferrno (vfs) : E_NOTSUPP;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L166'>fstat</a>             166 lib/vfs/vfs.h      int (*fstat) (void *vfs_info, struct stat * buf);</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L187'>fstat</a>             187 src/consaver/cons.saver.c     if (fstat (console_fd, &amp;st) &lt; 0 || !S_ISCHR (st.st_mode))</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L224'>fstat</a>             224 src/consaver/cons.saver.c     if (fstat (vcsa_fd, &amp;st) &lt; 0 || !S_ISCHR (st.st_mode))</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L253'>fstat</a>             253 src/consaver/cons.saver.c                 || fstat (console_fd, &amp;st) &lt; 0 || st.st_uid != uid</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L255'>fstat</a>             255 src/consaver/cons.saver.c                 || fstat (console_fd, &amp;st) &lt; 0 || st.st_uid != uid)</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L262'>fstat</a>             262 src/consaver/cons.saver.c                 &amp;&amp; lseek (vcsa_fd, 0, 0) == 0 &amp;&amp; fstat (console_fd, &amp;st) &gt;= 0 &amp;&amp; st.st_uid == uid)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1738'>fstat</a>            1738 src/vfs/extfs/extfs.c     vfs_extfs_ops.fstat = extfs_fstat;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L870'>fstat</a>             870 src/vfs/fish/fish.c     if (fstat (h, &amp;s) &lt; 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1820'>fstat</a>            1820 src/vfs/ftpfs/ftpfs.c     if (fstat (h, &amp;s) == -1 ||</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L400'>fstat</a>             400 src/vfs/local/local.c     return fstat (*((int *) data), buf);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L430'>fstat</a>             430 src/vfs/local/local.c     vfs_local_ops.fstat = local_fstat;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L553'>fstat</a>             553 src/vfs/sfs/sfs.c     vfs_sfs_ops.fstat = local_fstat;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L705'>fstat</a>             705 src/vfs/sftpfs/vfs_class.c     sftpfs_class.fstat = sftpfs_cb_fstat;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2252'>fstat</a>            2252 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.fstat = smbfs_fstat;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L830'>fstat</a>             830 src/vfs/undelfs/undelfs.c     vfs_undelfs_ops.fstat = undelfs_fstat;</span>
+</pre>
+</body>
+</html>

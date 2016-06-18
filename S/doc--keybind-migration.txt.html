@@ -1,0 +1,515 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>doc/keybind-migration.txt</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<!-- beginning of fixed guide -->
+<div id='guide'><ul>
+<li><a href='#TOP'><img class='icon' src='../icons/first.png' alt='[^]' /></a></li>
+<li><a href='#BOTTOM'><img class='icon' src='../icons/last.png' alt='[v]' /></a></li>
+<li><a href='#TOP'><img class='icon' src='../icons/top.png' alt='[top]' /></a></li>
+<li><a href='#BOTTOM'><img class='icon' src='../icons/bottom.png' alt='[bottom]' /></a></li>
+<li><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a></li>
+<li><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a></li>
+<li class='standout'><span><a href='../files/doc.html'>doc</a>/keybind-migration.txt</span></li>
+</ul></div>
+<!-- end of fixed guide -->
+<a id='TOP' name='TOP'></a><h2 class='header'><a href='../mains.html'>root</a>/<a href='../files/doc.html'>doc</a>/keybind-migration.txt</h2>
+<em class='comment'>/* <img class='icon' src='../icons/n_left.png' alt='[previous]' /><img class='icon' src='../icons/n_right.png' alt='[next]' /><img class='icon' src='../icons/n_first.png' alt='[first]' /><img class='icon' src='../icons/n_last.png' alt='[last]' /><img class='icon' src='../icons/n_top.png' alt='[top]' /><a href='#BOTTOM'><img class='icon' src='../icons/bottom.png' alt='[bottom]' /></a><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a>&nbsp;<em class='position'>[+1 doc/keybind-migration.txt]</em> */</em>
+<hr />
+<pre>
+<a id='L1' name='L1'></a>This file describes how keybind names used in mc.*.keymap files
+<a id='L2' name='L2'></a>are changed in 4.8.* releases.
+<a id='L3' name='L3'></a> 
+<a id='L4' name='L4'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L5' name='L5'></a>|            Old name             |        New name         |                 Notes                   |
+<a id='L6' name='L6'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L7' name='L7'></a>|                                            [main] section                                           |
+<a id='L8' name='L8'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L9' name='L9'></a>| CmdCopy                         | Copy                    |                                         |
+<a id='L10' name='L10'></a>| CmdRename                       | Move                    |                                         |
+<a id='L11' name='L11'></a>| CmdDelete                       | Delete                  |                                         |
+<a id='L12' name='L12'></a>| CmdMkdir                        | MakeDir                 |                                         |
+<a id='L13' name='L13'></a>| ShowCommandLine                 | Shell                   |                                         |
+<a id='L14' name='L14'></a>| CmdMenu                         | Menu                    |                                         |
+<a id='L15' name='L15'></a>| CmdMenuLastSelected             | MenuLastSelected        |                                         |
+<a id='L16' name='L16'></a>| CmdUserMenu                     | UserMenu                |                                         |
+<a id='L17' name='L17'></a>| CmdEditMcMenu                   | EditUserMenu            |                                         |
+<a id='L18' name='L18'></a>| CmdHelp                         | Help                    |                                         |
+<a id='L19' name='L19'></a>| CmdHistory                      | History                 |                                         |
+<a id='L20' name='L20'></a>| CmdEdit                         | Edit                    |                                         |
+<a id='L21' name='L21'></a>| CmdEditForceInternal            | EditForceInternal       |                                         |
+<a id='L22' name='L22'></a>| CmdView                         | View                    |                                         |
+<a id='L23' name='L23'></a>| CmdViewFile                     | ViewFile                |                                         |
+<a id='L24' name='L24'></a>| CmdFilteredView                 | ViewFiltered            |                                         |
+<a id='L25' name='L25'></a>| CmdFind                         | Find                    |                                         |
+<a id='L26' name='L26'></a>| CmdReread                       | Reread                  |                                         |
+<a id='L27' name='L27'></a>| CmdSingleDirsize                | DirSize                 |                                         |
+<a id='L28' name='L28'></a>| CmdDialogList                   | ScreenList              |                                         |
+<a id='L29' name='L29'></a>| CmdSuspend                      | Suspend                 |                                         |
+<a id='L30' name='L30'></a>| CmdCopyCurrentPathname          | PutCurrentPath          |                                         |
+<a id='L31' name='L31'></a>| CmdCopyOtherPathname            | PutOtherPath            |                                         |
+<a id='L32' name='L32'></a>| CmdSelect                       | Select                  |                                         |
+<a id='L33' name='L33'></a>| CmdUnselect                     | Unselect                |                                         |
+<a id='L34' name='L34'></a>| CmdReverseSelection             | SelectInvert            |                                         |
+<a id='L35' name='L35'></a>| CmdQuickChdir                   | HotList                 |                                         |
+<a id='L36' name='L36'></a>| CmdSwapPanel                    | Swap                    |                                         |
+<a id='L37' name='L37'></a>| CmdListing                      | PanelListing            |                                         |
+<a id='L38' name='L38'></a>| CmdToggleListing                | PanelListingSwitch      |                                         |
+<a id='L39' name='L39'></a>| CmdChangeListing                | PanelListingChange      |                                         |
+<a id='L40' name='L40'></a>| CmdToggleShowHidden             | ShowHidden              |                                         |
+<a id='L41' name='L41'></a>| CmdTogglePanelsSplit            | SplitVertHoriz          |                                         |
+<a id='L42' name='L42'></a>| CmdQuickCd                      | CdQuick                 |                                         |
+<a id='L43' name='L43'></a>| CmdConfigureBox                 | Options                 |                                         |
+<a id='L44' name='L44'></a>| CmdLayout                       | OptionsLayout           |                                         |
+<a id='L45' name='L45'></a>| CmdPanelOptions                 | OptionsPanel            |                                         |
+<a id='L46' name='L46'></a>| CmdConfirmBox                   | OptionsConfirm          |                                         |
+<a id='L47' name='L47'></a>| CmdDisplayBitsBox               | OptionsDisplayBits      |                                         |
+<a id='L48' name='L48'></a>| CmdConfigureVfs                 | OptionsVfs              |                                         |
+<a id='L49' name='L49'></a>| CmdSaveSetup                    | SaveSetup               |                                         |
+<a id='L50' name='L50'></a>| CmdEditExtFile                  | EditExtensionsFile      |                                         |
+<a id='L51' name='L51'></a>| CmdEditFhlFile                  | EditFileHighlightFile   |                                         |
+<a id='L52' name='L52'></a>| CmdFilter                       | Filter                  |                                         |
+<a id='L53' name='L53'></a>| CmdFishlink                     | ConnectFish             |                                         |
+<a id='L54' name='L54'></a>| CmdFtplink                      | ConnectFtp              |                                         |
+<a id='L55' name='L55'></a>| CmdSmblink                      | ConnectSmb              |                                         |
+<a id='L56' name='L56'></a>| CmdUndelete                     | Undelete                |                                         |
+<a id='L57' name='L57'></a>| CmdQuit                         | Quit                    |                                         |
+<a id='L58' name='L58'></a>| CmdQuietQuit                    | QuitQuiet               |                                         |
+<a id='L59' name='L59'></a>| ExtMap1                         | ExtendedKeyMap          |                                         |
+<a id='L60' name='L60'></a>| CmdEditUserMenu                 |                         | Unused. Removed                         |
+<a id='L61' name='L61'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L62' name='L62'></a>|                                          [main:xmap] section                                        |
+<a id='L63' name='L63'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L64' name='L64'></a>| CmdChmod                        | ChangeMode              |                                         |
+<a id='L65' name='L65'></a>| CmdChown                        | ChangeOwn               |                                         |
+<a id='L66' name='L66'></a>| CmdCompareDirs                  | CompareDirs             |                                         |
+<a id='L67' name='L67'></a>| CmdDiffView                     | CompareFiles            |                                         |
+<a id='L68' name='L68'></a>| CmdInfo                         | PanelInfo               |                                         |
+<a id='L69' name='L69'></a>| CmdQuickView                    | PanelQuickView          |                                         |
+<a id='L70' name='L70'></a>| CmdLink                         | Link                    |                                         |
+<a id='L71' name='L71'></a>| CmdSymlink                      | LinkSymbolic            |                                         |
+<a id='L72' name='L72'></a>| CmdRelativeSymlink              | LinkSymbolicRelative    |                                         |
+<a id='L73' name='L73'></a>| CmdEditSymlink                  | LinkSymbolicEdit        |                                         |
+<a id='L74' name='L74'></a>| CmdExternalPanelize             | ExternalPanelize        |                                         |
+<a id='L75' name='L75'></a>| CmdReselectVfs                  | VfsList                 |                                         |
+<a id='L76' name='L76'></a>| CmdJobs                         | Jobs                    |                                         |
+<a id='L77' name='L77'></a>| CmdAddHotlist                   | HotListAdd              |                                         |
+<a id='L78' name='L78'></a>| CmdCopyCurrentPathname          | PutCurrentPath          |                                         |
+<a id='L79' name='L79'></a>| CmdCopyOtherPathname            | PutOtherPath            |                                         |
+<a id='L80' name='L80'></a>| CmdCopyCurrentTagged            | PutCurrentTagged        |                                         |
+<a id='L81' name='L81'></a>| CmdCopyOtherTagged              | PutOtherTagged          |                                         |
+<a id='L82' name='L82'></a>| CmdCopyCurrentReadlink          | PutCurrentLink          |                                         |
+<a id='L83' name='L83'></a>| CmdCopyOtherReadlink            | PutOtherLink            |                                         |
+<a id='L84' name='L84'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L85' name='L85'></a>|                                            [panel] section                                          |
+<a id='L86' name='L86'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L87' name='L87'></a>| PanelMoveUp                     | Up                      |                                         |
+<a id='L88' name='L88'></a>| PanelMoveDown                   | Down                    |                                         |
+<a id='L89' name='L89'></a>| PanelMoveLeft                   | Left                    |                                         |
+<a id='L90' name='L90'></a>| PanelMoveRight                  | Right                   |                                         |
+<a id='L91' name='L91'></a>| PanelPrevPage                   | PageUp                  |                                         |
+<a id='L92' name='L92'></a>| PanelNextPage                   | PageDown                |                                         |
+<a id='L93' name='L93'></a>| PanelMoveHome                   | Top                     |                                         |
+<a id='L94' name='L94'></a>| PanelMoveEnd                    | Bottom                  |                                         |
+<a id='L95' name='L95'></a>| PanelGotoTopFile                | TopOnScreen             |                                         |
+<a id='L96' name='L96'></a>| PanelGotoMiddleFile             | MiddleOnScreen          |                                         |
+<a id='L97' name='L97'></a>| PanelGotoBottomFile             | BottomOnScreen          |                                         |
+<a id='L98' name='L98'></a>| PanelCopyLocal                  | CopySingle              |                                         |
+<a id='L99' name='L99'></a>| PanelRenameLocal                | MoveSingle              |                                         |
+<a id='L100' name='L100'></a>| PanelDeleteLocal                | DeleteSingle            |                                         |
+<a id='L101' name='L101'></a>| PanelStartSearch                | Search                  |                                         |
+<a id='L102' name='L102'></a>| PanelSetPanelEncoding           | SelectCodepage          |                                         |
+<a id='L103' name='L103'></a>| PanelDirectoryHistoryList       | History                 |                                         |
+<a id='L104' name='L104'></a>| PanelDirectoryHistoryNext       | HistoryNext             |                                         |
+<a id='L105' name='L105'></a>| PanelDirectoryHistoryPrev       | HistoryPrev             |                                         |
+<a id='L106' name='L106'></a>| PanelEditNew                    | EditNew                 |                                         |
+<a id='L107' name='L107'></a>| PanelViewSimple                 | ViewRaw                 |                                         |
+<a id='L108' name='L108'></a>| PanelSelect                     | Select                  |                                         |
+<a id='L109' name='L109'></a>| PanelUnselect                   | Unselect                |                                         |
+<a id='L110' name='L110'></a>| PanelReverseSelection           | SelectInvert            |                                         |
+<a id='L111' name='L111'></a>| PanelSyncOtherPanel             | PanelOtherSync          |                                         |
+<a id='L112' name='L112'></a>| PanelChdirOtherPanel            | PanelOtherCd            |                                         |
+<a id='L113' name='L113'></a>| PanelChdirToReadlink            | PanelOtherCdLink        |                                         |
+<a id='L114' name='L114'></a>| PanelGotoChildDir               | CdChild                 |                                         |
+<a id='L115' name='L115'></a>| PanelGotoParentDir              | CdParent                |                                         |
+<a id='L116' name='L116'></a>| PanelSmartGotoParentDir         | CdParentSmart           |                                         |
+<a id='L117' name='L117'></a>| PanelMarkFile                   | Mark                    |                                         |
+<a id='L118' name='L118'></a>| PanelMarkDown                   | MarkDown                |                                         |
+<a id='L119' name='L119'></a>| PanelMarkUp                     | MarkUp                  |                                         |
+<a id='L120' name='L120'></a>| PanelDoEnter                    | Enter                   |                                         |
+<a id='L121' name='L121'></a>| PanelSelectSortOrder            | Sort                    |                                         |
+<a id='L122' name='L122'></a>| PanelReverseSort                | SortReverse             |                                         |
+<a id='L123' name='L123'></a>| PanelToggleSortOrderPrev        | SortPrev                |                                         |
+<a id='L124' name='L124'></a>| PanelToggleSortOrderNext        | SortNext                |                                         |
+<a id='L125' name='L125'></a>| PanelSortOrderByName            | SortByName              |                                         |
+<a id='L126' name='L126'></a>| PanelSortOrderByExt             | SortByExt               |                                         |
+<a id='L127' name='L127'></a>| PanelSortOrderBySize            | SortBySize              |                                         |
+<a id='L128' name='L128'></a>| PanelSortOrderByMTime           | SortByMTime             |                                         |
+<a id='L129' name='L129'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L130' name='L130'></a>|                                           [dialog] section                                          |
+<a id='L131' name='L131'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L132' name='L132'></a>| DialogOK                        | Ok                      |                                         |
+<a id='L133' name='L133'></a>| DialogCancel                    | Cancel                  |                                         |
+<a id='L134' name='L134'></a>| DialogPrevItem                  | Up, Left                | Left should not be used                 |
+<a id='L135' name='L135'></a>| DialogNextItem                  | Down, Right             | Right should not be used                |
+<a id='L136' name='L136'></a>| DialogHelp                      | Help                    |                                         |
+<a id='L137' name='L137'></a>| DialogRefresh                   | Refresh                 |                                         |
+<a id='L138' name='L138'></a>| DialogSuspend                   | Suspend                 |                                         |
+<a id='L139' name='L139'></a>| CmdDialogList                   | ScreenList              |                                         |
+<a id='L140' name='L140'></a>| CmdDialogNext                   | ScreenNext              |                                         |
+<a id='L141' name='L141'></a>| CmdDialogPrev                   | ScreenPrev              |                                         |
+<a id='L142' name='L142'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L143' name='L143'></a>|                                            [input] section                                          |
+<a id='L144' name='L144'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L145' name='L145'></a>| InputBol                        | Home                    |                                         |
+<a id='L146' name='L146'></a>| InputEol                        | End                     |                                         |
+<a id='L147' name='L147'></a>| InputMoveLeft                   | Left                    |                                         |
+<a id='L148' name='L148'></a>| InputMoveRight                  | Right                   |                                         |
+<a id='L149' name='L149'></a>| InputBackwardChar               |                         | Removed. 'Left' is used instead         |
+<a id='L150' name='L150'></a>| InputForwardChar                |                         | Removed. 'Right' is used instead        |
+<a id='L151' name='L151'></a>| InputWordLeft                   | WordLeft                |                                         |
+<a id='L152' name='L152'></a>| InputBackwardWord               |                         | Removed. 'WordLeft' is used instead     |
+<a id='L153' name='L153'></a>| InputWordRight                  | WordRight               |                                         |
+<a id='L154' name='L154'></a>| InputForwardWord                |                         | Removed. 'WordRight' is used instead    |
+<a id='L155' name='L155'></a>| InputDeleteChar                 | Delete                  |                                         |
+<a id='L156' name='L156'></a>| InputBackwardDelete             | Backspace               |                                         |
+<a id='L157' name='L157'></a>| InputBackwardKillWord           | DeleteToWordBegin       |                                         |
+<a id='L158' name='L158'></a>| InputKillWord                   | DeleteToWordEnd         |                                         |
+<a id='L159' name='L159'></a>| InputKillLine                   | DeleteToEnd             |                                         |
+<a id='L160' name='L160'></a>| InputKillRegion                 | Remove                  |                                         |
+<a id='L161' name='L161'></a>| InputClearLine                  | Clear                   |                                         |
+<a id='L162' name='L162'></a>| InputComplete                   | Complete                |                                         |
+<a id='L163' name='L163'></a>| InputSetMark                    | Mark                    |                                         |
+<a id='L164' name='L164'></a>| InputLeftHighlight              | MarkLeft                |                                         |
+<a id='L165' name='L165'></a>| InputRightHighlight             | MarkRight               |                                         |
+<a id='L166' name='L166'></a>| InputWordLeftHighlight          | MarkToWordBegin         |                                         |
+<a id='L167' name='L167'></a>| InputWordRightHighlight         | MarkToWordEnd           |                                         |
+<a id='L168' name='L168'></a>| InputBolHighlight               | MarkToHome              |                                         |
+<a id='L169' name='L169'></a>| InputEolHighlight               | MarkToEnd               |                                         |
+<a id='L170' name='L170'></a>| InputHistoryPrev                | HistoryPrev             |                                         |
+<a id='L171' name='L171'></a>| InputHistoryNext                | HistoryNext             |                                         |
+<a id='L172' name='L172'></a>| InputHistoryShow                | History                 |                                         |
+<a id='L173' name='L173'></a>| InputXCut                       | Cut                     |                                         |
+<a id='L174' name='L174'></a>| InputXStore                     | Store                   |                                         |
+<a id='L175' name='L175'></a>| InputXPaste                     | Paste                   |                                         |
+<a id='L176' name='L176'></a>| InputYank                       | Yank                    |                                         |
+<a id='L177' name='L177'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L178' name='L178'></a>|                                           [listbox] section                                         |
+<a id='L179' name='L179'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L180' name='L180'></a>| ListboxMoveUp                   | Up                      |                                         |
+<a id='L181' name='L181'></a>| ListboxMoveDown                 | Down                    |                                         |
+<a id='L182' name='L182'></a>| ListboxMovePgUp                 | PageUp                  |                                         |
+<a id='L183' name='L183'></a>| ListboxMovePgDn                 | PageDown                |                                         |
+<a id='L184' name='L184'></a>| ListboxMoveHome                 | Top                     |                                         |
+<a id='L185' name='L185'></a>| ListboxMoveEnd                  | Bottom                  |                                         |
+<a id='L186' name='L186'></a>| ListboxDeleteItem               | Delete                  |                                         |
+<a id='L187' name='L187'></a>| ListboxDeleteAll                | Clear                   |                                         |
+<a id='L188' name='L188'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L189' name='L189'></a>|                                            [tree] section                                           |
+<a id='L190' name='L190'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L191' name='L191'></a>| TreeMoveUp                      | Up                      |                                         |
+<a id='L192' name='L192'></a>| TreeMoveDown                    | Down                    |                                         |
+<a id='L193' name='L193'></a>| TreeMoveLeft                    | Left                    |                                         |
+<a id='L194' name='L194'></a>| TreeMoveRight                   | Right                   |                                         |
+<a id='L195' name='L195'></a>| TreeMovePgUp                    | PageUp                  |                                         |
+<a id='L196' name='L196'></a>| TreeMovePgDn                    | PageDown                |                                         |
+<a id='L197' name='L197'></a>| TreeMoveHome                    | Top                     |                                         |
+<a id='L198' name='L198'></a>| TreeMoveEnd                     | Bottom                  |                                         |
+<a id='L199' name='L199'></a>| TreeCopy                        | Copy                    |                                         |
+<a id='L200' name='L200'></a>| TreeMove                        | Move                    |                                         |
+<a id='L201' name='L201'></a>| TreeRemove                      | Delete                  |                                         |
+<a id='L202' name='L202'></a>| TreeHelp                        | Help                    |                                         |
+<a id='L203' name='L203'></a>| TreeStartSearch                 | Search                  |                                         |
+<a id='L204' name='L204'></a>| TreeRescan                      | Reread                  |                                         |
+<a id='L205' name='L205'></a>| TreeToggleNav                   | ToggleNavigation        |                                         |
+<a id='L206' name='L206'></a>| TreeForget                      | Forget                  |                                         |
+<a id='L207' name='L207'></a>| TreeOpen                        | Enter                   |                                         |
+<a id='L208' name='L208'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L209' name='L209'></a>|                                            [help] section                                           |
+<a id='L210' name='L210'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L211' name='L211'></a>| HelpIndex                       | Index                   |                                         |
+<a id='L212' name='L212'></a>| HelpBack                        | Back                    |                                         |
+<a id='L213' name='L213'></a>| HelpMoveUp                      | Up                      |                                         |
+<a id='L214' name='L214'></a>| HelpMoveDown                    | Down                    |                                         |
+<a id='L215' name='L215'></a>| HelpMovePgUp                    | PageUp                  |                                         |
+<a id='L216' name='L216'></a>| HelpMovePgDn                    | PageDown                |                                         |
+<a id='L217' name='L217'></a>| HelpMoveHalfPgUp                | HalfPageUp              |                                         |
+<a id='L218' name='L218'></a>| HelpMoveHalfPgDn                | HalfPageDown            |                                         |
+<a id='L219' name='L219'></a>| HelpMoveTop                     | Top                     |                                         |
+<a id='L220' name='L220'></a>| HelpMoveBottom                  | Bottom                  |                                         |
+<a id='L221' name='L221'></a>| HelpSelectLink                  | Enter                   |                                         |
+<a id='L222' name='L222'></a>| HelpNextLink                    | LinkNext                |                                         |
+<a id='L223' name='L223'></a>| HelpPrevLink                    | LinkPrev                |                                         |
+<a id='L224' name='L224'></a>| HelpNextNode                    | NodeNext                |                                         |
+<a id='L225' name='L225'></a>| HelpPrevNode                    | NodePrev                |                                         |
+<a id='L226' name='L226'></a>| HelpHelp                        | Help                    |                                         |
+<a id='L227' name='L227'></a>| HelpQuit                        | Quit                    |                                         |
+<a id='L228' name='L228'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L229' name='L229'></a>|                                           [editor] section                                          |
+<a id='L230' name='L230'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L231' name='L231'></a>| EditEnter                       | Enter                   |                                         |
+<a id='L232' name='L232'></a>| EditUp                          | Up                      |                                         |
+<a id='L233' name='L233'></a>| EditDown                        | Down                    |                                         |
+<a id='L234' name='L234'></a>| EditLeft                        | Left                    |                                         |
+<a id='L235' name='L235'></a>| EditRight                       | Right                   |                                         |
+<a id='L236' name='L236'></a>| EditHome                        | Home                    |                                         |
+<a id='L237' name='L237'></a>| EditEnd                         | End                     |                                         |
+<a id='L238' name='L238'></a>| EditPageUp                      | PageUp                  |                                         |
+<a id='L239' name='L239'></a>| EditPageDown                    | PageDown                |                                         |
+<a id='L240' name='L240'></a>| EditBeginningOfText             | Top                     |                                         |
+<a id='L241' name='L241'></a>| EditEndOfText                   | Bottom                  |                                         |
+<a id='L242' name='L242'></a>| EditBeginPage                   | TopOnScreen             |                                         |
+<a id='L243' name='L243'></a>| EditEndPage                     | BottomOnScreen          |                                         |
+<a id='L244' name='L244'></a>| EditParagraphUp                 | ParagraphUp             |                                         |
+<a id='L245' name='L245'></a>| EditParagraphDown               | ParagraphDown           |                                         |
+<a id='L246' name='L246'></a>| EditParagraphFormat             | ParagraphFormat         |                                         |
+<a id='L247' name='L247'></a>| EditRemove                      | Remove                  |                                         |
+<a id='L248' name='L248'></a>| EditDelete                      | Delete                  |                                         |
+<a id='L249' name='L249'></a>| EditBackSpace                   | BackSpace               |                                         |
+<a id='L250' name='L250'></a>| EditWordLeft                    | WordLeft                |                                         |
+<a id='L251' name='L251'></a>| EditWordRight                   | WordRight               |                                         |
+<a id='L252' name='L252'></a>| EditDeleteWordLeft              | DeleteToWordBegin       |                                         |
+<a id='L253' name='L253'></a>| EditDeleteWordRight             | DeleteToWordEnd         |                                         |
+<a id='L254' name='L254'></a>| EditDeleteLine                  | DeleteLine              |                                         |
+<a id='L255' name='L255'></a>| EditDeleteToLineBegin           | DeleteToHome            |                                         |
+<a id='L256' name='L256'></a>| EditDeleteToLineEnd             | DeleteToEnd             |                                         |
+<a id='L257' name='L257'></a>| EditReturn                      | Return                  |                                         |
+<a id='L258' name='L258'></a>| EditTab                         | Tab                     |                                         |
+<a id='L259' name='L259'></a>| EditToggleInsert                | InsertOverwrite         |                                         |
+<a id='L260' name='L260'></a>| EditUndo                        | Undo                    |                                         |
+<a id='L261' name='L261'></a>| EditRedo                        | Redo                    |                                         |
+<a id='L262' name='L262'></a>| EditInsertLiteral               | InsertLiteral           |                                         |
+<a id='L263' name='L263'></a>| EditMenu                        | Menu                    |                                         |
+<a id='L264' name='L264'></a>| EditUserMenu                    | UserMenu                |                                         |
+<a id='L265' name='L265'></a>|                                 | EditUserMenu            | Added to edit the user menu of editor   |
+<a id='L266' name='L266'></a>| EditSelectionHistory            | History                 |                                         |
+<a id='L267' name='L267'></a>| EditHelp                        | Help                    |                                         |
+<a id='L268' name='L268'></a>| EditFind                        | Search                  |                                         |
+<a id='L269' name='L269'></a>| EditFindAgain                   | SearchContinue          |                                         |
+<a id='L270' name='L270'></a>| EditReplace                     | Replace                 |                                         |
+<a id='L271' name='L271'></a>| EditReplaceAgain                | ReplaceContinue         |                                         |
+<a id='L272' name='L272'></a>| EditCompleteWord                |                         | Removed. 'Complete' is used instead     |
+<a id='L273' name='L273'></a>| EditComplete                    | Complete                |                                         |
+<a id='L274' name='L274'></a>| EditLoad                        | EditFile                |                                         |
+<a id='L275' name='L275'></a>| EditInsertFile                  | InsertFile              |                                         |
+<a id='L276' name='L276'></a>| EditSave                        | Save                    |                                         |
+<a id='L277' name='L277'></a>| EditSaveas                      | SaveAs                  |                                         |
+<a id='L278' name='L278'></a>| EditSaveBlock                   | BlockSave               |                                         |
+<a id='L279' name='L279'></a>| EditShiftBlockLeft              | BlockShiftLeft          |                                         |
+<a id='L280' name='L280'></a>| EditShiftBlockRight             | BlockShiftRight         |                                         |
+<a id='L281' name='L281'></a>| EditMark                        | Mark                    |                                         |
+<a id='L282' name='L282'></a>| EditColumnMark                  | MarkColumn              |                                         |
+<a id='L283' name='L283'></a>| EditMarkAll                     | MarkAll                 |                                         |
+<a id='L284' name='L284'></a>| EditLeftHighlight               | MarkLeft                |                                         |
+<a id='L285' name='L285'></a>| EditRightHighlight              | MarkRight               |                                         |
+<a id='L286' name='L286'></a>| EditUpHighlight                 | MarkUp                  |                                         |
+<a id='L287' name='L287'></a>| EditDownHighlight               | MarkDown                |                                         |
+<a id='L288' name='L288'></a>| EditPageUpHighlight             | MarkPageUp              |                                         |
+<a id='L289' name='L289'></a>| EditPageDownHighlight           | MarkPageDown            |                                         |
+<a id='L290' name='L290'></a>| EditParagraphUpHighlight        | MarkParagraphUp         |                                         |
+<a id='L291' name='L291'></a>| EditParagraphDownHighlight      | MarkParagraphDown       |                                         |
+<a id='L292' name='L292'></a>| EditWordLeftHighlight           | MarkToWordBegin         |                                         |
+<a id='L293' name='L293'></a>| EditWordRightHighlight          | MarkToWordEnd           |                                         |
+<a id='L294' name='L294'></a>| EditHomeHighlight               | MarkToHome              |                                         |
+<a id='L295' name='L295'></a>| EditEndHighlight                | MarkToEnd               |                                         |
+<a id='L296' name='L296'></a>| EditBeginningOfTextHighlight    | MarkToFileBegin         |                                         |
+<a id='L297' name='L297'></a>| EditEndOfTextHighlight          | MarkToFileEnd           |                                         |
+<a id='L298' name='L298'></a>| EditBeginPageHighlight          | MarkToPageBegin         |                                         |
+<a id='L299' name='L299'></a>| EditEndPageHighlight            | MarkToPageEnd           |                                         |
+<a id='L300' name='L300'></a>| EditScrollUpHighlight           | MarkScrollUp            |                                         |
+<a id='L301' name='L301'></a>| EditScrollDownHighlight         | MarkScrollDown          |                                         |
+<a id='L302' name='L302'></a>| EditLeftAltHighlight            | MarkColumnLeft          |                                         |
+<a id='L303' name='L303'></a>| EditRightAltHighlight           | MarkColumnRight         |                                         |
+<a id='L304' name='L304'></a>| EditUpAltHighlight              | MarkColumnUp            |                                         |
+<a id='L305' name='L305'></a>| EditDownAltHighlight            | MarkColumnDown          |                                         |
+<a id='L306' name='L306'></a>| EditPageUpAltHighlight          | MarkColumnPageUp        |                                         |
+<a id='L307' name='L307'></a>| EditPageDownAltHighlight        | MarkColumnPageDown      |                                         |
+<a id='L308' name='L308'></a>| EditParagraphUpAltHighlight     | MarkColumnParagraphUp   |                                         |
+<a id='L309' name='L309'></a>| EditParagraphDownAltHighlight   | MarkColumnParagraphDown |                                         |
+<a id='L310' name='L310'></a>| EditScrollUpAltHighlight        | MarkColumnScrollUp      |                                         |
+<a id='L311' name='L311'></a>| EditScrollDownAltHighlight      | MarkColumnScrollDown    |                                         |
+<a id='L312' name='L312'></a>| EditUnmark                      | Unmark                  |                                         |
+<a id='L313' name='L313'></a>| EditCopy                        | Copy                    |                                         |
+<a id='L314' name='L314'></a>| EditMove                        | Move                    |                                         |
+<a id='L315' name='L315'></a>| EditScrollUp                    | ScrollUp                |                                         |
+<a id='L316' name='L316'></a>| EditScrollDown                  | ScrollDown              |                                         |
+<a id='L317' name='L317'></a>| EditGoto                        | Goto                    |                                         |
+<a id='L318' name='L318'></a>| EditToggleLineState             | ShowNumbers             |                                         |
+<a id='L319' name='L319'></a>| EditToggleTabTWS                | ShowTabTws              |                                         |
+<a id='L320' name='L320'></a>| EditToggleShowMargin            | ShowMargin              |                                         |
+<a id='L321' name='L321'></a>| EditToggleSyntax                | SyntaxOnOff             |                                         |
+<a id='L322' name='L322'></a>| EditChooseSyntax                | SyntaxChoose            |                                         |
+<a id='L323' name='L323'></a>| EditToggleBookmark              | Bookmark                |                                         |
+<a id='L324' name='L324'></a>| EditNextBookmark                | BookmarkNext            |                                         |
+<a id='L325' name='L325'></a>| EditPrevBookmark                | BookmarkPrev            |                                         |
+<a id='L326' name='L326'></a>| EditFlushBookmarks              | BookmarkFlush           |                                         |
+<a id='L327' name='L327'></a>| EditFindDefinition              | Find                    |                                         |
+<a id='L328' name='L328'></a>| EditLoadNextFile                | FileNext                |                                         |
+<a id='L329' name='L329'></a>| EditLoadPrevFile                | FilePrev                |                                         |
+<a id='L330' name='L330'></a>| EditXCut                        | Cut                     |                                         |
+<a id='L331' name='L331'></a>| EditXStore                      | Store                   |                                         |
+<a id='L332' name='L332'></a>| EditXPaste                      | Paste                   |                                         |
+<a id='L333' name='L333'></a>| EditShell                       | Shell                   |                                         |
+<a id='L334' name='L334'></a>| EditRefresh                     | Refresh                 |                                         |
+<a id='L335' name='L335'></a>| EditSort                        | Sort                    |                                         |
+<a id='L336' name='L336'></a>| EditOptions                     | Options                 |                                         |
+<a id='L337' name='L337'></a>| EditSaveMode                    | OptionsSaveMode         |                                         |
+<a id='L338' name='L338'></a>| EditMatchBracket                | MatchBracket            |                                         |
+<a id='L339' name='L339'></a>| EditDate                        | Date                    |                                         |
+<a id='L340' name='L340'></a>| EditMail                        | Mail                    |                                         |
+<a id='L341' name='L341'></a>| EditQuit                        | Quit                    |                                         |
+<a id='L342' name='L342'></a>| EditAbout                       | About                   |                                         |
+<a id='L343' name='L343'></a>| EditExtMode                     | ExtendedKeyMap          |                                         |
+<a id='L344' name='L344'></a>| EditExtCmd                      | ExternalCommand         |                                         |
+<a id='L345' name='L345'></a>| EditBeginRecordMacro            | MacroStartRecord        |                                         |
+<a id='L346' name='L346'></a>| EditEndRecordMacro              | MacroStopRecord         |                                         |
+<a id='L347' name='L347'></a>| EditBeginOrEndMacro             | MacroStartStopRecord    |                                         |
+<a id='L348' name='L348'></a>| EditDeleteMacro                 | MacroDelete             |                                         |
+<a id='L349' name='L349'></a>| CmdLearnKeys                    | LearnKeys               |                                         |
+<a id='L350' name='L350'></a>| EditFindFile                    |                         | Unused. Removed                         |
+<a id='L351' name='L351'></a>| EditExecuteMacro                |                         | Unused. Removed                         |
+<a id='L352' name='L352'></a>| EditWordLeftAltHighlight        |                         | Unused. Removed                         |
+<a id='L353' name='L353'></a>| EditWordRightAltHighlight       |                         | Unused. Removed                         |
+<a id='L354' name='L354'></a>| EditHomeAltHighlight            |                         | Unused. Removed                         |
+<a id='L355' name='L355'></a>| EditEndAltHighlight             |                         | Unused. Removed                         |
+<a id='L356' name='L356'></a>| EditBeginningOfTextAltHighlight |                         | Unused. Removed                         |
+<a id='L357' name='L357'></a>| EditEndOfTextAltHighlight       |                         | Unused. Removed                         |
+<a id='L358' name='L358'></a>| EditBeginPageAltHighlight       |                         | Unused. Removed                         |
+<a id='L359' name='L359'></a>| EditEndPageAltHighlight         |                         | Unused. Removed                         |
+<a id='L360' name='L360'></a>| EditSaveAndQuit                 |                         | Unused. Removed                         |
+<a id='L361' name='L361'></a>| EditCheckSaveAndQuit            |                         | Unused. Removed                         |
+<a id='L362' name='L362'></a>| EditNewWindow                   |                         | Unused. Removed                         |
+<a id='L363' name='L363'></a>| EditSaveDesktop                 |                         | Unused. Removed                         |
+<a id='L364' name='L364'></a>| EditTerminal                    |                         | Unused. Removed                         |
+<a id='L365' name='L365'></a>| EditTerminalApp                 |                         | Unused. Removed                         |
+<a id='L366' name='L366'></a>| EditTypeLoadPython              |                         | Unused. Removed                         |
+<a id='L367' name='L367'></a>| EditUtil                        |                         | Unused. Removed                         |
+<a id='L368' name='L368'></a>| EditRunAnother                  |                         | Unused. Removed                         |
+<a id='L369' name='L369'></a>| EditDebugStart                  |                         | Unused. Removed                         |
+<a id='L370' name='L370'></a>| EditDebugStop                   |                         | Unused. Removed                         |
+<a id='L371' name='L371'></a>| EditDebugToggleBreak            |                         | Unused. Removed                         |
+<a id='L372' name='L372'></a>| EditDebugClear                  |                         | Unused. Removed                         |
+<a id='L373' name='L373'></a>| EditDebugNext                   |                         | Unused. Removed                         |
+<a id='L374' name='L374'></a>| EditDebugStep                   |                         | Unused. Removed                         |
+<a id='L375' name='L375'></a>| EditDebugBackTrace              |                         | Unused. Removed                         |
+<a id='L376' name='L376'></a>| EditDebugContinue               |                         | Unused. Removed                         |
+<a id='L377' name='L377'></a>| EditDebugEnterCommand           |                         | Unused. Removed                         |
+<a id='L378' name='L378'></a>| EditDebugUntilCurser            |                         | Unused. Removed                         |
+<a id='L379' name='L379'></a>| EditCycle                       |                         | Unused. Removed                         |
+<a id='L380' name='L380'></a>| EditMaximize                    |                         | Unused. Removed                         |
+<a id='L381' name='L381'></a>| EditManPage                     |                         | Unused. Removed                         |
+<a id='L382' name='L382'></a>| EditCtags                       |                         | Unused. Removed                         |
+<a id='L383' name='L383'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L384' name='L384'></a>|                                        [editor:xmap] section                                        |
+<a id='L385' name='L385'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L386' name='L386'></a>| EditExecuteMacro                |                         | Unused. Removed                         |
+<a id='L387' name='L387'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L388' name='L388'></a>|                                          [viewer] section                                           |
+<a id='L389' name='L389'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L390' name='L390'></a>| ViewMoveUp                      | Up                      |                                         |
+<a id='L391' name='L391'></a>| ViewMoveDown                    | Down                    |                                         |
+<a id='L392' name='L392'></a>| ViewMoveLeft                    | Left                    |                                         |
+<a id='L393' name='L393'></a>| ViewMoveRight                   | Right                   |                                         |
+<a id='L394' name='L394'></a>| ViewMoveToBol                   | Home                    |                                         |
+<a id='L395' name='L395'></a>| ViewMoveToEol                   | End                     |                                         |
+<a id='L396' name='L396'></a>| ViewMovePgUp                    | PageUp                  |                                         |
+<a id='L397' name='L397'></a>| ViewMovePgDn                    | PageDown                |                                         |
+<a id='L398' name='L398'></a>| ViewMoveHalfPgUp                | HalfPageUp              |                                         |
+<a id='L399' name='L399'></a>| ViewMoveHalfPgDn                | HalfPageDown            |                                         |
+<a id='L400' name='L400'></a>| ViewMoveTop                     | Top                     |                                         |
+<a id='L401' name='L401'></a>| ViewMoveBottom                  | Bottom                  |                                         |
+<a id='L402' name='L402'></a>| ViewHelp                        | Help                    |                                         |
+<a id='L403' name='L403'></a>| ViewSearch                      | Search                  |                                         |
+<a id='L404' name='L404'></a>| ViewSearchContinue              | SearchContinue          |                                         |
+<a id='L405' name='L405'></a>| ViewGoto                        | Goto                    |                                         |
+<a id='L406' name='L406'></a>| ViewNextFile                    | FileNext                |                                         |
+<a id='L407' name='L407'></a>| ViewPrevFile                    | FilePrev                |                                         |
+<a id='L408' name='L408'></a>| ViewToggleHexMode               | HexMode                 |                                         |
+<a id='L409' name='L409'></a>| ViewToggleWrapMode              | WrapMode                |                                         |
+<a id='L410' name='L410'></a>| ViewToggleMagicMode             | MagicMode               |                                         |
+<a id='L411' name='L411'></a>| ViewToggleNroffMode             | NroffMode               |                                         |
+<a id='L412' name='L412'></a>| ViewToggleRuler                 | Ruler                   |                                         |
+<a id='L413' name='L413'></a>| ViewNewBookmark                 | Bookmark                |                                         |
+<a id='L414' name='L414'></a>| ViewGotoBookmark                | BookmarkGoto            |                                         |
+<a id='L415' name='L415'></a>| ShowCommandLine                 | Shell                   |                                         |
+<a id='L416' name='L416'></a>| ViewQuit                        | Quit                    |                                         |
+<a id='L417' name='L417'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L418' name='L418'></a>|                                        [viewer:hex] section                                         |
+<a id='L419' name='L419'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L420' name='L420'></a>| ViewMoveUp                      | Up                      |                                         |
+<a id='L421' name='L421'></a>| ViewMoveDown                    | Down                    |                                         |
+<a id='L422' name='L422'></a>| ViewMoveLeft                    | Left                    |                                         |
+<a id='L423' name='L423'></a>| ViewMoveRight                   | Right                   |                                         |
+<a id='L424' name='L424'></a>| ViewMoveLeft10                  | LeftQuick               |                                         |
+<a id='L425' name='L425'></a>| ViewMoveRight10                 | RightQuick              |                                         |
+<a id='L426' name='L426'></a>| ViewMoveToBol                   | Home                    |                                         |
+<a id='L427' name='L427'></a>| ViewMoveToEol                   | End                     |                                         |
+<a id='L428' name='L428'></a>| ViewMovePgUp                    | PageUp                  |                                         |
+<a id='L429' name='L429'></a>| ViewMovePgDn                    | PageDown                |                                         |
+<a id='L430' name='L430'></a>| ViewMoveTop                     | Top                     |                                         |
+<a id='L431' name='L431'></a>| ViewMoveBottom                  | Bottom                  |                                         |
+<a id='L432' name='L432'></a>| ViewHelp                        | Help                    |                                         |
+<a id='L433' name='L433'></a>| ViewSearch                      | Search                  |                                         |
+<a id='L434' name='L434'></a>| ViewSearchContinue              | SearchContinue          |                                         |
+<a id='L435' name='L435'></a>| ViewHexEditSave                 | Save                    |                                         |
+<a id='L436' name='L436'></a>| ViewGoto                        | Goto                    |                                         |
+<a id='L437' name='L437'></a>| ViewToggleHexMode               | HexMode                 |                                         |
+<a id='L438' name='L438'></a>| ViewToggleHexEditMode           | HexEditMode             |                                         |
+<a id='L439' name='L439'></a>| ViewToggleHexNavMode            | ToggleNavigation        |                                         |
+<a id='L440' name='L440'></a>| ViewToggleMagicMode             | MagicMode               |                                         |
+<a id='L441' name='L441'></a>| ViewToggleNroffMode             | NroffMode               |                                         |
+<a id='L442' name='L442'></a>| ShowCommandLine                 | Shell                   |                                         |
+<a id='L443' name='L443'></a>| ViewQuit                        | Quit                    |                                         |
+<a id='L444' name='L444'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L445' name='L445'></a>|                                        [diffviewer] section                                         |
+<a id='L446' name='L446'></a>+---------------------------------+-------------------------+-----------------------------------------+
+<a id='L447' name='L447'></a>| DiffUp                          | Up                      |                                         |
+<a id='L448' name='L448'></a>| DiffDown                        | Down                    |                                         |
+<a id='L449' name='L449'></a>| DiffLeft                        | Left                    |                                         |
+<a id='L450' name='L450'></a>| DiffRight                       | Right                   |                                         |
+<a id='L451' name='L451'></a>| DiffQuickLeft                   | LeftQuick               |                                         |
+<a id='L452' name='L452'></a>| DiffQuickRight                  | RightQuick              |                                         |
+<a id='L453' name='L453'></a>| DiffHome                        | Home                    |                                         |
+<a id='L454' name='L454'></a>| DiffEnd                         |                         | Unused. Removed                         |
+<a id='L455' name='L455'></a>| DiffPageUp                      | PageUp                  |                                         |
+<a id='L456' name='L456'></a>| DiffPageDown                    | PageDown                |                                         |
+<a id='L457' name='L457'></a>| DiffBOF                         | Top                     |                                         |
+<a id='L458' name='L458'></a>| DiffEOF                         | Bottom                  |                                         |
+<a id='L459' name='L459'></a>| DiffHelp                        | Help                    |                                         |
+<a id='L460' name='L460'></a>| DiffSearch                      | Search                  |                                         |
+<a id='L461' name='L461'></a>| DiffSearchContinue              | SearchContinue          |                                         |
+<a id='L462' name='L462'></a>| DiffRedo                        | Redo                    |                                         |
+<a id='L463' name='L463'></a>| DiffSave                        | Save                    |                                         |
+<a id='L464' name='L464'></a>| DiffGoto                        | Goto                    |                                         |
+<a id='L465' name='L465'></a>| DiffSwapPanel                   | Swap                    |                                         |
+<a id='L466' name='L466'></a>| DiffFull                        | SplitFull               |                                         |
+<a id='L467' name='L467'></a>| DiffEqual                       | SplitEqual              |                                         |
+<a id='L468' name='L468'></a>| DiffSplitMore                   | SplitMore               |                                         |
+<a id='L469' name='L469'></a>| DiffSplitLess                   | SplitLess               |                                         |
+<a id='L470' name='L470'></a>| DiffSetTab2                     | Tab2                    |                                         |
+<a id='L471' name='L471'></a>| DiffSetTab3                     | Tab3                    |                                         |
+<a id='L472' name='L472'></a>| DiffSetTab4                     | Tab4                    |                                         |
+<a id='L473' name='L473'></a>| DiffSetTab8                     | Tab8                    |                                         |
+<a id='L474' name='L474'></a>| DiffEditCurrent                 | Edit                    |                                         |
+<a id='L475' name='L475'></a>| DiffEditOther                   | EditOther               |                                         |
+<a id='L476' name='L476'></a>| DiffNextHunk                    | HunkNext                |                                         |
+<a id='L477' name='L477'></a>| DiffPrevHunk                    | HunkPrev                |                                         |
+<a id='L478' name='L478'></a>| DiffMergeCurrentHunk            | Merge                   |                                         |
+<a id='L479' name='L479'></a>| DiffDisplaySymbols              | ShowSymbols             |                                         |
+<a id='L480' name='L480'></a>| DiffDisplayNumbers              | ShowNumbers             |                                         |
+<a id='L481' name='L481'></a>| DiffOptions                     | Options                 |                                         |
+<a id='L482' name='L482'></a>| ShowCommandLine                 | Shell                   |                                         |
+<a id='L483' name='L483'></a>| DiffQuit                        | Quit                    |                                         |
+<a id='L484' name='L484'></a>+---------------------------------+-------------------------+-----------------------------------------+
+</pre>
+<hr />
+<a id='BOTTOM' name='BOTTOM'></a>
+<em class='comment'>/* <img class='icon' src='../icons/n_left.png' alt='[previous]' /><img class='icon' src='../icons/n_right.png' alt='[next]' /><img class='icon' src='../icons/n_first.png' alt='[first]' /><img class='icon' src='../icons/n_last.png' alt='[last]' /><a href='#TOP'><img class='icon' src='../icons/top.png' alt='[top]' /></a><img class='icon' src='../icons/n_bottom.png' alt='[bottom]' /><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a>&nbsp;<em class='position'>[+484 doc/keybind-migration.txt]</em> */</em>
+</body>
+</html>

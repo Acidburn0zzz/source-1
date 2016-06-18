@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>select_set</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L555'>select_set</a>        555 lib/tty/key.c  add_selects (fd_set * select_set)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L565'>select_set</a>        565 lib/tty/key.c              FD_SET (p-&gt;fd, select_set);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L577'>select_set</a>        577 lib/tty/key.c  check_selects (fd_set * select_set)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L589'>select_set</a>        589 lib/tty/key.c                  if (FD_ISSET (p-&gt;fd, select_set))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L591'>select_set</a>        591 lib/tty/key.c                      FD_CLR (p-&gt;fd, select_set);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L608'>select_set</a>        608 lib/tty/key.c      static fd_set select_set;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L615'>select_set</a>        615 lib/tty/key.c          FD_ZERO (&amp;select_set);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L616'>select_set</a>        616 lib/tty/key.c          FD_SET (input_fd, &amp;select_set); /* Add stdin */</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L617'>select_set</a>        617 lib/tty/key.c          maxfdp = MAX (add_selects (&amp;select_set), input_fd);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L626'>select_set</a>        626 lib/tty/key.c          v = select (maxfdp + 1, &amp;select_set, NULL, NULL, timeptr);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L629'>select_set</a>        629 lib/tty/key.c              check_selects (&amp;select_set);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L630'>select_set</a>        630 lib/tty/key.c              if (FD_ISSET (input_fd, &amp;select_set))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1708'>select_set</a>       1708 lib/tty/key.c      fd_set select_set;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1711'>select_set</a>       1711 lib/tty/key.c      FD_ZERO (&amp;select_set);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1712'>select_set</a>       1712 lib/tty/key.c      FD_SET (input_fd, &amp;select_set);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1721'>select_set</a>       1721 lib/tty/key.c              FD_SET (gpm_fd, &amp;select_set);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1728'>select_set</a>       1728 lib/tty/key.c                  if (FD_ISSET (mouse_fd, &amp;select_set))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1729'>select_set</a>       1729 lib/tty/key.c                      FD_CLR (mouse_fd, &amp;select_set);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1741'>select_set</a>       1741 lib/tty/key.c      return (select (nfd, &amp;select_set, 0, 0, &amp;time_out) &lt;= 0);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1987'>select_set</a>       1987 lib/tty/key.c          fd_set select_set;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1989'>select_set</a>       1989 lib/tty/key.c          FD_ZERO (&amp;select_set);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1990'>select_set</a>       1990 lib/tty/key.c          FD_SET (input_fd, &amp;select_set);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1991'>select_set</a>       1991 lib/tty/key.c          nfd = MAX (add_selects (&amp;select_set), MAX (0, input_fd)) + 1;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1998'>select_set</a>       1998 lib/tty/key.c                  FD_SET (gpm_fd, &amp;select_set);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2005'>select_set</a>       2005 lib/tty/key.c                      if (FD_ISSET (mouse_fd, &amp;select_set))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2006'>select_set</a>       2006 lib/tty/key.c                          FD_CLR (mouse_fd, &amp;select_set);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2055'>select_set</a>       2055 lib/tty/key.c          flag = select (nfd, &amp;select_set, NULL, NULL, time_addr);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2074'>select_set</a>       2074 lib/tty/key.c          check_selects (&amp;select_set);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2076'>select_set</a>       2076 lib/tty/key.c          if (FD_ISSET (input_fd, &amp;select_set))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2083'>select_set</a>       2083 lib/tty/key.c                  if (FD_ISSET (gpm_fd, &amp;select_set))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2096'>select_set</a>       2096 lib/tty/key.c                          if (mouse_fd &gt;= 0 &amp;&amp; FD_ISSET (mouse_fd, &amp;select_set))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2097'>select_set</a>       2097 lib/tty/key.c                              FD_CLR (mouse_fd, &amp;select_set);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2109'>select_set</a>       2109 lib/tty/key.c                      if (FD_ISSET (mouse_fd, &amp;select_set))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2110'>select_set</a>       2110 lib/tty/key.c                          FD_CLR (mouse_fd, &amp;select_set);</span>
+</pre>
+</body>
+</html>

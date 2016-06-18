@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>pid</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--lock.c.html#L75'>pid</a>                75 lib/lock.c         pid_t pid;</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L143'>pid</a>               143 lib/lock.c         static char pid[PID_BUF_SIZE], who[BUF_SIZE];</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L163'>pid</a>               163 lib/lock.c             pid[i++] = *p;</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L166'>pid</a>               166 lib/lock.c         pid[i] = '\0';</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L168'>pid</a>               168 lib/lock.c         lock.pid = (pid_t) atol (pid);</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L238'>pid</a>               238 lib/lock.c             if (lockinfo-&gt;pid == 0 || !(kill (lockinfo-&gt;pid, 0) == -1 &amp;&amp; errno == ESRCH))</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L244'>pid</a>               244 lib/lock.c                                      lockinfo-&gt;who, (int) lockinfo-&gt;pid);</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L306'>pid</a>               306 lib/lock.c             if (lock_extract_info (lock)-&gt;pid != getpid ())</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L153'>pid</a>               153 lib/utilunix.c     pid_t pid;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L155'>pid</a>               155 lib/utilunix.c     pid = fork ();</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L157'>pid</a>               157 lib/utilunix.c     if (pid &lt; 0)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L163'>pid</a>               163 lib/utilunix.c     if (pid == 0)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L170'>pid</a>               170 lib/utilunix.c         if (waitpid (pid, &amp;status, 0) &gt; 0)</span>
+<span class='curline'><a href='../S/src--background.c.html#L87'>pid</a>                87 src/background.c register_task_running (file_op_context_t * ctx, pid_t pid, int fd, int to_child, char *info)</span>
+<span class='curline'><a href='../S/src--background.c.html#L92'>pid</a>                92 src/background.c     new-&gt;pid = pid;</span>
+<span class='curline'><a href='../S/src--background.c.html#L106'>pid</a>               106 src/background.c destroy_task_and_return_fd (pid_t pid)</span>
+<span class='curline'><a href='../S/src--background.c.html#L113'>pid</a>               113 src/background.c         if (p-&gt;pid == pid)</span>
+<span class='curline'><a href='../S/src--background.c.html#L225'>pid</a>               225 src/background.c         unregister_task_running (ctx-&gt;pid, fd);</span>
+<span class='curline'><a href='../S/src--background.c.html#L226'>pid</a>               226 src/background.c         if (!waitpid (ctx-&gt;pid, &amp;status, WNOHANG))</span>
+<span class='curline'><a href='../S/src--background.c.html#L229'>pid</a>               229 src/background.c             kill (ctx-&gt;pid, SIGTERM);</span>
+<span class='curline'><a href='../S/src--background.c.html#L499'>pid</a>               499 src/background.c unregister_task_running (pid_t pid, int fd)</span>
+<span class='curline'><a href='../S/src--background.c.html#L501'>pid</a>               501 src/background.c     destroy_task_and_return_fd (pid);</span>
+<span class='curline'><a href='../S/src--background.c.html#L508'>pid</a>               508 src/background.c unregister_task_with_pid (pid_t pid)</span>
+<span class='curline'><a href='../S/src--background.c.html#L510'>pid</a>               510 src/background.c     int fd = destroy_task_and_return_fd (pid);</span>
+<span class='curline'><a href='../S/src--background.c.html#L530'>pid</a>               530 src/background.c     pid_t pid;</span>
+<span class='curline'><a href='../S/src--background.c.html#L538'>pid</a>               538 src/background.c     pid = fork ();</span>
+<span class='curline'><a href='../S/src--background.c.html#L539'>pid</a>               539 src/background.c     if (pid == -1)</span>
+<span class='curline'><a href='../S/src--background.c.html#L551'>pid</a>               551 src/background.c     if (pid == 0)</span>
+<span class='curline'><a href='../S/src--background.c.html#L581'>pid</a>               581 src/background.c         ctx-&gt;pid = pid;</span>
+<span class='curline'><a href='../S/src--background.c.html#L582'>pid</a>               582 src/background.c         register_task_running (ctx, pid, comm[0], back_comm[1], info);</span>
+<span class='curline'><a href='../S/src--background.h.html#L22'>pid</a>                22 src/background.h     pid_t pid;</span>
+<span class='curline'><a href='../S/src--background.h.html#L42'>pid</a>                42 src/background.h void unregister_task_running (pid_t pid, int fd);</span>
+<span class='curline'><a href='../S/src--background.h.html#L43'>pid</a>                43 src/background.h void unregister_task_with_pid (pid_t pid);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L452'>pid</a>               452 src/filemanager/boxes.c         unregister_task_running (tl-&gt;pid, tl-&gt;fd);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L454'>pid</a>               454 src/filemanager/boxes.c     kill (tl-&gt;pid, sig);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1467'>pid</a>              1467 src/filemanager/file.c     int pid = ctx-&gt;pid;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1470'>pid</a>              1470 src/filemanager/file.c     ctx-&gt;pid = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1472'>pid</a>              1472 src/filemanager/file.c     unregister_task_with_pid (pid);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3098'>pid</a>              3098 src/filemanager/file.c         ctx-&gt;pid = cur_pid;</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.h.html#L154'>pid</a>               154 src/filemanager/fileopctx.h     pid_t pid;</span>
+<span class='curline'><a href='../S/src--main.c.html#L147'>pid</a>               147 src/main.c         int pid, status;</span>
+<span class='curline'><a href='../S/src--main.c.html#L159'>pid</a>               159 src/main.c         pid = waitpid (cons_saver_pid, &amp;status, WUNTRACED | WNOHANG);</span>
+<span class='curline'><a href='../S/src--main.c.html#L161'>pid</a>               161 src/main.c         if (pid == cons_saver_pid)</span>
+<span class='curline'><a href='../S/src--main.c.html#L166'>pid</a>               166 src/main.c                 kill (pid, SIGCONT);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1393'>pid</a>              1393 src/subshell/common.c     pid_t pid;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1397'>pid</a>              1397 src/subshell/common.c     pid = waitpid (subshell_pid, &amp;status, WUNTRACED | WNOHANG);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1399'>pid</a>              1399 src/subshell/common.c     if (pid == subshell_pid)</span>
+<span class='curline'><a href='../S/src--subshell--proxyfunc.c.html#L69'>pid</a>                69 src/subshell/proxyfunc.c     pid_t pid;</span>
+<span class='curline'><a href='../S/src--subshell--proxyfunc.c.html#L71'>pid</a>                71 src/subshell/proxyfunc.c     pid = waitpid (cons_saver_pid, &amp;status, WUNTRACED | WNOHANG);</span>
+<span class='curline'><a href='../S/src--subshell--proxyfunc.c.html#L74'>pid</a>                74 src/subshell/proxyfunc.c     if (pid == cons_saver_pid)</span>
+<span class='curline'><a href='../S/src--subshell--proxyfunc.c.html#L79'>pid</a>                79 src/subshell/proxyfunc.c             kill (pid, SIGCONT);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--client.h.html#L62'>pid</a>                62 src/vfs/smbfs/helpers/include/client.h     uint16 pid;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L301'>pid</a>               301 src/vfs/smbfs/helpers/include/proto.h uint16 cli_setpid (struct cli_state *cli, uint16 pid);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L706'>pid</a>               706 src/vfs/smbfs/helpers/include/smb.h     int pid;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L816'>pid</a>               816 src/vfs/smbfs/helpers/include/smb.h     int pid;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L197'>pid</a>               197 src/vfs/smbfs/helpers/libsmb/clientgen.c     SSVAL (cli-&gt;outbuf, smb_pid, cli-&gt;pid);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L810'>pid</a>               810 src/vfs/smbfs/helpers/libsmb/clientgen.c         SSVAL (cli-&gt;outbuf, smb_vwv4, cli-&gt;pid);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1330'>pid</a>              1330 src/vfs/smbfs/helpers/libsmb/clientgen.c     SSVAL (p, 0, cli-&gt;pid);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1378'>pid</a>              1378 src/vfs/smbfs/helpers/libsmb/clientgen.c     SSVAL (p, 0, cli-&gt;pid);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2570'>pid</a>              2570 src/vfs/smbfs/helpers/libsmb/clientgen.c     cli-&gt;pid = (uint16) getpid ();</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2736'>pid</a>              2736 src/vfs/smbfs/helpers/libsmb/clientgen.c cli_setpid (struct cli_state *cli, uint16 pid)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2738'>pid</a>              2738 src/vfs/smbfs/helpers/libsmb/clientgen.c     uint16 ret = cli-&gt;pid;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2739'>pid</a>              2739 src/vfs/smbfs/helpers/libsmb/clientgen.c     cli-&gt;pid = pid;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L754'>pid</a>               754 src/vfs/smbfs/smbfs.c     SSVAL (cli-&gt;outbuf, smb_pid, cli-&gt;pid);</span>
+</pre>
+</body>
+</html>

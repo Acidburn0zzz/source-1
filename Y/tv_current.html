@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>tv_current</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L603'>tv_current</a>        603 src/filemanager/file.c     struct timeval tv_current;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L613'>tv_current</a>        613 src/filemanager/file.c     gettimeofday (&amp;tv_current, (struct timezone *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L614'>tv_current</a>        614 src/filemanager/file.c     if ((tv_current.tv_sec - tv_start.tv_sec) &gt; FILEOP_UPDATE_INTERVAL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L621'>tv_current</a>        621 src/filemanager/file.c         tv_start.tv_sec = tv_current.tv_sec;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L863'>tv_current</a>        863 src/filemanager/file.c                                  struct timeval tv_current, struct timeval tv_transfer_start,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L872'>tv_current</a>        872 src/filemanager/file.c     dt = (tv_current.tv_sec - tv_transfer_start.tv_sec);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L883'>tv_current</a>        883 src/filemanager/file.c     ctx-&gt;bps_time = (tv_current.tv_sec - tv_transfer_start.tv_sec);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L896'>tv_current</a>        896 src/filemanager/file.c             int total_secs = tv_current.tv_sec - tctx-&gt;transfer_start.tv_sec;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1793'>tv_current</a>       1793 src/filemanager/file.c         struct timeval tv_current, tv_last_update, tv_last_input;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1822'>tv_current</a>       1822 src/filemanager/file.c             gettimeofday (&amp;tv_current, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1877'>tv_current</a>       1877 src/filemanager/file.c             secs = (tv_current.tv_sec - tv_last_update.tv_sec);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1878'>tv_current</a>       1878 src/filemanager/file.c             update_secs = (tv_current.tv_sec - tv_last_input.tv_sec);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1883'>tv_current</a>       1883 src/filemanager/file.c                                                  tv_current,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1885'>tv_current</a>       1885 src/filemanager/file.c                 tv_last_update = tv_current;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1898'>tv_current</a>       1898 src/filemanager/file.c                     (tv_current.tv_sec - tctx-&gt;transfer_start.tv_sec) &gt; FILEOP_UPDATE_INTERVAL;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L984'>tv_current</a>        984 src/filemanager/filegui.c         struct timeval tv_current;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L987'>tv_current</a>        987 src/filemanager/filegui.c         gettimeofday (&amp;tv_current, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L988'>tv_current</a>        988 src/filemanager/filegui.c         file_frmt_time (buffer2, tv_current.tv_sec - tctx-&gt;transfer_start.tv_sec);</span>
+</pre>
+</body>
+</html>

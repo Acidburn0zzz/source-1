@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>parc</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L793'>parc</a>              793 src/vfs/cpio/cpio.c cpio_super_same (const vfs_path_element_t * vpath_element, struct vfs_s_super *parc,</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L800'>parc</a>              800 src/vfs/cpio/cpio.c     if (strcmp (parc-&gt;name, vfs_path_as_str (vpath)))</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L804'>parc</a>              804 src/vfs/cpio/cpio.c     if (parc-&gt;data != NULL</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L805'>parc</a>              805 src/vfs/cpio/cpio.c         &amp;&amp; ((cpio_super_data_t *) parc-&gt;data)-&gt;st.st_mtime &lt; archive_stat-&gt;st_mtime)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L808'>parc</a>              808 src/vfs/cpio/cpio.c         (*vfs_cpiofs_ops.free) ((vfsid) parc);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L809'>parc</a>              809 src/vfs/cpio/cpio.c         vfs_rmstamp (&amp;vfs_cpiofs_ops, (vfsid) parc);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L813'>parc</a>              813 src/vfs/cpio/cpio.c     vfs_stamp (&amp;vfs_cpiofs_ops, (vfsid) parc);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L671'>parc</a>              671 src/vfs/extfs/extfs.c     struct archive *parc;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L687'>parc</a>              687 src/vfs/extfs/extfs.c     for (parc = first_archive; parc != NULL; parc = parc-&gt;next)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L688'>parc</a>              688 src/vfs/extfs/extfs.c         if (parc-&gt;name != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L690'>parc</a>              690 src/vfs/extfs/extfs.c             if (strcmp (parc-&gt;name, archive_name) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L692'>parc</a>              692 src/vfs/extfs/extfs.c                 vfs_stamp (&amp;vfs_extfs_ops, (vfsid) parc);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L698'>parc</a>              698 src/vfs/extfs/extfs.c     result = do_not_open ? -1 : extfs_read_archive (fstype, archive_name, &amp;parc);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L707'>parc</a>              707 src/vfs/extfs/extfs.c     *archive = parc;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1496'>parc</a>             1496 src/vfs/extfs/extfs.c         struct archive *parc;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1497'>parc</a>             1497 src/vfs/extfs/extfs.c         for (parc = first_archive; parc != NULL; parc = parc-&gt;next)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1498'>parc</a>             1498 src/vfs/extfs/extfs.c             if (parc-&gt;next == archive)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1500'>parc</a>             1500 src/vfs/extfs/extfs.c                 parc-&gt;next = archive-&gt;next;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L840'>parc</a>              840 src/vfs/tar/tar.c tar_super_same (const vfs_path_element_t * vpath_element, struct vfs_s_super *parc,</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L847'>parc</a>              847 src/vfs/tar/tar.c     if (strcmp (parc-&gt;name, vfs_path_as_str (vpath)) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L851'>parc</a>              851 src/vfs/tar/tar.c     if (((tar_super_data_t *) parc-&gt;data)-&gt;st.st_mtime &lt; archive_stat-&gt;st_mtime)</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L854'>parc</a>              854 src/vfs/tar/tar.c         (*vfs_tarfs_ops.free) ((vfsid) parc);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L855'>parc</a>              855 src/vfs/tar/tar.c         vfs_rmstamp (&amp;vfs_tarfs_ops, (vfsid) parc);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L859'>parc</a>              859 src/vfs/tar/tar.c     vfs_stamp (&amp;vfs_tarfs_ops, (vfsid) parc);</span>
+</pre>
+</body>
+</html>

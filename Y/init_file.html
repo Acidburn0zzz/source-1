@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>init_file</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L223'>init_file</a>         223 src/subshell/common.c     char *init_file = NULL;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L276'>init_file</a>         276 src/subshell/common.c         init_file = mc_config_get_full_path ("bashrc");</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L279'>init_file</a>         279 src/subshell/common.c         if (!exist_file (init_file))</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L281'>init_file</a>         281 src/subshell/common.c             g_free (init_file);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L282'>init_file</a>         282 src/subshell/common.c             init_file = g_strdup (".bashrc");</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L307'>init_file</a>         307 src/subshell/common.c         init_file = mc_config_get_full_path ("ashrc");</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L310'>init_file</a>         310 src/subshell/common.c         if (!exist_file (init_file))</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L312'>init_file</a>         312 src/subshell/common.c             g_free (init_file);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L313'>init_file</a>         313 src/subshell/common.c             init_file = g_strdup (".profile");</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L317'>init_file</a>         317 src/subshell/common.c         putenv_str = g_strconcat ("ENV=", init_file, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L358'>init_file</a>         358 src/subshell/common.c         execl (mc_global.shell-&gt;path, "bash", "-rcfile", init_file, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L380'>init_file</a>         380 src/subshell/common.c     g_free (init_file);</span>
+</pre>
+</body>
+</html>

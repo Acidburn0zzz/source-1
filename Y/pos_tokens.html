@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>pos_tokens</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--util.c.html#L1143'>pos_tokens</a>       1143 lib/util.c             gchar **pos_tokens;</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1158'>pos_tokens</a>       1158 lib/util.c             pos_tokens = g_strsplit (p, ";", 3 + MAX_SAVED_BOOKMARKS);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1159'>pos_tokens</a>       1159 lib/util.c             if (pos_tokens[0] == NULL)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1167'>pos_tokens</a>       1167 lib/util.c                 *line = strtol (pos_tokens[0], NULL, 10);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1168'>pos_tokens</a>       1168 lib/util.c                 if (pos_tokens[1] == NULL)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1175'>pos_tokens</a>       1175 lib/util.c                     *column = strtol (pos_tokens[1], NULL, 10);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1176'>pos_tokens</a>       1176 lib/util.c                     if (pos_tokens[2] == NULL)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1182'>pos_tokens</a>       1182 lib/util.c                         *offset = (off_t) g_ascii_strtoll (pos_tokens[2], NULL, 10);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1184'>pos_tokens</a>       1184 lib/util.c                         for (i = 0; i &lt; MAX_SAVED_BOOKMARKS &amp;&amp; pos_tokens[3 + i] != NULL; i++)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1188'>pos_tokens</a>       1188 lib/util.c                             val = strtoul (pos_tokens[3 + i], NULL, 10);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1195'>pos_tokens</a>       1195 lib/util.c             g_strfreev (pos_tokens);</span>
+</pre>
+</body>
+</html>

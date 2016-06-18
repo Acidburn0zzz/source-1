@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>tmp_handler</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L130'>tmp_handler</a>       130 tests/lib/utilunix__my_system-common.c     sighandler_t *tmp_handler;</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L140'>tmp_handler</a>       140 tests/lib/utilunix__my_system-common.c         tmp_handler = g_new (sighandler_t, 1);</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L141'>tmp_handler</a>       141 tests/lib/utilunix__my_system-common.c         memcpy (tmp_handler, handler, sizeof (*tmp_handler));</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L144'>tmp_handler</a>       144 tests/lib/utilunix__my_system-common.c         tmp_handler = (void *) SIG_DFL;</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L145'>tmp_handler</a>       145 tests/lib/utilunix__my_system-common.c     g_ptr_array_add (signal_handler__captured, tmp_handler);</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L275'>tmp_handler</a>       275 tests/lib/utilunix__my_system-common.c     sighandler_t *tmp_handler = (sighandler_t *) g_ptr_array_index(signal_handler__captured, _idx);\</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L276'>tmp_handler</a>       276 tests/lib/utilunix__my_system-common.c     mctest_assert_ptr_eq (tmp_handler, (sighandler_t *) SIG_DFL); \</span>
+</pre>
+</body>
+</html>

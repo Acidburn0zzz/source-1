@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>d_name</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--fs.h.html#L102'>d_name</a>            102 lib/fs.h       #define NLENGTH(dirent) (strlen ((dirent)-&gt;d_name))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L446'>d_name</a>            446 lib/vfs/direntry.c         g_strlcpy (dir.dent.d_name, name, MC_MAXPATHLEN);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L510'>d_name</a>            510 lib/vfs/interface.c         str_vfs_convert_from (vfs_path_element-&gt;dir.converter, entry-&gt;d_name, vfs_str_buffer);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L512'>d_name</a>            512 lib/vfs/interface.c         g_string_assign (vfs_str_buffer, entry-&gt;d_name);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L515'>d_name</a>            515 lib/vfs/interface.c         g_strlcpy (mc_readdir_result-&gt;d_name, vfs_str_buffer-&gt;str, MAXNAMLEN + 1);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L206'>d_name</a>            206 lib/vfs/vfs.h      char _extra_buffer[offsetof (struct dirent, d_name) + MC_MAXPATHLEN + 1];</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L208'>d_name</a>            208 lib/widget/input_complete.c         if (!str_is_valid_string (entry-&gt;d_name))</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L215'>d_name</a>            215 lib/widget/input_complete.c             if (DIR_IS_DOT (entry-&gt;d_name) || DIR_IS_DOTDOT (entry-&gt;d_name))</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L222'>d_name</a>            222 lib/widget/input_complete.c             if ((entry-&gt;d_name[0] != filename[0]) ||</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L224'>d_name</a>            224 lib/widget/input_complete.c                 strncmp (filename, entry-&gt;d_name, filename_len) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L235'>d_name</a>            235 lib/widget/input_complete.c             tmp_vpath = vfs_path_build_filename (dirname, entry-&gt;d_name, (char *) NULL);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L301'>d_name</a>            301 lib/widget/input_complete.c         g_string_append (temp, entry-&gt;d_name);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L154'>d_name</a>            154 src/filemanager/dir.c     if (DIR_IS_DOT (dp-&gt;d_name) || DIR_IS_DOTDOT (dp-&gt;d_name))</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L156'>d_name</a>            156 src/filemanager/dir.c     if (!panels_options.show_dot_files &amp;&amp; (dp-&gt;d_name[0] == '.'))</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L158'>d_name</a>            158 src/filemanager/dir.c     if (!panels_options.show_backups &amp;&amp; dp-&gt;d_name[strlen (dp-&gt;d_name) - 1] == '~')</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L161'>d_name</a>            161 src/filemanager/dir.c     vpath = vfs_path_from_str (dp-&gt;d_name);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L173'>d_name</a>            173 src/filemanager/dir.c         tree_store_mark_checked (dp-&gt;d_name);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L191'>d_name</a>            191 src/filemanager/dir.c             || mc_search (fltr, NULL, dp-&gt;d_name, MC_SEARCH_T_GLOB));</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L661'>d_name</a>            661 src/filemanager/dir.c         if (!dir_list_append (list, dp-&gt;d_name, &amp;st, link_to_dir != 0, stale_link != 0))</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L774'>d_name</a>            774 src/filemanager/dir.c         if (!dir_list_append (list, dp-&gt;d_name, &amp;st, link_to_dir != 0, stale_link != 0))</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L800'>d_name</a>            800 src/filemanager/dir.c         if (marked_cnt &gt; 0 &amp;&amp; g_hash_table_lookup (marked_files, dp-&gt;d_name) != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L562'>d_name</a>            562 src/filemanager/file.c         if (DIR_IS_DOT (dirent-&gt;d_name) || DIR_IS_DOTDOT (dirent-&gt;d_name))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L565'>d_name</a>            565 src/filemanager/file.c         tmp_vpath = vfs_path_append_new (dirname_vpath, dirent-&gt;d_name, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1130'>d_name</a>           1130 src/filemanager/file.c         if (DIR_IS_DOT (next-&gt;d_name) || DIR_IS_DOTDOT (next-&gt;d_name))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1133'>d_name</a>           1133 src/filemanager/file.c         tmp_vpath = vfs_path_append_new (vpath, next-&gt;d_name, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1191'>d_name</a>           1191 src/filemanager/file.c         if (!DIR_IS_DOT (d-&gt;d_name) &amp;&amp; !DIR_IS_DOTDOT (d-&gt;d_name))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2211'>d_name</a>           2211 src/filemanager/file.c         if (DIR_IS_DOT (next-&gt;d_name) || DIR_IS_DOTDOT (next-&gt;d_name))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2215'>d_name</a>           2215 src/filemanager/file.c         path = mc_build_filename (s, next-&gt;d_name, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2223'>d_name</a>           2223 src/filemanager/file.c             mdpath = mc_build_filename (d, next-&gt;d_name, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1344'>d_name</a>           1344 src/filemanager/find.c             while ((dp = mc_readdir (dirp)) != NULL &amp;&amp; !str_is_valid_string (dp-&gt;d_name))</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1348'>d_name</a>           1348 src/filemanager/find.c         if (DIR_IS_DOT (dp-&gt;d_name) || DIR_IS_DOTDOT (dp-&gt;d_name))</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1351'>d_name</a>           1351 src/filemanager/find.c             while ((dp = mc_readdir (dirp)) != NULL &amp;&amp; !str_is_valid_string (dp-&gt;d_name))</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1357'>d_name</a>           1357 src/filemanager/find.c         if (!(options.skip_hidden &amp;&amp; (dp-&gt;d_name[0] == '.')))</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1364'>d_name</a>           1364 src/filemanager/find.c                 if (options.ignore_dirs_enable &amp;&amp; find_ignore_dir_search (dp-&gt;d_name))</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1370'>d_name</a>           1370 src/filemanager/find.c                     tmp_vpath = vfs_path_build_filename (directory, dp-&gt;d_name, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1379'>d_name</a>           1379 src/filemanager/find.c             search_ok = mc_search_run (search_file_handle, dp-&gt;d_name,</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1380'>d_name</a>           1380 src/filemanager/find.c                                        0, strlen (dp-&gt;d_name), &amp;bytes_found);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1385'>d_name</a>           1385 src/filemanager/find.c                     find_add_match (directory, dp-&gt;d_name, 0, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1386'>d_name</a>           1386 src/filemanager/find.c                 else if (search_content (h, directory, dp-&gt;d_name))</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1392'>d_name</a>           1392 src/filemanager/find.c         while ((dp = mc_readdir (dirp)) != NULL &amp;&amp; !str_is_valid_string (dp-&gt;d_name))</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L932'>d_name</a>            932 src/filemanager/mountlist.c                 if (DIR_IS_DOT (d-&gt;d_name))</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L935'>d_name</a>            935 src/filemanager/mountlist.c                 if (DIR_IS_DOTDOT (d-&gt;d_name))</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L938'>d_name</a>            938 src/filemanager/mountlist.c                     name = g_strconcat (PATH_SEP_STR, d-&gt;d_name, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1272'>d_name</a>           1272 src/filemanager/mountlist.c             strcat (node, entry.d_name);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L923'>d_name</a>            923 src/filemanager/treestore.c             if (DIR_IS_DOT (dp-&gt;d_name) || DIR_IS_DOTDOT (dp-&gt;d_name))</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L926'>d_name</a>            926 src/filemanager/treestore.c             tmp_vpath = vfs_path_append_new (vpath, dp-&gt;d_name, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L928'>d_name</a>            928 src/filemanager/treestore.c                 tree_store_mark_checked (dp-&gt;d_name);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1064'>d_name</a>           1064 src/vfs/extfs/extfs.c     g_strlcpy (dir.dent.d_name, (*info)-&gt;name, MC_MAXPATHLEN);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L151'>d_name</a>            151 src/vfs/sftpfs/dir.c     g_strlcpy (sftpfs_dirent.dent.d_name, mem, BUF_MEDIUM);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L215'>d_name</a>            215 src/vfs/sftpfs/vfs_class.c             vfs_print_message (_("sftp: (Ctrl-G break) Listing... %s"), sftpfs_dirent-&gt;dent.d_name);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2580'>d_name</a>           2580 src/vfs/smbfs/helpers/lib/util.c     dname = ptr-&gt;d_name;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L923'>d_name</a>            923 src/vfs/smbfs/smbfs.c     static char *const dirent_dest = smbfs_readdir_data.dent.d_name;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L401'>d_name</a>            401 src/vfs/undelfs/undelfs.c     static char *const dirent_dest = undelfs_readdir_data.dent.d_name;</span>
+</pre>
+</body>
+</html>

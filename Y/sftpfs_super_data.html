@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>sftpfs_super_data</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L94'>sftpfs_super_data</a>   94 src/vfs/sftpfs/vfs_subclass.c     sftpfs_super_data_t *sftpfs_super_data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L106'>sftpfs_super_data</a>  106 src/vfs/sftpfs/vfs_subclass.c     sftpfs_super_data = g_new0 (sftpfs_super_data_t, 1);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L107'>sftpfs_super_data</a>  107 src/vfs/sftpfs/vfs_subclass.c     sftpfs_super_data-&gt;socket_handle = LIBSSH2_INVALID_SOCKET;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L108'>sftpfs_super_data</a>  108 src/vfs/sftpfs/vfs_subclass.c     sftpfs_super_data-&gt;original_connection_info = vfs_path_element_clone (vpath_element);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L109'>sftpfs_super_data</a>  109 src/vfs/sftpfs/vfs_subclass.c     super-&gt;data = sftpfs_super_data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L141'>sftpfs_super_data</a>  141 src/vfs/sftpfs/vfs_subclass.c     sftpfs_super_data_t *sftpfs_super_data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L146'>sftpfs_super_data</a>  146 src/vfs/sftpfs/vfs_subclass.c     sftpfs_super_data = (sftpfs_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L147'>sftpfs_super_data</a>  147 src/vfs/sftpfs/vfs_subclass.c     if (sftpfs_super_data != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L148'>sftpfs_super_data</a>  148 src/vfs/sftpfs/vfs_subclass.c         vfs_path_element_free (sftpfs_super_data-&gt;original_connection_info);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L152'>sftpfs_super_data</a>  152 src/vfs/sftpfs/vfs_subclass.c     g_free (sftpfs_super_data);</span>
+</pre>
+</body>
+</html>

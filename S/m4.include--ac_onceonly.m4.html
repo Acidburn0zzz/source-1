@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>m4.include/ac_onceonly.m4</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<!-- beginning of fixed guide -->
+<div id='guide'><ul>
+<li><a href='#TOP'><img class='icon' src='../icons/first.png' alt='[^]' /></a></li>
+<li><a href='#BOTTOM'><img class='icon' src='../icons/last.png' alt='[v]' /></a></li>
+<li><a href='#TOP'><img class='icon' src='../icons/top.png' alt='[top]' /></a></li>
+<li><a href='#BOTTOM'><img class='icon' src='../icons/bottom.png' alt='[bottom]' /></a></li>
+<li><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a></li>
+<li><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a></li>
+<li class='standout'><span><a href='../files/m4.include.html'>m4.include</a>/ac_onceonly.m4</span></li>
+</ul></div>
+<!-- end of fixed guide -->
+<a id='TOP' name='TOP'></a><h2 class='header'><a href='../mains.html'>root</a>/<a href='../files/m4.include.html'>m4.include</a>/ac_onceonly.m4</h2>
+<em class='comment'>/* <img class='icon' src='../icons/n_left.png' alt='[previous]' /><img class='icon' src='../icons/n_right.png' alt='[next]' /><img class='icon' src='../icons/n_first.png' alt='[first]' /><img class='icon' src='../icons/n_last.png' alt='[last]' /><img class='icon' src='../icons/n_top.png' alt='[top]' /><a href='#BOTTOM'><img class='icon' src='../icons/bottom.png' alt='[bottom]' /></a><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a>&nbsp;<em class='position'>[+1 m4.include/ac_onceonly.m4]</em> */</em>
+<hr />
+<pre>
+<a id='L1' name='L1'></a># onceonly.m4 serial 5 (gettext-0.15)
+<a id='L2' name='L2'></a>dnl Copyright (C) 2002-2003, 2006 Free Software Foundation, Inc.
+<a id='L3' name='L3'></a>dnl This file is free software; the Free Software Foundation
+<a id='L4' name='L4'></a>dnl gives unlimited permission to copy and/or distribute it,
+<a id='L5' name='L5'></a>dnl with or without modifications, as long as this notice is preserved.
+<a id='L6' name='L6'></a> 
+<a id='L7' name='L7'></a>dnl This file defines some "once only" variants of standard autoconf macros.
+<a id='L8' name='L8'></a>dnl   AC_CHECK_HEADERS_ONCE          like  AC_CHECK_HEADERS
+<a id='L9' name='L9'></a>dnl   AC_CHECK_FUNCS_ONCE            like  AC_CHECK_FUNCS
+<a id='L10' name='L10'></a>dnl   AC_CHECK_DECLS_ONCE            like  AC_CHECK_DECLS
+<a id='L11' name='L11'></a>dnl   AC_REQUIRE([AC_FUNC_STRCOLL])  like  AC_FUNC_STRCOLL
+<a id='L12' name='L12'></a>dnl The advantage is that the check for each of the headers/functions/decls
+<a id='L13' name='L13'></a>dnl will be put only once into the 'configure' file. It keeps the size of
+<a id='L14' name='L14'></a>dnl the 'configure' file down, and avoids redundant output when 'configure'
+<a id='L15' name='L15'></a>dnl is run.
+<a id='L16' name='L16'></a>dnl The drawback is that the checks cannot be conditionalized. If you write
+<a id='L17' name='L17'></a>dnl   if some_condition; then gl_CHECK_HEADERS(stdlib.h); fi
+<a id='L18' name='L18'></a>dnl inside an AC_DEFUNed function, the gl_CHECK_HEADERS macro call expands to
+<a id='L19' name='L19'></a>dnl empty, and the check will be inserted before the body of the AC_DEFUNed
+<a id='L20' name='L20'></a>dnl function.
+<a id='L21' name='L21'></a> 
+<a id='L22' name='L22'></a>dnl This file is only needed in autoconf &lt;= 2.59.  Newer versions of autoconf
+<a id='L23' name='L23'></a>dnl have this macro built-in.  But about AC_CHECK_DECLS_ONCE: note that in
+<a id='L24' name='L24'></a>dnl autoconf &gt;= 2.60 the symbol separator is a comma, whereas here it is
+<a id='L25' name='L25'></a>dnl whitespace.
+<a id='L26' name='L26'></a> 
+<a id='L27' name='L27'></a>dnl Autoconf version 2.57 or newer is recommended.
+<a id='L28' name='L28'></a>AC_PREREQ(2.54)
+<a id='L29' name='L29'></a> 
+<a id='L30' name='L30'></a># AC_CHECK_HEADERS_ONCE(HEADER1 HEADER2 ...) is a once-only variant of
+<a id='L31' name='L31'></a># AC_CHECK_HEADERS(HEADER1 HEADER2 ...).
+<a id='L32' name='L32'></a>AC_DEFUN([AC_CHECK_HEADERS_ONCE], [
+<a id='L33' name='L33'></a>  :
+<a id='L34' name='L34'></a>  AC_FOREACH([gl_HEADER_NAME], [$1], [
+<a id='L35' name='L35'></a>    AC_DEFUN([gl_CHECK_HEADER_]m4_quote(translit(m4_defn([gl_HEADER_NAME]),
+<a id='L36' name='L36'></a>                                                 [-./], [___])), [
+<a id='L37' name='L37'></a>      AC_CHECK_HEADERS(gl_HEADER_NAME)
+<a id='L38' name='L38'></a>    ])
+<a id='L39' name='L39'></a>    AC_REQUIRE([gl_CHECK_HEADER_]m4_quote(translit(gl_HEADER_NAME,
+<a id='L40' name='L40'></a>                                                   [-./], [___])))
+<a id='L41' name='L41'></a>  ])
+<a id='L42' name='L42'></a>])
+<a id='L43' name='L43'></a> 
+<a id='L44' name='L44'></a># AC_CHECK_FUNCS_ONCE(FUNC1 FUNC2 ...) is a once-only variant of
+<a id='L45' name='L45'></a># AC_CHECK_FUNCS(FUNC1 FUNC2 ...).
+<a id='L46' name='L46'></a>AC_DEFUN([AC_CHECK_FUNCS_ONCE], [
+<a id='L47' name='L47'></a>  :
+<a id='L48' name='L48'></a>  AC_FOREACH([gl_FUNC_NAME], [$1], [
+<a id='L49' name='L49'></a>    AC_DEFUN([gl_CHECK_FUNC_]m4_defn([gl_FUNC_NAME]), [
+<a id='L50' name='L50'></a>      AC_CHECK_FUNCS(m4_defn([gl_FUNC_NAME]))
+<a id='L51' name='L51'></a>    ])
+<a id='L52' name='L52'></a>    AC_REQUIRE([gl_CHECK_FUNC_]m4_defn([gl_FUNC_NAME]))
+<a id='L53' name='L53'></a>  ])
+<a id='L54' name='L54'></a>])
+<a id='L55' name='L55'></a> 
+<a id='L56' name='L56'></a># AC_CHECK_DECLS_ONCE(DECL1 DECL2 ...) is a once-only variant of
+<a id='L57' name='L57'></a># AC_CHECK_DECLS(DECL1, DECL2, ...).
+<a id='L58' name='L58'></a>AC_DEFUN([AC_CHECK_DECLS_ONCE], [
+<a id='L59' name='L59'></a>  :
+<a id='L60' name='L60'></a>  AC_FOREACH([gl_DECL_NAME], [$1], [
+<a id='L61' name='L61'></a>    AC_DEFUN([gl_CHECK_DECL_]m4_defn([gl_DECL_NAME]), [
+<a id='L62' name='L62'></a>      AC_CHECK_DECLS(m4_defn([gl_DECL_NAME]))
+<a id='L63' name='L63'></a>    ])
+<a id='L64' name='L64'></a>    AC_REQUIRE([gl_CHECK_DECL_]m4_defn([gl_DECL_NAME]))
+<a id='L65' name='L65'></a>  ])
+<a id='L66' name='L66'></a>])
+</pre>
+<hr />
+<a id='BOTTOM' name='BOTTOM'></a>
+<em class='comment'>/* <img class='icon' src='../icons/n_left.png' alt='[previous]' /><img class='icon' src='../icons/n_right.png' alt='[next]' /><img class='icon' src='../icons/n_first.png' alt='[first]' /><img class='icon' src='../icons/n_last.png' alt='[last]' /><a href='#TOP'><img class='icon' src='../icons/top.png' alt='[top]' /></a><img class='icon' src='../icons/n_bottom.png' alt='[bottom]' /><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a>&nbsp;<em class='position'>[+66 m4.include/ac_onceonly.m4]</em> */</em>
+</body>
+</html>

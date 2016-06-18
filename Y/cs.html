@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>cs</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L478'>cs</a>                478 src/viewer/ascii.c mcview_next_combining_char_sequence (WView * view, mcview_state_machine_t * state, int *cs,</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L483'>cs</a>                483 src/viewer/ascii.c     if (!mcview_get_next_maybe_nroff_char (view, state, cs, color))</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L487'>cs</a>                487 src/viewer/ascii.c     if (cs[0] == '\r')</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L495'>cs</a>                495 src/viewer/ascii.c         cs[0] = '\n';</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L500'>cs</a>                500 src/viewer/ascii.c     if (!mcview_isprint (view, cs[0]))</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L503'>cs</a>                503 src/viewer/ascii.c     if (mcview_ismark (view, cs[0]))</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L513'>cs</a>                513 src/viewer/ascii.c             cs[1] = cs[0];</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L514'>cs</a>                514 src/viewer/ascii.c             cs[0] = BASE_CHARACTER_FOR_LONELY_COMBINING;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L519'>cs</a>                519 src/viewer/ascii.c     if (mcview_wcwidth (view, cs[0]) == 2)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L532'>cs</a>                532 src/viewer/ascii.c         if (!mcview_get_next_maybe_nroff_char (view, &amp;state_after_combining, &amp;cs[i], NULL))</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L534'>cs</a>                534 src/viewer/ascii.c         if (!mcview_ismark (view, cs[i]) || !mcview_isprint (view, cs[i]))</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L536'>cs</a>                536 src/viewer/ascii.c         if (g_unichar_type (cs[i]) == SPACING_MARK)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L586'>cs</a>                586 src/viewer/ascii.c     int cs[1 + MAX_COMBINING_CHARS];</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L615'>cs</a>                615 src/viewer/ascii.c         n = mcview_next_combining_char_sequence (view, state, cs, 1 + MAX_COMBINING_CHARS, &amp;color);</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L626'>cs</a>                626 src/viewer/ascii.c         if (cs[0] == '\n')</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L635'>cs</a>                635 src/viewer/ascii.c         if (mcview_is_non_spacing_mark (view, cs[0]))</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L642'>cs</a>                642 src/viewer/ascii.c         if ((!mcview_isprint (view, cs[0]) || mcview_ismark (view, cs[0])) &amp;&amp; cs[0] != '\t')</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L643'>cs</a>                643 src/viewer/ascii.c             cs[0] = '.';</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L646'>cs</a>                646 src/viewer/ascii.c             charwidth += mcview_wcwidth (view, cs[i]);</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L651'>cs</a>                651 src/viewer/ascii.c         if (cs[0] == '\t')</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L682'>cs</a>                682 src/viewer/ascii.c                 if (cs[0] == '\t')</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L691'>cs</a>                691 src/viewer/ascii.c                         j += mcview_char_display (view, cs[i], str + j);</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L710'>cs</a>                710 src/viewer/ascii.c                     tty_print_anychar ((cs[0] == '\t') ? ' ' : PARTIAL_CJK_AT_LEFT_MARGIN);</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L723'>cs</a>                723 src/viewer/ascii.c                     tty_print_anychar ((cs[0] == '\t') ? ' ' : PARTIAL_CJK_AT_RIGHT_MARGIN);</span>
+</pre>
+</body>
+</html>

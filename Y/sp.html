@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>sp</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L528'>sp</a>                528 src/editor/edit.c     unsigned long sp = edit-&gt;undo_stack_pointer;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L530'>sp</a>                530 src/editor/edit.c     if (sp == edit-&gt;undo_stack_bottom)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L533'>sp</a>                533 src/editor/edit.c     sp = (sp - 1) &amp; edit-&gt;undo_stack_size_mask;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L534'>sp</a>                534 src/editor/edit.c     c = edit-&gt;undo_stack[sp];</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L542'>sp</a>                542 src/editor/edit.c     if (sp == edit-&gt;undo_stack_bottom)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L545'>sp</a>                545 src/editor/edit.c     c = edit-&gt;undo_stack[(sp - 1) &amp; edit-&gt;undo_stack_size_mask];</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L546'>sp</a>                546 src/editor/edit.c     if (edit-&gt;undo_stack[sp] == -2)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L549'>sp</a>                549 src/editor/edit.c         edit-&gt;undo_stack_pointer = sp;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L552'>sp</a>                552 src/editor/edit.c         edit-&gt;undo_stack[sp]++;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L561'>sp</a>                561 src/editor/edit.c     unsigned long sp = edit-&gt;redo_stack_pointer;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L563'>sp</a>                563 src/editor/edit.c     if (sp == edit-&gt;redo_stack_bottom)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L566'>sp</a>                566 src/editor/edit.c     sp = (sp - 1) &amp; edit-&gt;redo_stack_size_mask;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L567'>sp</a>                567 src/editor/edit.c     c = edit-&gt;redo_stack[sp];</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L574'>sp</a>                574 src/editor/edit.c     if (sp == edit-&gt;redo_stack_bottom)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L577'>sp</a>                577 src/editor/edit.c     c = edit-&gt;redo_stack[(sp - 1) &amp; edit-&gt;redo_stack_size_mask];</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L578'>sp</a>                578 src/editor/edit.c     if (edit-&gt;redo_stack[sp] == -2)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L579'>sp</a>                579 src/editor/edit.c         edit-&gt;redo_stack_pointer = sp;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L581'>sp</a>                581 src/editor/edit.c         edit-&gt;redo_stack[sp]++;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L590'>sp</a>                590 src/editor/edit.c     unsigned long sp = edit-&gt;undo_stack_pointer;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L592'>sp</a>                592 src/editor/edit.c     if (sp == edit-&gt;undo_stack_bottom)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L595'>sp</a>                595 src/editor/edit.c     sp = (sp - 1) &amp; edit-&gt;undo_stack_size_mask;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L596'>sp</a>                596 src/editor/edit.c     c = edit-&gt;undo_stack[sp];</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L600'>sp</a>                600 src/editor/edit.c     if (sp == edit-&gt;undo_stack_bottom)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L603'>sp</a>                603 src/editor/edit.c     c = edit-&gt;undo_stack[(sp - 1) &amp; edit-&gt;undo_stack_size_mask];</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2326'>sp</a>               2326 src/editor/edit.c     unsigned long sp = edit-&gt;undo_stack_pointer;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2331'>sp</a>               2331 src/editor/edit.c     if (sp &gt; edit-&gt;undo_stack_size - 10)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2357'>sp</a>               2357 src/editor/edit.c     if (edit-&gt;undo_stack_bottom != sp</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2359'>sp</a>               2359 src/editor/edit.c         &amp;&amp; ((sp - 2) &amp; edit-&gt;undo_stack_size_mask) != edit-&gt;undo_stack_bottom)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2364'>sp</a>               2364 src/editor/edit.c             d = edit-&gt;undo_stack[(sp - 2) &amp; edit-&gt;undo_stack_size_mask];</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2379'>sp</a>               2379 src/editor/edit.c                 edit-&gt;undo_stack[sp] = -2;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2384'>sp</a>               2384 src/editor/edit.c     edit-&gt;undo_stack[sp] = c;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2415'>sp</a>               2415 src/editor/edit.c     unsigned long sp = edit-&gt;redo_stack_pointer;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2419'>sp</a>               2419 src/editor/edit.c     if (sp &gt; edit-&gt;redo_stack_size - 10)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2436'>sp</a>               2436 src/editor/edit.c     if (edit-&gt;redo_stack_bottom != sp</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2438'>sp</a>               2438 src/editor/edit.c         &amp;&amp; ((sp - 2) &amp; edit-&gt;redo_stack_size_mask) != edit-&gt;redo_stack_bottom)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2443'>sp</a>               2443 src/editor/edit.c             d = edit-&gt;redo_stack[(sp - 2) &amp; edit-&gt;redo_stack_size_mask];</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2458'>sp</a>               2458 src/editor/edit.c                 edit-&gt;redo_stack[sp] = -2;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2463'>sp</a>               2463 src/editor/edit.c     edit-&gt;redo_stack[sp] = c;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1386'>sp</a>               1386 src/filemanager/file.c     char *sp;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1436'>sp</a>               1436 src/filemanager/file.c     sp = format_string;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1437'>sp</a>               1437 src/filemanager/file.c     format_string = str_replace_all (sp, "%n", cp);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1438'>sp</a>               1438 src/filemanager/file.c     g_free (sp);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1448'>sp</a>               1448 src/filemanager/file.c     sp = format_string;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1449'>sp</a>               1449 src/filemanager/file.c     format_string = str_replace_all (sp, "%f", cp);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1450'>sp</a>               1450 src/filemanager/file.c     g_free (sp);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1454'>sp</a>               1454 src/filemanager/file.c     sp = format_string;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1455'>sp</a>               1455 src/filemanager/file.c     format_string = str_replace_all (sp, "%m", cp);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1456'>sp</a>               1456 src/filemanager/file.c     g_free (sp);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1046'>sp</a>               1046 src/vfs/smbfs/helpers/lib/kanji.c     char *sp, *dp;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1048'>sp</a>               1048 src/vfs/smbfs/helpers/lib/kanji.c     sp = (char *) from;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1050'>sp</a>               1050 src/vfs/smbfs/helpers/lib/kanji.c     while (*sp)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1052'>sp</a>               1052 src/vfs/smbfs/helpers/lib/kanji.c         if (*sp == hex_tag &amp;&amp; isxdigit ((int) sp[1]) &amp;&amp; isxdigit ((int) sp[2]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1054'>sp</a>               1054 src/vfs/smbfs/helpers/lib/kanji.c             *dp++ = (hex2bin (sp[1]) &lt;&lt; 4) | (hex2bin (sp[2]));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1055'>sp</a>               1055 src/vfs/smbfs/helpers/lib/kanji.c             sp += 3;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1058'>sp</a>               1058 src/vfs/smbfs/helpers/lib/kanji.c             *dp++ = *sp++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1078'>sp</a>               1078 src/vfs/smbfs/helpers/lib/kanji.c     unsigned char *sp, *dp;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1080'>sp</a>               1080 src/vfs/smbfs/helpers/lib/kanji.c     sp = (unsigned char *) from;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1082'>sp</a>               1082 src/vfs/smbfs/helpers/lib/kanji.c     while (*sp)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1084'>sp</a>               1084 src/vfs/smbfs/helpers/lib/kanji.c         if (is_kana (*sp))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1087'>sp</a>               1087 src/vfs/smbfs/helpers/lib/kanji.c             *dp++ = bin2hex (((*sp) &gt;&gt; 4) &amp; 0x0f);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1088'>sp</a>               1088 src/vfs/smbfs/helpers/lib/kanji.c             *dp++ = bin2hex ((*sp) &amp; 0x0f);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1089'>sp</a>               1089 src/vfs/smbfs/helpers/lib/kanji.c             sp++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1091'>sp</a>               1091 src/vfs/smbfs/helpers/lib/kanji.c         else if (is_shift_jis (*sp) &amp;&amp; is_shift_jis2 (sp[1]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1094'>sp</a>               1094 src/vfs/smbfs/helpers/lib/kanji.c             *dp++ = bin2hex (((*sp) &gt;&gt; 4) &amp; 0x0f);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1095'>sp</a>               1095 src/vfs/smbfs/helpers/lib/kanji.c             *dp++ = bin2hex ((*sp) &amp; 0x0f);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1096'>sp</a>               1096 src/vfs/smbfs/helpers/lib/kanji.c             sp++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1098'>sp</a>               1098 src/vfs/smbfs/helpers/lib/kanji.c             *dp++ = bin2hex (((*sp) &gt;&gt; 4) &amp; 0x0f);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1099'>sp</a>               1099 src/vfs/smbfs/helpers/lib/kanji.c             *dp++ = bin2hex ((*sp) &amp; 0x0f);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1100'>sp</a>               1100 src/vfs/smbfs/helpers/lib/kanji.c             sp++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1103'>sp</a>               1103 src/vfs/smbfs/helpers/lib/kanji.c             *dp++ = *sp++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1124'>sp</a>               1124 src/vfs/smbfs/helpers/lib/kanji.c     char *sp, *dp;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1126'>sp</a>               1126 src/vfs/smbfs/helpers/lib/kanji.c     sp = (char *) from;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1128'>sp</a>               1128 src/vfs/smbfs/helpers/lib/kanji.c     while (*sp)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1136'>sp</a>               1136 src/vfs/smbfs/helpers/lib/kanji.c         if (*sp == hex_tag &amp;&amp; (strchr ("89abcdefABCDEF", sp[1]) != NULL) &amp;&amp; isxdigit ((int) sp[2]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1138'>sp</a>               1138 src/vfs/smbfs/helpers/lib/kanji.c             *dp++ = (hex2bin (sp[1]) &lt;&lt; 4) | (hex2bin (sp[2]));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1139'>sp</a>               1139 src/vfs/smbfs/helpers/lib/kanji.c             sp += 3;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1142'>sp</a>               1142 src/vfs/smbfs/helpers/lib/kanji.c             *dp++ = *sp++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1162'>sp</a>               1162 src/vfs/smbfs/helpers/lib/kanji.c     unsigned char *sp, *dp;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1164'>sp</a>               1164 src/vfs/smbfs/helpers/lib/kanji.c     sp = (unsigned char *) from;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1166'>sp</a>               1166 src/vfs/smbfs/helpers/lib/kanji.c     while (*sp)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1168'>sp</a>               1168 src/vfs/smbfs/helpers/lib/kanji.c         if (*sp &gt;= 0x80)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1171'>sp</a>               1171 src/vfs/smbfs/helpers/lib/kanji.c             *dp++ = bin2hex (((*sp) &gt;&gt; 4) &amp; 0x0f);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1172'>sp</a>               1172 src/vfs/smbfs/helpers/lib/kanji.c             *dp++ = bin2hex ((*sp) &amp; 0x0f);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1173'>sp</a>               1173 src/vfs/smbfs/helpers/lib/kanji.c             sp++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1177'>sp</a>               1177 src/vfs/smbfs/helpers/lib/kanji.c             *dp++ = *sp++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1790'>sp</a>               1790 src/vfs/smbfs/smbfs.c         char *sp = server_url + strlen (server_url) - hostlen;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1792'>sp</a>               1792 src/vfs/smbfs/smbfs.c         if (strcmp (sp, ppp) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L193'>sp</a>                193 src/vfs/tar/tar.c                 struct sparse sp[SPARSE_IN_HDR];</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L202'>sp</a>                202 src/vfs/tar/tar.c         struct sparse sp[21];</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L166'>sp</a>                166 src/viewer/growbuf.c             mc_pipe_t *sp = view-&gt;ds_stdio_pipe;</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L172'>sp</a>                172 src/viewer/growbuf.c             sp-&gt;out.len = bytesfree;</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L173'>sp</a>                173 src/viewer/growbuf.c             sp-&gt;err.len = MC_PIPE_BUFSIZE;</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L175'>sp</a>                175 src/viewer/growbuf.c             mc_pread (sp, &amp;error);</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L185'>sp</a>                185 src/viewer/growbuf.c             if (view-&gt;pipe_first_err_msg &amp;&amp; sp-&gt;err.len &gt; 0)</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L194'>sp</a>                194 src/viewer/growbuf.c                 mcview_show_error (view, sp-&gt;err.buf);</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L197'>sp</a>                197 src/viewer/growbuf.c             if (sp-&gt;out.len &gt; 0)</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L199'>sp</a>                199 src/viewer/growbuf.c                 memmove (p, sp-&gt;out.buf, sp-&gt;out.len);</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L200'>sp</a>                200 src/viewer/growbuf.c                 nread = sp-&gt;out.len;</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L202'>sp</a>                202 src/viewer/growbuf.c             else if (sp-&gt;out.len == MC_PIPE_STREAM_EOF || sp-&gt;out.len == MC_PIPE_ERROR_READ)</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L204'>sp</a>                204 src/viewer/growbuf.c                 if (sp-&gt;out.len == MC_PIPE_ERROR_READ)</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L209'>sp</a>                209 src/viewer/growbuf.c                                                unix_error_string (sp-&gt;out.error));</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>my_remote</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L633'>my_remote</a>         633 src/vfs/smbfs/smbfs.c     const char *p, *my_remote;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L636'>my_remote</a>         636 src/vfs/smbfs/smbfs.c     my_remote = remote_file;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L637'>my_remote</a>         637 src/vfs/smbfs/smbfs.c     if (strncmp (my_remote, URL_HEADER, HEADER_LEN) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L639'>my_remote</a>         639 src/vfs/smbfs/smbfs.c         my_remote += HEADER_LEN;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L640'>my_remote</a>         640 src/vfs/smbfs/smbfs.c         if (*my_remote == '/')  /* from server browsing */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L641'>my_remote</a>         641 src/vfs/smbfs/smbfs.c             my_remote++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L642'>my_remote</a>         642 src/vfs/smbfs/smbfs.c         p = strchr (my_remote, '/');</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L644'>my_remote</a>         644 src/vfs/smbfs/smbfs.c             my_remote = p + 1;  /* advance to end of server name */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L647'>my_remote</a>         647 src/vfs/smbfs/smbfs.c     if (*my_remote == '/')</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L648'>my_remote</a>         648 src/vfs/smbfs/smbfs.c         my_remote++;            /* strip off leading '/' */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L649'>my_remote</a>         649 src/vfs/smbfs/smbfs.c     p = strchr (my_remote, '/');</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L651'>my_remote</a>         651 src/vfs/smbfs/smbfs.c         my_remote = p;          /* strip off share/service name */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L653'>my_remote</a>         653 src/vfs/smbfs/smbfs.c     result = g_strconcat (my_remote, trailing_asterik ? "/*" : "", (char *) NULL);</span>
+</pre>
+</body>
+</html>

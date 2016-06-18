@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>magic</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--util.c.html#L818'>magic</a>             818 lib/util.c         unsigned char magic[16];</span>
+<span class='curline'><a href='../S/lib--util.c.html#L822'>magic</a>             822 lib/util.c         if (mc_read (fd, (char *) magic, 4) != 4)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L826'>magic</a>             826 lib/util.c         if (magic[0] == 037 &amp;&amp; (magic[1] == 0213 || magic[1] == 0236))</span>
+<span class='curline'><a href='../S/lib--util.c.html#L832'>magic</a>             832 lib/util.c         if (magic[0] == 0120 &amp;&amp; magic[1] == 0113 &amp;&amp; magic[2] == 003 &amp;&amp; magic[3] == 004)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L836'>magic</a>             836 lib/util.c             if (mc_read (fd, (char *) magic, 2) != 2)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L840'>magic</a>             840 lib/util.c             if ((magic[0] != 8 &amp;&amp; magic[0] != 0) || magic[1] != 0)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L848'>magic</a>             848 lib/util.c         if (magic[0] == 037 &amp;&amp; (magic[1] == 036 || magic[1] == 0240 || magic[1] == 0235))</span>
+<span class='curline'><a href='../S/lib--util.c.html#L855'>magic</a>             855 lib/util.c         if ((magic[0] == 'B') &amp;&amp; (magic[1] == 'Z') &amp;&amp; (magic[3] &gt;= '1') &amp;&amp; (magic[3] &lt;= '9'))</span>
+<span class='curline'><a href='../S/lib--util.c.html#L857'>magic</a>             857 lib/util.c             switch (magic[2])</span>
+<span class='curline'><a href='../S/lib--util.c.html#L869'>magic</a>             869 lib/util.c         if (magic[0] == 0x04 &amp;&amp; magic[1] == 0x22 &amp;&amp; magic[2] == 0x4d &amp;&amp; magic[3] == 0x18)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L872'>magic</a>             872 lib/util.c         if (mc_read (fd, (char *) magic + 4, 2) != 2)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L876'>magic</a>             876 lib/util.c         if (magic[0] == 'L'</span>
+<span class='curline'><a href='../S/lib--util.c.html#L877'>magic</a>             877 lib/util.c             &amp;&amp; magic[1] == 'Z'</span>
+<span class='curline'><a href='../S/lib--util.c.html#L878'>magic</a>             878 lib/util.c             &amp;&amp; magic[2] == 'I' &amp;&amp; magic[3] == 'P' &amp;&amp; (magic[4] == 0x00 || magic[4] == 0x01))</span>
+<span class='curline'><a href='../S/lib--util.c.html#L883'>magic</a>             883 lib/util.c         if (magic[0] == 0xFF</span>
+<span class='curline'><a href='../S/lib--util.c.html#L884'>magic</a>             884 lib/util.c             &amp;&amp; magic[1] == 'L'</span>
+<span class='curline'><a href='../S/lib--util.c.html#L885'>magic</a>             885 lib/util.c             &amp;&amp; magic[2] == 'Z' &amp;&amp; magic[3] == 'M' &amp;&amp; magic[4] == 'A' &amp;&amp; magic[5] == 0x00)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L889'>magic</a>             889 lib/util.c         if (magic[0] == 0xFD</span>
+<span class='curline'><a href='../S/lib--util.c.html#L890'>magic</a>             890 lib/util.c             &amp;&amp; magic[1] == 0x37</span>
+<span class='curline'><a href='../S/lib--util.c.html#L891'>magic</a>             891 lib/util.c             &amp;&amp; magic[2] == 0x7A &amp;&amp; magic[3] == 0x58 &amp;&amp; magic[4] == 0x5A &amp;&amp; magic[5] == 0x00)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L815'>magic</a>             815 src/vfs/smbfs/helpers/include/smb.h     int magic;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L167'>magic</a>             167 src/vfs/tar/tar.c         char magic[8];</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L506'>magic</a>             506 src/vfs/tar/tar.c         if (strcmp (header-&gt;header.magic, TMAGIC) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L513'>magic</a>             513 src/vfs/tar/tar.c         else if (strcmp (header-&gt;header.magic, OLDGNU_MAGIC) == 0)</span>
+</pre>
+</body>
+</html>

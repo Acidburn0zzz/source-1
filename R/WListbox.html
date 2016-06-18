@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>WListbox</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L294'>WListbox</a>          294 lib/widget/history.c     WListbox *query_list;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1234'>WListbox</a>         1234 lib/widget/input_complete.c             WListbox *query_list;</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.h.html#L20'>WListbox</a>           20 lib/widget/listbox-window.h     WListbox *list;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L90'>WListbox</a>           90 lib/widget/listbox.c listbox_drawscroll (WListbox * l)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L131'>WListbox</a>          131 lib/widget/listbox.c listbox_draw (WListbox * l, gboolean focused)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L201'>WListbox</a>          201 lib/widget/listbox.c listbox_check_hotkey (WListbox * l, int key)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L224'>WListbox</a>          224 lib/widget/listbox.c listbox_y_pos (WListbox * l, int y)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L232'>WListbox</a>          232 lib/widget/listbox.c listbox_fwd (WListbox * l, gboolean wrap)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L243'>WListbox</a>          243 lib/widget/listbox.c listbox_fwd_n (WListbox * l, int n)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L251'>WListbox</a>          251 lib/widget/listbox.c listbox_back (WListbox * l, gboolean wrap)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L262'>WListbox</a>          262 lib/widget/listbox.c listbox_back_n (WListbox * l, int n)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L270'>WListbox</a>          270 lib/widget/listbox.c listbox_execute_cmd (WListbox * l, long command)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L333'>WListbox</a>          333 lib/widget/listbox.c listbox_key (WListbox * l, int key)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L357'>WListbox</a>          357 lib/widget/listbox.c listbox_append_item (WListbox * l, WLEntry * e, listbox_append_t pos)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L392'>WListbox</a>          392 lib/widget/listbox.c listbox_on_change (WListbox * l)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L401'>WListbox</a>          401 lib/widget/listbox.c listbox_do_action (WListbox * l)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L422'>WListbox</a>          422 lib/widget/listbox.c listbox_run_hotkey (WListbox * l, int pos)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L432'>WListbox</a>          432 lib/widget/listbox.c listbox_destroy (WListbox * l)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L442'>WListbox</a>          442 lib/widget/listbox.c     WListbox *l = LISTBOX (w);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L501'>WListbox</a>          501 lib/widget/listbox.c     WListbox *l = LISTBOX (w);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L545'>WListbox</a>          545 lib/widget/listbox.c WListbox *</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L548'>WListbox</a>          548 lib/widget/listbox.c     WListbox *l;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L554'>WListbox</a>          554 lib/widget/listbox.c     l = g_new (WListbox, 1);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L573'>WListbox</a>          573 lib/widget/listbox.c listbox_search_text (WListbox * l, const char *text)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L596'>WListbox</a>          596 lib/widget/listbox.c listbox_select_first (WListbox * l)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L605'>WListbox</a>          605 lib/widget/listbox.c listbox_select_last (WListbox * l)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L620'>WListbox</a>          620 lib/widget/listbox.c listbox_select_entry (WListbox * l, int dest)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L659'>WListbox</a>          659 lib/widget/listbox.c listbox_get_current (WListbox * l, char **string, void **extra)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L679'>WListbox</a>          679 lib/widget/listbox.c listbox_get_nth_item (const WListbox * l, int pos)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L696'>WListbox</a>          696 lib/widget/listbox.c listbox_get_first_link (const WListbox * l)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L704'>WListbox</a>          704 lib/widget/listbox.c listbox_remove_current (WListbox * l)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L727'>WListbox</a>          727 lib/widget/listbox.c listbox_is_empty (const WListbox * l)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L735'>WListbox</a>          735 lib/widget/listbox.c listbox_set_list (WListbox * l, GList * list)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L755'>WListbox</a>          755 lib/widget/listbox.c listbox_remove_list (WListbox * l)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L773'>WListbox</a>          773 lib/widget/listbox.c listbox_add_item (WListbox * l, listbox_append_t pos, int hotkey, const char *text, void *data,</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L13'>WListbox</a>           13 lib/widget/listbox.h #define LISTBOX(x) ((WListbox *)(x))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L35'>WListbox</a>           35 lib/widget/listbox.h struct WListbox;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L36'>WListbox</a>           36 lib/widget/listbox.h typedef lcback_ret_t (*lcback_fn) (struct WListbox * l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L66'>WListbox</a>           66 lib/widget/listbox.h WListbox *listbox_new (int y, int x, int height, int width, gboolean deletable, lcback_fn callback);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L67'>WListbox</a>           67 lib/widget/listbox.h int listbox_search_text (WListbox * l, const char *text);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L68'>WListbox</a>           68 lib/widget/listbox.h void listbox_select_first (WListbox * l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L69'>WListbox</a>           69 lib/widget/listbox.h void listbox_select_last (WListbox * l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L70'>WListbox</a>           70 lib/widget/listbox.h void listbox_select_entry (WListbox * l, int dest);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L71'>WListbox</a>           71 lib/widget/listbox.h void listbox_get_current (WListbox * l, char **string, void **extra);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L72'>WListbox</a>           72 lib/widget/listbox.h WLEntry *listbox_get_nth_item (const WListbox * l, int pos);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L73'>WListbox</a>           73 lib/widget/listbox.h GList *listbox_get_first_link (const WListbox * l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L74'>WListbox</a>           74 lib/widget/listbox.h void listbox_remove_current (WListbox * l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L75'>WListbox</a>           75 lib/widget/listbox.h gboolean listbox_is_empty (const WListbox * l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L76'>WListbox</a>           76 lib/widget/listbox.h void listbox_set_list (WListbox * l, GList * list);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L77'>WListbox</a>           77 lib/widget/listbox.h void listbox_remove_list (WListbox * l);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L78'>WListbox</a>           78 lib/widget/listbox.h char *listbox_add_item (WListbox * l, listbox_append_t pos, int hotkey, const char *text,</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L354'>WListbox</a>          354 src/editor/editcmd_dialogs.c     WListbox *compl_list;</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L422'>WListbox</a>          422 src/editor/editcmd_dialogs.c     WListbox *def_list;</span>
+<span class='curline'><a href='../S/src--editor--spell_dialogs.c.html#L75'>WListbox</a>           75 src/editor/spell_dialogs.c     WListbox *sug_list;</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L322'>WListbox</a>          322 src/filemanager/achown.c     WListbox *chl_list;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L119'>WListbox</a>          119 src/filemanager/boxes.c static WListbox *bg_list = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L189'>WListbox</a>          189 src/filemanager/boxes.c     WListbox *skin_list;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L398'>WListbox</a>          398 src/filemanager/boxes.c jobs_fill_listbox (WListbox * list)</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L79'>WListbox</a>           79 src/filemanager/chown.c static WListbox *l_user, *l_group;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L204'>WListbox</a>          204 src/filemanager/find.c static WListbox *find_list;     /* Listbox with the file list */</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L167'>WListbox</a>          167 src/filemanager/hotlist.c static WListbox *l_hotlist, *l_movelist;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L241'>WListbox</a>          241 src/filemanager/hotlist.c     WListbox *list = hotlist_state.moving ? l_movelist : l_hotlist;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L277'>WListbox</a>          277 src/filemanager/hotlist.c fill_listbox (WListbox * list)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L435'>WListbox</a>          435 src/filemanager/hotlist.c             WListbox *list;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L462'>WListbox</a>          462 src/filemanager/hotlist.c             WListbox *list = hotlist_state.moving ? l_movelist : l_hotlist;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L605'>WListbox</a>          605 src/filemanager/hotlist.c hotlist_listbox_callback (WListbox * list)</span>
+<span class='curline'><a href='../S/src--filemanager--listmode.c.html#L88'>WListbox</a>           88 src/filemanager/listmode.c static WListbox *l_listmode;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L74'>WListbox</a>           74 src/filemanager/panelize.c static WListbox *l_panelize;</span>
+</pre>
+</body>
+</html>

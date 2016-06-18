@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>whence</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L616'>whence</a>            616 lib/vfs/direntry.c vfs_s_lseek (void *fh, off_t offset, int whence)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L625'>whence</a>            625 lib/vfs/direntry.c         off_t retval = lseek (FH-&gt;handle, offset, whence);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L631'>whence</a>            631 lib/vfs/direntry.c     switch (whence)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L761'>whence</a>            761 lib/vfs/interface.c mc_lseek (int fd, off_t offset, int whence)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L774'>whence</a>            774 lib/vfs/interface.c     result = vfs-&gt;lseek ? (*vfs-&gt;lseek) (fsinfo, offset, whence) : -1;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L179'>whence</a>            179 lib/vfs/vfs.h      off_t (*lseek) (void *vfs_info, off_t offset, int whence);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L285'>whence</a>            285 lib/vfs/vfs.h  off_t mc_lseek (int fd, off_t offset, int whence);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L362'>whence</a>            362 src/diffviewer/ydiff.c f_seek (FBUF * fs, off_t off, int whence)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L366'>whence</a>            366 src/diffviewer/ydiff.c     if (fs-&gt;len &amp;&amp; whence != SEEK_END)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L371'>whence</a>            371 src/diffviewer/ydiff.c             if (whence == SEEK_CUR)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L373'>whence</a>            373 src/diffviewer/ydiff.c                 whence = SEEK_SET;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L384'>whence</a>            384 src/diffviewer/ydiff.c     rv = lseek (fs-&gt;fd, off, whence);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1378'>whence</a>           1378 src/vfs/extfs/extfs.c extfs_lseek (void *data, off_t offset, int whence)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1382'>whence</a>           1382 src/vfs/extfs/extfs.c     return lseek (file-&gt;local_handle, offset, whence);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L406'>whence</a>            406 src/vfs/local/local.c local_lseek (void *data, off_t offset, int whence)</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L410'>whence</a>            410 src/vfs/local/local.c     return lseek (fd, offset, whence);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.h.html#L29'>whence</a>             29 src/vfs/local/local.h extern off_t local_lseek (void *data, off_t offset, int whence);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L371'>whence</a>            371 src/vfs/sftpfs/file.c sftpfs_lseek (vfs_file_handler_t * file_handler, off_t offset, int whence, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L377'>whence</a>            377 src/vfs/sftpfs/file.c     switch (whence)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L101'>whence</a>            101 src/vfs/sftpfs/internal.h off_t sftpfs_lseek (vfs_file_handler_t * file_handler, off_t offset, int whence, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L573'>whence</a>            573 src/vfs/sftpfs/vfs_class.c sftpfs_cb_lseek (void *data, off_t offset, int whence)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L579'>whence</a>            579 src/vfs/sftpfs/vfs_class.c     ret_offset = sftpfs_lseek (file_handler, offset, whence, &amp;mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L60'>whence</a>             60 src/vfs/smbfs/helpers/include/proto.h int sys_fseek (FILE * fp, SMB_OFF_T offset, int whence);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L186'>whence</a>            186 src/vfs/smbfs/helpers/lib/system.c sys_fseek (FILE * fp, SMB_OFF_T offset, int whence)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L188'>whence</a>            188 src/vfs/smbfs/helpers/lib/system.c     return fseek (fp, offset, whence);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1835'>whence</a>           1835 src/vfs/smbfs/smbfs.c smbfs_lseek (void *data, off_t offset, int whence)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1842'>whence</a>           1842 src/vfs/smbfs/smbfs.c             (int) info-&gt;nread, (int) offset, whence));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1844'>whence</a>           1844 src/vfs/smbfs/smbfs.c     switch (whence)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L731'>whence</a>            731 src/vfs/undelfs/undelfs.c undelfs_lseek (void *vfs_info, off_t offset, int whence)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L735'>whence</a>            735 src/vfs/undelfs/undelfs.c     (void) whence;</span>
+</pre>
+</body>
+</html>

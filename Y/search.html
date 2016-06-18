@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>search</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--search--search.c.html#L423'>search</a>            423 lib/search/search.c     mc_search_t *search;</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L428'>search</a>            428 lib/search/search.c     search = mc_search_new (pattern, pattern_charset);</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L429'>search</a>            429 lib/search/search.c     if (search == NULL)</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L432'>search</a>            432 lib/search/search.c     search-&gt;search_type = type;</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L433'>search</a>            433 lib/search/search.c     search-&gt;is_case_sensitive = TRUE;</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L436'>search</a>            436 lib/search/search.c         search-&gt;is_entire_line = TRUE;</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L438'>search</a>            438 lib/search/search.c     ret = mc_search_run (search, str, 0, strlen (str), NULL);</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L439'>search</a>            439 lib/search/search.c     mc_search_free (search);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L804'>search</a>            804 lib/strutil/strutil.c str_search_first (const char *text, const char *search, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L806'>search</a>            806 lib/strutil/strutil.c     return used_class.search_first (text, search, case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L812'>search</a>            812 lib/strutil/strutil.c str_search_last (const char *text, const char *search, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L814'>search</a>            814 lib/strutil/strutil.c     return used_class.search_last (text, search, case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L592'>search</a>            592 lib/strutil/strutil8bit.c str_8bit_search_first (const char *text, const char *search, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L599'>search</a>            599 lib/strutil/strutil8bit.c     fold_search = (case_sen) ? (char *) search : str_8bit_strdown (search);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L622'>search</a>            622 lib/strutil/strutil8bit.c str_8bit_search_last (const char *text, const char *search, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L629'>search</a>            629 lib/strutil/strutil8bit.c     fold_search = (case_sen) ? (char *) search : str_8bit_strdown (search);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L573'>search</a>            573 lib/strutil/strutilascii.c str_ascii_search_first (const char *text, const char *search, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L580'>search</a>            580 lib/strutil/strutilascii.c     fold_search = (case_sen) ? (char *) search : g_ascii_strdown (search, -1);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L603'>search</a>            603 lib/strutil/strutilascii.c str_ascii_search_last (const char *text, const char *search, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L610'>search</a>            610 lib/strutil/strutilascii.c     fold_search = (case_sen) ? (char *) search : g_ascii_strdown (search, -1);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L988'>search</a>            988 lib/strutil/strutilutf8.c str_utf8_search_first (const char *text, const char *search, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1002'>search</a>           1002 lib/strutil/strutilutf8.c         match = g_strstr_len (match, -1, search);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1006'>search</a>           1006 lib/strutil/strutilutf8.c                 !str_utf8_iscombiningmark (match + strlen (search)))</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1032'>search</a>           1032 lib/strutil/strutilutf8.c str_utf8_search_last (const char *text, const char *search, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1045'>search</a>           1045 lib/strutil/strutilutf8.c         match = g_strrstr_len (deco_text, -1, search);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1049'>search</a>           1049 lib/strutil/strutilutf8.c                 !str_utf8_iscombiningmark (match + strlen (search)))</span>
+<span class='curline'><a href='../S/src--diffviewer--internal.h.html#L142'>search</a>            142 src/diffviewer/internal.h     } search;</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L134'>search</a>            134 src/diffviewer/search.c     g_free (dview-&gt;search.last_string);</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L135'>search</a>            135 src/diffviewer/search.c     dview-&gt;search.last_string = exp;</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L147'>search</a>            147 src/diffviewer/search.c     if (dview-&gt;search.last_accessed_num_line &lt; 0)</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L149'>search</a>            149 src/diffviewer/search.c         dview-&gt;search.last_accessed_num_line = -1;</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L153'>search</a>            153 src/diffviewer/search.c     if ((size_t) dview-&gt;search.last_accessed_num_line &gt;= dview-&gt;a[dview-&gt;ord]-&gt;len)</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L154'>search</a>            154 src/diffviewer/search.c         dview-&gt;search.last_accessed_num_line = (ssize_t) dview-&gt;a[dview-&gt;ord]-&gt;len;</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L156'>search</a>            156 src/diffviewer/search.c     for (ind = --dview-&gt;search.last_accessed_num_line; ind &gt;= 0; ind--)</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L164'>search</a>            164 src/diffviewer/search.c         if (mc_search_run (dview-&gt;search.handle, p-&gt;p, 0, p-&gt;u.len, NULL))</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L166'>search</a>            166 src/diffviewer/search.c             dview-&gt;skip_rows = dview-&gt;search.last_found_line =</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L167'>search</a>            167 src/diffviewer/search.c                 dview-&gt;search.last_accessed_num_line = ind;</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L182'>search</a>            182 src/diffviewer/search.c     if (dview-&gt;search.last_accessed_num_line &lt; 0)</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L183'>search</a>            183 src/diffviewer/search.c         dview-&gt;search.last_accessed_num_line = -1;</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L184'>search</a>            184 src/diffviewer/search.c     else if ((size_t) dview-&gt;search.last_accessed_num_line &gt;= dview-&gt;a[dview-&gt;ord]-&gt;len)</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L186'>search</a>            186 src/diffviewer/search.c         dview-&gt;search.last_accessed_num_line = (ssize_t) dview-&gt;a[dview-&gt;ord]-&gt;len;</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L190'>search</a>            190 src/diffviewer/search.c     for (ind = (size_t)++ dview-&gt;search.last_accessed_num_line; ind &lt; dview-&gt;a[dview-&gt;ord]-&gt;len;</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L199'>search</a>            199 src/diffviewer/search.c         if (mc_search_run (dview-&gt;search.handle, p-&gt;p, 0, p-&gt;u.len, NULL))</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L201'>search</a>            201 src/diffviewer/search.c             dview-&gt;skip_rows = dview-&gt;search.last_found_line =</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L202'>search</a>            202 src/diffviewer/search.c                 dview-&gt;search.last_accessed_num_line = (ssize_t) ind;</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L231'>search</a>            231 src/diffviewer/search.c         dview-&gt;search.last_found_line = -1;</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L252'>search</a>            252 src/diffviewer/search.c     mc_search_free (dview-&gt;search.handle);</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L254'>search</a>            254 src/diffviewer/search.c     dview-&gt;search.handle = mc_search_new (dview-&gt;search.last_string, cp_source);</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L256'>search</a>            256 src/diffviewer/search.c     dview-&gt;search.handle = mc_search_new (dview-&gt;search.last_string, NULL);</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L259'>search</a>            259 src/diffviewer/search.c     if (dview-&gt;search.handle == NULL)</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L262'>search</a>            262 src/diffviewer/search.c     dview-&gt;search.handle-&gt;search_type = mcdiffview_search_options.type;</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L264'>search</a>            264 src/diffviewer/search.c     dview-&gt;search.handle-&gt;is_all_charsets = mcdiffview_search_options.all_codepages;</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L266'>search</a>            266 src/diffviewer/search.c     dview-&gt;search.handle-&gt;is_case_sensitive = mcdiffview_search_options.case_sens;</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L267'>search</a>            267 src/diffviewer/search.c     dview-&gt;search.handle-&gt;whole_words = mcdiffview_search_options.whole_words;</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L279'>search</a>            279 src/diffviewer/search.c     else if (dview-&gt;search.handle == NULL)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1858'>search</a>           1858 src/diffviewer/ydiff.c     mc_search_free (dview-&gt;search.handle);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1859'>search</a>           1859 src/diffviewer/ydiff.c     dview-&gt;search.handle = NULL;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1860'>search</a>           1860 src/diffviewer/ydiff.c     MC_PTR_FREE (dview-&gt;search.last_string);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2468'>search</a>           2468 src/diffviewer/ydiff.c     dview-&gt;search.handle = NULL;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2469'>search</a>           2469 src/diffviewer/ydiff.c     dview-&gt;search.last_string = NULL;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2470'>search</a>           2470 src/diffviewer/ydiff.c     dview-&gt;search.last_found_line = -1;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2471'>search</a>           2471 src/diffviewer/ydiff.c     dview-&gt;search.last_accessed_num_line = -1;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2594'>search</a>           2594 src/diffviewer/ydiff.c                 if (i == (size_t) dview-&gt;search.last_found_line)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2814'>search</a>           2814 src/diffviewer/ydiff.c         dview-&gt;skip_rows = dview-&gt;search.last_accessed_num_line = last;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2816'>search</a>           2816 src/diffviewer/ydiff.c         dview-&gt;skip_rows = dview-&gt;search.last_accessed_num_line = 0;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2952'>search</a>           2952 src/diffviewer/ydiff.c             dview-&gt;skip_rows = dview-&gt;search.last_accessed_num_line = (ssize_t) i;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3179'>search</a>           3179 src/diffviewer/ydiff.c         dview-&gt;skip_rows = dview-&gt;search.last_accessed_num_line =</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3183'>search</a>           3183 src/diffviewer/ydiff.c         dview-&gt;skip_rows = dview-&gt;search.last_accessed_num_line =</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3210'>search</a>           3210 src/diffviewer/ydiff.c         dview-&gt;skip_rows = dview-&gt;search.last_accessed_num_line = 0;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3213'>search</a>           3213 src/diffviewer/ydiff.c         dview-&gt;skip_rows = dview-&gt;search.last_accessed_num_line = dview-&gt;a[DIFF_LEFT]-&gt;len - 1;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3219'>search</a>           3219 src/diffviewer/ydiff.c             dview-&gt;search.last_accessed_num_line = dview-&gt;skip_rows;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3224'>search</a>           3224 src/diffviewer/ydiff.c         dview-&gt;search.last_accessed_num_line = dview-&gt;skip_rows;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3230'>search</a>           3230 src/diffviewer/ydiff.c             dview-&gt;search.last_accessed_num_line = dview-&gt;skip_rows;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3237'>search</a>           3237 src/diffviewer/ydiff.c             dview-&gt;search.last_accessed_num_line = dview-&gt;skip_rows;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3366'>search</a>           3366 src/diffviewer/ydiff.c         dview-&gt;search.last_accessed_num_line = dview-&gt;skip_rows;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2197'>search</a>           2197 src/editor/edit.c     mc_search_free (edit-&gt;search);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2198'>search</a>           2198 src/editor/edit.c     edit-&gt;search = NULL;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L678'>search</a>            678 src/editor/editcmd.c edit_get_search_line_type (mc_search_t * search)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L682'>search</a>            682 src/editor/editcmd.c     if (search-&gt;search_type != MC_SEARCH_T_REGEX)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L685'>search</a>            685 src/editor/editcmd.c     if (*search-&gt;original == '^')</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L688'>search</a>            688 src/editor/editcmd.c     if (search-&gt;original[search-&gt;original_len - 1] == '$')</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L832'>search</a>            832 src/editor/editcmd.c             mc_search_set_error (edit-&gt;search, MC_SEARCH_E_NOTFOUND, "%s", _(STR_E_NOTFOUND));</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L852'>search</a>            852 src/editor/editcmd.c             mc_search_set_error (edit-&gt;search, MC_SEARCH_E_NOTFOUND, "%s", _(STR_E_NOTFOUND));</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L874'>search</a>            874 src/editor/editcmd.c             if (search_end &gt; (off_t) (search_start + edit-&gt;search-&gt;original_len)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L875'>search</a>            875 src/editor/editcmd.c                 &amp;&amp; mc_search_is_fixed_search_str (edit-&gt;search))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L876'>search</a>            876 src/editor/editcmd.c                 search_end = search_start + edit-&gt;search-&gt;original_len;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L878'>search</a>            878 src/editor/editcmd.c             ok = mc_search_run (edit-&gt;search, (void *) esm, search_start, search_end, len);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L880'>search</a>            880 src/editor/editcmd.c             if (ok &amp;&amp; edit-&gt;search-&gt;normal_offset == search_start)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L884'>search</a>            884 src/editor/editcmd.c             if (!ok &amp;&amp; edit-&gt;search-&gt;error == MC_SEARCH_E_ABORT)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L895'>search</a>            895 src/editor/editcmd.c         mc_search_set_error (edit-&gt;search, MC_SEARCH_E_NOTFOUND, "%s", _(STR_E_NOTFOUND));</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L905'>search</a>            905 src/editor/editcmd.c     return mc_search_run (edit-&gt;search, (void *) esm, search_start, end_mark, len);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L951'>search</a>            951 src/editor/editcmd.c     if (edit-&gt;search-&gt;error == MC_SEARCH_E_NOTFOUND)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L953'>search</a>            953 src/editor/editcmd.c     else if (edit-&gt;search-&gt;error_str != NULL)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L954'>search</a>            954 src/editor/editcmd.c         edit_query_dialog (title, edit-&gt;search-&gt;error_str);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L965'>search</a>            965 src/editor/editcmd.c     if (edit-&gt;search == NULL)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L986'>search</a>            986 src/editor/editcmd.c         while (mc_search_run (edit-&gt;search, (void *) &amp;esm, q, edit-&gt;buffer.size, &amp;len))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L989'>search</a>            989 src/editor/editcmd.c                 edit-&gt;search_start = edit-&gt;search-&gt;normal_offset;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L991'>search</a>            991 src/editor/editcmd.c             l += edit_buffer_count_lines (&amp;edit-&gt;buffer, q, edit-&gt;search-&gt;normal_offset);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L998'>search</a>            998 src/editor/editcmd.c             q = edit-&gt;search-&gt;normal_offset + 1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1018'>search</a>           1018 src/editor/editcmd.c             edit-&gt;found_start = edit-&gt;search_start = edit-&gt;search-&gt;normal_offset;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1048'>search</a>           1048 src/editor/editcmd.c         edit-&gt;search_line_type = edit_get_search_line_type (edit-&gt;search);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2573'>search</a>           2573 src/editor/editcmd.c         mc_search_free (edit-&gt;search);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2574'>search</a>           2574 src/editor/editcmd.c         edit-&gt;search = NULL;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2579'>search</a>           2579 src/editor/editcmd.c     if (edit-&gt;search == NULL)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2582'>search</a>           2582 src/editor/editcmd.c         edit-&gt;search = mc_search_new (input1, cp_source);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2584'>search</a>           2584 src/editor/editcmd.c         edit-&gt;search = mc_search_new (input1, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2586'>search</a>           2586 src/editor/editcmd.c         if (edit-&gt;search == NULL)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2591'>search</a>           2591 src/editor/editcmd.c         edit-&gt;search-&gt;search_type = edit_search_options.type;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2593'>search</a>           2593 src/editor/editcmd.c         edit-&gt;search-&gt;is_all_charsets = edit_search_options.all_codepages;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2595'>search</a>           2595 src/editor/editcmd.c         edit-&gt;search-&gt;is_case_sensitive = edit_search_options.case_sens;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2596'>search</a>           2596 src/editor/editcmd.c         edit-&gt;search-&gt;whole_words = edit_search_options.whole_words;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2597'>search</a>           2597 src/editor/editcmd.c         edit-&gt;search-&gt;search_fn = edit_search_cmd_callback;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2598'>search</a>           2598 src/editor/editcmd.c         edit-&gt;search-&gt;update_fn = edit_search_update_callback;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2599'>search</a>           2599 src/editor/editcmd.c         edit-&gt;search_line_type = edit_get_search_line_type (edit-&gt;search);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2624'>search</a>           2624 src/editor/editcmd.c             if (!(edit-&gt;search-&gt;error == MC_SEARCH_E_OK ||</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2625'>search</a>           2625 src/editor/editcmd.c                   (once_found &amp;&amp; edit-&gt;search-&gt;error == MC_SEARCH_E_NOTFOUND)))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2632'>search</a>           2632 src/editor/editcmd.c         edit-&gt;search_start = edit-&gt;search-&gt;normal_offset;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2687'>search</a>           2687 src/editor/editcmd.c             repl_str = mc_search_prepare_replace_str (edit-&gt;search, input2_str);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2689'>search</a>           2689 src/editor/editcmd.c             if (edit-&gt;search-&gt;error != MC_SEARCH_E_OK)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2803'>search</a>           2803 src/editor/editcmd.c             edit-&gt;search = mc_search_new (edit-&gt;last_search_string, cp_source);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2805'>search</a>           2805 src/editor/editcmd.c             edit-&gt;search = mc_search_new (edit-&gt;last_search_string, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2807'>search</a>           2807 src/editor/editcmd.c             if (edit-&gt;search == NULL)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2815'>search</a>           2815 src/editor/editcmd.c                 edit-&gt;search-&gt;search_type = edit_search_options.type;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2817'>search</a>           2817 src/editor/editcmd.c                 edit-&gt;search-&gt;is_all_charsets = edit_search_options.all_codepages;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2819'>search</a>           2819 src/editor/editcmd.c                 edit-&gt;search-&gt;is_case_sensitive = edit_search_options.case_sens;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2820'>search</a>           2820 src/editor/editcmd.c                 edit-&gt;search-&gt;whole_words = edit_search_options.whole_words;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2821'>search</a>           2821 src/editor/editcmd.c                 edit-&gt;search-&gt;search_fn = edit_search_cmd_callback;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2822'>search</a>           2822 src/editor/editcmd.c                 edit-&gt;search-&gt;update_fn = edit_search_update_callback;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2823'>search</a>           2823 src/editor/editcmd.c                 edit-&gt;search_line_type = edit_get_search_line_type (edit-&gt;search);</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L163'>search</a>            163 src/editor/editcmd_dialogs.c     mc_search_free (edit-&gt;search);</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L166'>search</a>            166 src/editor/editcmd_dialogs.c     edit-&gt;search = mc_search_new (edit-&gt;last_search_string, cp_source);</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L168'>search</a>            168 src/editor/editcmd_dialogs.c     edit-&gt;search = mc_search_new (edit-&gt;last_search_string, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L170'>search</a>            170 src/editor/editcmd_dialogs.c     if (edit-&gt;search != NULL)</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L172'>search</a>            172 src/editor/editcmd_dialogs.c         edit-&gt;search-&gt;search_type = edit_search_options.type;</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L174'>search</a>            174 src/editor/editcmd_dialogs.c         edit-&gt;search-&gt;is_all_charsets = edit_search_options.all_codepages;</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L176'>search</a>            176 src/editor/editcmd_dialogs.c         edit-&gt;search-&gt;is_case_sensitive = edit_search_options.case_sens;</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L177'>search</a>            177 src/editor/editcmd_dialogs.c         edit-&gt;search-&gt;whole_words = edit_search_options.whole_words;</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L178'>search</a>            178 src/editor/editcmd_dialogs.c         edit-&gt;search-&gt;search_fn = edit_search_cmd_callback;</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L179'>search</a>            179 src/editor/editcmd_dialogs.c         edit-&gt;search-&gt;update_fn = edit_search_update_callback;</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L182'>search</a>            182 src/editor/editcmd_dialogs.c     return (edit-&gt;search != NULL);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.h.html#L89'>search</a>             89 src/editor/editwidget.h     mc_search_t *search;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L724'>search</a>            724 src/filemanager/ext.c         mc_search_t *search;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L726'>search</a>            726 src/filemanager/ext.c         search = mc_search_new (ptr, DEFAULT_CHARSET);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L727'>search</a>            727 src/filemanager/ext.c         if (search != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L729'>search</a>            729 src/filemanager/ext.c             search-&gt;search_type = MC_SEARCH_T_REGEX;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L730'>search</a>            730 src/filemanager/ext.c             search-&gt;is_case_sensitive = !case_insense;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L731'>search</a>            731 src/filemanager/ext.c             found = mc_search_run (search, content_string + content_shift, 0, -1, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L732'>search</a>            732 src/filemanager/ext.c             mc_search_free (search);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L905'>search</a>            905 src/filemanager/ext.c                 mc_search_t *search;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L912'>search</a>            912 src/filemanager/ext.c                 search = mc_search_new (p, DEFAULT_CHARSET);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L913'>search</a>            913 src/filemanager/ext.c                 if (search != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L915'>search</a>            915 src/filemanager/ext.c                     search-&gt;search_type = MC_SEARCH_T_REGEX;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L916'>search</a>            916 src/filemanager/ext.c                     search-&gt;is_case_sensitive = !case_insense;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L917'>search</a>            917 src/filemanager/ext.c                     found = mc_search_run (search, filename, 0, file_len, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L918'>search</a>            918 src/filemanager/ext.c                     mc_search_free (search);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L407'>search</a>            407 src/filemanager/find.c     mc_search_t *search;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L410'>search</a>            410 src/filemanager/find.c     search = mc_search_new (r, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L412'>search</a>            412 src/filemanager/find.c     if (search != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L414'>search</a>            414 src/filemanager/find.c         search-&gt;search_type = MC_SEARCH_T_REGEX;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L415'>search</a>            415 src/filemanager/find.c         regexp_ok = mc_search_prepare (search);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L416'>search</a>            416 src/filemanager/find.c         mc_search_free (search);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2045'>search</a>           2045 src/filemanager/panel.c     mc_search_t *search;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2060'>search</a>           2060 src/filemanager/panel.c     search = mc_search_new (reg_exp, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2061'>search</a>           2061 src/filemanager/panel.c     search-&gt;search_type = MC_SEARCH_T_REGEX;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2062'>search</a>           2062 src/filemanager/panel.c     search-&gt;is_case_sensitive = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2071'>search</a>           2071 src/filemanager/panel.c         if (!mc_search_run (search, file_entry-&gt;fname, 0, file_entry-&gt;fnamelen, NULL))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2077'>search</a>           2077 src/filemanager/panel.c     mc_search_free (search);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2527'>search</a>           2527 src/filemanager/panel.c     mc_search_t *search;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2559'>search</a>           2559 src/filemanager/panel.c     search = mc_search_new (reg_exp, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2560'>search</a>           2560 src/filemanager/panel.c     search-&gt;search_type = (shell_patterns != 0) ? MC_SEARCH_T_GLOB : MC_SEARCH_T_REGEX;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2561'>search</a>           2561 src/filemanager/panel.c     search-&gt;is_entire_line = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2562'>search</a>           2562 src/filemanager/panel.c     search-&gt;is_case_sensitive = case_sens != 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2571'>search</a>           2571 src/filemanager/panel.c         if (mc_search_run (search, panel-&gt;dir.list[i].fname, 0, panel-&gt;dir.list[i].fnamelen, NULL))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2575'>search</a>           2575 src/filemanager/panel.c     mc_search_free (search);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2633'>search</a>           2633 src/filemanager/panel.c     mc_search_t *search;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2679'>search</a>           2679 src/filemanager/panel.c     search = mc_search_new (esc_str, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2680'>search</a>           2680 src/filemanager/panel.c     search-&gt;search_type = MC_SEARCH_T_GLOB;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2681'>search</a>           2681 src/filemanager/panel.c     search-&gt;is_entire_line = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2686'>search</a>           2686 src/filemanager/panel.c         search-&gt;is_case_sensitive = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2689'>search</a>           2689 src/filemanager/panel.c         search-&gt;is_case_sensitive = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2692'>search</a>           2692 src/filemanager/panel.c         search-&gt;is_case_sensitive = panel-&gt;sort_info.case_sensitive;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2707'>search</a>           2707 src/filemanager/panel.c         if (mc_search_run (search, panel-&gt;dir.list[i].fname, 0, panel-&gt;dir.list[i].fnamelen, NULL))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2727'>search</a>           2727 src/filemanager/panel.c     mc_search_free (search);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L150'>search</a>            150 src/viewer/actions_cmd.c             view-&gt;search = mc_search_new (view-&gt;last_search_string, cp_source);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L152'>search</a>            152 src/viewer/actions_cmd.c             view-&gt;search = mc_search_new (view-&gt;last_search_string, NULL);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L156'>search</a>            156 src/viewer/actions_cmd.c             if (view-&gt;search == NULL)</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L164'>search</a>            164 src/viewer/actions_cmd.c                 view-&gt;search-&gt;search_type = mcview_search_options.type;</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L166'>search</a>            166 src/viewer/actions_cmd.c                 view-&gt;search-&gt;is_all_charsets = mcview_search_options.all_codepages;</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L168'>search</a>            168 src/viewer/actions_cmd.c                 view-&gt;search-&gt;is_case_sensitive = mcview_search_options.case_sens;</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L169'>search</a>            169 src/viewer/actions_cmd.c                 view-&gt;search-&gt;whole_words = mcview_search_options.whole_words;</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L170'>search</a>            170 src/viewer/actions_cmd.c                 view-&gt;search-&gt;search_fn = mcview_search_cmd_callback;</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L171'>search</a>            171 src/viewer/actions_cmd.c                 view-&gt;search-&gt;update_fn = mcview_search_update_cmd_callback;</span>
+<span class='curline'><a href='../S/src--viewer--dialogs.c.html#L142'>search</a>            142 src/viewer/dialogs.c     mc_search_free (view-&gt;search);</span>
+<span class='curline'><a href='../S/src--viewer--dialogs.c.html#L145'>search</a>            145 src/viewer/dialogs.c     view-&gt;search = mc_search_new (view-&gt;last_search_string, cp_source);</span>
+<span class='curline'><a href='../S/src--viewer--dialogs.c.html#L147'>search</a>            147 src/viewer/dialogs.c     view-&gt;search = mc_search_new (view-&gt;last_search_string, NULL);</span>
+<span class='curline'><a href='../S/src--viewer--dialogs.c.html#L150'>search</a>            150 src/viewer/dialogs.c     if (view-&gt;search != NULL)</span>
+<span class='curline'><a href='../S/src--viewer--dialogs.c.html#L152'>search</a>            152 src/viewer/dialogs.c         view-&gt;search-&gt;search_type = mcview_search_options.type;</span>
+<span class='curline'><a href='../S/src--viewer--dialogs.c.html#L154'>search</a>            154 src/viewer/dialogs.c         view-&gt;search-&gt;is_all_charsets = mcview_search_options.all_codepages;</span>
+<span class='curline'><a href='../S/src--viewer--dialogs.c.html#L156'>search</a>            156 src/viewer/dialogs.c         view-&gt;search-&gt;is_case_sensitive = mcview_search_options.case_sens;</span>
+<span class='curline'><a href='../S/src--viewer--dialogs.c.html#L157'>search</a>            157 src/viewer/dialogs.c         view-&gt;search-&gt;whole_words = mcview_search_options.whole_words;</span>
+<span class='curline'><a href='../S/src--viewer--dialogs.c.html#L158'>search</a>            158 src/viewer/dialogs.c         view-&gt;search-&gt;search_fn = mcview_search_cmd_callback;</span>
+<span class='curline'><a href='../S/src--viewer--dialogs.c.html#L159'>search</a>            159 src/viewer/dialogs.c         view-&gt;search-&gt;update_fn = mcview_search_update_cmd_callback;</span>
+<span class='curline'><a href='../S/src--viewer--dialogs.c.html#L162'>search</a>            162 src/viewer/dialogs.c     return (view-&gt;search != NULL);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L198'>search</a>            198 src/viewer/internal.h     mc_search_t *search;</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L248'>search</a>            248 src/viewer/lib.c     mc_search_free (view-&gt;search);</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L249'>search</a>            249 src/viewer/lib.c     view-&gt;search = NULL;</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L144'>search</a>            144 src/viewer/search.c             if (search_end &gt; search_start + (off_t) view-&gt;search-&gt;original_len</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L145'>search</a>            145 src/viewer/search.c                 &amp;&amp; mc_search_is_fixed_search_str (view-&gt;search))</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L146'>search</a>            146 src/viewer/search.c                 search_end = search_start + view-&gt;search-&gt;original_len;</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L148'>search</a>            148 src/viewer/search.c             ok = mc_search_run (view-&gt;search, (void *) ssm, search_start, search_end, len);</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L149'>search</a>            149 src/viewer/search.c             if (ok &amp;&amp; view-&gt;search-&gt;normal_offset == search_start)</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L152'>search</a>            152 src/viewer/search.c                     view-&gt;search-&gt;normal_offset++;</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L157'>search</a>            157 src/viewer/search.c             if (!ok &amp;&amp; view-&gt;search-&gt;error == MC_SEARCH_E_ABORT)</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L163'>search</a>            163 src/viewer/search.c         mc_search_set_error (view-&gt;search, MC_SEARCH_E_NOTFOUND, "%s", _(STR_E_NOTFOUND));</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L169'>search</a>            169 src/viewer/search.c     return mc_search_run (view-&gt;search, (void *) ssm, search_start, search_end, len);</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L181'>search</a>            181 src/viewer/search.c         ? mcview__get_nroff_real_len (view, view-&gt;search-&gt;start_buffer,</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L182'>search</a>            182 src/viewer/search.c                                       view-&gt;search-&gt;normal_offset - view-&gt;search-&gt;start_buffer) : 0;</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L183'>search</a>            183 src/viewer/search.c     view-&gt;search_start = view-&gt;search-&gt;normal_offset + nroff_len;</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L359'>search</a>            359 src/viewer/search.c             growbufsize = view-&gt;search-&gt;original_len;</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L368'>search</a>            368 src/viewer/search.c         if (view-&gt;search-&gt;error == MC_SEARCH_E_ABORT || view-&gt;search-&gt;error == MC_SEARCH_E_NOTFOUND)</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L371'>search</a>            371 src/viewer/search.c         search_start = growbufsize - view-&gt;search-&gt;original_len;</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L410'>search</a>            410 src/viewer/search.c         &amp;&amp; (view-&gt;search-&gt;error == MC_SEARCH_E_ABORT</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L411'>search</a>            411 src/viewer/search.c             || view-&gt;search-&gt;error == MC_SEARCH_E_NOTFOUND))</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L416'>search</a>            416 src/viewer/search.c         if (view-&gt;search-&gt;error == MC_SEARCH_E_NOTFOUND)</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L418'>search</a>            418 src/viewer/search.c         else if (view-&gt;search-&gt;error_str != NULL)</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L419'>search</a>            419 src/viewer/search.c             query_dialog (_("Search"), view-&gt;search-&gt;error_str, D_NORMAL, 1, _("&amp;Dismiss"));</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>sftp_session</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L416'>sftp_session</a>      416 src/vfs/sftpfs/connection.c     super_data-&gt;sftp_session = libssh2_sftp_init (super_data-&gt;session);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L418'>sftp_session</a>      418 src/vfs/sftpfs/connection.c     if (super_data-&gt;sftp_session == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L448'>sftp_session</a>      448 src/vfs/sftpfs/connection.c     if (super_data-&gt;sftp_session != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L450'>sftp_session</a>      450 src/vfs/sftpfs/connection.c         libssh2_sftp_shutdown (super_data-&gt;sftp_session);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L451'>sftp_session</a>      451 src/vfs/sftpfs/connection.c         super_data-&gt;sftp_session = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L88'>sftp_session</a>       88 src/vfs/sftpfs/dir.c             libssh2_sftp_opendir (super_data-&gt;sftp_session,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L206'>sftp_session</a>      206 src/vfs/sftpfs/dir.c     if (super_data-&gt;sftp_session == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L216'>sftp_session</a>      216 src/vfs/sftpfs/dir.c             libssh2_sftp_mkdir_ex (super_data-&gt;sftp_session,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L263'>sftp_session</a>      263 src/vfs/sftpfs/dir.c     if (super_data-&gt;sftp_session == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L273'>sftp_session</a>      273 src/vfs/sftpfs/dir.c             libssh2_sftp_rmdir_ex (super_data-&gt;sftp_session, fixfname, sftpfs_filename_buffer-&gt;len);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L132'>sftp_session</a>      132 src/vfs/sftpfs/file.c             libssh2_sftp_open (super_data-&gt;sftp_session, sftpfs_fix_filename (name),</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L152'>sftp_session</a>      152 src/vfs/sftpfs/internal.c     if (super_data-&gt;sftp_session == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L161'>sftp_session</a>      161 src/vfs/sftpfs/internal.c         res = libssh2_sftp_stat_ex (super_data-&gt;sftp_session, fixfname,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L229'>sftp_session</a>      229 src/vfs/sftpfs/internal.c     if (super_data-&gt;sftp_session == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L239'>sftp_session</a>      239 src/vfs/sftpfs/internal.c             libssh2_sftp_stat_ex (super_data-&gt;sftp_session,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L308'>sftp_session</a>      308 src/vfs/sftpfs/internal.c     if (super_data-&gt;sftp_session == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L317'>sftp_session</a>      317 src/vfs/sftpfs/internal.c         res = libssh2_sftp_readlink (super_data-&gt;sftp_session, fixfname, buf, size);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L366'>sftp_session</a>      366 src/vfs/sftpfs/internal.c     if (super_data-&gt;sftp_session == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L379'>sftp_session</a>      379 src/vfs/sftpfs/internal.c             libssh2_sftp_symlink_ex (super_data-&gt;sftp_session,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L436'>sftp_session</a>      436 src/vfs/sftpfs/internal.c     if (super_data-&gt;sftp_session == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L445'>sftp_session</a>      445 src/vfs/sftpfs/internal.c         res = libssh2_sftp_stat_ex (super_data-&gt;sftp_session, fixfname,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L469'>sftp_session</a>      469 src/vfs/sftpfs/internal.c         res = libssh2_sftp_stat_ex (super_data-&gt;sftp_session, fixfname,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L514'>sftp_session</a>      514 src/vfs/sftpfs/internal.c     if (super_data-&gt;sftp_session == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L524'>sftp_session</a>      524 src/vfs/sftpfs/internal.c             libssh2_sftp_unlink_ex (super_data-&gt;sftp_session, fixfname,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L573'>sftp_session</a>      573 src/vfs/sftpfs/internal.c     if (super_data-&gt;sftp_session == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L586'>sftp_session</a>      586 src/vfs/sftpfs/internal.c             (super_data-&gt;sftp_session,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L42'>sftp_session</a>       42 src/vfs/sftpfs/internal.h     LIBSSH2_SFTP *sftp_session;</span>
+</pre>
+</body>
+</html>

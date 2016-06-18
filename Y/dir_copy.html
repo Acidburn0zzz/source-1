@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>dir_copy</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L75'>dir_copy</a>           75 src/filemanager/dir.c static dir_list dir_copy = { NULL, 0, 0 };</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L225'>dir_copy</a>          225 src/filemanager/dir.c     if (dir_copy.size &lt; size)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L227'>dir_copy</a>          227 src/filemanager/dir.c         if (dir_copy.list != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L231'>dir_copy</a>          231 src/filemanager/dir.c             for (i = 0; i &lt; dir_copy.len; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L235'>dir_copy</a>          235 src/filemanager/dir.c                 fentry = &amp;(dir_copy.list)[i];</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L238'>dir_copy</a>          238 src/filemanager/dir.c             g_free (dir_copy.list);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L241'>dir_copy</a>          241 src/filemanager/dir.c         dir_copy.list = g_new0 (file_entry_t, size);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L242'>dir_copy</a>          242 src/filemanager/dir.c         dir_copy.size = size;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L243'>dir_copy</a>          243 src/filemanager/dir.c         dir_copy.len = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L721'>dir_copy</a>          721 src/filemanager/dir.c         dfentry = &amp;dir_copy.list[i];</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L739'>dir_copy</a>          739 src/filemanager/dir.c     dir_copy.len = list-&gt;len;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L754'>dir_copy</a>          754 src/filemanager/dir.c             dir_list_clean (&amp;dir_copy);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L815'>dir_copy</a>          815 src/filemanager/dir.c     dir_list_clean (&amp;dir_copy);</span>
+</pre>
+</body>
+</html>

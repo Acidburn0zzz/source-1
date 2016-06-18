@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>message</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--serialize.c.html#L69'>message</a>            69 lib/serialize.c     split_str = g_strdup_printf ("%s: %s", prepend_str, (*error)-&gt;message);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L71'>message</a>            71 lib/serialize.c     g_free ((*error)-&gt;message);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L72'>message</a>            72 lib/serialize.c     (*error)-&gt;message = split_str;</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L256'>message</a>           256 lib/strutil/strutil8bit.c         if (str_convert (conv, mcerror-&gt;message, buf) != ESTR_FAILURE)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L217'>message</a>           217 lib/strutil/strutilascii.c         return g_strdup (mcerror-&gt;message);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L415'>message</a>           415 lib/strutil/strutilutf8.c         return g_strdup (mcerror-&gt;message);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L720'>message</a>           720 lib/utilunix.c         message (D_NORMAL, _("Warning"), _("Pipe failed"));</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L725'>message</a>           725 lib/utilunix.c         message (D_NORMAL, _("Warning"), _("Dup failed"));</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L788'>message</a>           788 lib/utilunix.c             message (error, MSG_ERROR, _("Error dup'ing old error pipe"));</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L807'>message</a>           807 lib/utilunix.c         message (error, title, "%s", msg);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L812'>message</a>           812 lib/utilunix.c         message (error, title, "%s\n%s", text, msg);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L349'>message</a>           349 lib/vfs/direntry.c         message (D_ERROR, "Direntry warning",</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L353'>message</a>           353 lib/vfs/direntry.c         message (D_ERROR, "Direntry warning", "%s", "Super has want_stale set");</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L175'>message</a>           175 lib/vfs/interface.c     message (D_ERROR, _("Changes to file lost"), "%s", vfs_path_get_last_path_str (filename_vpath));</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L868'>message</a>           868 lib/vfs/parse_ls_vga.c             message (D_ERROR, _("Cannot parse:"), "%s", (p_copy &amp;&amp; *p_copy) ? p_copy : line);</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L871'>message</a>           871 lib/vfs/parse_ls_vga.c             message (D_ERROR, MSG_ERROR, _("More parsing errors will be ignored."));</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L356'>message</a>           356 lib/vfs/utilvfs.c     message (D_ERROR, _("Internal error:"), "%s", m);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L138'>message</a>           138 lib/widget/dialog.h void dlg_broadcast_msg (WDialog * h, widget_msg_t message);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L445'>message</a>           445 lib/widget/wtools.c         message (D_ERROR, MSG_ERROR, "%s", (*mcerror)-&gt;message);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L447'>message</a>           447 lib/widget/wtools.c         message (D_ERROR, MSG_ERROR, _("%s (%d)"), (*mcerror)-&gt;message, (*mcerror)-&gt;code);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.h.html#L85'>message</a>            85 lib/widget/wtools.h void message (int flags, const char *title, const char *text, ...) G_GNUC_PRINTF (3, 4);</span>
+<span class='curline'><a href='../S/src--args.c.html#L667'>message</a>           667 src/args.c                     mc_replace_error (mcerror, (*mcerror)-&gt;code, "%s\n\n%s\n", (*mcerror)-&gt;message,</span>
+<span class='curline'><a href='../S/src--args.c.html#L674'>message</a>           674 src/args.c                         mc_args__convert_help_to_syscharset (_system_codepage, (*mcerror)-&gt;message,</span>
+<span class='curline'><a href='../S/src--background.c.html#L177'>message</a>           177 src/background.c     message (D_ERROR, _("Background protocol error"), "%s", _("Reading failed"));</span>
+<span class='curline'><a href='../S/src--background.c.html#L230'>message</a>           230 src/background.c             message (D_ERROR, background_process_error, _("Unknown error in child"));</span>
+<span class='curline'><a href='../S/src--background.c.html#L238'>message</a>           238 src/background.c         message (D_ERROR, background_process_error, _("Child died unexpectedly"));</span>
+<span class='curline'><a href='../S/src--background.c.html#L252'>message</a>           252 src/background.c         message (D_ERROR, _("Background protocol error"),</span>
+<span class='curline'><a href='../S/src--background.c.html#L293'>message</a>           293 src/background.c         message (D_ERROR, _("Background process error"), _("Unknown error in child"));</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L90'>message</a>            90 src/cons.handler.c     unsigned char message = 0;</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L107'>message</a>           107 src/cons.handler.c     message = CONSOLE_CONTENTS;</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L108'>message</a>           108 src/cons.handler.c     ret = write (pipefd1[1], &amp;message, 1);</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L110'>message</a>           110 src/cons.handler.c     ret = read (pipefd2[0], &amp;message, 1);</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L111'>message</a>           111 src/cons.handler.c     if (message != CONSOLE_CONTENTS)</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L125'>message</a>           125 src/cons.handler.c         ret = read (pipefd2[0], &amp;message, 1);</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L126'>message</a>           126 src/cons.handler.c         tty_print_char (message);</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L130'>message</a>           130 src/cons.handler.c     ret = read (pipefd2[0], &amp;message, 1);</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L93'>message</a>            93 src/consaver/cons.saver.c     unsigned char message, outbuf[1024], *p;</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L106'>message</a>           106 src/consaver/cons.saver.c     message = CONSOLE_CONTENTS;</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L107'>message</a>           107 src/consaver/cons.saver.c     if (write (1, &amp;message, 1) != 1)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L174'>message</a>           174 src/diffviewer/ydiff.c         message (D_ERROR, MSG_ERROR,</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2206'>message</a>          2206 src/diffviewer/ydiff.c                 message (D_ERROR, MSG_ERROR,</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2216'>message</a>          2216 src/diffviewer/ydiff.c             message (D_ERROR, MSG_ERROR, _("Cannot create temporary merge file\n%s"),</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3553'>message</a>          3553 src/diffviewer/ydiff.c                 message (D_ERROR, MSG_ERROR, _("\"%s\" is a directory"),</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3563'>message</a>          3563 src/diffviewer/ydiff.c                 message (D_ERROR, MSG_ERROR, _("\"%s\" is a directory"),</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3583'>message</a>          3583 src/diffviewer/ydiff.c                     message (D_ERROR, MSG_ERROR, _("\"%s\" is a directory"), path_trunc (p0, 30));</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3589'>message</a>          3589 src/diffviewer/ydiff.c                 message (D_ERROR, MSG_ERROR, _("Cannot stat \"%s\"\n%s"),</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3600'>message</a>          3600 src/diffviewer/ydiff.c                     message (D_ERROR, MSG_ERROR, _("\"%s\" is a directory"), path_trunc (p1, 30));</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3606'>message</a>          3606 src/diffviewer/ydiff.c                 message (D_ERROR, MSG_ERROR, _("Cannot stat \"%s\"\n%s"),</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3615'>message</a>          3615 src/diffviewer/ydiff.c         message (D_ERROR, MSG_ERROR, _("Diff viewer: invalid mode"));</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3644'>message</a>          3644 src/diffviewer/ydiff.c         message (D_ERROR, MSG_ERROR, _("Two files are needed to compare"));</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1820'>message</a>          1820 src/editor/editcmd.c         message (D_ERROR, _("Delete macro"), _("Macro not deleted"));</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2744'>message</a>          2744 src/editor/editcmd.c         message (D_NORMAL, _("Replace"), _("%ld replacements made"), times_replaced);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1501'>message</a>          1501 src/editor/syntax.c         message (D_ERROR, _("Load syntax file"),</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1507'>message</a>          1507 src/editor/syntax.c         message (D_ERROR, _("Load syntax file"),</span>
+<span class='curline'><a href='../S/src--execute.c.html#L135'>message</a>           135 src/execute.c          message (D_ERROR, _("Warning"),</span>
+<span class='curline'><a href='../S/src--execute.c.html#L196'>message</a>           196 src/execute.c          message (D_ERROR, MSG_ERROR, _("Cannot fetch a local copy of %s"),</span>
+<span class='curline'><a href='../S/src--execute.c.html#L436'>message</a>           436 src/execute.c              message (D_ERROR, MSG_ERROR, _("The shell is already running a command"));</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L791'>message</a>           791 src/filemanager/achown.c         message (D_ERROR, MSG_ERROR, _("Cannot chmod \"%s\"\n%s"),</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L796'>message</a>           796 src/filemanager/achown.c         message (D_ERROR, MSG_ERROR, _("Cannot chown \"%s\"\n%s"),</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L815'>message</a>           815 src/filemanager/achown.c             message (D_ERROR, MSG_ERROR, _("Cannot chmod \"%s\"\n%s"),</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L820'>message</a>           820 src/filemanager/achown.c             message (D_ERROR, MSG_ERROR, _("Cannot chown \"%s\"\n%s"),</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L884'>message</a>           884 src/filemanager/achown.c                 message (D_ERROR, MSG_ERROR, _("Cannot chmod \"%s\"\n%s"),</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L890'>message</a>           890 src/filemanager/achown.c                 message (D_ERROR, MSG_ERROR, _("Cannot chown \"%s\"\n%s"), fname,</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L673'>message</a>           673 src/filemanager/boxes.c         message (D_NORMAL, _("Information"),</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L991'>message</a>           991 src/filemanager/boxes.c                 message (D_ERROR, MSG_ERROR, "%s", errmsg);</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L405'>message</a>           405 src/filemanager/chmod.c         message (D_ERROR, MSG_ERROR, _("Cannot chmod \"%s\"\n%s"),</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L490'>message</a>           490 src/filemanager/chmod.c                 message (D_ERROR, MSG_ERROR, _("Cannot chmod \"%s\"\n%s"),</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L303'>message</a>           303 src/filemanager/chown.c         message (D_ERROR, MSG_ERROR, _("Cannot chown \"%s\"\n%s"),</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L433'>message</a>           433 src/filemanager/chown.c                         message (D_ERROR, MSG_ERROR, _("Cannot chown \"%s\"\n%s"),</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L144'>message</a>           144 src/filemanager/cmd.c             message (D_ERROR, MSG_ERROR, _("Cannot change directory"));</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L365'>message</a>           365 src/filemanager/cmd.c             message (D_ERROR, MSG_ERROR, _("link: %s"), unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L402'>message</a>           402 src/filemanager/cmd.c             message (D_ERROR, MSG_ERROR, _("symlink: %s"), unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L459'>message</a>           459 src/filemanager/cmd.c             message (D_ERROR, MSG_ERROR, _("Cannot chdir to \"%s\""), cd_path);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L889'>message</a>           889 src/filemanager/cmd.c             message (D_ERROR, MSG_ERROR, "%s", unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1155'>message</a>          1155 src/filemanager/cmd.c         message (D_ERROR, MSG_ERROR, _("Cannot change directory"));</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1186'>message</a>          1186 src/filemanager/cmd.c         message (D_ERROR, MSG_ERROR,</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1234'>message</a>          1234 src/filemanager/cmd.c             message (D_ERROR, MSG_ERROR,</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1267'>message</a>          1267 src/filemanager/cmd.c         message (D_ERROR, MSG_ERROR, _("'%s' is not a symbolic link"), p);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1295'>message</a>          1295 src/filemanager/cmd.c                     message (D_ERROR, MSG_ERROR, _("edit symlink, unable to remove %s: %s"), p,</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1303'>message</a>          1303 src/filemanager/cmd.c                         message (D_ERROR, MSG_ERROR, _("edit symlink: %s"),</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1542'>message</a>          1542 src/filemanager/cmd.c         message (D_NORMAL, _("Setup"), _("Setup saved to %s"), path);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1544'>message</a>          1544 src/filemanager/cmd.c         message (D_ERROR, _("Setup"), _("Unable to save setup to %s"), path);</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L282'>message</a>           282 src/filemanager/command.c             message (D_ERROR, MSG_ERROR, _("Cannot execute commands on non-local filesystems"));</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L290'>message</a>           290 src/filemanager/command.c             message (D_ERROR, MSG_ERROR, _("The shell is already running a command"));</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L460'>message</a>           460 src/filemanager/command.c             message (D_ERROR, MSG_ERROR, _("Cannot chdir to \"%s\"\n%s"), d,</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L645'>message</a>           645 src/filemanager/dir.c         message (D_ERROR, MSG_ERROR, _("Cannot read directory contents"));</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L706'>message</a>           706 src/filemanager/dir.c         message (D_ERROR, MSG_ERROR, _("Cannot read directory contents"));</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L451'>message</a>           451 src/filemanager/ext.c         message (D_ERROR, MSG_ERROR,</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L836'>message</a>           836 src/filemanager/ext.c                     message (D_ERROR, title, _("The format of the %smc.ext "</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L857'>message</a>           857 src/filemanager/ext.c             message (D_ERROR, title,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L250'>message</a>           250 src/filemanager/file.c                 message (D_ERROR, MSG_ERROR, "%s", ctx-&gt;search_handle-&gt;error_str);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L359'>message</a>           359 src/filemanager/file.c             message (D_ERROR, MSG_ERROR, _("Cannot make the hardlink"));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L426'>message</a>           426 src/filemanager/file.c             message (D_ERROR, MSG_ERROR,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L966'>message</a>           966 src/filemanager/file.c             message (D_ERROR, MSG_ERROR, _("Cannot overwrite directory \"%s\""), d);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1663'>message</a>          1663 src/filemanager/file.c             message (D_ERROR, _("Warning"), _("Reget failed, about to overwrite file"));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2095'>message</a>          2095 src/filemanager/file.c         message (D_ERROR, MSG_ERROR, _("Cannot copy cyclic symbolic link\n\"%s\""), s);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2649'>message</a>          2649 src/filemanager/file.c             message (D_ERROR, MSG_ERROR, _("Cannot operate on \"..\"!"));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2660'>message</a>          2660 src/filemanager/file.c                 message (D_ERROR, MSG_ERROR, _("Cannot stat \"%s\"\n%s"),</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2786'>message</a>          2786 src/filemanager/file.c             message (D_ERROR, MSG_ERROR, _("Sorry, I could not put the job in background"));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2878'>message</a>          2878 src/filemanager/file.c                             message (D_ERROR, MSG_ERROR, "%s", ctx-&gt;search_handle-&gt;error_str);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2991'>message</a>          2991 src/filemanager/file.c                                 message (D_ERROR, MSG_ERROR, "%s", ctx-&gt;search_handle-&gt;error_str);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1311'>message</a>          1311 src/filemanager/filegui.c             message (D_ERROR, MSG_ERROR, _("Invalid source pattern '%s'"), source_mask);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L503'>message</a>           503 src/filemanager/find.c             message (D_ERROR, MSG_ERROR, _("Malformed regular expression"));</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L514'>message</a>           514 src/filemanager/find.c             message (D_ERROR, MSG_ERROR, _("Malformed regular expression"));</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1470'>message</a>          1470 src/filemanager/hotlist.c             message (D_ERROR, _("Hotlist Load"),</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2801'>message</a>          2801 src/filemanager/panel.c             message (D_ERROR, MSG_ERROR, _("Cannot change directory"));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3389'>message</a>          3389 src/filemanager/panel.c             message (D_ERROR, MSG_ERROR, _("Cannot change directory"));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3677'>message</a>          3677 src/filemanager/panel.c             message (D_ERROR, MSG_ERROR, _("Cannot chdir to \"%s\"\n%s"),</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4482'>message</a>          4482 src/filemanager/panel.c         message (D_ERROR, _("Warning"),</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4765'>message</a>          4765 src/filemanager/panel.c         message (D_ERROR, MSG_ERROR, "%s", errmsg);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4776'>message</a>          4776 src/filemanager/panel.c             message (D_ERROR, MSG_ERROR, _("Cannot chdir to \"%s\""),</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L376'>message</a>           376 src/filemanager/panelize.c         message (D_NORMAL, _("External panelize"), _("Pipe close failed"));</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L506'>message</a>           506 src/filemanager/panelize.c         message (D_ERROR, MSG_ERROR, _("Cannot run external panelize in a non-local directory"));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L589'>message</a>           589 src/filemanager/tree.c             message (D_ERROR, MSG_ERROR, _("Cannot chdir to \"%s\"\n%s"),</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L764'>message</a>           764 src/filemanager/tree.c         message (D_ERROR, MSG_ERROR, _("Cannot stat the destination\n%s"),</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L320'>message</a>           320 src/filemanager/usermenu.c             message (D_NORMAL, _("Debug"), "%s", msg);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L446'>message</a>           446 src/filemanager/usermenu.c         message (D_ERROR, MSG_ERROR, _("Cannot create temporary command file\n%s"),</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L562'>message</a>           562 src/filemanager/usermenu.c                 message (D_ERROR, MSG_ERROR, "%s", _("Error calling program"));</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L593'>message</a>           593 src/filemanager/usermenu.c         message (D_NORMAL, _("Warning -- ignoring file"),</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L705'>message</a>           705 src/filemanager/usermenu.c             message (D_ERROR,</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L931'>message</a>           931 src/filemanager/usermenu.c         message (D_ERROR, MSG_ERROR, "%s", _("Cannot execute commands on non-local filesystems"));</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L942'>message</a>           942 src/filemanager/usermenu.c             message (D_ERROR, MSG_ERROR, _("Cannot open file %s\n%s"), menu,</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L983'>message</a>           983 src/filemanager/usermenu.c         message (D_ERROR, MSG_ERROR, _("Cannot open file %s\n%s"), menu, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L1085'>message</a>          1085 src/filemanager/usermenu.c         message (D_ERROR, MSG_ERROR, _("No suitable entries found in %s"), menu);</span>
+<span class='curline'><a href='../S/src--help.c.html#L361'>message</a>           361 src/help.c             message (D_NORMAL, _("Warning"), _("Internal bug: Double start of link area"));</span>
+<span class='curline'><a href='../S/src--help.c.html#L630'>message</a>           630 src/help.c             message (D_ERROR, MSG_ERROR, _("Cannot find node %s in help file"), "[Contents]");</span>
+<span class='curline'><a href='../S/src--help.c.html#L1064'>message</a>          1064 src/help.c             message (D_ERROR, MSG_ERROR, _("Cannot open file %s\n%s"),</span>
+<span class='curline'><a href='../S/src--help.c.html#L1086'>message</a>          1086 src/help.c             message (D_ERROR, MSG_ERROR, _("Cannot find node %s in help file"), event_data-&gt;node);</span>
+<span class='curline'><a href='../S/src--learn.c.html#L119'>message</a>           119 src/learn.c                message (D_NORMAL, _("Cannot accept this key"), _("You have entered \"%s\""), seq);</span>
+<span class='curline'><a href='../S/src--learn.c.html#L197'>message</a>           197 src/learn.c                    message (D_ERROR, learn_title,</span>
+<span class='curline'><a href='../S/src--main.c.html#L240'>message</a>           240 src/main.c             fprintf (stderr, _("Failed to run:\n%s\n"), mcerror-&gt;message);</span>
+<span class='curline'><a href='../S/src--main.c.html#L395'>message</a>           395 src/main.c             message (D_ERROR, _("Warning"), "%s", config_migrate_msg);</span>
+<span class='curline'><a href='../S/src--main.c.html#L487'>message</a>           487 src/main.c             fprintf (stderr, _("\nFailed while close:\n%s\n"), mcerror-&gt;message);</span>
+<span class='curline'><a href='../S/src--selcodepage.c.html#L153'>message</a>           153 src/selcodepage.c         message (D_ERROR, MSG_ERROR, "%s", errmsg);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1258'>message</a>          1258 src/setup.c            message (D_ERROR, MSG_ERROR, _("Cannot save file %s:\n%s"), filename, (*mcerror)-&gt;message);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L224'>message</a>           224 src/vfs/cpio/cpio.c         message (D_ERROR, MSG_ERROR, _("Cannot open cpio archive\n%s"), vfs_path_as_str (vpath));</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L251'>message</a>           251 src/vfs/cpio/cpio.c             message (D_ERROR, MSG_ERROR, _("Cannot open cpio archive\n%s"), s);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L328'>message</a>           328 src/vfs/cpio/cpio.c                 message (D_ERROR, MSG_ERROR, _("Premature end of cpio archive\n%s"), super-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L414'>message</a>           414 src/vfs/cpio/cpio.c                 message (D_ERROR, MSG_ERROR,</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L455'>message</a>           455 src/vfs/cpio/cpio.c             message (D_ERROR, MSG_ERROR,</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L560'>message</a>           560 src/vfs/cpio/cpio.c         message (D_ERROR, MSG_ERROR, _("Corrupted cpio header encountered in\n%s"), super-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L621'>message</a>           621 src/vfs/cpio/cpio.c         message (D_ERROR, MSG_ERROR, _("Corrupted cpio header encountered in\n%s"), super-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L627'>message</a>           627 src/vfs/cpio/cpio.c         message (D_ERROR, MSG_ERROR, _("Corrupted cpio header encountered in\n%s"), super-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L691'>message</a>           691 src/vfs/cpio/cpio.c         message (D_ERROR, MSG_ERROR, _("Corrupted cpio header encountered in\n%s"), super-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L701'>message</a>           701 src/vfs/cpio/cpio.c         message (D_ERROR, MSG_ERROR, _("Corrupted cpio header encountered in\n%s"), super-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L760'>message</a>           760 src/vfs/cpio/cpio.c                 message (D_ERROR, MSG_ERROR, _("Unexpected end of file\n%s"),</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L509'>message</a>           509 src/vfs/extfs/extfs.c         message (D_ERROR, MSG_ERROR, _("Cannot open %s archive\n%s"), info-&gt;prefix, name);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L682'>message</a>           682 src/vfs/ftpfs/ftpfs.c     message (D_ERROR, MSG_ERROR, _("ftpfs: Login incorrect for user %s "),</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2332'>message</a>          2332 src/vfs/ftpfs/ftpfs.c             message (D_ERROR, MSG_ERROR,</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L679'>message</a>           679 src/vfs/smbfs/helpers/include/smb.h     fstring message;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L101'>message</a>           101 src/vfs/smbfs/helpers/libsmb/clientgen.c     const char *message;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L177'>message</a>           177 src/vfs/smbfs/helpers/libsmb/clientgen.c     for (i = 0; rap_errmap[i].message != NULL; i++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L181'>message</a>           181 src/vfs/smbfs/helpers/libsmb/clientgen.c             fstrcpy (error_message, rap_errmap[i].message);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smberr.c.html#L39'>message</a>            39 src/vfs/smbfs/helpers/libsmb/smberr.c     const char *message;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smberr.c.html#L189'>message</a>           189 src/vfs/smbfs/helpers/libsmb/smberr.c                                       err[j].name, err[j].message);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L693'>message</a>           693 src/vfs/smbfs/smbfs.c         message (D_ERROR, MSG_ERROR, _("reconnect to %s failed"), conn-&gt;host);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1315'>message</a>          1315 src/vfs/smbfs/smbfs.c         message (D_ERROR, MSG_ERROR, _("Authentication failed"));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1905'>message</a>          1905 src/vfs/smbfs/smbfs.c         message (D_ERROR, MSG_ERROR, _("Error %s creating directory %s"),</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1934'>message</a>          1934 src/vfs/smbfs/smbfs.c         message (D_ERROR, MSG_ERROR, _("Error %s removing directory %s"),</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2064'>message</a>          2064 src/vfs/smbfs/smbfs.c         message (D_ERROR, MSG_ERROR, _("%s opening remote file %s"),</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2080'>message</a>          2080 src/vfs/smbfs/smbfs.c         message (D_ERROR, MSG_ERROR, "getattrib: %s", cli_errstr (remote_handle-&gt;cli));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2144'>message</a>          2144 src/vfs/smbfs/smbfs.c         message (D_ERROR, MSG_ERROR, _("%s removing remote file %s"),</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2181'>message</a>          2181 src/vfs/smbfs/smbfs.c         message (D_ERROR, MSG_ERROR, _("%s renaming files\n"), cli_errstr (sc-&gt;cli));</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L293'>message</a>           293 src/vfs/tar/tar.c         message (D_ERROR, MSG_ERROR, _("Cannot open tar archive\n%s"), vfs_path_as_str (vpath));</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L319'>message</a>           319 src/vfs/tar/tar.c             message (D_ERROR, MSG_ERROR, _("Cannot open tar archive\n%s"), s);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L575'>message</a>           575 src/vfs/tar/tar.c             message (D_ERROR, MSG_ERROR, _("Inconsistent tar archive"));</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L590'>message</a>           590 src/vfs/tar/tar.c                 message (D_ERROR, MSG_ERROR, _("Unexpected EOF on archive file"));</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L604'>message</a>           604 src/vfs/tar/tar.c             message (D_ERROR, MSG_ERROR, _("Inconsistent tar archive"));</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L689'>message</a>           689 src/vfs/tar/tar.c             message (D_ERROR, MSG_ERROR, _("Inconsistent tar archive"));</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L698'>message</a>           698 src/vfs/tar/tar.c                 message (D_ERROR, MSG_ERROR, _("Inconsistent tar archive"));</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L791'>message</a>           791 src/vfs/tar/tar.c                     message (D_ERROR, MSG_ERROR, _("%s\ndoesn't look like a tar archive."),</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L243'>message</a>           243 src/vfs/undelfs/undelfs.c         message (D_ERROR, undelfserr, _("not enough memory"));</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L249'>message</a>           249 src/vfs/undelfs/undelfs.c         message (D_ERROR, undelfserr, _("while allocating block buffer"));</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L255'>message</a>           255 src/vfs/undelfs/undelfs.c         message (D_ERROR, undelfserr, _("open_inode_scan: %d"), retval);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L261'>message</a>           261 src/vfs/undelfs/undelfs.c         message (D_ERROR, undelfserr, _("while starting inode scan %d"), retval);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L283'>message</a>           283 src/vfs/undelfs/undelfs.c             message (D_ERROR, undelfserr, _("while calling ext2_block_iterate %d"), retval);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L295'>message</a>           295 src/vfs/undelfs/undelfs.c                     message (D_ERROR, undelfserr, _("no more memory while reallocating array"));</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L317'>message</a>           317 src/vfs/undelfs/undelfs.c             message (D_ERROR, undelfserr, _("while doing inode scan %d"), retval);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L368'>message</a>           368 src/vfs/undelfs/undelfs.c         message (D_ERROR, undelfserr, _("Cannot open file %s"), ext2_fname);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L374'>message</a>           374 src/vfs/undelfs/undelfs.c         message (D_ERROR, undelfserr, _("Cannot load inode bitmap from:\n%s"), ext2_fname);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L380'>message</a>           380 src/vfs/undelfs/undelfs.c         message (D_ERROR, undelfserr, _("Cannot load block bitmap from:\n%s"), ext2_fname);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L405'>message</a>           405 src/vfs/undelfs/undelfs.c         message (D_ERROR, undelfserr, _("vfs_info is not fs!"));</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L451'>message</a>           451 src/vfs/undelfs/undelfs.c         message (D_ERROR, undelfserr, _("You have to chdir to extract files first"));</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L597'>message</a>           597 src/vfs/undelfs/undelfs.c         message (D_ERROR, undelfserr, _("while iterating over blocks"));</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L670'>message</a>           670 src/vfs/undelfs/undelfs.c         message (D_ERROR, undelfserr, _("You have to chdir to extract files first"));</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L716'>message</a>           716 src/vfs/undelfs/undelfs.c         message (D_ERROR, undelfserr, _("Cannot open file \"%s\""), file);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L810'>message</a>           810 src/vfs/undelfs/undelfs.c     message (D_ERROR, _("Ext2lib error"), "%s (%s: %ld)", str, whoami, err_code);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L419'>message</a>           419 src/viewer/actions_cmd.c                     message (D_ERROR, _("Warning"), _("Invalid value"));</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L407'>message</a>           407 src/viewer/datasource.c         mcview_show_error (view, error-&gt;message);</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L179'>message</a>           179 src/viewer/growbuf.c                 mcview_show_error (view, error-&gt;message);</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L420'>message</a>           420 src/viewer/hex.c                 message (D_ERROR, _("Save file"),</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L315'>message</a>           315 src/viewer/lib.c         message (D_ERROR, MSG_ERROR, "%s", msg);</span>
+<span class='curline'><a href='../S/tests--lib--mcconfig--config_string.c.html#L59'>message</a>            59 tests/lib/mcconfig/config_string.c         fail ("Unable to save config file: %s", error-&gt;message);</span>
+<span class='curline'><a href='../S/tests--lib--serialize.c.html#L164'>message</a>           164 tests/lib/serialize.c     mctest_assert_str_eq (error-&gt;message, data-&gt;expected_error_string);</span>
+<span class='curline'><a href='../S/tests--lib--serialize.c.html#L302'>message</a>           302 tests/lib/serialize.c     mctest_assert_str_eq (error-&gt;message, data-&gt;expected_error_string);</span>
+</pre>
+</body>
+</html>

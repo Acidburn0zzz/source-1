@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>compl</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1224'>compl</a>            1224 src/editor/editcmd.c                           char *match_expr, GString ** compl, gsize * num)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1298'>compl</a>            1298 src/editor/editcmd.c                 ((char *) &amp;compl[i]-&gt;str[word_len],</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1299'>compl</a>            1299 src/editor/editcmd.c                  (char *) &amp;temp-&gt;str[word_len], MAX (len, compl[i]-&gt;len) - word_len) == 0)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1301'>compl</a>            1301 src/editor/editcmd.c                 GString *this = compl[i];</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1303'>compl</a>            1303 src/editor/editcmd.c                     compl[i - 1] = compl[i];</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1304'>compl</a>            1304 src/editor/editcmd.c                 compl[*num - 1] = this;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1314'>compl</a>            1314 src/editor/editcmd.c             g_string_free (compl[0], TRUE);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1316'>compl</a>            1316 src/editor/editcmd.c                 compl[i - 1] = compl[i];</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1330'>compl</a>            1330 src/editor/editcmd.c         compl[(*num)++] = g_string_new_len (temp-&gt;str, temp-&gt;len);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3340'>compl</a>            3340 src/editor/editcmd.c     GString *compl[MAX_WORD_COMPLETIONS];       /* completions */</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3357'>compl</a>            3357 src/editor/editcmd.c         edit_collect_completions (edit, word_start, word_len, match_expr-&gt;str, (GString **) &amp; compl,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3364'>compl</a>            3364 src/editor/editcmd.c             edit_complete_word_insert_recoded_completion (edit, compl[0]-&gt;str, word_len);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3377'>compl</a>            3377 src/editor/editcmd.c                                                          (GString **) &amp; compl, num_compl);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3390'>compl</a>            3390 src/editor/editcmd.c         g_string_free (compl[i], TRUE);</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L348'>compl</a>             348 src/editor/editcmd_dialogs.c editcmd_dialog_completion_show (const WEdit * edit, int max_len, GString ** compl, int num_compl)</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L394'>compl</a>             394 src/editor/editcmd_dialogs.c         listbox_add_item (compl_list, LISTBOX_APPEND_AT_END, 0, (char *) compl[i]-&gt;str, NULL,</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.h.html#L28'>compl</a>              28 src/editor/editcmd_dialogs.h char *editcmd_dialog_completion_show (const WEdit * edit, int max_len, GString ** compl,</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L97'>compl</a>              97 tests/src/editor/editcmd__edit_complete_word_cmd.c editcmd_dialog_completion_show (const WEdit * edit, int max_len, GString ** compl, int num_compl)</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L111'>compl</a>             111 tests/src/editor/editcmd__edit_complete_word_cmd.c                 g_string_new_len (compl[iterator]-&gt;str, compl[iterator]-&gt;len);</span>
+</pre>
+</body>
+</html>

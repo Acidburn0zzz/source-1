@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>idx</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L130'>idx</a>               130 lib/tty/color-internal.c tty_color_get_name_by_index (int idx)</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L137'>idx</a>               137 lib/tty/color-internal.c         if (idx == color_table[i].value)</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L140'>idx</a>               140 lib/tty/color-internal.c     if (idx &gt;= 16 &amp;&amp; idx &lt; 256)</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L148'>idx</a>               148 lib/tty/color-internal.c         if (color_N_names[idx - 16] == NULL)</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L150'>idx</a>               150 lib/tty/color-internal.c             color_N_names[idx - 16] = g_try_malloc (9);</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L151'>idx</a>               151 lib/tty/color-internal.c             sprintf (color_N_names[idx - 16], "color%d", idx);</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L153'>idx</a>               153 lib/tty/color-internal.c         return color_N_names[idx - 16];</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1256'>idx</a>              1256 lib/tty/key.c  lookup_keyname (const char *name, int *idx)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1266'>idx</a>              1266 lib/tty/key.c              *idx = -1;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1277'>idx</a>              1277 lib/tty/key.c              *idx = (int) (res - key_conv_tab_sorted);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1282'>idx</a>              1282 lib/tty/key.c      *idx = -1;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1289'>idx</a>              1289 lib/tty/key.c  lookup_keycode (const long code, int *idx)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1304'>idx</a>              1304 lib/tty/key.c              *idx = (int) (res - key_conv_tab_sorted);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1309'>idx</a>              1309 lib/tty/key.c      *idx = -1;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1487'>idx</a>              1487 lib/tty/key.c              int idx;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1489'>idx</a>              1489 lib/tty/key.c              key = lookup_keyname (g_strstrip (*p), &amp;idx);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1492'>idx</a>              1492 lib/tty/key.c                  use_meta = idx;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1494'>idx</a>              1494 lib/tty/key.c                  use_ctrl = idx;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1496'>idx</a>              1496 lib/tty/key.c                  use_shift = idx;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1500'>idx</a>              1500 lib/tty/key.c                  lc_index = idx;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1589'>idx</a>              1589 lib/tty/key.c      int idx;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1597'>idx</a>              1597 lib/tty/key.c              if (lookup_keycode (KEY_M_ALT, &amp;idx))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1599'>idx</a>              1599 lib/tty/key.c                  g_string_append (s, key_conv_tab_sorted[idx]-&gt;name);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1609'>idx</a>              1609 lib/tty/key.c              if (lookup_keycode (KEY_M_CTRL, &amp;idx))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1611'>idx</a>              1611 lib/tty/key.c                  g_string_append (s, key_conv_tab_sorted[idx]-&gt;name);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1617'>idx</a>              1617 lib/tty/key.c              if (lookup_keycode (KEY_M_ALT, &amp;idx))</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1623'>idx</a>              1623 lib/tty/key.c                      g_string_append (s, key_conv_tab_sorted[idx]-&gt;name);</span>
+<span class='curline'><a href='../S/lib--tty--keyxdef.c.html#L418'>idx</a>               418 lib/tty/keyxdef.c         int idx;</span>
+<span class='curline'><a href='../S/lib--tty--keyxdef.c.html#L425'>idx</a>               425 lib/tty/keyxdef.c         for (idx = 0; idx &lt; sizeof (xtra_key_defines) / sizeof (xtra_key_defines[0]); idx++)</span>
+<span class='curline'><a href='../S/lib--tty--keyxdef.c.html#L427'>idx</a>               427 lib/tty/keyxdef.c             int str_idx = xtra_key_defines[idx].str_idx;</span>
+<span class='curline'><a href='../S/lib--tty--keyxdef.c.html#L433'>idx</a>               433 lib/tty/keyxdef.c                     define_sequence (xtra_key_defines[idx].mc_code,</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L67'>idx</a>                67 lib/vfs/parse_ls_vga.c is_num (int idx)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L69'>idx</a>                69 lib/vfs/parse_ls_vga.c     char *column = columns[idx];</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L518'>idx</a>               518 lib/vfs/parse_ls_vga.c vfs_parse_filedate (int idx, time_t * t)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L540'>idx</a>               540 lib/vfs/parse_ls_vga.c     p = columns[idx++];</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L544'>idx</a>               544 lib/vfs/parse_ls_vga.c         p = columns[idx++];</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L550'>idx</a>               550 lib/vfs/parse_ls_vga.c         if (is_num (idx))</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L551'>idx</a>               551 lib/vfs/parse_ls_vga.c             tim.tm_mday = (int) atol (columns[idx++]);</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L602'>idx</a>               602 lib/vfs/parse_ls_vga.c             if (is_localized_month (p) &amp;&amp; (is_num (idx++)))</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L610'>idx</a>               610 lib/vfs/parse_ls_vga.c     if (is_num (idx) &amp;&amp; (is_time (columns[idx], &amp;tim) || (got_year = is_year (columns[idx], &amp;tim))))</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L611'>idx</a>               611 lib/vfs/parse_ls_vga.c         idx++;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L629'>idx</a>               629 lib/vfs/parse_ls_vga.c     return idx;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L679'>idx</a>               679 lib/vfs/parse_ls_vga.c     int idx, idx2, num_cols;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L730'>idx</a>               730 lib/vfs/parse_ls_vga.c     for (idx = 3; idx &lt;= 5; idx++)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L731'>idx</a>               731 lib/vfs/parse_ls_vga.c         if (is_month (columns[idx], NULL) || is_week (columns[idx], NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L732'>idx</a>               732 lib/vfs/parse_ls_vga.c             || is_dos_date (columns[idx]) || is_localized_month (columns[idx]))</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L735'>idx</a>               735 lib/vfs/parse_ls_vga.c     if (idx == 6 || (idx == 5 &amp;&amp; !S_ISCHR (s-&gt;st_mode) &amp;&amp; !S_ISBLK (s-&gt;st_mode)))</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L739'>idx</a>               739 lib/vfs/parse_ls_vga.c     if (idx == 3 || (idx == 4 &amp;&amp; (S_ISCHR (s-&gt;st_mode) || S_ISBLK (s-&gt;st_mode))))</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L791'>idx</a>               791 lib/vfs/parse_ls_vga.c     idx = vfs_parse_filedate (idx, &amp;s-&gt;st_mtime);</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L792'>idx</a>               792 lib/vfs/parse_ls_vga.c     if (!idx)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L806'>idx</a>               806 lib/vfs/parse_ls_vga.c         *num_spaces = column_ptr[idx] - column_ptr[idx - 1] - strlen (columns[idx - 1]);</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L807'>idx</a>               807 lib/vfs/parse_ls_vga.c         if (DIR_IS_DOTDOT (columns[idx]))</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L811'>idx</a>               811 lib/vfs/parse_ls_vga.c     for (i = idx + 1, idx2 = 0; i &lt; num_cols; i++)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L818'>idx</a>               818 lib/vfs/parse_ls_vga.c     if (((S_ISLNK (s-&gt;st_mode) || (num_cols == idx + 3 &amp;&amp; s-&gt;st_nlink &gt; 1)))    /* Maybe a hardlink? (in extfs) */</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L824'>idx</a>               824 lib/vfs/parse_ls_vga.c             *filename = g_strndup (p + column_ptr[idx], column_ptr[idx2] - column_ptr[idx] - 1);</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L843'>idx</a>               843 lib/vfs/parse_ls_vga.c             t = g_strdup (p + column_ptr[idx]);</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.h.html#L60'>idx</a>                60 lib/vfs/utilvfs.h int vfs_parse_filedate (int idx, time_t * t);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L213'>idx</a>               213 lib/vfs/vfs.c      const int idx = handle - VFS_FIRST_HANDLE;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L215'>idx</a>               215 lib/vfs/vfs.c      if (handle &gt;= VFS_FIRST_HANDLE &amp;&amp; (guint) idx &lt; vfs_openfiles-&gt;len)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L219'>idx</a>               219 lib/vfs/vfs.c          h = (struct vfs_openfile *) g_ptr_array_index (vfs_openfiles, idx);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L221'>idx</a>               221 lib/vfs/vfs.c          g_ptr_array_index (vfs_openfiles, idx) = (void *) vfs_free_handle_list;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L222'>idx</a>               222 lib/vfs/vfs.c          vfs_free_handle_list = idx;</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L136'>idx</a>               136 lib/widget/buttonbar.c set_label_text (WButtonBar * bb, int idx, const char *text)</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L138'>idx</a>               138 lib/widget/buttonbar.c     g_free (bb-&gt;labels[idx - 1].text);</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L139'>idx</a>               139 lib/widget/buttonbar.c     bb-&gt;labels[idx - 1].text = g_strdup (text);</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L263'>idx</a>               263 lib/widget/buttonbar.c buttonbar_set_label (WButtonBar * bb, int idx, const char *text, const global_keymap_t * keymap,</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L266'>idx</a>               266 lib/widget/buttonbar.c     if ((bb != NULL) &amp;&amp; (idx &gt;= 1) &amp;&amp; (idx &lt;= BUTTONBAR_LABELS_NUM))</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L271'>idx</a>               271 lib/widget/buttonbar.c             command = keybind_lookup_keymap_command (keymap, KEY_F (idx));</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L274'>idx</a>               274 lib/widget/buttonbar.c             set_label_text (bb, idx, "");</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L276'>idx</a>               276 lib/widget/buttonbar.c             set_label_text (bb, idx, text);</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L278'>idx</a>               278 lib/widget/buttonbar.c         bb-&gt;labels[idx - 1].command = command;</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L279'>idx</a>               279 lib/widget/buttonbar.c         bb-&gt;labels[idx - 1].receiver = WIDGET (receiver);</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.h.html#L16'>idx</a>                16 lib/widget/buttonbar.h #define buttonbar_clear_label(bb, idx, recv) buttonbar_set_label (bb, idx, "", NULL, recv)</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.h.html#L40'>idx</a>                40 lib/widget/buttonbar.h void buttonbar_set_label (WButtonBar * bb, int idx, const char *text,</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L119'>idx</a>               119 lib/widget/menu.c menubar_paint_idx (WMenuBar * menubar, unsigned int idx, int color)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L123'>idx</a>               123 lib/widget/menu.c     const menu_entry_t *entry = MENUENTRY (g_list_nth_data (menu-&gt;entries, idx));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L124'>idx</a>               124 lib/widget/menu.c     const int y = 2 + idx;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L588'>idx</a>               588 src/filemanager/layout.c panel_do_cols (int idx)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L590'>idx</a>               590 src/filemanager/layout.c     if (get_display_type (idx) == view_listing)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L591'>idx</a>               591 src/filemanager/layout.c         set_panel_formats (PANEL (panels[idx].widget));</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L593'>idx</a>               593 src/filemanager/layout.c         panel_update_cols (panels[idx].widget, frame_half);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L600'>idx</a>               600 src/filemanager/layout.c restore_into_right_dir_panel (int idx, Widget * from_widget)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L603'>idx</a>               603 src/filemanager/layout.c     const char *saved_dir = panels[idx].last_saved_dir;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L604'>idx</a>               604 src/filemanager/layout.c     gboolean last_was_panel = (from_widget &amp;&amp; get_display_type (idx) != view_listing);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L605'>idx</a>               605 src/filemanager/layout.c     const char *p_name = get_nth_panel_name (idx);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1197'>idx</a>              1197 src/filemanager/layout.c get_display_type (int idx)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1199'>idx</a>              1199 src/filemanager/layout.c     return panels[idx].type;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1205'>idx</a>              1205 src/filemanager/layout.c get_panel_widget (int idx)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1207'>idx</a>              1207 src/filemanager/layout.c     return panels[idx].widget;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1265'>idx</a>              1265 src/filemanager/layout.c save_panel_dir (int idx)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1267'>idx</a>              1267 src/filemanager/layout.c     panel_view_mode_t type = get_display_type (idx);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1268'>idx</a>              1268 src/filemanager/layout.c     Widget *widget = get_panel_widget (idx);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1274'>idx</a>              1274 src/filemanager/layout.c         g_free (panels[idx].last_saved_dir);    /* last path no needed */</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1276'>idx</a>              1276 src/filemanager/layout.c         panels[idx].last_saved_dir = g_strdup (vfs_path_as_str (w-&gt;cwd_vpath));</span>
+<span class='curline'><a href='../S/src--filemanager--layout.h.html#L66'>idx</a>                66 src/filemanager/layout.h panel_view_mode_t get_display_type (int idx);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.h.html#L73'>idx</a>                73 src/filemanager/layout.h Widget *get_panel_widget (int idx);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.h.html#L77'>idx</a>                77 src/filemanager/layout.h void save_panel_dir (int idx);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4606'>idx</a>              4606 src/filemanager/panel.c do_file_mark (WPanel * panel, int idx, int mark)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4608'>idx</a>              4608 src/filemanager/panel.c     if (panel-&gt;dir.list[idx].f.marked == mark)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4612'>idx</a>              4612 src/filemanager/panel.c     if (DIR_IS_DOTDOT (panel-&gt;dir.list[idx].fname))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4615'>idx</a>              4615 src/filemanager/panel.c     file_mark (panel, idx, mark);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4616'>idx</a>              4616 src/filemanager/panel.c     if (panel-&gt;dir.list[idx].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4620'>idx</a>              4620 src/filemanager/panel.c         if (S_ISDIR (panel-&gt;dir.list[idx].st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4622'>idx</a>              4622 src/filemanager/panel.c             if (panel-&gt;dir.list[idx].f.dir_size_computed)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4623'>idx</a>              4623 src/filemanager/panel.c                 panel-&gt;total += (uintmax_t) panel-&gt;dir.list[idx].st.st_size;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4627'>idx</a>              4627 src/filemanager/panel.c             panel-&gt;total += (uintmax_t) panel-&gt;dir.list[idx].st.st_size;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4633'>idx</a>              4633 src/filemanager/panel.c         if (S_ISDIR (panel-&gt;dir.list[idx].st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4635'>idx</a>              4635 src/filemanager/panel.c             if (panel-&gt;dir.list[idx].f.dir_size_computed)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4636'>idx</a>              4636 src/filemanager/panel.c                 panel-&gt;total -= (uintmax_t) panel-&gt;dir.list[idx].st.st_size;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4640'>idx</a>              4640 src/filemanager/panel.c             panel-&gt;total -= (uintmax_t) panel-&gt;dir.list[idx].st.st_size;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L177'>idx</a>               177 src/filemanager/panel.h void file_mark (WPanel * panel, int idx, int val);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L178'>idx</a>               178 src/filemanager/panel.h void do_file_mark (WPanel * panel, int idx, int val);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nterr.c.html#L544'>idx</a>               544 src/vfs/smbfs/helpers/libsmb/nterr.c     int idx = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nterr.c.html#L548'>idx</a>               548 src/vfs/smbfs/helpers/libsmb/nterr.c     while (nt_errs[idx].nt_errstr != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nterr.c.html#L550'>idx</a>               550 src/vfs/smbfs/helpers/libsmb/nterr.c         if (nt_errs[idx].nt_errcode == nt_code)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nterr.c.html#L552'>idx</a>               552 src/vfs/smbfs/helpers/libsmb/nterr.c             return nt_errs[idx].nt_errstr;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nterr.c.html#L554'>idx</a>               554 src/vfs/smbfs/helpers/libsmb/nterr.c         idx++;</span>
+<span class='curline'><a href='../S/src--viewer--inlines.h.html#L70'>idx</a>                70 src/viewer/inlines.h mcview_already_loaded (off_t offset, off_t idx, size_t size)</span>
+<span class='curline'><a href='../S/src--viewer--inlines.h.html#L72'>idx</a>                72 src/viewer/inlines.h     return (offset &lt;= idx &amp;&amp; idx - offset &lt; (off_t) size);</span>
+</pre>
+</body>
+</html>

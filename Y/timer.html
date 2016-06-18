@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>timer</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--global.c.html#L53'>timer</a>              53 lib/global.c       .timer = NULL,</span>
+<span class='curline'><a href='../S/lib--global.h.html#L175'>timer</a>             175 lib/global.h       mc_timer_t *timer;</span>
+<span class='curline'><a href='../S/lib--timer.c.html#L71'>timer</a>              71 lib/timer.c        mc_timer_t *timer;</span>
+<span class='curline'><a href='../S/lib--timer.c.html#L74'>timer</a>              74 lib/timer.c        timer = g_new (mc_timer_t, 1);</span>
+<span class='curline'><a href='../S/lib--timer.c.html#L76'>timer</a>              76 lib/timer.c        timer-&gt;start = (guint64) tv.tv_sec * G_USEC_PER_SEC + (guint64) tv.tv_usec;</span>
+<span class='curline'><a href='../S/lib--timer.c.html#L78'>timer</a>              78 lib/timer.c        return timer;</span>
+<span class='curline'><a href='../S/lib--timer.c.html#L89'>timer</a>              89 lib/timer.c    mc_timer_destroy (mc_timer_t * timer)</span>
+<span class='curline'><a href='../S/lib--timer.c.html#L91'>timer</a>              91 lib/timer.c        g_free (timer);</span>
+<span class='curline'><a href='../S/lib--timer.c.html#L105'>timer</a>             105 lib/timer.c    mc_timer_elapsed (const mc_timer_t * timer)</span>
+<span class='curline'><a href='../S/lib--timer.c.html#L111'>timer</a>             111 lib/timer.c        return ((guint64) tv.tv_sec * G_USEC_PER_SEC + (guint64) tv.tv_usec - timer-&gt;start);</span>
+<span class='curline'><a href='../S/lib--timer.h.html#L22'>timer</a>              22 lib/timer.h    void mc_timer_destroy (mc_timer_t * timer);</span>
+<span class='curline'><a href='../S/lib--timer.h.html#L23'>timer</a>              23 lib/timer.h    guint64 mc_timer_elapsed (const mc_timer_t * timer);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1491'>timer</a>            1491 lib/util.c         now = mc_timer_elapsed (mc_global.timer);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L587'>timer</a>             587 lib/widget/wtools.c     start = mc_timer_elapsed (mc_global.timer);</span>
+<span class='curline'><a href='../S/src--main.c.html#L225'>timer</a>             225 src/main.c         mc_global.timer = mc_timer_new ();</span>
+<span class='curline'><a href='../S/src--main.c.html#L245'>timer</a>             245 src/main.c             mc_timer_destroy (mc_global.timer);</span>
+<span class='curline'><a href='../S/src--main.c.html#L492'>timer</a>             492 src/main.c         mc_timer_destroy (mc_global.timer);</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L148'>timer</a>             148 tests/src/editor/editcmd__edit_complete_word_cmd.c     mc_global.timer = mc_timer_new ();</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L183'>timer</a>             183 tests/src/editor/editcmd__edit_complete_word_cmd.c     mc_timer_destroy (mc_global.timer);</span>
+<span class='curline'><a href='../S/tests--src--filemanager--get_random_hint.c.html#L65'>timer</a>              65 tests/src/filemanager/get_random_hint.c     mc_global.timer = mc_timer_new ();</span>
+<span class='curline'><a href='../S/tests--src--filemanager--get_random_hint.c.html#L74'>timer</a>              74 tests/src/filemanager/get_random_hint.c     mc_timer_destroy (mc_global.timer);</span>
+</pre>
+</body>
+</html>

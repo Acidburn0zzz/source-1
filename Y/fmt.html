@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>fmt</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--logging.c.html#L115'>fmt</a>               115 lib/logging.c  mc_va_log (const char *fmt, va_list args)</span>
+<span class='curline'><a href='../S/lib--logging.c.html#L128'>fmt</a>               128 lib/logging.c              (void) vfprintf (f, fmt, args);</span>
+<span class='curline'><a href='../S/lib--logging.c.html#L141'>fmt</a>               141 lib/logging.c  mc_log (const char *fmt, ...)</span>
+<span class='curline'><a href='../S/lib--logging.c.html#L148'>fmt</a>               148 lib/logging.c      va_start (args, fmt);</span>
+<span class='curline'><a href='../S/lib--logging.c.html#L149'>fmt</a>               149 lib/logging.c      mc_va_log (fmt, args);</span>
+<span class='curline'><a href='../S/lib--logging.c.html#L156'>fmt</a>               156 lib/logging.c  mc_always_log (const char *fmt, ...)</span>
+<span class='curline'><a href='../S/lib--logging.c.html#L160'>fmt</a>               160 lib/logging.c      va_start (args, fmt);</span>
+<span class='curline'><a href='../S/lib--logging.c.html#L161'>fmt</a>               161 lib/logging.c      mc_va_log (fmt, args);</span>
+<span class='curline'><a href='../S/lib--logging.h.html#L26'>fmt</a>                26 lib/logging.h  void mc_log (const char *fmt, ...) G_GNUC_PRINTF (1, 2);</span>
+<span class='curline'><a href='../S/lib--logging.h.html#L27'>fmt</a>                27 lib/logging.h  void mc_always_log (const char *fmt, ...) G_GNUC_PRINTF (1, 2);</span>
+<span class='curline'><a href='../S/lib--timefmt.c.html#L131'>fmt</a>               131 lib/timefmt.c      const char *fmt;</span>
+<span class='curline'><a href='../S/lib--timefmt.c.html#L142'>fmt</a>               142 lib/timefmt.c          fmt = user_old_timeformat;</span>
+<span class='curline'><a href='../S/lib--timefmt.c.html#L144'>fmt</a>               144 lib/timefmt.c          fmt = user_recent_timeformat;</span>
+<span class='curline'><a href='../S/lib--timefmt.c.html#L146'>fmt</a>               146 lib/timefmt.c      FMT_LOCALTIME (timebuf, sizeof (timebuf), fmt, when);</span>
+<span class='curline'><a href='../S/lib--timefmt.h.html#L21'>fmt</a>                21 lib/timefmt.h  #define FMT_LOCALTIME(buffer, bufsize, fmt, when)               \</span>
+<span class='curline'><a href='../S/lib--timefmt.h.html#L32'>fmt</a>                32 lib/timefmt.h              strftime(buffer, bufsize, fmt, whentm);             \</span>
+<span class='curline'><a href='../S/lib--timefmt.h.html#L36'>fmt</a>                36 lib/timefmt.h  #define FMT_LOCALTIME_CURRENT(buffer, bufsize, fmt)             \</span>
+<span class='curline'><a href='../S/lib--timefmt.h.html#L40'>fmt</a>                40 lib/timefmt.h          FMT_LOCALTIME(buffer,bufsize,fmt,__current_time);       \</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L659'>fmt</a>               659 lib/tty/tty-ncurses.c tty_printf (const char *fmt, ...)</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L664'>fmt</a>               664 lib/tty/tty-ncurses.c     va_start (args, fmt);</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L665'>fmt</a>               665 lib/tty/tty-ncurses.c     g_vsnprintf (buf, sizeof (buf), fmt, args);</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L737'>fmt</a>               737 lib/tty/tty-slang.c tty_printf (const char *fmt, ...)</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L741'>fmt</a>               741 lib/tty/tty-slang.c     va_start (args, fmt);</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L742'>fmt</a>               742 lib/tty/tty-slang.c     SLsmg_vprintf ((char *) fmt, args);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L630'>fmt</a>               630 src/filemanager/file.c real_warn_same_file (enum OperationMode mode, const char *fmt, const char *a, const char *b)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L638'>fmt</a>               638 src/filemanager/file.c     msg = g_strdup_printf (fmt, a, b);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L649'>fmt</a>               649 src/filemanager/file.c warn_same_file (const char *fmt, const char *a, const char *b)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L656'>fmt</a>               656 src/filemanager/file.c         FileProgressStatus (*f) (enum OperationMode, const char *fmt, const char *a, const char *b);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L663'>fmt</a>               663 src/filemanager/file.c         return parent_call (pntr.p, NULL, 3, strlen (fmt), fmt, strlen (a), a, strlen (b), b);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L665'>fmt</a>               665 src/filemanager/file.c     return real_warn_same_file (Foreground, fmt, a, b);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L240'>fmt</a>               240 src/vfs/fish/fish.c fish_command (struct vfs_class *me, struct vfs_s_super *super, int wait_reply, const char *fmt, ...)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L247'>fmt</a>               247 src/vfs/fish/fish.c     va_start (ap, fmt);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L249'>fmt</a>               249 src/vfs/fish/fish.c     str = g_strdup_vprintf (fmt, ap);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L451'>fmt</a>               451 src/vfs/ftpfs/ftpfs.c ftpfs_command (struct vfs_class *me, struct vfs_s_super *super, int wait_reply, const char *fmt,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L460'>fmt</a>               460 src/vfs/ftpfs/ftpfs.c     va_start (ap, fmt);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L461'>fmt</a>               461 src/vfs/ftpfs/ftpfs.c     cmdstr = g_strdup_vprintf (fmt, ap);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L801'>fmt</a>               801 src/vfs/undelfs/undelfs.c com_err (const char *whoami, long err_code, const char *fmt, ...)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L806'>fmt</a>               806 src/vfs/undelfs/undelfs.c     va_start (ap, fmt);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L807'>fmt</a>               807 src/vfs/undelfs/undelfs.c     str = g_strdup_vprintf (fmt, ap);</span>
+</pre>
+</body>
+</html>

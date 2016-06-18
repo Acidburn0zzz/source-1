@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>t_pattern</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1471'>t_pattern</a>        1471 src/vfs/smbfs/helpers/lib/util.c     pstring t_pattern, t_filename, te_pattern, te_filename;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1477'>t_pattern</a>        1477 src/vfs/smbfs/helpers/lib/util.c     pstrcpy (t_pattern, regexp);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1484'>t_pattern</a>        1484 src/vfs/smbfs/helpers/lib/util.c         if (strequal (t_pattern, "????????.???"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1485'>t_pattern</a>        1485 src/vfs/smbfs/helpers/lib/util.c             pstrcpy (t_pattern, "*");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1491'>t_pattern</a>        1491 src/vfs/smbfs/helpers/lib/util.c         string_sub (t_pattern, "????????", "*");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1492'>t_pattern</a>        1492 src/vfs/smbfs/helpers/lib/util.c         string_sub (t_pattern, ".???", ".*");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1500'>t_pattern</a>        1500 src/vfs/smbfs/helpers/lib/util.c     if (trans2 &amp;&amp; is_8_3 (t_pattern, False) &amp;&amp; is_8_3 (t_filename, False))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1512'>t_pattern</a>        1512 src/vfs/smbfs/helpers/lib/util.c     string_sub (t_pattern, "*?", "*");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1513'>t_pattern</a>        1513 src/vfs/smbfs/helpers/lib/util.c     string_sub (t_pattern, "**", "*");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1515'>t_pattern</a>        1515 src/vfs/smbfs/helpers/lib/util.c     if (strequal (t_pattern, "*"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1519'>t_pattern</a>        1519 src/vfs/smbfs/helpers/lib/util.c            ("mask_match str=&lt;%s&gt; regexp=&lt;%s&gt;, case_sig = %d\n", t_filename, t_pattern, case_sig));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1531'>t_pattern</a>        1531 src/vfs/smbfs/helpers/lib/util.c         pstrcpy (te_pattern, t_pattern);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1606'>t_pattern</a>        1606 src/vfs/smbfs/helpers/lib/util.c             if (strequal (t_pattern, "*.*") || strequal (t_pattern, "*.") ||</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1607'>t_pattern</a>        1607 src/vfs/smbfs/helpers/lib/util.c                 strequal (t_pattern, "????????.???") ||</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1608'>t_pattern</a>        1608 src/vfs/smbfs/helpers/lib/util.c                 strequal (t_pattern, "?.") || strequal (t_pattern, "?"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1617'>t_pattern</a>        1617 src/vfs/smbfs/helpers/lib/util.c             if (strequal (t_pattern, "*.*") || strequal (t_pattern, "*.") ||</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1618'>t_pattern</a>        1618 src/vfs/smbfs/helpers/lib/util.c                 strequal (t_pattern, "?.") || strequal (t_pattern, "?") ||</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1619'>t_pattern</a>        1619 src/vfs/smbfs/helpers/lib/util.c                 strequal (t_pattern, "????????.???") ||</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1620'>t_pattern</a>        1620 src/vfs/smbfs/helpers/lib/util.c                 strequal (t_pattern, "*.?") || strequal (t_pattern, "?.*"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1626'>t_pattern</a>        1626 src/vfs/smbfs/helpers/lib/util.c             if ((p = strrchr (t_pattern, '.')))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1632'>t_pattern</a>        1632 src/vfs/smbfs/helpers/lib/util.c                 fstrcpy (ebase, t_pattern);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1650'>t_pattern</a>        1650 src/vfs/smbfs/helpers/lib/util.c                 fstrcpy (ebase, t_pattern);</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>profile_keys</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1984'>profile_keys</a>     1984 src/editor/editcmd.c     gchar **profile_keys, **keys;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2003'>profile_keys</a>     2003 src/editor/editcmd.c     for (profile_keys = keys; *profile_keys != NULL; profile_keys++)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2011'>profile_keys</a>     2011 src/editor/editcmd.c         values = mc_config_get_string_list (macros_config, section_name, *profile_keys, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2012'>profile_keys</a>     2012 src/editor/editcmd.c         hotkey = lookup_key (*profile_keys, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1176'>profile_keys</a>     1176 src/filemanager/hotlist.c     gchar **profile_keys, **keys;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1186'>profile_keys</a>     1186 src/filemanager/hotlist.c     for (profile_keys = keys; *profile_keys != NULL; profile_keys++)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1187'>profile_keys</a>     1187 src/filemanager/hotlist.c         add2hotlist (mc_config_get_string (mc_global.main_config, group_section, *profile_keys, ""),</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1188'>profile_keys</a>     1188 src/filemanager/hotlist.c                      g_strdup (*profile_keys), HL_TYPE_GROUP, LISTBOX_APPEND_AT_END);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1195'>profile_keys</a>     1195 src/filemanager/hotlist.c     for (profile_keys = keys; *profile_keys != NULL; profile_keys++)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1196'>profile_keys</a>     1196 src/filemanager/hotlist.c         add2hotlist (mc_config_get_string (mc_global.main_config, group_section, *profile_keys, ""),</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1197'>profile_keys</a>     1197 src/filemanager/hotlist.c                      g_strdup (*profile_keys), HL_TYPE_ENTRY, LISTBOX_APPEND_AT_END);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1412'>profile_keys</a>     1412 src/filemanager/hotlist.c         char **profile_keys, **keys;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1416'>profile_keys</a>     1416 src/filemanager/hotlist.c         for (profile_keys = keys; *profile_keys != NULL; profile_keys++)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1417'>profile_keys</a>     1417 src/filemanager/hotlist.c             clean_up_hotlist_groups (*profile_keys);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L579'>profile_keys</a>      579 src/filemanager/panelize.c         char **profile_keys;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L583'>profile_keys</a>      583 src/filemanager/panelize.c         for (profile_keys = keys; *profile_keys != NULL; profile_keys++)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L588'>profile_keys</a>      588 src/filemanager/panelize.c                 buffer = g_string_new (*profile_keys);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L592'>profile_keys</a>      592 src/filemanager/panelize.c                 if (str_convert (conv, *profile_keys, buffer) == ESTR_FAILURE)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L593'>profile_keys</a>      593 src/filemanager/panelize.c                     g_string_assign (buffer, *profile_keys);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L598'>profile_keys</a>      598 src/filemanager/panelize.c                                                 *profile_keys, ""));</span>
+<span class='curline'><a href='../S/src--setup.c.html#L624'>profile_keys</a>      624 src/setup.c        gchar **profile_keys, **keys;</span>
+<span class='curline'><a href='../S/src--setup.c.html#L634'>profile_keys</a>      634 src/setup.c        for (profile_keys = keys; *profile_keys != NULL; profile_keys++)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L637'>profile_keys</a>      637 src/setup.c            if (g_ascii_strcasecmp (*profile_keys, "copy") == 0)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L639'>profile_keys</a>      639 src/setup.c                valcopy = mc_config_get_string (cfg, section_name, *profile_keys, "");</span>
+<span class='curline'><a href='../S/src--setup.c.html#L645'>profile_keys</a>      645 src/setup.c            key_code = lookup_key (*profile_keys, NULL);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L650'>profile_keys</a>      650 src/setup.c                values = mc_config_get_string_list (cfg, section_name, *profile_keys, NULL);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L666'>profile_keys</a>      666 src/setup.c                    value = mc_config_get_string (cfg, section_name, *profile_keys, "");</span>
+<span class='curline'><a href='../S/src--setup.c.html#L683'>profile_keys</a>      683 src/setup.c        gchar **profile_keys, **keys;</span>
+<span class='curline'><a href='../S/src--setup.c.html#L690'>profile_keys</a>      690 src/setup.c        for (profile_keys = keys; *profile_keys != NULL; profile_keys++)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L694'>profile_keys</a>      694 src/setup.c            values = mc_config_get_string_list (cfg, section_name, *profile_keys, NULL);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L699'>profile_keys</a>      699 src/setup.c                action = keybind_lookup_action (*profile_keys);</span>
+</pre>
+</body>
+</html>

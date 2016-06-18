@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>pstring</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--client.h.html#L29'>pstring</a>            29 src/vfs/smbfs/helpers/include/client.h     pstring name;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--includes.h.html#L459'>pstring</a>           459 src/vfs/smbfs/helpers/include/includes.h #define pstrcpy(d,s) safe_strcpy((d),(s),sizeof(pstring)-1)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--includes.h.html#L460'>pstring</a>           460 src/vfs/smbfs/helpers/include/includes.h #define pstrcat(d,s) safe_strcat((d),(s),sizeof(pstring)-1)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L318'>pstring</a>           318 src/vfs/smbfs/helpers/include/proto.h BOOL getlmhostsent (FILE * fp, pstring name, int *name_type, struct in_addr *ipaddr);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charset.c.html#L205'>pstring</a>           205 src/vfs/smbfs/helpers/lib/charset.c     pstring codepage_file_name;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charset.c.html#L224'>pstring</a>           224 src/vfs/smbfs/helpers/lib/charset.c               sizeof (pstring) - (strlen (codepage_file_name) + 1), "%03d", client_codepage);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--debug.c.html#L88'>pstring</a>            88 src/vfs/smbfs/helpers/lib/debug.c pstring debugf = "";</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--debug.c.html#L112'>pstring</a>           112 src/vfs/smbfs/helpers/lib/debug.c static pstring format_bufr = { '\0' };</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--debug.c.html#L366'>pstring</a>           366 src/vfs/smbfs/helpers/lib/debug.c     pstring msgbuf;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--debug.c.html#L384'>pstring</a>           384 src/vfs/smbfs/helpers/lib/debug.c     pstring msgbuf;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L240'>pstring</a>           240 src/vfs/smbfs/helpers/lib/system.c     wd = (char *) getcwd (s, sizeof (pstring));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L71'>pstring</a>            71 src/vfs/smbfs/helpers/lib/username.c     pstring buf;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L318'>pstring</a>           318 src/vfs/smbfs/helpers/lib/username.c     pstring tok;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L105'>pstring</a>           105 src/vfs/smbfs/helpers/lib/util.c pstring myhostname = "";</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L106'>pstring</a>           106 src/vfs/smbfs/helpers/lib/util.c pstring user_socket_options = "";</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L108'>pstring</a>           108 src/vfs/smbfs/helpers/lib/util.c pstring sesssetup_user = "";</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L113'>pstring</a>           113 src/vfs/smbfs/helpers/lib/util.c pstring global_myname = "";</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L321'>pstring</a>           321 src/vfs/smbfs/helpers/lib/util.c     extern pstring global_scope;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L632'>pstring</a>           632 src/vfs/smbfs/helpers/lib/util.c         pstring s1;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L672'>pstring</a>           672 src/vfs/smbfs/helpers/lib/util.c         pstring s1;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L700'>pstring</a>           700 src/vfs/smbfs/helpers/lib/util.c     pstring dir2;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L701'>pstring</a>           701 src/vfs/smbfs/helpers/lib/util.c     pstring wd;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L702'>pstring</a>           702 src/vfs/smbfs/helpers/lib/util.c     pstring base_name;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L703'>pstring</a>           703 src/vfs/smbfs/helpers/lib/util.c     pstring newname;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L831'>pstring</a>           831 src/vfs/smbfs/helpers/lib/util.c         pstring tmp;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L871'>pstring</a>           871 src/vfs/smbfs/helpers/lib/util.c     pstring mbeg, mext;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L872'>pstring</a>           872 src/vfs/smbfs/helpers/lib/util.c     pstring dirpart;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L873'>pstring</a>           873 src/vfs/smbfs/helpers/lib/util.c     pstring filepart;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L935'>pstring</a>           935 src/vfs/smbfs/helpers/lib/util.c     pstring mask2;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1301'>pstring</a>          1301 src/vfs/smbfs/helpers/lib/util.c     pstring p1, p2;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1307'>pstring</a>          1307 src/vfs/smbfs/helpers/lib/util.c     StrnCpy (p1, regexp, sizeof (pstring) - 1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1308'>pstring</a>          1308 src/vfs/smbfs/helpers/lib/util.c     StrnCpy (p2, str, sizeof (pstring) - 1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1471'>pstring</a>          1471 src/vfs/smbfs/helpers/lib/util.c     pstring t_pattern, t_filename, te_pattern, te_filename;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1830'>pstring</a>          1830 src/vfs/smbfs/helpers/lib/util.c     pstring hostname;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2033'>pstring</a>          2033 src/vfs/smbfs/helpers/lib/util.c strip_mount_options (pstring * str)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2044'>pstring</a>          2044 src/vfs/smbfs/helpers/lib/util.c             pstring tmp_str;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2064'>pstring</a>          2064 src/vfs/smbfs/helpers/lib/util.c     static pstring last_value = "";</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2119'>pstring</a>          2119 src/vfs/smbfs/helpers/lib/util.c     static pstring last_value = "";</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2150'>pstring</a>          2150 src/vfs/smbfs/helpers/lib/util.c         if (!nis_error &amp;&amp; nis_result_len &gt;= sizeof (pstring))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2152'>pstring</a>          2152 src/vfs/smbfs/helpers/lib/util.c             nis_result_len = sizeof (pstring) - 1;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2175'>pstring</a>          2175 src/vfs/smbfs/helpers/lib/util.c     static pstring server_name;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2190'>pstring</a>          2190 src/vfs/smbfs/helpers/lib/util.c         if (home_server_len &gt; sizeof (pstring))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2192'>pstring</a>          2192 src/vfs/smbfs/helpers/lib/util.c             home_server_len = sizeof (pstring);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2211'>pstring</a>          2211 src/vfs/smbfs/helpers/lib/util.c     static pstring server_path;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2593'>pstring</a>          2593 src/vfs/smbfs/helpers/lib/util.c         static pstring buf;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2609'>pstring</a>          2609 src/vfs/smbfs/helpers/lib/util.c     pstring last_component;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L746'>pstring</a>           746 src/vfs/smbfs/helpers/lib/util_sock.c     pstring host_name;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L905'>pstring</a>           905 src/vfs/smbfs/helpers/lib/util_sock.c     static pstring name_buf;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L987'>pstring</a>           987 src/vfs/smbfs/helpers/lib/util_str.c     pstring tok;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L34'>pstring</a>            34 src/vfs/smbfs/helpers/libsmb/clientgen.c extern pstring user_socket_options;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L502'>pstring</a>           502 src/vfs/smbfs/helpers/libsmb/clientgen.c     pstring param;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L570'>pstring</a>           570 src/vfs/smbfs/helpers/libsmb/clientgen.c     pstring param;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L646'>pstring</a>           646 src/vfs/smbfs/helpers/libsmb/clientgen.c     pstring param;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1797'>pstring</a>          1797 src/vfs/smbfs/helpers/libsmb/clientgen.c     pstring param;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1884'>pstring</a>          1884 src/vfs/smbfs/helpers/libsmb/clientgen.c     pstring param;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1961'>pstring</a>          1961 src/vfs/smbfs/helpers/libsmb/clientgen.c     pstring param;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2163'>pstring</a>          2163 src/vfs/smbfs/helpers/libsmb/clientgen.c     pstring mask;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2180'>pstring</a>          2180 src/vfs/smbfs/helpers/libsmb/clientgen.c     pstring param;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2932'>pstring</a>          2932 src/vfs/smbfs/helpers/libsmb/clientgen.c     pstring path2;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2935'>pstring</a>          2935 src/vfs/smbfs/helpers/libsmb/clientgen.c     safe_strcpy (path2, path, sizeof (pstring) - 1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L30'>pstring</a>            30 src/vfs/smbfs/helpers/libsmb/namequery.c extern pstring scope;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L261'>pstring</a>           261 src/vfs/smbfs/helpers/libsmb/namequery.c getlmhostsent (FILE * fp, pstring name, int *name_type, struct in_addr * ipaddr)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L263'>pstring</a>           263 src/vfs/smbfs/helpers/libsmb/namequery.c     pstring line;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L267'>pstring</a>           267 src/vfs/smbfs/helpers/libsmb/namequery.c         pstring ip, flags, extra;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L273'>pstring</a>           273 src/vfs/smbfs/helpers/libsmb/namequery.c         if (!fgets_slash (line, sizeof (pstring), fp))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L287'>pstring</a>           287 src/vfs/smbfs/helpers/libsmb/namequery.c         if (next_token (&amp;ptr, name, NULL, sizeof (pstring)))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L466'>pstring</a>           466 src/vfs/smbfs/helpers/libsmb/namequery.c     pstring lmhost_name;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L521'>pstring</a>           521 src/vfs/smbfs/helpers/libsmb/namequery.c     pstring name_resolve_list;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L832'>pstring</a>           832 src/vfs/smbfs/helpers/libsmb/nmblib.c     extern pstring global_scope;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smberr.c.html#L173'>pstring</a>           173 src/vfs/smbfs/helpers/libsmb/smberr.c     static pstring ret;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L77'>pstring</a>            77 src/vfs/smbfs/helpers/param/loadparm.c extern pstring user_socket_options;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L78'>pstring</a>            78 src/vfs/smbfs/helpers/param/loadparm.c extern pstring global_myname;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L79'>pstring</a>            79 src/vfs/smbfs/helpers/param/loadparm.c pstring global_scope = "";</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L914'>pstring</a>           914 src/vfs/smbfs/helpers/param/loadparm.c     pstring s;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1123'>pstring</a>          1123 src/vfs/smbfs/helpers/param/loadparm.c     len = size_max (len + 100, sizeof (pstring));       /* the +100 is for some</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1499'>pstring</a>          1499 src/vfs/smbfs/helpers/param/loadparm.c         pstring comment;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1527'>pstring</a>          1527 src/vfs/smbfs/helpers/param/loadparm.c     pstring comment;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1790'>pstring</a>          1790 src/vfs/smbfs/helpers/param/loadparm.c         pstring n2;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1810'>pstring</a>          1810 src/vfs/smbfs/helpers/param/loadparm.c         pstring n2;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1882'>pstring</a>          1882 src/vfs/smbfs/helpers/param/loadparm.c     pstring fname;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2397'>pstring</a>          2397 src/vfs/smbfs/helpers/param/loadparm.c     pstring n2;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L76'>pstring</a>            76 src/vfs/smbfs/smbfs.c extern pstring myhostname;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L78'>pstring</a>            78 src/vfs/smbfs/smbfs.c extern pstring global_myname;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L79'>pstring</a>            79 src/vfs/smbfs/smbfs.c extern pstring debugf;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L137'>pstring</a>           137 src/vfs/smbfs/smbfs.c static pstring password;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L138'>pstring</a>           138 src/vfs/smbfs/smbfs.c static pstring username;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1226'>pstring</a>          1226 src/vfs/smbfs/smbfs.c     pstring service;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1728'>pstring</a>          1728 src/vfs/smbfs/smbfs.c     pstring server_url;</span>
+</pre>
+</body>
+</html>

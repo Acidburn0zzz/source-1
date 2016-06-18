@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>fsu_blocksize</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L341'>fsu_blocksize</a>     341 src/filemanager/mountlist.c     uintmax_t fsu_blocksize;    /* Size of a block.  */</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1501'>fsu_blocksize</a>    1501 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = (vfsd.f_frsize</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1525'>fsu_blocksize</a>    1525 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = fsd.f_frsize</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1537'>fsu_blocksize</a>    1537 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = 1024;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1570'>fsu_blocksize</a>    1570 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = (fsd.s_type == Fs2b ? 1024 : 512);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1586'>fsu_blocksize</a>    1586 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = PROPAGATE_ALL_ONES (fsd.f_fsize);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1595'>fsu_blocksize</a>    1595 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = PROPAGATE_ALL_ONES (fsd.f_frsize);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1606'>fsu_blocksize</a>    1606 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = PROPAGATE_ALL_ONES (fsd.f_bsize);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1630'>fsu_blocksize</a>    1630 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = PROPAGATE_ALL_ONES (fsd.f_fsize);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1648'>fsu_blocksize</a>    1648 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = PROPAGATE_ALL_ONES (fsd.f_bsize);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1650'>fsu_blocksize</a>    1650 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = 512;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1737'>fsu_blocksize</a>    1737 src/filemanager/mountlist.c              fs_use.fsu_blocksize) &gt;&gt; 10;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1738'>fsu_blocksize</a>    1738 src/filemanager/mountlist.c         myfs_stats-&gt;total = ((uintmax_t) fs_use.fsu_blocks * fs_use.fsu_blocksize) &gt;&gt; 10;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1766'>fsu_blocksize</a>    1766 src/filemanager/mountlist.c         myfs_stats-&gt;avail = ((uintmax_t) fs_use.fsu_bfree * fs_use.fsu_blocksize) &gt;&gt; 10;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1767'>fsu_blocksize</a>    1767 src/filemanager/mountlist.c         myfs_stats-&gt;total = ((uintmax_t) fs_use.fsu_blocks * fs_use.fsu_blocksize) &gt;&gt; 10;</span>
+</pre>
+</body>
+</html>

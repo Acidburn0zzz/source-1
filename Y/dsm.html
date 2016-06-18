@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>dsm</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1455'>dsm</a>              1455 src/filemanager/cmd.c         dirsize_status_msg_t dsm;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1460'>dsm</a>              1460 src/filemanager/cmd.c         memset (&amp;dsm, 0, sizeof (dsm));</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1461'>dsm</a>              1461 src/filemanager/cmd.c         status_msg_init (STATUS_MSG (&amp;dsm), _("Directory scanning"), 0, dirsize_status_init_cb,</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1464'>dsm</a>              1464 src/filemanager/cmd.c         if (compute_dir_size (p, &amp;dsm, &amp;dir_count, &amp;count, &amp;total, TRUE) == FILE_CONT)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1472'>dsm</a>              1472 src/filemanager/cmd.c         status_msg_deinit (STATUS_MSG (&amp;dsm));</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1493'>dsm</a>              1493 src/filemanager/cmd.c     dirsize_status_msg_t dsm;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1495'>dsm</a>              1495 src/filemanager/cmd.c     memset (&amp;dsm, 0, sizeof (dsm));</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1496'>dsm</a>              1496 src/filemanager/cmd.c     status_msg_init (STATUS_MSG (&amp;dsm), _("Directory scanning"), 0, dirsize_status_init_cb,</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1511'>dsm</a>              1511 src/filemanager/cmd.c             ok = compute_dir_size (p, &amp;dsm, &amp;dir_count, &amp;count, &amp;total, TRUE) != FILE_CONT;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1520'>dsm</a>              1520 src/filemanager/cmd.c     status_msg_deinit (STATUS_MSG (&amp;dsm));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L196'>dsm</a>               196 src/filemanager/file.c dirsize_status_locate_buttons (dirsize_status_msg_t * dsm)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L198'>dsm</a>               198 src/filemanager/file.c     status_msg_t *sm = STATUS_MSG (dsm);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L205'>dsm</a>               205 src/filemanager/file.c     if (!dsm-&gt;allow_skip)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L208'>dsm</a>               208 src/filemanager/file.c         x += (wd-&gt;cols - dsm-&gt;abort_button-&gt;cols) / 2;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L209'>dsm</a>               209 src/filemanager/file.c         widget_set_size (dsm-&gt;abort_button, y, x,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L210'>dsm</a>               210 src/filemanager/file.c                          dsm-&gt;abort_button-&gt;lines, dsm-&gt;abort_button-&gt;cols);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L217'>dsm</a>               217 src/filemanager/file.c         cols = dsm-&gt;abort_button-&gt;cols + dsm-&gt;skip_button-&gt;cols + 1;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L219'>dsm</a>               219 src/filemanager/file.c         widget_set_size (dsm-&gt;abort_button, y, x, dsm-&gt;abort_button-&gt;lines,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L220'>dsm</a>               220 src/filemanager/file.c                          dsm-&gt;abort_button-&gt;cols);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L221'>dsm</a>               221 src/filemanager/file.c         x += dsm-&gt;abort_button-&gt;cols + 1;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L222'>dsm</a>               222 src/filemanager/file.c         widget_set_size (dsm-&gt;skip_button, y, x, dsm-&gt;skip_button-&gt;lines, dsm-&gt;skip_button-&gt;cols);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L522'>dsm</a>               522 src/filemanager/file.c do_compute_dir_size (const vfs_path_t * dirname_vpath, dirsize_status_msg_t * dsm,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L530'>dsm</a>               530 src/filemanager/file.c     status_msg_t *sm = STATUS_MSG (dsm);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L572'>dsm</a>               572 src/filemanager/file.c                     do_compute_dir_size (tmp_vpath, dsm, dir_count, ret_marked, ret_total,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L584'>dsm</a>               584 src/filemanager/file.c                 dsm-&gt;dirname_vpath = tmp_vpath;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L585'>dsm</a>               585 src/filemanager/file.c                 dsm-&gt;dir_count = *dir_count;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L586'>dsm</a>               586 src/filemanager/file.c                 dsm-&gt;total_size = *ret_total;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1332'>dsm</a>              1332 src/filemanager/file.c         dirsize_status_msg_t dsm;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1334'>dsm</a>              1334 src/filemanager/file.c         memset (&amp;dsm, 0, sizeof (dsm));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1335'>dsm</a>              1335 src/filemanager/file.c         dsm.allow_skip = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1336'>dsm</a>              1336 src/filemanager/file.c         status_msg_init (STATUS_MSG (&amp;dsm), _("Directory scanning"), 0, dirsize_status_init_cb,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1343'>dsm</a>              1343 src/filemanager/file.c             status = panel_compute_totals (panel, &amp;dsm, &amp;ctx-&gt;progress_count, &amp;ctx-&gt;progress_bytes,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1351'>dsm</a>              1351 src/filemanager/file.c             status = compute_dir_size (p, &amp;dsm, &amp;dir_count, &amp;ctx-&gt;progress_count,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1356'>dsm</a>              1356 src/filemanager/file.c         status_msg_deinit (STATUS_MSG (&amp;dsm));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2487'>dsm</a>              2487 src/filemanager/file.c     dirsize_status_msg_t *dsm = (dirsize_status_msg_t *) sm;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2500'>dsm</a>              2500 src/filemanager/file.c     if (dsm-&gt;allow_skip)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2504'>dsm</a>              2504 src/filemanager/file.c     dsm-&gt;dirname = label_new (2, 3, "");</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2505'>dsm</a>              2505 src/filemanager/file.c     add_widget (sm-&gt;dlg, dsm-&gt;dirname);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2506'>dsm</a>              2506 src/filemanager/file.c     dsm-&gt;count_size = label_new (3, 3, "");</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2507'>dsm</a>              2507 src/filemanager/file.c     add_widget (sm-&gt;dlg, dsm-&gt;count_size);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2510'>dsm</a>              2510 src/filemanager/file.c     dsm-&gt;abort_button = WIDGET (button_new (5, 3, FILE_ABORT, NORMAL_BUTTON, b1_name, NULL));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2511'>dsm</a>              2511 src/filemanager/file.c     add_widget (sm-&gt;dlg, dsm-&gt;abort_button);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2512'>dsm</a>              2512 src/filemanager/file.c     if (dsm-&gt;allow_skip)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2514'>dsm</a>              2514 src/filemanager/file.c         dsm-&gt;skip_button = WIDGET (button_new (5, 3, FILE_SKIP, NORMAL_BUTTON, b2_name, NULL));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2515'>dsm</a>              2515 src/filemanager/file.c         add_widget (sm-&gt;dlg, dsm-&gt;skip_button);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2516'>dsm</a>              2516 src/filemanager/file.c         dlg_select_widget (dsm-&gt;skip_button);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2520'>dsm</a>              2520 src/filemanager/file.c     dirsize_status_locate_buttons (dsm);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2528'>dsm</a>              2528 src/filemanager/file.c     dirsize_status_msg_t *dsm = (dirsize_status_msg_t *) sm;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2532'>dsm</a>              2532 src/filemanager/file.c     label_set_textv (dsm-&gt;count_size, _("Directories: %zd, total size: %s"),</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2533'>dsm</a>              2533 src/filemanager/file.c                      dsm-&gt;dir_count, size_trunc_sep (dsm-&gt;total_size, panels_options.kilobyte_si));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2536'>dsm</a>              2536 src/filemanager/file.c     if (WIDGET (dsm-&gt;count_size)-&gt;cols + 6 &gt; wd-&gt;cols)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2538'>dsm</a>              2538 src/filemanager/file.c         dlg_set_size (sm-&gt;dlg, wd-&gt;lines, WIDGET (dsm-&gt;count_size)-&gt;cols + 6);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2539'>dsm</a>              2539 src/filemanager/file.c         dirsize_status_locate_buttons (dsm);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2544'>dsm</a>              2544 src/filemanager/file.c     label_set_text (dsm-&gt;dirname, str_trunc (vfs_path_as_str (dsm-&gt;dirname_vpath), wd-&gt;cols - 6));</span>
+</pre>
+</body>
+</html>

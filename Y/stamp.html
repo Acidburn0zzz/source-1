@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>stamp</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L107'>stamp</a>             107 lib/vfs/gc.c           struct vfs_stamping *stamp;</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L110'>stamp</a>             110 lib/vfs/gc.c           for (stamp = stamps; stamp != NULL; stamp = stamp-&gt;next)</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L112'>stamp</a>             112 lib/vfs/gc.c               if (stamp-&gt;v == v &amp;&amp; stamp-&gt;id == id)</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L114'>stamp</a>             114 lib/vfs/gc.c                   gettimeofday (&amp;(stamp-&gt;time), NULL);</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L117'>stamp</a>             117 lib/vfs/gc.c               last_stamp = stamp;</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L119'>stamp</a>             119 lib/vfs/gc.c           stamp = g_new (struct vfs_stamping, 1);</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L120'>stamp</a>             120 lib/vfs/gc.c           stamp-&gt;v = v;</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L121'>stamp</a>             121 lib/vfs/gc.c           stamp-&gt;id = id;</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L123'>stamp</a>             123 lib/vfs/gc.c           gettimeofday (&amp;(stamp-&gt;time), NULL);</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L124'>stamp</a>             124 lib/vfs/gc.c           stamp-&gt;next = 0;</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L129'>stamp</a>             129 lib/vfs/gc.c               last_stamp-&gt;next = stamp;</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L134'>stamp</a>             134 lib/vfs/gc.c               stamps = stamp;</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L156'>stamp</a>             156 lib/vfs/gc.c       struct vfs_stamping *stamp;</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L158'>stamp</a>             158 lib/vfs/gc.c       for (stamp = stamps; stamp != NULL; stamp = stamp-&gt;next)</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L159'>stamp</a>             159 lib/vfs/gc.c           if (stamp-&gt;v == v &amp;&amp; stamp-&gt;id == id)</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L161'>stamp</a>             161 lib/vfs/gc.c               gettimeofday (&amp;(stamp-&gt;time), NULL);</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L171'>stamp</a>             171 lib/vfs/gc.c       struct vfs_stamping *stamp, *st1;</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L173'>stamp</a>             173 lib/vfs/gc.c       for (stamp = stamps, st1 = NULL; stamp != NULL; st1 = stamp, stamp = stamp-&gt;next)</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L174'>stamp</a>             174 lib/vfs/gc.c           if (stamp-&gt;v == v &amp;&amp; stamp-&gt;id == id)</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L178'>stamp</a>             178 lib/vfs/gc.c                   stamps = stamp-&gt;next;</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L182'>stamp</a>             182 lib/vfs/gc.c                   st1-&gt;next = stamp-&gt;next;</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L184'>stamp</a>             184 lib/vfs/gc.c               g_free (stamp);</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L254'>stamp</a>             254 lib/vfs/gc.c       struct vfs_stamping *stamp, *st;</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L265'>stamp</a>             265 lib/vfs/gc.c       for (stamp = stamps; stamp != NULL;)</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L267'>stamp</a>             267 lib/vfs/gc.c           if (now || (timeoutcmp (&amp;stamp-&gt;time, &amp;lc_time)))</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L269'>stamp</a>             269 lib/vfs/gc.c               st = stamp-&gt;next;</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L270'>stamp</a>             270 lib/vfs/gc.c               if (stamp-&gt;v-&gt;free)</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L271'>stamp</a>             271 lib/vfs/gc.c                   (*stamp-&gt;v-&gt;free) (stamp-&gt;id);</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L272'>stamp</a>             272 lib/vfs/gc.c               vfs_rmstamp (stamp-&gt;v, stamp-&gt;id);</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L273'>stamp</a>             273 lib/vfs/gc.c               stamp = st;</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L276'>stamp</a>             276 lib/vfs/gc.c               stamp = stamp-&gt;next;</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L320'>stamp</a>             320 lib/vfs/gc.c       struct vfs_stamping *stamp, *st;</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L322'>stamp</a>             322 lib/vfs/gc.c       for (stamp = stamps, stamps = 0; stamp != NULL;)</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L324'>stamp</a>             324 lib/vfs/gc.c           if (stamp-&gt;v-&gt;free)</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L325'>stamp</a>             325 lib/vfs/gc.c               (*stamp-&gt;v-&gt;free) (stamp-&gt;id);</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L326'>stamp</a>             326 lib/vfs/gc.c           st = stamp-&gt;next;</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L327'>stamp</a>             327 lib/vfs/gc.c           g_free (stamp);</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L328'>stamp</a>             328 lib/vfs/gc.c           stamp = st;</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>STDIN_FILENO</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--unixcompat.h.html#L45'>STDIN_FILENO</a>       45 lib/unixcompat.h #ifndef STDIN_FILENO</span>
+<span class='curline'><a href='../S/src--background.c.html#L562'>STDIN_FILENO</a>      562 src/background.c         close (STDIN_FILENO);</span>
+<span class='curline'><a href='../S/src--background.c.html#L569'>STDIN_FILENO</a>      569 src/background.c             while (dup2 (nullfd, STDIN_FILENO) == -1 &amp;&amp; errno == EINTR)</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L194'>STDIN_FILENO</a>      194 src/cons.handler.c                 if (dup2 (pipefd1[0], STDIN_FILENO) == -1)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L340'>STDIN_FILENO</a>      340 src/subshell/common.c     dup2 (subshell_pty_slave, STDIN_FILENO);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L525'>STDIN_FILENO</a>      525 src/subshell/common.c             FD_SET (STDIN_FILENO, &amp;read_set);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L526'>STDIN_FILENO</a>      526 src/subshell/common.c             maxfdp = MAX (maxfdp, STDIN_FILENO);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L594'>STDIN_FILENO</a>      594 src/subshell/common.c         else if (FD_ISSET (STDIN_FILENO, &amp;read_set))</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L597'>STDIN_FILENO</a>      597 src/subshell/common.c             bytes = read (STDIN_FILENO, pty_buffer, sizeof (pty_buffer));</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L334'>STDIN_FILENO</a>      334 src/vfs/fish/fish.c         res = dup2 (fileset1[0], STDIN_FILENO);</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>progress_buttons</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L253'>progress_buttons</a>  253 src/filemanager/filegui.c } progress_buttons[] =</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L642'>progress_buttons</a>  642 src/filemanager/filegui.c     buttons_width = 2 + progress_buttons[0].len + progress_buttons[3].len;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L643'>progress_buttons</a>  643 src/filemanager/filegui.c     buttons_width += progress_buttons[i].len;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L644'>progress_buttons</a>  644 src/filemanager/filegui.c     button_set_text (BUTTON (progress_buttons[i].w), progress_buttons[i].text);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L646'>progress_buttons</a>  646 src/filemanager/filegui.c     progress_buttons[0].w-&gt;x = w-&gt;x + (w-&gt;cols - buttons_width) / 2;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L647'>progress_buttons</a>  647 src/filemanager/filegui.c     progress_buttons[i].w-&gt;x = progress_buttons[0].w-&gt;x + progress_buttons[0].len + 1;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L648'>progress_buttons</a>  648 src/filemanager/filegui.c     progress_buttons[3].w-&gt;x = progress_buttons[i].w-&gt;x + progress_buttons[i].len + 1;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L732'>progress_buttons</a>  732 src/filemanager/filegui.c     if (progress_buttons[0].len == -1)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L736'>progress_buttons</a>  736 src/filemanager/filegui.c         for (i = 0; i &lt; G_N_ELEMENTS (progress_buttons); i++)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L737'>progress_buttons</a>  737 src/filemanager/filegui.c             progress_buttons[i].text = _(progress_buttons[i].text);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L811'>progress_buttons</a>  811 src/filemanager/filegui.c     progress_buttons[0].w = WIDGET (button_new (y, 0, progress_buttons[0].action,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L812'>progress_buttons</a>  812 src/filemanager/filegui.c                                                 progress_buttons[0].flags, progress_buttons[0].text,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L814'>progress_buttons</a>  814 src/filemanager/filegui.c     if (progress_buttons[0].len == -1)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L815'>progress_buttons</a>  815 src/filemanager/filegui.c         progress_buttons[0].len = button_get_len (BUTTON (progress_buttons[0].w));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L817'>progress_buttons</a>  817 src/filemanager/filegui.c     progress_buttons[1].w = WIDGET (button_new (y, 0, progress_buttons[1].action,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L818'>progress_buttons</a>  818 src/filemanager/filegui.c                                                 progress_buttons[1].flags, progress_buttons[1].text,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L820'>progress_buttons</a>  820 src/filemanager/filegui.c     if (progress_buttons[1].len == -1)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L821'>progress_buttons</a>  821 src/filemanager/filegui.c         progress_buttons[1].len = button_get_len (BUTTON (progress_buttons[1].w));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L823'>progress_buttons</a>  823 src/filemanager/filegui.c     if (progress_buttons[2].len == -1)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L826'>progress_buttons</a>  826 src/filemanager/filegui.c         progress_buttons[2].w = WIDGET (button_new (y, 0, progress_buttons[2].action,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L827'>progress_buttons</a>  827 src/filemanager/filegui.c                                                     progress_buttons[2].flags,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L828'>progress_buttons</a>  828 src/filemanager/filegui.c                                                     progress_buttons[2].text,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L830'>progress_buttons</a>  830 src/filemanager/filegui.c         progress_buttons[2].len = button_get_len (BUTTON (progress_buttons[2].w));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L831'>progress_buttons</a>  831 src/filemanager/filegui.c         send_message (progress_buttons[2].w, NULL, MSG_DESTROY, 0, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L832'>progress_buttons</a>  832 src/filemanager/filegui.c         g_free (progress_buttons[2].w);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L834'>progress_buttons</a>  834 src/filemanager/filegui.c     progress_buttons[2].w = progress_buttons[1].w;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L836'>progress_buttons</a>  836 src/filemanager/filegui.c     progress_buttons[3].w = WIDGET (button_new (y, 0, progress_buttons[3].action,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L837'>progress_buttons</a>  837 src/filemanager/filegui.c                                                 progress_buttons[3].flags, progress_buttons[3].text,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L839'>progress_buttons</a>  839 src/filemanager/filegui.c     if (progress_buttons[3].len == -1)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L840'>progress_buttons</a>  840 src/filemanager/filegui.c         progress_buttons[3].len = button_get_len (BUTTON (progress_buttons[3].w));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L842'>progress_buttons</a>  842 src/filemanager/filegui.c     add_widget (ui-&gt;op_dlg, progress_buttons[0].w);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L843'>progress_buttons</a>  843 src/filemanager/filegui.c     add_widget (ui-&gt;op_dlg, progress_buttons[1].w);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L844'>progress_buttons</a>  844 src/filemanager/filegui.c     add_widget (ui-&gt;op_dlg, progress_buttons[3].w);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L847'>progress_buttons</a>  847 src/filemanager/filegui.c         progress_buttons[0].len + MAX (progress_buttons[1].len, progress_buttons[2].len) +</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L848'>progress_buttons</a>  848 src/filemanager/filegui.c         progress_buttons[3].len;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L855'>progress_buttons</a>  855 src/filemanager/filegui.c     dlg_select_widget (progress_buttons[0].w);</span>
+</pre>
+</body>
+</html>

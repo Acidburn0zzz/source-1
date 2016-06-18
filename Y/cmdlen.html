@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>cmdlen</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L456'>cmdlen</a>            456 src/vfs/ftpfs/ftpfs.c     int status, cmdlen;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L464'>cmdlen</a>            464 src/vfs/ftpfs/ftpfs.c     cmdlen = strlen (cmdstr);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L465'>cmdlen</a>            465 src/vfs/ftpfs/ftpfs.c     cmdstr = g_realloc (cmdstr, cmdlen + 3);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L466'>cmdlen</a>            466 src/vfs/ftpfs/ftpfs.c     strcpy (cmdstr + cmdlen, "\r\n");</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L467'>cmdlen</a>            467 src/vfs/ftpfs/ftpfs.c     cmdlen += 2;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L478'>cmdlen</a>            478 src/vfs/ftpfs/ftpfs.c             ret = fwrite (cmdstr, cmdlen, 1, MEDATA-&gt;logfile);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L487'>cmdlen</a>            487 src/vfs/ftpfs/ftpfs.c     status = write (SUP-&gt;sock, cmdstr, cmdlen);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L500'>cmdlen</a>            500 src/vfs/ftpfs/ftpfs.c                 if (status &amp;&amp; (write (SUP-&gt;sock, cmdstr, cmdlen) &gt; 0))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L527'>cmdlen</a>            527 src/vfs/ftpfs/ftpfs.c             if (status &amp;&amp; (write (SUP-&gt;sock, cmdstr, cmdlen) &gt; 0))</span>
+</pre>
+</body>
+</html>

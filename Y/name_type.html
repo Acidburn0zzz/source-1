@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>name_type</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L107'>name_type</a>         107 src/vfs/smbfs/helpers/include/proto.h int name_mangle (char *In, char *Out, char name_type);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L315'>name_type</a>         315 src/vfs/smbfs/helpers/include/proto.h struct in_addr *name_query (int fd, const char *name, int name_type, BOOL bcast, BOOL recurse,</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L318'>name_type</a>         318 src/vfs/smbfs/helpers/include/proto.h BOOL getlmhostsent (FILE * fp, pstring name, int *name_type, struct in_addr *ipaddr);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L320'>name_type</a>         320 src/vfs/smbfs/helpers/include/proto.h BOOL resolve_name (const char *name, struct in_addr *return_ip, int name_type);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L1707'>name_type</a>        1707 src/vfs/smbfs/helpers/include/smb.h     unsigned int name_type;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L314'>name_type</a>         314 src/vfs/smbfs/helpers/lib/util.c name_mangle (char *In, char *Out, char name_type)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L328'>name_type</a>         328 src/vfs/smbfs/helpers/lib/util.c         (void) slprintf (buf, sizeof (buf) - 1, "%-15.15s%c", In, name_type);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2438'>name_type</a>        2438 src/vfs/smbfs/helpers/libsmb/clientgen.c     name_mangle (cli-&gt;called.name, p, cli-&gt;called.name_type);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2443'>name_type</a>        2443 src/vfs/smbfs/helpers/libsmb/clientgen.c     name_mangle (cli-&gt;calling.name, p, cli-&gt;calling.name_type);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L110'>name_type</a>         110 src/vfs/smbfs/helpers/libsmb/namequery.c name_query (int fd, const char *name, int name_type, BOOL bcast, BOOL recurse,</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L145'>name_type</a>         145 src/vfs/smbfs/helpers/libsmb/namequery.c     make_nmb_name (&amp;nmb-&gt;question.question_name, name, name_type);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L261'>name_type</a>         261 src/vfs/smbfs/helpers/libsmb/namequery.c getlmhostsent (FILE * fp, pstring name, int *name_type, struct in_addr * ipaddr)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L271'>name_type</a>         271 src/vfs/smbfs/helpers/libsmb/namequery.c         *name_type = -1;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L326'>name_type</a>         326 src/vfs/smbfs/helpers/libsmb/namequery.c             *name_type = (int) strtol (ptr, &amp;endptr, 16);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L357'>name_type</a>         357 src/vfs/smbfs/helpers/libsmb/namequery.c resolve_bcast (const char *name, struct in_addr *return_ip, int name_type)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L365'>name_type</a>         365 src/vfs/smbfs/helpers/libsmb/namequery.c     DEBUG (3, ("resolve_name: Attempting broadcast lookup for name %s&lt;0x%x&gt;\n", name, name_type));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L385'>name_type</a>         385 src/vfs/smbfs/helpers/libsmb/namequery.c             iplist = name_query (sock, name, name_type, True, True, sendto_ip, &amp;count, NULL);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L406'>name_type</a>         406 src/vfs/smbfs/helpers/libsmb/namequery.c resolve_wins (const char *name, struct in_addr *return_ip, int name_type)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L420'>name_type</a>         420 src/vfs/smbfs/helpers/libsmb/namequery.c     DEBUG (3, ("resolve_name: Attempting wins lookup for name %s&lt;0x%x&gt;\n", name, name_type));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L439'>name_type</a>         439 src/vfs/smbfs/helpers/libsmb/namequery.c             iplist = name_query (sock, name, name_type, False, True, wins_ip, &amp;count, NULL);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L459'>name_type</a>         459 src/vfs/smbfs/helpers/libsmb/namequery.c resolve_lmhosts (const char *name, struct in_addr *return_ip, int name_type)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L469'>name_type</a>         469 src/vfs/smbfs/helpers/libsmb/namequery.c     DEBUG (3, ("resolve_name: Attempting lmhosts lookup for name %s&lt;0x%x&gt;\n", name, name_type));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L476'>name_type</a>         476 src/vfs/smbfs/helpers/libsmb/namequery.c             if (strequal (name, lmhost_name) &amp;&amp; ((name_type2 == -1) || (name_type == name_type2)))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L517'>name_type</a>         517 src/vfs/smbfs/helpers/libsmb/namequery.c resolve_name (const char *name, struct in_addr * return_ip, int name_type)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L556'>name_type</a>         556 src/vfs/smbfs/helpers/libsmb/namequery.c             if (name_type == 0x20 &amp;&amp; resolve_hosts (name, return_ip))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L563'>name_type</a>         563 src/vfs/smbfs/helpers/libsmb/namequery.c             if (resolve_lmhosts (name, return_ip, name_type))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L571'>name_type</a>         571 src/vfs/smbfs/helpers/libsmb/namequery.c             if (name_type != 0x1D &amp;&amp; resolve_wins (name, return_ip, name_type))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L578'>name_type</a>         578 src/vfs/smbfs/helpers/libsmb/namequery.c             if (resolve_bcast (name, return_ip, name_type))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L227'>name_type</a>         227 src/vfs/smbfs/helpers/libsmb/nmblib.c         name-&gt;name_type = ((unsigned char) name-&gt;name[15]) &amp; 0xff;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L281'>name_type</a>         281 src/vfs/smbfs/helpers/libsmb/nmblib.c         buf1[15] = name-&gt;name_type;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L285'>name_type</a>         285 src/vfs/smbfs/helpers/libsmb/nmblib.c         slprintf (buf1, sizeof (buf1) - 1, "%-15.15s%c", name-&gt;name, name-&gt;name_type);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L331'>name_type</a>         331 src/vfs/smbfs/helpers/libsmb/nmblib.c         slprintf (p, sizeof (fstring) - 1, "%s&lt;%02x&gt;", n-&gt;name, n-&gt;name_type);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L333'>name_type</a>         333 src/vfs/smbfs/helpers/libsmb/nmblib.c         slprintf (p, sizeof (fstring) - 1, "%s&lt;%02x&gt;.%s", n-&gt;name, n-&gt;name_type, n-&gt;scope);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L836'>name_type</a>         836 src/vfs/smbfs/helpers/libsmb/nmblib.c     n-&gt;name_type = (unsigned int) type &amp; 0xFF;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L848'>name_type</a>         848 src/vfs/smbfs/helpers/libsmb/nmblib.c     return ((n1-&gt;name_type == n2-&gt;name_type) &amp;&amp;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L153'>name_type</a>         153 src/vfs/smbfs/smbfs.c     int name_type;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1063'>name_type</a>        1063 src/vfs/smbfs/smbfs.c     make_nmb_name (&amp;called, server, current_bucket-&gt;name_type);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1281'>name_type</a>        1281 src/vfs/smbfs/smbfs.c     bucket-&gt;name_type = 0x20;</span>
+</pre>
+</body>
+</html>

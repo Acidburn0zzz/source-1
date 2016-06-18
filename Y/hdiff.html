@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>hdiff</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--diffviewer--internal.h.html#L96'>hdiff</a>              96 src/diffviewer/internal.h     GPtrArray *hdiff;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1130'>hdiff</a>            1130 src/diffviewer/ydiff.c hdiff_multi (const char *s, const char *t, const BRACKET bracket, int min, GArray * hdiff,</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1157'>hdiff</a>            1157 src/diffviewer/ydiff.c             if (!hdiff_multi (s, t, b, min, hdiff, depth))</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1168'>hdiff</a>            1168 src/diffviewer/ydiff.c                 if (!hdiff_multi (s, t, b, min, hdiff, depth))</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1176'>hdiff</a>            1176 src/diffviewer/ydiff.c             if (!hdiff_multi (s, t, b, min, hdiff, depth))</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1188'>hdiff</a>            1188 src/diffviewer/ydiff.c     g_array_append_val (hdiff, p);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1210'>hdiff</a>            1210 src/diffviewer/ydiff.c hdiff_scan (const char *s, int m, const char *t, int n, int min, GArray * hdiff, unsigned int depth)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1227'>hdiff</a>            1227 src/diffviewer/ydiff.c     return hdiff_multi (s, t, b, min, hdiff, depth);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1245'>hdiff</a>            1245 src/diffviewer/ydiff.c is_inside (int k, GArray * hdiff, diff_place_t ord)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1250'>hdiff</a>            1250 src/diffviewer/ydiff.c     for (i = 0; i &lt; hdiff-&gt;len; i++)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1254'>hdiff</a>            1254 src/diffviewer/ydiff.c         b = &amp;g_array_index (hdiff, BRACKET, i);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1462'>hdiff</a>            1462 src/diffviewer/ydiff.c            gboolean show_cr, GArray * hdiff, diff_place_t ord, char *att)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1487'>hdiff</a>            1487 src/diffviewer/ydiff.c                         *att++ = is_inside (k, hdiff, ord);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1499'>hdiff</a>            1499 src/diffviewer/ydiff.c                         *att++ = is_inside (k, hdiff, ord);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1501'>hdiff</a>            1501 src/diffviewer/ydiff.c                         *att++ = is_inside (k, hdiff, ord);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1507'>hdiff</a>            1507 src/diffviewer/ydiff.c                         *att++ = is_inside (k, hdiff, ord);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1529'>hdiff</a>            1529 src/diffviewer/ydiff.c                 *att++ = is_inside (k, hdiff, ord);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1797'>hdiff</a>            1797 src/diffviewer/ydiff.c         dview-&gt;hdiff = g_ptr_array_new ();</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1798'>hdiff</a>            1798 src/diffviewer/ydiff.c         if (dview-&gt;hdiff != NULL)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1827'>hdiff</a>            1827 src/diffviewer/ydiff.c                 g_ptr_array_add (dview-&gt;hdiff, h);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1839'>hdiff</a>            1839 src/diffviewer/ydiff.c     if (dview-&gt;hdiff != NULL)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1850'>hdiff</a>            1850 src/diffviewer/ydiff.c             h = (GArray *) g_ptr_array_index (dview-&gt;hdiff, i);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1854'>hdiff</a>            1854 src/diffviewer/ydiff.c         g_ptr_array_free (dview-&gt;hdiff, TRUE);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1855'>hdiff</a>            1855 src/diffviewer/ydiff.c         dview-&gt;hdiff = NULL;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2435'>hdiff</a>            2435 src/diffviewer/ydiff.c     dview-&gt;hdiff = NULL;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2596'>hdiff</a>            2596 src/diffviewer/ydiff.c                 else if (dview-&gt;hdiff != NULL &amp;&amp; g_ptr_array_index (dview-&gt;hdiff, i) != NULL)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2608'>hdiff</a>            2608 src/diffviewer/ydiff.c                                g_ptr_array_index (dview-&gt;hdiff, i), ord, att);</span>
+</pre>
+</body>
+</html>

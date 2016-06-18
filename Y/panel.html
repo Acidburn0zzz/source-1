@@ -1,0 +1,986 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>panel</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L687'>panel</a>             687 src/filemanager/boxes.c panel_listing_box (WPanel * panel, int num, char **userp, char **minip, int *use_msformat,</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L693'>panel</a>             693 src/filemanager/boxes.c     if (panel == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L699'>panel</a>             699 src/filemanager/boxes.c         panel = g_new (WPanel, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L700'>panel</a>             700 src/filemanager/boxes.c         panel-&gt;list_type = list_full;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L701'>panel</a>             701 src/filemanager/boxes.c         panel-&gt;user_format = g_strdup (DEFAULT_USER_FORMAT);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L702'>panel</a>             702 src/filemanager/boxes.c         panel-&gt;user_mini_status = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L704'>panel</a>             704 src/filemanager/boxes.c             panel-&gt;user_status_format[i] = g_strdup (DEFAULT_USER_FORMAT);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L711'>panel</a>             711 src/filemanager/boxes.c         panel_load_setup (panel, section);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L740'>panel</a>             740 src/filemanager/boxes.c             QUICK_INPUT (panel-&gt;user_format, "user-fmt-input", &amp;panel_user_format,</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L744'>panel</a>             744 src/filemanager/boxes.c             QUICK_INPUT (panel-&gt;user_status_format[panel-&gt;list_type], "mini_input",</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L757'>panel</a>             757 src/filemanager/boxes.c         mini_user_status = panel-&gt;user_mini_status;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L758'>panel</a>             758 src/filemanager/boxes.c         result = panel-&gt;list_type;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L759'>panel</a>             759 src/filemanager/boxes.c         status_format = panel-&gt;user_status_format;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L761'>panel</a>             761 src/filemanager/boxes.c         g_snprintf (panel_brief_cols_in, sizeof (panel_brief_cols_in), "%d", panel-&gt;brief_cols);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L763'>panel</a>             763 src/filemanager/boxes.c         if ((int) panel-&gt;list_type != panel_listing_brief_idx)</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L766'>panel</a>             766 src/filemanager/boxes.c         if ((int) panel-&gt;list_type != panel_listing_user_idx)</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L787'>panel</a>             787 src/filemanager/boxes.c                 *brief_cols = panel-&gt;brief_cols;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L797'>panel</a>             797 src/filemanager/boxes.c         g_free (panel-&gt;user_format);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L799'>panel</a>             799 src/filemanager/boxes.c             g_free (panel-&gt;user_status_format[i]);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L800'>panel</a>             800 src/filemanager/boxes.c         g_free (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L268'>panel</a>             268 src/filemanager/cmd.c compare_dir (WPanel * panel, WPanel * other, enum CompareMode mode)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L273'>panel</a>             273 src/filemanager/cmd.c     panel-&gt;marked = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L274'>panel</a>             274 src/filemanager/cmd.c     panel-&gt;total = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L275'>panel</a>             275 src/filemanager/cmd.c     panel-&gt;dirs_marked = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L278'>panel</a>             278 src/filemanager/cmd.c     for (i = 0; i &lt; panel-&gt;dir.len; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L280'>panel</a>             280 src/filemanager/cmd.c         file_entry_t *source = &amp;panel-&gt;dir.list[i];</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L283'>panel</a>             283 src/filemanager/cmd.c         file_mark (panel, i, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L297'>panel</a>             297 src/filemanager/cmd.c             do_file_mark (panel, i, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L313'>panel</a>             313 src/filemanager/cmd.c                 do_file_mark (panel, i, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L326'>panel</a>             326 src/filemanager/cmd.c                     do_file_mark (panel, i, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L335'>panel</a>             335 src/filemanager/cmd.c                 src_name = vfs_path_append_new (panel-&gt;cwd_vpath, source-&gt;fname, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L338'>panel</a>             338 src/filemanager/cmd.c                     do_file_mark (panel, i, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1431'>panel</a>            1431 src/filemanager/cmd.c     WPanel *panel = current_panel;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1434'>panel</a>            1434 src/filemanager/cmd.c     entry = &amp;(panel-&gt;dir.list[panel-&gt;selected]);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1435'>panel</a>            1435 src/filemanager/cmd.c     if ((S_ISDIR (entry-&gt;st.st_mode) &amp;&amp; DIR_IS_DOTDOT (entry-&gt;fname)) || panel-&gt;dirs_marked)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1446'>panel</a>            1446 src/filemanager/cmd.c     WPanel *panel = current_panel;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1449'>panel</a>            1449 src/filemanager/cmd.c     entry = &amp;(panel-&gt;dir.list[panel-&gt;selected]);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1476'>panel</a>            1476 src/filemanager/cmd.c         send_message (panel, NULL, MSG_ACTION, CK_Down, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1478'>panel</a>            1478 src/filemanager/cmd.c     recalculate_panel_summary (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1481'>panel</a>            1481 src/filemanager/cmd.c         panel_re_sort (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1483'>panel</a>            1483 src/filemanager/cmd.c     panel-&gt;dirty = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1491'>panel</a>            1491 src/filemanager/cmd.c     WPanel *panel = current_panel;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1499'>panel</a>            1499 src/filemanager/cmd.c     for (i = 0; i &lt; panel-&gt;dir.len; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1500'>panel</a>            1500 src/filemanager/cmd.c         if (S_ISDIR (panel-&gt;dir.list[i].st.st_mode)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1501'>panel</a>            1501 src/filemanager/cmd.c             &amp;&amp; ((panel-&gt;dirs_marked &amp;&amp; panel-&gt;dir.list[i].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1502'>panel</a>            1502 src/filemanager/cmd.c                 || !panel-&gt;dirs_marked) &amp;&amp; !DIR_IS_DOTDOT (panel-&gt;dir.list[i].fname))</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1510'>panel</a>            1510 src/filemanager/cmd.c             p = vfs_path_from_str (panel-&gt;dir.list[i].fname);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1516'>panel</a>            1516 src/filemanager/cmd.c             panel-&gt;dir.list[i].st.st_size = (off_t) total;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1517'>panel</a>            1517 src/filemanager/cmd.c             panel-&gt;dir.list[i].f.dir_size_computed = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1522'>panel</a>            1522 src/filemanager/cmd.c     recalculate_panel_summary (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1525'>panel</a>            1525 src/filemanager/cmd.c         panel_re_sort (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1527'>panel</a>            1527 src/filemanager/cmd.c     panel-&gt;dirty = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1244'>panel</a>            1244 src/filemanager/file.c panel_get_file (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1256'>panel</a>            1256 src/filemanager/file.c     if (panel-&gt;marked != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1260'>panel</a>            1260 src/filemanager/file.c         for (i = 0; i &lt; panel-&gt;dir.len; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1261'>panel</a>            1261 src/filemanager/file.c             if (panel-&gt;dir.list[i].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1262'>panel</a>            1262 src/filemanager/file.c                 return panel-&gt;dir.list[i].fname;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1265'>panel</a>            1265 src/filemanager/file.c     return panel-&gt;dir.list[panel-&gt;selected].fname;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1279'>panel</a>            1279 src/filemanager/file.c panel_compute_totals (const WPanel * panel, dirsize_status_msg_t * sm, size_t * ret_count,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1285'>panel</a>            1285 src/filemanager/file.c     for (i = 0; i &lt; panel-&gt;dir.len; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1289'>panel</a>            1289 src/filemanager/file.c         if (!panel-&gt;dir.list[i].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1292'>panel</a>            1292 src/filemanager/file.c         s = &amp;panel-&gt;dir.list[i].st;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1299'>panel</a>            1299 src/filemanager/file.c             p = vfs_path_append_new (panel-&gt;cwd_vpath, panel-&gt;dir.list[i].fname, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1320'>panel</a>            1320 src/filemanager/file.c panel_operate_init_totals (const WPanel * panel, const char *source, file_op_context_t * ctx,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1343'>panel</a>            1343 src/filemanager/file.c             status = panel_compute_totals (panel, &amp;dsm, &amp;ctx-&gt;progress_count, &amp;ctx-&gt;progress_bytes,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1366'>panel</a>            1366 src/filemanager/file.c         ctx-&gt;progress_count = panel-&gt;marked;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1367'>panel</a>            1367 src/filemanager/file.c         ctx-&gt;progress_bytes = panel-&gt;total;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1383'>panel</a>            1383 src/filemanager/file.c panel_operate_generate_prompt (const WPanel * panel, FileOperation operation,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1443'>panel</a>            1443 src/filemanager/file.c     else if (panel-&gt;marked == panel-&gt;dirs_marked)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1446'>panel</a>            1446 src/filemanager/file.c         cp = panel-&gt;dirs_marked != 0 ? prompt_parts[4] : prompt_parts[1];</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2603'>panel</a>            2603 src/filemanager/file.c     WPanel *panel = PANEL (source_panel);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2604'>panel</a>            2604 src/filemanager/file.c     const gboolean single_entry = force_single || (panel-&gt;marked &lt;= 1)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2642'>panel</a>            2642 src/filemanager/file.c             source = selection (panel)-&gt;fname;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2644'>panel</a>            2644 src/filemanager/file.c             source = panel_get_file (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2664'>panel</a>            2664 src/filemanager/file.c                 if (!panel-&gt;is_panelized)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2698'>panel</a>            2698 src/filemanager/file.c             tmp_dest_dir = vfs_path_as_str (panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2723'>panel</a>            2723 src/filemanager/file.c             panel_operate_generate_prompt (panel, operation, source != NULL ? &amp;src_stat : NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2727'>panel</a>            2727 src/filemanager/file.c                               source != NULL ? source : (const void *) &amp;panel-&gt;marked, dest_dir,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2748'>panel</a>            2748 src/filemanager/file.c             panel_operate_generate_prompt (panel, OP_DELETE, source != NULL ? &amp;src_stat : NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2751'>panel</a>            2751 src/filemanager/file.c             g_snprintf (fmd_buf, sizeof (fmd_buf), format, panel-&gt;marked);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2784'>panel</a>            2784 src/filemanager/file.c                                         vfs_path_as_str (panel-&gt;cwd_vpath), (char *) NULL));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2791'>panel</a>            2791 src/filemanager/file.c             mc_setctl (panel-&gt;cwd_vpath, VFS_SETCTL_FORGET, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2805'>panel</a>            2805 src/filemanager/file.c         else if (single_entry &amp;&amp; S_ISDIR (selection (panel)-&gt;st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2821'>panel</a>            2821 src/filemanager/file.c     if ((vfs_path_tokens_count (panel-&gt;cwd_vpath) != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2822'>panel</a>            2822 src/filemanager/file.c         &amp;&amp; (mc_setctl (panel-&gt;cwd_vpath, VFS_SETCTL_STALE_DATA, GUINT_TO_POINTER (1)) != 0))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2823'>panel</a>            2823 src/filemanager/file.c         save_cwd = g_strdup (vfs_path_as_str (panel-&gt;cwd_vpath));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2853'>panel</a>            2853 src/filemanager/file.c             source_with_vpath = vfs_path_append_new (panel-&gt;cwd_vpath, source, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2855'>panel</a>            2855 src/filemanager/file.c         if (panel_operate_init_totals (panel, vfs_path_as_str (source_with_vpath), ctx, dialog_type)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2926'>panel</a>            2926 src/filemanager/file.c                 unmark_files (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2949'>panel</a>            2949 src/filemanager/file.c         if (panel_operate_init_totals (panel, NULL, ctx, dialog_type) == FILE_CONT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2952'>panel</a>            2952 src/filemanager/file.c             for (i = 0; i &lt; panel-&gt;dir.len; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2956'>panel</a>            2956 src/filemanager/file.c                 if (!panel-&gt;dir.list[i].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2959'>panel</a>            2959 src/filemanager/file.c                 source2 = panel-&gt;dir.list[i].fname;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2960'>panel</a>            2960 src/filemanager/file.c                 src_stat = panel-&gt;dir.list[i].st;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2968'>panel</a>            2968 src/filemanager/file.c                         vfs_path_append_new (panel-&gt;cwd_vpath, source2, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3045'>panel</a>            3045 src/filemanager/file.c                     do_file_mark (panel, i, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L957'>panel</a>             957 src/filemanager/layout.c         WPanel *panel = PANEL (w);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L966'>panel</a>             966 src/filemanager/layout.c         if (old_type == view_listing &amp;&amp; panel-&gt;frame_size == frame_full &amp;&amp; type != view_listing)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1042'>panel</a>            1042 src/filemanager/layout.c         WPanel *panel = PANEL (new_widget);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1053'>panel</a>            1053 src/filemanager/layout.c             left_panel = panel;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1055'>panel</a>            1055 src/filemanager/layout.c             right_panel = panel;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1058'>panel</a>            1058 src/filemanager/layout.c         set_panel_formats (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1095'>panel</a>            1095 src/filemanager/layout.c         WPanel panel;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1097'>panel</a>            1097 src/filemanager/layout.c #define panelswap(x) panel.x = panel1-&gt;x; panel1-&gt;x = panel2-&gt;x; panel2-&gt;x = panel.x;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1099'>panel</a>            1099 src/filemanager/layout.c #define panelswapstr(e) strcpy (panel.e, panel1-&gt;e); \</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1101'>panel</a>            1101 src/filemanager/layout.c                         strcpy (panel2-&gt;e, panel.e);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L467'>panel</a>             467 src/filemanager/midnight.c check_panel_timestamp (const WPanel * panel, panel_view_mode_t mode, struct vfs_class *vclass,</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L474'>panel</a>             474 src/filemanager/midnight.c         path_element = vfs_path_get_by_index (panel-&gt;cwd_vpath, -1);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L479'>panel</a>             479 src/filemanager/midnight.c         if (vfs_getid (panel-&gt;cwd_vpath) != id)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L714'>panel</a>             714 src/filemanager/midnight.c midnight_put_panel_path (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L723'>panel</a>             723 src/filemanager/midnight.c     cwd_vpath = remove_encoding_from_path (panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L725'>panel</a>             725 src/filemanager/midnight.c     cwd_vpath = vfs_path_clone (panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L741'>panel</a>             741 src/filemanager/midnight.c put_link (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L745'>panel</a>             745 src/filemanager/midnight.c     if (S_ISLNK (selection (panel)-&gt;st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L751'>panel</a>             751 src/filemanager/midnight.c         vpath = vfs_path_append_new (panel-&gt;cwd_vpath, selection (panel)-&gt;fname, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L809'>panel</a>             809 src/filemanager/midnight.c put_tagged (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L814'>panel</a>             814 src/filemanager/midnight.c     if (panel-&gt;marked)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L818'>panel</a>             818 src/filemanager/midnight.c         for (i = 0; i &lt; panel-&gt;dir.len; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L820'>panel</a>             820 src/filemanager/midnight.c             if (panel-&gt;dir.list[i].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L821'>panel</a>             821 src/filemanager/midnight.c                 command_insert (cmdline, panel-&gt;dir.list[i].fname, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L826'>panel</a>             826 src/filemanager/midnight.c         command_insert (cmdline, panel-&gt;dir.list[panel-&gt;selected].fname, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L378'>panel</a>             378 src/filemanager/panel.c set_colors (const WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L380'>panel</a>             380 src/filemanager/panel.c     (void) panel;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L789'>panel</a>             789 src/filemanager/panel.c format_file (WPanel * panel, int file_index, int width, int attr, gboolean isstatus,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L800'>panel</a>             800 src/filemanager/panel.c     if (file_index &lt; panel-&gt;dir.len)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L802'>panel</a>             802 src/filemanager/panel.c         fe = &amp;panel-&gt;dir.list[file_index];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L806'>panel</a>             806 src/filemanager/panel.c     home = isstatus ? panel-&gt;status_format : panel-&gt;format;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L826'>panel</a>             826 src/filemanager/panel.c             if (!isstatus &amp;&amp; panel-&gt;content_shift &gt; -1 &amp;&amp; strcmp (format-&gt;id, "name") == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L835'>panel</a>             835 src/filemanager/panel.c                 panel-&gt;max_shift = MAX (panel-&gt;max_shift, i);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L836'>panel</a>             836 src/filemanager/panel.c                 i = MIN (panel-&gt;content_shift, i);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L863'>panel</a>             863 src/filemanager/panel.c             if (!isstatus &amp;&amp; panel-&gt;content_shift &gt; -1)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L902'>panel</a>             902 src/filemanager/panel.c repaint_file (WPanel * panel, int file_index, gboolean mv, int attr, gboolean isstatus)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L904'>panel</a>             904 src/filemanager/panel.c     Widget *w = WIDGET (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L914'>panel</a>             914 src/filemanager/panel.c     panel_is_split = !isstatus &amp;&amp; panel-&gt;list_cols &gt; 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L919'>panel</a>             919 src/filemanager/panel.c         nth_column = (file_index - panel-&gt;top_file) / panel_lines (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L920'>panel</a>             920 src/filemanager/panel.c         width /= panel-&gt;list_cols;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L924'>panel</a>             924 src/filemanager/panel.c         if (nth_column + 1 &gt;= panel-&gt;list_cols)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L934'>panel</a>             934 src/filemanager/panel.c         ypos = file_index - panel-&gt;top_file;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L937'>panel</a>             937 src/filemanager/panel.c             ypos %= panel_lines (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L943'>panel</a>             943 src/filemanager/panel.c     ret_frm = format_file (panel, file_index, width, attr, isstatus, &amp;fln);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L945'>panel</a>             945 src/filemanager/panel.c     if (panel_is_split &amp;&amp; nth_column + 1 &lt; panel-&gt;list_cols)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L955'>panel</a>             955 src/filemanager/panel.c             if (panel-&gt;list_type != list_long)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L971'>panel</a>             971 src/filemanager/panel.c             if (nth_column + 1 &gt;= panel-&gt;list_cols)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L984'>panel</a>             984 src/filemanager/panel.c display_mini_info (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L986'>panel</a>             986 src/filemanager/panel.c     Widget *w = WIDGET (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L991'>panel</a>             991 src/filemanager/panel.c     widget_move (w, panel_lines (panel) + 3, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L993'>panel</a>             993 src/filemanager/panel.c     if (panel-&gt;searching)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L997'>panel</a>             997 src/filemanager/panel.c         tty_print_string (str_fit_to_term (panel-&gt;search_buffer, w-&gt;cols - 3, J_LEFT));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1002'>panel</a>            1002 src/filemanager/panel.c     set_colors (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1004'>panel</a>            1004 src/filemanager/panel.c     if (S_ISLNK (panel-&gt;dir.list[panel-&gt;selected].st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1011'>panel</a>            1011 src/filemanager/panel.c             vfs_path_append_new (panel-&gt;cwd_vpath, panel-&gt;dir.list[panel-&gt;selected].fname,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1024'>panel</a>            1024 src/filemanager/panel.c     else if (DIR_IS_DOTDOT (panel-&gt;dir.list[panel-&gt;selected].fname))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1034'>panel</a>            1034 src/filemanager/panel.c         repaint_file (panel, panel-&gt;selected, FALSE, STATUS, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1040'>panel</a>            1040 src/filemanager/panel.c paint_dir (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1045'>panel</a>            1045 src/filemanager/panel.c     items = panel_items (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1047'>panel</a>            1047 src/filemanager/panel.c     panel-&gt;max_shift = -1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1053'>panel</a>            1053 src/filemanager/panel.c         if (i + panel-&gt;top_file &lt; panel-&gt;dir.len)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1055'>panel</a>            1055 src/filemanager/panel.c             color = 2 * (panel-&gt;dir.list[i + panel-&gt;top_file].f.marked);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1056'>panel</a>            1056 src/filemanager/panel.c             color += (panel-&gt;selected == i + panel-&gt;top_file &amp;&amp; panel-&gt;active);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1059'>panel</a>            1059 src/filemanager/panel.c         repaint_file (panel, i + panel-&gt;top_file, TRUE, color, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1068'>panel</a>            1068 src/filemanager/panel.c display_total_marked_size (const WPanel * panel, int y, int x, gboolean size_only)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1070'>panel</a>            1070 src/filemanager/panel.c     const Widget *w = CONST_WIDGET (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1076'>panel</a>            1076 src/filemanager/panel.c     if (panel-&gt;marked &lt;= 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1087'>panel</a>            1087 src/filemanager/panel.c                 ngettext ("%s byte", "%s bytes", panel-&gt;total),</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1088'>panel</a>            1088 src/filemanager/panel.c                 size_trunc_sep (panel-&gt;total, panels_options.kilobyte_si));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1091'>panel</a>            1091 src/filemanager/panel.c                     ngettext ("%s in %d file", "%s in %d files", panel-&gt;marked),</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1092'>panel</a>            1092 src/filemanager/panel.c                     b_bytes, panel-&gt;marked);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1113'>panel</a>            1113 src/filemanager/panel.c mini_info_separator (const WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1117'>panel</a>            1117 src/filemanager/panel.c         const Widget *w = CONST_WIDGET (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1120'>panel</a>            1120 src/filemanager/panel.c         y = panel_lines (panel) + 2;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1126'>panel</a>            1126 src/filemanager/panel.c         display_total_marked_size (panel, y, -1, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1133'>panel</a>            1133 src/filemanager/panel.c show_free_space (const WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1141'>panel</a>            1141 src/filemanager/panel.c     if (!vfs_file_is_local (panel-&gt;cwd_vpath) || !free_space)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1144'>panel</a>            1144 src/filemanager/panel.c     if (old_cwd == NULL || strcmp (old_cwd, vfs_path_as_str (panel-&gt;cwd_vpath)) != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1150'>panel</a>            1150 src/filemanager/panel.c         old_cwd = g_strdup (vfs_path_as_str (panel-&gt;cwd_vpath));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1160'>panel</a>            1160 src/filemanager/panel.c         const Widget *w = CONST_WIDGET (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1187'>panel</a>            1187 src/filemanager/panel.c panel_correct_path_to_show (const WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1194'>panel</a>            1194 src/filemanager/panel.c     elements_count = vfs_path_elements_count (panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1197'>panel</a>            1197 src/filemanager/panel.c     path_element = vfs_path_element_clone (vfs_path_get_by_index (panel-&gt;cwd_vpath, -1));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1207'>panel</a>            1207 src/filemanager/panel.c         prev_path_element = vfs_path_get_by_index (panel-&gt;cwd_vpath, -2);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1243'>panel</a>            1243 src/filemanager/panel.c panel_get_encoding_info_str (const WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1248'>panel</a>            1248 src/filemanager/panel.c     path_element = vfs_path_get_by_index (panel-&gt;cwd_vpath, -1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1259'>panel</a>            1259 src/filemanager/panel.c show_dir (const WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1261'>panel</a>            1261 src/filemanager/panel.c     const Widget *w = CONST_WIDGET (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1265'>panel</a>            1265 src/filemanager/panel.c     set_colors (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1272'>panel</a>            1272 src/filemanager/panel.c         y = panel_lines (panel) + 2;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1294'>panel</a>            1294 src/filemanager/panel.c     if (panel-&gt;is_panelized)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1299'>panel</a>            1299 src/filemanager/panel.c         tmp = panel_get_encoding_info_str (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1309'>panel</a>            1309 src/filemanager/panel.c     if (panel-&gt;active)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1312'>panel</a>            1312 src/filemanager/panel.c     tmp = panel_correct_path_to_show (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1318'>panel</a>            1318 src/filemanager/panel.c         if (panel-&gt;marked == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1321'>panel</a>            1321 src/filemanager/panel.c             if (S_ISREG (panel-&gt;dir.list[panel-&gt;selected].st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1326'>panel</a>            1326 src/filemanager/panel.c                             size_trunc_sep (panel-&gt;dir.list[panel-&gt;selected].st.st_size,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1337'>panel</a>            1337 src/filemanager/panel.c             display_total_marked_size (panel, w-&gt;lines - 1, 2, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1341'>panel</a>            1341 src/filemanager/panel.c     show_free_space (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1343'>panel</a>            1343 src/filemanager/panel.c     if (panel-&gt;active)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1350'>panel</a>            1350 src/filemanager/panel.c adjust_top_file (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1354'>panel</a>            1354 src/filemanager/panel.c     items = panel_items (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1356'>panel</a>            1356 src/filemanager/panel.c     if (panel-&gt;dir.len &lt;= items)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1359'>panel</a>            1359 src/filemanager/panel.c         panel-&gt;top_file = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1371'>panel</a>            1371 src/filemanager/panel.c         if (panel-&gt;top_file &lt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1372'>panel</a>            1372 src/filemanager/panel.c             panel-&gt;top_file = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1374'>panel</a>            1374 src/filemanager/panel.c         i = panel-&gt;selected - items + 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1375'>panel</a>            1375 src/filemanager/panel.c         if (panel-&gt;top_file &lt; i)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1376'>panel</a>            1376 src/filemanager/panel.c             panel-&gt;top_file = i;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1378'>panel</a>            1378 src/filemanager/panel.c         i = panel-&gt;dir.len - items;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1379'>panel</a>            1379 src/filemanager/panel.c         if (panel-&gt;top_file &gt; i)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1380'>panel</a>            1380 src/filemanager/panel.c             panel-&gt;top_file = i;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1382'>panel</a>            1382 src/filemanager/panel.c         if (panel-&gt;top_file &gt; panel-&gt;selected)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1383'>panel</a>            1383 src/filemanager/panel.c             panel-&gt;top_file = panel-&gt;selected;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1395'>panel</a>            1395 src/filemanager/panel.c panel_save_name (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1399'>panel</a>            1399 src/filemanager/panel.c         return g_strdup (panel-&gt;panel_name);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1401'>panel</a>            1401 src/filemanager/panel.c     return g_strconcat ("Temporal:", panel-&gt;panel_name, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1407'>panel</a>            1407 src/filemanager/panel.c directory_history_add (WPanel * panel, const vfs_path_t * vpath)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1412'>panel</a>            1412 src/filemanager/panel.c     panel-&gt;dir_history = list_append_unique (panel-&gt;dir_history, tmp);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1413'>panel</a>            1413 src/filemanager/panel.c     panel-&gt;dir_history_current = panel-&gt;dir_history;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1508'>panel</a>            1508 src/filemanager/panel.c panel_format_modified (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1510'>panel</a>            1510 src/filemanager/panel.c     panel-&gt;format_modified = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1516'>panel</a>            1516 src/filemanager/panel.c panel_paint_sort_info (const WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1518'>panel</a>            1518 src/filemanager/panel.c     if (*panel-&gt;sort_field-&gt;hotkey != '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1521'>panel</a>            1521 src/filemanager/panel.c             panel-&gt;sort_info.reverse ? panel_sort_up_sign : panel_sort_down_sign;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1524'>panel</a>            1524 src/filemanager/panel.c         str = g_strdup_printf ("%s%s", sort_sign, Q_ (panel-&gt;sort_field-&gt;hotkey));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1525'>panel</a>            1525 src/filemanager/panel.c         widget_move (panel, 1, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1557'>panel</a>            1557 src/filemanager/panel.c panel_print_header (const WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1559'>panel</a>            1559 src/filemanager/panel.c     const Widget *w = CONST_WIDGET (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1572'>panel</a>            1572 src/filemanager/panel.c     for (i = 0; i &lt; panel-&gt;list_cols; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1576'>panel</a>            1576 src/filemanager/panel.c         for (format = panel-&gt;format; format != NULL; format = format-&gt;next)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1582'>panel</a>            1582 src/filemanager/panel.c                 if (panel-&gt;list_type == list_long</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1583'>panel</a>            1583 src/filemanager/panel.c                     &amp;&amp; strcmp (format-&gt;id, panel-&gt;sort_field-&gt;id) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1585'>panel</a>            1585 src/filemanager/panel.c                                      panel-&gt;sort_info.reverse</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1590'>panel</a>            1590 src/filemanager/panel.c                 if (panel-&gt;filter != NULL &amp;&amp; *panel-&gt;filter != '\0'</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1594'>panel</a>            1594 src/filemanager/panel.c                     g_string_append (format_txt, panel-&gt;filter);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1609'>panel</a>            1609 src/filemanager/panel.c         if (i &lt; panel-&gt;list_cols - 1)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1618'>panel</a>            1618 src/filemanager/panel.c     if (panel-&gt;list_type != list_long)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1619'>panel</a>            1619 src/filemanager/panel.c         panel_paint_sort_info (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1625'>panel</a>            1625 src/filemanager/panel.c parse_panel_size (WPanel * panel, const char *format, gboolean isstatus)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1643'>panel</a>            1643 src/filemanager/panel.c         panel-&gt;frame_size = frame;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1644'>panel</a>            1644 src/filemanager/panel.c         panel-&gt;list_cols = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1652'>panel</a>            1652 src/filemanager/panel.c         if (!isstatus &amp;&amp; panel-&gt;list_type == list_brief)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1654'>panel</a>            1654 src/filemanager/panel.c             panel-&gt;brief_cols = g_ascii_digit_value (*format);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1655'>panel</a>            1655 src/filemanager/panel.c             if (panel-&gt;brief_cols &lt; 1)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1656'>panel</a>            1656 src/filemanager/panel.c                 panel-&gt;brief_cols = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1658'>panel</a>            1658 src/filemanager/panel.c             panel-&gt;list_cols = panel-&gt;brief_cols;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1665'>panel</a>            1665 src/filemanager/panel.c         panel_update_cols (WIDGET (panel), panel-&gt;frame_size);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1688'>panel</a>            1688 src/filemanager/panel.c parse_display_format (WPanel * panel, const char *format, char **error, gboolean isstatus,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1712'>panel</a>            1712 src/filemanager/panel.c     format = parse_panel_size (panel, format, isstatus);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1837'>panel</a>            1837 src/filemanager/panel.c use_display_format (WPanel * panel, const char *format, char **error, gboolean isstatus)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1848'>panel</a>            1848 src/filemanager/panel.c     home = parse_display_format (panel, format, error, isstatus, &amp;total_cols);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1853'>panel</a>            1853 src/filemanager/panel.c     panel-&gt;dirty = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1855'>panel</a>            1855 src/filemanager/panel.c     usable_columns = WIDGET (panel)-&gt;cols - 2;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1859'>panel</a>            1859 src/filemanager/panel.c         usable_columns /= panel-&gt;list_cols;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1860'>panel</a>            1860 src/filemanager/panel.c         if (panel-&gt;list_cols &gt; 1)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1917'>panel</a>            1917 src/filemanager/panel.c panel_format (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1920'>panel</a>            1920 src/filemanager/panel.c     switch (panel-&gt;list_type)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1928'>panel</a>            1928 src/filemanager/panel.c             int brief_cols = panel-&gt;brief_cols;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1941'>panel</a>            1941 src/filemanager/panel.c         return panel-&gt;user_format;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1952'>panel</a>            1952 src/filemanager/panel.c mini_status_format (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1954'>panel</a>            1954 src/filemanager/panel.c     if (panel-&gt;user_mini_status)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1955'>panel</a>            1955 src/filemanager/panel.c         return panel-&gt;user_status_format[panel-&gt;list_type];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1957'>panel</a>            1957 src/filemanager/panel.c     switch (panel-&gt;list_type)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1970'>panel</a>            1970 src/filemanager/panel.c         return panel-&gt;user_format;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2031'>panel</a>            2031 src/filemanager/panel.c unselect_item (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2033'>panel</a>            2033 src/filemanager/panel.c     repaint_file (panel, panel-&gt;selected, TRUE, 2 * selection (panel)-&gt;f.marked, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2085'>panel</a>            2085 src/filemanager/panel.c panel_selected_at_half (const WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2089'>panel</a>            2089 src/filemanager/panel.c     lines = panel_lines (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2092'>panel</a>            2092 src/filemanager/panel.c     top = panel-&gt;top_file;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2093'>panel</a>            2093 src/filemanager/panel.c     if (panel-&gt;list_cols &gt; 1)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2094'>panel</a>            2094 src/filemanager/panel.c         top += lines * ((panel-&gt;selected - top) / lines);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2096'>panel</a>            2096 src/filemanager/panel.c     return (panel-&gt;selected - top - lines / 2);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2102'>panel</a>            2102 src/filemanager/panel.c move_down (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2106'>panel</a>            2106 src/filemanager/panel.c     if (panel-&gt;selected + 1 == panel-&gt;dir.len)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2109'>panel</a>            2109 src/filemanager/panel.c     unselect_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2110'>panel</a>            2110 src/filemanager/panel.c     panel-&gt;selected++;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2112'>panel</a>            2112 src/filemanager/panel.c     items = panel_items (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2114'>panel</a>            2114 src/filemanager/panel.c     if (panels_options.scroll_pages &amp;&amp; panel-&gt;selected - panel-&gt;top_file == items)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2117'>panel</a>            2117 src/filemanager/panel.c         panel-&gt;top_file += items / 2;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2118'>panel</a>            2118 src/filemanager/panel.c         if (panel-&gt;top_file &gt; panel-&gt;dir.len - items)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2119'>panel</a>            2119 src/filemanager/panel.c             panel-&gt;top_file = panel-&gt;dir.len - items;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2120'>panel</a>            2120 src/filemanager/panel.c         paint_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2122'>panel</a>            2122 src/filemanager/panel.c     else if (panels_options.scroll_center &amp;&amp; panel_selected_at_half (panel) &gt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2125'>panel</a>            2125 src/filemanager/panel.c         panel-&gt;top_file++;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2126'>panel</a>            2126 src/filemanager/panel.c         if (panel-&gt;top_file &gt; panel-&gt;dir.len - items)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2127'>panel</a>            2127 src/filemanager/panel.c             panel-&gt;top_file = panel-&gt;dir.len - items;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2129'>panel</a>            2129 src/filemanager/panel.c     select_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2135'>panel</a>            2135 src/filemanager/panel.c move_up (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2137'>panel</a>            2137 src/filemanager/panel.c     if (panel-&gt;selected == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2140'>panel</a>            2140 src/filemanager/panel.c     unselect_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2141'>panel</a>            2141 src/filemanager/panel.c     panel-&gt;selected--;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2143'>panel</a>            2143 src/filemanager/panel.c     if (panels_options.scroll_pages &amp;&amp; panel-&gt;selected &lt; panel-&gt;top_file)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2146'>panel</a>            2146 src/filemanager/panel.c         panel-&gt;top_file -= panel_items (panel) / 2;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2147'>panel</a>            2147 src/filemanager/panel.c         if (panel-&gt;top_file &lt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2148'>panel</a>            2148 src/filemanager/panel.c             panel-&gt;top_file = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2149'>panel</a>            2149 src/filemanager/panel.c         paint_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2151'>panel</a>            2151 src/filemanager/panel.c     else if (panels_options.scroll_center &amp;&amp; panel_selected_at_half (panel) &lt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2154'>panel</a>            2154 src/filemanager/panel.c         panel-&gt;top_file--;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2155'>panel</a>            2155 src/filemanager/panel.c         if (panel-&gt;top_file &lt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2156'>panel</a>            2156 src/filemanager/panel.c             panel-&gt;top_file = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2158'>panel</a>            2158 src/filemanager/panel.c     select_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2165'>panel</a>            2165 src/filemanager/panel.c move_selection (WPanel * panel, int lines)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2170'>panel</a>            2170 src/filemanager/panel.c     new_pos = panel-&gt;selected + lines;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2171'>panel</a>            2171 src/filemanager/panel.c     if (new_pos &gt;= panel-&gt;dir.len)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2172'>panel</a>            2172 src/filemanager/panel.c         new_pos = panel-&gt;dir.len - 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2177'>panel</a>            2177 src/filemanager/panel.c     unselect_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2178'>panel</a>            2178 src/filemanager/panel.c     panel-&gt;selected = new_pos;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2180'>panel</a>            2180 src/filemanager/panel.c     if (panel-&gt;selected - panel-&gt;top_file &gt;= panel_items (panel))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2182'>panel</a>            2182 src/filemanager/panel.c         panel-&gt;top_file += lines;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2186'>panel</a>            2186 src/filemanager/panel.c     if (panel-&gt;selected - panel-&gt;top_file &lt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2188'>panel</a>            2188 src/filemanager/panel.c         panel-&gt;top_file += lines;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2194'>panel</a>            2194 src/filemanager/panel.c         if (panel-&gt;top_file &gt; panel-&gt;selected)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2195'>panel</a>            2195 src/filemanager/panel.c             panel-&gt;top_file = panel-&gt;selected;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2196'>panel</a>            2196 src/filemanager/panel.c         if (panel-&gt;top_file &lt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2197'>panel</a>            2197 src/filemanager/panel.c             panel-&gt;top_file = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2198'>panel</a>            2198 src/filemanager/panel.c         paint_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2200'>panel</a>            2200 src/filemanager/panel.c     select_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2206'>panel</a>            2206 src/filemanager/panel.c move_left (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2208'>panel</a>            2208 src/filemanager/panel.c     if (panel-&gt;list_cols &gt; 1)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2210'>panel</a>            2210 src/filemanager/panel.c         move_selection (panel, -panel_lines (panel));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2220'>panel</a>            2220 src/filemanager/panel.c move_right (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2222'>panel</a>            2222 src/filemanager/panel.c     if (panel-&gt;list_cols &gt; 1)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2224'>panel</a>            2224 src/filemanager/panel.c         move_selection (panel, panel_lines (panel));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2234'>panel</a>            2234 src/filemanager/panel.c prev_page (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2238'>panel</a>            2238 src/filemanager/panel.c     if (!panel-&gt;selected &amp;&amp; !panel-&gt;top_file)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2241'>panel</a>            2241 src/filemanager/panel.c     unselect_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2242'>panel</a>            2242 src/filemanager/panel.c     items = panel_items (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2243'>panel</a>            2243 src/filemanager/panel.c     if (panel-&gt;top_file &lt; items)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2244'>panel</a>            2244 src/filemanager/panel.c         items = panel-&gt;top_file;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2246'>panel</a>            2246 src/filemanager/panel.c         panel-&gt;selected = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2248'>panel</a>            2248 src/filemanager/panel.c         panel-&gt;selected -= items;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2249'>panel</a>            2249 src/filemanager/panel.c     panel-&gt;top_file -= items;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2251'>panel</a>            2251 src/filemanager/panel.c     select_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2252'>panel</a>            2252 src/filemanager/panel.c     paint_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2258'>panel</a>            2258 src/filemanager/panel.c goto_parent_dir (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2260'>panel</a>            2260 src/filemanager/panel.c     if (!panel-&gt;is_panelized)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2270'>panel</a>            2270 src/filemanager/panel.c         char *fname = panel-&gt;dir.list[panel-&gt;selected].fname;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2295'>panel</a>            2295 src/filemanager/panel.c         try_to_select (panel, bname);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2305'>panel</a>            2305 src/filemanager/panel.c next_page (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2309'>panel</a>            2309 src/filemanager/panel.c     if (panel-&gt;selected == panel-&gt;dir.len - 1)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2312'>panel</a>            2312 src/filemanager/panel.c     unselect_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2313'>panel</a>            2313 src/filemanager/panel.c     items = panel_items (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2314'>panel</a>            2314 src/filemanager/panel.c     if (panel-&gt;top_file &gt; panel-&gt;dir.len - 2 * items)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2315'>panel</a>            2315 src/filemanager/panel.c         items = panel-&gt;dir.len - items - panel-&gt;top_file;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2316'>panel</a>            2316 src/filemanager/panel.c     if (panel-&gt;top_file + items &lt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2317'>panel</a>            2317 src/filemanager/panel.c         items = -panel-&gt;top_file;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2319'>panel</a>            2319 src/filemanager/panel.c         panel-&gt;selected = panel-&gt;dir.len - 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2321'>panel</a>            2321 src/filemanager/panel.c         panel-&gt;selected += items;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2322'>panel</a>            2322 src/filemanager/panel.c     panel-&gt;top_file += items;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2324'>panel</a>            2324 src/filemanager/panel.c     select_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2325'>panel</a>            2325 src/filemanager/panel.c     paint_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2331'>panel</a>            2331 src/filemanager/panel.c goto_child_dir (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2333'>panel</a>            2333 src/filemanager/panel.c     if ((S_ISDIR (selection (panel)-&gt;st.st_mode) || link_isdir (selection (panel))))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2337'>panel</a>            2337 src/filemanager/panel.c         vpath = vfs_path_from_str (selection (panel)-&gt;fname);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2346'>panel</a>            2346 src/filemanager/panel.c goto_top_file (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2348'>panel</a>            2348 src/filemanager/panel.c     unselect_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2349'>panel</a>            2349 src/filemanager/panel.c     panel-&gt;selected = panel-&gt;top_file;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2350'>panel</a>            2350 src/filemanager/panel.c     select_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2356'>panel</a>            2356 src/filemanager/panel.c goto_middle_file (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2358'>panel</a>            2358 src/filemanager/panel.c     unselect_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2359'>panel</a>            2359 src/filemanager/panel.c     panel-&gt;selected = panel-&gt;top_file + panel_items (panel) / 2;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2360'>panel</a>            2360 src/filemanager/panel.c     select_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2366'>panel</a>            2366 src/filemanager/panel.c goto_bottom_file (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2368'>panel</a>            2368 src/filemanager/panel.c     unselect_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2369'>panel</a>            2369 src/filemanager/panel.c     panel-&gt;selected = panel-&gt;top_file + panel_items (panel) - 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2370'>panel</a>            2370 src/filemanager/panel.c     select_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2376'>panel</a>            2376 src/filemanager/panel.c move_home (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2378'>panel</a>            2378 src/filemanager/panel.c     if (panel-&gt;selected == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2381'>panel</a>            2381 src/filemanager/panel.c     unselect_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2385'>panel</a>            2385 src/filemanager/panel.c         int middle_pos = panel-&gt;top_file + panel_items (panel) / 2;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2387'>panel</a>            2387 src/filemanager/panel.c         if (panel-&gt;selected &gt; middle_pos)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2389'>panel</a>            2389 src/filemanager/panel.c             goto_middle_file (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2392'>panel</a>            2392 src/filemanager/panel.c         if (panel-&gt;selected != panel-&gt;top_file)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2394'>panel</a>            2394 src/filemanager/panel.c             goto_top_file (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2399'>panel</a>            2399 src/filemanager/panel.c     panel-&gt;top_file = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2400'>panel</a>            2400 src/filemanager/panel.c     panel-&gt;selected = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2402'>panel</a>            2402 src/filemanager/panel.c     paint_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2403'>panel</a>            2403 src/filemanager/panel.c     select_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2409'>panel</a>            2409 src/filemanager/panel.c move_end (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2411'>panel</a>            2411 src/filemanager/panel.c     if (panel-&gt;selected == panel-&gt;dir.len - 1)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2414'>panel</a>            2414 src/filemanager/panel.c     unselect_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2420'>panel</a>            2420 src/filemanager/panel.c         items = panel_items (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2421'>panel</a>            2421 src/filemanager/panel.c         middle_pos = panel-&gt;top_file + items / 2;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2423'>panel</a>            2423 src/filemanager/panel.c         if (panel-&gt;selected &lt; middle_pos)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2425'>panel</a>            2425 src/filemanager/panel.c             goto_middle_file (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2428'>panel</a>            2428 src/filemanager/panel.c         if (panel-&gt;selected != panel-&gt;top_file + items - 1)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2430'>panel</a>            2430 src/filemanager/panel.c             goto_bottom_file (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2435'>panel</a>            2435 src/filemanager/panel.c     panel-&gt;selected = panel-&gt;dir.len - 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2436'>panel</a>            2436 src/filemanager/panel.c     paint_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2437'>panel</a>            2437 src/filemanager/panel.c     select_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2443'>panel</a>            2443 src/filemanager/panel.c do_mark_file (WPanel * panel, mark_act_t do_move)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2445'>panel</a>            2445 src/filemanager/panel.c     do_file_mark (panel, panel-&gt;selected, selection (panel)-&gt;f.marked ? 0 : 1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2447'>panel</a>            2447 src/filemanager/panel.c         move_down (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2449'>panel</a>            2449 src/filemanager/panel.c         move_up (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2455'>panel</a>            2455 src/filemanager/panel.c mark_file (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2457'>panel</a>            2457 src/filemanager/panel.c     do_mark_file (panel, MARK_DOWN);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2463'>panel</a>            2463 src/filemanager/panel.c mark_file_up (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2465'>panel</a>            2465 src/filemanager/panel.c     do_mark_file (panel, MARK_FORCE_UP);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2471'>panel</a>            2471 src/filemanager/panel.c mark_file_down (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2473'>panel</a>            2473 src/filemanager/panel.c     do_mark_file (panel, MARK_FORCE_DOWN);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2479'>panel</a>            2479 src/filemanager/panel.c mark_file_right (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2484'>panel</a>            2484 src/filemanager/panel.c         state_mark = selection (panel)-&gt;f.marked ? 0 : 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2486'>panel</a>            2486 src/filemanager/panel.c     lines = panel_lines (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2487'>panel</a>            2487 src/filemanager/panel.c     lines = MIN (lines, panel-&gt;dir.len - panel-&gt;selected - 1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2490'>panel</a>            2490 src/filemanager/panel.c         do_file_mark (panel, panel-&gt;selected, state_mark);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2491'>panel</a>            2491 src/filemanager/panel.c         move_down (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2493'>panel</a>            2493 src/filemanager/panel.c     do_file_mark (panel, panel-&gt;selected, state_mark);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2499'>panel</a>            2499 src/filemanager/panel.c mark_file_left (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2504'>panel</a>            2504 src/filemanager/panel.c         state_mark = selection (panel)-&gt;f.marked ? 0 : 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2506'>panel</a>            2506 src/filemanager/panel.c     lines = panel_lines (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2507'>panel</a>            2507 src/filemanager/panel.c     lines = MIN (lines, panel-&gt;selected + 1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2510'>panel</a>            2510 src/filemanager/panel.c         do_file_mark (panel, panel-&gt;selected, state_mark);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2511'>panel</a>            2511 src/filemanager/panel.c         move_up (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2513'>panel</a>            2513 src/filemanager/panel.c     do_file_mark (panel, panel-&gt;selected, state_mark);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2519'>panel</a>            2519 src/filemanager/panel.c panel_select_unselect_files (WPanel * panel, const char *title, const char *history_name,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2564'>panel</a>            2564 src/filemanager/panel.c     for (i = 0; i &lt; panel-&gt;dir.len; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2566'>panel</a>            2566 src/filemanager/panel.c         if (DIR_IS_DOTDOT (panel-&gt;dir.list[i].fname))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2568'>panel</a>            2568 src/filemanager/panel.c         if (S_ISDIR (panel-&gt;dir.list[i].st.st_mode) &amp;&amp; files_only != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2571'>panel</a>            2571 src/filemanager/panel.c         if (mc_search_run (search, panel-&gt;dir.list[i].fname, 0, panel-&gt;dir.list[i].fnamelen, NULL))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2572'>panel</a>            2572 src/filemanager/panel.c             do_file_mark (panel, i, do_select);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2591'>panel</a>            2591 src/filemanager/panel.c panel_select_files (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2593'>panel</a>            2593 src/filemanager/panel.c     panel_select_unselect_files (panel, _("Select"), ":select_cmd: Select ", TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2599'>panel</a>            2599 src/filemanager/panel.c panel_unselect_files (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2601'>panel</a>            2601 src/filemanager/panel.c     panel_select_unselect_files (panel, _("Unselect"), ":unselect_cmd: Unselect ", FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2607'>panel</a>            2607 src/filemanager/panel.c panel_select_invert_files (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2611'>panel</a>            2611 src/filemanager/panel.c     for (i = 0; i &lt; panel-&gt;dir.len; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2613'>panel</a>            2613 src/filemanager/panel.c         file_entry_t *file = &amp;panel-&gt;dir.list[i];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2616'>panel</a>            2616 src/filemanager/panel.c             do_file_mark (panel, i, !file-&gt;f.marked);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2627'>panel</a>            2627 src/filemanager/panel.c do_search (WPanel * panel, int c_code)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2637'>panel</a>            2637 src/filemanager/panel.c     l = strlen (panel-&gt;search_buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2642'>panel</a>            2642 src/filemanager/panel.c             act = panel-&gt;search_buffer + l;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2643'>panel</a>            2643 src/filemanager/panel.c             str_prev_noncomb_char (&amp;act, panel-&gt;search_buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2646'>panel</a>            2646 src/filemanager/panel.c         panel-&gt;search_chpoint = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2650'>panel</a>            2650 src/filemanager/panel.c         if (c_code != 0 &amp;&amp; (gsize) panel-&gt;search_chpoint &lt; sizeof (panel-&gt;search_char))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2652'>panel</a>            2652 src/filemanager/panel.c             panel-&gt;search_char[panel-&gt;search_chpoint] = c_code;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2653'>panel</a>            2653 src/filemanager/panel.c             panel-&gt;search_chpoint++;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2656'>panel</a>            2656 src/filemanager/panel.c         if (panel-&gt;search_chpoint &gt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2658'>panel</a>            2658 src/filemanager/panel.c             switch (str_is_valid_char (panel-&gt;search_char, panel-&gt;search_chpoint))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2663'>panel</a>            2663 src/filemanager/panel.c                 panel-&gt;search_chpoint = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2666'>panel</a>            2666 src/filemanager/panel.c                 if (l + panel-&gt;search_chpoint &lt; sizeof (panel-&gt;search_buffer))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2668'>panel</a>            2668 src/filemanager/panel.c                     memcpy (panel-&gt;search_buffer + l, panel-&gt;search_char, panel-&gt;search_chpoint);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2669'>panel</a>            2669 src/filemanager/panel.c                     l += panel-&gt;search_chpoint;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2670'>panel</a>            2670 src/filemanager/panel.c                     *(panel-&gt;search_buffer + l) = '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2671'>panel</a>            2671 src/filemanager/panel.c                     panel-&gt;search_chpoint = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2677'>panel</a>            2677 src/filemanager/panel.c     reg_exp = g_strdup_printf ("%s*", panel-&gt;search_buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2692'>panel</a>            2692 src/filemanager/panel.c         search-&gt;is_case_sensitive = panel-&gt;sort_info.case_sensitive;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2696'>panel</a>            2696 src/filemanager/panel.c     sel = panel-&gt;selected;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2698'>panel</a>            2698 src/filemanager/panel.c     for (i = panel-&gt;selected; !wrapped || i != panel-&gt;selected; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2700'>panel</a>            2700 src/filemanager/panel.c         if (i &gt;= panel-&gt;dir.len)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2707'>panel</a>            2707 src/filemanager/panel.c         if (mc_search_run (search, panel-&gt;dir.list[i].fname, 0, panel-&gt;dir.list[i].fnamelen, NULL))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2716'>panel</a>            2716 src/filemanager/panel.c         unselect_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2717'>panel</a>            2717 src/filemanager/panel.c         panel-&gt;selected = sel;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2718'>panel</a>            2718 src/filemanager/panel.c         select_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2719'>panel</a>            2719 src/filemanager/panel.c         widget_redraw (WIDGET (panel));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2723'>panel</a>            2723 src/filemanager/panel.c         act = panel-&gt;search_buffer + l;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2724'>panel</a>            2724 src/filemanager/panel.c         str_prev_noncomb_char (&amp;act, panel-&gt;search_buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2738'>panel</a>            2738 src/filemanager/panel.c start_search (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2740'>panel</a>            2740 src/filemanager/panel.c     if (panel-&gt;searching)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2742'>panel</a>            2742 src/filemanager/panel.c         if (panel-&gt;selected + 1 == panel-&gt;dir.len)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2743'>panel</a>            2743 src/filemanager/panel.c             panel-&gt;selected = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2745'>panel</a>            2745 src/filemanager/panel.c             move_down (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2749'>panel</a>            2749 src/filemanager/panel.c         if (panel-&gt;search_buffer[0] == '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2750'>panel</a>            2750 src/filemanager/panel.c             g_strlcpy (panel-&gt;search_buffer, panel-&gt;prev_search_buffer,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2751'>panel</a>            2751 src/filemanager/panel.c                        sizeof (panel-&gt;search_buffer));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2753'>panel</a>            2753 src/filemanager/panel.c         do_search (panel, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2757'>panel</a>            2757 src/filemanager/panel.c         panel-&gt;searching = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2758'>panel</a>            2758 src/filemanager/panel.c         panel-&gt;search_buffer[0] = '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2759'>panel</a>            2759 src/filemanager/panel.c         panel-&gt;search_char[0] = '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2760'>panel</a>            2760 src/filemanager/panel.c         panel-&gt;search_chpoint = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2761'>panel</a>            2761 src/filemanager/panel.c         display_mini_info (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2769'>panel</a>            2769 src/filemanager/panel.c stop_search (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2771'>panel</a>            2771 src/filemanager/panel.c     panel-&gt;searching = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2775'>panel</a>            2775 src/filemanager/panel.c     if (panel-&gt;search_buffer[0] != '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2776'>panel</a>            2776 src/filemanager/panel.c         g_strlcpy (panel-&gt;prev_search_buffer, panel-&gt;search_buffer,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2777'>panel</a>            2777 src/filemanager/panel.c                    sizeof (panel-&gt;prev_search_buffer));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2779'>panel</a>            2779 src/filemanager/panel.c     display_mini_info (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2862'>panel</a>            2862 src/filemanager/panel.c do_enter (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2864'>panel</a>            2864 src/filemanager/panel.c     return do_enter_on_file_entry (selection (panel));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2870'>panel</a>            2870 src/filemanager/panel.c chdir_other_panel (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2872'>panel</a>            2872 src/filemanager/panel.c     const file_entry_t *entry = &amp;panel-&gt;dir.list[panel-&gt;selected];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2881'>panel</a>            2881 src/filemanager/panel.c         new_dir_vpath = vfs_path_append_new (panel-&gt;cwd_vpath, entry-&gt;fname, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2884'>panel</a>            2884 src/filemanager/panel.c         new_dir_vpath = vfs_path_append_new (panel-&gt;cwd_vpath, "..", (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2885'>panel</a>            2885 src/filemanager/panel.c         sel_entry = strrchr (vfs_path_get_last_path_str (panel-&gt;cwd_vpath), PATH_SEP);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2896'>panel</a>            2896 src/filemanager/panel.c     move_down (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2908'>panel</a>            2908 src/filemanager/panel.c panel_sync_other (const WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2916'>panel</a>            2916 src/filemanager/panel.c     if (!panel-&gt;is_panelized)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2917'>panel</a>            2917 src/filemanager/panel.c         try_to_select (other_panel, selection (panel)-&gt;fname);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2923'>panel</a>            2923 src/filemanager/panel.c chdir_to_readlink (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2935'>panel</a>            2935 src/filemanager/panel.c     if (!S_ISLNK (panel-&gt;dir.list[panel-&gt;selected].st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2938'>panel</a>            2938 src/filemanager/panel.c     i = readlink (selection (panel)-&gt;fname, buffer, MC_MAXPATHLEN - 1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2942'>panel</a>            2942 src/filemanager/panel.c     panel_fname_vpath = vfs_path_from_str (selection (panel)-&gt;fname);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2966'>panel</a>            2966 src/filemanager/panel.c         new_dir_vpath = vfs_path_append_new (panel-&gt;cwd_vpath, buffer, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2973'>panel</a>            2973 src/filemanager/panel.c     move_down (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2979'>panel</a>            2979 src/filemanager/panel.c panel_get_format_field_count (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2984'>panel</a>            2984 src/filemanager/panel.c     for (lc_index = 0, format = panel-&gt;format; format != NULL; format = format-&gt;next, lc_index++)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2996'>panel</a>            2996 src/filemanager/panel.c panel_get_format_field_index_by_name (WPanel * panel, const char *name)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3001'>panel</a>            3001 src/filemanager/panel.c     for (lc_index = 1, format = panel-&gt;format;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3014'>panel</a>            3014 src/filemanager/panel.c panel_get_format_field_by_index (WPanel * panel, gsize lc_index)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3018'>panel</a>            3018 src/filemanager/panel.c     for (format = panel-&gt;format; format != NULL &amp;&amp; lc_index != 0; format = format-&gt;next, lc_index--)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3027'>panel</a>            3027 src/filemanager/panel.c panel_get_sortable_field_by_format (WPanel * panel, gsize lc_index)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3032'>panel</a>            3032 src/filemanager/panel.c     format = panel_get_format_field_by_index (panel, lc_index);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3047'>panel</a>            3047 src/filemanager/panel.c panel_toggle_sort_order_prev (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3053'>panel</a>            3053 src/filemanager/panel.c     title = panel_get_title_without_hotkey (panel-&gt;sort_field-&gt;title_hotkey);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3054'>panel</a>            3054 src/filemanager/panel.c     lc_index = panel_get_format_field_index_by_name (panel, title);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3060'>panel</a>            3060 src/filemanager/panel.c              i != 0 &amp;&amp; (pfield = panel_get_sortable_field_by_format (panel, i - 1)) == NULL; i--)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3067'>panel</a>            3067 src/filemanager/panel.c         for (i = panel_get_format_field_count (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3068'>panel</a>            3068 src/filemanager/panel.c              i != 0 &amp;&amp; (pfield = panel_get_sortable_field_by_format (panel, i - 1)) == NULL; i--)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3074'>panel</a>            3074 src/filemanager/panel.c         panel-&gt;sort_field = pfield;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3075'>panel</a>            3075 src/filemanager/panel.c         panel_set_sort_order (panel, pfield);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3082'>panel</a>            3082 src/filemanager/panel.c panel_toggle_sort_order_next (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3089'>panel</a>            3089 src/filemanager/panel.c     format_field_count = panel_get_format_field_count (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3090'>panel</a>            3090 src/filemanager/panel.c     title = panel_get_title_without_hotkey (panel-&gt;sort_field-&gt;title_hotkey);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3091'>panel</a>            3091 src/filemanager/panel.c     lc_index = panel_get_format_field_index_by_name (panel, title);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3098'>panel</a>            3098 src/filemanager/panel.c              &amp;&amp; (pfield = panel_get_sortable_field_by_format (panel, i)) == NULL; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3107'>panel</a>            3107 src/filemanager/panel.c              &amp;&amp; (pfield = panel_get_sortable_field_by_format (panel, i)) == NULL; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3113'>panel</a>            3113 src/filemanager/panel.c         panel-&gt;sort_field = pfield;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3114'>panel</a>            3114 src/filemanager/panel.c         panel_set_sort_order (panel, pfield);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3121'>panel</a>            3121 src/filemanager/panel.c panel_select_sort_order (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3125'>panel</a>            3125 src/filemanager/panel.c     sort_order = sort_box (&amp;panel-&gt;sort_info, panel-&gt;sort_field);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3128'>panel</a>            3128 src/filemanager/panel.c         panel-&gt;sort_field = sort_order;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3129'>panel</a>            3129 src/filemanager/panel.c         panel_set_sort_order (panel, sort_order);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3144'>panel</a>            3144 src/filemanager/panel.c panel_content_scroll_left (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3146'>panel</a>            3146 src/filemanager/panel.c     if (panel-&gt;content_shift &gt; -1)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3148'>panel</a>            3148 src/filemanager/panel.c         if (panel-&gt;content_shift &gt; panel-&gt;max_shift)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3149'>panel</a>            3149 src/filemanager/panel.c             panel-&gt;content_shift = panel-&gt;max_shift;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3151'>panel</a>            3151 src/filemanager/panel.c         panel-&gt;content_shift--;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3152'>panel</a>            3152 src/filemanager/panel.c         show_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3153'>panel</a>            3153 src/filemanager/panel.c         paint_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3168'>panel</a>            3168 src/filemanager/panel.c panel_content_scroll_right (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3170'>panel</a>            3170 src/filemanager/panel.c     if (panel-&gt;content_shift &lt; 0 || panel-&gt;content_shift &lt; panel-&gt;max_shift)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3172'>panel</a>            3172 src/filemanager/panel.c         panel-&gt;content_shift++;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3173'>panel</a>            3173 src/filemanager/panel.c         show_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3174'>panel</a>            3174 src/filemanager/panel.c         paint_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3181'>panel</a>            3181 src/filemanager/panel.c panel_set_sort_type_by_id (WPanel * panel, const char *name)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3183'>panel</a>            3183 src/filemanager/panel.c     if (strcmp (panel-&gt;sort_field-&gt;id, name) != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3191'>panel</a>            3191 src/filemanager/panel.c         panel-&gt;sort_field = sort_order;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3194'>panel</a>            3194 src/filemanager/panel.c         panel-&gt;sort_info.reverse = !panel-&gt;sort_info.reverse;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3196'>panel</a>            3196 src/filemanager/panel.c     panel_set_sort_order (panel, panel-&gt;sort_field);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3268'>panel</a>            3268 src/filemanager/panel.c _do_panel_cd (WPanel * panel, const vfs_path_t * new_dir_vpath, enum cd_enum cd_type)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3279'>panel</a>            3279 src/filemanager/panel.c             new_dir_vpath = panel-&gt;lwd_vpath;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3286'>panel</a>            3286 src/filemanager/panel.c     olddir_vpath = vfs_path_clone (panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3287'>panel</a>            3287 src/filemanager/panel.c     panel_set_lwd (panel, panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3290'>panel</a>            3290 src/filemanager/panel.c     vfs_path_free (panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3292'>panel</a>            3292 src/filemanager/panel.c     panel-&gt;cwd_vpath = vfs_path_clone (vfs_get_raw_current_dir ());</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3296'>panel</a>            3296 src/filemanager/panel.c     subshell_chdir (panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3299'>panel</a>            3299 src/filemanager/panel.c     panel_clean_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3301'>panel</a>            3301 src/filemanager/panel.c     dir_list_load (&amp;panel-&gt;dir, panel-&gt;cwd_vpath, panel-&gt;sort_field-&gt;sort_routine,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3302'>panel</a>            3302 src/filemanager/panel.c                    &amp;panel-&gt;sort_info, panel-&gt;filter);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3303'>panel</a>            3303 src/filemanager/panel.c     try_to_select (panel, get_parent_dir_name (panel-&gt;cwd_vpath, olddir_vpath));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3306'>panel</a>            3306 src/filemanager/panel.c     panel-&gt;dirty = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3317'>panel</a>            3317 src/filemanager/panel.c directory_history_next (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3326'>panel</a>            3326 src/filemanager/panel.c         next = g_list_next (panel-&gt;dir_history_current);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3332'>panel</a>            3332 src/filemanager/panel.c             ok = _do_panel_cd (panel, data_vpath, cd_exact);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3334'>panel</a>            3334 src/filemanager/panel.c             panel-&gt;dir_history_current = next;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3344'>panel</a>            3344 src/filemanager/panel.c directory_history_prev (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3353'>panel</a>            3353 src/filemanager/panel.c         prev = g_list_previous (panel-&gt;dir_history_current);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3359'>panel</a>            3359 src/filemanager/panel.c             ok = _do_panel_cd (panel, data_vpath, cd_exact);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3361'>panel</a>            3361 src/filemanager/panel.c             panel-&gt;dir_history_current = prev;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3371'>panel</a>            3371 src/filemanager/panel.c directory_history_list (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3377'>panel</a>            3377 src/filemanager/panel.c     pos = g_list_position (panel-&gt;dir_history_current, panel-&gt;dir_history);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3379'>panel</a>            3379 src/filemanager/panel.c     s = history_show (&amp;panel-&gt;dir_history, WIDGET (panel), pos);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3385'>panel</a>            3385 src/filemanager/panel.c         ok = _do_panel_cd (panel, s_vpath, cd_exact);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3387'>panel</a>            3387 src/filemanager/panel.c             directory_history_add (panel, panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3401'>panel</a>            3401 src/filemanager/panel.c         panel-&gt;dir_history_current = panel-&gt;dir_history;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3407'>panel</a>            3407 src/filemanager/panel.c             prev = g_list_previous (panel-&gt;dir_history_current);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3411'>panel</a>            3411 src/filemanager/panel.c             panel-&gt;dir_history_current = prev;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3419'>panel</a>            3419 src/filemanager/panel.c panel_execute_cmd (WPanel * panel, long command)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3424'>panel</a>            3424 src/filemanager/panel.c         stop_search (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3446'>panel</a>            3446 src/filemanager/panel.c         chdir_other_panel (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3449'>panel</a>            3449 src/filemanager/panel.c         chdir_to_readlink (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3458'>panel</a>            3458 src/filemanager/panel.c         do_enter (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3470'>panel</a>            3470 src/filemanager/panel.c         panel_select_invert_files (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3473'>panel</a>            3473 src/filemanager/panel.c         panel_select_files (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3479'>panel</a>            3479 src/filemanager/panel.c         panel_unselect_files (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3482'>panel</a>            3482 src/filemanager/panel.c         next_page (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3485'>panel</a>            3485 src/filemanager/panel.c         prev_page (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3488'>panel</a>            3488 src/filemanager/panel.c         goto_child_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3491'>panel</a>            3491 src/filemanager/panel.c         goto_parent_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3494'>panel</a>            3494 src/filemanager/panel.c         directory_history_list (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3497'>panel</a>            3497 src/filemanager/panel.c         directory_history_next (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3500'>panel</a>            3500 src/filemanager/panel.c         directory_history_prev (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3503'>panel</a>            3503 src/filemanager/panel.c         goto_bottom_file (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3506'>panel</a>            3506 src/filemanager/panel.c         goto_middle_file (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3509'>panel</a>            3509 src/filemanager/panel.c         goto_top_file (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3512'>panel</a>            3512 src/filemanager/panel.c         mark_file (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3515'>panel</a>            3515 src/filemanager/panel.c         mark_file_up (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3518'>panel</a>            3518 src/filemanager/panel.c         mark_file_down (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3521'>panel</a>            3521 src/filemanager/panel.c         mark_file_left (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3524'>panel</a>            3524 src/filemanager/panel.c         mark_file_right (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3530'>panel</a>            3530 src/filemanager/panel.c         move_up (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3533'>panel</a>            3533 src/filemanager/panel.c         move_down (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3536'>panel</a>            3536 src/filemanager/panel.c         res = move_left (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3539'>panel</a>            3539 src/filemanager/panel.c         res = move_right (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3542'>panel</a>            3542 src/filemanager/panel.c         move_end (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3545'>panel</a>            3545 src/filemanager/panel.c         move_home (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3549'>panel</a>            3549 src/filemanager/panel.c         panel_change_encoding (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3553'>panel</a>            3553 src/filemanager/panel.c         panel_content_scroll_left (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3556'>panel</a>            3556 src/filemanager/panel.c         panel_content_scroll_right (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3559'>panel</a>            3559 src/filemanager/panel.c         start_search (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3564'>panel</a>            3564 src/filemanager/panel.c         panel_sync_other (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3567'>panel</a>            3567 src/filemanager/panel.c         panel_select_sort_order (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3570'>panel</a>            3570 src/filemanager/panel.c         panel_toggle_sort_order_prev (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3573'>panel</a>            3573 src/filemanager/panel.c         panel_toggle_sort_order_next (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3576'>panel</a>            3576 src/filemanager/panel.c         panel-&gt;sort_info.reverse = !panel-&gt;sort_info.reverse;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3577'>panel</a>            3577 src/filemanager/panel.c         panel_set_sort_order (panel, panel-&gt;sort_field);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3580'>panel</a>            3580 src/filemanager/panel.c         panel_set_sort_type_by_id (panel, "name");</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3583'>panel</a>            3583 src/filemanager/panel.c         panel_set_sort_type_by_id (panel, "extension");</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3586'>panel</a>            3586 src/filemanager/panel.c         panel_set_sort_type_by_id (panel, "size");</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3589'>panel</a>            3589 src/filemanager/panel.c         panel_set_sort_type_by_id (panel, "mtime");</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3602'>panel</a>            3602 src/filemanager/panel.c panel_key (WPanel * panel, int key)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3608'>panel</a>            3608 src/filemanager/panel.c         stop_search (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3612'>panel</a>            3612 src/filemanager/panel.c     if (panel-&gt;searching &amp;&amp; ((key &gt;= ' ' &amp;&amp; key &lt;= 255) || key == KEY_BACKSPACE))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3614'>panel</a>            3614 src/filemanager/panel.c         do_search (panel, key);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3620'>panel</a>            3620 src/filemanager/panel.c             return panel_execute_cmd (panel, panel_map[i].command);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3624'>panel</a>            3624 src/filemanager/panel.c         goto_middle_file (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3630'>panel</a>            3630 src/filemanager/panel.c         start_search (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3631'>panel</a>            3631 src/filemanager/panel.c         do_search (panel, key);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3643'>panel</a>            3643 src/filemanager/panel.c     WPanel *panel = PANEL (w);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3658'>panel</a>            3658 src/filemanager/panel.c         show_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3659'>panel</a>            3659 src/filemanager/panel.c         panel_print_header (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3660'>panel</a>            3660 src/filemanager/panel.c         adjust_top_file (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3661'>panel</a>            3661 src/filemanager/panel.c         paint_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3662'>panel</a>            3662 src/filemanager/panel.c         mini_info_separator (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3663'>panel</a>            3663 src/filemanager/panel.c         display_mini_info (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3664'>panel</a>            3664 src/filemanager/panel.c         panel-&gt;dirty = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3669'>panel</a>            3669 src/filemanager/panel.c         current_panel = panel;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3670'>panel</a>            3670 src/filemanager/panel.c         panel-&gt;active = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3672'>panel</a>            3672 src/filemanager/panel.c         if (mc_chdir (panel-&gt;cwd_vpath) != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3676'>panel</a>            3676 src/filemanager/panel.c             cwd = vfs_path_to_str_flags (panel-&gt;cwd_vpath, 0, VPF_STRIP_PASSWORD);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3682'>panel</a>            3682 src/filemanager/panel.c             subshell_chdir (panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3685'>panel</a>            3685 src/filemanager/panel.c         select_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3686'>panel</a>            3686 src/filemanager/panel.c         show_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3687'>panel</a>            3687 src/filemanager/panel.c         paint_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3688'>panel</a>            3688 src/filemanager/panel.c         panel-&gt;dirty = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3697'>panel</a>            3697 src/filemanager/panel.c         stop_search (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3698'>panel</a>            3698 src/filemanager/panel.c         panel-&gt;active = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3699'>panel</a>            3699 src/filemanager/panel.c         show_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3700'>panel</a>            3700 src/filemanager/panel.c         unselect_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3704'>panel</a>            3704 src/filemanager/panel.c         return panel_key (panel, parm);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3707'>panel</a>            3707 src/filemanager/panel.c         return panel_execute_cmd (panel, parm);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3714'>panel</a>            3714 src/filemanager/panel.c         panel_destroy (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3729'>panel</a>            3729 src/filemanager/panel.c mouse_toggle_mark (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3731'>panel</a>            3731 src/filemanager/panel.c     do_mark_file (panel, MARK_DONT_MOVE);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3732'>panel</a>            3732 src/filemanager/panel.c     mouse_marking = selection (panel)-&gt;f.marked;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3739'>panel</a>            3739 src/filemanager/panel.c mouse_set_mark (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3741'>panel</a>            3741 src/filemanager/panel.c     if (mouse_mark_panel == panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3743'>panel</a>            3743 src/filemanager/panel.c         if (mouse_marking &amp;&amp; !(selection (panel)-&gt;f.marked))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3744'>panel</a>            3744 src/filemanager/panel.c             do_mark_file (panel, MARK_DONT_MOVE);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3745'>panel</a>            3745 src/filemanager/panel.c         else if (!mouse_marking &amp;&amp; (selection (panel)-&gt;f.marked))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3746'>panel</a>            3746 src/filemanager/panel.c             do_mark_file (panel, MARK_DONT_MOVE);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3753'>panel</a>            3753 src/filemanager/panel.c mark_if_marking (WPanel * panel, const mouse_event_t * event)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3758'>panel</a>            3758 src/filemanager/panel.c             mouse_toggle_mark (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3760'>panel</a>            3760 src/filemanager/panel.c             mouse_set_mark (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3774'>panel</a>            3774 src/filemanager/panel.c mouse_sort_col (WPanel * panel, int x)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3781'>panel</a>            3781 src/filemanager/panel.c     for (i = 0, format = panel-&gt;format; format != NULL; format = format-&gt;next)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3810'>panel</a>            3810 src/filemanager/panel.c     if (panel-&gt;sort_field == col_sort_format)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3813'>panel</a>            3813 src/filemanager/panel.c         panel-&gt;sort_info.reverse = !panel-&gt;sort_info.reverse;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3818'>panel</a>            3818 src/filemanager/panel.c         panel-&gt;sort_info.reverse = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3820'>panel</a>            3820 src/filemanager/panel.c     panel_set_sort_order (panel, col_sort_format);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3828'>panel</a>            3828 src/filemanager/panel.c     WPanel *panel = PANEL (w);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3841'>panel</a>            3841 src/filemanager/panel.c                 directory_history_prev (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3844'>panel</a>            3844 src/filemanager/panel.c                 directory_history_next (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3847'>panel</a>            3847 src/filemanager/panel.c                 directory_history_list (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3856'>panel</a>            3856 src/filemanager/panel.c                 panel-&gt;dirty = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3864'>panel</a>            3864 src/filemanager/panel.c             mouse_sort_col (panel, event-&gt;x + 1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3876'>panel</a>            3876 src/filemanager/panel.c             last = panel-&gt;dir.len - 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3879'>panel</a>            3879 src/filemanager/panel.c             if (panel-&gt;top_file + y &gt; last)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3883'>panel</a>            3883 src/filemanager/panel.c                 my_index = panel-&gt;top_file + y;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3885'>panel</a>            3885 src/filemanager/panel.c                 if (panel-&gt;list_type == list_brief &amp;&amp; panel-&gt;list_cols &gt; 1)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3889'>panel</a>            3889 src/filemanager/panel.c                     width = (w-&gt;cols - 2) / panel-&gt;list_cols;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3890'>panel</a>            3890 src/filemanager/panel.c                     lines = panel_lines (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3898'>panel</a>            3898 src/filemanager/panel.c             if (my_index != panel-&gt;selected)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3900'>panel</a>            3900 src/filemanager/panel.c                 unselect_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3901'>panel</a>            3901 src/filemanager/panel.c                 panel-&gt;selected = my_index;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3902'>panel</a>            3902 src/filemanager/panel.c                 select_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3906'>panel</a>            3906 src/filemanager/panel.c             mark_if_marking (panel, event);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3919'>panel</a>            3919 src/filemanager/panel.c             lines = panel_lines (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3922'>panel</a>            3922 src/filemanager/panel.c                 do_enter (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3932'>panel</a>            3932 src/filemanager/panel.c             if (panels_options.mouse_move_pages &amp;&amp; panel-&gt;top_file &gt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3933'>panel</a>            3933 src/filemanager/panel.c                 prev_page (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3935'>panel</a>            3935 src/filemanager/panel.c                 move_up (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3943'>panel</a>            3943 src/filemanager/panel.c                 &amp;&amp; panel-&gt;top_file + panel_items (panel) &lt; panel-&gt;dir.len)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3944'>panel</a>            3944 src/filemanager/panel.c                 next_page (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3946'>panel</a>            3946 src/filemanager/panel.c                 move_down (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3954'>panel</a>            3954 src/filemanager/panel.c     if (panel-&gt;dirty)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3961'>panel</a>            3961 src/filemanager/panel.c reload_panelized (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3964'>panel</a>            3964 src/filemanager/panel.c     dir_list *list = &amp;panel-&gt;dir;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3967'>panel</a>            3967 src/filemanager/panel.c     (void) mc_chdir (panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3981'>panel</a>            3981 src/filemanager/panel.c             do_file_mark (panel, i, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3989'>panel</a>            3989 src/filemanager/panel.c                 do_file_mark (panel, i, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4001'>panel</a>            4001 src/filemanager/panel.c     if (panel != current_panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4008'>panel</a>            4008 src/filemanager/panel.c update_one_panel_widget (WPanel * panel, panel_update_flags_t flags, const char *current_file)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4015'>panel</a>            4015 src/filemanager/panel.c         panel-&gt;is_panelized = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4016'>panel</a>            4016 src/filemanager/panel.c         mc_setctl (panel-&gt;cwd_vpath, VFS_SETCTL_FLUSH, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4017'>panel</a>            4017 src/filemanager/panel.c         memset (&amp;(panel-&gt;dir_stat), 0, sizeof (panel-&gt;dir_stat));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4025'>panel</a>            4025 src/filemanager/panel.c         my_current_file = g_strdup (panel-&gt;dir.list[panel-&gt;selected].fname);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4029'>panel</a>            4029 src/filemanager/panel.c     if (panel-&gt;is_panelized)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4030'>panel</a>            4030 src/filemanager/panel.c         reload_panelized (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4032'>panel</a>            4032 src/filemanager/panel.c         panel_reload (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4034'>panel</a>            4034 src/filemanager/panel.c     try_to_select (panel, current_file);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4035'>panel</a>            4035 src/filemanager/panel.c     panel-&gt;dirty = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4048'>panel</a>            4048 src/filemanager/panel.c         WPanel *panel;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4050'>panel</a>            4050 src/filemanager/panel.c         panel = PANEL (get_panel_widget (which));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4051'>panel</a>            4051 src/filemanager/panel.c         if (panel-&gt;is_panelized)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4053'>panel</a>            4053 src/filemanager/panel.c         update_one_panel_widget (panel, flags, current_file);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4060'>panel</a>            4060 src/filemanager/panel.c do_select (WPanel * panel, int i)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4062'>panel</a>            4062 src/filemanager/panel.c     if (i != panel-&gt;selected)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4064'>panel</a>            4064 src/filemanager/panel.c         panel-&gt;dirty = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4065'>panel</a>            4065 src/filemanager/panel.c         panel-&gt;selected = i;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4066'>panel</a>            4066 src/filemanager/panel.c         panel-&gt;top_file = panel-&gt;selected - (WIDGET (panel)-&gt;lines - 2) / 2;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4067'>panel</a>            4067 src/filemanager/panel.c         if (panel-&gt;top_file &lt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4068'>panel</a>            4068 src/filemanager/panel.c             panel-&gt;top_file = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4075'>panel</a>            4075 src/filemanager/panel.c do_try_to_select (WPanel * panel, const char *name)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4082'>panel</a>            4082 src/filemanager/panel.c         do_select (panel, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4090'>panel</a>            4090 src/filemanager/panel.c     if (panel-&gt;is_panelized)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4096'>panel</a>            4096 src/filemanager/panel.c     for (i = 0; i &lt; panel-&gt;dir.len; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4098'>panel</a>            4098 src/filemanager/panel.c         if (strcmp (subdir, panel-&gt;dir.list[i].fname) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4100'>panel</a>            4100 src/filemanager/panel.c             do_select (panel, i);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4107'>panel</a>            4107 src/filemanager/panel.c     if (panel-&gt;selected &gt;= panel-&gt;dir.len)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4108'>panel</a>            4108 src/filemanager/panel.c         do_select (panel, panel-&gt;dir.len - 1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4210'>panel</a>            4210 src/filemanager/panel.c try_to_select (WPanel * panel, const char *name)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4212'>panel</a>            4212 src/filemanager/panel.c     do_try_to_select (panel, name);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4213'>panel</a>            4213 src/filemanager/panel.c     select_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4219'>panel</a>            4219 src/filemanager/panel.c panel_clean_dir (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4221'>panel</a>            4221 src/filemanager/panel.c     panel-&gt;top_file = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4222'>panel</a>            4222 src/filemanager/panel.c     panel-&gt;selected = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4223'>panel</a>            4223 src/filemanager/panel.c     panel-&gt;marked = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4224'>panel</a>            4224 src/filemanager/panel.c     panel-&gt;dirs_marked = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4225'>panel</a>            4225 src/filemanager/panel.c     panel-&gt;total = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4226'>panel</a>            4226 src/filemanager/panel.c     panel-&gt;searching = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4227'>panel</a>            4227 src/filemanager/panel.c     panel-&gt;is_panelized = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4228'>panel</a>            4228 src/filemanager/panel.c     panel-&gt;dirty = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4229'>panel</a>            4229 src/filemanager/panel.c     panel-&gt;content_shift = -1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4230'>panel</a>            4230 src/filemanager/panel.c     panel-&gt;max_shift = -1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4232'>panel</a>            4232 src/filemanager/panel.c     dir_list_clean (&amp;panel-&gt;dir);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4244'>panel</a>            4244 src/filemanager/panel.c panel_set_cwd (WPanel * panel, const vfs_path_t * vpath)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4246'>panel</a>            4246 src/filemanager/panel.c     if (vpath != panel-&gt;cwd_vpath)      /* check if new vpath is not the panel-&gt;cwd_vpath object */</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4248'>panel</a>            4248 src/filemanager/panel.c         vfs_path_free (panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4249'>panel</a>            4249 src/filemanager/panel.c         panel-&gt;cwd_vpath = vfs_path_clone (vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4262'>panel</a>            4262 src/filemanager/panel.c panel_set_lwd (WPanel * panel, const vfs_path_t * vpath)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4264'>panel</a>            4264 src/filemanager/panel.c     if (vpath != panel-&gt;lwd_vpath)      /* check if new vpath is not the panel-&gt;lwd_vpath object */</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4266'>panel</a>            4266 src/filemanager/panel.c         vfs_path_free (panel-&gt;lwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4267'>panel</a>            4267 src/filemanager/panel.c         panel-&gt;lwd_vpath = vfs_path_clone (vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4285'>panel</a>            4285 src/filemanager/panel.c     WPanel *panel;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4291'>panel</a>            4291 src/filemanager/panel.c     panel = g_new0 (WPanel, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4292'>panel</a>            4292 src/filemanager/panel.c     w = WIDGET (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4299'>panel</a>            4299 src/filemanager/panel.c         panel_set_cwd (panel, vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4304'>panel</a>            4304 src/filemanager/panel.c         panel-&gt;cwd_vpath = vfs_path_clone (vfs_get_raw_current_dir ());</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4307'>panel</a>            4307 src/filemanager/panel.c     panel_set_lwd (panel, vfs_get_raw_current_dir ());</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4309'>panel</a>            4309 src/filemanager/panel.c     panel-&gt;hist_name = g_strconcat ("Dir Hist ", panel_name, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4312'>panel</a>            4312 src/filemanager/panel.c     panel-&gt;dir.size = DIR_LIST_MIN_SIZE;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4313'>panel</a>            4313 src/filemanager/panel.c     panel-&gt;dir.list = g_new (file_entry_t, panel-&gt;dir.size);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4314'>panel</a>            4314 src/filemanager/panel.c     panel-&gt;dir.len = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4315'>panel</a>            4315 src/filemanager/panel.c     panel-&gt;active = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4316'>panel</a>            4316 src/filemanager/panel.c     panel-&gt;filter = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4317'>panel</a>            4317 src/filemanager/panel.c     panel-&gt;list_cols = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4318'>panel</a>            4318 src/filemanager/panel.c     panel-&gt;brief_cols = 2;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4319'>panel</a>            4319 src/filemanager/panel.c     panel-&gt;top_file = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4320'>panel</a>            4320 src/filemanager/panel.c     panel-&gt;selected = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4321'>panel</a>            4321 src/filemanager/panel.c     panel-&gt;marked = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4322'>panel</a>            4322 src/filemanager/panel.c     panel-&gt;total = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4323'>panel</a>            4323 src/filemanager/panel.c     panel-&gt;dirty = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4324'>panel</a>            4324 src/filemanager/panel.c     panel-&gt;searching = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4325'>panel</a>            4325 src/filemanager/panel.c     panel-&gt;dirs_marked = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4326'>panel</a>            4326 src/filemanager/panel.c     panel-&gt;is_panelized = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4327'>panel</a>            4327 src/filemanager/panel.c     panel-&gt;format = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4328'>panel</a>            4328 src/filemanager/panel.c     panel-&gt;status_format = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4329'>panel</a>            4329 src/filemanager/panel.c     panel-&gt;format_modified = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4330'>panel</a>            4330 src/filemanager/panel.c     panel-&gt;content_shift = -1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4331'>panel</a>            4331 src/filemanager/panel.c     panel-&gt;max_shift = -1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4333'>panel</a>            4333 src/filemanager/panel.c     panel-&gt;panel_name = g_strdup (panel_name);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4334'>panel</a>            4334 src/filemanager/panel.c     panel-&gt;user_format = g_strdup (DEFAULT_USER_FORMAT);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4337'>panel</a>            4337 src/filemanager/panel.c     panel-&gt;codepage = SELECT_CHARSET_NO_TRANSLATE;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4341'>panel</a>            4341 src/filemanager/panel.c         panel-&gt;user_status_format[i] = g_strdup (DEFAULT_USER_FORMAT);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4343'>panel</a>            4343 src/filemanager/panel.c     panel-&gt;search_buffer[0] = '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4344'>panel</a>            4344 src/filemanager/panel.c     panel-&gt;prev_search_buffer[0] = '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4345'>panel</a>            4345 src/filemanager/panel.c     panel-&gt;frame_size = frame_half;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4347'>panel</a>            4347 src/filemanager/panel.c     section = g_strconcat ("Temporal:", panel-&gt;panel_name, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4351'>panel</a>            4351 src/filemanager/panel.c         section = g_strdup (panel-&gt;panel_name);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4353'>panel</a>            4353 src/filemanager/panel.c     panel_load_setup (panel, section);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4357'>panel</a>            4357 src/filemanager/panel.c     err = set_panel_formats (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4359'>panel</a>            4359 src/filemanager/panel.c         set_panel_formats (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4365'>panel</a>            4365 src/filemanager/panel.c         path_element = vfs_path_get_by_index (panel-&gt;cwd_vpath, -1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4367'>panel</a>            4367 src/filemanager/panel.c             panel-&gt;codepage = get_codepage_index (path_element-&gt;encoding);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4371'>panel</a>            4371 src/filemanager/panel.c     if (mc_chdir (panel-&gt;cwd_vpath) != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4374'>panel</a>            4374 src/filemanager/panel.c         panel-&gt;codepage = SELECT_CHARSET_NO_TRANSLATE;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4377'>panel</a>            4377 src/filemanager/panel.c         vfs_path_free (panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4378'>panel</a>            4378 src/filemanager/panel.c         panel-&gt;cwd_vpath = vfs_path_clone (vfs_get_raw_current_dir ());</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4382'>panel</a>            4382 src/filemanager/panel.c     dir_list_load (&amp;panel-&gt;dir, panel-&gt;cwd_vpath, panel-&gt;sort_field-&gt;sort_routine,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4383'>panel</a>            4383 src/filemanager/panel.c                    &amp;panel-&gt;sort_info, panel-&gt;filter);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4396'>panel</a>            4396 src/filemanager/panel.c     return panel;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4402'>panel</a>            4402 src/filemanager/panel.c panel_reload (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4407'>panel</a>            4407 src/filemanager/panel.c     if (panels_options.fast_reload &amp;&amp; stat (vfs_path_as_str (panel-&gt;cwd_vpath), &amp;current_stat) == 0</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4408'>panel</a>            4408 src/filemanager/panel.c         &amp;&amp; current_stat.st_ctime == panel-&gt;dir_stat.st_ctime</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4409'>panel</a>            4409 src/filemanager/panel.c         &amp;&amp; current_stat.st_mtime == panel-&gt;dir_stat.st_mtime)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4412'>panel</a>            4412 src/filemanager/panel.c     cwd_vpath = panel_recursive_cd_to_parent (panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4413'>panel</a>            4413 src/filemanager/panel.c     vfs_path_free (panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4417'>panel</a>            4417 src/filemanager/panel.c         panel-&gt;cwd_vpath = vfs_path_from_str (PATH_SEP_STR);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4418'>panel</a>            4418 src/filemanager/panel.c         panel_clean_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4419'>panel</a>            4419 src/filemanager/panel.c         dir_list_init (&amp;panel-&gt;dir);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4423'>panel</a>            4423 src/filemanager/panel.c     panel-&gt;cwd_vpath = cwd_vpath;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4424'>panel</a>            4424 src/filemanager/panel.c     memset (&amp;(panel-&gt;dir_stat), 0, sizeof (panel-&gt;dir_stat));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4425'>panel</a>            4425 src/filemanager/panel.c     show_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4427'>panel</a>            4427 src/filemanager/panel.c     dir_list_reload (&amp;panel-&gt;dir, panel-&gt;cwd_vpath, panel-&gt;sort_field-&gt;sort_routine,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4428'>panel</a>            4428 src/filemanager/panel.c                      &amp;panel-&gt;sort_info, panel-&gt;filter);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4430'>panel</a>            4430 src/filemanager/panel.c     panel-&gt;dirty = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4431'>panel</a>            4431 src/filemanager/panel.c     if (panel-&gt;selected &gt;= panel-&gt;dir.len)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4432'>panel</a>            4432 src/filemanager/panel.c         do_select (panel, panel-&gt;dir.len - 1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4434'>panel</a>            4434 src/filemanager/panel.c     recalculate_panel_summary (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4541'>panel</a>            4541 src/filemanager/panel.c select_item (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4547'>panel</a>            4547 src/filemanager/panel.c     if (panel-&gt;selected &lt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4548'>panel</a>            4548 src/filemanager/panel.c         panel-&gt;selected = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4550'>panel</a>            4550 src/filemanager/panel.c     if (panel-&gt;selected &gt; panel-&gt;dir.len - 1)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4551'>panel</a>            4551 src/filemanager/panel.c         panel-&gt;selected = panel-&gt;dir.len - 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4553'>panel</a>            4553 src/filemanager/panel.c     adjust_top_file (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4555'>panel</a>            4555 src/filemanager/panel.c     panel-&gt;dirty = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4563'>panel</a>            4563 src/filemanager/panel.c unmark_files (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4567'>panel</a>            4567 src/filemanager/panel.c     if (!panel-&gt;marked)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4570'>panel</a>            4570 src/filemanager/panel.c     for (i = 0; i &lt; panel-&gt;dir.len; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4571'>panel</a>            4571 src/filemanager/panel.c         file_mark (panel, i, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4573'>panel</a>            4573 src/filemanager/panel.c     panel-&gt;dirs_marked = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4574'>panel</a>            4574 src/filemanager/panel.c     panel-&gt;marked = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4575'>panel</a>            4575 src/filemanager/panel.c     panel-&gt;total = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4583'>panel</a>            4583 src/filemanager/panel.c recalculate_panel_summary (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4587'>panel</a>            4587 src/filemanager/panel.c     panel-&gt;marked = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4588'>panel</a>            4588 src/filemanager/panel.c     panel-&gt;dirs_marked = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4589'>panel</a>            4589 src/filemanager/panel.c     panel-&gt;total = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4591'>panel</a>            4591 src/filemanager/panel.c     for (i = 0; i &lt; panel-&gt;dir.len; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4592'>panel</a>            4592 src/filemanager/panel.c         if (panel-&gt;dir.list[i].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4597'>panel</a>            4597 src/filemanager/panel.c             panel-&gt;dir.list[i].f.marked = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4598'>panel</a>            4598 src/filemanager/panel.c             do_file_mark (panel, i, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4606'>panel</a>            4606 src/filemanager/panel.c do_file_mark (WPanel * panel, int idx, int mark)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4608'>panel</a>            4608 src/filemanager/panel.c     if (panel-&gt;dir.list[idx].f.marked == mark)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4612'>panel</a>            4612 src/filemanager/panel.c     if (DIR_IS_DOTDOT (panel-&gt;dir.list[idx].fname))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4615'>panel</a>            4615 src/filemanager/panel.c     file_mark (panel, idx, mark);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4616'>panel</a>            4616 src/filemanager/panel.c     if (panel-&gt;dir.list[idx].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4618'>panel</a>            4618 src/filemanager/panel.c         panel-&gt;marked++;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4620'>panel</a>            4620 src/filemanager/panel.c         if (S_ISDIR (panel-&gt;dir.list[idx].st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4622'>panel</a>            4622 src/filemanager/panel.c             if (panel-&gt;dir.list[idx].f.dir_size_computed)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4623'>panel</a>            4623 src/filemanager/panel.c                 panel-&gt;total += (uintmax_t) panel-&gt;dir.list[idx].st.st_size;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4624'>panel</a>            4624 src/filemanager/panel.c             panel-&gt;dirs_marked++;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4627'>panel</a>            4627 src/filemanager/panel.c             panel-&gt;total += (uintmax_t) panel-&gt;dir.list[idx].st.st_size;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4629'>panel</a>            4629 src/filemanager/panel.c         set_colors (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4633'>panel</a>            4633 src/filemanager/panel.c         if (S_ISDIR (panel-&gt;dir.list[idx].st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4635'>panel</a>            4635 src/filemanager/panel.c             if (panel-&gt;dir.list[idx].f.dir_size_computed)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4636'>panel</a>            4636 src/filemanager/panel.c                 panel-&gt;total -= (uintmax_t) panel-&gt;dir.list[idx].st.st_size;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4637'>panel</a>            4637 src/filemanager/panel.c             panel-&gt;dirs_marked--;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4640'>panel</a>            4640 src/filemanager/panel.c             panel-&gt;total -= (uintmax_t) panel-&gt;dir.list[idx].st.st_size;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4642'>panel</a>            4642 src/filemanager/panel.c         panel-&gt;marked--;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4652'>panel</a>            4652 src/filemanager/panel.c do_panel_cd (WPanel * panel, const vfs_path_t * new_dir_vpath, enum cd_enum cd_type)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4656'>panel</a>            4656 src/filemanager/panel.c     r = _do_panel_cd (panel, new_dir_vpath, cd_type);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4658'>panel</a>            4658 src/filemanager/panel.c         directory_history_add (panel, panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4665'>panel</a>            4665 src/filemanager/panel.c file_mark (WPanel * panel, int lc_index, int val)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4667'>panel</a>            4667 src/filemanager/panel.c     if (panel-&gt;dir.list[lc_index].f.marked != val)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4669'>panel</a>            4669 src/filemanager/panel.c         panel-&gt;dir.list[lc_index].f.marked = val;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4670'>panel</a>            4670 src/filemanager/panel.c         panel-&gt;dirty = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4677'>panel</a>            4677 src/filemanager/panel.c panel_re_sort (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4682'>panel</a>            4682 src/filemanager/panel.c     if (panel == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4685'>panel</a>            4685 src/filemanager/panel.c     filename = g_strdup (selection (panel)-&gt;fname);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4686'>panel</a>            4686 src/filemanager/panel.c     unselect_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4687'>panel</a>            4687 src/filemanager/panel.c     dir_list_sort (&amp;panel-&gt;dir, panel-&gt;sort_field-&gt;sort_routine, &amp;panel-&gt;sort_info);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4688'>panel</a>            4688 src/filemanager/panel.c     panel-&gt;selected = -1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4690'>panel</a>            4690 src/filemanager/panel.c     for (i = panel-&gt;dir.len; i != 0; i--)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4691'>panel</a>            4691 src/filemanager/panel.c         if (strcmp (panel-&gt;dir.list[i - 1].fname, filename) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4693'>panel</a>            4693 src/filemanager/panel.c             panel-&gt;selected = i - 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4698'>panel</a>            4698 src/filemanager/panel.c     panel-&gt;top_file = panel-&gt;selected - panel_items (panel) / 2;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4699'>panel</a>            4699 src/filemanager/panel.c     select_item (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4700'>panel</a>            4700 src/filemanager/panel.c     panel-&gt;dirty = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4706'>panel</a>            4706 src/filemanager/panel.c panel_set_sort_order (WPanel * panel, const panel_field_t * sort_order)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4711'>panel</a>            4711 src/filemanager/panel.c     panel-&gt;sort_field = sort_order;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4718'>panel</a>            4718 src/filemanager/panel.c         current_file = g_strdup (panel-&gt;dir.list[panel-&gt;selected].fname);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4719'>panel</a>            4719 src/filemanager/panel.c         panel_reload (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4720'>panel</a>            4720 src/filemanager/panel.c         try_to_select (panel, current_file);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4723'>panel</a>            4723 src/filemanager/panel.c     panel_re_sort (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4736'>panel</a>            4736 src/filemanager/panel.c panel_change_encoding (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4742'>panel</a>            4742 src/filemanager/panel.c     r = select_charset (-1, -1, panel-&gt;codepage, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4747'>panel</a>            4747 src/filemanager/panel.c     panel-&gt;codepage = r;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4749'>panel</a>            4749 src/filemanager/panel.c     if (panel-&gt;codepage == SELECT_CHARSET_NO_TRANSLATE)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4755'>panel</a>            4755 src/filemanager/panel.c         cd_path_vpath = remove_encoding_from_path (panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4756'>panel</a>            4756 src/filemanager/panel.c         do_panel_cd (panel, cd_path_vpath, cd_parse_command);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4757'>panel</a>            4757 src/filemanager/panel.c         show_dir (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4762'>panel</a>            4762 src/filemanager/panel.c     errmsg = init_translation_table (panel-&gt;codepage, mc_global.display_codepage);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4770'>panel</a>            4770 src/filemanager/panel.c     encoding = get_codepage_id (panel-&gt;codepage);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4773'>panel</a>            4773 src/filemanager/panel.c         vfs_path_change_encoding (panel-&gt;cwd_vpath, encoding);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4775'>panel</a>            4775 src/filemanager/panel.c         if (!do_panel_cd (panel, panel-&gt;cwd_vpath, cd_parse_command))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4777'>panel</a>            4777 src/filemanager/panel.c                      vfs_path_as_str (panel-&gt;cwd_vpath));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4855'>panel</a>            4855 src/filemanager/panel.c     WPanel *panel;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4864'>panel</a>            4864 src/filemanager/panel.c         panel = PANEL (get_panel_widget (get_current_index ()));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4866'>panel</a>            4866 src/filemanager/panel.c         panel = PANEL (get_panel_widget (get_other_index ()));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4868'>panel</a>            4868 src/filemanager/panel.c     if (!panel-&gt;is_panelized)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4869'>panel</a>            4869 src/filemanager/panel.c         (void) mc_chdir (panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L156'>panel</a>             156 src/filemanager/panel.h void panel_clean_dir (WPanel * panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L158'>panel</a>             158 src/filemanager/panel.h void panel_reload (WPanel * panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L159'>panel</a>             159 src/filemanager/panel.h void panel_set_sort_order (WPanel * panel, const panel_field_t * sort_order);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L160'>panel</a>             160 src/filemanager/panel.h void panel_re_sort (WPanel * panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L163'>panel</a>             163 src/filemanager/panel.h void panel_change_encoding (WPanel * panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L171'>panel</a>             171 src/filemanager/panel.h void try_to_select (WPanel * panel, const char *name);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L173'>panel</a>             173 src/filemanager/panel.h void unmark_files (WPanel * panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L174'>panel</a>             174 src/filemanager/panel.h void select_item (WPanel * panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L176'>panel</a>             176 src/filemanager/panel.h void recalculate_panel_summary (WPanel * panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L177'>panel</a>             177 src/filemanager/panel.h void file_mark (WPanel * panel, int idx, int val);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L178'>panel</a>             178 src/filemanager/panel.h void do_file_mark (WPanel * panel, int idx, int val);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L180'>panel</a>             180 src/filemanager/panel.h gboolean do_panel_cd (WPanel * panel, const vfs_path_t * new_dir_vpath, enum cd_enum cd_type);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L189'>panel</a>             189 src/filemanager/panel.h void panel_set_cwd (WPanel * panel, const vfs_path_t * vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L190'>panel</a>             190 src/filemanager/panel.h void panel_set_lwd (WPanel * panel, const vfs_path_t * vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L386'>panel</a>             386 src/filemanager/panelize.c do_panelize_cd (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L392'>panel</a>             392 src/filemanager/panelize.c     dir_list_clean (&amp;panel-&gt;dir);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L398'>panel</a>             398 src/filemanager/panelize.c     else if (panelized_panel.list.len &gt; panel-&gt;dir.size)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L399'>panel</a>             399 src/filemanager/panelize.c         dir_list_grow (&amp;panel-&gt;dir, panelized_panel.list.len - panel-&gt;dir.size);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L401'>panel</a>             401 src/filemanager/panelize.c     list = &amp;panel-&gt;dir;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L403'>panel</a>             403 src/filemanager/panelize.c     panel-&gt;is_panelized = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L405'>panel</a>             405 src/filemanager/panelize.c     panelized_same = vfs_path_equal (panelized_panel.root_vpath, panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L436'>panel</a>             436 src/filemanager/panelize.c     try_to_select (panel, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L457'>panel</a>             457 src/filemanager/panelize.c panelize_save_panel (WPanel * panel)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L460'>panel</a>             460 src/filemanager/panelize.c     dir_list *list = &amp;panel-&gt;dir;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L466'>panel</a>             466 src/filemanager/panelize.c     if (panel-&gt;dir.len == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L469'>panel</a>             469 src/filemanager/panelize.c     if (panel-&gt;dir.len &gt; panelized_panel.list.size)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L470'>panel</a>             470 src/filemanager/panelize.c         dir_list_grow (&amp;panelized_panel.list, panel-&gt;dir.len - panelized_panel.list.size);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L471'>panel</a>             471 src/filemanager/panelize.c     panelized_panel.list.len = panel-&gt;dir.len;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L473'>panel</a>             473 src/filemanager/panelize.c     for (i = 0; i &lt; panel-&gt;dir.len; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.h.html#L23'>panel</a>              23 src/filemanager/panelize.h void panelize_save_panel (WPanel * panel);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L165'>panel</a>             165 src/filemanager/usermenu.c test_type (WPanel * panel, char *arg)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L168'>panel</a>             168 src/filemanager/usermenu.c     mode_t st_mode = panel-&gt;dir.list[panel-&gt;selected].st.st_mode;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L202'>panel</a>             202 src/filemanager/usermenu.c             result |= panel-&gt;marked != 0 ? 1 : 0;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L226'>panel</a>             226 src/filemanager/usermenu.c         WPanel *panel = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L232'>panel</a>             232 src/filemanager/usermenu.c             panel = current_panel;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L234'>panel</a>             234 src/filemanager/usermenu.c             panel = other_panel;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L257'>panel</a>             257 src/filemanager/usermenu.c                 *condition = panel != NULL &amp;&amp;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L258'>panel</a>             258 src/filemanager/usermenu.c                     mc_search (arg, DEFAULT_CHARSET, panel-&gt;dir.list[panel-&gt;selected].fname,</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L278'>panel</a>             278 src/filemanager/usermenu.c             *condition = panel != NULL</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L279'>panel</a>             279 src/filemanager/usermenu.c                 &amp;&amp; mc_search (arg, DEFAULT_CHARSET, vfs_path_as_str (panel-&gt;cwd_vpath),</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L284'>panel</a>             284 src/filemanager/usermenu.c             *condition = panel != NULL &amp;&amp; test_type (panel, arg);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L734'>panel</a>             734 src/filemanager/usermenu.c     WPanel *panel = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L751'>panel</a>             751 src/filemanager/usermenu.c             panel = current_panel;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L756'>panel</a>             756 src/filemanager/usermenu.c             panel = other_panel;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L758'>panel</a>             758 src/filemanager/usermenu.c         fname = panel-&gt;dir.list[panel-&gt;selected].fname;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L793'>panel</a>             793 src/filemanager/usermenu.c             if (panel != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L794'>panel</a>             794 src/filemanager/usermenu.c                 cwd = vfs_path_as_str (panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L863'>panel</a>             863 src/filemanager/usermenu.c         if (panel == NULL || panel-&gt;marked == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L877'>panel</a>             877 src/filemanager/usermenu.c             if (panel == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L885'>panel</a>             885 src/filemanager/usermenu.c             for (i = 0; i &lt; panel-&gt;dir.len; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L886'>panel</a>             886 src/filemanager/usermenu.c                 if (panel-&gt;dir.list[i].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L890'>panel</a>             890 src/filemanager/usermenu.c                     tmp = quote_func (panel-&gt;dir.list[i].fname, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L896'>panel</a>             896 src/filemanager/usermenu.c                         do_file_mark (panel, i, 0);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1424'>panel</a>            1424 src/setup.c    panel_load_setup (WPanel * panel, const char *section)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1429'>panel</a>            1429 src/setup.c        panel-&gt;sort_info.reverse = mc_config_get_int (mc_global.panels_config, section, "reverse", 0);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1430'>panel</a>            1430 src/setup.c        panel-&gt;sort_info.case_sensitive =</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1433'>panel</a>            1433 src/setup.c        panel-&gt;sort_info.exec_first =</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1438'>panel</a>            1438 src/setup.c        panel-&gt;sort_field = panel_get_field_by_id (buffer);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1439'>panel</a>            1439 src/setup.c        if (panel-&gt;sort_field == NULL)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1440'>panel</a>            1440 src/setup.c            panel-&gt;sort_field = panel_get_field_by_id ("name");</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1446'>panel</a>            1446 src/setup.c        panel-&gt;list_type = list_full;</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1450'>panel</a>            1450 src/setup.c                panel-&gt;list_type = list_types[i].list_type;</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1455'>panel</a>            1455 src/setup.c        panel-&gt;brief_cols = mc_config_get_int (mc_global.panels_config, section, "brief_cols", 2);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1458'>panel</a>            1458 src/setup.c        g_free (panel-&gt;user_format);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1459'>panel</a>            1459 src/setup.c        panel-&gt;user_format =</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1464'>panel</a>            1464 src/setup.c            g_free (panel-&gt;user_status_format[i]);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1466'>panel</a>            1466 src/setup.c            panel-&gt;user_status_format[i] =</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1470'>panel</a>            1470 src/setup.c        panel-&gt;user_mini_status =</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1477'>panel</a>            1477 src/setup.c    panel_save_setup (WPanel * panel, const char *section)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1482'>panel</a>            1482 src/setup.c        mc_config_set_int (mc_global.panels_config, section, "reverse", panel-&gt;sort_info.reverse);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1484'>panel</a>            1484 src/setup.c                           panel-&gt;sort_info.case_sensitive);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1485'>panel</a>            1485 src/setup.c        mc_config_set_int (mc_global.panels_config, section, "exec_first", panel-&gt;sort_info.exec_first);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1487'>panel</a>            1487 src/setup.c        mc_config_set_string (mc_global.panels_config, section, "sort_order", panel-&gt;sort_field-&gt;id);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1490'>panel</a>            1490 src/setup.c            if (list_types[i].list_type == (int) panel-&gt;list_type)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1496'>panel</a>            1496 src/setup.c        mc_config_set_int (mc_global.panels_config, section, "brief_cols", panel-&gt;brief_cols);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1498'>panel</a>            1498 src/setup.c        mc_config_set_string (mc_global.panels_config, section, "user_format", panel-&gt;user_format);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1504'>panel</a>            1504 src/setup.c                                  panel-&gt;user_status_format[i]);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1508'>panel</a>            1508 src/setup.c                           panel-&gt;user_mini_status);</span>
+<span class='curline'><a href='../S/src--setup.h.html#L158'>panel</a>             158 src/setup.h    void panel_load_setup (WPanel * panel, const char *section);</span>
+<span class='curline'><a href='../S/src--setup.h.html#L159'>panel</a>             159 src/setup.h    void panel_save_setup (WPanel * panel, const char *section);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L191'>panel</a>             191 src/viewer/actions_cmd.c     WPanel *panel;</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L205'>panel</a>             205 src/viewer/actions_cmd.c         panel = current_panel;</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L207'>panel</a>             207 src/viewer/actions_cmd.c         panel = other_panel;</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L213'>panel</a>             213 src/viewer/actions_cmd.c     mcview_load (view, 0, panel-&gt;dir.list[panel-&gt;selected].fname, 0, 0, 0);</span>
+</pre>
+</body>
+</html>

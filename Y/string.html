@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>string</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L258'>string</a>            258 lib/search/regex.c                                     const gchar * string,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L268'>string</a>            268 lib/search/regex.c         || g_utf8_validate (string, string_len, NULL))</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L270'>string</a>            270 lib/search/regex.c         return g_regex_match_full (regex, string, string_len, start_position, match_options,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L276'>string</a>            276 lib/search/regex.c         string_len = strlen (string);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L281'>string</a>            281 lib/search/regex.c     memcpy (string_safe, string, string_len);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L110'>string</a>            110 lib/strutil.h        /*I*/ estr_t (*vfs_convert_to) (GIConv coder, const char *string, int size, GString * buffer);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L95'>string</a>             95 lib/strutil/strutil.c _str_convert (GIConv coder, const char *string, int size, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L107'>string</a>            107 lib/strutil/strutil.c     if (string == NULL || buffer == NULL)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L117'>string</a>            117 lib/strutil/strutil.c         size = strlen (string);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L120'>string</a>            120 lib/strutil/strutil.c         left = strlen (string);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L133'>string</a>            133 lib/strutil/strutil.c         tmp_buff = g_convert_with_iconv ((const gchar *) string,</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L146'>string</a>            146 lib/strutil/strutil.c                 tmp_buff = g_strnfill (strlen (string), '?');</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L155'>string</a>            155 lib/strutil/strutil.c                     tmp_buff = g_convert_with_iconv ((const gchar *) string,</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L167'>string</a>            167 lib/strutil/strutil.c                 string += bytes_read + 1;</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L170'>string</a>            170 lib/strutil/strutil.c                 g_string_append_c (buffer, *(string - 1));</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L197'>string</a>            197 lib/strutil/strutil.c             g_string_append (buffer, string);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L203'>string</a>            203 lib/strutil/strutil.c             g_string_append (buffer, string);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L210'>string</a>            210 lib/strutil/strutil.c             string += bytes_read;</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L281'>string</a>            281 lib/strutil/strutil.c str_convert (GIConv coder, const char *string, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L283'>string</a>            283 lib/strutil/strutil.c     return _str_convert (coder, string, -1, buffer);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L289'>string</a>            289 lib/strutil/strutil.c str_nconvert (GIConv coder, const char *string, int size, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L291'>string</a>            291 lib/strutil/strutil.c     return _str_convert (coder, string, size, buffer);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L305'>string</a>            305 lib/strutil/strutil.c str_vfs_convert_from (GIConv coder, const char *string, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L310'>string</a>            310 lib/strutil/strutil.c         g_string_append (buffer, string != NULL ? string : "");</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L312'>string</a>            312 lib/strutil/strutil.c         result = _str_convert (coder, string, -1, buffer);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L320'>string</a>            320 lib/strutil/strutil.c str_vfs_convert_to (GIConv coder, const char *string, int size, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L322'>string</a>            322 lib/strutil/strutil.c     return used_class.vfs_convert_to (coder, string, size, buffer);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L273'>string</a>            273 lib/strutil/strutil8bit.c str_8bit_vfs_convert_to (GIConv coder, const char *string, int size, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L278'>string</a>            278 lib/strutil/strutil8bit.c         g_string_append_len (buffer, string, size);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L280'>string</a>            280 lib/strutil/strutil8bit.c         result = str_nconvert (coder, string, size, buffer);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L225'>string</a>            225 lib/strutil/strutilascii.c str_ascii_vfs_convert_to (GIConv coder, const char *string, int size, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L228'>string</a>            228 lib/strutil/strutilascii.c     g_string_append_len (buffer, string, size);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L398'>string</a>            398 lib/strutil/strutilutf8.c str_utf8_questmark_sustb (char **string, size_t * left, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L402'>string</a>            402 lib/strutil/strutilutf8.c     next = g_utf8_next_char (*string);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L403'>string</a>            403 lib/strutil/strutilutf8.c     (*left) -= next - (*string);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L404'>string</a>            404 lib/strutil/strutilutf8.c     (*string) = next;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L423'>string</a>            423 lib/strutil/strutilutf8.c str_utf8_vfs_convert_to (GIConv coder, const char *string, int size, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L428'>string</a>            428 lib/strutil/strutilutf8.c         g_string_append_len (buffer, string, size);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L430'>string</a>            430 lib/strutil/strutilutf8.c         result = str_nconvert (coder, string, size, buffer);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L98'>string</a>             98 lib/utilunix.c     char *string;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L133'>string</a>            133 lib/utilunix.c             return cache[i].string;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L142'>string</a>            142 lib/utilunix.c     g_free (cache[*last].string);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L143'>string</a>            143 lib/utilunix.c     cache[*last].string = g_strdup (text);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L731'>string</a>            731 lib/widget/input_complete.c     char *string;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L736'>string</a>            736 lib/widget/input_complete.c     while ((string = (*entry_function) (text, matches, flags)) != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L743'>string</a>            743 lib/widget/input_complete.c         match_list[++matches] = string;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L659'>string</a>            659 lib/widget/listbox.c listbox_get_current (WListbox * l, char **string, void **extra)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L669'>string</a>            669 lib/widget/listbox.c     if (string != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L670'>string</a>            670 lib/widget/listbox.c         *string = ok ? e-&gt;text : NULL;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L71'>string</a>             71 lib/widget/listbox.h void listbox_get_current (WListbox * l, char **string, void **extra);</span>
+</pre>
+</body>
+</html>

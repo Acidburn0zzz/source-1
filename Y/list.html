@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>list</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--charsets.c.html#L99'>list</a>               99 lib/charsets.c load_codepages_list_from_file (GPtrArray ** list, const char *fname)</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L136'>list</a>              136 lib/charsets.c             if (*list == NULL)</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L138'>list</a>              138 lib/charsets.c                 *list = g_ptr_array_sized_new (16);</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L139'>list</a>              139 lib/charsets.c                 g_ptr_array_add (*list, new_codepage_desc (id, p));</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L147'>list</a>              147 lib/charsets.c                 for (i = 0; i &lt; (*list)-&gt;len; i++)</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L151'>list</a>              151 lib/charsets.c                     desc = (codepage_desc *) g_ptr_array_index (*list, i);</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L163'>list</a>              163 lib/charsets.c                 if (i == (*list)-&gt;len)</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L164'>list</a>              164 lib/charsets.c                     g_ptr_array_add (*list, new_codepage_desc (id, p));</span>
+<span class='curline'><a href='../S/lib--glibcompat.c.html#L65'>list</a>               65 lib/glibcompat.c g_slist_free_full (GSList * list, GDestroyNotify free_func)</span>
+<span class='curline'><a href='../S/lib--glibcompat.c.html#L67'>list</a>               67 lib/glibcompat.c     g_slist_foreach (list, (GFunc) free_func, NULL);</span>
+<span class='curline'><a href='../S/lib--glibcompat.c.html#L68'>list</a>               68 lib/glibcompat.c     g_slist_free (list);</span>
+<span class='curline'><a href='../S/lib--glibcompat.c.html#L84'>list</a>               84 lib/glibcompat.c g_list_free_full (GList * list, GDestroyNotify free_func)</span>
+<span class='curline'><a href='../S/lib--glibcompat.c.html#L86'>list</a>               86 lib/glibcompat.c     g_list_foreach (list, (GFunc) free_func, NULL);</span>
+<span class='curline'><a href='../S/lib--glibcompat.c.html#L87'>list</a>               87 lib/glibcompat.c     g_list_free (list);</span>
+<span class='curline'><a href='../S/lib--glibcompat.h.html#L15'>list</a>               15 lib/glibcompat.h void g_slist_free_full (GSList * list, GDestroyNotify free_func);</span>
+<span class='curline'><a href='../S/lib--glibcompat.h.html#L16'>list</a>               16 lib/glibcompat.h void g_list_free_full (GList * list, GDestroyNotify free_func);</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L50'>list</a>               50 lib/skin/ini-file.c mc_skin_get_list_from_dir (const gchar * base_dir, GPtrArray * list)</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L75'>list</a>               75 lib/skin/ini-file.c             for (i = 0; i &lt; list-&gt;len; i++)</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L76'>list</a>               76 lib/skin/ini-file.c                 if (strcmp (sname, g_ptr_array_index (list, i)) == 0)</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L79'>list</a>               79 lib/skin/ini-file.c             if (i &lt; list-&gt;len)</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L82'>list</a>               82 lib/skin/ini-file.c                 g_ptr_array_add (list, sname);</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L134'>list</a>              134 lib/skin/ini-file.c     GPtrArray *list;</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L136'>list</a>              136 lib/skin/ini-file.c     list = g_ptr_array_new ();</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L137'>list</a>              137 lib/skin/ini-file.c     mc_skin_get_list_from_dir (mc_config_get_data_path (), list);</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L138'>list</a>              138 lib/skin/ini-file.c     mc_skin_get_list_from_dir (mc_global.sysconfig_dir, list);</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L139'>list</a>              139 lib/skin/ini-file.c     mc_skin_get_list_from_dir (mc_global.share_data_dir, list);</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L140'>list</a>              140 lib/skin/ini-file.c     g_ptr_array_sort (list, (GCompareFunc) string_array_comparator);</span>
+<span class='curline'><a href='../S/lib--skin--ini-file.c.html#L142'>list</a>              142 lib/skin/ini-file.c     return list;</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1076'>list</a>             1076 lib/util.c     list_append_unique (GList * list, char *text)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1085'>list</a>             1085 lib/util.c         list = g_list_append (list, text);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1086'>list</a>             1086 lib/util.c         list = g_list_last (list);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1087'>list</a>             1087 lib/util.c         lc_link = g_list_previous (list);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1099'>list</a>             1099 lib/util.c                 tmp = g_list_remove_link (list, lc_link);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1106'>list</a>             1106 lib/util.c         return list;</span>
+<span class='curline'><a href='../S/lib--util.h.html#L225'>list</a>              225 lib/util.h     GList *list_append_unique (GList * list, char *text);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L247'>list</a>              247 lib/widget/dialog-switch.c             title = dlg-&gt;get_title (dlg, WIDGET (listbox-&gt;list)-&gt;cols - 2);</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L251'>list</a>              251 lib/widget/dialog-switch.c         listbox_add_item (listbox-&gt;list, LISTBOX_APPEND_BEFORE, get_hotkey (i++), title, NULL,</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L257'>list</a>              257 lib/widget/dialog-switch.c     listbox_select_entry (listbox-&gt;list, dlg_num - 1 - g_list_position (mc_dialogs, mc_current));</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L75'>list</a>               75 lib/widget/input.c     (in-&gt;history.list != NULL &amp;&amp; WIDGET (in)-&gt;cols &gt; HISTORY_BUTTON_WIDTH * 2 + 1 \</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L178'>list</a>              178 lib/widget/input.c     len = get_history_length (in-&gt;history.list);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L180'>list</a>              180 lib/widget/input.c     r = history_show (&amp;in-&gt;history.list, WIDGET (in),</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L181'>list</a>              181 lib/widget/input.c                       g_list_position (in-&gt;history.list, in-&gt;history.list));</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L189'>list</a>              189 lib/widget/input.c     if (len != get_history_length (in-&gt;history.list))</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L260'>list</a>              260 lib/widget/input.c     if (in-&gt;history.list == NULL || in-&gt;history.list-&gt;data == NULL</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L261'>list</a>              261 lib/widget/input.c         || strcmp (in-&gt;history.list-&gt;data, t) != 0 || in-&gt;history.changed)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L263'>list</a>              263 lib/widget/input.c         in-&gt;history.list = list_append_unique (in-&gt;history.list, t);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L264'>list</a>              264 lib/widget/input.c         in-&gt;history.current = in-&gt;history.list;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L620'>list</a>              620 lib/widget/input.c     if (in-&gt;history.list == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L650'>list</a>              650 lib/widget/input.c     if (in-&gt;history.list == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L657'>list</a>              657 lib/widget/input.c         in-&gt;history.current = in-&gt;history.list;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L844'>list</a>              844 lib/widget/input.c     in-&gt;history.list = history_load (ev-&gt;cfg, in-&gt;history.name);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L845'>list</a>              845 lib/widget/input.c     in-&gt;history.current = in-&gt;history.list;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L851'>list</a>              851 lib/widget/input.c         if (in-&gt;history.list != NULL &amp;&amp; in-&gt;history.list-&gt;data != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L852'>list</a>              852 lib/widget/input.c             def_text = (const char *) in-&gt;history.list-&gt;data;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L878'>list</a>              878 lib/widget/input.c             history_save (ev-&gt;cfg, in-&gt;history.name, in-&gt;history.list);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L899'>list</a>              899 lib/widget/input.c     if (in-&gt;history.list != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L902'>list</a>              902 lib/widget/input.c         in-&gt;history.list = g_list_first (in-&gt;history.list);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L903'>list</a>              903 lib/widget/input.c         g_list_free_full (in-&gt;history.list, g_free);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1021'>list</a>             1021 lib/widget/input.c     in-&gt;history.list = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L69'>list</a>               69 lib/widget/input.h         GList *list;            /* the history */</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L111'>list</a>              111 lib/widget/listbox-window.c     listbox-&gt;list = listbox_new (2, 2, lines, cols, FALSE, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L112'>list</a>              112 lib/widget/listbox-window.c     add_widget (listbox-&gt;dlg, listbox-&gt;list);</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L134'>list</a>              134 lib/widget/listbox-window.c         val = l-&gt;list-&gt;pos;</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.h.html#L11'>list</a>               11 lib/widget/listbox-window.h     listbox_add_item (l-&gt;list, LISTBOX_APPEND_AT_END, h, t, d, f)</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.h.html#L20'>list</a>               20 lib/widget/listbox-window.h     WListbox *list;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L55'>list</a>               55 lib/widget/listbox.c #define LISTBOX_LAST(l) (g_queue_is_empty ((l)-&gt;list) ? 0 : (int) g_queue_get_length ((l)-&gt;list) - 1)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L105'>list</a>              105 lib/widget/listbox.c     length = g_queue_get_length (l-&gt;list);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L115'>list</a>              115 lib/widget/listbox.c     if (!g_queue_is_empty (l-&gt;list))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L153'>list</a>              153 lib/widget/listbox.c     if (l-&gt;list != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L155'>list</a>              155 lib/widget/listbox.c         length = g_queue_get_length (l-&gt;list);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L156'>list</a>              156 lib/widget/listbox.c         le = g_queue_peek_nth_link (l-&gt;list, (guint) l-&gt;top);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L177'>list</a>              177 lib/widget/listbox.c         if (l-&gt;list != NULL &amp;&amp; le != NULL &amp;&amp; (i == 0 || pos &lt; length))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L208'>list</a>              208 lib/widget/listbox.c         for (i = 0, le = g_queue_peek_head_link (l-&gt;list); le != NULL; i++, le = g_list_next (le))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L234'>list</a>              234 lib/widget/listbox.c     if ((guint) l-&gt;pos + 1 &lt; g_queue_get_length (l-&gt;list))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L275'>list</a>              275 lib/widget/listbox.c     if (l-&gt;list == NULL || g_queue_is_empty (l-&gt;list))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L304'>list</a>              304 lib/widget/listbox.c             length = g_queue_get_length (l-&gt;list);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L337'>list</a>              337 lib/widget/listbox.c     if (l-&gt;list == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L359'>list</a>              359 lib/widget/listbox.c     if (l-&gt;list == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L361'>list</a>              361 lib/widget/listbox.c         l-&gt;list = g_queue_new ();</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L368'>list</a>              368 lib/widget/listbox.c         g_queue_push_tail (l-&gt;list, e);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L372'>list</a>              372 lib/widget/listbox.c         g_queue_insert_before (l-&gt;list, g_queue_peek_nth_link (l-&gt;list, (guint) l-&gt;pos), e);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L376'>list</a>              376 lib/widget/listbox.c         g_queue_insert_after (l-&gt;list, g_queue_peek_nth_link (l-&gt;list, (guint) l-&gt;pos), e);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L380'>list</a>              380 lib/widget/listbox.c         g_queue_insert_sorted (l-&gt;list, e, (GCompareDataFunc) listbox_entry_cmp, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L558'>list</a>              558 lib/widget/listbox.c     l-&gt;list = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L580'>list</a>              580 lib/widget/listbox.c         for (i = 0, le = g_queue_peek_head_link (l-&gt;list); le != NULL; i++, le = g_list_next (le))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L611'>list</a>              611 lib/widget/listbox.c         length = g_queue_get_length (l-&gt;list);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L630'>list</a>              630 lib/widget/listbox.c     for (pos = 0, le = g_queue_peek_head_link (l-&gt;list); le != NULL; pos++, le = g_list_next (le))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L685'>list</a>              685 lib/widget/listbox.c         item = g_queue_peek_nth_link (l-&gt;list, (guint) pos);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L698'>list</a>              698 lib/widget/listbox.c     return (l == NULL || l-&gt;list == NULL) ? NULL : g_queue_peek_head_link (l-&gt;list);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L711'>list</a>              711 lib/widget/listbox.c         current = g_queue_peek_nth_link (l-&gt;list, (guint) l-&gt;pos);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L713'>list</a>              713 lib/widget/listbox.c         g_queue_delete_link (l-&gt;list, current);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L715'>list</a>              715 lib/widget/listbox.c         length = g_queue_get_length (l-&gt;list);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L729'>list</a>              729 lib/widget/listbox.c     return (l == NULL || l-&gt;list == NULL || g_queue_is_empty (l-&gt;list));</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L735'>list</a>              735 lib/widget/listbox.c listbox_set_list (WListbox * l, GList * list)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L743'>list</a>              743 lib/widget/listbox.c         l-&gt;list = g_queue_new ();</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L745'>list</a>              745 lib/widget/listbox.c         for (ll = list; ll != NULL; ll = g_list_next (ll))</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L746'>list</a>              746 lib/widget/listbox.c             g_queue_push_tail (l-&gt;list, ll-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L748'>list</a>              748 lib/widget/listbox.c         g_list_free (list);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L759'>list</a>              759 lib/widget/listbox.c         if (l-&gt;list != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L761'>list</a>              761 lib/widget/listbox.c             g_queue_foreach (l-&gt;list, (GFunc) listbox_entry_free, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L762'>list</a>              762 lib/widget/listbox.c             g_queue_free (l-&gt;list);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L765'>list</a>              765 lib/widget/listbox.c         l-&gt;list = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L49'>list</a>               49 lib/widget/listbox.h     GQueue *list;               /* Pointer to the list of WLEntry */</span>
+<span class='curline'><a href='../S/lib--widget--listbox.h.html#L76'>list</a>               76 lib/widget/listbox.h void listbox_set_list (WListbox * l, GList * list);</span>
+<span class='curline'><a href='../S/src--editor--choosesyntax.c.html#L87'>list</a>               87 src/editor/choosesyntax.c             listbox_select_entry (syntaxlist-&gt;list, i + N_DFLT_ENTRIES);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L348'>list</a>              348 src/editor/editwidget.c             listbox_add_item (listbox-&gt;list, LISTBOX_APPEND_AT_END, get_hotkey (i++),</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L349'>list</a>              349 src/editor/editwidget.c                               str_term_trim (fname, WIDGET (listbox-&gt;list)-&gt;cols - 2), NULL, FALSE);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L354'>list</a>              354 src/editor/editwidget.c     listbox_select_entry (listbox-&gt;list, rv);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L761'>list</a>              761 src/filemanager/achown.c     chown (current_panel-&gt;dir.list[current_file].fname, u, g);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L771'>list</a>              771 src/filemanager/achown.c     while (!current_panel-&gt;dir.list[current_file].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L774'>list</a>              774 src/filemanager/achown.c     return current_panel-&gt;dir.list[current_file].fname;</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L787'>list</a>              787 src/filemanager/achown.c     lc_fname = current_panel-&gt;dir.list[current_file].fname;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L398'>list</a>              398 src/filemanager/boxes.c jobs_fill_listbox (WListbox * list)</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L414'>list</a>              414 src/filemanager/boxes.c         listbox_add_item (list, LISTBOX_APPEND_AT_END, 0, s, (void *) tl, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L429'>list</a>              429 src/filemanager/boxes.c     if (bg_list-&gt;list == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L388'>list</a>              388 src/filemanager/chmod.c     while (!current_panel-&gt;dir.list[c_file].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L391'>list</a>              391 src/filemanager/chmod.c     return current_panel-&gt;dir.list[c_file].fname;</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L403'>list</a>              403 src/filemanager/chmod.c     vpath = vfs_path_from_str (current_panel-&gt;dir.list[c_file].fname);</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L406'>list</a>              406 src/filemanager/chmod.c                  current_panel-&gt;dir.list[c_file].fname, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L173'>list</a>              173 src/filemanager/chown.c     while (!current_panel-&gt;dir.list[current_file].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L176'>list</a>              176 src/filemanager/chown.c     return current_panel-&gt;dir.list[current_file].fname;</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L301'>list</a>              301 src/filemanager/chown.c     vpath = vfs_path_from_str (current_panel-&gt;dir.list[current_file].fname);</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L304'>list</a>              304 src/filemanager/chown.c                  current_panel-&gt;dir.list[current_file].fname, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L153'>list</a>              153 src/filemanager/cmd.c         filename_vpath = vfs_path_from_str (current_panel-&gt;dir.list[file_idx].fname);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L280'>list</a>              280 src/filemanager/cmd.c         file_entry_t *source = &amp;panel-&gt;dir.list[i];</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L292'>list</a>              292 src/filemanager/cmd.c             if (strcmp (source-&gt;fname, other-&gt;dir.list[j].fname) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L301'>list</a>              301 src/filemanager/cmd.c             file_entry_t *target = &amp;other-&gt;dir.list[j];</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1434'>list</a>             1434 src/filemanager/cmd.c     entry = &amp;(panel-&gt;dir.list[panel-&gt;selected]);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1449'>list</a>             1449 src/filemanager/cmd.c     entry = &amp;(panel-&gt;dir.list[panel-&gt;selected]);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1500'>list</a>             1500 src/filemanager/cmd.c         if (S_ISDIR (panel-&gt;dir.list[i].st.st_mode)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1501'>list</a>             1501 src/filemanager/cmd.c             &amp;&amp; ((panel-&gt;dirs_marked &amp;&amp; panel-&gt;dir.list[i].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1502'>list</a>             1502 src/filemanager/cmd.c                 || !panel-&gt;dirs_marked) &amp;&amp; !DIR_IS_DOTDOT (panel-&gt;dir.list[i].fname))</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1510'>list</a>             1510 src/filemanager/cmd.c             p = vfs_path_from_str (panel-&gt;dir.list[i].fname);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1516'>list</a>             1516 src/filemanager/cmd.c             panel-&gt;dir.list[i].st.st_size = (off_t) total;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1517'>list</a>             1517 src/filemanager/cmd.c             panel-&gt;dir.list[i].f.dir_size_computed = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L126'>list</a>              126 src/filemanager/dir.c clean_sort_keys (dir_list * list, int start, int count)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L134'>list</a>              134 src/filemanager/dir.c         fentry = &amp;list-&gt;list[i + start];</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L227'>list</a>              227 src/filemanager/dir.c         if (dir_copy.list != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L235'>list</a>              235 src/filemanager/dir.c                 fentry = &amp;(dir_copy.list)[i];</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L238'>list</a>              238 src/filemanager/dir.c             g_free (dir_copy.list);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L241'>list</a>              241 src/filemanager/dir.c         dir_copy.list = g_new0 (file_entry_t, size);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L260'>list</a>              260 src/filemanager/dir.c dir_list_grow (dir_list * list, int delta)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L265'>list</a>              265 src/filemanager/dir.c     if (list == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L271'>list</a>              271 src/filemanager/dir.c     size = list-&gt;size + delta;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L278'>list</a>              278 src/filemanager/dir.c     if (size != list-&gt;size)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L282'>list</a>              282 src/filemanager/dir.c         fe = g_try_renew (file_entry_t, list-&gt;list, size);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L286'>list</a>              286 src/filemanager/dir.c         list-&gt;list = fe;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L287'>list</a>              287 src/filemanager/dir.c         list-&gt;size = size;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L290'>list</a>              290 src/filemanager/dir.c     list-&gt;len = clear_flag ? 0 : MIN (list-&gt;len, size);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L309'>list</a>              309 src/filemanager/dir.c dir_list_append (dir_list * list, const char *fname, const struct stat * st,</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L315'>list</a>              315 src/filemanager/dir.c     if (list-&gt;len == list-&gt;size &amp;&amp; !dir_list_grow (list, DIR_LIST_RESIZE_STEP))</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L318'>list</a>              318 src/filemanager/dir.c     fentry = &amp;list-&gt;list[list-&gt;len];</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L329'>list</a>              329 src/filemanager/dir.c     list-&gt;len++;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L506'>list</a>              506 src/filemanager/dir.c dir_list_sort (dir_list * list, GCompareFunc sort, const dir_sort_options_t * sort_op)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L511'>list</a>              511 src/filemanager/dir.c     if (list-&gt;len &lt; 2 || sort == (GCompareFunc) unsorted)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L516'>list</a>              516 src/filemanager/dir.c     fentry = &amp;list-&gt;list[0];</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L523'>list</a>              523 src/filemanager/dir.c     qsort (&amp;(list-&gt;list)[dot_dot_found], list-&gt;len - dot_dot_found, sizeof (file_entry_t), sort);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L525'>list</a>              525 src/filemanager/dir.c     clean_sort_keys (list, dot_dot_found, list-&gt;len - dot_dot_found);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L531'>list</a>              531 src/filemanager/dir.c dir_list_clean (dir_list * list)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L535'>list</a>              535 src/filemanager/dir.c     for (i = 0; i &lt; list-&gt;len; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L539'>list</a>              539 src/filemanager/dir.c         fentry = &amp;list-&gt;list[i];</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L543'>list</a>              543 src/filemanager/dir.c     list-&gt;len = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L545'>list</a>              545 src/filemanager/dir.c     dir_list_grow (list, DIR_LIST_MIN_SIZE - list-&gt;size);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L552'>list</a>              552 src/filemanager/dir.c dir_list_init (dir_list * list)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L557'>list</a>              557 src/filemanager/dir.c     if (list-&gt;size == 0 &amp;&amp; !dir_list_grow (list, DIR_LIST_RESIZE_STEP))</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L559'>list</a>              559 src/filemanager/dir.c         list-&gt;len = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L563'>list</a>              563 src/filemanager/dir.c     fentry = &amp;list-&gt;list[0];</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L572'>list</a>              572 src/filemanager/dir.c     list-&gt;len = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L624'>list</a>              624 src/filemanager/dir.c dir_list_load (dir_list * list, const vfs_path_t * vpath, GCompareFunc sort,</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L635'>list</a>              635 src/filemanager/dir.c     if (!dir_list_init (list))</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L638'>list</a>              638 src/filemanager/dir.c     fentry = &amp;list-&gt;list[0];</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L654'>list</a>              654 src/filemanager/dir.c         dir_list_clean (list);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L661'>list</a>              661 src/filemanager/dir.c         if (!dir_list_append (list, dp-&gt;d_name, &amp;st, link_to_dir != 0, stale_link != 0))</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L664'>list</a>              664 src/filemanager/dir.c         if ((list-&gt;len &amp; 31) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L668'>list</a>              668 src/filemanager/dir.c     dir_list_sort (list, sort, sort_op);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L692'>list</a>              692 src/filemanager/dir.c dir_list_reload (dir_list * list, const vfs_path_t * vpath, GCompareFunc sort,</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L707'>list</a>              707 src/filemanager/dir.c         dir_list_clean (list);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L708'>list</a>              708 src/filemanager/dir.c         dir_list_init (list);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L715'>list</a>              715 src/filemanager/dir.c     alloc_dir_copy (list-&gt;len);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L716'>list</a>              716 src/filemanager/dir.c     for (marked_cnt = i = 0; i &lt; list-&gt;len; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L720'>list</a>              720 src/filemanager/dir.c         fentry = &amp;list-&gt;list[i];</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L721'>list</a>              721 src/filemanager/dir.c         dfentry = &amp;dir_copy.list[i];</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L739'>list</a>              739 src/filemanager/dir.c     dir_copy.len = list-&gt;len;</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L747'>list</a>              747 src/filemanager/dir.c         dir_list_clean (list);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L751'>list</a>              751 src/filemanager/dir.c         dir_list_clean (list);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L752'>list</a>              752 src/filemanager/dir.c         if (!dir_list_init (list))</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L762'>list</a>              762 src/filemanager/dir.c             fentry = &amp;list-&gt;list[0];</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L774'>list</a>              774 src/filemanager/dir.c         if (!dir_list_append (list, dp-&gt;d_name, &amp;st, link_to_dir != 0, stale_link != 0))</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L791'>list</a>              791 src/filemanager/dir.c         fentry = &amp;list-&gt;list[list-&gt;len - 1];</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L806'>list</a>              806 src/filemanager/dir.c         if ((list-&gt;len &amp; 15) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--dir.c.html#L813'>list</a>              813 src/filemanager/dir.c     dir_list_sort (list, sort, sort_op);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.h.html#L28'>list</a>               28 src/filemanager/dir.h     file_entry_t *list; /**&lt; list of file_entry_t objects */</span>
+<span class='curline'><a href='../S/src--filemanager--dir.h.html#L47'>list</a>               47 src/filemanager/dir.h gboolean dir_list_grow (dir_list * list, int delta);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.h.html#L48'>list</a>               48 src/filemanager/dir.h gboolean dir_list_append (dir_list * list, const char *fname, const struct stat *st,</span>
+<span class='curline'><a href='../S/src--filemanager--dir.h.html#L51'>list</a>               51 src/filemanager/dir.h void dir_list_load (dir_list * list, const vfs_path_t * vpath, GCompareFunc sort,</span>
+<span class='curline'><a href='../S/src--filemanager--dir.h.html#L53'>list</a>               53 src/filemanager/dir.h void dir_list_reload (dir_list * list, const vfs_path_t * vpath, GCompareFunc sort,</span>
+<span class='curline'><a href='../S/src--filemanager--dir.h.html#L55'>list</a>               55 src/filemanager/dir.h void dir_list_sort (dir_list * list, GCompareFunc sort, const dir_sort_options_t * sort_op);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.h.html#L56'>list</a>               56 src/filemanager/dir.h gboolean dir_list_init (dir_list * list);</span>
+<span class='curline'><a href='../S/src--filemanager--dir.h.html#L57'>list</a>               57 src/filemanager/dir.h void dir_list_clean (dir_list * list);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1261'>list</a>             1261 src/filemanager/file.c             if (panel-&gt;dir.list[i].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1262'>list</a>             1262 src/filemanager/file.c                 return panel-&gt;dir.list[i].fname;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1265'>list</a>             1265 src/filemanager/file.c     return panel-&gt;dir.list[panel-&gt;selected].fname;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1289'>list</a>             1289 src/filemanager/file.c         if (!panel-&gt;dir.list[i].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1292'>list</a>             1292 src/filemanager/file.c         s = &amp;panel-&gt;dir.list[i].st;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1299'>list</a>             1299 src/filemanager/file.c             p = vfs_path_append_new (panel-&gt;cwd_vpath, panel-&gt;dir.list[i].fname, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2956'>list</a>             2956 src/filemanager/file.c                 if (!panel-&gt;dir.list[i].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2959'>list</a>             2959 src/filemanager/file.c                 source2 = panel-&gt;dir.list[i].fname;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2960'>list</a>             2960 src/filemanager/file.c                 src_stat = panel-&gt;dir.list[i].st;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1746'>list</a>             1746 src/filemanager/find.c         dir_list *list = &amp;current_panel-&gt;dir;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1749'>list</a>             1749 src/filemanager/find.c         dir_list_init (list);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1784'>list</a>             1784 src/filemanager/find.c             if (list-&gt;len == list-&gt;size &amp;&amp; !dir_list_grow (list, DIR_LIST_RESIZE_STEP))</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1791'>list</a>             1791 src/filemanager/find.c             if (content_pattern != NULL &amp;&amp; list-&gt;len != 0</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1792'>list</a>             1792 src/filemanager/find.c                 &amp;&amp; strcmp (list-&gt;list[list-&gt;len - 1].fname, p) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1798'>list</a>             1798 src/filemanager/find.c             if (list-&gt;len == 0) /* first turn i.e clean old list */</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1800'>list</a>             1800 src/filemanager/find.c             list-&gt;list[list-&gt;len].fnamelen = strlen (p);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1801'>list</a>             1801 src/filemanager/find.c             list-&gt;list[list-&gt;len].fname = g_strndup (p, list-&gt;list[list-&gt;len].fnamelen);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1802'>list</a>             1802 src/filemanager/find.c             list-&gt;list[list-&gt;len].f.marked = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1803'>list</a>             1803 src/filemanager/find.c             list-&gt;list[list-&gt;len].f.link_to_dir = link_to_dir;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1804'>list</a>             1804 src/filemanager/find.c             list-&gt;list[list-&gt;len].f.stale_link = stale_link;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1805'>list</a>             1805 src/filemanager/find.c             list-&gt;list[list-&gt;len].f.dir_size_computed = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1806'>list</a>             1806 src/filemanager/find.c             list-&gt;list[list-&gt;len].st = st;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1807'>list</a>             1807 src/filemanager/find.c             list-&gt;list[list-&gt;len].sort_key = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1808'>list</a>             1808 src/filemanager/find.c             list-&gt;list[list-&gt;len].second_sort_key = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1809'>list</a>             1809 src/filemanager/find.c             list-&gt;len++;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1811'>list</a>             1811 src/filemanager/find.c             if ((list-&gt;len &amp; 15) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1815'>list</a>             1815 src/filemanager/find.c         if (list-&gt;len != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L241'>list</a>              241 src/filemanager/hotlist.c     WListbox *list = hotlist_state.moving ? l_movelist : l_hotlist;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L242'>list</a>              242 src/filemanager/hotlist.c     Widget *w = WIDGET (list);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L244'>list</a>              244 src/filemanager/hotlist.c     if (!listbox_is_empty (list))</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L249'>list</a>              249 src/filemanager/hotlist.c         listbox_get_current (list, &amp;ctext, &amp;cdata);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L277'>list</a>              277 src/filemanager/hotlist.c fill_listbox (WListbox * list)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L293'>list</a>              293 src/filemanager/hotlist.c                 listbox_add_item (list, LISTBOX_APPEND_AT_END, 0, buff-&gt;str, current, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L298'>list</a>              298 src/filemanager/hotlist.c             listbox_add_item (list, LISTBOX_APPEND_AT_END, 0, current-&gt;label, current, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L435'>list</a>              435 src/filemanager/hotlist.c             WListbox *list;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L439'>list</a>              439 src/filemanager/hotlist.c             list = hotlist_state.moving ? l_movelist : l_hotlist;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L440'>list</a>              440 src/filemanager/hotlist.c             listbox_get_current (list, NULL, &amp;data);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L451'>list</a>              451 src/filemanager/hotlist.c                 listbox_remove_list (list);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L453'>list</a>              453 src/filemanager/hotlist.c                 fill_listbox (list);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L462'>list</a>              462 src/filemanager/hotlist.c             WListbox *list = hotlist_state.moving ? l_movelist : l_hotlist;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L464'>list</a>              464 src/filemanager/hotlist.c             listbox_remove_list (list);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L466'>list</a>              466 src/filemanager/hotlist.c             fill_listbox (list);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L605'>list</a>              605 src/filemanager/hotlist.c hotlist_listbox_callback (WListbox * list)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L607'>list</a>              607 src/filemanager/hotlist.c     WDialog *dlg = WIDGET (list)-&gt;owner;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L609'>list</a>              609 src/filemanager/hotlist.c     if (!listbox_is_empty (list))</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L613'>list</a>              613 src/filemanager/hotlist.c         listbox_get_current (list, NULL, &amp;data);</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L136'>list</a>              136 src/filemanager/info.c     st = current_panel-&gt;dir.list[current_panel-&gt;selected].st;</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L266'>list</a>              266 src/filemanager/info.c             fname = current_panel-&gt;dir.list[current_panel-&gt;selected].fname;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1007'>list</a>             1007 src/filemanager/layout.c             file_name = the_other_panel-&gt;dir.list[the_other_panel-&gt;selected].fname;</span>
+<span class='curline'><a href='../S/src--filemanager--listmode.c.html#L123'>list</a>              123 src/filemanager/listmode.c         listbox_add_item (mylistbox-&gt;list, LISTBOX_APPEND_AT_END, 0, possible_items[i], NULL,</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L820'>list</a>              820 src/filemanager/midnight.c             if (panel-&gt;dir.list[i].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L821'>list</a>              821 src/filemanager/midnight.c                 command_insert (cmdline, panel-&gt;dir.list[i].fname, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L826'>list</a>              826 src/filemanager/midnight.c         command_insert (cmdline, panel-&gt;dir.list[panel-&gt;selected].fname, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1788'>list</a>             1788 src/filemanager/midnight.c         dir_list_clean (&amp;panelized_panel.list);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1326'>list</a>             1326 src/filemanager/mountlist.c     static GSList *list = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1328'>list</a>             1328 src/filemanager/mountlist.c     if (list != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1330'>list</a>             1330 src/filemanager/mountlist.c         me = (struct mount_entry *) list-&gt;data;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1340'>list</a>             1340 src/filemanager/mountlist.c         list = g_slist_prepend (list, me);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1404'>list</a>             1404 src/filemanager/mountlist.c     return (list);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L802'>list</a>              802 src/filemanager/panel.c         fe = &amp;panel-&gt;dir.list[file_index];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1004'>list</a>             1004 src/filemanager/panel.c     if (S_ISLNK (panel-&gt;dir.list[panel-&gt;selected].st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1011'>list</a>             1011 src/filemanager/panel.c             vfs_path_append_new (panel-&gt;cwd_vpath, panel-&gt;dir.list[panel-&gt;selected].fname,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1024'>list</a>             1024 src/filemanager/panel.c     else if (DIR_IS_DOTDOT (panel-&gt;dir.list[panel-&gt;selected].fname))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1055'>list</a>             1055 src/filemanager/panel.c             color = 2 * (panel-&gt;dir.list[i + panel-&gt;top_file].f.marked);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1321'>list</a>             1321 src/filemanager/panel.c             if (S_ISREG (panel-&gt;dir.list[panel-&gt;selected].st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1326'>list</a>             1326 src/filemanager/panel.c                             size_trunc_sep (panel-&gt;dir.list[panel-&gt;selected].st.st_size,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1498'>list</a>             1498 src/filemanager/panel.c     g_free (p-&gt;dir.list);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2066'>list</a>             2066 src/filemanager/panel.c         file_entry_t *file_entry = &amp;current_panel-&gt;dir.list[i];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2270'>list</a>             2270 src/filemanager/panel.c         char *fname = panel-&gt;dir.list[panel-&gt;selected].fname;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2566'>list</a>             2566 src/filemanager/panel.c         if (DIR_IS_DOTDOT (panel-&gt;dir.list[i].fname))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2568'>list</a>             2568 src/filemanager/panel.c         if (S_ISDIR (panel-&gt;dir.list[i].st.st_mode) &amp;&amp; files_only != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2571'>list</a>             2571 src/filemanager/panel.c         if (mc_search_run (search, panel-&gt;dir.list[i].fname, 0, panel-&gt;dir.list[i].fnamelen, NULL))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2613'>list</a>             2613 src/filemanager/panel.c         file_entry_t *file = &amp;panel-&gt;dir.list[i];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2707'>list</a>             2707 src/filemanager/panel.c         if (mc_search_run (search, panel-&gt;dir.list[i].fname, 0, panel-&gt;dir.list[i].fnamelen, NULL))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2872'>list</a>             2872 src/filemanager/panel.c     const file_entry_t *entry = &amp;panel-&gt;dir.list[panel-&gt;selected];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2935'>list</a>             2935 src/filemanager/panel.c     if (!S_ISLNK (panel-&gt;dir.list[panel-&gt;selected].st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3964'>list</a>             3964 src/filemanager/panel.c     dir_list *list = &amp;panel-&gt;dir;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3969'>list</a>             3969 src/filemanager/panel.c     for (i = 0, j = 0; i &lt; list-&gt;len; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3973'>list</a>             3973 src/filemanager/panel.c         if (list-&gt;list[i].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3983'>list</a>             3983 src/filemanager/panel.c         vpath = vfs_path_from_str (list-&gt;list[i].fname);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3984'>list</a>             3984 src/filemanager/panel.c         if (mc_lstat (vpath, &amp;list-&gt;list[i].st) != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3985'>list</a>             3985 src/filemanager/panel.c             g_free (list-&gt;list[i].fname);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3988'>list</a>             3988 src/filemanager/panel.c             if (list-&gt;list[i].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3991'>list</a>             3991 src/filemanager/panel.c                 list-&gt;list[j] = list-&gt;list[i];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3997'>list</a>             3997 src/filemanager/panel.c         dir_list_init (list);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3999'>list</a>             3999 src/filemanager/panel.c         list-&gt;len = j;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4025'>list</a>             4025 src/filemanager/panel.c         my_current_file = g_strdup (panel-&gt;dir.list[panel-&gt;selected].fname);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4098'>list</a>             4098 src/filemanager/panel.c         if (strcmp (subdir, panel-&gt;dir.list[i].fname) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4151'>list</a>             4151 src/filemanager/panel.c             if (current_panel-&gt;dir.list[i].f.marked != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4155'>list</a>             4155 src/filemanager/panel.c                     flist = g_strdup (current_panel-&gt;dir.list[i].fname);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4164'>list</a>             4164 src/filemanager/panel.c                         g_strconcat (flist, "\n", current_panel-&gt;dir.list[i].fname, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4313'>list</a>             4313 src/filemanager/panel.c     panel-&gt;dir.list = g_new (file_entry_t, panel-&gt;dir.size);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4592'>list</a>             4592 src/filemanager/panel.c         if (panel-&gt;dir.list[i].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4597'>list</a>             4597 src/filemanager/panel.c             panel-&gt;dir.list[i].f.marked = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4608'>list</a>             4608 src/filemanager/panel.c     if (panel-&gt;dir.list[idx].f.marked == mark)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4612'>list</a>             4612 src/filemanager/panel.c     if (DIR_IS_DOTDOT (panel-&gt;dir.list[idx].fname))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4616'>list</a>             4616 src/filemanager/panel.c     if (panel-&gt;dir.list[idx].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4620'>list</a>             4620 src/filemanager/panel.c         if (S_ISDIR (panel-&gt;dir.list[idx].st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4622'>list</a>             4622 src/filemanager/panel.c             if (panel-&gt;dir.list[idx].f.dir_size_computed)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4623'>list</a>             4623 src/filemanager/panel.c                 panel-&gt;total += (uintmax_t) panel-&gt;dir.list[idx].st.st_size;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4627'>list</a>             4627 src/filemanager/panel.c             panel-&gt;total += (uintmax_t) panel-&gt;dir.list[idx].st.st_size;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4633'>list</a>             4633 src/filemanager/panel.c         if (S_ISDIR (panel-&gt;dir.list[idx].st.st_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4635'>list</a>             4635 src/filemanager/panel.c             if (panel-&gt;dir.list[idx].f.dir_size_computed)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4636'>list</a>             4636 src/filemanager/panel.c                 panel-&gt;total -= (uintmax_t) panel-&gt;dir.list[idx].st.st_size;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4640'>list</a>             4640 src/filemanager/panel.c             panel-&gt;total -= (uintmax_t) panel-&gt;dir.list[idx].st.st_size;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4667'>list</a>             4667 src/filemanager/panel.c     if (panel-&gt;dir.list[lc_index].f.marked != val)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4669'>list</a>             4669 src/filemanager/panel.c         panel-&gt;dir.list[lc_index].f.marked = val;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4691'>list</a>             4691 src/filemanager/panel.c         if (strcmp (panel-&gt;dir.list[i - 1].fname, filename) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4718'>list</a>             4718 src/filemanager/panel.c         current_file = g_strdup (panel-&gt;dir.list[panel-&gt;selected].fname);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L21'>list</a>               21 src/filemanager/panel.h #define selection(p) (&amp;(p-&gt;dir.list[p-&gt;selected]))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L87'>list</a>               87 src/filemanager/panel.h     dir_list list;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L308'>list</a>              308 src/filemanager/panelize.c     dir_list *list = &amp;current_panel-&gt;dir;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L325'>list</a>              325 src/filemanager/panelize.c     dir_list_init (list);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L349'>list</a>              349 src/filemanager/panelize.c         if (!dir_list_append (list, name, &amp;st, link_to_dir != 0, stale_link != 0))</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L352'>list</a>              352 src/filemanager/panelize.c         file_mark (current_panel, list-&gt;len - 1, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L354'>list</a>              354 src/filemanager/panelize.c         if ((list-&gt;len &amp; 31) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L360'>list</a>              360 src/filemanager/panelize.c     if (list-&gt;len == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L361'>list</a>              361 src/filemanager/panelize.c         dir_list_init (list);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L362'>list</a>              362 src/filemanager/panelize.c     else if (IS_PATH_SEP (list-&gt;list[0].fname[0]))</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L389'>list</a>              389 src/filemanager/panelize.c     dir_list *list;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L396'>list</a>              396 src/filemanager/panelize.c     if (panelized_panel.list.len &lt; 1)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L397'>list</a>              397 src/filemanager/panelize.c         dir_list_init (&amp;panelized_panel.list);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L398'>list</a>              398 src/filemanager/panelize.c     else if (panelized_panel.list.len &gt; panel-&gt;dir.size)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L399'>list</a>              399 src/filemanager/panelize.c         dir_list_grow (&amp;panel-&gt;dir, panelized_panel.list.len - panel-&gt;dir.size);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L401'>list</a>              401 src/filemanager/panelize.c     list = &amp;panel-&gt;dir;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L402'>list</a>              402 src/filemanager/panelize.c     list-&gt;len = panelized_panel.list.len;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L407'>list</a>              407 src/filemanager/panelize.c     for (i = 0; i &lt; panelized_panel.list.len; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L409'>list</a>              409 src/filemanager/panelize.c         if (panelized_same || DIR_IS_DOTDOT (panelized_panel.list.list[i].fname))</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L411'>list</a>              411 src/filemanager/panelize.c             list-&gt;list[i].fnamelen = panelized_panel.list.list[i].fnamelen;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L412'>list</a>              412 src/filemanager/panelize.c             list-&gt;list[i].fname = g_strndup (panelized_panel.list.list[i].fname,</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L413'>list</a>              413 src/filemanager/panelize.c                                              panelized_panel.list.list[i].fnamelen);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L421'>list</a>              421 src/filemanager/panelize.c                 vfs_path_append_new (panelized_panel.root_vpath, panelized_panel.list.list[i].fname,</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L424'>list</a>              424 src/filemanager/panelize.c             list-&gt;list[i].fnamelen = strlen (fname);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L425'>list</a>              425 src/filemanager/panelize.c             list-&gt;list[i].fname = g_strndup (fname, list-&gt;list[i].fnamelen);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L428'>list</a>              428 src/filemanager/panelize.c         list-&gt;list[i].f.link_to_dir = panelized_panel.list.list[i].f.link_to_dir;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L429'>list</a>              429 src/filemanager/panelize.c         list-&gt;list[i].f.stale_link = panelized_panel.list.list[i].f.stale_link;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L430'>list</a>              430 src/filemanager/panelize.c         list-&gt;list[i].f.dir_size_computed = panelized_panel.list.list[i].f.dir_size_computed;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L431'>list</a>              431 src/filemanager/panelize.c         list-&gt;list[i].f.marked = panelized_panel.list.list[i].f.marked;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L432'>list</a>              432 src/filemanager/panelize.c         list-&gt;list[i].st = panelized_panel.list.list[i].st;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L433'>list</a>              433 src/filemanager/panelize.c         list-&gt;list[i].sort_key = panelized_panel.list.list[i].sort_key;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L434'>list</a>              434 src/filemanager/panelize.c         list-&gt;list[i].second_sort_key = panelized_panel.list.list[i].second_sort_key;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L460'>list</a>              460 src/filemanager/panelize.c     dir_list *list = &amp;panel-&gt;dir;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L464'>list</a>              464 src/filemanager/panelize.c     if (panelized_panel.list.len &gt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L465'>list</a>              465 src/filemanager/panelize.c         dir_list_clean (&amp;panelized_panel.list);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L469'>list</a>              469 src/filemanager/panelize.c     if (panel-&gt;dir.len &gt; panelized_panel.list.size)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L470'>list</a>              470 src/filemanager/panelize.c         dir_list_grow (&amp;panelized_panel.list, panel-&gt;dir.len - panelized_panel.list.size);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L471'>list</a>              471 src/filemanager/panelize.c     panelized_panel.list.len = panel-&gt;dir.len;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L475'>list</a>              475 src/filemanager/panelize.c         panelized_panel.list.list[i].fnamelen = list-&gt;list[i].fnamelen;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L476'>list</a>              476 src/filemanager/panelize.c         panelized_panel.list.list[i].fname =</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L477'>list</a>              477 src/filemanager/panelize.c             g_strndup (list-&gt;list[i].fname, list-&gt;list[i].fnamelen);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L478'>list</a>              478 src/filemanager/panelize.c         panelized_panel.list.list[i].f.link_to_dir = list-&gt;list[i].f.link_to_dir;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L479'>list</a>              479 src/filemanager/panelize.c         panelized_panel.list.list[i].f.stale_link = list-&gt;list[i].f.stale_link;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L480'>list</a>              480 src/filemanager/panelize.c         panelized_panel.list.list[i].f.dir_size_computed = list-&gt;list[i].f.dir_size_computed;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L481'>list</a>              481 src/filemanager/panelize.c         panelized_panel.list.list[i].f.marked = list-&gt;list[i].f.marked;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L482'>list</a>              482 src/filemanager/panelize.c         panelized_panel.list.list[i].st = list-&gt;list[i].st;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L483'>list</a>              483 src/filemanager/panelize.c         panelized_panel.list.list[i].sort_key = list-&gt;list[i].sort_key;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L484'>list</a>              484 src/filemanager/panelize.c         panelized_panel.list.list[i].second_sort_key = list-&gt;list[i].second_sort_key;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L168'>list</a>              168 src/filemanager/usermenu.c     mode_t st_mode = panel-&gt;dir.list[panel-&gt;selected].st.st_mode;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L258'>list</a>              258 src/filemanager/usermenu.c                     mc_search (arg, DEFAULT_CHARSET, panel-&gt;dir.list[panel-&gt;selected].fname,</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L758'>list</a>              758 src/filemanager/usermenu.c         fname = panel-&gt;dir.list[panel-&gt;selected].fname;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L886'>list</a>              886 src/filemanager/usermenu.c                 if (panel-&gt;dir.list[i].f.marked)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L890'>list</a>              890 src/filemanager/usermenu.c                     tmp = quote_func (panel-&gt;dir.list[i].fname, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L1109'>list</a>             1109 src/filemanager/usermenu.c             listbox_select_entry (listbox-&gt;list, selected);</span>
+<span class='curline'><a href='../S/src--selcodepage.c.html#L110'>list</a>              110 src/selcodepage.c     listbox_select_entry (listbox-&gt;list, i);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L151'>list</a>              151 src/vfs/extfs/extfs.c static struct entry *extfs_resolve_symlinks_int (struct entry *entry, GSList * list);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L238'>list</a>              238 src/vfs/extfs/extfs.c extfs_find_entry_int (struct entry *dir, const char *name, GSList * list,</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L272'>list</a>              272 src/vfs/extfs/extfs.c                 pent = extfs_resolve_symlinks_int (pent, list);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L747'>list</a>              747 src/vfs/extfs/extfs.c extfs_resolve_symlinks_int (struct entry *entry, GSList * list)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L754'>list</a>              754 src/vfs/extfs/extfs.c     if (g_slist_find (list, entry) != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L763'>list</a>              763 src/vfs/extfs/extfs.c         looping = g_slist_prepend (list, entry);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L97'>list</a>               97 src/vfs/smbfs/helpers/include/proto.h BOOL user_in_list (const char *user, char *list);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L233'>list</a>              233 src/vfs/smbfs/helpers/include/proto.h BOOL in_list (char *s, char *list, BOOL casesensitive);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L539'>list</a>              539 src/vfs/smbfs/helpers/include/smb.h     uid_t list[UID_CACHE_SIZE];</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L316'>list</a>              316 src/vfs/smbfs/helpers/lib/username.c user_in_list (char *user, char *list)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--username.c.html#L319'>list</a>              319 src/vfs/smbfs/helpers/lib/username.c     char *p = list;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L985'>list</a>              985 src/vfs/smbfs/helpers/lib/util_str.c in_list (char *s, char *list, BOOL casesensitive)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L988'>list</a>              988 src/vfs/smbfs/helpers/lib/util_str.c     char *p = list;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_str.c.html#L990'>list</a>              990 src/vfs/smbfs/helpers/lib/util_str.c     if (!list)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L286'>list</a>              286 src/vfs/smbfs/smbfs.c     GSList *list;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L290'>list</a>              290 src/vfs/smbfs/smbfs.c     list = g_slist_find_custom (auth_list, &amp;data, smbfs_auth_cmp_host_and_share);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L293'>list</a>              293 src/vfs/smbfs/smbfs.c     if (!list)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L295'>list</a>              295 src/vfs/smbfs/smbfs.c     auth = list-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L312'>list</a>              312 src/vfs/smbfs/smbfs.c     GSList *list;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L329'>list</a>              329 src/vfs/smbfs/smbfs.c     list = g_slist_find_custom (auth_list, &amp;data, smbfs_auth_cmp_host_and_share);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L330'>list</a>              330 src/vfs/smbfs/smbfs.c     if (!list &amp;&amp; fallback_to_host)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L331'>list</a>              331 src/vfs/smbfs/smbfs.c         list = g_slist_find_custom (auth_list, &amp;data, smbfs_auth_cmp_host);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L332'>list</a>              332 src/vfs/smbfs/smbfs.c     if (list)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L334'>list</a>              334 src/vfs/smbfs/smbfs.c         auth = list-&gt;data;</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L213'>list</a>              213 src/viewer/actions_cmd.c     mcview_load (view, 0, panel-&gt;dir.list[panel-&gt;selected].fname, 0, 0, 0);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L319'>list</a>              319 src/viewer/actions_cmd.c             const file_entry_t *fe = &amp;view-&gt;dir-&gt;list[i];</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L342'>list</a>              342 src/viewer/actions_cmd.c         if (!S_ISDIR (view-&gt;dir-&gt;list[i].st.st_mode))</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L367'>list</a>              367 src/viewer/actions_cmd.c     vfile = vfs_path_append_new (view-&gt;workdir_vpath, dir-&gt;list[*dir_idx].fname, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L258'>list</a>              258 src/viewer/lib.c         g_free (view-&gt;dir-&gt;list);</span>
+<span class='curline'><a href='../S/tests--src--filemanager--exec_get_export_variables_ext.c.html#L55'>list</a>               55 tests/src/filemanager/exec_get_export_variables_ext.c     current_panel-&gt;dir.list = g_new0 (file_entry_t, current_panel-&gt;dir.size);</span>
+<span class='curline'><a href='../S/tests--src--filemanager--exec_get_export_variables_ext.c.html#L79'>list</a>               79 tests/src/filemanager/exec_get_export_variables_ext.c     current_panel-&gt;dir.list[0].fname = (char *) "selected file.txt";</span>
+<span class='curline'><a href='../S/tests--src--filemanager--exec_get_export_variables_ext.c.html#L80'>list</a>               80 tests/src/filemanager/exec_get_export_variables_ext.c     current_panel-&gt;dir.list[1].fname = (char *) "tagged file1.txt";</span>
+<span class='curline'><a href='../S/tests--src--filemanager--exec_get_export_variables_ext.c.html#L81'>list</a>               81 tests/src/filemanager/exec_get_export_variables_ext.c     current_panel-&gt;dir.list[1].f.marked = TRUE;</span>
+<span class='curline'><a href='../S/tests--src--filemanager--exec_get_export_variables_ext.c.html#L82'>list</a>               82 tests/src/filemanager/exec_get_export_variables_ext.c     current_panel-&gt;dir.list[2].fname = (char *) "tagged file2.txt";</span>
+<span class='curline'><a href='../S/tests--src--filemanager--exec_get_export_variables_ext.c.html#L83'>list</a>               83 tests/src/filemanager/exec_get_export_variables_ext.c     current_panel-&gt;dir.list[2].f.marked = TRUE;</span>
+</pre>
+</body>
+</html>

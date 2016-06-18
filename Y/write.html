@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>write</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L604'>write</a>             604 lib/vfs/direntry.c         n = write (FH-&gt;handle, buffer, count);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1231'>write</a>            1231 lib/vfs/direntry.c         if (!(flags &amp; O_CREAT) || !(path_element-&gt;class-&gt;write))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1372'>write</a>            1372 lib/vfs/direntry.c         t = write (handle, buffer, n);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1413'>write</a>            1413 lib/vfs/direntry.c         vclass-&gt;write = vfs_s_write;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L99'>write</a>              99 lib/vfs/interface.c         if (write (fdout, buffer, i) != i)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L144'>write</a>             144 lib/vfs/interface.c         if (vfs_path_get_last_path_vfs (filename_vpath)-&gt;write == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L318'>write</a>             318 lib/vfs/interface.c MC_HANDLEOP (write)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L158'>write</a>             158 lib/vfs/vfs.h      ssize_t (*write) (void *vfs_info, const char *buf, size_t count);</span>
+<span class='curline'><a href='../S/src--background.c.html#L345'>write</a>             345 src/background.c         ret = write (to_child_fd, &amp;result, sizeof (result));</span>
+<span class='curline'><a href='../S/src--background.c.html#L347'>write</a>             347 src/background.c             ret = write (to_child_fd, ctx, sizeof (*ctx));</span>
+<span class='curline'><a href='../S/src--background.c.html#L380'>write</a>             380 src/background.c             ret = write (to_child_fd, &amp;len, sizeof (len));</span>
+<span class='curline'><a href='../S/src--background.c.html#L382'>write</a>             382 src/background.c                 ret = write (to_child_fd, resstr, len);</span>
+<span class='curline'><a href='../S/src--background.c.html#L388'>write</a>             388 src/background.c             ret = write (to_child_fd, &amp;len, sizeof (len));</span>
+<span class='curline'><a href='../S/src--background.c.html#L418'>write</a>             418 src/background.c     ret = write (parent_fd, &amp;routine, sizeof (routine));</span>
+<span class='curline'><a href='../S/src--background.c.html#L419'>write</a>             419 src/background.c     ret = write (parent_fd, &amp;argc, sizeof (argc));</span>
+<span class='curline'><a href='../S/src--background.c.html#L420'>write</a>             420 src/background.c     ret = write (parent_fd, &amp;type, sizeof (type));</span>
+<span class='curline'><a href='../S/src--background.c.html#L421'>write</a>             421 src/background.c     ret = write (parent_fd, &amp;have_ctx, sizeof (have_ctx));</span>
+<span class='curline'><a href='../S/src--background.c.html#L424'>write</a>             424 src/background.c         ret = write (parent_fd, ctx, sizeof (*ctx));</span>
+<span class='curline'><a href='../S/src--background.c.html#L445'>write</a>             445 src/background.c         ret = write (parent_fd, &amp;len, sizeof (len));</span>
+<span class='curline'><a href='../S/src--background.c.html#L446'>write</a>             446 src/background.c         ret = write (parent_fd, value, len);</span>
+<span class='curline'><a href='../S/src--background.c.html#L473'>write</a>             473 src/background.c         if ((write (parent_fd, &amp;len, sizeof (len)) != sizeof (len)) ||</span>
+<span class='curline'><a href='../S/src--background.c.html#L474'>write</a>             474 src/background.c             (write (parent_fd, value, len) != len))</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L108'>write</a>             108 src/cons.handler.c     ret = write (pipefd1[1], &amp;message, 1);</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L115'>write</a>             115 src/cons.handler.c     ret = write (pipefd1[1], &amp;begin_line, 1);</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L116'>write</a>             116 src/cons.handler.c     ret = write (pipefd1[1], &amp;end_line, 1);</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L219'>write</a>             219 src/cons.handler.c             status = write (1, &amp;mc_global.tty.console_flag, 1);</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L238'>write</a>             238 src/cons.handler.c         status = write (pipefd1[1], &amp;action, 1);</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L107'>write</a>             107 src/consaver/cons.saver.c     if (write (1, &amp;message, 1) != 1)</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L121'>write</a>             121 src/consaver/cons.saver.c     if (write (1, &amp;bytes, 2) != 2)</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L132'>write</a>             132 src/consaver/cons.saver.c             if (write (1, outbuf, sizeof (outbuf)) != sizeof (outbuf))</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L139'>write</a>             139 src/consaver/cons.saver.c         if (write (1, outbuf, p - outbuf) &lt; (p - outbuf))</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L149'>write</a>             149 src/consaver/cons.saver.c     ret = write (1, &amp;zero, 1);</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L240'>write</a>             240 src/consaver/cons.saver.c     if (write (1, &amp;console_flag, 1) != 1)</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L263'>write</a>             263 src/consaver/cons.saver.c                 if (write (vcsa_fd, buffer, buffer_size) != buffer_size)</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L275'>write</a>             275 src/consaver/cons.saver.c         if (write (1, &amp;console_flag, 1) != 1)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L429'>write</a>             429 src/diffviewer/ydiff.c     rv = write (fs-&gt;fd, buf, size);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L124'>write</a>             124 src/editor/edit.c     const char *read, *write, *extension;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1817'>write</a>            1817 src/editor/edit.c     p = g_strdup_printf (all_filters[i].write, writename);</span>
+<span class='curline'><a href='../S/src--main.c.html#L443'>write</a>             443 src/main.c                 ret1 = write (last_wd_fd, last_wd_string, strlen (last_wd_string));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L191'>write</a>             191 src/subshell/common.c         ret = write (fd, (const unsigned char *) buf + written, count);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1225'>write</a>            1225 src/vfs/extfs/extfs.c     return write (file-&gt;local_handle, buf, nbyte);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1732'>write</a>            1732 src/vfs/extfs/extfs.c     vfs_extfs_ops.write = extfs_write;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L262'>write</a>             262 src/vfs/fish/fish.c     status = write (SUP-&gt;sockw, str, strlen (str));</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L492'>write</a>             492 src/vfs/fish/fish.c             if ((write (SUP.sockw, super-&gt;path_element-&gt;password, str_len) != (ssize_t) str_len)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L493'>write</a>             493 src/vfs/fish/fish.c                 || (write (SUP-&gt;sockw, "\n", 1) != 1))</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L953'>write</a>             953 src/vfs/fish/fish.c         t = write (SUP-&gt;sockw, buffer, n);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L487'>write</a>             487 src/vfs/ftpfs/ftpfs.c     status = write (SUP-&gt;sock, cmdstr, cmdlen);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L500'>write</a>             500 src/vfs/ftpfs/ftpfs.c                 if (status &amp;&amp; (write (SUP-&gt;sock, cmdstr, cmdlen) &gt; 0))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L527'>write</a>             527 src/vfs/ftpfs/ftpfs.c             if (status &amp;&amp; (write (SUP-&gt;sock, cmdstr, cmdlen) &gt; 0))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1859'>write</a>            1859 src/vfs/ftpfs/ftpfs.c         while ((n_written = write (sock, w_buf, n_read)) != n_read)</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L227'>write</a>             227 src/vfs/local/local.c     while ((n = write (fd, buf, nbyte)) == -1)</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L424'>write</a>             424 src/vfs/local/local.c     vfs_local_ops.write = local_write;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L716'>write</a>             716 src/vfs/sftpfs/vfs_class.c     sftpfs_class.write = sftpfs_cb_write;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1764'>write</a>            1764 src/vfs/smbfs/helpers/lib/util.c     if (write (fd, &amp;c, 1) != 1)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L471'>write</a>             471 src/vfs/smbfs/helpers/lib/util_sock.c             ret = write (fd, buffer + total, N - total);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L474'>write</a>             474 src/vfs/smbfs/helpers/lib/util_sock.c         ret = write (fd, buffer + total, N - total);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2246'>write</a>            2246 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.write = smbfs_write;</span>
+</pre>
+</body>
+</html>

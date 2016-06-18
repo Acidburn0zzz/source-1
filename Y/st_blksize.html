@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>st_blksize</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--stat-size.h.html#L78'>st_blksize</a>         78 lib/stat-size.h #define ST_BLKSIZE(statbuf) ((0 &lt; (statbuf).st_blksize \</span>
+<span class='curline'><a href='../S/lib--stat-size.h.html#L79'>st_blksize</a>         79 lib/stat-size.h                                &amp;&amp; (size_t) ((statbuf).st_blksize) &lt;= ((size_t)-1) / 8 + 1) \</span>
+<span class='curline'><a href='../S/lib--stat-size.h.html#L80'>st_blksize</a>         80 lib/stat-size.h                               ? (size_t) ((statbuf).st_blksize) : DEV_BSIZE)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L798'>st_blksize</a>        798 lib/vfs/parse_ls_vga.c     s-&gt;st_blksize = 512;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1096'>st_blksize</a>       1096 src/vfs/extfs/extfs.c     buf-&gt;st_blksize = RECORDSIZE;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L124'>st_blksize</a>        124 tests/lib/vfs/vfs_parse_ls_lga.c         etalon_stat-&gt;st_blksize = 512;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L139'>st_blksize</a>        139 tests/lib/vfs/vfs_parse_ls_lga.c         etalon_stat-&gt;st_blksize = 512;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L154'>st_blksize</a>        154 tests/lib/vfs/vfs_parse_ls_lga.c         etalon_stat-&gt;st_blksize = 512;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L169'>st_blksize</a>        169 tests/lib/vfs/vfs_parse_ls_lga.c         etalon_stat-&gt;st_blksize = 512;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L262'>st_blksize</a>        262 tests/lib/vfs/vfs_parse_ls_lga.c     mctest_assert_int_eq (etalon_stat.st_blksize, test_stat.st_blksize);</span>
+</pre>
+</body>
+</html>

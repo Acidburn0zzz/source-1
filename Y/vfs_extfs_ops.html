@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>vfs_extfs_ops</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L141'>vfs_extfs_ops</a>     141 src/vfs/extfs/extfs.c static struct vfs_class vfs_extfs_ops;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L692'>vfs_extfs_ops</a>     692 src/vfs/extfs/extfs.c                 vfs_stamp (&amp;vfs_extfs_ops, (vfsid) parc);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L963'>vfs_extfs_ops</a>     963 src/vfs/extfs/extfs.c     vfs_rmstamp (&amp;vfs_extfs_ops, (vfsid) archive);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1006'>vfs_extfs_ops</a>    1006 src/vfs/extfs/extfs.c         vfs_stamp_create (&amp;vfs_extfs_ops, file-&gt;archive);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1724'>vfs_extfs_ops</a>    1724 src/vfs/extfs/extfs.c     vfs_extfs_ops.name = "extfs";</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1725'>vfs_extfs_ops</a>    1725 src/vfs/extfs/extfs.c     vfs_extfs_ops.init = extfs_init;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1726'>vfs_extfs_ops</a>    1726 src/vfs/extfs/extfs.c     vfs_extfs_ops.done = extfs_done;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1727'>vfs_extfs_ops</a>    1727 src/vfs/extfs/extfs.c     vfs_extfs_ops.fill_names = extfs_fill_names;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1728'>vfs_extfs_ops</a>    1728 src/vfs/extfs/extfs.c     vfs_extfs_ops.which = extfs_which;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1729'>vfs_extfs_ops</a>    1729 src/vfs/extfs/extfs.c     vfs_extfs_ops.open = extfs_open;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1730'>vfs_extfs_ops</a>    1730 src/vfs/extfs/extfs.c     vfs_extfs_ops.close = extfs_close;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1731'>vfs_extfs_ops</a>    1731 src/vfs/extfs/extfs.c     vfs_extfs_ops.read = extfs_read;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1732'>vfs_extfs_ops</a>    1732 src/vfs/extfs/extfs.c     vfs_extfs_ops.write = extfs_write;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1733'>vfs_extfs_ops</a>    1733 src/vfs/extfs/extfs.c     vfs_extfs_ops.opendir = extfs_opendir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1734'>vfs_extfs_ops</a>    1734 src/vfs/extfs/extfs.c     vfs_extfs_ops.readdir = extfs_readdir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1735'>vfs_extfs_ops</a>    1735 src/vfs/extfs/extfs.c     vfs_extfs_ops.closedir = extfs_closedir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1736'>vfs_extfs_ops</a>    1736 src/vfs/extfs/extfs.c     vfs_extfs_ops.stat = extfs_stat;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1737'>vfs_extfs_ops</a>    1737 src/vfs/extfs/extfs.c     vfs_extfs_ops.lstat = extfs_lstat;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1738'>vfs_extfs_ops</a>    1738 src/vfs/extfs/extfs.c     vfs_extfs_ops.fstat = extfs_fstat;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1739'>vfs_extfs_ops</a>    1739 src/vfs/extfs/extfs.c     vfs_extfs_ops.chmod = extfs_chmod;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1740'>vfs_extfs_ops</a>    1740 src/vfs/extfs/extfs.c     vfs_extfs_ops.chown = extfs_chown;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1741'>vfs_extfs_ops</a>    1741 src/vfs/extfs/extfs.c     vfs_extfs_ops.readlink = extfs_readlink;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1742'>vfs_extfs_ops</a>    1742 src/vfs/extfs/extfs.c     vfs_extfs_ops.unlink = extfs_unlink;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1743'>vfs_extfs_ops</a>    1743 src/vfs/extfs/extfs.c     vfs_extfs_ops.chdir = extfs_chdir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1744'>vfs_extfs_ops</a>    1744 src/vfs/extfs/extfs.c     vfs_extfs_ops.ferrno = extfs_errno;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1745'>vfs_extfs_ops</a>    1745 src/vfs/extfs/extfs.c     vfs_extfs_ops.lseek = extfs_lseek;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1746'>vfs_extfs_ops</a>    1746 src/vfs/extfs/extfs.c     vfs_extfs_ops.getid = extfs_getid;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1747'>vfs_extfs_ops</a>    1747 src/vfs/extfs/extfs.c     vfs_extfs_ops.nothingisopen = extfs_nothingisopen;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1748'>vfs_extfs_ops</a>    1748 src/vfs/extfs/extfs.c     vfs_extfs_ops.free = extfs_free;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1749'>vfs_extfs_ops</a>    1749 src/vfs/extfs/extfs.c     vfs_extfs_ops.getlocalcopy = extfs_getlocalcopy;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1750'>vfs_extfs_ops</a>    1750 src/vfs/extfs/extfs.c     vfs_extfs_ops.ungetlocalcopy = extfs_ungetlocalcopy;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1751'>vfs_extfs_ops</a>    1751 src/vfs/extfs/extfs.c     vfs_extfs_ops.mkdir = extfs_mkdir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1752'>vfs_extfs_ops</a>    1752 src/vfs/extfs/extfs.c     vfs_extfs_ops.rmdir = extfs_rmdir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1753'>vfs_extfs_ops</a>    1753 src/vfs/extfs/extfs.c     vfs_extfs_ops.setctl = extfs_setctl;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1754'>vfs_extfs_ops</a>    1754 src/vfs/extfs/extfs.c     vfs_register_class (&amp;vfs_extfs_ops);</span>
+</pre>
+</body>
+</html>

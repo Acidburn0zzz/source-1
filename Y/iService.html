@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>iService</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L586'>iService</a>          586 src/vfs/smbfs/helpers/include/proto.h BOOL lp_snum_ok (int iService);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L96'>iService</a>           96 src/vfs/smbfs/helpers/param/loadparm.c #define LP_SNUM_OK(iService) (((iService) &gt;= 0) &amp;&amp; ((iService) &lt; iNumServices) &amp;&amp; iSERVICE(iService).valid)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1390'>iService</a>         1390 src/vfs/smbfs/helpers/param/loadparm.c      static BOOL service_ok (int iService);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1637'>iService</a>         1637 src/vfs/smbfs/helpers/param/loadparm.c     int iService;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1639'>iService</a>         1639 src/vfs/smbfs/helpers/param/loadparm.c     for (iService = iNumServices - 1; iService &gt;= 0; iService--)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1640'>iService</a>         1640 src/vfs/smbfs/helpers/param/loadparm.c         if (VALID (iService) &amp;&amp; strwicmp (iSERVICE (iService).szService, pszServiceName) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1643'>iService</a>         1643 src/vfs/smbfs/helpers/param/loadparm.c                 copy_service (pserviceDest, pSERVICE (iService), NULL);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1647'>iService</a>         1647 src/vfs/smbfs/helpers/param/loadparm.c     return (iService);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1714'>iService</a>         1714 src/vfs/smbfs/helpers/param/loadparm.c service_ok (int iService)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1719'>iService</a>         1719 src/vfs/smbfs/helpers/param/loadparm.c     if (iSERVICE (iService).szService[0] == '\0')</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1728'>iService</a>         1728 src/vfs/smbfs/helpers/param/loadparm.c     if (strwicmp (iSERVICE (iService).szService, PRINTERS_NAME) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1729'>iService</a>         1729 src/vfs/smbfs/helpers/param/loadparm.c         if (!iSERVICE (iService).bPrint_ok)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1732'>iService</a>         1732 src/vfs/smbfs/helpers/param/loadparm.c                        iSERVICE (iService).szService));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1733'>iService</a>         1733 src/vfs/smbfs/helpers/param/loadparm.c             iSERVICE (iService).bPrint_ok = True;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1736'>iService</a>         1736 src/vfs/smbfs/helpers/param/loadparm.c     if (iSERVICE (iService).szPath[0] == '\0' &amp;&amp;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1737'>iService</a>         1737 src/vfs/smbfs/helpers/param/loadparm.c         strwicmp (iSERVICE (iService).szService, HOMES_NAME) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1739'>iService</a>         1739 src/vfs/smbfs/helpers/param/loadparm.c         DEBUG (0, ("No path in service %s - using %s\n", iSERVICE (iService).szService, tmpdir ()));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1740'>iService</a>         1740 src/vfs/smbfs/helpers/param/loadparm.c         string_set (&amp;iSERVICE (iService).szPath, tmpdir ());</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1744'>iService</a>         1744 src/vfs/smbfs/helpers/param/loadparm.c     if (!iSERVICE (iService).bAvailable)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1745'>iService</a>         1745 src/vfs/smbfs/helpers/param/loadparm.c         DEBUG (1, ("NOTE: Service %s is flagged unavailable.\n", iSERVICE (iService).szService));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2278'>iService</a>         2278 src/vfs/smbfs/helpers/param/loadparm.c lp_snum_ok (int iService)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2280'>iService</a>         2280 src/vfs/smbfs/helpers/param/loadparm.c     return (LP_SNUM_OK (iService) &amp;&amp; iSERVICE (iService).bAvailable);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2484'>iService</a>         2484 src/vfs/smbfs/helpers/param/loadparm.c     int iService;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2486'>iService</a>         2486 src/vfs/smbfs/helpers/param/loadparm.c     for (iService = iNumServices - 1; iService &gt;= 0; iService--)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2487'>iService</a>         2487 src/vfs/smbfs/helpers/param/loadparm.c         if (VALID (iService) &amp;&amp; strequal (lp_servicename (iService), pszServiceName))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2490'>iService</a>         2490 src/vfs/smbfs/helpers/param/loadparm.c     if (iService &lt; 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2493'>iService</a>         2493 src/vfs/smbfs/helpers/param/loadparm.c     return (iService);</span>
+</pre>
+</body>
+</html>

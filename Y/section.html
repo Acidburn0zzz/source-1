@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>section</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L691'>section</a>           691 src/filemanager/boxes.c     char *section = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L705'>section</a>           705 src/filemanager/boxes.c         section = g_strconcat ("Temporal:", p, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L706'>section</a>           706 src/filemanager/boxes.c         if (!mc_config_has_group (mc_global.main_config, section))</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L708'>section</a>           708 src/filemanager/boxes.c             g_free (section);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L709'>section</a>           709 src/filemanager/boxes.c             section = g_strdup (p);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L711'>section</a>           711 src/filemanager/boxes.c         panel_load_setup (panel, section);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L712'>section</a>           712 src/filemanager/boxes.c         g_free (section);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L793'>section</a>           793 src/filemanager/boxes.c     if (section != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1402'>section</a>          1402 src/filemanager/hotlist.c clean_up_hotlist_groups (const char *section)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1406'>section</a>          1406 src/filemanager/hotlist.c     grp_section = g_strconcat (section, ".Group", (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1407'>section</a>          1407 src/filemanager/hotlist.c     if (mc_config_has_group (mc_global.main_config, section))</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1408'>section</a>          1408 src/filemanager/hotlist.c         mc_config_del_group (mc_global.main_config, section);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4287'>section</a>          4287 src/filemanager/panel.c     char *section;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4347'>section</a>          4347 src/filemanager/panel.c     section = g_strconcat ("Temporal:", panel-&gt;panel_name, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4348'>section</a>          4348 src/filemanager/panel.c     if (!mc_config_has_group (mc_global.main_config, section))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4350'>section</a>          4350 src/filemanager/panel.c         g_free (section);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4351'>section</a>          4351 src/filemanager/panel.c         section = g_strdup (panel-&gt;panel_name);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4353'>section</a>          4353 src/filemanager/panel.c     panel_load_setup (panel, section);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4354'>section</a>          4354 src/filemanager/panel.c     g_free (section);</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L564'>section</a>           564 src/keybind-defaults.c create_default_keymap_section (mc_config_t * keymap, const char *section,</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L570'>section</a>           570 src/keybind-defaults.c         mc_config_set_string_raw (keymap, section, k[i].key, k[i].value);</span>
+<span class='curline'><a href='../S/src--learn.c.html#L353'>section</a>           353 src/learn.c        char *section;</span>
+<span class='curline'><a href='../S/src--learn.c.html#L356'>section</a>           356 src/learn.c        section = g_strconcat ("terminal:", getenv ("TERM"), (char *) NULL);</span>
+<span class='curline'><a href='../S/src--learn.c.html#L364'>section</a>           364 src/learn.c                mc_config_set_string_raw_value (mc_global.main_config, section,</span>
+<span class='curline'><a href='../S/src--learn.c.html#L380'>section</a>           380 src/learn.c        g_free (section);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L790'>section</a>           790 src/setup.c    setup__load_panel_state (const char *section)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L797'>section</a>           797 src/setup.c        buffer = mc_config_get_string (mc_global.panels_config, section, "display", "listing");</span>
+<span class='curline'><a href='../S/src--setup.c.html#L814'>section</a>           814 src/setup.c    panel_save_type (const char *section, panel_view_mode_t type)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L821'>section</a>           821 src/setup.c                mc_config_set_string (mc_global.panels_config, section, "display",</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1424'>section</a>          1424 src/setup.c    panel_load_setup (WPanel * panel, const char *section)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1429'>section</a>          1429 src/setup.c        panel-&gt;sort_info.reverse = mc_config_get_int (mc_global.panels_config, section, "reverse", 0);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1431'>section</a>          1431 src/setup.c            mc_config_get_int (mc_global.panels_config, section, "case_sensitive",</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1434'>section</a>          1434 src/setup.c            mc_config_get_int (mc_global.panels_config, section, "exec_first", 0);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1437'>section</a>          1437 src/setup.c        buffer = mc_config_get_string (mc_global.panels_config, section, "sort_order", "name");</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1445'>section</a>          1445 src/setup.c        buffer = mc_config_get_string (mc_global.panels_config, section, "list_mode", "full");</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1455'>section</a>          1455 src/setup.c        panel-&gt;brief_cols = mc_config_get_int (mc_global.panels_config, section, "brief_cols", 2);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1460'>section</a>          1460 src/setup.c            mc_config_get_string (mc_global.panels_config, section, "user_format", DEFAULT_USER_FORMAT);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1467'>section</a>          1467 src/setup.c                mc_config_get_string (mc_global.panels_config, section, buffer2, DEFAULT_USER_FORMAT);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1471'>section</a>          1471 src/setup.c            mc_config_get_int (mc_global.panels_config, section, "user_mini_status", 0);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1477'>section</a>          1477 src/setup.c    panel_save_setup (WPanel * panel, const char *section)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1482'>section</a>          1482 src/setup.c        mc_config_set_int (mc_global.panels_config, section, "reverse", panel-&gt;sort_info.reverse);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1483'>section</a>          1483 src/setup.c        mc_config_set_int (mc_global.panels_config, section, "case_sensitive",</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1485'>section</a>          1485 src/setup.c        mc_config_set_int (mc_global.panels_config, section, "exec_first", panel-&gt;sort_info.exec_first);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1487'>section</a>          1487 src/setup.c        mc_config_set_string (mc_global.panels_config, section, "sort_order", panel-&gt;sort_field-&gt;id);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1492'>section</a>          1492 src/setup.c                mc_config_set_string (mc_global.panels_config, section, "list_mode", list_types[i].key);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1496'>section</a>          1496 src/setup.c        mc_config_set_int (mc_global.panels_config, section, "brief_cols", panel-&gt;brief_cols);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1498'>section</a>          1498 src/setup.c        mc_config_set_string (mc_global.panels_config, section, "user_format", panel-&gt;user_format);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1503'>section</a>          1503 src/setup.c            mc_config_set_string (mc_global.panels_config, section, buffer,</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1507'>section</a>          1507 src/setup.c        mc_config_set_int (mc_global.panels_config, section, "user_mini_status",</span>
+<span class='curline'><a href='../S/src--setup.h.html#L158'>section</a>           158 src/setup.h    void panel_load_setup (WPanel * panel, const char *section);</span>
+<span class='curline'><a href='../S/src--setup.h.html#L159'>section</a>           159 src/setup.h    void panel_save_setup (WPanel * panel, const char *section);</span>
+</pre>
+</body>
+</html>

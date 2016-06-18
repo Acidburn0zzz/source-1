@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>config_auth_type</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L368'>config_auth_type</a>  368 src/vfs/sftpfs/config_parser.c     super_data-&gt;config_auth_type = NONE;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L369'>config_auth_type</a>  369 src/vfs/sftpfs/config_parser.c     super_data-&gt;config_auth_type |= (config_entity-&gt;pubkey_auth) ? PUBKEY : 0;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L370'>config_auth_type</a>  370 src/vfs/sftpfs/config_parser.c     super_data-&gt;config_auth_type |= (config_entity-&gt;identities_only) ? 0 : AGENT;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L371'>config_auth_type</a>  371 src/vfs/sftpfs/config_parser.c     super_data-&gt;config_auth_type |= (config_entity-&gt;password_auth) ? PASSWORD : 0;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L183'>config_auth_type</a>  183 src/vfs/sftpfs/connection.c         &amp;&amp; (super_data-&gt;config_auth_type &amp; PASSWORD) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L186'>config_auth_type</a>  186 src/vfs/sftpfs/connection.c     if (strstr (userauthlist, "publickey") != NULL &amp;&amp; (super_data-&gt;config_auth_type &amp; PUBKEY) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L189'>config_auth_type</a>  189 src/vfs/sftpfs/connection.c     if ((super_data-&gt;config_auth_type &amp; AGENT) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L39'>config_auth_type</a>   39 src/vfs/sftpfs/internal.h     sftpfs_auth_type_t config_auth_type;</span>
+</pre>
+</body>
+</html>

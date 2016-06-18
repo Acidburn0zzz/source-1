@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>lib/glibcompat.c</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<!-- beginning of fixed guide -->
+<div id='guide'><ul>
+<li><a href='#L65'><img class='icon' src='../icons/first.png' alt='[^]' /></a></li>
+<li><a href='#L84'><img class='icon' src='../icons/last.png' alt='[v]' /></a></li>
+<li><a href='#TOP'><img class='icon' src='../icons/top.png' alt='[top]' /></a></li>
+<li><a href='#BOTTOM'><img class='icon' src='../icons/bottom.png' alt='[bottom]' /></a></li>
+<li><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a></li>
+<li><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a></li>
+<li class='standout'><span><a href='../files/lib.html'>lib</a>/glibcompat.c</span></li>
+</ul></div>
+<!-- end of fixed guide -->
+<a id='TOP' name='TOP'></a><h2 class='header'><a href='../mains.html'>root</a>/<a href='../files/lib.html'>lib</a>/glibcompat.c</h2>
+<em class='comment'>/* <img class='icon' src='../icons/n_left.png' alt='[previous]' /><img class='icon' src='../icons/n_right.png' alt='[next]' /><a href='#L65'><img class='icon' src='../icons/first.png' alt='[first]' /></a><a href='#L84'><img class='icon' src='../icons/last.png' alt='[last]' /></a><img class='icon' src='../icons/n_top.png' alt='[top]' /><a href='#BOTTOM'><img class='icon' src='../icons/bottom.png' alt='[bottom]' /></a><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a>&nbsp;<em class='position'>[+1 lib/glibcompat.c]</em> */</em>
+<hr />
+<h2 class='header'>DEFINITIONS</h2>
+This source file includes following definitions.
+<ol>
+<li><a href='#L65' title='Defined at 65.'>g_slist_free_full</a></li>
+<li><a href='#L84' title='Defined at 84.'>g_list_free_full</a></li>
+</ol>
+<hr />
+<pre>
+<a id='L1' name='L1'></a>   1 <em class='comment'>/*</em>
+<a id='L2' name='L2'></a>   2 <em class='comment'>   GLIB - Library of useful routines for C programming</em>
+<a id='L3' name='L3'></a>   3 <em class='comment'></em>
+<a id='L4' name='L4'></a>   4 <em class='comment'>   Copyright (C) 2009-2016</em>
+<a id='L5' name='L5'></a>   5 <em class='comment'>   Free Software Foundation, Inc.</em>
+<a id='L6' name='L6'></a>   6 <em class='comment'></em>
+<a id='L7' name='L7'></a>   7 <em class='comment'>   Written by:</em>
+<a id='L8' name='L8'></a>   8 <em class='comment'>   Slava Zanko &lt;slavazanko@gmail.com&gt;, 2009, 2013.</em>
+<a id='L9' name='L9'></a>   9 <em class='comment'></em>
+<a id='L10' name='L10'></a>  10 <em class='comment'>   This file is part of the Midnight Commander.</em>
+<a id='L11' name='L11'></a>  11 <em class='comment'></em>
+<a id='L12' name='L12'></a>  12 <em class='comment'>   The Midnight Commander is free software: you can redistribute it</em>
+<a id='L13' name='L13'></a>  13 <em class='comment'>   and/or modify it under the terms of the GNU General Public License as</em>
+<a id='L14' name='L14'></a>  14 <em class='comment'>   published by the Free Software Foundation, either version 3 of the License,</em>
+<a id='L15' name='L15'></a>  15 <em class='comment'>   or (at your option) any later version.</em>
+<a id='L16' name='L16'></a>  16 <em class='comment'></em>
+<a id='L17' name='L17'></a>  17 <em class='comment'>   The Midnight Commander is distributed in the hope that it will be useful,</em>
+<a id='L18' name='L18'></a>  18 <em class='comment'>   but WITHOUT ANY WARRANTY; without even the implied warranty of</em>
+<a id='L19' name='L19'></a>  19 <em class='comment'>   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</em>
+<a id='L20' name='L20'></a>  20 <em class='comment'>   GNU General Public License for more details.</em>
+<a id='L21' name='L21'></a>  21 <em class='comment'></em>
+<a id='L22' name='L22'></a>  22 <em class='comment'>   You should have received a copy of the GNU General Public License</em>
+<a id='L23' name='L23'></a>  23 <em class='comment'>   along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</em>
+<a id='L24' name='L24'></a>  24 <em class='comment'> */</em>
+<a id='L25' name='L25'></a>  25 
+<a id='L26' name='L26'></a>  26 <em class='comment'>/** \file glibcompat.c</em>
+<a id='L27' name='L27'></a>  27 <em class='comment'> *  \brief Source: compatibility with older versions of glib</em>
+<a id='L28' name='L28'></a>  28 <em class='comment'> *</em>
+<a id='L29' name='L29'></a>  29 <em class='comment'> *  Following code was copied from glib to GNU Midnight Commander to</em>
+<a id='L30' name='L30'></a>  30 <em class='comment'> *  provide compatibility with older versions of glib.</em>
+<a id='L31' name='L31'></a>  31 <em class='comment'> */</em>
+<a id='L32' name='L32'></a>  32 
+<a id='L33' name='L33'></a>  33 <em class='sharp'>#include</em> &lt;config.h&gt;
+<a id='L34' name='L34'></a>  34 <em class='sharp'>#include</em> &lt;string.h&gt;
+<a id='L35' name='L35'></a>  35 
+<a id='L36' name='L36'></a>  36 <em class='sharp'>#include</em> "<a href='lib--global.h.html'>global.h</a>"
+<a id='L37' name='L37'></a>  37 <em class='sharp'>#include</em> "<a href='lib--glibcompat.h.html'>glibcompat.h</a>"
+<a id='L38' name='L38'></a>  38 
+<a id='L39' name='L39'></a>  39 <em class='comment'>/*** global variables ****************************************************************************/</em>
+<a id='L40' name='L40'></a>  40 
+<a id='L41' name='L41'></a>  41 <em class='comment'>/*** file scope macro definitions ****************************************************************/</em>
+<a id='L42' name='L42'></a>  42 
+<a id='L43' name='L43'></a>  43 <em class='comment'>/*** file scope type declarations ****************************************************************/</em>
+<a id='L44' name='L44'></a>  44 
+<a id='L45' name='L45'></a>  45 <em class='comment'>/*** file scope variables ************************************************************************/</em>
+<a id='L46' name='L46'></a>  46 
+<a id='L47' name='L47'></a>  47 <em class='comment'>/*** file scope functions ************************************************************************/</em>
+<a id='L48' name='L48'></a>  48 
+<a id='L49' name='L49'></a>  49 <em class='comment'>/* --------------------------------------------------------------------------------------------- */</em>
+<a id='L50' name='L50'></a>  50 <em class='comment'>/*** public functions ****************************************************************************/</em>
+<a id='L51' name='L51'></a>  51 <em class='comment'>/* --------------------------------------------------------------------------------------------- */</em>
+<a id='L52' name='L52'></a>  52 
+<a id='L53' name='L53'></a>  53 <em class='sharp'>#if</em> ! <a href='../Y/GLIB_CHECK_VERSION.html' title='Multiple used in 3 places.'>GLIB_CHECK_VERSION</a> (2, 28, 0)
+<a id='L54' name='L54'></a>  54 <em class='comment'>/**</em>
+<a id='L55' name='L55'></a>  55 <em class='comment'> * g_slist_free_full:</em>
+<a id='L56' name='L56'></a>  56 <em class='comment'> * @list: a pointer to a #GSList</em>
+<a id='L57' name='L57'></a>  57 <em class='comment'> * @free_func: the function to be called to free each element's data</em>
+<a id='L58' name='L58'></a>  58 <em class='comment'> *</em>
+<a id='L59' name='L59'></a>  59 <em class='comment'> * Convenience method, which frees all the memory used by a #GSList, and</em>
+<a id='L60' name='L60'></a>  60 <em class='comment'> * calls the specified destroy function on every element's data.</em>
+<a id='L61' name='L61'></a>  61 <em class='comment'> *</em>
+<a id='L62' name='L62'></a>  62 <em class='comment'> * Since: 2.28</em>
+<a id='L63' name='L63'></a>  63 <em class='comment'> **/</em>
+<a id='L64' name='L64'></a>  64 <strong class='reserved'>void</strong>
+<a id='L65' name='L65'></a>  65 <a href='../R/g_slist_free_full.html' title='Multiple referred from 8 places.'>g_slist_free_full</a> (<a href='../Y/GSList.html' title='Multiple used in 36 places.'>GSList</a> * <a href='../Y/list.html' title='Multiple used in 398 places.'>list</a>, <a href='../Y/GDestroyNotify.html' title='Multiple used in 13 places.'>GDestroyNotify</a> <a href='../Y/free_func.html' title='Multiple used in 6 places.'>free_func</a>)
+     <em class='comment'>/* <img class='icon' src='../icons/n_left.png' alt='[previous]' /><a href='#L84'><img class='icon' src='../icons/right.png' alt='[next]' /></a><img class='icon' src='../icons/n_first.png' alt='[first]' /><a href='#L84'><img class='icon' src='../icons/last.png' alt='[last]' /></a><a href='#TOP'><img class='icon' src='../icons/top.png' alt='[top]' /></a><a href='#BOTTOM'><img class='icon' src='../icons/bottom.png' alt='[bottom]' /></a><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a>&nbsp;<em class='position'>[+65 lib/glibcompat.c]</em> */</em>
+<a id='L66' name='L66'></a>  66 <em class='brace'>{</em>
+<a id='L67' name='L67'></a>  67     <a href='../Y/g_slist_foreach.html' title='Multiple used in 2 places.'>g_slist_foreach</a> (<a href='../Y/list.html' title='Multiple used in 398 places.'>list</a>, (<a href='../Y/GFunc.html' title='Multiple used in 31 places.'>GFunc</a>) <a href='../Y/free_func.html' title='Multiple used in 6 places.'>free_func</a>, <a href='../Y/NULL.html' title='Multiple used in 5246 places.'>NULL</a>);
+<a id='L68' name='L68'></a>  68     <a href='../Y/g_slist_free.html' title='Multiple used in 2 places.'>g_slist_free</a> (<a href='../Y/list.html' title='Multiple used in 398 places.'>list</a>);
+<a id='L69' name='L69'></a>  69 <em class='brace'>}</em>
+<a id='L70' name='L70'></a>  70 
+<a id='L71' name='L71'></a>  71 <em class='comment'>/* --------------------------------------------------------------------------------------------- */</em>
+<a id='L72' name='L72'></a>  72 
+<a id='L73' name='L73'></a>  73 <em class='comment'>/**</em>
+<a id='L74' name='L74'></a>  74 <em class='comment'> * g_list_free_full:</em>
+<a id='L75' name='L75'></a>  75 <em class='comment'> * @list: a pointer to a #GList</em>
+<a id='L76' name='L76'></a>  76 <em class='comment'> * @free_func: the function to be called to free each element's data</em>
+<a id='L77' name='L77'></a>  77 <em class='comment'> *</em>
+<a id='L78' name='L78'></a>  78 <em class='comment'> * Convenience method, which frees all the memory used by a #GList, and</em>
+<a id='L79' name='L79'></a>  79 <em class='comment'> * calls the specified destroy function on every element's data.</em>
+<a id='L80' name='L80'></a>  80 <em class='comment'> *</em>
+<a id='L81' name='L81'></a>  81 <em class='comment'> * Since: 2.28</em>
+<a id='L82' name='L82'></a>  82 <em class='comment'> */</em>
+<a id='L83' name='L83'></a>  83 <strong class='reserved'>void</strong>
+<a id='L84' name='L84'></a>  84 <a href='../R/g_list_free_full.html' title='Multiple referred from 12 places.'>g_list_free_full</a> (<a href='../Y/GList.html' title='Multiple used in 144 places.'>GList</a> * <a href='../Y/list.html' title='Multiple used in 398 places.'>list</a>, <a href='../Y/GDestroyNotify.html' title='Multiple used in 13 places.'>GDestroyNotify</a> <a href='../Y/free_func.html' title='Multiple used in 6 places.'>free_func</a>)
+     <em class='comment'>/* <a href='#L65'><img class='icon' src='../icons/left.png' alt='[previous]' /></a><img class='icon' src='../icons/n_right.png' alt='[next]' /><a href='#L65'><img class='icon' src='../icons/first.png' alt='[first]' /></a><img class='icon' src='../icons/n_last.png' alt='[last]' /><a href='#TOP'><img class='icon' src='../icons/top.png' alt='[top]' /></a><a href='#BOTTOM'><img class='icon' src='../icons/bottom.png' alt='[bottom]' /></a><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a>&nbsp;<em class='position'>[+84 lib/glibcompat.c]</em> */</em>
+<a id='L85' name='L85'></a>  85 <em class='brace'>{</em>
+<a id='L86' name='L86'></a>  86     <a href='../Y/g_list_foreach.html' title='Multiple used in 10 places.'>g_list_foreach</a> (<a href='../Y/list.html' title='Multiple used in 398 places.'>list</a>, (<a href='../Y/GFunc.html' title='Multiple used in 31 places.'>GFunc</a>) <a href='../Y/free_func.html' title='Multiple used in 6 places.'>free_func</a>, <a href='../Y/NULL.html' title='Multiple used in 5246 places.'>NULL</a>);
+<a id='L87' name='L87'></a>  87     <a href='../Y/g_list_free.html' title='Multiple used in 3 places.'>g_list_free</a> (<a href='../Y/list.html' title='Multiple used in 398 places.'>list</a>);
+<a id='L88' name='L88'></a>  88 <em class='brace'>}</em>
+<a id='L89' name='L89'></a>  89 
+<a id='L90' name='L90'></a>  90 <em class='sharp'>#endif</em> <em class='comment'>/* ! GLIB_CHECK_VERSION (2, 28, 0) */</em>
+<a id='L91' name='L91'></a>  91 
+<a id='L92' name='L92'></a>  92 <em class='comment'>/* --------------------------------------------------------------------------------------------- */</em>
+</pre>
+<hr />
+<a id='BOTTOM' name='BOTTOM'></a>
+<em class='comment'>/* <img class='icon' src='../icons/n_left.png' alt='[previous]' /><img class='icon' src='../icons/n_right.png' alt='[next]' /><a href='#L65'><img class='icon' src='../icons/first.png' alt='[first]' /></a><a href='#L84'><img class='icon' src='../icons/last.png' alt='[last]' /></a><a href='#TOP'><img class='icon' src='../icons/top.png' alt='[top]' /></a><img class='icon' src='../icons/n_bottom.png' alt='[bottom]' /><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a>&nbsp;<em class='position'>[+92 lib/glibcompat.c]</em> */</em>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>temp</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L170'>temp</a>              170 lib/widget/input_complete.c         const char *temp;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L177'>temp</a>              177 lib/widget/input_complete.c         if ((*text != '\0') &amp;&amp; (temp = strrchr (text, PATH_SEP)) != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L179'>temp</a>              179 lib/widget/input_complete.c             filename = g_strdup (++temp);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L180'>temp</a>              180 lib/widget/input_complete.c             dirname = g_strndup (text, temp - text);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L289'>temp</a>              289 lib/widget/input_complete.c         GString *temp;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L291'>temp</a>              291 lib/widget/input_complete.c         temp = g_string_sized_new (16);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L295'>temp</a>              295 lib/widget/input_complete.c             g_string_append (temp, users_dirname);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L298'>temp</a>              298 lib/widget/input_complete.c             if (!IS_PATH_SEP (temp-&gt;str[temp-&gt;len - 1]))</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L299'>temp</a>              299 lib/widget/input_complete.c                 g_string_append_c (temp, PATH_SEP);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L301'>temp</a>              301 lib/widget/input_complete.c         g_string_append (temp, entry-&gt;d_name);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L303'>temp</a>              303 lib/widget/input_complete.c             g_string_append_c (temp, PATH_SEP);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L305'>temp</a>              305 lib/widget/input_complete.c         return g_string_free (temp, FALSE);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L381'>temp</a>              381 lib/widget/input_complete.c         GString *temp;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L383'>temp</a>              383 lib/widget/input_complete.c         temp = g_string_new_len (*env_p, p - *env_p);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L387'>temp</a>              387 lib/widget/input_complete.c             g_string_prepend_c (temp, '{');</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L388'>temp</a>              388 lib/widget/input_complete.c             g_string_append_c (temp, '}');</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L390'>temp</a>              390 lib/widget/input_complete.c         g_string_prepend_c (temp, '$');</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L394'>temp</a>              394 lib/widget/input_complete.c         return g_string_free (temp, FALSE);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L537'>temp</a>              537 lib/widget/input_complete.c         GString *temp;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L539'>temp</a>              539 lib/widget/input_complete.c         temp = g_string_sized_new (8);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L542'>temp</a>              542 lib/widget/input_complete.c             g_string_append_c (temp, '@');</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L543'>temp</a>              543 lib/widget/input_complete.c         g_string_append (temp, *host_p);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L546'>temp</a>              546 lib/widget/input_complete.c         return g_string_free (temp, FALSE);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1200'>temp</a>             1200 src/editor/editcmd.c     GString *temp;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1205'>temp</a>             1205 src/editor/editcmd.c     temp = g_string_sized_new (len);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1213'>temp</a>             1213 src/editor/editcmd.c             g_string_append_c (temp, chr);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1216'>temp</a>             1216 src/editor/editcmd.c     return g_string_free (temp, temp-&gt;len == 0);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1230'>temp</a>             1230 src/editor/editcmd.c     GString *temp;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1265'>temp</a>             1265 src/editor/editcmd.c     temp = g_string_new ("");</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1270'>temp</a>             1270 src/editor/editcmd.c         g_string_set_size (temp, 0);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1284'>temp</a>             1284 src/editor/editcmd.c             g_string_append_c (temp, skip);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1287'>temp</a>             1287 src/editor/editcmd.c         if (temp-&gt;len == 0)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1290'>temp</a>             1290 src/editor/editcmd.c         if (current_word != NULL &amp;&amp; strcmp (current_word, temp-&gt;str) == 0)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1299'>temp</a>             1299 src/editor/editcmd.c                  (char *) &amp;temp-&gt;str[word_len], MAX (len, compl[i]-&gt;len) - word_len) == 0)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1322'>temp</a>             1322 src/editor/editcmd.c             recoded = str_convert_to_display (temp-&gt;str);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1325'>temp</a>             1325 src/editor/editcmd.c                 g_string_assign (temp, recoded-&gt;str);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1330'>temp</a>             1330 src/editor/editcmd.c         compl[(*num)++] = g_string_new_len (temp-&gt;str, temp-&gt;len);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1340'>temp</a>             1340 src/editor/editcmd.c     g_string_free (temp, TRUE);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1540'>temp</a>             1540 src/editor/editcmd.c     GString *temp;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1542'>temp</a>             1542 src/editor/editcmd.c     temp = str_convert_to_input (completion);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1544'>temp</a>             1544 src/editor/editcmd.c     for (completion = temp-&gt;str + word_len; *completion != '\0'; completion++)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1546'>temp</a>             1546 src/editor/editcmd.c     g_string_free (temp, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2613'>temp</a>             2613 src/filemanager/file.c     char *temp = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2867'>temp</a>             2867 src/filemanager/file.c                 temp = transform_source (ctx, source_with_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2868'>temp</a>             2868 src/filemanager/file.c                 if (temp == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2884'>temp</a>             2884 src/filemanager/file.c                     temp2 = mc_build_filename (repl_dest, temp, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2885'>temp</a>             2885 src/filemanager/file.c                     g_free (temp);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2980'>temp</a>             2980 src/filemanager/file.c                     temp = transform_source (ctx, source_with_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2981'>temp</a>             2981 src/filemanager/file.c                     if (temp == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2997'>temp</a>             2997 src/filemanager/file.c                         temp2 = mc_build_filename (repl_dest, temp, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2998'>temp</a>             2998 src/filemanager/file.c                         g_free (temp);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3002'>temp</a>             3002 src/filemanager/file.c                         temp = strutils_shell_unescape (temp2);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3017'>temp</a>             3017 src/filemanager/file.c                                 value = copy_dir_dir (tctx, ctx, source_with_path_str, temp,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3020'>temp</a>             3020 src/filemanager/file.c                                 value = copy_file_file (tctx, ctx, source_with_path_str, temp);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3026'>temp</a>             3026 src/filemanager/file.c                                 value = move_dir_dir (tctx, ctx, source_with_path_str, temp);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3028'>temp</a>             3028 src/filemanager/file.c                                 value = move_file_file (tctx, ctx, source_with_path_str, temp);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3037'>temp</a>             3037 src/filemanager/file.c                         g_free (temp);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1707'>temp</a>             1707 src/filemanager/mountlist.c     GSList *temp;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1710'>temp</a>             1710 src/filemanager/mountlist.c     for (temp = mc_mount_list; temp != NULL; temp = g_slist_next (temp))</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1715'>temp</a>             1715 src/filemanager/mountlist.c         me = (struct mount_entry *) temp-&gt;data;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1298'>temp</a>             1298 src/subshell/common.c             GString *temp;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1300'>temp</a>             1300 src/subshell/common.c             temp = subshell_name_quote (translate);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1301'>temp</a>             1301 src/subshell/common.c             write_all (mc_global.tty.subshell_pty, temp-&gt;str, temp-&gt;len);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1302'>temp</a>             1302 src/subshell/common.c             g_string_free (temp, TRUE);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L714'>temp</a>              714 src/vfs/fish/fish.c                 char *temp;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L755'>temp</a>              755 src/vfs/fish/fish.c                     temp = ent-&gt;name;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L757'>temp</a>              757 src/vfs/fish/fish.c                     g_free (temp);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L760'>temp</a>              760 src/vfs/fish/fish.c                     temp = ent-&gt;ino-&gt;linkname;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L762'>temp</a>              762 src/vfs/fish/fish.c                     g_free (temp);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L779'>temp</a>              779 src/vfs/fish/fish.c                     temp = ent-&gt;name;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L781'>temp</a>              781 src/vfs/fish/fish.c                     g_free (temp);</span>
+</pre>
+</body>
+</html>

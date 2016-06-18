@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>fsd</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L594'>fsd</a>               594 src/filemanager/mountlist.c     struct dustat fsd;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L598'>fsd</a>               598 src/filemanager/mountlist.c     if (dustat (stats.st_dev, 0, &amp;fsd, sizeof (fsd)))</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L601'>fsd</a>               601 src/filemanager/mountlist.c     fsb-&gt;f_bsize = fsd.du_bsize;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L602'>fsd</a>               602 src/filemanager/mountlist.c     fsb-&gt;f_blocks = fsd.du_fsize - fsd.du_isize;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L603'>fsd</a>               603 src/filemanager/mountlist.c     fsb-&gt;f_bfree = fsd.du_tfree;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L604'>fsd</a>               604 src/filemanager/mountlist.c     fsb-&gt;f_bavail = fsd.du_tfree;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L605'>fsd</a>               605 src/filemanager/mountlist.c     fsb-&gt;f_files = (fsd.du_isize - 2) * fsd.du_inopb;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L606'>fsd</a>               606 src/filemanager/mountlist.c     fsb-&gt;f_ffree = fsd.du_tinode;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L607'>fsd</a>               607 src/filemanager/mountlist.c     fsb-&gt;f_fsid.val[0] = fsd.du_site;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L608'>fsd</a>               608 src/filemanager/mountlist.c     fsb-&gt;f_fsid.val[1] = fsd.du_pckno;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L867'>fsd</a>               867 src/filemanager/mountlist.c         struct fs_data fsd;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L872'>fsd</a>               872 src/filemanager/mountlist.c             val = getmnt (&amp;offset, &amp;fsd, sizeof (fsd), NOSTAT_MANY, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L879'>fsd</a>               879 src/filemanager/mountlist.c             me-&gt;me_devname = g_strdup (fsd.fd_req.devname);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L880'>fsd</a>               880 src/filemanager/mountlist.c             me-&gt;me_mountdir = g_strdup (fsd.fd_req.path);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L882'>fsd</a>               882 src/filemanager/mountlist.c             me-&gt;me_type = gt_names[fsd.fd_req.fstype];</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L886'>fsd</a>               886 src/filemanager/mountlist.c             me-&gt;me_dev = fsd.fd_req.dev;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1062'>fsd</a>              1062 src/filemanager/mountlist.c                 struct statfs fsd;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1065'>fsd</a>              1065 src/filemanager/mountlist.c                 if (statfs (me-&gt;me_mountdir, &amp;fsd, sizeof (fsd), 0) != -1</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1066'>fsd</a>              1066 src/filemanager/mountlist.c                     &amp;&amp; sysfs (GETFSTYP, fsd.f_fstyp, typebuf) != -1)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1518'>fsd</a>              1518 src/filemanager/mountlist.c         struct statvfs64 fsd;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1520'>fsd</a>              1520 src/filemanager/mountlist.c         if (statvfs64 (file, &amp;fsd) &lt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1525'>fsd</a>              1525 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = fsd.f_frsize</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1526'>fsd</a>              1526 src/filemanager/mountlist.c             ? PROPAGATE_ALL_ONES (fsd.f_frsize)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1527'>fsd</a>              1527 src/filemanager/mountlist.c             : PROPAGATE_ALL_ONES (fsd.f_bsize);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1532'>fsd</a>              1532 src/filemanager/mountlist.c         struct fs_data fsd;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1534'>fsd</a>              1534 src/filemanager/mountlist.c         if (statfs (file, &amp;fsd) != 1)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1538'>fsd</a>              1538 src/filemanager/mountlist.c         fsp-&gt;fsu_blocks = PROPAGATE_ALL_ONES (fsd.fd_req.btot);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1539'>fsd</a>              1539 src/filemanager/mountlist.c         fsp-&gt;fsu_bfree = PROPAGATE_ALL_ONES (fsd.fd_req.bfree);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1540'>fsd</a>              1540 src/filemanager/mountlist.c         fsp-&gt;fsu_bavail = PROPAGATE_TOP_BIT (fsd.fd_req.bfreen);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1541'>fsd</a>              1541 src/filemanager/mountlist.c         fsp-&gt;fsu_bavail_top_bit_set = EXTRACT_TOP_BIT (fsd.fd_req.bfreen) != 0;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1542'>fsd</a>              1542 src/filemanager/mountlist.c         fsp-&gt;fsu_files = PROPAGATE_ALL_ONES (fsd.fd_req.gtot);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1543'>fsd</a>              1543 src/filemanager/mountlist.c         fsp-&gt;fsu_ffree = PROPAGATE_ALL_ONES (fsd.fd_req.gfree);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1550'>fsd</a>              1550 src/filemanager/mountlist.c         struct filsys fsd;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1563'>fsd</a>              1563 src/filemanager/mountlist.c         if (full_read (fd, (char *) &amp;fsd, sizeof (fsd)) != sizeof (fsd))</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1570'>fsd</a>              1570 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = (fsd.s_type == Fs2b ? 1024 : 512);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1571'>fsd</a>              1571 src/filemanager/mountlist.c         fsp-&gt;fsu_blocks = PROPAGATE_ALL_ONES (fsd.s_fsize);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1572'>fsd</a>              1572 src/filemanager/mountlist.c         fsp-&gt;fsu_bfree = PROPAGATE_ALL_ONES (fsd.s_tfree);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1573'>fsd</a>              1573 src/filemanager/mountlist.c         fsp-&gt;fsu_bavail = PROPAGATE_TOP_BIT (fsd.s_tfree);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1574'>fsd</a>              1574 src/filemanager/mountlist.c         fsp-&gt;fsu_bavail_top_bit_set = EXTRACT_TOP_BIT (fsd.s_tfree) != 0;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1575'>fsd</a>              1575 src/filemanager/mountlist.c         fsp-&gt;fsu_files = (fsd.s_isize == -1</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1576'>fsd</a>              1576 src/filemanager/mountlist.c                           ? UINTMAX_MAX : (fsd.s_isize - 2) * INOPB * (fsd.s_type == Fs2b ? 2 : 1));</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1577'>fsd</a>              1577 src/filemanager/mountlist.c         fsp-&gt;fsu_ffree = PROPAGATE_ALL_ONES (fsd.s_tinode);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1581'>fsd</a>              1581 src/filemanager/mountlist.c         struct statfs fsd;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1583'>fsd</a>              1583 src/filemanager/mountlist.c         if (statfs (file, &amp;fsd, sizeof (struct statfs)) != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1586'>fsd</a>              1586 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = PROPAGATE_ALL_ONES (fsd.f_fsize);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1590'>fsd</a>              1590 src/filemanager/mountlist.c         struct statfs fsd;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1592'>fsd</a>              1592 src/filemanager/mountlist.c         if (statfs (file, &amp;fsd) &lt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1595'>fsd</a>              1595 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = PROPAGATE_ALL_ONES (fsd.f_frsize);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1601'>fsd</a>              1601 src/filemanager/mountlist.c         struct statfs fsd;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1603'>fsd</a>              1603 src/filemanager/mountlist.c         if (statfs (file, &amp;fsd) &lt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1606'>fsd</a>              1606 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = PROPAGATE_ALL_ONES (fsd.f_bsize);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1615'>fsd</a>              1615 src/filemanager/mountlist.c         if (fsd.f_blocks == 0x7fffffff / fsd.f_bsize &amp;&amp; fsd.f_spare[0] &gt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1617'>fsd</a>              1617 src/filemanager/mountlist.c             fsd.f_blocks = fsd.f_spare[0];</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1618'>fsd</a>              1618 src/filemanager/mountlist.c             fsd.f_bfree = fsd.f_spare[1];</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1619'>fsd</a>              1619 src/filemanager/mountlist.c             fsd.f_bavail = fsd.f_spare[2];</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1625'>fsd</a>              1625 src/filemanager/mountlist.c         struct statfs fsd;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1627'>fsd</a>              1627 src/filemanager/mountlist.c         if (statfs (file, &amp;fsd) &lt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1630'>fsd</a>              1630 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = PROPAGATE_ALL_ONES (fsd.f_fsize);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1639'>fsd</a>              1639 src/filemanager/mountlist.c         struct statfs fsd;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1641'>fsd</a>              1641 src/filemanager/mountlist.c         if (statfs (file, &amp;fsd, sizeof (fsd), 0) &lt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1648'>fsd</a>              1648 src/filemanager/mountlist.c         fsp-&gt;fsu_blocksize = PROPAGATE_ALL_ONES (fsd.f_bsize);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1659'>fsd</a>              1659 src/filemanager/mountlist.c         fsp-&gt;fsu_blocks = PROPAGATE_ALL_ONES (fsd.f_blocks);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1660'>fsd</a>              1660 src/filemanager/mountlist.c         fsp-&gt;fsu_bfree = PROPAGATE_ALL_ONES (fsd.f_bfree);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1661'>fsd</a>              1661 src/filemanager/mountlist.c         fsp-&gt;fsu_bavail = PROPAGATE_TOP_BIT (fsd.f_bavail);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1662'>fsd</a>              1662 src/filemanager/mountlist.c         fsp-&gt;fsu_bavail_top_bit_set = EXTRACT_TOP_BIT (fsd.f_bavail) != 0;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1663'>fsd</a>              1663 src/filemanager/mountlist.c         fsp-&gt;fsu_files = PROPAGATE_ALL_ONES (fsd.f_files);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1664'>fsd</a>              1664 src/filemanager/mountlist.c         fsp-&gt;fsu_ffree = PROPAGATE_ALL_ONES (fsd.f_ffree);</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>pos_flags</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L253'>pos_flags</a>         253 lib/widget/buttonbar.c     w-&gt;pos_flags = WPOS_KEEP_HORZ | WPOS_KEEP_BOTTOM;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L391'>pos_flags</a>         391 lib/widget/dialog.c     if (mouse_close_dialog &amp;&amp; (wh-&gt;pos_flags &amp; WPOS_FULLSCREEN) == 0</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L724'>pos_flags</a>         724 lib/widget/dialog.c             if ((c-&gt;pos_flags &amp; WPOS_CENTER_HORZ) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L726'>pos_flags</a>         726 lib/widget/dialog.c             else if ((c-&gt;pos_flags &amp; WPOS_KEEP_LEFT) != 0 &amp;&amp; (c-&gt;pos_flags &amp; WPOS_KEEP_RIGHT) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L731'>pos_flags</a>         731 lib/widget/dialog.c             else if ((c-&gt;pos_flags &amp; WPOS_KEEP_LEFT) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L733'>pos_flags</a>         733 lib/widget/dialog.c             else if ((c-&gt;pos_flags &amp; WPOS_KEEP_RIGHT) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L736'>pos_flags</a>         736 lib/widget/dialog.c             if ((c-&gt;pos_flags &amp; WPOS_CENTER_VERT) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L738'>pos_flags</a>         738 lib/widget/dialog.c             else if ((c-&gt;pos_flags &amp; WPOS_KEEP_TOP) != 0 &amp;&amp; (c-&gt;pos_flags &amp; WPOS_KEEP_BOTTOM) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L743'>pos_flags</a>         743 lib/widget/dialog.c             else if ((c-&gt;pos_flags &amp; WPOS_KEEP_TOP) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L745'>pos_flags</a>         745 lib/widget/dialog.c             else if ((c-&gt;pos_flags &amp; WPOS_KEEP_BOTTOM) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L762'>pos_flags</a>         762 lib/widget/dialog.c     if ((w-&gt;pos_flags &amp; WPOS_FULLSCREEN) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L771'>pos_flags</a>         771 lib/widget/dialog.c         if ((w-&gt;pos_flags &amp; WPOS_CENTER_HORZ) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L776'>pos_flags</a>         776 lib/widget/dialog.c         if ((w-&gt;pos_flags &amp; WPOS_CENTER_VERT) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L781'>pos_flags</a>         781 lib/widget/dialog.c         if ((w-&gt;pos_flags &amp; WPOS_TRYUP) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L839'>pos_flags</a>         839 lib/widget/dialog.c dlg_create (gboolean modal, int y1, int x1, int lines, int cols, widget_pos_flags_t pos_flags,</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L846'>pos_flags</a>         846 lib/widget/dialog.c     if ((pos_flags &amp; WPOS_FULLSCREEN) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L858'>pos_flags</a>         858 lib/widget/dialog.c     w-&gt;pos_flags = pos_flags;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L932'>pos_flags</a>         932 lib/widget/dialog.c add_widget_autopos (WDialog * h, void *w, widget_pos_flags_t pos_flags, const void *before)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L943'>pos_flags</a>         943 lib/widget/dialog.c     if ((pos_flags &amp; WPOS_CENTER_HORZ) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L947'>pos_flags</a>         947 lib/widget/dialog.c     if ((pos_flags &amp; WPOS_CENTER_VERT) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L952'>pos_flags</a>         952 lib/widget/dialog.c     widget-&gt;pos_flags = pos_flags;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1055'>pos_flags</a>        1055 lib/widget/dialog.c             if (d-&gt;data != NULL &amp;&amp; (WIDGET (d-&gt;data)-&gt;pos_flags &amp; WPOS_FULLSCREEN) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L108'>pos_flags</a>         108 lib/widget/dialog.h                      widget_pos_flags_t pos_flags, gboolean compact,</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L114'>pos_flags</a>         114 lib/widget/dialog.h unsigned long add_widget_autopos (WDialog * dest, void *w, widget_pos_flags_t pos_flags,</span>
+<span class='curline'><a href='../S/lib--widget--label.c.html#L91'>pos_flags</a>          91 lib/widget/label.c             align = (w-&gt;pos_flags &amp; WPOS_CENTER_HORZ) != 0 ? J_CENTER_LEFT : J_LEFT;</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L66'>pos_flags</a>          66 lib/widget/listbox-window.c     widget_pos_flags_t pos_flags = WPOS_TRYUP;</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L83'>pos_flags</a>          83 lib/widget/listbox-window.c         pos_flags |= WPOS_CENTER;</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L108'>pos_flags</a>         108 lib/widget/listbox-window.c         dlg_create (TRUE, ypos, xpos, lines + space, cols + space, pos_flags, FALSE, listbox_colors,</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L95'>pos_flags</a>          95 lib/widget/quick.c     label.quick_widget-&gt;pos_flags = quick_widget-&gt;pos_flags;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L567'>pos_flags</a>         567 lib/widget/quick.c             id = add_widget_autopos (dd, item-&gt;widget, item-&gt;quick_widget-&gt;pos_flags, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L16'>pos_flags</a>          16 lib/widget/quick.h     .pos_flags = WPOS_KEEP_DEFAULT,                                             \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L30'>pos_flags</a>          30 lib/widget/quick.h     .pos_flags = WPOS_KEEP_DEFAULT,                                             \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L45'>pos_flags</a>          45 lib/widget/quick.h     .pos_flags = WPOS_KEEP_DEFAULT,                                             \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L66'>pos_flags</a>          66 lib/widget/quick.h     .pos_flags = WPOS_KEEP_DEFAULT,                                             \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L87'>pos_flags</a>          87 lib/widget/quick.h     .pos_flags = WPOS_KEEP_DEFAULT,                                             \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L101'>pos_flags</a>         101 lib/widget/quick.h     .pos_flags = WPOS_KEEP_DEFAULT,                                             \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L116'>pos_flags</a>         116 lib/widget/quick.h     .pos_flags = WPOS_KEEP_DEFAULT,                                             \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L129'>pos_flags</a>         129 lib/widget/quick.h     .pos_flags = WPOS_KEEP_DEFAULT,                                             \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L144'>pos_flags</a>         144 lib/widget/quick.h     .pos_flags = WPOS_KEEP_DEFAULT,                                             \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L158'>pos_flags</a>         158 lib/widget/quick.h     .pos_flags = WPOS_KEEP_DEFAULT,                                             \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L173'>pos_flags</a>         173 lib/widget/quick.h     .pos_flags = WPOS_KEEP_DEFAULT,                                             \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L188'>pos_flags</a>         188 lib/widget/quick.h     .pos_flags = WPOS_KEEP_DEFAULT,                                             \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L203'>pos_flags</a>         203 lib/widget/quick.h     .pos_flags = WPOS_KEEP_DEFAULT,                                             \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L222'>pos_flags</a>         222 lib/widget/quick.h     .pos_flags = WPOS_KEEP_DEFAULT,                                             \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L273'>pos_flags</a>         273 lib/widget/quick.h     widget_pos_flags_t pos_flags;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L147'>pos_flags</a>         147 lib/widget/widget-common.c     w-&gt;pos_flags = WPOS_KEEP_DEFAULT;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.h.html#L128'>pos_flags</a>         128 lib/widget/widget-common.h     widget_pos_flags_t pos_flags;       /* repositioning flags */</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L73'>pos_flags</a>          73 lib/widget/wtools.c         if ((w-&gt;pos_flags &amp; WPOS_CENTER) == 0)</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L96'>pos_flags</a>          96 lib/widget/wtools.c             if (prev_dlg == NULL || (WIDGET (prev_dlg)-&gt;pos_flags &amp; WPOS_FULLSCREEN) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L282'>pos_flags</a>         282 lib/widget/wtools.c     widget_pos_flags_t pos_flags =</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L308'>pos_flags</a>         308 lib/widget/wtools.c         dlg_create (TRUE, 0, 0, lines, cols, pos_flags, FALSE, query_colors, query_default_callback,</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L161'>pos_flags</a>         161 src/editor/editwidget.c     quick_widgets[0].pos_flags = WPOS_KEEP_TOP | WPOS_CENTER_HORZ;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L162'>pos_flags</a>         162 src/editor/editwidget.c     quick_widgets[2].pos_flags = WPOS_KEEP_TOP | WPOS_CENTER_HORZ;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L163'>pos_flags</a>         163 src/editor/editwidget.c     quick_widgets[4].pos_flags = WPOS_KEEP_TOP | WPOS_CENTER_HORZ;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L403'>pos_flags</a>         403 src/filemanager/filegui.c                         rd_widgets [i].pos_flags, ui-&gt;replace_dlg-&gt;current-&gt;data)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L408'>pos_flags</a>         408 src/filemanager/filegui.c     add_widget_autopos (ui-&gt;replace_dlg, label2, rd_widgets [i].pos_flags, \</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L421'>pos_flags</a>         421 src/filemanager/filegui.c         widget_pos_flags_t pos_flags;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L175'>pos_flags</a>         175 src/filemanager/hotlist.c     widget_pos_flags_t pos_flags;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L806'>pos_flags</a>         806 src/filemanager/hotlist.c                                 hotlist_but[i].pos_flags, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L857'>pos_flags</a>         857 src/filemanager/hotlist.c                                 hotlist_but[i].pos_flags, NULL);</span>
+</pre>
+</body>
+</html>

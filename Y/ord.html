@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>ord</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--diffviewer--internal.h.html#L115'>ord</a>               115 src/diffviewer/internal.h     diff_place_t ord;</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L153'>ord</a>               153 src/diffviewer/search.c     if ((size_t) dview-&gt;search.last_accessed_num_line &gt;= dview-&gt;a[dview-&gt;ord]-&gt;len)</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L154'>ord</a>               154 src/diffviewer/search.c         dview-&gt;search.last_accessed_num_line = (ssize_t) dview-&gt;a[dview-&gt;ord]-&gt;len;</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L160'>ord</a>               160 src/diffviewer/search.c         p = (DIFFLN *) &amp; g_array_index (dview-&gt;a[dview-&gt;ord], DIFFLN, (size_t) ind);</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L184'>ord</a>               184 src/diffviewer/search.c     else if ((size_t) dview-&gt;search.last_accessed_num_line &gt;= dview-&gt;a[dview-&gt;ord]-&gt;len)</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L186'>ord</a>               186 src/diffviewer/search.c         dview-&gt;search.last_accessed_num_line = (ssize_t) dview-&gt;a[dview-&gt;ord]-&gt;len;</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L190'>ord</a>               190 src/diffviewer/search.c     for (ind = (size_t)++ dview-&gt;search.last_accessed_num_line; ind &lt; dview-&gt;a[dview-&gt;ord]-&gt;len;</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L195'>ord</a>               195 src/diffviewer/search.c         p = (DIFFLN *) &amp; g_array_index (dview-&gt;a[dview-&gt;ord], DIFFLN, ind);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L856'>ord</a>               856 src/diffviewer/ydiff.c dff_reparse (diff_place_t ord, const char *filename, const GArray * ops, DFUNC printer, void *ctx)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L873'>ord</a>               873 src/diffviewer/ydiff.c     ord &amp;= 1;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L874'>ord</a>               874 src/diffviewer/ydiff.c     eff = ord;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L878'>ord</a>               878 src/diffviewer/ydiff.c     if (ord != 0)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L885'>ord</a>               885 src/diffviewer/ydiff.c #define T1 a[ ord^1 ][0]</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L886'>ord</a>               886 src/diffviewer/ydiff.c #define T2 a[ ord^1 ][1]</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1245'>ord</a>              1245 src/diffviewer/ydiff.c is_inside (int k, GArray * hdiff, diff_place_t ord)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1255'>ord</a>              1255 src/diffviewer/ydiff.c         start = (*b)[ord].off;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1256'>ord</a>              1256 src/diffviewer/ydiff.c         end = start + (*b)[ord].len;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1462'>ord</a>              1462 src/diffviewer/ydiff.c            gboolean show_cr, GArray * hdiff, diff_place_t ord, char *att)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1487'>ord</a>              1487 src/diffviewer/ydiff.c                         *att++ = is_inside (k, hdiff, ord);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1499'>ord</a>              1499 src/diffviewer/ydiff.c                         *att++ = is_inside (k, hdiff, ord);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1501'>ord</a>              1501 src/diffviewer/ydiff.c                         *att++ = is_inside (k, hdiff, ord);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1507'>ord</a>              1507 src/diffviewer/ydiff.c                         *att++ = is_inside (k, hdiff, ord);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1529'>ord</a>              1529 src/diffviewer/ydiff.c                 *att++ = is_inside (k, hdiff, ord);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2465'>ord</a>              2465 src/diffviewer/ydiff.c     dview-&gt;ord = DIFF_LEFT;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2522'>ord</a>              2522 src/diffviewer/ydiff.c dview_display_file (const WDiff * dview, diff_place_t ord, int r, int c, int height, int width)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2527'>ord</a>              2527 src/diffviewer/ydiff.c     FBUF *f = dview-&gt;f[ord];</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2567'>ord</a>              2567 src/diffviewer/ydiff.c     for (i = dview-&gt;skip_rows, j = 0; i &lt; dview-&gt;a[ord]-&gt;len &amp;&amp; j &lt; height; j++, i++)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2572'>ord</a>              2572 src/diffviewer/ydiff.c         p = (DIFFLN *) &amp; g_array_index (dview-&gt;a[ord], DIFFLN, i);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2608'>ord</a>              2608 src/diffviewer/ydiff.c                                g_ptr_array_index (dview-&gt;hdiff, i), ord, att);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2755'>ord</a>              2755 src/diffviewer/ydiff.c dview_status (const WDiff * dview, diff_place_t ord, int width, int c)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2766'>ord</a>              2766 src/diffviewer/ydiff.c     get_line_numbers (dview-&gt;a[ord], dview-&gt;skip_rows, &amp;linenum, &amp;lineofs);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2772'>ord</a>              2772 src/diffviewer/ydiff.c     vpath = vfs_path_from_str (dview-&gt;label[ord]);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2776'>ord</a>              2776 src/diffviewer/ydiff.c     if (ord == DIFF_LEFT)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2777'>ord</a>              2777 src/diffviewer/ydiff.c         tty_printf ("%s%-*s %6d+%-4d Col %-4d ", dview-&gt;merged[ord] ? "* " : "  ", filename_width,</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2780'>ord</a>              2780 src/diffviewer/ydiff.c         tty_printf ("%s%-*s %6d+%-4d Dif %-4d ", dview-&gt;merged[ord] ? "* " : "  ", filename_width,</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2867'>ord</a>              2867 src/diffviewer/ydiff.c         dview_status (dview, dview-&gt;ord, width1, 0);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2868'>ord</a>              2868 src/diffviewer/ydiff.c         dview_display_file (dview, dview-&gt;ord, 2, 1, height - 2, width1 - 2);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2872'>ord</a>              2872 src/diffviewer/ydiff.c         dview_status (dview, dview-&gt;ord ^ 1, width2, width1);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2873'>ord</a>              2873 src/diffviewer/ydiff.c         dview_display_file (dview, dview-&gt;ord ^ 1, 2, width1 + 1, height - 2, width2 - 2);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2880'>ord</a>              2880 src/diffviewer/ydiff.c dview_edit (WDiff * dview, diff_place_t ord)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2895'>ord</a>              2895 src/diffviewer/ydiff.c     get_line_numbers (dview-&gt;a[ord], dview-&gt;skip_rows, &amp;linenum, &amp;lineofs);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2903'>ord</a>              2903 src/diffviewer/ydiff.c         tmp_vpath = vfs_path_from_str (dview-&gt;file[ord]);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2916'>ord</a>              2916 src/diffviewer/ydiff.c dview_goto_cmd (WDiff * dview, diff_place_t ord)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2931'>ord</a>              2931 src/diffviewer/ydiff.c         input_dialog (_(title[ord]), _("Enter line:"), MC_HISTORY_YDIFF_GOTO_LINE,</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2943'>ord</a>              2943 src/diffviewer/ydiff.c                 for (; i &lt; dview-&gt;a[ord]-&gt;len; i++)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2947'>ord</a>              2947 src/diffviewer/ydiff.c                     p = &amp;g_array_index (dview-&gt;a[ord], DIFFLN, i);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3173'>ord</a>              3173 src/diffviewer/ydiff.c         dview-&gt;ord ^= 1;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3190'>ord</a>              3190 src/diffviewer/ydiff.c         dview_edit (dview, dview-&gt;ord);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3201'>ord</a>              3201 src/diffviewer/ydiff.c         dview_edit (dview, dview-&gt;ord ^ 1);</span>
+</pre>
+</body>
+</html>

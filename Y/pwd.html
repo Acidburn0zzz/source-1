@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>pwd</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--shell.c.html#L107'>pwd</a>               107 lib/shell.c            struct passwd *pwd;</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L109'>pwd</a>               109 lib/shell.c            pwd = getpwuid (geteuid ());</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L110'>pwd</a>               110 lib/shell.c            if (pwd != NULL)</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L111'>pwd</a>               111 lib/shell.c                shell_name = g_strdup (pwd-&gt;pw_shell);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L288'>pwd</a>               288 lib/utilunix.c     struct passwd *pwd;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L296'>pwd</a>               296 lib/utilunix.c     pwd = getpwuid (uid);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L297'>pwd</a>               297 lib/utilunix.c     if (pwd != NULL)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L299'>pwd</a>               299 lib/utilunix.c         i_cache_add ((int) uid, uid_cache, UID_CACHE_SIZE, pwd-&gt;pw_name, (int *) &amp;uid_last);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L300'>pwd</a>               300 lib/utilunix.c         return pwd-&gt;pw_name;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L840'>pwd</a>               840 lib/vfs/interface.c     struct passwd *pwd;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L853'>pwd</a>               853 lib/vfs/interface.c     pwd = getpwuid (getuid ());</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L855'>pwd</a>               855 lib/vfs/interface.c     if (pwd)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L856'>pwd</a>               856 lib/vfs/interface.c         g_snprintf (buffer, sizeof (buffer), "%s/mc-%s", sys_tmp, pwd-&gt;pw_name);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--client.h.html#L91'>pwd</a>                91 src/vfs/smbfs/helpers/include/client.h     struct pwd_info pwd;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L342'>pwd</a>               342 src/vfs/smbfs/helpers/include/proto.h void pwd_init (struct pwd_info *pwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L343'>pwd</a>               343 src/vfs/smbfs/helpers/include/proto.h void pwd_obfuscate_key (struct pwd_info *pwd, uint32 int_key, char *str_key);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L344'>pwd</a>               344 src/vfs/smbfs/helpers/include/proto.h void pwd_read (struct pwd_info *pwd, char *passwd_report, BOOL do_encrypt);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L345'>pwd</a>               345 src/vfs/smbfs/helpers/include/proto.h void pwd_set_nullpwd (struct pwd_info *pwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L346'>pwd</a>               346 src/vfs/smbfs/helpers/include/proto.h void pwd_set_cleartext (struct pwd_info *pwd, char *clr);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L347'>pwd</a>               347 src/vfs/smbfs/helpers/include/proto.h void pwd_get_cleartext (struct pwd_info *pwd, char *clr);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L348'>pwd</a>               348 src/vfs/smbfs/helpers/include/proto.h void pwd_set_lm_nt_16 (struct pwd_info *pwd, uchar lm_pwd[16], uchar nt_pwd[16]);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L349'>pwd</a>               349 src/vfs/smbfs/helpers/include/proto.h void pwd_get_lm_nt_16 (struct pwd_info *pwd, uchar lm_pwd[16], uchar nt_pwd[16]);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L350'>pwd</a>               350 src/vfs/smbfs/helpers/include/proto.h void pwd_make_lm_nt_16 (struct pwd_info *pwd, char *clr);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L351'>pwd</a>               351 src/vfs/smbfs/helpers/include/proto.h void pwd_make_lm_nt_owf (struct pwd_info *pwd, uchar cryptkey[8]);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L352'>pwd</a>               352 src/vfs/smbfs/helpers/include/proto.h void pwd_get_lm_nt_owf (struct pwd_info *pwd, uchar lm_owf[24], uchar nt_owf[24]);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L369'>pwd</a>               369 src/vfs/smbfs/helpers/include/proto.h void nt_lm_owf_gen (char *pwd, uchar nt_p16[16], uchar p16[16]);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2844'>pwd</a>              2844 src/vfs/smbfs/helpers/libsmb/clientgen.c     if (cli-&gt;pwd.cleartext || cli-&gt;pwd.null_pwd)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2849'>pwd</a>              2849 src/vfs/smbfs/helpers/libsmb/clientgen.c         if (cli-&gt;pwd.null_pwd)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2858'>pwd</a>              2858 src/vfs/smbfs/helpers/libsmb/clientgen.c             pwd_get_cleartext (&amp;(cli-&gt;pwd), passwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2892'>pwd</a>              2892 src/vfs/smbfs/helpers/libsmb/clientgen.c         pwd_make_lm_nt_owf (&amp;(cli-&gt;pwd), cli-&gt;cryptkey);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2893'>pwd</a>              2893 src/vfs/smbfs/helpers/libsmb/clientgen.c         pwd_get_lm_nt_owf (&amp;(cli-&gt;pwd), lm_sess_pwd, nt_sess_pwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L36'>pwd</a>                36 src/vfs/smbfs/helpers/libsmb/pwd_cache.c pwd_init (struct pwd_info *pwd)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L38'>pwd</a>                38 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     memset ((char *) pwd-&gt;password, '\0', sizeof (pwd-&gt;password));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L39'>pwd</a>                39 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     memset ((char *) pwd-&gt;smb_lm_pwd, '\0', sizeof (pwd-&gt;smb_lm_pwd));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L40'>pwd</a>                40 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     memset ((char *) pwd-&gt;smb_nt_pwd, '\0', sizeof (pwd-&gt;smb_nt_pwd));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L41'>pwd</a>                41 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     memset ((char *) pwd-&gt;smb_lm_owf, '\0', sizeof (pwd-&gt;smb_lm_owf));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L42'>pwd</a>                42 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     memset ((char *) pwd-&gt;smb_nt_owf, '\0', sizeof (pwd-&gt;smb_nt_owf));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L44'>pwd</a>                44 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd-&gt;null_pwd = True;       /* safest option... */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L45'>pwd</a>                45 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd-&gt;cleartext = False;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L46'>pwd</a>                46 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd-&gt;crypted = False;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L53'>pwd</a>                53 src/vfs/smbfs/helpers/libsmb/pwd_cache.c pwd_deobfuscate (struct pwd_info *pwd)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L55'>pwd</a>                55 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     (void) pwd;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L62'>pwd</a>                62 src/vfs/smbfs/helpers/libsmb/pwd_cache.c pwd_obfuscate (struct pwd_info *pwd)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L64'>pwd</a>                64 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     (void) pwd;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L71'>pwd</a>                71 src/vfs/smbfs/helpers/libsmb/pwd_cache.c pwd_obfuscate_key (struct pwd_info *pwd, uint32 int_key, char *str_key)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L73'>pwd</a>                73 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     (void) pwd;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L83'>pwd</a>                83 src/vfs/smbfs/helpers/libsmb/pwd_cache.c pwd_read (struct pwd_info *pwd, char *passwd_report, BOOL do_encrypt)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L88'>pwd</a>                88 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd_init (pwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L94'>pwd</a>                94 src/vfs/smbfs/helpers/libsmb/pwd_cache.c         pwd_set_nullpwd (pwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L98'>pwd</a>                98 src/vfs/smbfs/helpers/libsmb/pwd_cache.c         pwd_make_lm_nt_16 (pwd, user_pass);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L102'>pwd</a>               102 src/vfs/smbfs/helpers/libsmb/pwd_cache.c         pwd_set_cleartext (pwd, user_pass);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L111'>pwd</a>               111 src/vfs/smbfs/helpers/libsmb/pwd_cache.c pwd_set_nullpwd (struct pwd_info *pwd)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L113'>pwd</a>               113 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd_init (pwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L115'>pwd</a>               115 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd-&gt;cleartext = False;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L116'>pwd</a>               116 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd-&gt;null_pwd = True;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L117'>pwd</a>               117 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd-&gt;crypted = False;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L124'>pwd</a>               124 src/vfs/smbfs/helpers/libsmb/pwd_cache.c pwd_set_cleartext (struct pwd_info *pwd, char *clr)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L126'>pwd</a>               126 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd_init (pwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L127'>pwd</a>               127 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     fstrcpy (pwd-&gt;password, clr);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L128'>pwd</a>               128 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd-&gt;cleartext = True;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L129'>pwd</a>               129 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd-&gt;null_pwd = False;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L130'>pwd</a>               130 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd-&gt;crypted = False;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L132'>pwd</a>               132 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd_obfuscate (pwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L139'>pwd</a>               139 src/vfs/smbfs/helpers/libsmb/pwd_cache.c pwd_get_cleartext (struct pwd_info *pwd, char *clr)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L141'>pwd</a>               141 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd_deobfuscate (pwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L142'>pwd</a>               142 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     if (pwd-&gt;cleartext)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L144'>pwd</a>               144 src/vfs/smbfs/helpers/libsmb/pwd_cache.c         fstrcpy (clr, pwd-&gt;password);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L150'>pwd</a>               150 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd_obfuscate (pwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L157'>pwd</a>               157 src/vfs/smbfs/helpers/libsmb/pwd_cache.c pwd_set_lm_nt_16 (struct pwd_info *pwd, uchar lm_pwd[16], uchar nt_pwd[16])</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L159'>pwd</a>               159 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd_init (pwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L163'>pwd</a>               163 src/vfs/smbfs/helpers/libsmb/pwd_cache.c         memcpy (pwd-&gt;smb_lm_pwd, lm_pwd, 16);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L167'>pwd</a>               167 src/vfs/smbfs/helpers/libsmb/pwd_cache.c         memset ((char *) pwd-&gt;smb_lm_pwd, '\0', 16);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L172'>pwd</a>               172 src/vfs/smbfs/helpers/libsmb/pwd_cache.c         memcpy (pwd-&gt;smb_nt_pwd, nt_pwd, 16);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L176'>pwd</a>               176 src/vfs/smbfs/helpers/libsmb/pwd_cache.c         memset ((char *) pwd-&gt;smb_nt_pwd, '\0', 16);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L179'>pwd</a>               179 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd-&gt;null_pwd = False;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L180'>pwd</a>               180 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd-&gt;cleartext = False;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L181'>pwd</a>               181 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd-&gt;crypted = False;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L183'>pwd</a>               183 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd_obfuscate (pwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L190'>pwd</a>               190 src/vfs/smbfs/helpers/libsmb/pwd_cache.c pwd_get_lm_nt_16 (struct pwd_info *pwd, uchar lm_pwd[16], uchar nt_pwd[16])</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L192'>pwd</a>               192 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd_deobfuscate (pwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L195'>pwd</a>               195 src/vfs/smbfs/helpers/libsmb/pwd_cache.c         memcpy (lm_pwd, pwd-&gt;smb_lm_pwd, 16);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L199'>pwd</a>               199 src/vfs/smbfs/helpers/libsmb/pwd_cache.c         memcpy (nt_pwd, pwd-&gt;smb_nt_pwd, 16);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L201'>pwd</a>               201 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd_obfuscate (pwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L208'>pwd</a>               208 src/vfs/smbfs/helpers/libsmb/pwd_cache.c pwd_make_lm_nt_16 (struct pwd_info *pwd, char *clr)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L210'>pwd</a>               210 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd_init (pwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L212'>pwd</a>               212 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     nt_lm_owf_gen (clr, pwd-&gt;smb_nt_pwd, pwd-&gt;smb_lm_pwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L213'>pwd</a>               213 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd-&gt;null_pwd = False;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L214'>pwd</a>               214 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd-&gt;cleartext = False;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L215'>pwd</a>               215 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd-&gt;crypted = False;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L217'>pwd</a>               217 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd_obfuscate (pwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L224'>pwd</a>               224 src/vfs/smbfs/helpers/libsmb/pwd_cache.c pwd_make_lm_nt_owf (struct pwd_info *pwd, uchar cryptkey[8])</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L226'>pwd</a>               226 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd_deobfuscate (pwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L233'>pwd</a>               233 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     SMBOWFencrypt (pwd-&gt;smb_nt_pwd, cryptkey, pwd-&gt;smb_nt_owf);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L237'>pwd</a>               237 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     dump_data (100, (char *) pwd-&gt;smb_nt_owf, sizeof (pwd-&gt;smb_nt_owf));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L239'>pwd</a>               239 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     dump_data (100, (char *) pwd-&gt;smb_nt_pwd, sizeof (pwd-&gt;smb_nt_pwd));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L242'>pwd</a>               242 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     SMBOWFencrypt (pwd-&gt;smb_lm_pwd, cryptkey, pwd-&gt;smb_lm_owf);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L246'>pwd</a>               246 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     dump_data (100, (char *) pwd-&gt;smb_lm_owf, sizeof (pwd-&gt;smb_lm_owf));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L248'>pwd</a>               248 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     dump_data (100, (char *) pwd-&gt;smb_lm_pwd, sizeof (pwd-&gt;smb_lm_pwd));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L251'>pwd</a>               251 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd-&gt;crypted = True;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L253'>pwd</a>               253 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd_obfuscate (pwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L260'>pwd</a>               260 src/vfs/smbfs/helpers/libsmb/pwd_cache.c pwd_get_lm_nt_owf (struct pwd_info *pwd, uchar lm_owf[24], uchar nt_owf[24])</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L262'>pwd</a>               262 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd_deobfuscate (pwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L265'>pwd</a>               265 src/vfs/smbfs/helpers/libsmb/pwd_cache.c         memcpy (lm_owf, pwd-&gt;smb_lm_owf, 24);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L269'>pwd</a>               269 src/vfs/smbfs/helpers/libsmb/pwd_cache.c         memcpy (nt_owf, pwd-&gt;smb_nt_owf, 24);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--pwd_cache.c.html#L271'>pwd</a>               271 src/vfs/smbfs/helpers/libsmb/pwd_cache.c     pwd_obfuscate (pwd);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbencrypt.c.html#L121'>pwd</a>               121 src/vfs/smbfs/helpers/libsmb/smbencrypt.c nt_lm_owf_gen (char *pwd, uchar nt_p16[16], uchar p16[16])</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbencrypt.c.html#L126'>pwd</a>               126 src/vfs/smbfs/helpers/libsmb/smbencrypt.c     safe_strcpy (passwd, pwd, sizeof (passwd) - 1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1077'>pwd</a>              1077 src/vfs/smbfs/smbfs.c         pwd_init (&amp;(c-&gt;pwd));   /* should be moved into cli_initialise()? */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1078'>pwd</a>              1078 src/vfs/smbfs/smbfs.c         pwd_set_cleartext (&amp;(c-&gt;pwd), current_bucket-&gt;password);</span>
+</pre>
+</body>
+</html>

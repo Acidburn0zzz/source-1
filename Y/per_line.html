@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>per_line</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L164'>per_line</a>          164 src/vfs/smbfs/helpers/include/proto.h void out_data (FILE * f, char *buf1, int len, int per_line);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2973'>per_line</a>         2973 src/vfs/smbfs/helpers/lib/util.c out_data (FILE * f, char *buf1, int len, int per_line)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2987'>per_line</a>         2987 src/vfs/smbfs/helpers/lib/util.c         if (i % (per_line / 2) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2989'>per_line</a>         2989 src/vfs/smbfs/helpers/lib/util.c         if (i % per_line == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2991'>per_line</a>         2991 src/vfs/smbfs/helpers/lib/util.c             out_ascii (f, &amp;buf[i - per_line], per_line / 2);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2993'>per_line</a>         2993 src/vfs/smbfs/helpers/lib/util.c             out_ascii (f, &amp;buf[i - per_line / 2], per_line / 2);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2999'>per_line</a>         2999 src/vfs/smbfs/helpers/lib/util.c     if ((i % per_line) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L3003'>per_line</a>         3003 src/vfs/smbfs/helpers/lib/util.c         n = per_line - (i % per_line);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L3005'>per_line</a>         3005 src/vfs/smbfs/helpers/lib/util.c         if (n &gt; (per_line / 2))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L3011'>per_line</a>         3011 src/vfs/smbfs/helpers/lib/util.c         n = MIN (per_line / 2, i % per_line);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L3012'>per_line</a>         3012 src/vfs/smbfs/helpers/lib/util.c         out_ascii (f, &amp;buf[i - (i % per_line)], n);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L3014'>per_line</a>         3014 src/vfs/smbfs/helpers/lib/util.c         n = (i % per_line) - n;</span>
+</pre>
+</body>
+</html>

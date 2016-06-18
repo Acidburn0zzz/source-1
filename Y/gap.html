@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>gap</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L945'>gap</a>               945 lib/widget/menu.c     int gap;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L950'>gap</a>               950 lib/widget/menu.c     gap = WIDGET (menubar)-&gt;cols - 2;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L959'>gap</a>               959 lib/widget/menu.c         gap -= menu-&gt;start_x;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L963'>gap</a>               963 lib/widget/menu.c         gap = 1;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L965'>gap</a>               965 lib/widget/menu.c         gap /= (g_list_length (menubar-&gt;menu) - 1);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L967'>gap</a>               967 lib/widget/menu.c     if (gap &lt;= 0)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L970'>gap</a>               970 lib/widget/menu.c         gap = 1;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L972'>gap</a>               972 lib/widget/menu.c     else if (gap &gt;= 3)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L973'>gap</a>               973 lib/widget/menu.c         gap = 3;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L982'>gap</a>               982 lib/widget/menu.c         start_x += len + gap;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L205'>gap</a>               205 src/editor/editdraw.c     const int gap = 3;          /* between the filename and the status */</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L224'>gap</a>               224 src/editor/editdraw.c     if (fname_len + gap + status_len + right_gap &gt;= w)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L226'>gap</a>               226 src/editor/editdraw.c         if (preferred_fname_len + gap + status_len + right_gap &gt;= w)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L229'>gap</a>               229 src/editor/editdraw.c             fname_len = w - (gap + status_len + right_gap);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L235'>gap</a>               235 src/editor/editdraw.c     printwstr (fname, fname_len + gap);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L236'>gap</a>               236 src/editor/editdraw.c     printwstr (status, w - (fname_len + gap));</span>
+</pre>
+</body>
+</html>

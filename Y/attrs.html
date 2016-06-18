@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>attrs</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L149'>attrs</a>             149 lib/skin/colors.c     mc_skin_color-&gt;attrs = (items_count &gt; 2 &amp;&amp; values[2][0]) ? g_strstrip (g_strdup (values[2])) :</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L150'>attrs</a>             150 lib/skin/colors.c         (tmp != NULL) ? g_strdup (tmp-&gt;attrs) : NULL;</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L156'>attrs</a>             156 lib/skin/colors.c                                    mc_skin_color-&gt;attrs, FALSE);</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L172'>attrs</a>             172 lib/skin/colors.c         mc_skin_color-&gt;attrs = NULL;</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L175'>attrs</a>             175 lib/skin/colors.c                                        mc_skin_color-&gt;attrs, FALSE);</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L319'>attrs</a>             319 lib/skin/colors.c     tty_color_set_defaults (mc_skin_color-&gt;fgcolor, mc_skin_color-&gt;bgcolor, mc_skin_color-&gt;attrs);</span>
+<span class='curline'><a href='../S/lib--skin--common.c.html#L58'>attrs</a>              58 lib/skin/common.c     g_free (mc_skin_color-&gt;attrs);</span>
+<span class='curline'><a href='../S/lib--skin--internal.h.html#L17'>attrs</a>              17 lib/skin/internal.h     gchar *attrs;</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L178'>attrs</a>             178 lib/tty/color-internal.c tty_attr_get_bits (const char *attrs)</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L182'>attrs</a>             182 lib/tty/color-internal.c     if (attrs != NULL)</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L187'>attrs</a>             187 lib/tty/color-internal.c         attr_list = g_strsplit (attrs, "+", -1);</span>
+<span class='curline'><a href='../S/lib--tty--color.c.html#L154'>attrs</a>             154 lib/tty/color.c tty_try_alloc_color_pair2 (const char *fg, const char *bg, const char *attrs,</span>
+<span class='curline'><a href='../S/lib--tty--color.c.html#L165'>attrs</a>             165 lib/tty/color.c     if (attrs == NULL || !strcmp (attrs, "base"))</span>
+<span class='curline'><a href='../S/lib--tty--color.c.html#L166'>attrs</a>             166 lib/tty/color.c         attrs = tty_color_defaults__attrs;</span>
+<span class='curline'><a href='../S/lib--tty--color.c.html#L170'>attrs</a>             170 lib/tty/color.c     attr = tty_attr_get_bits (attrs);</span>
+<span class='curline'><a href='../S/lib--tty--color.c.html#L208'>attrs</a>             208 lib/tty/color.c tty_try_alloc_color_pair (const char *fg, const char *bg, const char *attrs)</span>
+<span class='curline'><a href='../S/lib--tty--color.c.html#L210'>attrs</a>             210 lib/tty/color.c     return tty_try_alloc_color_pair2 (fg, bg, attrs, TRUE);</span>
+<span class='curline'><a href='../S/lib--tty--color.c.html#L232'>attrs</a>             232 lib/tty/color.c tty_color_set_defaults (const char *fgcolor, const char *bgcolor, const char *attrs)</span>
+<span class='curline'><a href='../S/lib--tty--color.c.html#L240'>attrs</a>             240 lib/tty/color.c     tty_color_defaults__attrs = g_strdup (attrs);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L798'>attrs</a>             798 src/editor/syntax.c this_try_alloc_color_pair (const char *fg, const char *bg, const char *attrs)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L806'>attrs</a>             806 src/editor/syntax.c     if (attrs != NULL &amp;&amp; *attrs == '\0')</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L807'>attrs</a>             807 src/editor/syntax.c         attrs = NULL;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L858'>attrs</a>             858 src/editor/syntax.c     if (attrs != NULL)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L860'>attrs</a>             860 src/editor/syntax.c         g_strlcpy (a, attrs, sizeof (a));</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L868'>attrs</a>             868 src/editor/syntax.c         attrs = a;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L870'>attrs</a>             870 src/editor/syntax.c     return tty_try_alloc_color_pair (fg, bg, attrs);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L925'>attrs</a>             925 src/editor/syntax.c     char *fg, *bg, *attrs;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1098'>attrs</a>            1098 src/editor/syntax.c             attrs = *a;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1103'>attrs</a>            1103 src/editor/syntax.c             g_strlcpy (last_attrs, attrs != NULL ? attrs : "", sizeof (last_attrs));</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1104'>attrs</a>            1104 src/editor/syntax.c             k-&gt;color = this_try_alloc_color_pair (fg, bg, attrs);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1163'>attrs</a>            1163 src/editor/syntax.c             attrs = *a;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1170'>attrs</a>            1170 src/editor/syntax.c             if (attrs == NULL)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1171'>attrs</a>            1171 src/editor/syntax.c                 attrs = last_attrs;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1172'>attrs</a>            1172 src/editor/syntax.c             k-&gt;color = this_try_alloc_color_pair (fg, bg, attrs);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L124'>attrs</a>             124 src/vfs/sftpfs/dir.c     LIBSSH2_SFTP_ATTRIBUTES attrs;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L133'>attrs</a>             133 src/vfs/sftpfs/dir.c         rc = libssh2_sftp_readdir (sftpfs_dir-&gt;handle, mem, sizeof (mem), &amp;attrs);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L178'>attrs</a>             178 src/vfs/sftpfs/file.c     LIBSSH2_SFTP_ATTRIBUTES attrs;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L191'>attrs</a>             191 src/vfs/sftpfs/file.c         res = libssh2_sftp_fstat_ex (sftpfs_fh-&gt;handle, &amp;attrs, 0);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L206'>attrs</a>             206 src/vfs/sftpfs/file.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_UIDGID) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L208'>attrs</a>             208 src/vfs/sftpfs/file.c         buf-&gt;st_uid = attrs.uid;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L209'>attrs</a>             209 src/vfs/sftpfs/file.c         buf-&gt;st_gid = attrs.gid;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L212'>attrs</a>             212 src/vfs/sftpfs/file.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_ACMODTIME) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L214'>attrs</a>             214 src/vfs/sftpfs/file.c         buf-&gt;st_atime = attrs.atime;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L215'>attrs</a>             215 src/vfs/sftpfs/file.c         buf-&gt;st_mtime = attrs.mtime;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L216'>attrs</a>             216 src/vfs/sftpfs/file.c         buf-&gt;st_ctime = attrs.mtime;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L219'>attrs</a>             219 src/vfs/sftpfs/file.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_SIZE) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L220'>attrs</a>             220 src/vfs/sftpfs/file.c         buf-&gt;st_size = attrs.filesize;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L222'>attrs</a>             222 src/vfs/sftpfs/file.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_PERMISSIONS) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L223'>attrs</a>             223 src/vfs/sftpfs/file.c         buf-&gt;st_mode = attrs.permissions;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L137'>attrs</a>             137 src/vfs/sftpfs/internal.c     LIBSSH2_SFTP_ATTRIBUTES attrs;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L162'>attrs</a>             162 src/vfs/sftpfs/internal.c                                     sftpfs_filename_buffer-&gt;len, LIBSSH2_SFTP_LSTAT, &amp;attrs);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L177'>attrs</a>             177 src/vfs/sftpfs/internal.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_UIDGID) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L179'>attrs</a>             179 src/vfs/sftpfs/internal.c         buf-&gt;st_uid = attrs.uid;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L180'>attrs</a>             180 src/vfs/sftpfs/internal.c         buf-&gt;st_gid = attrs.gid;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L183'>attrs</a>             183 src/vfs/sftpfs/internal.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_ACMODTIME) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L185'>attrs</a>             185 src/vfs/sftpfs/internal.c         buf-&gt;st_atime = attrs.atime;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L186'>attrs</a>             186 src/vfs/sftpfs/internal.c         buf-&gt;st_mtime = attrs.mtime;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L187'>attrs</a>             187 src/vfs/sftpfs/internal.c         buf-&gt;st_ctime = attrs.mtime;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L190'>attrs</a>             190 src/vfs/sftpfs/internal.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_SIZE) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L191'>attrs</a>             191 src/vfs/sftpfs/internal.c         buf-&gt;st_size = attrs.filesize;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L193'>attrs</a>             193 src/vfs/sftpfs/internal.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_PERMISSIONS) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L194'>attrs</a>             194 src/vfs/sftpfs/internal.c         buf-&gt;st_mode = attrs.permissions;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L214'>attrs</a>             214 src/vfs/sftpfs/internal.c     LIBSSH2_SFTP_ATTRIBUTES attrs;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L240'>attrs</a>             240 src/vfs/sftpfs/internal.c                                   fixfname, sftpfs_filename_buffer-&gt;len, LIBSSH2_SFTP_STAT, &amp;attrs);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L256'>attrs</a>             256 src/vfs/sftpfs/internal.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_UIDGID) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L258'>attrs</a>             258 src/vfs/sftpfs/internal.c         buf-&gt;st_uid = attrs.uid;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L259'>attrs</a>             259 src/vfs/sftpfs/internal.c         buf-&gt;st_gid = attrs.gid;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L262'>attrs</a>             262 src/vfs/sftpfs/internal.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_ACMODTIME) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L264'>attrs</a>             264 src/vfs/sftpfs/internal.c         buf-&gt;st_atime = attrs.atime;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L265'>attrs</a>             265 src/vfs/sftpfs/internal.c         buf-&gt;st_mtime = attrs.mtime;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L266'>attrs</a>             266 src/vfs/sftpfs/internal.c         buf-&gt;st_ctime = attrs.mtime;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L269'>attrs</a>             269 src/vfs/sftpfs/internal.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_SIZE) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L270'>attrs</a>             270 src/vfs/sftpfs/internal.c         buf-&gt;st_size = attrs.filesize;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L272'>attrs</a>             272 src/vfs/sftpfs/internal.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_PERMISSIONS) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L273'>attrs</a>             273 src/vfs/sftpfs/internal.c         buf-&gt;st_mode = attrs.permissions;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L421'>attrs</a>             421 src/vfs/sftpfs/internal.c     LIBSSH2_SFTP_ATTRIBUTES attrs;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L446'>attrs</a>             446 src/vfs/sftpfs/internal.c                                     sftpfs_filename_buffer-&gt;len, LIBSSH2_SFTP_LSTAT, &amp;attrs);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L461'>attrs</a>             461 src/vfs/sftpfs/internal.c     attrs.permissions = mode;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L470'>attrs</a>             470 src/vfs/sftpfs/internal.c                                     sftpfs_filename_buffer-&gt;len, LIBSSH2_SFTP_SETSTAT, &amp;attrs);</span>
+</pre>
+</body>
+</html>

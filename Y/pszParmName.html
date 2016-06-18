@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>pszParmName</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L583'>pszParmName</a>       583 src/vfs/smbfs/helpers/include/proto.h BOOL lp_do_parameter (int snum, const char *pszParmName, const char *pszParmValue);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1385'>pszParmName</a>      1385 src/vfs/smbfs/helpers/param/loadparm.c      static int map_parameter (const char *pszParmName);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1391'>pszParmName</a>      1391 src/vfs/smbfs/helpers/param/loadparm.c      static BOOL do_parameter (const char *pszParmName, const char *pszParmValue);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1590'>pszParmName</a>      1590 src/vfs/smbfs/helpers/param/loadparm.c map_parameter (const char *pszParmName)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1594'>pszParmName</a>      1594 src/vfs/smbfs/helpers/param/loadparm.c     if (*pszParmName == '-')</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1598'>pszParmName</a>      1598 src/vfs/smbfs/helpers/param/loadparm.c         if (strwicmp (parm_table[iIndex].label, pszParmName) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1601'>pszParmName</a>      1601 src/vfs/smbfs/helpers/param/loadparm.c     DEBUG (0, ("Unknown parameter encountered: \"%s\"\n", pszParmName));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1974'>pszParmName</a>      1974 src/vfs/smbfs/helpers/param/loadparm.c lp_do_parameter (int snum, const char *pszParmName, const char *pszParmValue)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1980'>pszParmName</a>      1980 src/vfs/smbfs/helpers/param/loadparm.c     parmnum = map_parameter (pszParmName);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1984'>pszParmName</a>      1984 src/vfs/smbfs/helpers/param/loadparm.c         DEBUG (0, ("Ignoring unknown parameter \"%s\"\n", pszParmName));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1990'>pszParmName</a>      1990 src/vfs/smbfs/helpers/param/loadparm.c         DEBUG (1, ("WARNING: The \"%s\"option is deprecated\n", pszParmName));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2004'>pszParmName</a>      2004 src/vfs/smbfs/helpers/param/loadparm.c             DEBUG (0, ("Global parameter %s found in service section!\n", pszParmName));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2092'>pszParmName</a>      2092 src/vfs/smbfs/helpers/param/loadparm.c do_parameter (const char *pszParmName, const char *pszParmValue)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2097'>pszParmName</a>      2097 src/vfs/smbfs/helpers/param/loadparm.c     DEBUGADD (3, ("doing parameter %s = %s\n", pszParmName, pszParmValue));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2099'>pszParmName</a>      2099 src/vfs/smbfs/helpers/param/loadparm.c     return (lp_do_parameter (bInGlobalSection ? -2 : iServiceIndex, pszParmName, pszParmValue));</span>
+</pre>
+</body>
+</html>

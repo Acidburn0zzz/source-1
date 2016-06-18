@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>info</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L259'>info</a>              259 lib/tty/key.c      void *info;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L592'>info</a>              592 lib/tty/key.c                      (*p-&gt;callback) (p-&gt;fd, p-&gt;info);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1399'>info</a>             1399 lib/tty/key.c  add_select_channel (int fd, select_fn callback, void *info)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1406'>info</a>             1406 lib/tty/key.c      new-&gt;info = info;</span>
+<span class='curline'><a href='../S/lib--tty--key.h.html#L86'>info</a>               86 lib/tty/key.h  typedef int (*select_fn) (int fd, void *info);</span>
+<span class='curline'><a href='../S/lib--tty--key.h.html#L89'>info</a>               89 lib/tty/key.h  void add_select_channel (int fd, select_fn callback, void *info);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L403'>info</a>              403 lib/vfs/direntry.c     struct dirhandle *info;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L425'>info</a>              425 lib/vfs/direntry.c     info = g_new (struct dirhandle, 1);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L426'>info</a>              426 lib/vfs/direntry.c     info-&gt;cur = dir-&gt;subdir;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L427'>info</a>              427 lib/vfs/direntry.c     info-&gt;dir = dir;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L429'>info</a>              429 lib/vfs/direntry.c     return info;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L438'>info</a>              438 lib/vfs/direntry.c     struct dirhandle *info = (struct dirhandle *) data;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L441'>info</a>              441 lib/vfs/direntry.c     if (info-&gt;cur == NULL || info-&gt;cur-&gt;data == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L444'>info</a>              444 lib/vfs/direntry.c     name = ((struct vfs_s_entry *) info-&gt;cur-&gt;data)-&gt;name;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L450'>info</a>              450 lib/vfs/direntry.c     info-&gt;cur = g_list_next (info-&gt;cur);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L460'>info</a>              460 lib/vfs/direntry.c     struct dirhandle *info = (struct dirhandle *) data;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L461'>info</a>              461 lib/vfs/direntry.c     struct vfs_s_inode *dir = info-&gt;dir;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L213'>info</a>              213 lib/vfs/interface.c         void *info;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L215'>info</a>              215 lib/vfs/interface.c         info = path_element-&gt;class-&gt;open (vpath, flags, mode);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L216'>info</a>              216 lib/vfs/interface.c         if (info == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L219'>info</a>              219 lib/vfs/interface.c             result = vfs_new_handle (path_element-&gt;class, info);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L426'>info</a>              426 lib/vfs/interface.c     void *info;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L440'>info</a>              440 lib/vfs/interface.c     info = path_element-&gt;class-&gt;opendir ? (*path_element-&gt;class-&gt;opendir) (vpath) : NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L442'>info</a>              442 lib/vfs/interface.c     if (info == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L448'>info</a>              448 lib/vfs/interface.c     path_element-&gt;dir.info = info;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L504'>info</a>              504 lib/vfs/interface.c         entry = (*vfs-&gt;readdir) (vfs_path_element-&gt;dir.info);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L550'>info</a>              550 lib/vfs/interface.c         result = vfs-&gt;closedir ? (*vfs-&gt;closedir) (vfs_path_element-&gt;dir.info) : -1;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L869'>info</a>              869 lib/vfs/path.c     new_element-&gt;dir.info = element-&gt;dir.info;</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L52'>info</a>               52 lib/vfs/path.h         DIR *info;</span>
+<span class='curline'><a href='../S/src--background.c.html#L87'>info</a>               87 src/background.c register_task_running (file_op_context_t * ctx, pid_t pid, int fd, int to_child, char *info)</span>
+<span class='curline'><a href='../S/src--background.c.html#L93'>info</a>               93 src/background.c     new-&gt;info = info;</span>
+<span class='curline'><a href='../S/src--background.c.html#L119'>info</a>              119 src/background.c             g_free (p-&gt;info);</span>
+<span class='curline'><a href='../S/src--background.c.html#L526'>info</a>              526 src/background.c do_background (file_op_context_t * ctx, char *info)</span>
+<span class='curline'><a href='../S/src--background.c.html#L582'>info</a>              582 src/background.c         register_task_running (ctx, pid, comm[0], back_comm[1], info);</span>
+<span class='curline'><a href='../S/src--background.h.html#L24'>info</a>               24 src/background.h     char *info;</span>
+<span class='curline'><a href='../S/src--background.h.html#L38'>info</a>               38 src/background.h int do_background (file_op_context_t * ctx, char *info);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L413'>info</a>              413 src/filemanager/boxes.c         s = g_strconcat (state_str[tl-&gt;state], " ", tl-&gt;info, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L79'>info</a>               79 src/filemanager/info.c info_box (WInfo * info)</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L81'>info</a>               81 src/filemanager/info.c     Widget *w = WIDGET (info);</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L104'>info</a>              104 src/filemanager/info.c info_show_info (WInfo * info)</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L106'>info</a>              106 src/filemanager/info.c     Widget *w = WIDGET (info);</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L117'>info</a>              117 src/filemanager/info.c     info_box (info);</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L123'>info</a>              123 src/filemanager/info.c     if (!info-&gt;ready)</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L284'>info</a>              284 src/filemanager/info.c     WInfo *info = (WInfo *) data;</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L290'>info</a>              290 src/filemanager/info.c     if (widget_overlapped (WIDGET (info), other_widget))</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L293'>info</a>              293 src/filemanager/info.c     info-&gt;ready = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L294'>info</a>              294 src/filemanager/info.c     info_show_info (info);</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L302'>info</a>              302 src/filemanager/info.c     WInfo *info = (WInfo *) w;</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L308'>info</a>              308 src/filemanager/info.c         add_hook (&amp;select_file_hook, info_hook, info);</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L309'>info</a>              309 src/filemanager/info.c         info-&gt;ready = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L313'>info</a>              313 src/filemanager/info.c         info_hook (info);</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L336'>info</a>              336 src/filemanager/info.c     WInfo *info;</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L339'>info</a>              339 src/filemanager/info.c     info = g_new (struct WInfo, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L340'>info</a>              340 src/filemanager/info.c     w = WIDGET (info);</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L343'>info</a>              343 src/filemanager/info.c     return info;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L355'>info</a>              355 src/vfs/extfs/extfs.c         extfs_plugin_info_t *info;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L358'>info</a>              358 src/vfs/extfs/extfs.c         info = &amp;g_array_index (extfs_plugins, extfs_plugin_info_t, a-&gt;fstype);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L360'>info</a>              360 src/vfs/extfs/extfs.c             g_strconcat (a-&gt;name ? a-&gt;name : "", PATH_SEP_STR, info-&gt;prefix, VFS_PATH_URL_DELIMITER,</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L397'>info</a>              397 src/vfs/extfs/extfs.c     const extfs_plugin_info_t *info;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L410'>info</a>              410 src/vfs/extfs/extfs.c     info = &amp;g_array_index (extfs_plugins, extfs_plugin_info_t, fstype);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L412'>info</a>              412 src/vfs/extfs/extfs.c     if (info-&gt;need_archive)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L427'>info</a>              427 src/vfs/extfs/extfs.c     cmd = g_strconcat (info-&gt;path, info-&gt;prefix, " list ",</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L498'>info</a>              498 src/vfs/extfs/extfs.c     const extfs_plugin_info_t *info;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L503'>info</a>              503 src/vfs/extfs/extfs.c     info = &amp;g_array_index (extfs_plugins, extfs_plugin_info_t, fstype);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L509'>info</a>              509 src/vfs/extfs/extfs.c         message (D_ERROR, MSG_ERROR, _("Cannot open %s archive\n%s"), info-&gt;prefix, name);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L651'>info</a>              651 src/vfs/extfs/extfs.c         extfs_plugin_info_t *info;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L653'>info</a>              653 src/vfs/extfs/extfs.c         info = &amp;g_array_index (extfs_plugins, extfs_plugin_info_t, i);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L655'>info</a>              655 src/vfs/extfs/extfs.c         if ((strncmp (path, info-&gt;prefix, path_len) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L656'>info</a>              656 src/vfs/extfs/extfs.c             &amp;&amp; ((info-&gt;prefix[path_len] == '\0') || (info-&gt;prefix[path_len] == '+')))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L833'>info</a>              833 src/vfs/extfs/extfs.c     const extfs_plugin_info_t *info;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L845'>info</a>              845 src/vfs/extfs/extfs.c     info = &amp;g_array_index (extfs_plugins, extfs_plugin_info_t, archive-&gt;fstype);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L846'>info</a>              846 src/vfs/extfs/extfs.c     cmd = g_strconcat (info-&gt;path, info-&gt;prefix, str_extfs_cmd,</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L867'>info</a>              867 src/vfs/extfs/extfs.c     const extfs_plugin_info_t *info;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L878'>info</a>              878 src/vfs/extfs/extfs.c     info = &amp;g_array_index (extfs_plugins, extfs_plugin_info_t, archive-&gt;fstype);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L880'>info</a>              880 src/vfs/extfs/extfs.c         g_strconcat (info-&gt;path, info-&gt;prefix, " run ", quoted_archive_name, " ", q, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1031'>info</a>             1031 src/vfs/extfs/extfs.c     struct entry **info;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1046'>info</a>             1046 src/vfs/extfs/extfs.c     info = g_new (struct entry *, 2);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1047'>info</a>             1047 src/vfs/extfs/extfs.c     info[0] = entry-&gt;inode-&gt;first_in_subdir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1048'>info</a>             1048 src/vfs/extfs/extfs.c     info[1] = entry-&gt;inode-&gt;first_in_subdir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1050'>info</a>             1050 src/vfs/extfs/extfs.c     return info;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1059'>info</a>             1059 src/vfs/extfs/extfs.c     struct entry **info = (struct entry **) data;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1061'>info</a>             1061 src/vfs/extfs/extfs.c     if (*info == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1064'>info</a>             1064 src/vfs/extfs/extfs.c     g_strlcpy (dir.dent.d_name, (*info)-&gt;name, MC_MAXPATHLEN);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1066'>info</a>             1066 src/vfs/extfs/extfs.c     *info = (*info)-&gt;next_in_dir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1601'>info</a>             1601 src/vfs/extfs/extfs.c                 extfs_plugin_info_t info;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1610'>info</a>             1610 src/vfs/extfs/extfs.c                 info.need_archive = (filename[len - 1] != '+');</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1611'>info</a>             1611 src/vfs/extfs/extfs.c                 info.path = g_strconcat (dirname, PATH_SEP_STR, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1612'>info</a>             1612 src/vfs/extfs/extfs.c                 info.prefix = g_strdup (filename);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1615'>info</a>             1615 src/vfs/extfs/extfs.c                 if (!info.need_archive)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1616'>info</a>             1616 src/vfs/extfs/extfs.c                     info.prefix[len - 1] = '\0';</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1626'>info</a>             1626 src/vfs/extfs/extfs.c                     if ((strcmp (info.path, p-&gt;path) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1627'>info</a>             1627 src/vfs/extfs/extfs.c                         &amp;&amp; (strcmp (info.prefix, p-&gt;prefix) == 0))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1636'>info</a>             1636 src/vfs/extfs/extfs.c                     g_free (info.path);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1637'>info</a>             1637 src/vfs/extfs/extfs.c                     g_free (info.prefix);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1642'>info</a>             1642 src/vfs/extfs/extfs.c                     if (!info.need_archive)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1643'>info</a>             1643 src/vfs/extfs/extfs.c                         info.prefix[len - 1] = '+';</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1644'>info</a>             1644 src/vfs/extfs/extfs.c                     g_array_append_val (extfs_plugins, info);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1691'>info</a>             1691 src/vfs/extfs/extfs.c         extfs_plugin_info_t *info;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1693'>info</a>             1693 src/vfs/extfs/extfs.c         info = &amp;g_array_index (extfs_plugins, extfs_plugin_info_t, i);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1694'>info</a>             1694 src/vfs/extfs/extfs.c         g_free (info-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1695'>info</a>             1695 src/vfs/extfs/extfs.c         g_free (info-&gt;prefix);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L459'>info</a>              459 src/vfs/smbfs/smbfs.c     smbfs_handle *info = (smbfs_handle *) data;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L462'>info</a>              462 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_read(fnum:%d, nread:%d, count:%zu)\n", info-&gt;fnum, (int) info-&gt;nread, count));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L463'>info</a>              463 src/vfs/smbfs/smbfs.c     n = cli_read (info-&gt;cli, info-&gt;fnum, buffer, info-&gt;nread, count);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L465'>info</a>              465 src/vfs/smbfs/smbfs.c         info-&gt;nread += n;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L474'>info</a>              474 src/vfs/smbfs/smbfs.c     smbfs_handle *info = (smbfs_handle *) data;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L478'>info</a>              478 src/vfs/smbfs/smbfs.c                info-&gt;fnum, (int) info-&gt;nread, nbyte));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L479'>info</a>              479 src/vfs/smbfs/smbfs.c     n = cli_write (info-&gt;cli, info-&gt;fnum, 0, buf, info-&gt;nread, nbyte);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L481'>info</a>              481 src/vfs/smbfs/smbfs.c         info-&gt;nread += n;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L490'>info</a>              490 src/vfs/smbfs/smbfs.c     smbfs_handle *info = (smbfs_handle *) data;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L491'>info</a>              491 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_close(fnum:%d)\n", info-&gt;fnum));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L496'>info</a>              496 src/vfs/smbfs/smbfs.c     if (info-&gt;cli-&gt;outbuf == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L505'>info</a>              505 src/vfs/smbfs/smbfs.c         cli_setatr (info-&gt;cli, rname, info-&gt;attr &amp; ~(uint16) aARCH, 0);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L508'>info</a>              508 src/vfs/smbfs/smbfs.c     return (cli_close (info-&gt;cli, info-&gt;fnum) == True) ? 0 : -1;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L920'>info</a>              920 src/vfs/smbfs/smbfs.c smbfs_readdir (void *info)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L924'>info</a>              924 src/vfs/smbfs/smbfs.c     opendir_info *smbfs_info = (opendir_info *) info;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L950'>info</a>              950 src/vfs/smbfs/smbfs.c smbfs_closedir (void *info)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L952'>info</a>              952 src/vfs/smbfs/smbfs.c     opendir_info *smbfs_info = (opendir_info *) info;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1701'>info</a>             1701 src/vfs/smbfs/smbfs.c     void *info;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1713'>info</a>             1713 src/vfs/smbfs/smbfs.c     info = smbfs_opendir (vpath);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1715'>info</a>             1715 src/vfs/smbfs/smbfs.c     if (!info)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1717'>info</a>             1717 src/vfs/smbfs/smbfs.c     smbfs_readdir (info);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1718'>info</a>             1718 src/vfs/smbfs/smbfs.c     smbfs_loaddir (info);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1837'>info</a>             1837 src/vfs/smbfs/smbfs.c     smbfs_handle *info = (smbfs_handle *) data;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1842'>info</a>             1842 src/vfs/smbfs/smbfs.c             (int) info-&gt;nread, (int) offset, whence));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1847'>info</a>             1847 src/vfs/smbfs/smbfs.c         info-&gt;nread = offset;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1850'>info</a>             1850 src/vfs/smbfs/smbfs.c         info-&gt;nread += offset;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1853'>info</a>             1853 src/vfs/smbfs/smbfs.c         if (!cli_qfileinfo (info-&gt;cli, info-&gt;fnum,</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1856'>info</a>             1856 src/vfs/smbfs/smbfs.c             !cli_getattrE (info-&gt;cli, info-&gt;fnum, NULL, &amp;size, NULL, NULL, NULL))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1861'>info</a>             1861 src/vfs/smbfs/smbfs.c         info-&gt;nread = size + offset;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1867'>info</a>             1867 src/vfs/smbfs/smbfs.c     return info-&gt;nread;</span>
+</pre>
+</body>
+</html>

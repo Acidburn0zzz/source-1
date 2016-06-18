@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>str_options</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--setup.c.html#L378'>str_options</a>       378 src/setup.c    } str_options[] = {</span>
+<span class='curline'><a href='../S/src--setup.c.html#L894'>str_options</a>       894 src/setup.c        for (i = 0; str_options[i].opt_name != NULL; i++)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L895'>str_options</a>       895 src/setup.c            mc_config_set_string (mc_global.main_config, CONFIG_APP_SECTION, str_options[i].opt_name,</span>
+<span class='curline'><a href='../S/src--setup.c.html#L896'>str_options</a>       896 src/setup.c                                  *str_options[i].opt_addr);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1057'>str_options</a>      1057 src/setup.c        for (i = 0; str_options[i].opt_name != NULL; i++)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1058'>str_options</a>      1058 src/setup.c            *str_options[i].opt_addr =</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1060'>str_options</a>      1060 src/setup.c                                      str_options[i].opt_name, str_options[i].opt_defval);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1233'>str_options</a>      1233 src/setup.c        for (i = 0; str_options[i].opt_name != NULL; i++)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1234'>str_options</a>      1234 src/setup.c            g_free (*str_options[i].opt_addr);</span>
+</pre>
+</body>
+</html>

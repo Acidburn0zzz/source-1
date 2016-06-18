@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>hd</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L602'>hd</a>                602 src/vfs/cpio/cpio.c     struct new_cpio_header hd;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L617'>hd</a>                617 src/vfs/cpio/cpio.c                 (unsigned long *) &amp;hd.c_dev, &amp;hd.c_ino, &amp;hd.c_mode, &amp;hd.c_uid, &amp;hd.c_gid,</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L618'>hd</a>                618 src/vfs/cpio/cpio.c                 &amp;hd.c_nlink, (unsigned long *) &amp;hd.c_rdev, &amp;hd.c_mtime,</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L619'>hd</a>                619 src/vfs/cpio/cpio.c                 &amp;hd.c_namesize, &amp;hd.c_filesize) &lt; 10)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L625'>hd</a>                625 src/vfs/cpio/cpio.c     if (hd.c_namesize == 0 || hd.c_namesize &gt; MC_MAXPATHLEN)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L630'>hd</a>                630 src/vfs/cpio/cpio.c     name = g_malloc (hd.c_namesize);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L631'>hd</a>                631 src/vfs/cpio/cpio.c     len = mc_read (arch-&gt;fd, name, hd.c_namesize);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L632'>hd</a>                632 src/vfs/cpio/cpio.c     if ((len == -1) || ((unsigned long) len &lt; hd.c_namesize))</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L637'>hd</a>                637 src/vfs/cpio/cpio.c     name[hd.c_namesize - 1] = '\0';</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L647'>hd</a>                647 src/vfs/cpio/cpio.c     u.st.st_dev = hd.c_dev;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L648'>hd</a>                648 src/vfs/cpio/cpio.c     u.st.st_ino = hd.c_ino;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L649'>hd</a>                649 src/vfs/cpio/cpio.c     u.st.st_mode = hd.c_mode;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L650'>hd</a>                650 src/vfs/cpio/cpio.c     u.st.st_nlink = hd.c_nlink;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L651'>hd</a>                651 src/vfs/cpio/cpio.c     u.st.st_uid = hd.c_uid;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L652'>hd</a>                652 src/vfs/cpio/cpio.c     u.st.st_gid = hd.c_gid;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L653'>hd</a>                653 src/vfs/cpio/cpio.c     u.st.st_rdev = hd.c_rdev;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L654'>hd</a>                654 src/vfs/cpio/cpio.c     u.st.st_size = hd.c_filesize;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L655'>hd</a>                655 src/vfs/cpio/cpio.c     u.st.st_atime = u.st.st_mtime = u.st.st_ctime = hd.c_mtime;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L669'>hd</a>                669 src/vfs/cpio/cpio.c     struct new_cpio_header hd;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L685'>hd</a>                685 src/vfs/cpio/cpio.c                 &amp;hd.c_magic, &amp;hd.c_ino, &amp;hd.c_mode, &amp;hd.c_uid, &amp;hd.c_gid,</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L686'>hd</a>                686 src/vfs/cpio/cpio.c                 &amp;hd.c_nlink, &amp;hd.c_mtime, &amp;hd.c_filesize,</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L687'>hd</a>                687 src/vfs/cpio/cpio.c                 (unsigned long *) &amp;hd.c_dev, (unsigned long *) &amp;hd.c_devmin,</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L688'>hd</a>                688 src/vfs/cpio/cpio.c                 (unsigned long *) &amp;hd.c_rdev, (unsigned long *) &amp;hd.c_rdevmin,</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L689'>hd</a>                689 src/vfs/cpio/cpio.c                 &amp;hd.c_namesize, &amp;hd.c_chksum) &lt; 14)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L695'>hd</a>                695 src/vfs/cpio/cpio.c     if ((arch-&gt;type == CPIO_NEWC &amp;&amp; hd.c_magic != 070701) ||</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L696'>hd</a>                696 src/vfs/cpio/cpio.c         (arch-&gt;type == CPIO_CRC &amp;&amp; hd.c_magic != 070702))</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L699'>hd</a>                699 src/vfs/cpio/cpio.c     if (hd.c_namesize == 0 || hd.c_namesize &gt; MC_MAXPATHLEN)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L705'>hd</a>                705 src/vfs/cpio/cpio.c     name = g_malloc (hd.c_namesize);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L706'>hd</a>                706 src/vfs/cpio/cpio.c     len = mc_read (arch-&gt;fd, name, hd.c_namesize);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L708'>hd</a>                708 src/vfs/cpio/cpio.c     if ((len == -1) || ((unsigned long) len &lt; hd.c_namesize))</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L713'>hd</a>                713 src/vfs/cpio/cpio.c     name[hd.c_namesize - 1] = '\0';</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L723'>hd</a>                723 src/vfs/cpio/cpio.c     u.st.st_dev = makedev (hd.c_dev, hd.c_devmin);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L724'>hd</a>                724 src/vfs/cpio/cpio.c     u.st.st_ino = hd.c_ino;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L725'>hd</a>                725 src/vfs/cpio/cpio.c     u.st.st_mode = hd.c_mode;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L726'>hd</a>                726 src/vfs/cpio/cpio.c     u.st.st_nlink = hd.c_nlink;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L727'>hd</a>                727 src/vfs/cpio/cpio.c     u.st.st_uid = hd.c_uid;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L728'>hd</a>                728 src/vfs/cpio/cpio.c     u.st.st_gid = hd.c_gid;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L729'>hd</a>                729 src/vfs/cpio/cpio.c     u.st.st_rdev = makedev (hd.c_rdev, hd.c_rdevmin);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L730'>hd</a>                730 src/vfs/cpio/cpio.c     u.st.st_size = hd.c_filesize;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L731'>hd</a>                731 src/vfs/cpio/cpio.c     u.st.st_atime = u.st.st_mtime = u.st.st_ctime = hd.c_mtime;</span>
+</pre>
+</body>
+</html>

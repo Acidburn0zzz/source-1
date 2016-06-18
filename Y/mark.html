@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>mark</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L130'>mark</a>              130 lib/widget/input.c input_mark_cmd (WInput * in, gboolean mark)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L132'>mark</a>              132 lib/widget/input.c     in-&gt;mark = mark ? in-&gt;point : -1;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L140'>mark</a>              140 lib/widget/input.c     if (in-&gt;mark &gt;= 0)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L142'>mark</a>              142 lib/widget/input.c         *start_mark = MIN (in-&gt;mark, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L143'>mark</a>              143 lib/widget/input.c         *end_mark = MAX (in-&gt;mark, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L585'>mark</a>              585 lib/widget/input.c     in-&gt;mark = -1;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L695'>mark</a>              695 lib/widget/input.c         if (in-&gt;mark &lt; 0)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L705'>mark</a>              705 lib/widget/input.c         if (in-&gt;mark &gt;= 0)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L771'>mark</a>              771 lib/widget/input.c         delete_region (in, in-&gt;point, MAX (in-&gt;mark, 0));</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L780'>mark</a>              780 lib/widget/input.c         copy_region (in, MAX (in-&gt;mark, 0), in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L786'>mark</a>              786 lib/widget/input.c             m = MAX (in-&gt;mark, 0);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L824'>mark</a>              824 lib/widget/input.c         in-&gt;mark = -1;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L957'>mark</a>              957 lib/widget/input.c         if (in-&gt;mark &lt; 0)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L958'>mark</a>              958 lib/widget/input.c             in-&gt;mark = prev_point;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L965'>mark</a>              965 lib/widget/input.c         if (in-&gt;mark == in-&gt;point)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L999'>mark</a>              999 lib/widget/input.c     in-&gt;mark = -1;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1195'>mark</a>             1195 lib/widget/input.c     in-&gt;mark = -1;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1272'>mark</a>             1272 lib/widget/input.c     in-&gt;mark = MIN (in-&gt;mark, buf_len);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1298'>mark</a>             1298 lib/widget/input.c         if (in-&gt;mark &lt; 0)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1384'>mark</a>             1384 lib/widget/input.c     in-&gt;mark = -1;</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L51'>mark</a>               51 lib/widget/input.h     int mark;                   /* the mark position in characters; negative value means no marked text */</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4606'>mark</a>             4606 src/filemanager/panel.c do_file_mark (WPanel * panel, int idx, int mark)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4608'>mark</a>             4608 src/filemanager/panel.c     if (panel-&gt;dir.list[idx].f.marked == mark)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4615'>mark</a>             4615 src/filemanager/panel.c     file_mark (panel, idx, mark);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L458'>mark</a>              458 src/filemanager/treestore.c     new-&gt;mark = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L773'>mark</a>              773 src/filemanager/treestore.c         base-&gt;mark = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L784'>mark</a>              784 src/filemanager/treestore.c             current-&gt;mark = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L842'>mark</a>              842 src/filemanager/treestore.c         current-&gt;mark = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L881'>mark</a>              881 src/filemanager/treestore.c         if (old-&gt;mark)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.h.html#L28'>mark</a>               28 src/filemanager/treestore.h     gboolean mark;              /* Flag: Is this entry marked (e. g. for delete)? */</span>
+</pre>
+</body>
+</html>

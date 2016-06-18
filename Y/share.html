@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>share</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1270'>share</a>            1270 src/filemanager/boxes.c vfs_smb_get_authinfo (const char *host, const char *share, const char *domain, const char *user)</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1280'>share</a>            1280 src/filemanager/boxes.c     label = g_strdup_printf (_("Password for \\\\%s\\%s"), host, share);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1315'>share</a>            1315 src/filemanager/boxes.c             return_value = vfs_smb_authinfo_new (host, share, ret_domain, ret_user, ret_password);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--client.h.html#L84'>share</a>              84 src/vfs/smbfs/helpers/include/client.h     fstring share;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L263'>share</a>             263 src/vfs/smbfs/helpers/include/proto.h                      const char *share, const char *dev, const char *pass, int passlen);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L895'>share</a>             895 src/vfs/smbfs/helpers/libsmb/clientgen.c                 const char *share, const char *dev, const char *pass, int passlen)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L902'>share</a>             902 src/vfs/smbfs/helpers/libsmb/clientgen.c     fstrcpy (cli-&gt;share, share);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L921'>share</a>             921 src/vfs/smbfs/helpers/libsmb/clientgen.c     slprintf (fullshare, sizeof (fullshare) - 1, "\\\\%s\\%s", cli-&gt;desthost, share);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L957'>share</a>             957 src/vfs/smbfs/helpers/libsmb/clientgen.c     if (strcasecmp (share, "IPC$") == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2752'>share</a>            2752 src/vfs/smbfs/helpers/libsmb/clientgen.c     fstring share;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2767'>share</a>            2767 src/vfs/smbfs/helpers/libsmb/clientgen.c         fstrcpy (share, cli-&gt;share);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L2784'>share</a>            2784 src/vfs/smbfs/helpers/libsmb/clientgen.c                                   &amp;calling, &amp;called, share, dev, False, do_tcon))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L173'>share</a>             173 src/vfs/smbfs/smbfs.c static struct cli_state *smbfs_do_connect (const char *server, char *share);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L212'>share</a>             212 src/vfs/smbfs/smbfs.c     g_free (a-&gt;share);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L239'>share</a>             239 src/vfs/smbfs/smbfs.c     if (!a-&gt;host || !a-&gt;share || !b-&gt;host || !b-&gt;share)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L243'>share</a>             243 src/vfs/smbfs/smbfs.c     if (strcmp (a-&gt;share, b-&gt;share) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L260'>share</a>             260 src/vfs/smbfs/smbfs.c     if (strcmp (a-&gt;share, IPC) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L268'>share</a>             268 src/vfs/smbfs/smbfs.c smbfs_auth_add (const char *host, const char *share, const char *domain,</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L273'>share</a>             273 src/vfs/smbfs/smbfs.c     auth = vfs_smb_authinfo_new (host, share, domain, user, pass);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L282'>share</a>             282 src/vfs/smbfs/smbfs.c smbfs_auth_remove (const char *host, const char *share)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L289'>share</a>             289 src/vfs/smbfs/smbfs.c     data.share = g_strdup (share);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L292'>share</a>             292 src/vfs/smbfs/smbfs.c     g_free (data.share);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L328'>share</a>             328 src/vfs/smbfs/smbfs.c     data.share = bucket-&gt;service;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L877'>share</a>             877 src/vfs/smbfs/smbfs.c     DEBUG (6, ("smbfs_loaddir: cli-&gt;share: %s\n", smbfs_info-&gt;conn-&gt;cli-&gt;share));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1045'>share</a>            1045 src/vfs/smbfs/smbfs.c smbfs_do_connect (const char *server, char *share)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1051'>share</a>            1051 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_do_connect(%s, %s)\n", server, share));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1052'>share</a>            1052 src/vfs/smbfs/smbfs.c     if (*share == '\\')</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1054'>share</a>            1054 src/vfs/smbfs/smbfs.c         server = share + 2;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1055'>share</a>            1055 src/vfs/smbfs/smbfs.c         share = strchr (server, '\\');</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1056'>share</a>            1056 src/vfs/smbfs/smbfs.c         if (!share)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1058'>share</a>            1058 src/vfs/smbfs/smbfs.c         *share = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1059'>share</a>            1059 src/vfs/smbfs/smbfs.c         share++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1113'>share</a>            1113 src/vfs/smbfs/smbfs.c             smbfs_auth_remove (server, share);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1123'>share</a>            1123 src/vfs/smbfs/smbfs.c         if (!cli_send_tconX (c, share, "?????",</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1126'>share</a>            1126 src/vfs/smbfs/smbfs.c             DEBUG (1, ("%s: tree connect failed: %s\n", share, cli_errstr (c)));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2212'>share</a>            2212 src/vfs/smbfs/smbfs.c vfs_smb_authinfo_new (const char *host, const char *share, const char *domain,</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2222'>share</a>            2222 src/vfs/smbfs/smbfs.c         auth-&gt;share = g_strdup (share);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.h.html#L19'>share</a>              19 src/vfs/smbfs/smbfs.h     char *share;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.h.html#L34'>share</a>              34 src/vfs/smbfs/smbfs.h                                     const char *share,</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.h.html#L39'>share</a>              39 src/vfs/smbfs/smbfs.h                                     const char *share, const char *domain, const char *user);</span>
+</pre>
+</body>
+</html>

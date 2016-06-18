@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>pty_name</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L221'>pty_name</a>          221 src/subshell/common.c init_subshell_child (const char *pty_name)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L227'>pty_name</a>          227 src/subshell/common.c     (void) pty_name;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L633'>pty_name</a>          633 src/subshell/common.c pty_open_master (char *pty_name)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L644'>pty_name</a>          644 src/subshell/common.c     strcpy (pty_name, "/dev/ptc");</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L645'>pty_name</a>          645 src/subshell/common.c     pty_master = open (pty_name, O_RDWR);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L647'>pty_name</a>          647 src/subshell/common.c     strcpy (pty_name, "/dev/ptmx");</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L648'>pty_name</a>          648 src/subshell/common.c     pty_master = open (pty_name, O_RDWR);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L661'>pty_name</a>          661 src/subshell/common.c     strcpy (pty_name, slave_name);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L669'>pty_name</a>          669 src/subshell/common.c pty_open_slave (const char *pty_name)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L673'>pty_name</a>          673 src/subshell/common.c     pty_slave = open (pty_name, O_RDWR);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L676'>pty_name</a>          676 src/subshell/common.c         fprintf (stderr, "open (%s, O_RDWR): %s\r\n", pty_name, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L722'>pty_name</a>          722 src/subshell/common.c pty_open_master (char *pty_name)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L727'>pty_name</a>          727 src/subshell/common.c     strcpy (pty_name, "/dev/ptyXX");</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L730'>pty_name</a>          730 src/subshell/common.c         pty_name[8] = *ptr1;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L733'>pty_name</a>          733 src/subshell/common.c             pty_name[9] = *ptr2;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L736'>pty_name</a>          736 src/subshell/common.c             pty_master = open (pty_name, O_RDWR);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L743'>pty_name</a>          743 src/subshell/common.c             pty_name[5] = 't';  /* Change "pty" to "tty" */</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L744'>pty_name</a>          744 src/subshell/common.c             if (access (pty_name, 6) != 0)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L747'>pty_name</a>          747 src/subshell/common.c                 pty_name[5] = 'p';</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L760'>pty_name</a>          760 src/subshell/common.c pty_open_slave (const char *pty_name)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L773'>pty_name</a>          773 src/subshell/common.c     pty_slave = open (pty_name, O_RDWR);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L775'>pty_name</a>          775 src/subshell/common.c         fprintf (stderr, "open (pty_name, O_RDWR): %s\r\n", pty_name);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L992'>pty_name</a>          992 src/subshell/common.c     static char pty_name[BUF_SMALL];</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1022'>pty_name</a>         1022 src/subshell/common.c         mc_global.tty.subshell_pty = pty_open_master (pty_name);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1029'>pty_name</a>         1029 src/subshell/common.c         subshell_pty_slave = pty_open_slave (pty_name);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1033'>pty_name</a>         1033 src/subshell/common.c                      pty_name, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1087'>pty_name</a>         1087 src/subshell/common.c         init_subshell_child (pty_name);</span>
+</pre>
+</body>
+</html>

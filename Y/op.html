@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>op</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L83'>op</a>                 83 lib/vfs/path.c _vfs_split_with_semi_skip_count (char *path, const char **inpath, const char **op,</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L101'>op</a>                101 lib/vfs/path.c     if (op != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L102'>op</a>                102 lib/vfs/path.c         *op = NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L113'>op</a>                113 lib/vfs/path.c         if (op != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L114'>op</a>                114 lib/vfs/path.c             *op = semi + 1;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L124'>op</a>                124 lib/vfs/path.c     ret = _vfs_split_with_semi_skip_count (path, inpath, op, skip_count + 1);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L375'>op</a>                375 lib/vfs/path.c     const char *local, *op;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L380'>op</a>                380 lib/vfs/path.c     while ((class = _vfs_split_with_semi_skip_count (path, &amp;local, &amp;op, 0)) != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L395'>op</a>                395 lib/vfs/path.c         url_params = strchr (op, ':');  /* skip VFS prefix */</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L403'>op</a>                403 lib/vfs/path.c         if (*op != '\0')</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L404'>op</a>                404 lib/vfs/path.c             element-&gt;vfs_prefix = g_strdup (op);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L686'>op</a>                686 src/diffviewer/ydiff.c     DIFFCMD op;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L740'>op</a>                740 src/diffviewer/ydiff.c     op.a[0][0] = f1;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L741'>op</a>                741 src/diffviewer/ydiff.c     op.a[0][1] = f2;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L742'>op</a>                742 src/diffviewer/ydiff.c     op.cmd = cmd;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L743'>op</a>                743 src/diffviewer/ydiff.c     op.a[1][0] = t1;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L744'>op</a>                744 src/diffviewer/ydiff.c     op.a[1][1] = t2;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L745'>op</a>                745 src/diffviewer/ydiff.c     g_array_append_val (ops, op);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L864'>op</a>                864 src/diffviewer/ydiff.c     const DIFFCMD *op;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L891'>op</a>                891 src/diffviewer/ydiff.c         op = &amp;g_array_index (ops, DIFFCMD, i);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L892'>op</a>                892 src/diffviewer/ydiff.c         n = op-&gt;F1 - (op-&gt;cmd != add_cmd);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L915'>op</a>                915 src/diffviewer/ydiff.c         if (op-&gt;cmd == add_cmd)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L917'>op</a>                917 src/diffviewer/ydiff.c             n = op-&gt;T2 - op-&gt;T1 + 1;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L925'>op</a>                925 src/diffviewer/ydiff.c         if (op-&gt;cmd == del_cmd)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L927'>op</a>                927 src/diffviewer/ydiff.c             n = op-&gt;F2 - op-&gt;F1 + 1;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L951'>op</a>                951 src/diffviewer/ydiff.c         if (op-&gt;cmd == 'c')</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L953'>op</a>                953 src/diffviewer/ydiff.c             n = op-&gt;F2 - op-&gt;F1 + 1;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L976'>op</a>                976 src/diffviewer/ydiff.c             n = op-&gt;T2 - op-&gt;T1 - (op-&gt;F2 - op-&gt;F1);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L809'>op</a>                809 src/filemanager/boxes.c sort_box (dir_sort_options_t * op, const panel_field_t * sort_field)</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L832'>op</a>                832 src/filemanager/boxes.c                 QUICK_CHECKBOX (N_("Executable &amp;first"), &amp;op-&gt;exec_first, NULL),</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L833'>op</a>                833 src/filemanager/boxes.c                 QUICK_CHECKBOX (N_("Cas&amp;e sensitive"), &amp;op-&gt;case_sensitive, NULL),</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L834'>op</a>                834 src/filemanager/boxes.c                 QUICK_CHECKBOX (N_("&amp;Reverse"), &amp;op-&gt;reverse, NULL),</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.h.html#L26'>op</a>                 26 src/filemanager/boxes.h const panel_field_t *sort_box (dir_sort_options_t * op, const panel_field_t * sort_field);</span>
+<span class='curline'><a href='../S/src--filemanager--file.h.html#L53'>op</a>                 53 src/filemanager/file.h gboolean panel_operate (void *source_panel, FileOperation op, gboolean force_single);</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L69'>op</a>                 69 src/filemanager/fileopctx.c file_op_context_new (FileOperation op)</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L74'>op</a>                 74 src/filemanager/fileopctx.c     ctx-&gt;operation = op;</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.h.html#L186'>op</a>                186 src/filemanager/fileopctx.h file_op_context_t *file_op_context_new (FileOperation op);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L476'>op</a>                476 src/vfs/fish/fish.c             char *p, *op;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L478'>op</a>                478 src/vfs/fish/fish.c             op = vfs_get_password (p);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L480'>op</a>                480 src/vfs/fish/fish.c             if (op == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L482'>op</a>                482 src/vfs/fish/fish.c             super-&gt;path_element-&gt;password = op;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L576'>op</a>                576 src/vfs/ftpfs/ftpfs.c     char *op;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L584'>op</a>                584 src/vfs/ftpfs/ftpfs.c         op = g_strdup (super-&gt;path_element-&gt;password);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L586'>op</a>                586 src/vfs/ftpfs/ftpfs.c         op = g_strdup (netrcpass);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L592'>op</a>                592 src/vfs/ftpfs/ftpfs.c         op = g_strdup (ftpfs_anonymous_passwd);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L600'>op</a>                600 src/vfs/ftpfs/ftpfs.c         op = vfs_get_password (p);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L602'>op</a>                602 src/vfs/ftpfs/ftpfs.c         if (op == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L604'>op</a>                604 src/vfs/ftpfs/ftpfs.c         super-&gt;path_element-&gt;password = g_strdup (op);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L608'>op</a>                608 src/vfs/ftpfs/ftpfs.c         pass = op;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L611'>op</a>                611 src/vfs/ftpfs/ftpfs.c         pass = g_strconcat ("-", op, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L612'>op</a>                612 src/vfs/ftpfs/ftpfs.c         wipe_password (op);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L654'>op</a>                654 src/vfs/ftpfs/ftpfs.c                 op = input_dialog (p, _("Account:"), MC_HISTORY_FTPFS_ACCOUNT, "",</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L657'>op</a>                657 src/vfs/ftpfs/ftpfs.c                 if (op == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L660'>op</a>                660 src/vfs/ftpfs/ftpfs.c                 code = ftpfs_command (me, super, WAIT_REPLY, "ACCT %s", op);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L661'>op</a>                661 src/vfs/ftpfs/ftpfs.c                 g_free (op);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L158'>op</a>                158 src/vfs/smbfs/helpers/include/proto.h BOOL fcntl_lock (int fd, int op, SMB_OFF_T offset, SMB_OFF_T count, int type);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2776'>op</a>               2776 src/vfs/smbfs/helpers/lib/util.c fcntl_lock (int fd, int op, SMB_OFF_T offset, SMB_OFF_T count, int type)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2819'>op</a>               2819 src/vfs/smbfs/helpers/lib/util.c     DEBUG (8, ("fcntl_lock %d %d %.0f %.0f %d\n", fd, op, (double) offset, (double) count, type));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2829'>op</a>               2829 src/vfs/smbfs/helpers/lib/util.c     ret = fcntl (fd, op, &amp;lock);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2843'>op</a>               2843 src/vfs/smbfs/helpers/lib/util.c         ret = fcntl (fd, op, &amp;lock);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2850'>op</a>               2850 src/vfs/smbfs/helpers/lib/util.c     if (op == SMB_F_GETLK)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2867'>op</a>               2867 src/vfs/smbfs/helpers/lib/util.c                    (double) offset, (double) count, op, type, unix_error_string (errno)));</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_split.c.html#L180'>op</a>                180 tests/lib/vfs/vfs_split.c     const char *local = NULL, *op = NULL;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_split.c.html#L187'>op</a>                187 tests/lib/vfs/vfs_split.c     actual_result = _vfs_split_with_semi_skip_count (path, &amp;local, &amp;op, 0);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_split.c.html#L193'>op</a>                193 tests/lib/vfs/vfs_split.c     mctest_assert_str_eq (op, data-&gt;expected_op);</span>
+</pre>
+</body>
+</html>

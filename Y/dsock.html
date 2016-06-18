@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>dsock</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1421'>dsock</a>            1421 src/vfs/ftpfs/ftpfs.c     int dsock = FH_SOCK;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1429'>dsock</a>            1429 src/vfs/ftpfs/ftpfs.c         if (dsock != -1)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1430'>dsock</a>            1430 src/vfs/ftpfs/ftpfs.c             close (dsock);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1437'>dsock</a>            1437 src/vfs/ftpfs/ftpfs.c         if (dsock != -1)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1438'>dsock</a>            1438 src/vfs/ftpfs/ftpfs.c             close (dsock);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1441'>dsock</a>            1441 src/vfs/ftpfs/ftpfs.c     if (dsock != -1)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1444'>dsock</a>            1444 src/vfs/ftpfs/ftpfs.c         FD_SET (dsock, &amp;mask);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1445'>dsock</a>            1445 src/vfs/ftpfs/ftpfs.c         if (select (dsock + 1, &amp;mask, NULL, NULL, NULL) &gt; 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1452'>dsock</a>            1452 src/vfs/ftpfs/ftpfs.c             while (read (dsock, buf, sizeof (buf)) &gt; 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1458'>dsock</a>            1458 src/vfs/ftpfs/ftpfs.c                     close (dsock);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1464'>dsock</a>            1464 src/vfs/ftpfs/ftpfs.c         close (dsock);</span>
+</pre>
+</body>
+</html>

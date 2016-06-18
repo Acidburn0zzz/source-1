@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>tcsh_fifo</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L137'>tcsh_fifo</a>         137 src/subshell/common.c static char tcsh_fifo[128];</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L868'>tcsh_fifo</a>         868 src/subshell/common.c                     "alias precmd 'echo $cwd:q &gt;&gt;%s; kill -STOP $$'\n", tcsh_fifo);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1042'>tcsh_fifo</a>        1042 src/subshell/common.c             g_snprintf (tcsh_fifo, sizeof (tcsh_fifo), "%s/mc.pipe.%d",</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1044'>tcsh_fifo</a>        1044 src/subshell/common.c             if (mkfifo (tcsh_fifo, 0600) == -1)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1046'>tcsh_fifo</a>        1046 src/subshell/common.c                 fprintf (stderr, "mkfifo(%s) failed: %s\r\n", tcsh_fifo, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1053'>tcsh_fifo</a>        1053 src/subshell/common.c             if ((subshell_pipe[READ] = open (tcsh_fifo, O_RDWR)) == -1</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1054'>tcsh_fifo</a>        1054 src/subshell/common.c                 || (subshell_pipe[WRITE] = open (tcsh_fifo, O_RDWR)) == -1)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1056'>tcsh_fifo</a>        1056 src/subshell/common.c                 fprintf (stderr, _("Cannot open named pipe %s\n"), tcsh_fifo);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1252'>tcsh_fifo</a>        1252 src/subshell/common.c             if (unlink (tcsh_fifo) == -1)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1254'>tcsh_fifo</a>        1254 src/subshell/common.c                          tcsh_fifo, unix_error_string (errno));</span>
+</pre>
+</body>
+</html>

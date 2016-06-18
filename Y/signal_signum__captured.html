@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>signal_signum__captured</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L119'>signal_signum__captured</a>  119 tests/lib/utilunix__my_system-common.c static GPtrArray *signal_signum__captured;</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L135'>signal_signum__captured</a>  135 tests/lib/utilunix__my_system-common.c     g_ptr_array_add (signal_signum__captured, tmp_signum);</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L153'>signal_signum__captured</a>  153 tests/lib/utilunix__my_system-common.c     signal_signum__captured = g_ptr_array_new ();</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L160'>signal_signum__captured</a>  160 tests/lib/utilunix__my_system-common.c     g_ptr_array_foreach (signal_signum__captured, (GFunc) g_free, NULL);</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L161'>signal_signum__captured</a>  161 tests/lib/utilunix__my_system-common.c     g_ptr_array_free (signal_signum__captured, TRUE);</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L281'>signal_signum__captured</a>  281 tests/lib/utilunix__my_system-common.c     mctest_assert_int_eq (signal_signum__captured-&gt;len, 4); \</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L282'>signal_signum__captured</a>  282 tests/lib/utilunix__my_system-common.c     mctest_assert_int_eq (*((int *) g_ptr_array_index(signal_signum__captured, 0)), SIGINT); \</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L283'>signal_signum__captured</a>  283 tests/lib/utilunix__my_system-common.c     mctest_assert_int_eq (*((int *) g_ptr_array_index(signal_signum__captured, 1)), SIGQUIT); \</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L284'>signal_signum__captured</a>  284 tests/lib/utilunix__my_system-common.c     mctest_assert_int_eq (*((int *) g_ptr_array_index(signal_signum__captured, 2)), SIGTSTP); \</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L285'>signal_signum__captured</a>  285 tests/lib/utilunix__my_system-common.c     mctest_assert_int_eq (*((int *) g_ptr_array_index(signal_signum__captured, 3)), SIGCHLD); \</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-fork_fail.c.html#L57'>signal_signum__captured</a>   57 tests/lib/utilunix__my_system-fork_fail.c     mctest_assert_int_eq (signal_signum__captured-&gt;len, 0);</span>
+</pre>
+</body>
+</html>

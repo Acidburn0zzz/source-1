@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>data_addr</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1185'>data_addr</a>        1185 src/vfs/ftpfs/ftpfs.c                     struct sockaddr_storage data_addr, socklen_t data_addrlen)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1191'>data_addr</a>        1191 src/vfs/ftpfs/ftpfs.c     switch (data_addr.ss_family)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1195'>data_addr</a>        1195 src/vfs/ftpfs/ftpfs.c         port = ((struct sockaddr_in *) &amp;data_addr)-&gt;sin_port;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1199'>data_addr</a>        1199 src/vfs/ftpfs/ftpfs.c         port = ((struct sockaddr_in6 *) &amp;data_addr)-&gt;sin6_port;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1211'>data_addr</a>        1211 src/vfs/ftpfs/ftpfs.c         ((struct sockaddr *) &amp;data_addr, data_addrlen, addr, NI_MAXHOST, NULL, 0,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1221'>data_addr</a>        1221 src/vfs/ftpfs/ftpfs.c         unsigned char *a = (unsigned char *) &amp;((struct sockaddr_in *) &amp;data_addr)-&gt;sin_addr;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1257'>data_addr</a>        1257 src/vfs/ftpfs/ftpfs.c                         struct sockaddr_storage *data_addr, socklen_t * data_addrlen)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1261'>data_addr</a>        1261 src/vfs/ftpfs/ftpfs.c     memset (data_addr, 0, sizeof (*data_addr));</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1262'>data_addr</a>        1262 src/vfs/ftpfs/ftpfs.c     *data_addrlen = sizeof (*data_addr);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1265'>data_addr</a>        1265 src/vfs/ftpfs/ftpfs.c         result = getpeername (SUP-&gt;sock, (struct sockaddr *) data_addr, data_addrlen);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1267'>data_addr</a>        1267 src/vfs/ftpfs/ftpfs.c         result = getsockname (SUP-&gt;sock, (struct sockaddr *) data_addr, data_addrlen);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1272'>data_addr</a>        1272 src/vfs/ftpfs/ftpfs.c     switch (data_addr-&gt;ss_family)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1275'>data_addr</a>        1275 src/vfs/ftpfs/ftpfs.c         ((struct sockaddr_in *) data_addr)-&gt;sin_port = 0;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1278'>data_addr</a>        1278 src/vfs/ftpfs/ftpfs.c         ((struct sockaddr_in6 *) data_addr)-&gt;sin6_port = 0;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1285'>data_addr</a>        1285 src/vfs/ftpfs/ftpfs.c     result = socket (data_addr-&gt;ss_family, SOCK_STREAM, IPPROTO_TCP);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1302'>data_addr</a>        1302 src/vfs/ftpfs/ftpfs.c     struct sockaddr_storage data_addr;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1316'>data_addr</a>        1316 src/vfs/ftpfs/ftpfs.c         data_sock = ftpfs_init_data_socket (me, super, &amp;data_addr, &amp;data_addrlen);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1320'>data_addr</a>        1320 src/vfs/ftpfs/ftpfs.c         if (ftpfs_setup_passive (me, super, data_sock, &amp;data_addr, &amp;data_addrlen))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1334'>data_addr</a>        1334 src/vfs/ftpfs/ftpfs.c         data_sock = ftpfs_init_data_socket (me, super, &amp;data_addr, &amp;data_addrlen);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1338'>data_addr</a>        1338 src/vfs/ftpfs/ftpfs.c         if ((bind (data_sock, (struct sockaddr *) &amp;data_addr, data_addrlen) == 0) &amp;&amp;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1339'>data_addr</a>        1339 src/vfs/ftpfs/ftpfs.c             (getsockname (data_sock, (struct sockaddr *) &amp;data_addr, &amp;data_addrlen) == 0) &amp;&amp;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1341'>data_addr</a>        1341 src/vfs/ftpfs/ftpfs.c             (ftpfs_setup_active (me, super, data_addr, data_addrlen) != 0))</span>
+</pre>
+</body>
+</html>

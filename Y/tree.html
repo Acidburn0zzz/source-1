@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>tree</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1248'>tree</a>             1248 src/filemanager/file.c         WTree *tree;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1251'>tree</a>             1251 src/filemanager/file.c         tree = (WTree *) get_panel_widget (get_current_index ());</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1252'>tree</a>             1252 src/filemanager/file.c         selected_name = tree_selected_name (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L793'>tree</a>              793 src/filemanager/midnight.c         WTree *tree;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L796'>tree</a>              796 src/filemanager/midnight.c         tree = (WTree *) get_panel_widget (get_current_index ());</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L797'>tree</a>              797 src/filemanager/midnight.c         selected_name = tree_selected_name (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L155'>tree</a>              155 src/filemanager/tree.c     WTree *tree = data;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L157'>tree</a>              157 src/filemanager/tree.c     if (tree-&gt;selected_ptr == entry)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L159'>tree</a>              159 src/filemanager/tree.c         if (tree-&gt;selected_ptr-&gt;next)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L160'>tree</a>              160 src/filemanager/tree.c             tree-&gt;selected_ptr = tree-&gt;selected_ptr-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L162'>tree</a>              162 src/filemanager/tree.c             tree-&gt;selected_ptr = tree-&gt;selected_ptr-&gt;prev;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L170'>tree</a>              170 src/filemanager/tree.c save_tree (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L174'>tree</a>              174 src/filemanager/tree.c     (void) tree;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L191'>tree</a>              191 src/filemanager/tree.c tree_remove_entry (WTree * tree, const vfs_path_t * name_vpath)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L193'>tree</a>              193 src/filemanager/tree.c     (void) tree;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L200'>tree</a>              200 src/filemanager/tree.c tree_destroy (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L203'>tree</a>              203 src/filemanager/tree.c     save_tree (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L205'>tree</a>              205 src/filemanager/tree.c     g_free (tree-&gt;tree_shown);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L206'>tree</a>              206 src/filemanager/tree.c     tree-&gt;tree_shown = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L207'>tree</a>              207 src/filemanager/tree.c     tree-&gt;selected_ptr = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L214'>tree</a>              214 src/filemanager/tree.c load_tree (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L220'>tree</a>              220 src/filemanager/tree.c     tree-&gt;selected_ptr = tree-&gt;store-&gt;tree_first;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L222'>tree</a>              222 src/filemanager/tree.c     tree_chdir (tree, vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L229'>tree</a>              229 src/filemanager/tree.c tree_show_mini_info (WTree * tree, int tree_lines, int tree_cols)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L231'>tree</a>              231 src/filemanager/tree.c     Widget *w = WIDGET (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L235'>tree</a>              235 src/filemanager/tree.c     if (tree-&gt;is_panel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L244'>tree</a>              244 src/filemanager/tree.c     if (tree-&gt;searching)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L251'>tree</a>              251 src/filemanager/tree.c         tty_print_string (str_fit_to_term (tree-&gt;search_buffer, tree_cols - 2, J_LEFT_FIT));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L259'>tree</a>              259 src/filemanager/tree.c         tty_setcolor (tree-&gt;is_panel ? NORMAL_COLOR : TREE_NORMALC (h));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L263'>tree</a>              263 src/filemanager/tree.c                           (vfs_path_as_str (tree-&gt;selected_ptr-&gt;name), tree_cols, J_LEFT_FIT));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L270'>tree</a>              270 src/filemanager/tree.c show_tree (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L272'>tree</a>              272 src/filemanager/tree.c     Widget *w = WIDGET (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L280'>tree</a>              280 src/filemanager/tree.c     tree_lines = tlines (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L284'>tree</a>              284 src/filemanager/tree.c     if (tree-&gt;is_panel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L290'>tree</a>              290 src/filemanager/tree.c     g_free (tree-&gt;tree_shown);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L291'>tree</a>              291 src/filemanager/tree.c     tree-&gt;tree_shown = g_new0 (tree_entry *, tree_lines);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L293'>tree</a>              293 src/filemanager/tree.c     if (tree-&gt;store-&gt;tree_first)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L294'>tree</a>              294 src/filemanager/tree.c         topsublevel = tree-&gt;store-&gt;tree_first-&gt;sublevel;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L297'>tree</a>              297 src/filemanager/tree.c     if (!tree-&gt;selected_ptr)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L299'>tree</a>              299 src/filemanager/tree.c         tree-&gt;selected_ptr = tree-&gt;store-&gt;tree_first;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L300'>tree</a>              300 src/filemanager/tree.c         tree-&gt;topdiff = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L302'>tree</a>              302 src/filemanager/tree.c     current = tree-&gt;selected_ptr;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L306'>tree</a>              306 src/filemanager/tree.c         current = back_ptr (current, &amp;tree-&gt;topdiff);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L310'>tree</a>              310 src/filemanager/tree.c         while (current-&gt;prev &amp;&amp; i &lt; tree-&gt;topdiff)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L314'>tree</a>              314 src/filemanager/tree.c             if (current-&gt;sublevel &lt; tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L316'>tree</a>              316 src/filemanager/tree.c                 if (vfs_path_equal (current-&gt;name, tree-&gt;selected_ptr-&gt;name))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L319'>tree</a>              319 src/filemanager/tree.c             else if (current-&gt;sublevel == tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L326'>tree</a>              326 src/filemanager/tree.c                 if (vfs_path_equal_len (current-&gt;name, tree-&gt;selected_ptr-&gt;name, j))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L329'>tree</a>              329 src/filemanager/tree.c             else if (current-&gt;sublevel == tree-&gt;selected_ptr-&gt;sublevel + 1)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L331'>tree</a>              331 src/filemanager/tree.c                 j = vfs_path_len (tree-&gt;selected_ptr-&gt;name);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L332'>tree</a>              332 src/filemanager/tree.c                 if (j &gt; 1 &amp;&amp; vfs_path_equal_len (current-&gt;name, tree-&gt;selected_ptr-&gt;name, j))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L336'>tree</a>              336 src/filemanager/tree.c         tree-&gt;topdiff = i;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L342'>tree</a>              342 src/filemanager/tree.c         tty_setcolor (tree-&gt;is_panel ? NORMAL_COLOR : TREE_NORMALC (h));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L350'>tree</a>              350 src/filemanager/tree.c         if (tree-&gt;is_panel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L351'>tree</a>              351 src/filemanager/tree.c             tty_setcolor (tree-&gt;active &amp;&amp; current == tree-&gt;selected_ptr</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L354'>tree</a>              354 src/filemanager/tree.c             tty_setcolor (current == tree-&gt;selected_ptr ? TREE_CURRENTC (h) : TREE_NORMALC (h));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L356'>tree</a>              356 src/filemanager/tree.c         tree-&gt;tree_shown[i] = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L361'>tree</a>              361 src/filemanager/tree.c                                tree_cols + (tree-&gt;is_panel ? 0 : 1), J_LEFT_FIT));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L400'>tree</a>              400 src/filemanager/tree.c                 if (current-&gt;sublevel &lt; tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L402'>tree</a>              402 src/filemanager/tree.c                     if (vfs_path_equal_len (current-&gt;name, tree-&gt;selected_ptr-&gt;name,</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L406'>tree</a>              406 src/filemanager/tree.c                 else if (current-&gt;sublevel == tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L413'>tree</a>              413 src/filemanager/tree.c                     if (vfs_path_equal_len (current-&gt;name, tree-&gt;selected_ptr-&gt;name, j))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L416'>tree</a>              416 src/filemanager/tree.c                 else if (current-&gt;sublevel == tree-&gt;selected_ptr-&gt;sublevel + 1</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L417'>tree</a>              417 src/filemanager/tree.c                          &amp;&amp; vfs_path_len (tree-&gt;selected_ptr-&gt;name) &gt; 1)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L419'>tree</a>              419 src/filemanager/tree.c                     if (vfs_path_equal_len (current-&gt;name, tree-&gt;selected_ptr-&gt;name,</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L420'>tree</a>              420 src/filemanager/tree.c                                             vfs_path_len (tree-&gt;selected_ptr-&gt;name)))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L428'>tree</a>              428 src/filemanager/tree.c     tree_show_mini_info (tree, tree_lines, tree_cols);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L434'>tree</a>              434 src/filemanager/tree.c tree_check_focus (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L436'>tree</a>              436 src/filemanager/tree.c     if (tree-&gt;topdiff &lt; 3)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L437'>tree</a>              437 src/filemanager/tree.c         tree-&gt;topdiff = 3;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L438'>tree</a>              438 src/filemanager/tree.c     else if (tree-&gt;topdiff &gt;= tlines (tree) - 3)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L439'>tree</a>              439 src/filemanager/tree.c         tree-&gt;topdiff = tlines (tree) - 3 - 1;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L445'>tree</a>              445 src/filemanager/tree.c tree_move_backward (WTree * tree, int i)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L448'>tree</a>              448 src/filemanager/tree.c         tree-&gt;selected_ptr = back_ptr (tree-&gt;selected_ptr, &amp;i);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L454'>tree</a>              454 src/filemanager/tree.c         current = tree-&gt;selected_ptr;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L455'>tree</a>              455 src/filemanager/tree.c         while (j &lt; i &amp;&amp; current-&gt;prev &amp;&amp; current-&gt;prev-&gt;sublevel &gt;= tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L458'>tree</a>              458 src/filemanager/tree.c             if (current-&gt;sublevel == tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L460'>tree</a>              460 src/filemanager/tree.c                 tree-&gt;selected_ptr = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L467'>tree</a>              467 src/filemanager/tree.c     tree-&gt;topdiff -= i;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L468'>tree</a>              468 src/filemanager/tree.c     tree_check_focus (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L474'>tree</a>              474 src/filemanager/tree.c tree_move_forward (WTree * tree, int i)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L477'>tree</a>              477 src/filemanager/tree.c         tree-&gt;selected_ptr = forw_ptr (tree-&gt;selected_ptr, &amp;i);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L483'>tree</a>              483 src/filemanager/tree.c         current = tree-&gt;selected_ptr;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L484'>tree</a>              484 src/filemanager/tree.c         while (j &lt; i &amp;&amp; current-&gt;next &amp;&amp; current-&gt;next-&gt;sublevel &gt;= tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L487'>tree</a>              487 src/filemanager/tree.c             if (current-&gt;sublevel == tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L489'>tree</a>              489 src/filemanager/tree.c                 tree-&gt;selected_ptr = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L496'>tree</a>              496 src/filemanager/tree.c     tree-&gt;topdiff += i;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L497'>tree</a>              497 src/filemanager/tree.c     tree_check_focus (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L503'>tree</a>              503 src/filemanager/tree.c tree_move_to_child (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L508'>tree</a>              508 src/filemanager/tree.c     if (!tree-&gt;selected_ptr)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L511'>tree</a>              511 src/filemanager/tree.c     current = tree-&gt;selected_ptr-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L513'>tree</a>              513 src/filemanager/tree.c     if (current &amp;&amp; current-&gt;sublevel &gt; tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L516'>tree</a>              516 src/filemanager/tree.c         tree-&gt;selected_ptr = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L517'>tree</a>              517 src/filemanager/tree.c         tree-&gt;topdiff++;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L518'>tree</a>              518 src/filemanager/tree.c         tree_check_focus (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L523'>tree</a>              523 src/filemanager/tree.c         tree_rescan (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L524'>tree</a>              524 src/filemanager/tree.c         current = tree-&gt;selected_ptr-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L525'>tree</a>              525 src/filemanager/tree.c         if (current &amp;&amp; current-&gt;sublevel &gt; tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L527'>tree</a>              527 src/filemanager/tree.c             tree-&gt;selected_ptr = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L528'>tree</a>              528 src/filemanager/tree.c             tree-&gt;topdiff++;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L529'>tree</a>              529 src/filemanager/tree.c             tree_check_focus (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L537'>tree</a>              537 src/filemanager/tree.c tree_move_to_parent (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L542'>tree</a>              542 src/filemanager/tree.c     if (!tree-&gt;selected_ptr)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L545'>tree</a>              545 src/filemanager/tree.c     old = tree-&gt;selected_ptr;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L546'>tree</a>              546 src/filemanager/tree.c     current = tree-&gt;selected_ptr-&gt;prev;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L547'>tree</a>              547 src/filemanager/tree.c     while (current &amp;&amp; current-&gt;sublevel &gt;= tree-&gt;selected_ptr-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L550'>tree</a>              550 src/filemanager/tree.c         tree-&gt;topdiff--;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L553'>tree</a>              553 src/filemanager/tree.c         current = tree-&gt;store-&gt;tree_first;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L554'>tree</a>              554 src/filemanager/tree.c     tree-&gt;selected_ptr = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L555'>tree</a>              555 src/filemanager/tree.c     tree_check_focus (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L556'>tree</a>              556 src/filemanager/tree.c     return tree-&gt;selected_ptr != old;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L562'>tree</a>              562 src/filemanager/tree.c tree_move_to_top (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L564'>tree</a>              564 src/filemanager/tree.c     tree-&gt;selected_ptr = tree-&gt;store-&gt;tree_first;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L565'>tree</a>              565 src/filemanager/tree.c     tree-&gt;topdiff = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L571'>tree</a>              571 src/filemanager/tree.c tree_move_to_bottom (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L573'>tree</a>              573 src/filemanager/tree.c     tree-&gt;selected_ptr = tree-&gt;store-&gt;tree_last;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L574'>tree</a>              574 src/filemanager/tree.c     tree-&gt;topdiff = tlines (tree) - 3 - 1;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L580'>tree</a>              580 src/filemanager/tree.c tree_chdir_sel (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L582'>tree</a>              582 src/filemanager/tree.c     if (tree-&gt;is_panel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L586'>tree</a>              586 src/filemanager/tree.c         if (do_cd (tree-&gt;selected_ptr-&gt;name, cd_exact))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L590'>tree</a>              590 src/filemanager/tree.c                      vfs_path_as_str (tree-&gt;selected_ptr-&gt;name), unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L594'>tree</a>              594 src/filemanager/tree.c         show_tree (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L598'>tree</a>              598 src/filemanager/tree.c         WDialog *h = WIDGET (tree)-&gt;owner;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L608'>tree</a>              608 src/filemanager/tree.c maybe_chdir (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L610'>tree</a>              610 src/filemanager/tree.c     if (xtree_mode &amp;&amp; tree-&gt;is_panel &amp;&amp; is_idle ())</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L611'>tree</a>              611 src/filemanager/tree.c         tree_chdir_sel (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L618'>tree</a>              618 src/filemanager/tree.c search_tree (WTree * tree, char *text)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L626'>tree</a>              626 src/filemanager/tree.c     current = tree-&gt;selected_ptr;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L628'>tree</a>              628 src/filemanager/tree.c     while (!wrapped || current != tree-&gt;selected_ptr)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L632'>tree</a>              632 src/filemanager/tree.c             tree-&gt;selected_ptr = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L639'>tree</a>              639 src/filemanager/tree.c             current = tree-&gt;store-&gt;tree_first;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L642'>tree</a>              642 src/filemanager/tree.c         tree-&gt;topdiff++;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L644'>tree</a>              644 src/filemanager/tree.c     tree_check_focus (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L651'>tree</a>              651 src/filemanager/tree.c tree_do_search (WTree * tree, int key)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L655'>tree</a>              655 src/filemanager/tree.c     l = strlen (tree-&gt;search_buffer);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L657'>tree</a>              657 src/filemanager/tree.c         tree-&gt;search_buffer[--l] = '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L658'>tree</a>              658 src/filemanager/tree.c     else if (key &amp;&amp; l &lt; sizeof (tree-&gt;search_buffer))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L660'>tree</a>              660 src/filemanager/tree.c         tree-&gt;search_buffer[l] = key;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L661'>tree</a>              661 src/filemanager/tree.c         tree-&gt;search_buffer[++l] = '\0';</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L664'>tree</a>              664 src/filemanager/tree.c     if (!search_tree (tree, tree-&gt;search_buffer))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L665'>tree</a>              665 src/filemanager/tree.c         tree-&gt;search_buffer[--l] = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L667'>tree</a>              667 src/filemanager/tree.c     show_tree (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L668'>tree</a>              668 src/filemanager/tree.c     maybe_chdir (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L676'>tree</a>              676 src/filemanager/tree.c     WTree *tree = data;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L683'>tree</a>              683 src/filemanager/tree.c     if (tree-&gt;selected_ptr != NULL &amp;&amp; mc_chdir (tree-&gt;selected_ptr-&gt;name) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L687'>tree</a>              687 src/filemanager/tree.c         tree_store_rescan (tree-&gt;selected_ptr-&gt;name);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L699'>tree</a>              699 src/filemanager/tree.c     WTree *tree = data;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L700'>tree</a>              700 src/filemanager/tree.c     if (tree-&gt;selected_ptr)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L701'>tree</a>              701 src/filemanager/tree.c         tree_remove_entry (tree, tree-&gt;selected_ptr-&gt;name);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L707'>tree</a>              707 src/filemanager/tree.c tree_copy (WTree * tree, const char *default_dest)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L712'>tree</a>              712 src/filemanager/tree.c     if (tree-&gt;selected_ptr == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L716'>tree</a>              716 src/filemanager/tree.c                 str_trunc (vfs_path_as_str (tree-&gt;selected_ptr-&gt;name), 50));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L730'>tree</a>              730 src/filemanager/tree.c         copy_dir_dir (tctx, ctx, vfs_path_as_str (tree-&gt;selected_ptr-&gt;name), dest, TRUE, FALSE,</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L742'>tree</a>              742 src/filemanager/tree.c tree_move (WTree * tree, const char *default_dest)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L750'>tree</a>              750 src/filemanager/tree.c     if (tree-&gt;selected_ptr == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L754'>tree</a>              754 src/filemanager/tree.c                 str_trunc (vfs_path_as_str (tree-&gt;selected_ptr-&gt;name), 50));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L778'>tree</a>              778 src/filemanager/tree.c     move_dir_dir (tctx, ctx, vfs_path_as_str (tree-&gt;selected_ptr-&gt;name), dest);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L790'>tree</a>              790 src/filemanager/tree.c tree_mkdir (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L794'>tree</a>              794 src/filemanager/tree.c     if (!tree-&gt;selected_ptr)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L796'>tree</a>              796 src/filemanager/tree.c     if (chdir (tree-&gt;selected_ptr-&gt;name))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L801'>tree</a>              801 src/filemanager/tree.c     tree_rescan (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L811'>tree</a>              811 src/filemanager/tree.c     WTree *tree = data;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L815'>tree</a>              815 src/filemanager/tree.c     if (!tree-&gt;selected_ptr)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L823'>tree</a>              823 src/filemanager/tree.c         buf = g_strdup_printf (_("Delete %s?"), vfs_path_as_str (tree-&gt;selected_ptr-&gt;name));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L835'>tree</a>              835 src/filemanager/tree.c     if (erase_dir (tctx, ctx, tree-&gt;selected_ptr-&gt;name) == FILE_CONT)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L836'>tree</a>              836 src/filemanager/tree.c         tree_forget (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L844'>tree</a>              844 src/filemanager/tree.c tree_move_up (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L846'>tree</a>              846 src/filemanager/tree.c     tree_move_backward (tree, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L847'>tree</a>              847 src/filemanager/tree.c     show_tree (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L848'>tree</a>              848 src/filemanager/tree.c     maybe_chdir (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L854'>tree</a>              854 src/filemanager/tree.c tree_move_down (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L856'>tree</a>              856 src/filemanager/tree.c     tree_move_forward (tree, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L857'>tree</a>              857 src/filemanager/tree.c     show_tree (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L858'>tree</a>              858 src/filemanager/tree.c     maybe_chdir (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L864'>tree</a>              864 src/filemanager/tree.c tree_move_home (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L866'>tree</a>              866 src/filemanager/tree.c     tree_move_to_top (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L867'>tree</a>              867 src/filemanager/tree.c     show_tree (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L868'>tree</a>              868 src/filemanager/tree.c     maybe_chdir (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L874'>tree</a>              874 src/filemanager/tree.c tree_move_end (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L876'>tree</a>              876 src/filemanager/tree.c     tree_move_to_bottom (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L877'>tree</a>              877 src/filemanager/tree.c     show_tree (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L878'>tree</a>              878 src/filemanager/tree.c     maybe_chdir (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L884'>tree</a>              884 src/filemanager/tree.c tree_move_pgup (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L886'>tree</a>              886 src/filemanager/tree.c     tree_move_backward (tree, tlines (tree) - 1);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L887'>tree</a>              887 src/filemanager/tree.c     show_tree (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L888'>tree</a>              888 src/filemanager/tree.c     maybe_chdir (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L894'>tree</a>              894 src/filemanager/tree.c tree_move_pgdn (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L896'>tree</a>              896 src/filemanager/tree.c     tree_move_forward (tree, tlines (tree) - 1);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L897'>tree</a>              897 src/filemanager/tree.c     show_tree (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L898'>tree</a>              898 src/filemanager/tree.c     maybe_chdir (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L904'>tree</a>              904 src/filemanager/tree.c tree_move_left (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L910'>tree</a>              910 src/filemanager/tree.c         v = tree_move_to_parent (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L911'>tree</a>              911 src/filemanager/tree.c         show_tree (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L912'>tree</a>              912 src/filemanager/tree.c         maybe_chdir (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L921'>tree</a>              921 src/filemanager/tree.c tree_move_right (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L927'>tree</a>              927 src/filemanager/tree.c         tree_move_to_child (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L928'>tree</a>              928 src/filemanager/tree.c         show_tree (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L929'>tree</a>              929 src/filemanager/tree.c         maybe_chdir (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L939'>tree</a>              939 src/filemanager/tree.c tree_start_search (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L943'>tree</a>              943 src/filemanager/tree.c     if (tree-&gt;searching)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L945'>tree</a>              945 src/filemanager/tree.c         if (tree-&gt;selected_ptr == tree-&gt;store-&gt;tree_last)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L946'>tree</a>              946 src/filemanager/tree.c             tree_move_to_top (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L956'>tree</a>              956 src/filemanager/tree.c             tree_move_forward (tree, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L959'>tree</a>              959 src/filemanager/tree.c         tree_do_search (tree, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L963'>tree</a>              963 src/filemanager/tree.c         tree-&gt;searching = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L964'>tree</a>              964 src/filemanager/tree.c         tree-&gt;search_buffer[0] = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L971'>tree</a>              971 src/filemanager/tree.c tree_toggle_navig (WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L974'>tree</a>              974 src/filemanager/tree.c     buttonbar_set_label (find_buttonbar (WIDGET (tree)-&gt;owner), 4,</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L976'>tree</a>              976 src/filemanager/tree.c                          : Q_ ("ButtonBar|Dynamc"), tree_map, WIDGET (tree));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L982'>tree</a>              982 src/filemanager/tree.c tree_execute_cmd (WTree * tree, long command)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L987'>tree</a>              987 src/filemanager/tree.c         tree-&gt;searching = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L998'>tree</a>              998 src/filemanager/tree.c         tree_forget (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1001'>tree</a>             1001 src/filemanager/tree.c         tree_toggle_navig (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1004'>tree</a>             1004 src/filemanager/tree.c         tree_copy (tree, "");</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1007'>tree</a>             1007 src/filemanager/tree.c         tree_move (tree, "");</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1010'>tree</a>             1010 src/filemanager/tree.c         tree_move_up (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1013'>tree</a>             1013 src/filemanager/tree.c         tree_move_down (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1016'>tree</a>             1016 src/filemanager/tree.c         tree_move_home (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1019'>tree</a>             1019 src/filemanager/tree.c         tree_move_end (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1022'>tree</a>             1022 src/filemanager/tree.c         tree_move_pgup (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1025'>tree</a>             1025 src/filemanager/tree.c         tree_move_pgdn (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1028'>tree</a>             1028 src/filemanager/tree.c         tree_chdir_sel (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1031'>tree</a>             1031 src/filemanager/tree.c         tree_rescan (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1034'>tree</a>             1034 src/filemanager/tree.c         tree_start_search (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1037'>tree</a>             1037 src/filemanager/tree.c         tree_rmdir (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1040'>tree</a>             1040 src/filemanager/tree.c         if (!tree-&gt;is_panel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1041'>tree</a>             1041 src/filemanager/tree.c             dlg_stop (WIDGET (tree)-&gt;owner);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1047'>tree</a>             1047 src/filemanager/tree.c     show_tree (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1055'>tree</a>             1055 src/filemanager/tree.c tree_key (WTree * tree, int key)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1061'>tree</a>             1061 src/filemanager/tree.c         if (tree-&gt;is_panel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1063'>tree</a>             1063 src/filemanager/tree.c             tree-&gt;searching = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1064'>tree</a>             1064 src/filemanager/tree.c             show_tree (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1072'>tree</a>             1072 src/filemanager/tree.c     if (tree-&gt;searching &amp;&amp; ((key &gt;= ' ' &amp;&amp; key &lt;= 255) || key == KEY_BACKSPACE))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1074'>tree</a>             1074 src/filemanager/tree.c         tree_do_search (tree, key);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1075'>tree</a>             1075 src/filemanager/tree.c         show_tree (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1084'>tree</a>             1084 src/filemanager/tree.c                 return tree_move_left (tree) ? MSG_HANDLED : MSG_NOT_HANDLED;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1086'>tree</a>             1086 src/filemanager/tree.c                 return tree_move_right (tree) ? MSG_HANDLED : MSG_NOT_HANDLED;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1088'>tree</a>             1088 src/filemanager/tree.c                 tree_execute_cmd (tree, tree_map[i].command);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1095'>tree</a>             1095 src/filemanager/tree.c         tree_start_search (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1096'>tree</a>             1096 src/filemanager/tree.c         tree_do_search (tree, key);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1106'>tree</a>             1106 src/filemanager/tree.c tree_frame (WDialog * h, WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1108'>tree</a>             1108 src/filemanager/tree.c     Widget *w = WIDGET (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1114'>tree</a>             1114 src/filemanager/tree.c     if (tree-&gt;is_panel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1143'>tree</a>             1143 src/filemanager/tree.c     WTree *tree = (WTree *) w;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1150'>tree</a>             1150 src/filemanager/tree.c         tree_frame (h, tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1151'>tree</a>             1151 src/filemanager/tree.c         show_tree (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1155'>tree</a>             1155 src/filemanager/tree.c         tree-&gt;active = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1167'>tree</a>             1167 src/filemanager/tree.c         buttonbar_clear_label (b, 7, WIDGET (tree));</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1174'>tree</a>             1174 src/filemanager/tree.c         show_tree (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1181'>tree</a>             1181 src/filemanager/tree.c         tree-&gt;active = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1182'>tree</a>             1182 src/filemanager/tree.c         tree-&gt;searching = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1183'>tree</a>             1183 src/filemanager/tree.c         show_tree (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1187'>tree</a>             1187 src/filemanager/tree.c         return tree_key (tree, parm);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1191'>tree</a>             1191 src/filemanager/tree.c         return tree_execute_cmd (tree, parm);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1194'>tree</a>             1194 src/filemanager/tree.c         tree_destroy (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1210'>tree</a>             1210 src/filemanager/tree.c     WTree *tree = (WTree *) w;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1214'>tree</a>             1214 src/filemanager/tree.c     if (tree-&gt;is_panel)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1221'>tree</a>             1221 src/filemanager/tree.c         if (tree-&gt;is_panel &amp;&amp; event-&gt;y == WIDGET (w-&gt;owner)-&gt;y)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1226'>tree</a>             1226 src/filemanager/tree.c         else if (!tree-&gt;active)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1234'>tree</a>             1234 src/filemanager/tree.c             lines = tlines (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1238'>tree</a>             1238 src/filemanager/tree.c                 tree_move_backward (tree, lines - 1);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1239'>tree</a>             1239 src/filemanager/tree.c                 show_tree (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1243'>tree</a>             1243 src/filemanager/tree.c                 tree_move_forward (tree, lines - 1);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1244'>tree</a>             1244 src/filemanager/tree.c                 show_tree (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1248'>tree</a>             1248 src/filemanager/tree.c                 if (tree-&gt;tree_shown[y] != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1250'>tree</a>             1250 src/filemanager/tree.c                     tree-&gt;selected_ptr = tree-&gt;tree_shown[y];</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1251'>tree</a>             1251 src/filemanager/tree.c                     tree-&gt;topdiff = y;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1254'>tree</a>             1254 src/filemanager/tree.c                 tree_chdir_sel (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1276'>tree</a>             1276 src/filemanager/tree.c     WTree *tree;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1279'>tree</a>             1279 src/filemanager/tree.c     tree = g_new (WTree, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1280'>tree</a>             1280 src/filemanager/tree.c     w = WIDGET (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1283'>tree</a>             1283 src/filemanager/tree.c     tree-&gt;is_panel = is_panel;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1284'>tree</a>             1284 src/filemanager/tree.c     tree-&gt;selected_ptr = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1286'>tree</a>             1286 src/filemanager/tree.c     tree-&gt;store = tree_store_get ();</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1287'>tree</a>             1287 src/filemanager/tree.c     tree_store_add_entry_remove_hook (remove_callback, tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1288'>tree</a>             1288 src/filemanager/tree.c     tree-&gt;tree_shown = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1289'>tree</a>             1289 src/filemanager/tree.c     tree-&gt;search_buffer[0] = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1290'>tree</a>             1290 src/filemanager/tree.c     tree-&gt;topdiff = w-&gt;lines / 2;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1291'>tree</a>             1291 src/filemanager/tree.c     tree-&gt;searching = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1292'>tree</a>             1292 src/filemanager/tree.c     tree-&gt;active = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1294'>tree</a>             1294 src/filemanager/tree.c     load_tree (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1295'>tree</a>             1295 src/filemanager/tree.c     return tree;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1301'>tree</a>             1301 src/filemanager/tree.c tree_chdir (WTree * tree, const vfs_path_t * dir)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1308'>tree</a>             1308 src/filemanager/tree.c         tree-&gt;selected_ptr = current;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1309'>tree</a>             1309 src/filemanager/tree.c         tree_check_focus (tree);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1317'>tree</a>             1317 src/filemanager/tree.c tree_selected_name (const WTree * tree)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1319'>tree</a>             1319 src/filemanager/tree.c     return tree-&gt;selected_ptr-&gt;name;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.h.html#L27'>tree</a>               27 src/filemanager/tree.h void tree_chdir (WTree * tree, const vfs_path_t * dir);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.h.html#L28'>tree</a>               28 src/filemanager/tree.h const vfs_path_t *tree_selected_name (const WTree * tree);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.h.html#L16'>tree</a>               16 src/filemanager/treestore.h typedef void (*tree_store_remove_fn) (struct tree_entry * tree, void *data);</span>
+</pre>
+</body>
+</html>

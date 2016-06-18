@@ -1,0 +1,419 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>entry</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L134'>entry</a>             134 lib/vfs/direntry.c vfs_s_resolve_symlink (struct vfs_class *me, struct vfs_s_entry *entry, int follow)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L141'>entry</a>             141 lib/vfs/direntry.c         return entry;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L144'>entry</a>             144 lib/vfs/direntry.c     if (!entry)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L146'>entry</a>             146 lib/vfs/direntry.c     if (!S_ISLNK (entry-&gt;ino-&gt;st.st_mode))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L147'>entry</a>             147 lib/vfs/direntry.c         return entry;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L149'>entry</a>             149 lib/vfs/direntry.c     linkname = entry-&gt;ino-&gt;linkname;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L158'>entry</a>             158 lib/vfs/direntry.c         fullpath = vfs_s_fullpath (me, entry-&gt;dir);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L167'>entry</a>             167 lib/vfs/direntry.c     target = (MEDATA-&gt;find_entry) (me, entry-&gt;dir-&gt;super-&gt;root, linkname, follow - 1, 0);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L933'>entry</a>             933 lib/vfs/direntry.c     struct vfs_s_entry *entry;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L935'>entry</a>             935 lib/vfs/direntry.c     entry = g_new0 (struct vfs_s_entry, 1);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L937'>entry</a>             937 lib/vfs/direntry.c     entry-&gt;name = g_strdup (name);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L938'>entry</a>             938 lib/vfs/direntry.c     entry-&gt;ino = inode;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L939'>entry</a>             939 lib/vfs/direntry.c     entry-&gt;ino-&gt;ent = entry;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L940'>entry</a>             940 lib/vfs/direntry.c     CALL (init_entry) (me, entry);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L942'>entry</a>             942 lib/vfs/direntry.c     return entry;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1589'>entry</a>            1589 lib/vfs/direntry.c         struct vfs_s_entry *entry = (struct vfs_s_entry *) iter-&gt;data;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1590'>entry</a>            1590 lib/vfs/direntry.c         if ((size_t) entry-&gt;ino-&gt;data_offset &gt; final_num_spaces)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1592'>entry</a>            1592 lib/vfs/direntry.c             char *source_name = entry-&gt;name;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1593'>entry</a>            1593 lib/vfs/direntry.c             char *spacer = g_strnfill (entry-&gt;ino-&gt;data_offset - final_num_spaces, ' ');</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1594'>entry</a>            1594 lib/vfs/direntry.c             entry-&gt;name = g_strdup_printf ("%s%s", spacer, source_name);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1598'>entry</a>            1598 lib/vfs/direntry.c         entry-&gt;ino-&gt;data_offset = -1;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L472'>entry</a>             472 lib/vfs/interface.c     struct dirent *entry = NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L504'>entry</a>             504 lib/vfs/interface.c         entry = (*vfs-&gt;readdir) (vfs_path_element-&gt;dir.info);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L505'>entry</a>             505 lib/vfs/interface.c         if (entry == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L510'>entry</a>             510 lib/vfs/interface.c         str_vfs_convert_from (vfs_path_element-&gt;dir.converter, entry-&gt;d_name, vfs_str_buffer);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L512'>entry</a>             512 lib/vfs/interface.c         g_string_assign (vfs_str_buffer, entry-&gt;d_name);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L514'>entry</a>             514 lib/vfs/interface.c         mc_readdir_result-&gt;d_ino = entry-&gt;d_ino;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L517'>entry</a>             517 lib/vfs/interface.c     if (entry == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L519'>entry</a>             519 lib/vfs/interface.c     return (entry != NULL) ? mc_readdir_result : NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L130'>entry</a>             130 lib/vfs/xdirentry.h     int (*init_entry) (struct vfs_class * me, struct vfs_s_entry * entry);      /* optional */</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L176'>entry</a>             176 lib/vfs/xdirentry.h struct vfs_s_inode *vfs_s_find_root (struct vfs_class *me, struct vfs_s_entry *entry);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L198'>entry</a>             198 lib/vfs/xdirentry.h vfs_s_store_filename_leading_spaces (struct vfs_s_entry *entry, size_t position)</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L200'>entry</a>             200 lib/vfs/xdirentry.h     entry-&gt;ino-&gt;data_offset = (off_t) position;</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L304'>entry</a>             304 lib/widget/history.c         WLEntry *entry;</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L311'>entry</a>             311 lib/widget/history.c         entry = g_new0 (WLEntry, 1);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L313'>entry</a>             313 lib/widget/history.c         entry-&gt;text = g_strdup ((char *) z-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L314'>entry</a>             314 lib/widget/history.c         hlist = g_list_prepend (hlist, entry);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L371'>entry</a>             371 lib/widget/history.c         WLEntry *entry = LENTRY (hi-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L374'>entry</a>             374 lib/widget/history.c         z = g_list_prepend (z, entry-&gt;text);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L375'>entry</a>             375 lib/widget/history.c         entry-&gt;text = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L146'>entry</a>             146 lib/widget/input_complete.c     struct dirent *entry = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L206'>entry</a>             206 lib/widget/input_complete.c     while (directory != NULL &amp;&amp; (entry = mc_readdir (directory)) != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L208'>entry</a>             208 lib/widget/input_complete.c         if (!str_is_valid_string (entry-&gt;d_name))</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L215'>entry</a>             215 lib/widget/input_complete.c             if (DIR_IS_DOT (entry-&gt;d_name) || DIR_IS_DOTDOT (entry-&gt;d_name))</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L222'>entry</a>             222 lib/widget/input_complete.c             if ((entry-&gt;d_name[0] != filename[0]) ||</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L223'>entry</a>             223 lib/widget/input_complete.c                 ((NLENGTH (entry)) &lt; filename_len) ||</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L224'>entry</a>             224 lib/widget/input_complete.c                 strncmp (filename, entry-&gt;d_name, filename_len) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L235'>entry</a>             235 lib/widget/input_complete.c             tmp_vpath = vfs_path_build_filename (dirname, entry-&gt;d_name, (char *) NULL);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L273'>entry</a>             273 lib/widget/input_complete.c     if (entry == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L301'>entry</a>             301 lib/widget/input_complete.c         g_string_append (temp, entry-&gt;d_name);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L316'>entry</a>             316 lib/widget/input_complete.c     static struct passwd *entry = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L330'>entry</a>             330 lib/widget/input_complete.c     while ((entry = getpwent ()) != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L335'>entry</a>             335 lib/widget/input_complete.c         if (text[1] == entry-&gt;pw_name[0] &amp;&amp; strncmp (text + 1, entry-&gt;pw_name, userlen) == 0)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L339'>entry</a>             339 lib/widget/input_complete.c     if (entry != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L340'>entry</a>             340 lib/widget/input_complete.c         return g_strconcat ("~", entry-&gt;pw_name, PATH_SEP_STR, (char *) NULL);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L776'>entry</a>             776 lib/widget/listbox.c     WLEntry *entry;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L784'>entry</a>             784 lib/widget/listbox.c     entry = g_new (WLEntry, 1);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L785'>entry</a>             785 lib/widget/listbox.c     entry-&gt;text = g_strdup (text);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L786'>entry</a>             786 lib/widget/listbox.c     entry-&gt;data = data;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L787'>entry</a>             787 lib/widget/listbox.c     entry-&gt;free_data = free_data;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L788'>entry</a>             788 lib/widget/listbox.c     entry-&gt;hotkey = hotkey;</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L790'>entry</a>             790 lib/widget/listbox.c     listbox_append_item (l, entry, pos);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L792'>entry</a>             792 lib/widget/listbox.c     return entry-&gt;text;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L92'>entry</a>              92 lib/widget/menu.c             menu_entry_t *entry = MENUENTRY (i-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L94'>entry</a>              94 lib/widget/menu.c             if (entry != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L98'>entry</a>              98 lib/widget/menu.c                 len = (size_t) hotkey_width (entry-&gt;text);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L102'>entry</a>             102 lib/widget/menu.c                     entry-&gt;shortcut = get_shortcut (entry-&gt;command);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L104'>entry</a>             104 lib/widget/menu.c                 if (entry-&gt;shortcut != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L106'>entry</a>             106 lib/widget/menu.c                     len = (size_t) str_term_width1 (entry-&gt;shortcut);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L123'>entry</a>             123 lib/widget/menu.c     const menu_entry_t *entry = MENUENTRY (g_list_nth_data (menu-&gt;entries, idx));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L130'>entry</a>             130 lib/widget/menu.c     if (entry == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L148'>entry</a>             148 lib/widget/menu.c         tty_print_char ((unsigned char) entry-&gt;first_letter);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L151'>entry</a>             151 lib/widget/menu.c         tty_print_string (entry-&gt;text.start);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L153'>entry</a>             153 lib/widget/menu.c         if (entry-&gt;text.hotkey != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L156'>entry</a>             156 lib/widget/menu.c             tty_print_string (entry-&gt;text.hotkey);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L160'>entry</a>             160 lib/widget/menu.c         if (entry-&gt;text.end != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L161'>entry</a>             161 lib/widget/menu.c             tty_print_string (entry-&gt;text.end);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L163'>entry</a>             163 lib/widget/menu.c         if (entry-&gt;shortcut != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L166'>entry</a>             166 lib/widget/menu.c             tty_print_string (entry-&gt;shortcut);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L336'>entry</a>             336 lib/widget/menu.c     const menu_entry_t *entry = MENUENTRY (g_list_nth_data (menu-&gt;entries, menu-&gt;selected));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L338'>entry</a>             338 lib/widget/menu.c     if ((entry != NULL) &amp;&amp; (entry-&gt;command != CK_IgnoreKey))</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L344'>entry</a>             344 lib/widget/menu.c         send_message (w-&gt;owner, w, MSG_ACTION, entry-&gt;command, NULL);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L356'>entry</a>             356 lib/widget/menu.c     menu_entry_t *entry;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L363'>entry</a>             363 lib/widget/menu.c         entry = MENUENTRY (g_list_nth_data (menu-&gt;entries, menu-&gt;selected));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L365'>entry</a>             365 lib/widget/menu.c     while ((entry == NULL) || (entry-&gt;command == CK_IgnoreKey));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L377'>entry</a>             377 lib/widget/menu.c     menu_entry_t *entry;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L387'>entry</a>             387 lib/widget/menu.c         entry = MENUENTRY (g_list_nth_data (menu-&gt;entries, menu-&gt;selected));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L389'>entry</a>             389 lib/widget/menu.c     while ((entry == NULL) || (entry-&gt;command == CK_IgnoreKey));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L410'>entry</a>             410 lib/widget/menu.c         menu_entry_t *entry;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L412'>entry</a>             412 lib/widget/menu.c         entry = MENUENTRY (g_list_nth_data (menu-&gt;entries, menu-&gt;selected));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L414'>entry</a>             414 lib/widget/menu.c         if ((entry == NULL) || (entry-&gt;command == CK_IgnoreKey))</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L430'>entry</a>             430 lib/widget/menu.c     menu_entry_t *entry;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L442'>entry</a>             442 lib/widget/menu.c         entry = MENUENTRY (g_list_nth_data (menu-&gt;entries, menu-&gt;selected));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L444'>entry</a>             444 lib/widget/menu.c     while ((entry == NULL) || (entry-&gt;command == CK_IgnoreKey));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L526'>entry</a>             526 lib/widget/menu.c             const menu_entry_t *entry = MENUENTRY (i-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L528'>entry</a>             528 lib/widget/menu.c             if ((entry != NULL) &amp;&amp; (entry-&gt;command != CK_IgnoreKey)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L529'>entry</a>             529 lib/widget/menu.c                 &amp;&amp; (entry-&gt;text.hotkey != NULL) &amp;&amp; (key == g_ascii_tolower (entry-&gt;text.hotkey[0])))</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L686'>entry</a>             686 lib/widget/menu.c     menu_entry_t *entry;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L690'>entry</a>             690 lib/widget/menu.c     entry = MENUENTRY (g_list_nth_data (menu-&gt;entries, y));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L692'>entry</a>             692 lib/widget/menu.c     if (entry != NULL &amp;&amp; entry-&gt;command != CK_IgnoreKey)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L821'>entry</a>             821 lib/widget/menu.c     menu_entry_t *entry;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L823'>entry</a>             823 lib/widget/menu.c     entry = g_new (menu_entry_t, 1);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L824'>entry</a>             824 lib/widget/menu.c     entry-&gt;first_letter = ' ';</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L825'>entry</a>             825 lib/widget/menu.c     entry-&gt;text = parse_hotkey (name);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L826'>entry</a>             826 lib/widget/menu.c     entry-&gt;command = command;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L827'>entry</a>             827 lib/widget/menu.c     entry-&gt;shortcut = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L829'>entry</a>             829 lib/widget/menu.c     return entry;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L835'>entry</a>             835 lib/widget/menu.c menu_entry_free (menu_entry_t * entry)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L837'>entry</a>             837 lib/widget/menu.c     if (entry != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L839'>entry</a>             839 lib/widget/menu.c         release_hotkey (entry-&gt;text);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L840'>entry</a>             840 lib/widget/menu.c         g_free (entry-&gt;shortcut);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L841'>entry</a>             841 lib/widget/menu.c         g_free (entry);</span>
+<span class='curline'><a href='../S/src--editor--spell.c.html#L357'>entry</a>             357 src/editor/spell.c     const AspellDictInfo *entry;</span>
+<span class='curline'><a href='../S/src--editor--spell.c.html#L367'>entry</a>             367 src/editor/spell.c     while ((entry = mc_aspell_dict_info_enumeration_next (elem)) != NULL)</span>
+<span class='curline'><a href='../S/src--editor--spell.c.html#L369'>entry</a>             369 src/editor/spell.c         if (entry-&gt;name != NULL)</span>
+<span class='curline'><a href='../S/src--editor--spell.c.html#L373'>entry</a>             373 src/editor/spell.c             tmp = g_strdup (entry-&gt;name);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1432'>entry</a>            1432 src/filemanager/cmd.c     file_entry_t *entry;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1434'>entry</a>            1434 src/filemanager/cmd.c     entry = &amp;(panel-&gt;dir.list[panel-&gt;selected]);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1435'>entry</a>            1435 src/filemanager/cmd.c     if ((S_ISDIR (entry-&gt;st.st_mode) &amp;&amp; DIR_IS_DOTDOT (entry-&gt;fname)) || panel-&gt;dirs_marked)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1447'>entry</a>            1447 src/filemanager/cmd.c     file_entry_t *entry;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1449'>entry</a>            1449 src/filemanager/cmd.c     entry = &amp;(panel-&gt;dir.list[panel-&gt;selected]);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1450'>entry</a>            1450 src/filemanager/cmd.c     if (S_ISDIR (entry-&gt;st.st_mode) &amp;&amp; !DIR_IS_DOTDOT (entry-&gt;fname))</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1458'>entry</a>            1458 src/filemanager/cmd.c         p = vfs_path_from_str (entry-&gt;fname);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1466'>entry</a>            1466 src/filemanager/cmd.c             entry-&gt;st.st_size = (off_t) total;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1467'>entry</a>            1467 src/filemanager/cmd.c             entry-&gt;f.dir_size_computed = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1745'>entry</a>            1745 src/filemanager/find.c         GList *entry;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1751'>entry</a>            1751 src/filemanager/find.c         for (i = 0, entry = listbox_get_first_link (find_list); entry != NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1752'>entry</a>            1752 src/filemanager/find.c              i++, entry = g_list_next (entry))</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1755'>entry</a>            1755 src/filemanager/find.c             WLEntry *le = LENTRY (entry-&gt;data);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L229'>entry</a>             229 src/filemanager/hotlist.c static void remove_from_hotlist (struct hotlist *entry);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L309'>entry</a>             309 src/filemanager/hotlist.c unlink_entry (struct hotlist *entry)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L313'>entry</a>             313 src/filemanager/hotlist.c     if (current == entry)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L314'>entry</a>             314 src/filemanager/hotlist.c         current_group-&gt;head = entry-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L317'>entry</a>             317 src/filemanager/hotlist.c         while (current != NULL &amp;&amp; current-&gt;next != entry)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L320'>entry</a>             320 src/filemanager/hotlist.c             current-&gt;next = entry-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L322'>entry</a>             322 src/filemanager/hotlist.c     entry-&gt;next = entry-&gt;up = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L413'>entry</a>             413 src/filemanager/hotlist.c             struct hotlist *entry = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L415'>entry</a>             415 src/filemanager/hotlist.c             listbox_get_current (l_hotlist, NULL, (void **) &amp;entry);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L416'>entry</a>             416 src/filemanager/hotlist.c             remove_from_hotlist (entry);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1117'>entry</a>            1117 src/filemanager/hotlist.c remove_from_hotlist (struct hotlist *entry)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1119'>entry</a>            1119 src/filemanager/hotlist.c     if (entry == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1122'>entry</a>            1122 src/filemanager/hotlist.c     if (entry-&gt;type == HL_TYPE_DOTDOT)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1134'>entry</a>            1134 src/filemanager/hotlist.c                     str_trunc (entry-&gt;label, 30));</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1141'>entry</a>            1141 src/filemanager/hotlist.c     if (entry-&gt;type == HL_TYPE_GROUP)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1143'>entry</a>            1143 src/filemanager/hotlist.c         struct hotlist *head = entry-&gt;head;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1151'>entry</a>            1151 src/filemanager/hotlist.c                         str_trunc (entry-&gt;label, 30));</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1158'>entry</a>            1158 src/filemanager/hotlist.c         remove_group (entry);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1161'>entry</a>            1161 src/filemanager/hotlist.c     unlink_entry (entry);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1163'>entry</a>            1163 src/filemanager/hotlist.c     g_free (entry-&gt;label);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1164'>entry</a>            1164 src/filemanager/hotlist.c     g_free (entry-&gt;directory);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1165'>entry</a>            1165 src/filemanager/hotlist.c     g_free (entry);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1265'>entry</a>            1265 src/filemanager/mountlist.c             struct dirent entry;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1268'>entry</a>            1268 src/filemanager/mountlist.c             if (readdir_r (dirp, &amp;entry, &amp;result) || result == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1272'>entry</a>            1272 src/filemanager/mountlist.c             strcat (node, entry.d_name);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1706'>entry</a>            1706 src/filemanager/mountlist.c     struct mount_entry *entry = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1718'>entry</a>            1718 src/filemanager/mountlist.c             (entry == NULL || IS_PATH_SEP (path[i]) || path[i] == '\0'))</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1721'>entry</a>            1721 src/filemanager/mountlist.c             entry = me;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1725'>entry</a>            1725 src/filemanager/mountlist.c     if (entry != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1728'>entry</a>            1728 src/filemanager/mountlist.c         get_fs_usage (entry-&gt;me_mountdir, NULL, &amp;fs_use);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1730'>entry</a>            1730 src/filemanager/mountlist.c         myfs_stats-&gt;type = entry-&gt;me_dev;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1731'>entry</a>            1731 src/filemanager/mountlist.c         myfs_stats-&gt;typename = entry-&gt;me_type;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1732'>entry</a>            1732 src/filemanager/mountlist.c         myfs_stats-&gt;mpoint = entry-&gt;me_mountdir;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1733'>entry</a>            1733 src/filemanager/mountlist.c         myfs_stats-&gt;mroot = entry-&gt;me_mntroot;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1734'>entry</a>            1734 src/filemanager/mountlist.c         myfs_stats-&gt;device = entry-&gt;me_devname;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1752'>entry</a>            1752 src/filemanager/mountlist.c         struct mount_entry *entry;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1755'>entry</a>            1755 src/filemanager/mountlist.c     entry = read_file_system_list ();</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1756'>entry</a>            1756 src/filemanager/mountlist.c     if (entry != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1758'>entry</a>            1758 src/filemanager/mountlist.c         get_fs_usage (entry-&gt;me_mountdir, NULL, &amp;fs_use);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1760'>entry</a>            1760 src/filemanager/mountlist.c         myfs_stats-&gt;type = entry-&gt;me_dev;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1761'>entry</a>            1761 src/filemanager/mountlist.c         myfs_stats-&gt;typename = entry-&gt;me_type;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1762'>entry</a>            1762 src/filemanager/mountlist.c         myfs_stats-&gt;mpoint = entry-&gt;me_mountdir;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1763'>entry</a>            1763 src/filemanager/mountlist.c         myfs_stats-&gt;mroot = entry-&gt;me_mntroot;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1764'>entry</a>            1764 src/filemanager/mountlist.c         myfs_stats-&gt;device = entry-&gt;me_devname;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2872'>entry</a>            2872 src/filemanager/panel.c     const file_entry_t *entry = &amp;panel-&gt;dir.list[panel-&gt;selected];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2880'>entry</a>            2880 src/filemanager/panel.c     if (S_ISDIR (entry-&gt;st.st_mode) || entry-&gt;f.link_to_dir)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2881'>entry</a>            2881 src/filemanager/panel.c         new_dir_vpath = vfs_path_append_new (panel-&gt;cwd_vpath, entry-&gt;fname, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L276'>entry</a>             276 src/filemanager/panelize.c remove_from_panelize (struct panelize *entry)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L278'>entry</a>             278 src/filemanager/panelize.c     if (strcmp (entry-&gt;label, _("Other command")) != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L280'>entry</a>             280 src/filemanager/panelize.c         if (entry == panelize)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L287'>entry</a>             287 src/filemanager/panelize.c             while (current &amp;&amp; current-&gt;next != entry)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L291'>entry</a>             291 src/filemanager/panelize.c                 current-&gt;next = entry-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L295'>entry</a>             295 src/filemanager/panelize.c         g_free (entry-&gt;label);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L296'>entry</a>             296 src/filemanager/panelize.c         g_free (entry-&gt;command);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L297'>entry</a>             297 src/filemanager/panelize.c         g_free (entry);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L526'>entry</a>             526 src/filemanager/panelize.c             struct panelize *entry;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L528'>entry</a>             528 src/filemanager/panelize.c             listbox_get_current (l_panelize, NULL, (void **) &amp;entry);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L529'>entry</a>             529 src/filemanager/panelize.c             remove_from_panelize (entry);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L153'>entry</a>             153 src/filemanager/tree.c remove_callback (tree_entry * entry, void *data)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L157'>entry</a>             157 src/filemanager/tree.c     if (tree-&gt;selected_ptr == entry)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L475'>entry</a>             475 src/filemanager/treestore.c tree_store_notify_remove (tree_entry * entry)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L483'>entry</a>             483 src/filemanager/treestore.c         r (entry, p-&gt;hook_data);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L491'>entry</a>             491 src/filemanager/treestore.c remove_entry (tree_entry * entry)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L493'>entry</a>             493 src/filemanager/treestore.c     tree_entry *current = entry-&gt;prev;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L497'>entry</a>             497 src/filemanager/treestore.c     tree_store_notify_remove (entry);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L500'>entry</a>             500 src/filemanager/treestore.c     if (entry-&gt;next)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L501'>entry</a>             501 src/filemanager/treestore.c         submask = entry-&gt;next-&gt;submask;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L502'>entry</a>             502 src/filemanager/treestore.c     while (current &amp;&amp; current-&gt;sublevel &gt; entry-&gt;sublevel)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L511'>entry</a>             511 src/filemanager/treestore.c     if (entry-&gt;prev)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L512'>entry</a>             512 src/filemanager/treestore.c         entry-&gt;prev-&gt;next = entry-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L514'>entry</a>             514 src/filemanager/treestore.c         ts.tree_first = entry-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L516'>entry</a>             516 src/filemanager/treestore.c     if (entry-&gt;next)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L517'>entry</a>             517 src/filemanager/treestore.c         entry-&gt;next-&gt;prev = entry-&gt;prev;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L519'>entry</a>             519 src/filemanager/treestore.c         ts.tree_last = entry-&gt;prev;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L522'>entry</a>             522 src/filemanager/treestore.c     vfs_path_free (entry-&gt;name);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L523'>entry</a>             523 src/filemanager/treestore.c     g_free (entry);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L901'>entry</a>             901 src/filemanager/treestore.c     tree_entry *entry;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L905'>entry</a>             905 src/filemanager/treestore.c         entry = tree_store_add_entry (vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L906'>entry</a>             906 src/filemanager/treestore.c         entry-&gt;scanned = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L907'>entry</a>             907 src/filemanager/treestore.c         return entry;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L910'>entry</a>             910 src/filemanager/treestore.c     entry = tree_store_start_check (vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L911'>entry</a>             911 src/filemanager/treestore.c     if (entry == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L934'>entry</a>             934 src/filemanager/treestore.c     entry-&gt;scanned = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L936'>entry</a>             936 src/filemanager/treestore.c     return entry;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L372'>entry</a>             372 src/vfs/cpio/cpio.c     struct vfs_s_entry *entry = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L444'>entry</a>             444 src/vfs/cpio/cpio.c     entry = MEDATA-&gt;find_entry (me, root, tn, LINK_FOLLOW, FL_NONE);    /* In case entry is already there */</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L446'>entry</a>             446 src/vfs/cpio/cpio.c     if (entry != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L452'>entry</a>             452 src/vfs/cpio/cpio.c         if (!S_ISDIR (entry-&gt;ino-&gt;st.st_mode))</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L460'>entry</a>             460 src/vfs/cpio/cpio.c             entry-&gt;ino-&gt;st.st_mode = st-&gt;st_mode;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L461'>entry</a>             461 src/vfs/cpio/cpio.c             entry-&gt;ino-&gt;st.st_uid = st-&gt;st_uid;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L462'>entry</a>             462 src/vfs/cpio/cpio.c             entry-&gt;ino-&gt;st.st_gid = st-&gt;st_gid;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L463'>entry</a>             463 src/vfs/cpio/cpio.c             entry-&gt;ino-&gt;st.st_atime = st-&gt;st_atime;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L464'>entry</a>             464 src/vfs/cpio/cpio.c             entry-&gt;ino-&gt;st.st_mtime = st-&gt;st_mtime;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L465'>entry</a>             465 src/vfs/cpio/cpio.c             entry-&gt;ino-&gt;st.st_ctime = st-&gt;st_ctime;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L498'>entry</a>             498 src/vfs/cpio/cpio.c             entry = vfs_s_new_entry (me, tn, inode);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L499'>entry</a>             499 src/vfs/cpio/cpio.c             vfs_s_insert_entry (me, root, entry);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L81'>entry</a>              81 src/vfs/extfs/extfs.c     struct entry *first_in_subdir;      /* only used if this is a directory */</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L82'>entry</a>              82 src/vfs/extfs/extfs.c     struct entry *last_in_subdir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L100'>entry</a>             100 src/vfs/extfs/extfs.c     struct entry *next_in_dir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L101'>entry</a>             101 src/vfs/extfs/extfs.c     struct entry *dir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L111'>entry</a>             111 src/vfs/extfs/extfs.c     struct entry *entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L123'>entry</a>             123 src/vfs/extfs/extfs.c     struct entry *root_entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L148'>entry</a>             148 src/vfs/extfs/extfs.c static void extfs_remove_entry (struct entry *e);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L150'>entry</a>             150 src/vfs/extfs/extfs.c static void extfs_free_entry (struct entry *e);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L151'>entry</a>             151 src/vfs/extfs/extfs.c static struct entry *extfs_resolve_symlinks_int (struct entry *entry, GSList * list);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L156'>entry</a>             156 src/vfs/extfs/extfs.c extfs_make_dots (struct entry *ent)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L158'>entry</a>             158 src/vfs/extfs/extfs.c     struct entry *entry = g_new (struct entry, 1);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L159'>entry</a>             159 src/vfs/extfs/extfs.c     struct entry *parentry = ent-&gt;dir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L163'>entry</a>             163 src/vfs/extfs/extfs.c     entry-&gt;name = g_strdup (".");</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L164'>entry</a>             164 src/vfs/extfs/extfs.c     entry-&gt;inode = inode;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L165'>entry</a>             165 src/vfs/extfs/extfs.c     entry-&gt;dir = ent;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L167'>entry</a>             167 src/vfs/extfs/extfs.c     inode-&gt;first_in_subdir = entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L170'>entry</a>             170 src/vfs/extfs/extfs.c     entry-&gt;next_in_dir = g_new (struct entry, 1);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L171'>entry</a>             171 src/vfs/extfs/extfs.c     entry = entry-&gt;next_in_dir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L172'>entry</a>             172 src/vfs/extfs/extfs.c     entry-&gt;name = g_strdup ("..");</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L173'>entry</a>             173 src/vfs/extfs/extfs.c     inode-&gt;last_in_subdir = entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L174'>entry</a>             174 src/vfs/extfs/extfs.c     entry-&gt;next_in_dir = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L177'>entry</a>             177 src/vfs/extfs/extfs.c         entry-&gt;inode = parent;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L178'>entry</a>             178 src/vfs/extfs/extfs.c         entry-&gt;dir = parentry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L183'>entry</a>             183 src/vfs/extfs/extfs.c         entry-&gt;inode = inode;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L184'>entry</a>             184 src/vfs/extfs/extfs.c         entry-&gt;dir = ent;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L191'>entry</a>             191 src/vfs/extfs/extfs.c static struct entry *</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L193'>entry</a>             193 src/vfs/extfs/extfs.c                       const char *name, struct entry *parentry, mode_t mode)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L197'>entry</a>             197 src/vfs/extfs/extfs.c     struct entry *entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L200'>entry</a>             200 src/vfs/extfs/extfs.c     entry = g_new (struct entry, 1);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L202'>entry</a>             202 src/vfs/extfs/extfs.c     entry-&gt;name = g_strdup (name);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L203'>entry</a>             203 src/vfs/extfs/extfs.c     entry-&gt;next_in_dir = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L204'>entry</a>             204 src/vfs/extfs/extfs.c     entry-&gt;dir = parentry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L207'>entry</a>             207 src/vfs/extfs/extfs.c         parent-&gt;last_in_subdir-&gt;next_in_dir = entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L208'>entry</a>             208 src/vfs/extfs/extfs.c         parent-&gt;last_in_subdir = entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L211'>entry</a>             211 src/vfs/extfs/extfs.c     entry-&gt;inode = inode;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L231'>entry</a>             231 src/vfs/extfs/extfs.c         extfs_make_dots (entry);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L232'>entry</a>             232 src/vfs/extfs/extfs.c     return entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L237'>entry</a>             237 src/vfs/extfs/extfs.c static struct entry *</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L238'>entry</a>             238 src/vfs/extfs/extfs.c extfs_find_entry_int (struct entry *dir, const char *name, GSList * list,</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L241'>entry</a>             241 src/vfs/extfs/extfs.c     struct entry *pent, *pdir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L325'>entry</a>             325 src/vfs/extfs/extfs.c static struct entry *</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L326'>entry</a>             326 src/vfs/extfs/extfs.c extfs_find_entry (struct entry *dir, const char *name, gboolean make_dirs, gboolean make_file)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L328'>entry</a>             328 src/vfs/extfs/extfs.c     struct entry *res;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L404'>entry</a>             404 src/vfs/extfs/extfs.c     struct entry *root_entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L521'>entry</a>             521 src/vfs/extfs/extfs.c             struct entry *entry, *pent;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L554'>entry</a>             554 src/vfs/extfs/extfs.c                 entry = g_new (struct entry, 1);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L555'>entry</a>             555 src/vfs/extfs/extfs.c                 entry-&gt;name = g_strdup (p);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L556'>entry</a>             556 src/vfs/extfs/extfs.c                 entry-&gt;next_in_dir = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L557'>entry</a>             557 src/vfs/extfs/extfs.c                 entry-&gt;dir = pent;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L560'>entry</a>             560 src/vfs/extfs/extfs.c                     pent-&gt;inode-&gt;last_in_subdir-&gt;next_in_dir = entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L561'>entry</a>             561 src/vfs/extfs/extfs.c                     pent-&gt;inode-&gt;last_in_subdir = entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L576'>entry</a>             576 src/vfs/extfs/extfs.c                     entry-&gt;inode = pent-&gt;inode;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L582'>entry</a>             582 src/vfs/extfs/extfs.c                     entry-&gt;inode = inode;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L614'>entry</a>             614 src/vfs/extfs/extfs.c                         extfs_make_dots (entry);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L727'>entry</a>             727 src/vfs/extfs/extfs.c extfs_get_path_from_entry (struct entry *entry)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L733'>entry</a>             733 src/vfs/extfs/extfs.c     while (entry-&gt;dir != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L735'>entry</a>             735 src/vfs/extfs/extfs.c         g_string_prepend (localpath, entry-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L736'>entry</a>             736 src/vfs/extfs/extfs.c         if (entry-&gt;dir-&gt;dir != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L738'>entry</a>             738 src/vfs/extfs/extfs.c         entry = entry-&gt;dir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L746'>entry</a>             746 src/vfs/extfs/extfs.c static struct entry *</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L747'>entry</a>             747 src/vfs/extfs/extfs.c extfs_resolve_symlinks_int (struct entry *entry, GSList * list)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L749'>entry</a>             749 src/vfs/extfs/extfs.c     struct entry *pent = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L751'>entry</a>             751 src/vfs/extfs/extfs.c     if (!S_ISLNK (entry-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L752'>entry</a>             752 src/vfs/extfs/extfs.c         return entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L754'>entry</a>             754 src/vfs/extfs/extfs.c     if (g_slist_find (list, entry) != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L763'>entry</a>             763 src/vfs/extfs/extfs.c         looping = g_slist_prepend (list, entry);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L764'>entry</a>             764 src/vfs/extfs/extfs.c         pent = extfs_find_entry_int (entry-&gt;dir, entry-&gt;inode-&gt;linkname, looping, FALSE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L776'>entry</a>             776 src/vfs/extfs/extfs.c static struct entry *</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L777'>entry</a>             777 src/vfs/extfs/extfs.c extfs_resolve_symlinks (struct entry *entry)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L779'>entry</a>             779 src/vfs/extfs/extfs.c     struct entry *res;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L783'>entry</a>             783 src/vfs/extfs/extfs.c     res = extfs_resolve_symlinks_int (entry, NULL);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L827'>entry</a>             827 src/vfs/extfs/extfs.c            struct entry *entry, const char *localname)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L837'>entry</a>             837 src/vfs/extfs/extfs.c     file = extfs_get_path_from_entry (entry);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L895'>entry</a>             895 src/vfs/extfs/extfs.c     struct entry *entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L902'>entry</a>             902 src/vfs/extfs/extfs.c     entry = extfs_find_entry (archive-&gt;root_entry, q, FALSE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L903'>entry</a>             903 src/vfs/extfs/extfs.c     if ((entry == NULL) &amp;&amp; ((flags &amp; O_CREAT) != 0))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L906'>entry</a>             906 src/vfs/extfs/extfs.c         entry = extfs_find_entry (archive-&gt;root_entry, q, FALSE, TRUE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L907'>entry</a>             907 src/vfs/extfs/extfs.c         created = (entry != NULL);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L911'>entry</a>             911 src/vfs/extfs/extfs.c     if (entry == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L913'>entry</a>             913 src/vfs/extfs/extfs.c     entry = extfs_resolve_symlinks (entry);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L914'>entry</a>             914 src/vfs/extfs/extfs.c     if (entry == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L917'>entry</a>             917 src/vfs/extfs/extfs.c     if (S_ISDIR (entry-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L920'>entry</a>             920 src/vfs/extfs/extfs.c     if (entry-&gt;inode-&gt;local_filename == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L925'>entry</a>             925 src/vfs/extfs/extfs.c         local_handle = vfs_mkstemps (&amp;local_filename_vpath, "extfs", entry-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L933'>entry</a>             933 src/vfs/extfs/extfs.c             &amp;&amp; extfs_cmd (" copyout ", archive, entry, local_filename))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L940'>entry</a>             940 src/vfs/extfs/extfs.c         entry-&gt;inode-&gt;local_filename = g_strdup (local_filename);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L944'>entry</a>             944 src/vfs/extfs/extfs.c     local_handle = open (entry-&gt;inode-&gt;local_filename, NO_LINEAR (flags), mode);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L950'>entry</a>             950 src/vfs/extfs/extfs.c         local_handle = open (entry-&gt;inode-&gt;local_filename, flags, mode);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L958'>entry</a>             958 src/vfs/extfs/extfs.c     extfs_info-&gt;entry = entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L994'>entry</a>             994 src/vfs/extfs/extfs.c         if (extfs_cmd (" copyin ", file-&gt;archive, file-&gt;entry, file-&gt;entry-&gt;inode-&gt;local_filename))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L997'>entry</a>             997 src/vfs/extfs/extfs.c         if (stat (file-&gt;entry-&gt;inode-&gt;local_filename, &amp;file_status) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1000'>entry</a>            1000 src/vfs/extfs/extfs.c             file-&gt;entry-&gt;inode-&gt;size = file_status.st_size;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1002'>entry</a>            1002 src/vfs/extfs/extfs.c         file-&gt;entry-&gt;inode-&gt;mtime = time (NULL);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1030'>entry</a>            1030 src/vfs/extfs/extfs.c     struct entry *entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1031'>entry</a>            1031 src/vfs/extfs/extfs.c     struct entry **info;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1036'>entry</a>            1036 src/vfs/extfs/extfs.c     entry = extfs_find_entry (archive-&gt;root_entry, q, FALSE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1038'>entry</a>            1038 src/vfs/extfs/extfs.c     if (entry == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1040'>entry</a>            1040 src/vfs/extfs/extfs.c     entry = extfs_resolve_symlinks (entry);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1041'>entry</a>            1041 src/vfs/extfs/extfs.c     if (entry == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1043'>entry</a>            1043 src/vfs/extfs/extfs.c     if (!S_ISDIR (entry-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1046'>entry</a>            1046 src/vfs/extfs/extfs.c     info = g_new (struct entry *, 2);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1047'>entry</a>            1047 src/vfs/extfs/extfs.c     info[0] = entry-&gt;inode-&gt;first_in_subdir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1048'>entry</a>            1048 src/vfs/extfs/extfs.c     info[1] = entry-&gt;inode-&gt;first_in_subdir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1059'>entry</a>            1059 src/vfs/extfs/extfs.c     struct entry **info = (struct entry **) data;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1113'>entry</a>            1113 src/vfs/extfs/extfs.c     struct entry *entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1119'>entry</a>            1119 src/vfs/extfs/extfs.c     entry = extfs_find_entry (archive-&gt;root_entry, q, FALSE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1120'>entry</a>            1120 src/vfs/extfs/extfs.c     if (entry == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1124'>entry</a>            1124 src/vfs/extfs/extfs.c         entry = extfs_resolve_symlinks (entry);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1125'>entry</a>            1125 src/vfs/extfs/extfs.c         if (entry == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1128'>entry</a>            1128 src/vfs/extfs/extfs.c     extfs_stat_move (buf, entry-&gt;inode);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1157'>entry</a>            1157 src/vfs/extfs/extfs.c     extfs_stat_move (buf, file-&gt;entry-&gt;inode);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1169'>entry</a>            1169 src/vfs/extfs/extfs.c     struct entry *entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1175'>entry</a>            1175 src/vfs/extfs/extfs.c     entry = extfs_find_entry (archive-&gt;root_entry, q, FALSE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1176'>entry</a>            1176 src/vfs/extfs/extfs.c     if (entry == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1178'>entry</a>            1178 src/vfs/extfs/extfs.c     if (!S_ISLNK (entry-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1186'>entry</a>            1186 src/vfs/extfs/extfs.c     len = strlen (entry-&gt;inode-&gt;linkname);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1191'>entry</a>            1191 src/vfs/extfs/extfs.c     memcpy (buf, entry-&gt;inode-&gt;linkname, result);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1235'>entry</a>            1235 src/vfs/extfs/extfs.c     struct entry *entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1241'>entry</a>            1241 src/vfs/extfs/extfs.c     entry = extfs_find_entry (archive-&gt;root_entry, q, FALSE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1242'>entry</a>            1242 src/vfs/extfs/extfs.c     if (entry == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1244'>entry</a>            1244 src/vfs/extfs/extfs.c     entry = extfs_resolve_symlinks (entry);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1245'>entry</a>            1245 src/vfs/extfs/extfs.c     if (entry == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1247'>entry</a>            1247 src/vfs/extfs/extfs.c     if (S_ISDIR (entry-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1255'>entry</a>            1255 src/vfs/extfs/extfs.c     if (extfs_cmd (" rm ", archive, entry, ""))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1260'>entry</a>            1260 src/vfs/extfs/extfs.c     extfs_remove_entry (entry);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1273'>entry</a>            1273 src/vfs/extfs/extfs.c     struct entry *entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1283'>entry</a>            1283 src/vfs/extfs/extfs.c     entry = extfs_find_entry (archive-&gt;root_entry, q, FALSE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1284'>entry</a>            1284 src/vfs/extfs/extfs.c     if (entry != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1289'>entry</a>            1289 src/vfs/extfs/extfs.c     entry = extfs_find_entry (archive-&gt;root_entry, q, TRUE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1290'>entry</a>            1290 src/vfs/extfs/extfs.c     if (entry == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1292'>entry</a>            1292 src/vfs/extfs/extfs.c     entry = extfs_resolve_symlinks (entry);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1293'>entry</a>            1293 src/vfs/extfs/extfs.c     if (entry == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1295'>entry</a>            1295 src/vfs/extfs/extfs.c     if (!S_ISDIR (entry-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1301'>entry</a>            1301 src/vfs/extfs/extfs.c     if (extfs_cmd (" mkdir ", archive, entry, ""))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1304'>entry</a>            1304 src/vfs/extfs/extfs.c         extfs_remove_entry (entry);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1319'>entry</a>            1319 src/vfs/extfs/extfs.c     struct entry *entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1325'>entry</a>            1325 src/vfs/extfs/extfs.c     entry = extfs_find_entry (archive-&gt;root_entry, q, FALSE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1326'>entry</a>            1326 src/vfs/extfs/extfs.c     if (entry == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1328'>entry</a>            1328 src/vfs/extfs/extfs.c     entry = extfs_resolve_symlinks (entry);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1329'>entry</a>            1329 src/vfs/extfs/extfs.c     if (entry == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1331'>entry</a>            1331 src/vfs/extfs/extfs.c     if (!S_ISDIR (entry-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1340'>entry</a>            1340 src/vfs/extfs/extfs.c     if (extfs_cmd (" rmdir ", archive, entry, ""))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1345'>entry</a>            1345 src/vfs/extfs/extfs.c     extfs_remove_entry (entry);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1358'>entry</a>            1358 src/vfs/extfs/extfs.c     struct entry *entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1364'>entry</a>            1364 src/vfs/extfs/extfs.c     entry = extfs_find_entry (archive-&gt;root_entry, q, FALSE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1366'>entry</a>            1366 src/vfs/extfs/extfs.c     if (entry == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1368'>entry</a>            1368 src/vfs/extfs/extfs.c     entry = extfs_resolve_symlinks (entry);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1369'>entry</a>            1369 src/vfs/extfs/extfs.c     if ((entry == NULL) || (!S_ISDIR (entry-&gt;inode-&gt;mode)))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1411'>entry</a>            1411 src/vfs/extfs/extfs.c extfs_remove_entry (struct entry *e)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1414'>entry</a>            1414 src/vfs/extfs/extfs.c     struct entry *pe, *ent, *prev;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1418'>entry</a>            1418 src/vfs/extfs/extfs.c         struct entry *f = e-&gt;inode-&gt;first_in_subdir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1456'>entry</a>            1456 src/vfs/extfs/extfs.c extfs_free_entry (struct entry *e)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1462'>entry</a>            1462 src/vfs/extfs/extfs.c         struct entry *f = e-&gt;inode-&gt;first_in_subdir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1518'>entry</a>            1518 src/vfs/extfs/extfs.c     if (fp-&gt;entry-&gt;inode-&gt;local_filename == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1523'>entry</a>            1523 src/vfs/extfs/extfs.c     p = vfs_path_from_str (fp-&gt;entry-&gt;inode-&gt;local_filename);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1540'>entry</a>            1540 src/vfs/extfs/extfs.c     if (strcmp (fp-&gt;entry-&gt;inode-&gt;local_filename, vfs_path_get_last_path_str (local)) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2071'>entry</a>            2071 src/vfs/smbfs/helpers/lib/util.c     entry_obj *entry;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2094'>entry</a>            2094 src/vfs/smbfs/helpers/lib/util.c                     entry = &amp;object-&gt;zo_data.objdata_u.en_data;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2095'>entry</a>            2095 src/vfs/smbfs/helpers/lib/util.c                     DEBUG (5, ("NIS+ entry type: %s\n", entry-&gt;en_type));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2098'>entry</a>            2098 src/vfs/smbfs/helpers/lib/util.c                             entry-&gt;en_cols.en_cols_val[1].ec_value.ec_value_val));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2100'>entry</a>            2100 src/vfs/smbfs/helpers/lib/util.c                     pstrcpy (last_value, entry-&gt;en_cols.en_cols_val[1].ec_value.ec_value_val);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L584'>entry</a>             584 src/vfs/smbfs/smbfs.c smbfs_loaddir_helper (file_info * finfo, const char *mask, void *entry)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L586'>entry</a>             586 src/vfs/smbfs/smbfs.c     dir_entry *new_entry = (dir_entry *) entry;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L595'>entry</a>             595 src/vfs/smbfs/smbfs.c     if (!entry)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L621'>entry</a>             621 src/vfs/smbfs/smbfs.c     DEBUG (entry ? 3 : 6, ("  %-30s%7.7s%8.0f  %s",</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L613'>entry</a>             613 src/vfs/tar/tar.c         struct vfs_s_entry *entry;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L702'>entry</a>             702 src/vfs/tar/tar.c                 entry = vfs_s_new_entry (me, p, inode);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L703'>entry</a>             703 src/vfs/tar/tar.c                 vfs_s_insert_entry (me, parent, entry);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L712'>entry</a>             712 src/vfs/tar/tar.c             entry = MEDATA-&gt;find_entry (me, parent, p, LINK_NO_FOLLOW, FL_NONE);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L713'>entry</a>             713 src/vfs/tar/tar.c             if (entry)</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L727'>entry</a>             727 src/vfs/tar/tar.c         entry = vfs_s_new_entry (me, p, inode);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L729'>entry</a>             729 src/vfs/tar/tar.c         vfs_s_insert_entry (me, parent, entry);</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L79'>entry</a>              79 src/viewer/coord_cache.c mcview_ccache_add_entry (coord_cache_t * cache, size_t pos, const coord_cache_entry_t * entry)</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L81'>entry</a>              81 src/viewer/coord_cache.c     if ((cache == NULL) || (entry == NULL))</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L97'>entry</a>              97 src/viewer/coord_cache.c     cache-&gt;cache[pos] = g_memdup (entry, sizeof (*entry));</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L289'>entry</a>             289 src/viewer/coord_cache.c     coord_cache_entry_t current, next, entry;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L338'>entry</a>             338 src/viewer/coord_cache.c     entry = current;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L431'>entry</a>             431 src/viewer/coord_cache.c             entry = next;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L434'>entry</a>             434 src/viewer/coord_cache.c     if (i + 1 == cache-&gt;size &amp;&amp; entry.cc_offset != cache-&gt;cache[i]-&gt;cc_offset)</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L436'>entry</a>             436 src/viewer/coord_cache.c         mcview_ccache_add_entry (cache, cache-&gt;size, &amp;entry);</span>
+</pre>
+</body>
+</html>

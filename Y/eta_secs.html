@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>eta_secs</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L875'>eta_secs</a>          875 src/filemanager/file.c         ctx-&gt;eta_secs = 0.0;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L878'>eta_secs</a>          878 src/filemanager/file.c         ctx-&gt;eta_secs = ((dt / (double) n_read_total) * file_size) - dt;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L902'>eta_secs</a>          902 src/filemanager/file.c             tctx-&gt;eta_secs = (tctx-&gt;bps != 0) ? remain_bytes / tctx-&gt;bps : 0;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L908'>eta_secs</a>          908 src/filemanager/file.c         tctx-&gt;eta_secs = (tctx-&gt;bps != 0) ? remain_bytes / tctx-&gt;bps : 0;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1779'>eta_secs</a>         1779 src/filemanager/file.c     ctx-&gt;eta_secs = 0.0;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L343'>eta_secs</a>          343 src/filemanager/filegui.c file_frmt_time (char *buffer, double eta_secs)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L346'>eta_secs</a>          346 src/filemanager/filegui.c     eta_hours = (int) (eta_secs / (60 * 60));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L347'>eta_secs</a>          347 src/filemanager/filegui.c     eta_mins = (int) ((eta_secs - (eta_hours * 60 * 60)) / 60);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L348'>eta_secs</a>          348 src/filemanager/filegui.c     eta_s = (int) (eta_secs - (eta_hours * 60 * 60 + eta_mins * 60));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L355'>eta_secs</a>          355 src/filemanager/filegui.c file_eta_prepare_for_show (char *buffer, double eta_secs, gboolean always_show)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L358'>eta_secs</a>          358 src/filemanager/filegui.c     if (eta_secs &lt;= 0.5 &amp;&amp; !always_show)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L363'>eta_secs</a>          363 src/filemanager/filegui.c     if (eta_secs &lt;= 0.5)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L364'>eta_secs</a>          364 src/filemanager/filegui.c         eta_secs = 1;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L365'>eta_secs</a>          365 src/filemanager/filegui.c     file_frmt_time (_fmt_buff, eta_secs);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L906'>eta_secs</a>          906 src/filemanager/filegui.c     if (ui-&gt;showing_eta &amp;&amp; ctx-&gt;eta_secs &gt; 0.5)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L910'>eta_secs</a>          910 src/filemanager/filegui.c         file_eta_prepare_for_show (buffer2, ctx-&gt;eta_secs, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L992'>eta_secs</a>          992 src/filemanager/filegui.c             file_eta_prepare_for_show (buffer3, tctx-&gt;eta_secs, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.c.html#L75'>eta_secs</a>           75 src/filemanager/fileopctx.c     ctx-&gt;eta_secs = 0.0;</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.h.html#L80'>eta_secs</a>           80 src/filemanager/fileopctx.h     double eta_secs;</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.h.html#L175'>eta_secs</a>          175 src/filemanager/fileopctx.h     double eta_secs;</span>
+</pre>
+</body>
+</html>

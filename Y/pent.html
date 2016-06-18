@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>pent</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L241'>pent</a>              241 src/vfs/extfs/extfs.c     struct entry *pent, *pdir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L253'>pent</a>              253 src/vfs/extfs/extfs.c     pent = dir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L261'>pent</a>              261 src/vfs/extfs/extfs.c     while ((pent != NULL) &amp;&amp; (c != '\0') &amp;&amp; (*p != '\0'))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L269'>pent</a>              269 src/vfs/extfs/extfs.c                 pent = pent-&gt;dir;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L272'>pent</a>              272 src/vfs/extfs/extfs.c                 pent = extfs_resolve_symlinks_int (pent, list);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L273'>pent</a>              273 src/vfs/extfs/extfs.c                 if (pent == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L278'>pent</a>              278 src/vfs/extfs/extfs.c                 if (!S_ISDIR (pent-&gt;inode-&gt;mode))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L285'>pent</a>              285 src/vfs/extfs/extfs.c                 pdir = pent;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L286'>pent</a>              286 src/vfs/extfs/extfs.c                 for (pent = pent-&gt;inode-&gt;first_in_subdir; pent != NULL; pent = pent-&gt;next_in_dir)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L289'>pent</a>              289 src/vfs/extfs/extfs.c                     if (strcmp (pent-&gt;name, p) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L294'>pent</a>              294 src/vfs/extfs/extfs.c                             notadir = !S_ISDIR (pent-&gt;inode-&gt;mode);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L295'>pent</a>              295 src/vfs/extfs/extfs.c                             return pent;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L303'>pent</a>              303 src/vfs/extfs/extfs.c                 if (pent == NULL &amp;&amp; make_dirs)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L304'>pent</a>              304 src/vfs/extfs/extfs.c                     pent = extfs_generate_entry (dir-&gt;inode-&gt;archive, p, pdir, S_IFDIR | 0777);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L305'>pent</a>              305 src/vfs/extfs/extfs.c                 if (pent == NULL &amp;&amp; make_file)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L306'>pent</a>              306 src/vfs/extfs/extfs.c                     pent = extfs_generate_entry (dir-&gt;inode-&gt;archive, p, pdir, S_IFREG | 0666);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L318'>pent</a>              318 src/vfs/extfs/extfs.c     if (pent == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L320'>pent</a>              320 src/vfs/extfs/extfs.c     return pent;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L521'>pent</a>              521 src/vfs/extfs/extfs.c             struct entry *entry, *pent;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L545'>pent</a>              545 src/vfs/extfs/extfs.c                 pent = extfs_find_entry (current_archive-&gt;root_entry, q, TRUE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L546'>pent</a>              546 src/vfs/extfs/extfs.c                 if (pent == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L557'>pent</a>              557 src/vfs/extfs/extfs.c                 entry-&gt;dir = pent;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L558'>pent</a>              558 src/vfs/extfs/extfs.c                 if (pent-&gt;inode-&gt;last_in_subdir)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L560'>pent</a>              560 src/vfs/extfs/extfs.c                     pent-&gt;inode-&gt;last_in_subdir-&gt;next_in_dir = entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L561'>pent</a>              561 src/vfs/extfs/extfs.c                     pent-&gt;inode-&gt;last_in_subdir = entry;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L565'>pent</a>              565 src/vfs/extfs/extfs.c                     pent = extfs_find_entry (current_archive-&gt;root_entry,</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L567'>pent</a>              567 src/vfs/extfs/extfs.c                     if (pent == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L576'>pent</a>              576 src/vfs/extfs/extfs.c                     entry-&gt;inode = pent-&gt;inode;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L577'>pent</a>              577 src/vfs/extfs/extfs.c                     pent-&gt;inode-&gt;nlink++;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L749'>pent</a>              749 src/vfs/extfs/extfs.c     struct entry *pent = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L764'>pent</a>              764 src/vfs/extfs/extfs.c         pent = extfs_find_entry_int (entry-&gt;dir, entry-&gt;inode-&gt;linkname, looping, FALSE, FALSE);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L767'>pent</a>              767 src/vfs/extfs/extfs.c         if (pent == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L771'>pent</a>              771 src/vfs/extfs/extfs.c     return pent;</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>panelized_panel</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1788'>panelized_panel</a>  1788 src/filemanager/midnight.c         dir_list_clean (&amp;panelized_panel.list);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L87'>panelized_panel</a>    87 src/filemanager/panel.c panelized_panel_t panelized_panel = { {NULL, 0, -1}, NULL };</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L2278'>panelized_panel</a>  2278 src/filemanager/panel.c                 mc_build_filename (vfs_path_as_str (panelized_panel.root_vpath), fname,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L5052'>panelized_panel</a>  5052 src/filemanager/panel.c         if (vfs_path_equal_len (new_dir_vpath, panelized_panel.root_vpath, new_vpath_len))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L5053'>panelized_panel</a>  5053 src/filemanager/panel.c             _new_dir_vpath = panelized_panel.root_vpath;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L147'>panelized_panel</a>   147 src/filemanager/panel.h extern panelized_panel_t panelized_panel;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L393'>panelized_panel</a>   393 src/filemanager/panelize.c     if (panelized_panel.root_vpath == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L396'>panelized_panel</a>   396 src/filemanager/panelize.c     if (panelized_panel.list.len &lt; 1)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L397'>panelized_panel</a>   397 src/filemanager/panelize.c         dir_list_init (&amp;panelized_panel.list);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L398'>panelized_panel</a>   398 src/filemanager/panelize.c     else if (panelized_panel.list.len &gt; panel-&gt;dir.size)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L399'>panelized_panel</a>   399 src/filemanager/panelize.c         dir_list_grow (&amp;panel-&gt;dir, panelized_panel.list.len - panel-&gt;dir.size);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L402'>panelized_panel</a>   402 src/filemanager/panelize.c     list-&gt;len = panelized_panel.list.len;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L405'>panelized_panel</a>   405 src/filemanager/panelize.c     panelized_same = vfs_path_equal (panelized_panel.root_vpath, panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L407'>panelized_panel</a>   407 src/filemanager/panelize.c     for (i = 0; i &lt; panelized_panel.list.len; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L409'>panelized_panel</a>   409 src/filemanager/panelize.c         if (panelized_same || DIR_IS_DOTDOT (panelized_panel.list.list[i].fname))</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L411'>panelized_panel</a>   411 src/filemanager/panelize.c             list-&gt;list[i].fnamelen = panelized_panel.list.list[i].fnamelen;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L412'>panelized_panel</a>   412 src/filemanager/panelize.c             list-&gt;list[i].fname = g_strndup (panelized_panel.list.list[i].fname,</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L413'>panelized_panel</a>   413 src/filemanager/panelize.c                                              panelized_panel.list.list[i].fnamelen);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L421'>panelized_panel</a>   421 src/filemanager/panelize.c                 vfs_path_append_new (panelized_panel.root_vpath, panelized_panel.list.list[i].fname,</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L428'>panelized_panel</a>   428 src/filemanager/panelize.c         list-&gt;list[i].f.link_to_dir = panelized_panel.list.list[i].f.link_to_dir;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L429'>panelized_panel</a>   429 src/filemanager/panelize.c         list-&gt;list[i].f.stale_link = panelized_panel.list.list[i].f.stale_link;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L430'>panelized_panel</a>   430 src/filemanager/panelize.c         list-&gt;list[i].f.dir_size_computed = panelized_panel.list.list[i].f.dir_size_computed;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L431'>panelized_panel</a>   431 src/filemanager/panelize.c         list-&gt;list[i].f.marked = panelized_panel.list.list[i].f.marked;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L432'>panelized_panel</a>   432 src/filemanager/panelize.c         list-&gt;list[i].st = panelized_panel.list.list[i].st;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L433'>panelized_panel</a>   433 src/filemanager/panelize.c         list-&gt;list[i].sort_key = panelized_panel.list.list[i].sort_key;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L434'>panelized_panel</a>   434 src/filemanager/panelize.c         list-&gt;list[i].second_sort_key = panelized_panel.list.list[i].second_sort_key;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L450'>panelized_panel</a>   450 src/filemanager/panelize.c     vfs_path_free (panelized_panel.root_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L451'>panelized_panel</a>   451 src/filemanager/panelize.c     panelized_panel.root_vpath = vfs_path_clone (new_root);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L464'>panelized_panel</a>   464 src/filemanager/panelize.c     if (panelized_panel.list.len &gt; 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L465'>panelized_panel</a>   465 src/filemanager/panelize.c         dir_list_clean (&amp;panelized_panel.list);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L469'>panelized_panel</a>   469 src/filemanager/panelize.c     if (panel-&gt;dir.len &gt; panelized_panel.list.size)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L470'>panelized_panel</a>   470 src/filemanager/panelize.c         dir_list_grow (&amp;panelized_panel.list, panel-&gt;dir.len - panelized_panel.list.size);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L471'>panelized_panel</a>   471 src/filemanager/panelize.c     panelized_panel.list.len = panel-&gt;dir.len;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L475'>panelized_panel</a>   475 src/filemanager/panelize.c         panelized_panel.list.list[i].fnamelen = list-&gt;list[i].fnamelen;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L476'>panelized_panel</a>   476 src/filemanager/panelize.c         panelized_panel.list.list[i].fname =</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L478'>panelized_panel</a>   478 src/filemanager/panelize.c         panelized_panel.list.list[i].f.link_to_dir = list-&gt;list[i].f.link_to_dir;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L479'>panelized_panel</a>   479 src/filemanager/panelize.c         panelized_panel.list.list[i].f.stale_link = list-&gt;list[i].f.stale_link;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L480'>panelized_panel</a>   480 src/filemanager/panelize.c         panelized_panel.list.list[i].f.dir_size_computed = list-&gt;list[i].f.dir_size_computed;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L481'>panelized_panel</a>   481 src/filemanager/panelize.c         panelized_panel.list.list[i].f.marked = list-&gt;list[i].f.marked;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L482'>panelized_panel</a>   482 src/filemanager/panelize.c         panelized_panel.list.list[i].st = list-&gt;list[i].st;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L483'>panelized_panel</a>   483 src/filemanager/panelize.c         panelized_panel.list.list[i].sort_key = list-&gt;list[i].sort_key;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L484'>panelized_panel</a>   484 src/filemanager/panelize.c         panelized_panel.list.list[i].second_sort_key = list-&gt;list[i].second_sort_key;</span>
+</pre>
+</body>
+</html>

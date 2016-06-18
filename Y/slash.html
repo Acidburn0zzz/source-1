@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>slash</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L87'>slash</a>              87 lib/vfs/path.c     char *slash;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L98'>slash</a>              98 lib/vfs/path.c     slash = strchr (semi, PATH_SEP);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L107'>slash</a>             107 lib/vfs/path.c     if (slash != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L108'>slash</a>             108 lib/vfs/path.c         *slash = '\0';</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L116'>slash</a>             116 lib/vfs/path.c             *inpath = slash != NULL ? slash + 1 : NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L120'>slash</a>             120 lib/vfs/path.c     if (slash != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L121'>slash</a>             121 lib/vfs/path.c         *slash = PATH_SEP;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L201'>slash</a>             201 lib/vfs/path.c         char *slash;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L204'>slash</a>             204 lib/vfs/path.c         slash = strchr (semi, PATH_SEP);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L205'>slash</a>             205 lib/vfs/path.c         if (slash != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L206'>slash</a>             206 lib/vfs/path.c             return g_strndup (semi, slash - semi);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L130'>slash</a>             130 lib/vfs/vfs.c          const char *slash;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L144'>slash</a>             144 lib/vfs/vfs.c          slash = strchr (semi, PATH_SEP);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L146'>slash</a>             146 lib/vfs/vfs.c          if (slash - path &gt;= size)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L147'>slash</a>             147 lib/vfs/vfs.c              slash = NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L149'>slash</a>             149 lib/vfs/vfs.c          ms = (slash != NULL) ? slash - semi : (int) strlen (semi);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L162'>slash</a>             162 lib/vfs/vfs.c              if (slash != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L163'>slash</a>             163 lib/vfs/vfs.c                  state = str_vfs_convert_to (coder, slash + 1, path + size - slash - 1, buffer);</span>
+</pre>
+</body>
+</html>

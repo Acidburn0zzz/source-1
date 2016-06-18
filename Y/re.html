@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>re</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L942'>re</a>                942 src/filemanager/mountlist.c                     struct rootdir_entry *re = g_malloc (sizeof (*re));</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L943'>re</a>                943 src/filemanager/mountlist.c                     re-&gt;name = name;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L944'>re</a>                944 src/filemanager/mountlist.c                     re-&gt;dev = statbuf.st_dev;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L945'>re</a>                945 src/filemanager/mountlist.c                     re-&gt;ino = statbuf.st_ino;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L948'>re</a>                948 src/filemanager/mountlist.c                     *rootdir_tail = re;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L949'>re</a>                949 src/filemanager/mountlist.c                     rootdir_tail = &amp;re-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L962'>re</a>                962 src/filemanager/mountlist.c                 struct rootdir_entry *re;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L964'>re</a>                964 src/filemanager/mountlist.c                 for (re = rootdir_list; re; re = re-&gt;next)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L965'>re</a>                965 src/filemanager/mountlist.c                     if (re-&gt;dev == fi.dev &amp;&amp; re-&gt;ino == fi.root)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L971'>re</a>                971 src/filemanager/mountlist.c                 me-&gt;me_mountdir = g_strdup (re != NULL ? re-&gt;name : fi.fsh_name);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L984'>re</a>                984 src/filemanager/mountlist.c             struct rootdir_entry *re = rootdir_list;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L986'>re</a>                986 src/filemanager/mountlist.c             rootdir_list = re-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L987'>re</a>                987 src/filemanager/mountlist.c             g_free (re-&gt;name);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L988'>re</a>                988 src/filemanager/mountlist.c             g_free (re);</span>
+</pre>
+</body>
+</html>

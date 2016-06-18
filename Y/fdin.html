@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>fdin</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L84'>fdin</a>               84 lib/vfs/interface.c     int fdin, fdout = -1;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L89'>fdin</a>               89 lib/vfs/interface.c     fdin = mc_open (filename_vpath, O_RDONLY | O_LINEAR);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L90'>fdin</a>               90 lib/vfs/interface.c     if (fdin == -1)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L97'>fdin</a>               97 lib/vfs/interface.c     while ((i = mc_read (fdin, buffer, sizeof (buffer))) &gt; 0)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L104'>fdin</a>              104 lib/vfs/interface.c     i = mc_close (fdin);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L105'>fdin</a>              105 lib/vfs/interface.c     fdin = -1;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L123'>fdin</a>              123 lib/vfs/interface.c     if (fdin != -1)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L124'>fdin</a>              124 lib/vfs/interface.c         mc_close (fdin);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L134'>fdin</a>              134 lib/vfs/interface.c     int fdin = -1, fdout = -1;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L147'>fdin</a>              147 lib/vfs/interface.c         fdin = open (local, O_RDONLY);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L148'>fdin</a>              148 lib/vfs/interface.c         if (fdin == -1)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L153'>fdin</a>              153 lib/vfs/interface.c         while ((i = read (fdin, buffer, sizeof (buffer))) &gt; 0)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L159'>fdin</a>              159 lib/vfs/interface.c         if (close (fdin) == -1)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L161'>fdin</a>              161 lib/vfs/interface.c             fdin = -1;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L164'>fdin</a>              164 lib/vfs/interface.c         fdin = -1;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L178'>fdin</a>              178 lib/vfs/interface.c     if (fdin != -1)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L179'>fdin</a>              179 lib/vfs/interface.c         close (fdin);</span>
+</pre>
+</body>
+</html>

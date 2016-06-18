@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>tty</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--global.c.html#L84'>tty</a>                84 lib/global.c       .tty =</span>
+<span class='curline'><a href='../S/lib--global.h.html#L282'>tty</a>               282 lib/global.h       } tty;</span>
+<span class='curline'><a href='../S/lib--shell.c.html#L244'>tty</a>               244 lib/shell.c        mc_global.tty.use_subshell = mc_shell-&gt;type != SHELL_NONE;</span>
+<span class='curline'><a href='../S/lib--skin--colors-old.c.html#L193'>tty</a>               193 lib/skin/colors-old.c     mc_skin_colors_old_configure_one (mc_skin, mc_global.tty.setup_color_string);</span>
+<span class='curline'><a href='../S/lib--skin--colors-old.c.html#L194'>tty</a>               194 lib/skin/colors-old.c     mc_skin_colors_old_configure_one (mc_skin, mc_global.tty.term_color_string);</span>
+<span class='curline'><a href='../S/lib--skin--colors-old.c.html#L196'>tty</a>               196 lib/skin/colors-old.c     mc_skin_colors_old_configure_one (mc_skin, mc_global.tty.command_line_colors);</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L279'>tty</a>               279 lib/skin/colors.c     if (tty_use_colors () &amp;&amp; !mc_global.tty.disable_colors)</span>
+<span class='curline'><a href='../S/lib--skin--common.c.html#L70'>tty</a>                70 lib/skin/common.c     if (mc_global.tty.skin != NULL)</span>
+<span class='curline'><a href='../S/lib--skin--common.c.html#L71'>tty</a>                71 lib/skin/common.c         return g_strdup (mc_global.tty.skin);</span>
+<span class='curline'><a href='../S/lib--skin--common.c.html#L188'>tty</a>               188 lib/skin/common.c     if (mc_global.tty.ugly_line_drawing)</span>
+<span class='curline'><a href='../S/lib--skin--lines.c.html#L98'>tty</a>                98 lib/skin/lines.c     if (mc_global.tty.slow_terminal)</span>
+<span class='curline'><a href='../S/lib--skin--lines.c.html#L100'>tty</a>               100 lib/skin/lines.c     else if (mc_global.tty.ugly_line_drawing)</span>
+<span class='curline'><a href='../S/lib--tty--color-slang.c.html#L67'>tty</a>                67 lib/tty/color-slang.c         char *cts = mc_global.tty.color_terminal_string;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L680'>tty</a>               680 lib/tty/key.c      if (getenv ("DISPLAY") != NULL &amp;&amp; !mc_global.tty.disable_x11)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1116'>tty</a>              1116 lib/tty/key.c      if (!mc_global.tty.alternate_plus_minus)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1329'>tty</a>              1329 lib/tty/key.c      if (mc_global.tty.xterm_flag</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2047'>tty</a>              2047 lib/tty/key.c          if (!block || mc_global.tty.winch_flag != 0)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2067'>tty</a>              2067 lib/tty/key.c              if (!block || mc_global.tty.winch_flag != 0)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2239'>tty</a>              2239 lib/tty/key.c      if (mc_global.tty.console_flag != '\0' || mc_global.tty.xterm_flag)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2251'>tty</a>              2251 lib/tty/key.c      if (mc_global.tty.console_flag != '\0' || mc_global.tty.xterm_flag)</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L114'>tty</a>               114 lib/tty/tty-ncurses.c     mc_global.tty.winch_flag = 1;</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L236'>tty</a>               236 lib/tty/tty-ncurses.c     if (mc_global.tty.xterm_flag &amp;&amp; smcup != NULL)</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L248'>tty</a>               248 lib/tty/tty-ncurses.c     if (mc_global.tty.xterm_flag &amp;&amp; rmcup != NULL)</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L285'>tty</a>               285 lib/tty/tty-ncurses.c     if (mc_global.tty.use_subshell)</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L286'>tty</a>               286 lib/tty/tty-ncurses.c         tty_resize (mc_global.tty.subshell_pty);</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L149'>tty</a>               149 lib/tty/tty-slang.c     mc_global.tty.winch_flag = 1;</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L293'>tty</a>               293 lib/tty/tty-slang.c     if (mc_global.tty.ugly_line_drawing)</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L394'>tty</a>               394 lib/tty/tty-slang.c     if (mc_global.tty.use_subshell)</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L395'>tty</a>               395 lib/tty/tty-slang.c         tty_resize (mc_global.tty.subshell_pty);</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L297'>tty</a>               297 lib/tty/tty.c              if (mc_global.tty.old_mouse)</span>
+<span class='curline'><a href='../S/lib--tty--win.c.html#L155'>tty</a>               155 lib/tty/win.c          mc_global.tty.console_flag = '\004';</span>
+<span class='curline'><a href='../S/lib--util.c.html#L103'>tty</a>               103 lib/util.c         if (mc_global.tty.xterm_flag)</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L354'>tty</a>               354 lib/widget/dialog-switch.c     if (mc_global.tty.winch_flag == 0)</span>
+<span class='curline'><a href='../S/lib--widget--dialog-switch.c.html#L369'>tty</a>               369 lib/widget/dialog-switch.c     mc_global.tty.winch_flag = 0;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L573'>tty</a>               573 lib/widget/dialog.c         if (mc_global.tty.winch_flag != 0)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L563'>tty</a>               563 lib/widget/listbox.c     l-&gt;scrollbar = !mc_global.tty.slow_terminal;</span>
+<span class='curline'><a href='../S/src--args.c.html#L146'>tty</a>               146 src/args.c          &amp;mc_global.tty.use_subshell,</span>
+<span class='curline'><a href='../S/src--args.c.html#L212'>tty</a>               212 src/args.c          &amp;mc_global.tty.disable_x11,</span>
+<span class='curline'><a href='../S/src--args.c.html#L219'>tty</a>               219 src/args.c          &amp;mc_global.tty.old_mouse,</span>
+<span class='curline'><a href='../S/src--args.c.html#L242'>tty</a>               242 src/args.c          &amp;mc_global.tty.slow_terminal,</span>
+<span class='curline'><a href='../S/src--args.c.html#L249'>tty</a>               249 src/args.c          &amp;mc_global.tty.ugly_line_drawing,</span>
+<span class='curline'><a href='../S/src--args.c.html#L293'>tty</a>               293 src/args.c          &amp;mc_global.tty.disable_colors,</span>
+<span class='curline'><a href='../S/src--args.c.html#L307'>tty</a>               307 src/args.c          &amp;mc_global.tty.command_line_colors,</span>
+<span class='curline'><a href='../S/src--args.c.html#L314'>tty</a>               314 src/args.c          &amp;mc_global.tty.skin,</span>
+<span class='curline'><a href='../S/src--args.c.html#L739'>tty</a>               739 src/args.c             mc_global.tty.disable_colors = FALSE;</span>
+<span class='curline'><a href='../S/src--args.c.html#L743'>tty</a>               743 src/args.c             mc_global.tty.use_subshell = FALSE;</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L96'>tty</a>                96 src/cons.handler.c     if (mc_global.tty.console_flag == '\0')</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L102'>tty</a>               102 src/cons.handler.c         mc_global.tty.console_flag = '\0';</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L150'>tty</a>               150 src/cons.handler.c             mc_global.tty.console_flag = '\0';</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L163'>tty</a>               163 src/cons.handler.c             mc_global.tty.console_flag = '\0';</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L172'>tty</a>               172 src/cons.handler.c             status = read (pipefd2[0], &amp;mc_global.tty.console_flag, 1);</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L173'>tty</a>               173 src/cons.handler.c             if (mc_global.tty.console_flag == '\0')</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L218'>tty</a>               218 src/cons.handler.c             mc_global.tty.console_flag = '\0';</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L219'>tty</a>               219 src/cons.handler.c             status = write (1, &amp;mc_global.tty.console_flag, 1);</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L228'>tty</a>               228 src/cons.handler.c         if (mc_global.tty.console_flag == '\0')</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L234'>tty</a>               234 src/cons.handler.c             mc_global.tty.console_flag = '\0';</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L242'>tty</a>               242 src/cons.handler.c             status = read (pipefd2[0], &amp;mc_global.tty.console_flag, 1);</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L244'>tty</a>               244 src/cons.handler.c         if (action == CONSOLE_DONE || mc_global.tty.console_flag == '\0')</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L252'>tty</a>               252 src/cons.handler.c             mc_global.tty.console_flag = '\0';</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L271'>tty</a>               271 src/cons.handler.c     if (mc_global.tty.console_flag != '\0')</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L283'>tty</a>               283 src/cons.handler.c         mc_global.tty.console_flag = '\001';</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L312'>tty</a>               312 src/cons.handler.c     if (mc_global.tty.console_flag == '\0')</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L336'>tty</a>               336 src/cons.handler.c     if (mc_global.tty.console_flag == '\0')</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L341'>tty</a>               341 src/cons.handler.c     mc_global.tty.console_flag = '\0';</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L353'>tty</a>               353 src/cons.handler.c     if (mc_global.tty.console_flag == '\0')</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L405'>tty</a>               405 src/cons.handler.c     if (mc_global.tty.console_flag == '\0')</span>
+<span class='curline'><a href='../S/src--cons.handler.c.html#L466'>tty</a>               466 src/cons.handler.c     mc_global.tty.console_flag = '\0';</span>
+<span class='curline'><a href='../S/src--execute.c.html#L92'>tty</a>                92 src/execute.c      if (mc_global.tty.alternate_plus_minus)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L105'>tty</a>               105 src/execute.c          if (!(mc_global.tty.console_flag != '\0' || mc_global.tty.xterm_flag))</span>
+<span class='curline'><a href='../S/src--execute.c.html#L150'>tty</a>               150 src/execute.c      if (mc_global.tty.console_flag != '\0' &amp;&amp; !mc_global.tty.use_subshell)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L170'>tty</a>               170 src/execute.c      if (mc_global.tty.console_flag != '\0' &amp;&amp; !mc_global.tty.use_subshell)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L307'>tty</a>               307 src/execute.c      if (mc_global.tty.console_flag != '\0')</span>
+<span class='curline'><a href='../S/src--execute.c.html#L310'>tty</a>               310 src/execute.c      if (!mc_global.tty.use_subshell &amp;&amp; *argv != NULL &amp;&amp; (flags &amp; EXECUTE_INTERNAL) == 0)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L316'>tty</a>               316 src/execute.c      if (mc_global.tty.use_subshell &amp;&amp; (flags &amp; EXECUTE_INTERNAL) == 0)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L330'>tty</a>               330 src/execute.c               || (pause_after_run == pause_on_dumb_terminals &amp;&amp; !mc_global.tty.xterm_flag</span>
+<span class='curline'><a href='../S/src--execute.c.html#L331'>tty</a>               331 src/execute.c                   &amp;&amp; mc_global.tty.console_flag == '\0')) &amp;&amp; quit == 0</span>
+<span class='curline'><a href='../S/src--execute.c.html#L344'>tty</a>               344 src/execute.c          if (mc_global.tty.console_flag != '\0' &amp;&amp; output_lines != 0 &amp;&amp; mc_global.keybar_visible)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L351'>tty</a>               351 src/execute.c      if (mc_global.tty.console_flag != '\0')</span>
+<span class='curline'><a href='../S/src--execute.c.html#L432'>tty</a>               432 src/execute.c      if (mc_global.tty.use_subshell)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L460'>tty</a>               460 src/execute.c      if (mc_global.tty.alternate_plus_minus)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L473'>tty</a>               473 src/execute.c      if (mc_global.tty.console_flag != '\0')</span>
+<span class='curline'><a href='../S/src--execute.c.html#L477'>tty</a>               477 src/execute.c      if (mc_global.tty.use_subshell)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L498'>tty</a>               498 src/execute.c      if (mc_global.tty.console_flag != '\0')</span>
+<span class='curline'><a href='../S/src--execute.c.html#L517'>tty</a>               517 src/execute.c          if (mc_global.tty.use_subshell)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L525'>tty</a>               525 src/execute.c      if (mc_global.tty.alternate_plus_minus)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L532'>tty</a>               532 src/execute.c      was_sigwinch = mc_global.tty.winch_flag;</span>
+<span class='curline'><a href='../S/src--execute.c.html#L533'>tty</a>               533 src/execute.c      mc_global.tty.winch_flag = 0;</span>
+<span class='curline'><a href='../S/src--execute.c.html#L536'>tty</a>               536 src/execute.c      if (mc_global.tty.use_subshell)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L541'>tty</a>               541 src/execute.c          if (mc_global.tty.console_flag != '\0' &amp;&amp; output_lines)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L556'>tty</a>               556 src/execute.c      if (was_sigwinch != 0 || mc_global.tty.winch_flag != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1230'>tty</a>              1230 src/filemanager/cmd.c     if (!mc_global.tty.xterm_flag &amp;&amp; mc_global.tty.console_flag == '\0'</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1231'>tty</a>              1231 src/filemanager/cmd.c         &amp;&amp; !mc_global.tty.use_subshell &amp;&amp; !output_starts_shell)</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L288'>tty</a>               288 src/filemanager/command.c         if (mc_global.tty.use_subshell &amp;&amp; subshell_state != INACTIVE)</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L322'>tty</a>               322 src/filemanager/command.c             if (mc_global.tty.use_subshell)</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L326'>tty</a>               326 src/filemanager/command.c         if (mc_global.tty.use_subshell)</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L503'>tty</a>               503 src/filemanager/ext.c         if (mc_global.tty.console_flag != '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L324'>tty</a>               324 src/filemanager/layout.c             tty_setcolor (mc_global.tty.console_flag != '\0' ? COLOR_NORMAL : DISABLED_COLOR);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L341'>tty</a>               341 src/filemanager/layout.c             if (mc_global.tty.console_flag != '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L365'>tty</a>               365 src/filemanager/layout.c                 tty_setcolor (mc_global.tty.console_flag != '\0' ? COLOR_NORMAL : DISABLED_COLOR);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L544'>tty</a>               544 src/filemanager/layout.c         disabled = mc_global.tty.console_flag != '\0' ? 0 : WST_DISABLED;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L675'>tty</a>               675 src/filemanager/layout.c     if (mc_global.tty.console_flag != '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L722'>tty</a>               722 src/filemanager/layout.c         if (!mc_global.tty.use_subshell || !do_load_prompt ())</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L736'>tty</a>               736 src/filemanager/layout.c     if (mc_global.tty.console_flag != '\0' &amp;&amp; output_lines)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L815'>tty</a>               815 src/filemanager/layout.c     if (mc_global.tty.use_subshell)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L835'>tty</a>               835 src/filemanager/layout.c     if (mc_global.tty.use_subshell)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1379'>tty</a>              1379 src/filemanager/layout.c     if (mc_global.tty.xterm_flag &amp;&amp; xterm_title)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L1394'>tty</a>              1394 src/filemanager/layout.c         if (!mc_global.tty.alternate_plus_minus)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L878'>tty</a>               878 src/filemanager/midnight.c     if (mc_global.tty.use_subshell)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L879'>tty</a>               879 src/filemanager/midnight.c         add_select_channel (mc_global.tty.subshell_pty, load_prompt, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L882'>tty</a>               882 src/filemanager/midnight.c     if ((tty_baudrate () &lt; 9600) || mc_global.tty.slow_terminal)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1043'>tty</a>              1043 src/filemanager/midnight.c         if (!mc_global.tty.use_subshell)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1408'>tty</a>              1408 src/filemanager/midnight.c         if (mc_global.tty.console_flag != '\0' &amp;&amp; output_lines)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1494'>tty</a>              1494 src/filemanager/midnight.c         if ((!mc_global.tty.alternate_plus_minus</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1495'>tty</a>              1495 src/filemanager/midnight.c              || !(mc_global.tty.console_flag != '\0' || mc_global.tty.xterm_flag)) &amp;&amp; !quote</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3254'>tty</a>              3254 src/filemanager/panel.c     if (mc_global.tty.use_subshell &amp;&amp; vfs_current_is_local ())</span>
+<span class='curline'><a href='../S/src--learn.c.html#L391'>tty</a>               391 src/learn.c        gboolean save_alternate_plus_minus = mc_global.tty.alternate_plus_minus;</span>
+<span class='curline'><a href='../S/src--learn.c.html#L400'>tty</a>               400 src/learn.c        mc_global.tty.alternate_plus_minus = TRUE;</span>
+<span class='curline'><a href='../S/src--learn.c.html#L407'>tty</a>               407 src/learn.c        mc_global.tty.alternate_plus_minus = save_alternate_plus_minus;</span>
+<span class='curline'><a href='../S/src--learn.c.html#L409'>tty</a>               409 src/learn.c        if (!mc_global.tty.alternate_plus_minus)</span>
+<span class='curline'><a href='../S/src--main.c.html#L149'>tty</a>               149 src/main.c         if (mc_global.tty.console_flag == '\0')</span>
+<span class='curline'><a href='../S/src--main.c.html#L172'>tty</a>               172 src/main.c                 mc_global.tty.console_flag = '\0';</span>
+<span class='curline'><a href='../S/src--main.c.html#L191'>tty</a>               191 src/main.c             mc_global.tty.use_subshell ? sigchld_handler :</span>
+<span class='curline'><a href='../S/src--main.c.html#L208'>tty</a>               208 src/main.c             mc_global.tty.use_subshell = FALSE;</span>
+<span class='curline'><a href='../S/src--main.c.html#L318'>tty</a>               318 src/main.c         mc_global.tty.xterm_flag = tty_check_term (mc_args__force_xterm);</span>
+<span class='curline'><a href='../S/src--main.c.html#L330'>tty</a>               330 src/main.c             mc_global.tty.use_subshell = FALSE;</span>
+<span class='curline'><a href='../S/src--main.c.html#L332'>tty</a>               332 src/main.c         if (mc_global.tty.use_subshell)</span>
+<span class='curline'><a href='../S/src--main.c.html#L344'>tty</a>               344 src/main.c         tty_init (!mc_args__nomouse, mc_global.tty.xterm_flag);</span>
+<span class='curline'><a href='../S/src--main.c.html#L358'>tty</a>               358 src/main.c         tty_init_colors (mc_global.tty.disable_colors, mc_args__force_colors);</span>
+<span class='curline'><a href='../S/src--main.c.html#L371'>tty</a>               371 src/main.c         if (mc_global.tty.use_subshell)</span>
+<span class='curline'><a href='../S/src--main.c.html#L376'>tty</a>               376 src/main.c         if (mc_global.tty.console_flag != '\0')</span>
+<span class='curline'><a href='../S/src--main.c.html#L379'>tty</a>               379 src/main.c         if (mc_global.tty.alternate_plus_minus)</span>
+<span class='curline'><a href='../S/src--main.c.html#L422'>tty</a>               422 src/main.c         if (mc_global.tty.console_flag != '\0' &amp;&amp; (quit &amp; SUBSHELL_EXIT) == 0)</span>
+<span class='curline'><a href='../S/src--main.c.html#L424'>tty</a>               424 src/main.c         if (mc_global.tty.alternate_plus_minus)</span>
+<span class='curline'><a href='../S/src--main.c.html#L429'>tty</a>               429 src/main.c         if (mc_global.tty.console_flag != '\0')</span>
+<span class='curline'><a href='../S/src--setup.c.html#L315'>tty</a>               315 src/setup.c        { "alternate_plus_minus", &amp;mc_global.tty.alternate_plus_minus },</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1094'>tty</a>              1094 src/setup.c        mc_global.tty.setup_color_string =</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1096'>tty</a>              1096 src/setup.c        mc_global.tty.term_color_string =</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1098'>tty</a>              1098 src/setup.c        mc_global.tty.color_terminal_string =</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1222'>tty</a>              1222 src/setup.c        g_free (mc_global.tty.color_terminal_string);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1223'>tty</a>              1223 src/setup.c        g_free (mc_global.tty.term_color_string);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1224'>tty</a>              1224 src/setup.c        g_free (mc_global.tty.setup_color_string);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L196'>tty</a>               196 src/subshell/common.c                 if (mc_global.tty.winch_flag != 0)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L351'>tty</a>               351 src/subshell/common.c     close (mc_global.tty.subshell_pty);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L520'>tty</a>               520 src/subshell/common.c         FD_SET (mc_global.tty.subshell_pty, &amp;read_set);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L522'>tty</a>               522 src/subshell/common.c         maxfdp = MAX (mc_global.tty.subshell_pty, subshell_pipe[READ]);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L534'>tty</a>               534 src/subshell/common.c                 if (how == QUIETLY &amp;&amp; mc_global.tty.winch_flag != 0)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L545'>tty</a>               545 src/subshell/common.c         if (FD_ISSET (mc_global.tty.subshell_pty, &amp;read_set))</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L553'>tty</a>               553 src/subshell/common.c             bytes = read (mc_global.tty.subshell_pty, pty_buffer, sizeof (pty_buffer));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L609'>tty</a>               609 src/subshell/common.c                     write_all (mc_global.tty.subshell_pty, pty_buffer, i);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L615'>tty</a>               615 src/subshell/common.c             write_all (mc_global.tty.subshell_pty, pty_buffer, bytes);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L999'>tty</a>               999 src/subshell/common.c         mc_global.tty.use_subshell = FALSE;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1002'>tty</a>              1002 src/subshell/common.c         mc_global.tty.use_subshell = FALSE;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1013'>tty</a>              1013 src/subshell/common.c     if (mc_global.tty.subshell_pty == 0)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1022'>tty</a>              1022 src/subshell/common.c         mc_global.tty.subshell_pty = pty_open_master (pty_name);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1023'>tty</a>              1023 src/subshell/common.c         if (mc_global.tty.subshell_pty == -1)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1026'>tty</a>              1026 src/subshell/common.c             mc_global.tty.use_subshell = FALSE;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1034'>tty</a>              1034 src/subshell/common.c             mc_global.tty.use_subshell = FALSE;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1047'>tty</a>              1047 src/subshell/common.c                 mc_global.tty.use_subshell = FALSE;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1058'>tty</a>              1058 src/subshell/common.c                 mc_global.tty.use_subshell = FALSE;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1065'>tty</a>              1065 src/subshell/common.c             mc_global.tty.use_subshell = FALSE;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1092'>tty</a>              1092 src/subshell/common.c     write_all (mc_global.tty.subshell_pty, precmd, strlen (precmd));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1100'>tty</a>              1100 src/subshell/common.c         mc_global.tty.use_subshell = FALSE;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1104'>tty</a>              1104 src/subshell/common.c         mc_global.tty.use_subshell = FALSE;     /* Subshell died instantly, so don't use it */</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1127'>tty</a>              1127 src/subshell/common.c                 write_all (mc_global.tty.subshell_pty, " \b", 2);       /* Hack to make prompt reappear */</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1133'>tty</a>              1133 src/subshell/common.c             write_all (mc_global.tty.subshell_pty, " ", 1);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1135'>tty</a>              1135 src/subshell/common.c         write_all (mc_global.tty.subshell_pty, command, strlen (command));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1136'>tty</a>              1136 src/subshell/common.c         write_all (mc_global.tty.subshell_pty, "\n", 1);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1153'>tty</a>              1153 src/subshell/common.c     while (!subshell_alive &amp;&amp; subshell_get_mainloop_quit () == 0 &amp;&amp; mc_global.tty.use_subshell)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1173'>tty</a>              1173 src/subshell/common.c     FD_SET (mc_global.tty.subshell_pty, &amp;tmp);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1182'>tty</a>              1182 src/subshell/common.c            &amp;&amp; (rc = select (mc_global.tty.subshell_pty + 1, &amp;tmp, NULL, NULL, &amp;timeleft)) != 0)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1191'>tty</a>              1191 src/subshell/common.c                 if (mc_global.tty.winch_flag != 0)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1201'>tty</a>              1201 src/subshell/common.c         bytes = read (mc_global.tty.subshell_pty, pty_buffer, sizeof (pty_buffer));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1289'>tty</a>              1289 src/subshell/common.c     write_all (mc_global.tty.subshell_pty, " cd ", 4);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1301'>tty</a>              1301 src/subshell/common.c             write_all (mc_global.tty.subshell_pty, temp-&gt;str, temp-&gt;len);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1306'>tty</a>              1306 src/subshell/common.c             write_all (mc_global.tty.subshell_pty, ".", 1);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1311'>tty</a>              1311 src/subshell/common.c         write_all (mc_global.tty.subshell_pty, "/", 1);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1313'>tty</a>              1313 src/subshell/common.c     write_all (mc_global.tty.subshell_pty, "\n", 1);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1358'>tty</a>              1358 src/subshell/common.c         write_all (mc_global.tty.subshell_pty, " \n", 2);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1380'>tty</a>              1380 src/subshell/common.c         mc_global.tty.use_subshell = FALSE;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1420'>tty</a>              1420 src/subshell/common.c             delete_select_channel (mc_global.tty.subshell_pty);</span>
+<span class='curline'><a href='../S/src--subshell--proxyfunc.c.html#L84'>tty</a>                84 src/subshell/proxyfunc.c             mc_global.tty.console_flag = '\0';</span>
+</pre>
+</body>
+</html>

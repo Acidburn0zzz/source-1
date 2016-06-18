@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>sigaction</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L95'>sigaction</a>          95 lib/tty/tty-ncurses.c     struct sigaction act, oact;</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L103'>sigaction</a>         103 lib/tty/tty-ncurses.c     sigaction (SIGWINCH, &amp;act, &amp;oact);</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L115'>sigaction</a>         115 lib/tty/tty.c      struct sigaction act;</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L123'>sigaction</a>         123 lib/tty/tty.c      sigaction (SIGINT, &amp;act, NULL);</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L131'>sigaction</a>         131 lib/tty/tty.c      struct sigaction act;</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L136'>sigaction</a>         136 lib/tty/tty.c      sigaction (SIGINT, &amp;act, NULL);</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L145'>sigaction</a>         145 lib/tty/tty.c      struct sigaction act;</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L150'>sigaction</a>         150 lib/tty/tty.c      sigaction (SIGINT, &amp;act, NULL);</span>
+<span class='curline'><a href='../S/lib--util.h.html#L120'>sigaction</a>         120 lib/util.h     extern struct sigaction startup_handler;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L82'>sigaction</a>          82 lib/utilunix.c struct sigaction startup_handler;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L110'>sigaction</a>         110 lib/utilunix.c     struct sigaction intr;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L111'>sigaction</a>         111 lib/utilunix.c     struct sigaction quit;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L112'>sigaction</a>         112 lib/utilunix.c     struct sigaction stop;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L183'>sigaction</a>         183 lib/utilunix.c     struct sigaction ignore;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L189'>sigaction</a>         189 lib/utilunix.c     sigaction (SIGINT, &amp;ignore, &amp;sigactions-&gt;intr);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L190'>sigaction</a>         190 lib/utilunix.c     sigaction (SIGQUIT, &amp;ignore, &amp;sigactions-&gt;quit);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L194'>sigaction</a>         194 lib/utilunix.c     sigaction (SIGTSTP, &amp;startup_handler, &amp;sigactions-&gt;stop);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L202'>sigaction</a>         202 lib/utilunix.c     sigaction (SIGINT, &amp;sigactions-&gt;intr, NULL);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L203'>sigaction</a>         203 lib/utilunix.c     sigaction (SIGQUIT, &amp;sigactions-&gt;quit, NULL);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L204'>sigaction</a>         204 lib/utilunix.c     sigaction (SIGTSTP, &amp;sigactions-&gt;stop, NULL);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L347'>sigaction</a>         347 lib/utilunix.c     sigaction (SIGTSTP, NULL, &amp;startup_handler);</span>
+<span class='curline'><a href='../S/lib--vfs--netutil.c.html#L66'>sigaction</a>          66 lib/vfs/netutil.c     struct sigaction sa;</span>
+<span class='curline'><a href='../S/lib--vfs--netutil.c.html#L75'>sigaction</a>          75 lib/vfs/netutil.c     sigaction (SIGPIPE, &amp;sa, NULL);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L155'>sigaction</a>         155 src/execute.c          struct sigaction sigtstp_action;</span>
+<span class='curline'><a href='../S/src--execute.c.html#L161'>sigaction</a>         161 src/execute.c          sigaction (SIGTSTP, &amp;startup_handler, &amp;sigtstp_action);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L166'>sigaction</a>         166 src/execute.c          sigaction (SIGTSTP, &amp;sigtstp_action, NULL);</span>
+<span class='curline'><a href='../S/src--main.c.html#L186'>sigaction</a>         186 src/main.c         struct sigaction sigchld_action;</span>
+<span class='curline'><a href='../S/src--main.c.html#L201'>sigaction</a>         201 src/main.c         if (sigaction (SIGCHLD, &amp;sigchld_action, NULL) == -1)</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L59'>sigaction</a>          59 tests/lib/utilunix__my_system-common.c sigaction (int signum, const struct sigaction *act, struct sigaction *oldact)</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L62'>sigaction</a>          62 tests/lib/utilunix__my_system-common.c     struct sigaction *tmp_act;</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L73'>sigaction</a>          73 tests/lib/utilunix__my_system-common.c         tmp_act = g_new (struct sigaction, 1);</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L84'>sigaction</a>          84 tests/lib/utilunix__my_system-common.c         tmp_act = g_new (struct sigaction, 1);</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L229'>sigaction</a>         229 tests/lib/utilunix__my_system-common.c     struct sigaction *_act = (struct sigaction *) _pntr; \</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L235'>sigaction</a>         235 tests/lib/utilunix__my_system-common.c     struct sigaction *_oldact = (struct sigaction *) g_ptr_array_index(sigaction_oldact__captured, oldact_idx); \</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L236'>sigaction</a>         236 tests/lib/utilunix__my_system-common.c     struct sigaction *_act = (struct sigaction *) g_ptr_array_index(sigaction_act__captured, act_idx); \</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L237'>sigaction</a>         237 tests/lib/utilunix__my_system-common.c     fail_unless (memcmp(_oldact, _act, sizeof(struct sigaction)) == 0, \</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L255'>sigaction</a>         255 tests/lib/utilunix__my_system-common.c         struct sigaction *_act  = g_ptr_array_index(sigaction_act__captured, 2); \</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L256'>sigaction</a>         256 tests/lib/utilunix__my_system-common.c         fail_unless (memcmp (_act, &amp;startup_handler, sizeof(struct sigaction)) == 0, \</span>
+</pre>
+</body>
+</html>

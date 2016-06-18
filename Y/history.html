@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>history</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L288'>history</a>           288 lib/widget/history.c history_show (GList ** history, Widget * widget, int current)</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L297'>history</a>           297 lib/widget/history.c     if (*history == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L302'>history</a>           302 lib/widget/history.c     for (z = *history; z != NULL; z = g_list_previous (z))</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L384'>history</a>           384 lib/widget/history.c     g_list_free_full (*history, g_free);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L385'>history</a>           385 lib/widget/history.c     *history = g_list_last (z);</span>
+<span class='curline'><a href='../S/lib--widget--history.h.html#L31'>history</a>            31 lib/widget/history.h char *history_show (GList ** history, Widget * widget, int current);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L75'>history</a>            75 lib/widget/input.c     (in-&gt;history.list != NULL &amp;&amp; WIDGET (in)-&gt;cols &gt; HISTORY_BUTTON_WIDTH * 2 + 1 \</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L90'>history</a>            90 lib/widget/input.c get_history_length (const GList * history)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L94'>history</a>            94 lib/widget/input.c     for (; history != NULL; history = (const GList *) g_list_previous (history))</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L108'>history</a>           108 lib/widget/input.c     if (g_list_next (in-&gt;history.current) == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L110'>history</a>           110 lib/widget/input.c     else if (g_list_previous (in-&gt;history.current) == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L178'>history</a>           178 lib/widget/input.c     len = get_history_length (in-&gt;history.list);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L180'>history</a>           180 lib/widget/input.c     r = history_show (&amp;in-&gt;history.list, WIDGET (in),</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L181'>history</a>           181 lib/widget/input.c                       g_list_position (in-&gt;history.list, in-&gt;history.list));</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L189'>history</a>           189 lib/widget/input.c     if (len != get_history_length (in-&gt;history.list))</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L190'>history</a>           190 lib/widget/input.c         in-&gt;history.changed = TRUE;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L246'>history</a>           246 lib/widget/input.c     if (!empty &amp;&amp; in-&gt;history.name != NULL &amp;&amp; in-&gt;strip_password)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L260'>history</a>           260 lib/widget/input.c     if (in-&gt;history.list == NULL || in-&gt;history.list-&gt;data == NULL</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L261'>history</a>           261 lib/widget/input.c         || strcmp (in-&gt;history.list-&gt;data, t) != 0 || in-&gt;history.changed)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L263'>history</a>           263 lib/widget/input.c         in-&gt;history.list = list_append_unique (in-&gt;history.list, t);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L264'>history</a>           264 lib/widget/input.c         in-&gt;history.current = in-&gt;history.list;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L265'>history</a>           265 lib/widget/input.c         in-&gt;history.changed = TRUE;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L620'>history</a>           620 lib/widget/input.c     if (in-&gt;history.list == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L626'>history</a>           626 lib/widget/input.c     prev = g_list_previous (in-&gt;history.current);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L630'>history</a>           630 lib/widget/input.c         in-&gt;history.current = prev;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L631'>history</a>           631 lib/widget/input.c         in-&gt;history.changed = TRUE;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L650'>history</a>           650 lib/widget/input.c     if (in-&gt;history.list == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L653'>history</a>           653 lib/widget/input.c     next = g_list_next (in-&gt;history.current);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L657'>history</a>           657 lib/widget/input.c         in-&gt;history.current = in-&gt;history.list;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L662'>history</a>           662 lib/widget/input.c         in-&gt;history.current = next;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L663'>history</a>           663 lib/widget/input.c         in-&gt;history.changed = TRUE;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L844'>history</a>           844 lib/widget/input.c     in-&gt;history.list = history_load (ev-&gt;cfg, in-&gt;history.name);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L845'>history</a>           845 lib/widget/input.c     in-&gt;history.current = in-&gt;history.list;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L851'>history</a>           851 lib/widget/input.c         if (in-&gt;history.list != NULL &amp;&amp; in-&gt;history.list-&gt;data != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L852'>history</a>           852 lib/widget/input.c             def_text = (const char *) in-&gt;history.list-&gt;data;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L877'>history</a>           877 lib/widget/input.c         if (in-&gt;history.changed)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L878'>history</a>           878 lib/widget/input.c             history_save (ev-&gt;cfg, in-&gt;history.name, in-&gt;history.list);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L879'>history</a>           879 lib/widget/input.c         in-&gt;history.changed = FALSE;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L899'>history</a>           899 lib/widget/input.c     if (in-&gt;history.list != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L902'>history</a>           902 lib/widget/input.c         in-&gt;history.list = g_list_first (in-&gt;history.list);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L903'>history</a>           903 lib/widget/input.c         g_list_free_full (in-&gt;history.list, g_free);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L905'>history</a>           905 lib/widget/input.c     g_free (in-&gt;history.name);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1021'>history</a>          1021 lib/widget/input.c     in-&gt;history.list = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1022'>history</a>          1022 lib/widget/input.c     in-&gt;history.current = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1023'>history</a>          1023 lib/widget/input.c     in-&gt;history.changed = FALSE;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1024'>history</a>          1024 lib/widget/input.c     in-&gt;history.name = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1026'>history</a>          1026 lib/widget/input.c         in-&gt;history.name = g_strdup (histname);</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L72'>history</a>            72 lib/widget/input.h     } history;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2792'>history</a>          2792 src/editor/editcmd.c         GList *history;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2794'>history</a>          2794 src/editor/editcmd.c         history = history_get (MC_HISTORY_SHARED_SEARCH);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2795'>history</a>          2795 src/editor/editcmd.c         if (history != NULL &amp;&amp; history-&gt;data != NULL)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2797'>history</a>          2797 src/editor/editcmd.c             edit-&gt;last_search_string = (char *) history-&gt;data;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2798'>history</a>          2798 src/editor/editcmd.c             history-&gt;data = NULL;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2799'>history</a>          2799 src/editor/editcmd.c             history = g_list_first (history);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2800'>history</a>          2800 src/editor/editcmd.c             g_list_free_full (history, g_free);</span>
+<span class='curline'><a href='../S/src--help.c.html#L110'>history</a>           110 src/help.c     } history[HISTORY_SIZE];</span>
+<span class='curline'><a href='../S/src--help.c.html#L608'>history</a>           608 src/help.c         history[history_ptr].page = currentpoint;</span>
+<span class='curline'><a href='../S/src--help.c.html#L609'>history</a>           609 src/help.c         history[history_ptr].link = selected_item;</span>
+<span class='curline'><a href='../S/src--help.c.html#L634'>history</a>           634 src/help.c             history[history_ptr].page = currentpoint;</span>
+<span class='curline'><a href='../S/src--help.c.html#L635'>history</a>           635 src/help.c             history[history_ptr].link = selected_item;</span>
+<span class='curline'><a href='../S/src--help.c.html#L648'>history</a>           648 src/help.c         currentpoint = history[history_ptr].page;</span>
+<span class='curline'><a href='../S/src--help.c.html#L649'>history</a>           649 src/help.c         selected_item = history[history_ptr].link;</span>
+<span class='curline'><a href='../S/src--help.c.html#L760'>history</a>           760 src/help.c             currentpoint = history[history_ptr].page;</span>
+<span class='curline'><a href='../S/src--help.c.html#L761'>history</a>           761 src/help.c             selected_item = history[history_ptr].link;</span>
+<span class='curline'><a href='../S/src--help.c.html#L767'>history</a>           767 src/help.c             history[history_ptr].page = currentpoint;</span>
+<span class='curline'><a href='../S/src--help.c.html#L768'>history</a>           768 src/help.c             history[history_ptr].link = selected_item;</span>
+<span class='curline'><a href='../S/src--help.c.html#L999'>history</a>           999 src/help.c             history[history_ptr].page = currentpoint;</span>
+<span class='curline'><a href='../S/src--help.c.html#L1000'>history</a>          1000 src/help.c             history[history_ptr].link = la-&gt;link_name;</span>
+<span class='curline'><a href='../S/src--help.c.html#L1110'>history</a>          1110 src/help.c             history[history_ptr].page = currentpoint;</span>
+<span class='curline'><a href='../S/src--help.c.html#L1111'>history</a>          1111 src/help.c             history[history_ptr].link = selected_item;</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L140'>history</a>           140 src/viewer/actions_cmd.c         GList *history;</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L142'>history</a>           142 src/viewer/actions_cmd.c         history = history_get (MC_HISTORY_SHARED_SEARCH);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L143'>history</a>           143 src/viewer/actions_cmd.c         if (history != NULL &amp;&amp; history-&gt;data != NULL)</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L145'>history</a>           145 src/viewer/actions_cmd.c             view-&gt;last_search_string = (gchar *) g_strdup (history-&gt;data);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L146'>history</a>           146 src/viewer/actions_cmd.c             history = g_list_first (history);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L147'>history</a>           147 src/viewer/actions_cmd.c             g_list_free_full (history, g_free);</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>pty_slave</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L671'>pty_slave</a>         671 src/subshell/common.c     int pty_slave;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L673'>pty_slave</a>         673 src/subshell/common.c     pty_slave = open (pty_name, O_RDWR);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L674'>pty_slave</a>         674 src/subshell/common.c     if (pty_slave == -1)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L681'>pty_slave</a>         681 src/subshell/common.c     if (ioctl (pty_slave, I_FIND, "ptem") == 0)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L682'>pty_slave</a>         682 src/subshell/common.c         if (ioctl (pty_slave, I_PUSH, "ptem") == -1)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L685'>pty_slave</a>         685 src/subshell/common.c                      pty_slave, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L686'>pty_slave</a>         686 src/subshell/common.c             close (pty_slave);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L690'>pty_slave</a>         690 src/subshell/common.c     if (ioctl (pty_slave, I_FIND, "ldterm") == 0)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L691'>pty_slave</a>         691 src/subshell/common.c         if (ioctl (pty_slave, I_PUSH, "ldterm") == -1)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L695'>pty_slave</a>         695 src/subshell/common.c                      pty_slave, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L696'>pty_slave</a>         696 src/subshell/common.c             close (pty_slave);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L700'>pty_slave</a>         700 src/subshell/common.c     if (ioctl (pty_slave, I_FIND, "ttcompat") == 0)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L701'>pty_slave</a>         701 src/subshell/common.c         if (ioctl (pty_slave, I_PUSH, "ttcompat") == -1)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L705'>pty_slave</a>         705 src/subshell/common.c                      pty_slave, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L706'>pty_slave</a>         706 src/subshell/common.c             close (pty_slave);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L713'>pty_slave</a>         713 src/subshell/common.c     fcntl (pty_slave, F_SETFD, FD_CLOEXEC);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L714'>pty_slave</a>         714 src/subshell/common.c     return pty_slave;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L762'>pty_slave</a>         762 src/subshell/common.c     int pty_slave;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L773'>pty_slave</a>         773 src/subshell/common.c     pty_slave = open (pty_name, O_RDWR);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L774'>pty_slave</a>         774 src/subshell/common.c     if (pty_slave == -1)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L776'>pty_slave</a>         776 src/subshell/common.c     fcntl (pty_slave, F_SETFD, FD_CLOEXEC);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L777'>pty_slave</a>         777 src/subshell/common.c     return pty_slave;</span>
+</pre>
+</body>
+</html>

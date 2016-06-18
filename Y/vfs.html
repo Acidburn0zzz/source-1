@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>vfs</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--global.c.html#L111'>vfs</a>               111 lib/global.c       .vfs =</span>
+<span class='curline'><a href='../S/lib--global.h.html#L292'>vfs</a>               292 lib/global.h       } vfs;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L300'>vfs</a>               300 lib/vfs/interface.c     struct vfs_class *vfs; \</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L305'>vfs</a>               305 lib/vfs/interface.c     vfs = vfs_class_find_by_handle (handle, &amp;fsinfo); \</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L306'>vfs</a>               306 lib/vfs/interface.c     if (vfs == NULL) \</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L308'>vfs</a>               308 lib/vfs/interface.c     result = vfs-&gt;name != NULL ? vfs-&gt;name (fsinfo, buf, count) : -1; \</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L310'>vfs</a>               310 lib/vfs/interface.c         errno = vfs-&gt;name != NULL ? vfs_ferrno (vfs) : E_NOTSUPP; \</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L361'>vfs</a>               361 lib/vfs/interface.c     struct vfs_class *vfs;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L364'>vfs</a>               364 lib/vfs/interface.c     vfs = vfs_class_find_by_handle (handle, &amp;fsinfo);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L365'>vfs</a>               365 lib/vfs/interface.c     if (vfs == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L368'>vfs</a>               368 lib/vfs/interface.c     return vfs-&gt;ctl != NULL ? vfs-&gt;ctl (fsinfo, ctlop, arg) : 0;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L396'>vfs</a>               396 lib/vfs/interface.c     struct vfs_class *vfs;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L403'>vfs</a>               403 lib/vfs/interface.c     vfs = vfs_class_find_by_handle (handle, &amp;fsinfo);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L404'>vfs</a>               404 lib/vfs/interface.c     if (vfs == NULL || fsinfo == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L410'>vfs</a>               410 lib/vfs/interface.c     if (!vfs-&gt;close)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L412'>vfs</a>               412 lib/vfs/interface.c     result = (*vfs-&gt;close) (fsinfo);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L415'>vfs</a>               415 lib/vfs/interface.c         errno = vfs_ferrno (vfs);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L470'>vfs</a>               470 lib/vfs/interface.c     struct vfs_class *vfs;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L497'>vfs</a>               497 lib/vfs/interface.c     vfs = vfs_class_find_by_handle (handle, &amp;fsinfo);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L498'>vfs</a>               498 lib/vfs/interface.c     if (vfs == NULL || fsinfo == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L502'>vfs</a>               502 lib/vfs/interface.c     if (vfs-&gt;readdir)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L504'>vfs</a>               504 lib/vfs/interface.c         entry = (*vfs-&gt;readdir) (vfs_path_element-&gt;dir.info);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L518'>vfs</a>               518 lib/vfs/interface.c         errno = vfs-&gt;readdir ? vfs_ferrno (vfs) : E_NOTSUPP;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L528'>vfs</a>               528 lib/vfs/interface.c     struct vfs_class *vfs;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L537'>vfs</a>               537 lib/vfs/interface.c     vfs = vfs_class_find_by_handle (handle, &amp;fsinfo);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L538'>vfs</a>               538 lib/vfs/interface.c     if (vfs != NULL &amp;&amp; fsinfo != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L550'>vfs</a>               550 lib/vfs/interface.c         result = vfs-&gt;closedir ? (*vfs-&gt;closedir) (vfs_path_element-&gt;dir.info) : -1;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L609'>vfs</a>               609 lib/vfs/interface.c     struct vfs_class *vfs;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L616'>vfs</a>               616 lib/vfs/interface.c     vfs = vfs_class_find_by_handle (handle, &amp;fsinfo);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L617'>vfs</a>               617 lib/vfs/interface.c     if (vfs == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L620'>vfs</a>               620 lib/vfs/interface.c     result = vfs-&gt;fstat ? (*vfs-&gt;fstat) (fsinfo, buf) : -1;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L622'>vfs</a>               622 lib/vfs/interface.c         errno = vfs-&gt;fstat ? vfs_ferrno (vfs) : E_NOTSUPP;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L763'>vfs</a>               763 lib/vfs/interface.c     struct vfs_class *vfs;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L770'>vfs</a>               770 lib/vfs/interface.c     vfs = vfs_class_find_by_handle (fd, &amp;fsinfo);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L771'>vfs</a>               771 lib/vfs/interface.c     if (vfs == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L774'>vfs</a>               774 lib/vfs/interface.c     result = vfs-&gt;lseek ? (*vfs-&gt;lseek) (fsinfo, offset, whence) : -1;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L776'>vfs</a>               776 lib/vfs/interface.c         errno = vfs-&gt;lseek ? vfs_ferrno (vfs) : E_NOTSUPP;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L338'>vfs</a>               338 lib/vfs/path.c         struct vfs_class *vfs = (struct vfs_class *) g_ptr_array_index (vfs__classes_list, i);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L339'>vfs</a>               339 lib/vfs/path.c         if ((vfs-&gt;name != NULL) &amp;&amp; (strcmp (vfs-&gt;name, class_name) == 0))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L340'>vfs</a>               340 lib/vfs/path.c             return vfs;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1006'>vfs</a>              1006 lib/vfs/path.c         struct vfs_class *vfs;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1008'>vfs</a>              1008 lib/vfs/path.c         vfs = (struct vfs_class *) g_ptr_array_index (vfs__classes_list, i);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1009'>vfs</a>              1009 lib/vfs/path.c         if (vfs-&gt;which != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1011'>vfs</a>              1011 lib/vfs/path.c             if (vfs-&gt;which (vfs, prefix) == -1)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1013'>vfs</a>              1013 lib/vfs/path.c             return vfs;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1016'>vfs</a>              1016 lib/vfs/path.c         if (vfs-&gt;prefix != NULL &amp;&amp; strncmp (prefix, vfs-&gt;prefix, strlen (vfs-&gt;prefix)) == 0)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1017'>vfs</a>              1017 lib/vfs/path.c             return vfs;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L282'>vfs</a>               282 lib/vfs/vfs.c  vfs_ferrno (struct vfs_class *vfs)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L284'>vfs</a>               284 lib/vfs/vfs.c      return vfs-&gt;ferrno ? (*vfs-&gt;ferrno) (vfs) : E_UNKNOWN;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L291'>vfs</a>               291 lib/vfs/vfs.c  vfs_register_class (struct vfs_class * vfs)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L293'>vfs</a>               293 lib/vfs/vfs.c      if (vfs-&gt;init != NULL)      /* vfs has own initialization function */</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L294'>vfs</a>               294 lib/vfs/vfs.c          if (!vfs-&gt;init (vfs))   /* but it failed */</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L297'>vfs</a>               297 lib/vfs/vfs.c      g_ptr_array_add (vfs__classes_list, vfs);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L479'>vfs</a>               479 lib/vfs/vfs.c          struct vfs_class *vfs = (struct vfs_class *) g_ptr_array_index (vfs__classes_list, i);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L481'>vfs</a>               481 lib/vfs/vfs.c          if (vfs-&gt;done != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L482'>vfs</a>               482 lib/vfs/vfs.c              vfs-&gt;done (vfs);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L504'>vfs</a>               504 lib/vfs/vfs.c          struct vfs_class *vfs = (struct vfs_class *) g_ptr_array_index (vfs__classes_list, i);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L506'>vfs</a>               506 lib/vfs/vfs.c          if (vfs-&gt;fill_names != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L507'>vfs</a>               507 lib/vfs/vfs.c              vfs-&gt;fill_names (vfs, func);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L559'>vfs</a>               559 lib/vfs/vfs.c              if (mc_global.vfs.cd_symlinks</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L582'>vfs</a>               582 lib/vfs/vfs.c              if (!(mc_global.vfs.cd_symlinks</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L635'>vfs</a>               635 lib/vfs/vfs.c      if (!mc_global.vfs.preallocate_space)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L227'>vfs</a>               227 lib/vfs/vfs.h  gboolean vfs_register_class (struct vfs_class *vfs);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L264'>vfs</a>               264 lib/vfs/vfs.h  int vfs_ferrno (struct vfs_class *vfs);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L494'>vfs</a>               494 src/filemanager/boxes.c                     QUICK_CHECKBOX (N_("&amp;Preallocate space"), &amp;mc_global.vfs.preallocate_space,</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L519'>vfs</a>               519 src/filemanager/boxes.c                     QUICK_CHECKBOX (N_("Cd follows lin&amp;ks"), &amp;mc_global.vfs.cd_symlinks, NULL),</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L548'>vfs</a>               548 src/filemanager/boxes.c         mc_global.vfs.preallocate_space = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L113'>vfs</a>               113 src/filemanager/file.c     const struct vfs_class *vfs;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L303'>vfs</a>               303 src/filemanager/file.c         if (lnk-&gt;vfs == class &amp;&amp; lnk-&gt;ino == ino &amp;&amp; lnk-&gt;dev == dev)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L337'>vfs</a>               337 src/filemanager/file.c         if (lnk-&gt;vfs == my_vfs &amp;&amp; lnk-&gt;ino == ino &amp;&amp; lnk-&gt;dev == dev)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L367'>vfs</a>               367 src/filemanager/file.c         lnk-&gt;vfs = my_vfs;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2101'>vfs</a>              2101 src/filemanager/file.c     lp-&gt;vfs = vfs_path_get_by_index (src_vpath, -1)-&gt;class;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2175'>vfs</a>              2175 src/filemanager/file.c         lp-&gt;vfs = vfs_path_get_by_index (dst_vpath, -1)-&gt;class;</span>
+<span class='curline'><a href='../S/src--setup.c.html#L284'>vfs</a>               284 src/setup.c        { "preallocate_space", &amp;mc_global.vfs.preallocate_space },</span>
+<span class='curline'><a href='../S/src--setup.c.html#L311'>vfs</a>               311 src/setup.c        { "cd_symlinks", &amp;mc_global.vfs.cd_symlinks },</span>
+</pre>
+</body>
+</html>

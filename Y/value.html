@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>value</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L208'>value</a>             208 lib/mcconfig/common.c     gchar *value;</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L229'>value</a>             229 lib/mcconfig/common.c             value = g_key_file_get_value (tmp_config-&gt;handle, *curr_grp, *curr_key, NULL);</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L230'>value</a>             230 lib/mcconfig/common.c             if (value != NULL)</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L232'>value</a>             232 lib/mcconfig/common.c                 if (*value == '\0' &amp;&amp; remove_empty)</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L235'>value</a>             235 lib/mcconfig/common.c                     g_key_file_set_value (mc_config-&gt;handle, *curr_grp, *curr_key, value);</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L236'>value</a>             236 lib/mcconfig/common.c                 g_free (value);</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L41'>value</a>              41 lib/mcconfig/set.c mc_config_normalize_before_save (const gchar * value)</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L48'>value</a>              48 lib/mcconfig/set.c         return g_strdup (value);</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L52'>value</a>              52 lib/mcconfig/set.c         return g_strdup (value);</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L56'>value</a>              56 lib/mcconfig/set.c     ok = (str_convert (conv, value, buffer) != ESTR_FAILURE);</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L62'>value</a>              62 lib/mcconfig/set.c         return g_strdup (value);</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L74'>value</a>              74 lib/mcconfig/set.c                           const gchar * param, const gchar * value)</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L76'>value</a>              76 lib/mcconfig/set.c     if (!mc_config || !group || !param || !value)</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L79'>value</a>              79 lib/mcconfig/set.c     g_key_file_set_string (mc_config-&gt;handle, group, param, value);</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L86'>value</a>              86 lib/mcconfig/set.c                                 const gchar * param, const gchar * value)</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L88'>value</a>              88 lib/mcconfig/set.c     if (!mc_config || !group || !param || !value)</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L91'>value</a>              91 lib/mcconfig/set.c     g_key_file_set_value (mc_config-&gt;handle, group, param, value);</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L98'>value</a>              98 lib/mcconfig/set.c                       const gchar * param, const gchar * value)</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L102'>value</a>             102 lib/mcconfig/set.c     if (!mc_config || !group || !param || !value)</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L105'>value</a>             105 lib/mcconfig/set.c     buffer = mc_config_normalize_before_save (value);</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L116'>value</a>             116 lib/mcconfig/set.c                     const gchar * param, gboolean value)</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L121'>value</a>             121 lib/mcconfig/set.c     g_key_file_set_boolean (mc_config-&gt;handle, group, param, value);</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L127'>value</a>             127 lib/mcconfig/set.c mc_config_set_int (mc_config_t * mc_config, const gchar * group, const gchar * param, int value)</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L132'>value</a>             132 lib/mcconfig/set.c     g_key_file_set_integer (mc_config-&gt;handle, group, param, value);</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L140'>value</a>             140 lib/mcconfig/set.c                            const gchar * param, const gchar * const value[], gsize length)</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L142'>value</a>             142 lib/mcconfig/set.c     if (!mc_config || !group || !param || !value || length == 0)</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L145'>value</a>             145 lib/mcconfig/set.c     g_key_file_set_string_list (mc_config-&gt;handle, group, param, value, length);</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L153'>value</a>             153 lib/mcconfig/set.c                          const gchar * param, gboolean value[], gsize length)</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L155'>value</a>             155 lib/mcconfig/set.c     if (!mc_config || !group || !param || !value || length == 0)</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L158'>value</a>             158 lib/mcconfig/set.c     g_key_file_set_boolean_list (mc_config-&gt;handle, group, param, value, length);</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L165'>value</a>             165 lib/mcconfig/set.c                         const gchar * param, int value[], gsize length)</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L167'>value</a>             167 lib/mcconfig/set.c     if (!mc_config || !group || !param || !value || length == 0)</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L170'>value</a>             170 lib/mcconfig/set.c     g_key_file_set_integer_list (mc_config-&gt;handle, group, param, value, length);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L223'>value</a>             223 lib/serialize.c             char *value;</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L236'>value</a>             236 lib/serialize.c             value = mc_config_get_string_raw (data, *group_iterator, *param_iterator, "");</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L237'>value</a>             237 lib/serialize.c             serialized_str = mc_serialize_str ('v', value, error);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L238'>value</a>             238 lib/serialize.c             g_free (value);</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L52'>value</a>              52 lib/tty/color-internal.c     int value;</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L137'>value</a>             137 lib/tty/color-internal.c         if (idx == color_table[i].value)</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L169'>value</a>             169 lib/tty/color-internal.c                 return color_table[i].value;</span>
+<span class='curline'><a href='../S/lib--tty--color-internal.c.html#L197'>value</a>             197 lib/tty/color-internal.c                     attr_bits |= attributes_table[j].value;</span>
+<span class='curline'><a href='../S/lib--tty--color.c.html#L68'>value</a>              68 lib/tty/color.c tty_color_free_condition_cb (gpointer key, gpointer value, gpointer user_data)</span>
+<span class='curline'><a href='../S/lib--tty--color.c.html#L75'>value</a>              75 lib/tty/color.c     mc_color_pair = (tty_color_pair_t *) value;</span>
+<span class='curline'><a href='../S/lib--tty--color.c.html#L91'>value</a>              91 lib/tty/color.c tty_color_get_next_cpn_cb (gpointer key, gpointer value, gpointer user_data)</span>
+<span class='curline'><a href='../S/lib--tty--color.c.html#L98'>value</a>              98 lib/tty/color.c     mc_color_pair = (tty_color_pair_t *) value;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L283'>value</a>             283 lib/widget/quick.c                 r-&gt;pos = r-&gt;sel = *quick_widget-&gt;u.radio.value;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L605'>value</a>             605 lib/widget/quick.c                 *item-&gt;quick_widget-&gt;u.radio.value = RADIO (item-&gt;widget)-&gt;sel;</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L107'>value</a>             107 lib/widget/quick.h             .value = val                                                        \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L315'>value</a>             315 lib/widget/quick.h             int *value;         /* in/out */</span>
+<span class='curline'><a href='../S/src--args.c.html#L86'>value</a>              86 src/args.c     static gboolean parse_mc_e_argument (const gchar * option_name, const gchar * value,</span>
+<span class='curline'><a href='../S/src--args.c.html#L88'>value</a>              88 src/args.c     static gboolean parse_mc_v_argument (const gchar * option_name, const gchar * value,</span>
+<span class='curline'><a href='../S/src--args.c.html#L441'>value</a>             441 src/args.c     parse_mc_e_argument (const gchar * option_name, const gchar * value, gpointer data,</span>
+<span class='curline'><a href='../S/src--args.c.html#L445'>value</a>             445 src/args.c         (void) value;</span>
+<span class='curline'><a href='../S/src--args.c.html#L458'>value</a>             458 src/args.c     parse_mc_v_argument (const gchar * option_name, const gchar * value, gpointer data,</span>
+<span class='curline'><a href='../S/src--args.c.html#L462'>value</a>             462 src/args.c         (void) value;</span>
+<span class='curline'><a href='../S/src--background.c.html#L441'>value</a>             441 src/background.c         void *value;</span>
+<span class='curline'><a href='../S/src--background.c.html#L444'>value</a>             444 src/background.c         value = va_arg (ap, void *);</span>
+<span class='curline'><a href='../S/src--background.c.html#L446'>value</a>             446 src/background.c         ret = write (parent_fd, value, len);</span>
+<span class='curline'><a href='../S/src--background.c.html#L469'>value</a>             469 src/background.c         void *value;</span>
+<span class='curline'><a href='../S/src--background.c.html#L472'>value</a>             472 src/background.c         value = va_arg (ap, void *);</span>
+<span class='curline'><a href='../S/src--background.c.html#L474'>value</a>             474 src/background.c             (write (parent_fd, value, len) != len))</span>
+<span class='curline'><a href='../S/src--editor--spell.c.html#L61'>value</a>              61 src/editor/spell.c static int (*mc_aspell_config_replace) (AspellConfig * ths, const char *key, const char *value);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L180'>value</a>             180 src/editor/syntax.c mc_defines_destroy (gpointer key, gpointer value, gpointer data)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L185'>value</a>             185 src/editor/syntax.c     g_strfreev ((char **) value);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1206'>value</a>            1206 src/filemanager/boxes.c         int value;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1256'>value</a>            1256 src/filemanager/boxes.c                     button_new (lines - 3, x, job_but[i].value, job_but[i].flags, job_but[i].name,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2618'>value</a>            2618 src/filemanager/file.c     FileProgressStatus value;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2861'>value</a>            2861 src/filemanager/file.c                     value = erase_dir (tctx, ctx, source_with_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2863'>value</a>            2863 src/filemanager/file.c                     value = erase_file (tctx, ctx, source_with_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2869'>value</a>            2869 src/filemanager/file.c                     value = transform_error;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2899'>value</a>            2899 src/filemanager/file.c                             value =</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2903'>value</a>            2903 src/filemanager/file.c                             value =</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2910'>value</a>            2910 src/filemanager/file.c                             value =</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2913'>value</a>            2913 src/filemanager/file.c                             value =</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2925'>value</a>            2925 src/filemanager/file.c             if ((value == FILE_CONT) &amp;&amp; !force_single)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2974'>value</a>            2974 src/filemanager/file.c                         value = erase_dir (tctx, ctx, source_with_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2976'>value</a>            2976 src/filemanager/file.c                         value = erase_file (tctx, ctx, source_with_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2982'>value</a>            2982 src/filemanager/file.c                         value = transform_error;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3017'>value</a>            3017 src/filemanager/file.c                                 value = copy_dir_dir (tctx, ctx, source_with_path_str, temp,</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3020'>value</a>            3020 src/filemanager/file.c                                 value = copy_file_file (tctx, ctx, source_with_path_str, temp);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3026'>value</a>            3026 src/filemanager/file.c                                 value = move_dir_dir (tctx, ctx, source_with_path_str, temp);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3028'>value</a>            3028 src/filemanager/file.c                                 value = move_file_file (tctx, ctx, source_with_path_str, temp);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3041'>value</a>            3041 src/filemanager/file.c                 if (value == FILE_ABORT)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L3044'>value</a>            3044 src/filemanager/file.c                 if (value == FILE_CONT)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L401'>value</a>             401 src/filemanager/filegui.c                         button_new (ypos, rd_widgets [i].xpos, rd_widgets [i].value, \</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L422'>value</a>             422 src/filemanager/filegui.c         int value;              /* 0 for labels */</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L509'>value</a>             509 src/filemanager/filegui.c             if (rd_widgets[i].value != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L531'>value</a>             531 src/filemanager/filegui.c             if (rd_widgets[i].value != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L693'>value</a>             693 src/filemanager/usermenu.c         const char *value;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L715'>value</a>             715 src/filemanager/usermenu.c         value = getenv (var_name);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L717'>value</a>             717 src/filemanager/usermenu.c         if (value != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L719'>value</a>             719 src/filemanager/usermenu.c             *v = g_strdup (value);</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L79'>value</a>              79 src/keybind-defaults.c     const char *value;</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L570'>value</a>             570 src/keybind-defaults.c         mc_config_set_string_raw (keymap, section, k[i].key, k[i].value);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L625'>value</a>             625 src/setup.c        char *valcopy, *value;</span>
+<span class='curline'><a href='../S/src--setup.c.html#L666'>value</a>             666 src/setup.c                    value = mc_config_get_string (cfg, section_name, *profile_keys, "");</span>
+<span class='curline'><a href='../S/src--setup.c.html#L667'>value</a>             667 src/setup.c                    valcopy = convert_controls (value);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L670'>value</a>             670 src/setup.c                    g_free (value);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L155'>value</a>             155 src/vfs/sftpfs/config_parser.c             char *value;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L163'>value</a>             163 src/vfs/sftpfs/config_parser.c             value = &amp;buffer[value_offset];</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L169'>value</a>             169 src/vfs/sftpfs/config_parser.c                 *pointer_str = g_strdup (value);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L173'>value</a>             173 src/vfs/sftpfs/config_parser.c                 *pointer_str = sftpfs_correct_file_name (value);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L177'>value</a>             177 src/vfs/sftpfs/config_parser.c                 *pointer_int = atoi (value);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L181'>value</a>             181 src/vfs/sftpfs/config_parser.c                 *pointer_bool = strcasecmp (value, "True") == 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L860'>value</a>             860 src/vfs/smbfs/helpers/include/smb.h     int value;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L76'>value</a>              76 src/vfs/smbfs/helpers/lib/util_sock.c     int value;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L138'>value</a>             138 src/vfs/smbfs/helpers/lib/util_sock.c         int value = 1;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L145'>value</a>             145 src/vfs/smbfs/helpers/lib/util_sock.c             value = atoi (p + 1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L164'>value</a>             164 src/vfs/smbfs/helpers/lib/util_sock.c                               socket_options[i].option, (char *) &amp;value, sizeof (int));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_sock.c.html#L172'>value</a>             172 src/vfs/smbfs/helpers/lib/util_sock.c                 int on = socket_options[i].value;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2076'>value</a>            2076 src/vfs/smbfs/helpers/param/loadparm.c                 *(int *) parm_ptr = parm_table[parmnum].enum_list[i].value;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L241'>value</a>             241 src/vfs/tar/tar.c     long value;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L249'>value</a>             249 src/vfs/tar/tar.c     value = 0;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L252'>value</a>             252 src/vfs/tar/tar.c         value = (value &lt;&lt; 3) | (*where++ - '0');</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L259'>value</a>             259 src/vfs/tar/tar.c     return value;</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L245'>value</a>             245 src/viewer/actions_cmd.c             byte_val = node-&gt;value;</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L272'>value</a>             272 src/viewer/actions_cmd.c         node-&gt;value = byte_val;</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L276'>value</a>             276 src/viewer/actions_cmd.c         node-&gt;value = byte_val;</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L209'>value</a>             209 src/viewer/hex.c                             utf8buf[j] = curr-&gt;value;</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L266'>value</a>             266 src/viewer/hex.c                 c = curr-&gt;value;</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L404'>value</a>             404 src/viewer/hex.c                     || mc_write (fp, &amp;(curr-&gt;value), 1) != 1)</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L410'>value</a>             410 src/viewer/hex.c                 mcview_set_byte (view, curr-&gt;offset, curr-&gt;value);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L60'>value</a>              60 src/viewer/internal.h     byte value;</span>
+</pre>
+</body>
+</html>

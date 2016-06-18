@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>GString</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--charsets.c.html#L356'>GString</a>           356 lib/charsets.c GString *</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L365'>GString</a>           365 lib/charsets.c GString *</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L368'>GString</a>           368 lib/charsets.c     GString *buff;</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L402'>GString</a>           402 lib/charsets.c GString *</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L410'>GString</a>           410 lib/charsets.c GString *</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L413'>GString</a>           413 lib/charsets.c     GString *buff;</span>
+<span class='curline'><a href='../S/lib--charsets.h.html#L69'>GString</a>            69 lib/charsets.h GString *str_convert_to_input (const char *str);</span>
+<span class='curline'><a href='../S/lib--charsets.h.html#L70'>GString</a>            70 lib/charsets.h GString *str_nconvert_to_input (const char *str, int len);</span>
+<span class='curline'><a href='../S/lib--charsets.h.html#L72'>GString</a>            72 lib/charsets.h GString *str_convert_to_display (const char *str);</span>
+<span class='curline'><a href='../S/lib--charsets.h.html#L73'>GString</a>            73 lib/charsets.h GString *str_nconvert_to_display (const char *str, int len);</span>
+<span class='curline'><a href='../S/lib--filehighlight--ini-file-read.c.html#L133'>GString</a>           133 lib/filehighlight/ini-file-read.c     GString *buf;</span>
+<span class='curline'><a href='../S/lib--mcconfig--get.c.html#L86'>GString</a>            86 lib/mcconfig/get.c     GString *buffer;</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L44'>GString</a>            44 lib/mcconfig/set.c     GString *buffer;</span>
+<span class='curline'><a href='../S/lib--search.h.html#L103'>GString</a>           103 lib/search.h       GString *regex_buffer;</span>
+<span class='curline'><a href='../S/lib--search.h.html#L157'>GString</a>           157 lib/search.h   GString *mc_search_prepare_replace_str (mc_search_t * mc_search, GString * replace_str);</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L46'>GString</a>            46 lib/search/glob.c static GString *</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L47'>GString</a>            47 lib/search/glob.c mc_search__glob_translate_to_regex (const GString * astr)</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L50'>GString</a>            50 lib/search/glob.c     GString *buff;</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L115'>GString</a>           115 lib/search/glob.c static GString *</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L118'>GString</a>           118 lib/search/glob.c     GString *buff;</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L165'>GString</a>           165 lib/search/glob.c     GString *tmp;</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L191'>GString</a>           191 lib/search/glob.c GString *</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L192'>GString</a>           192 lib/search/glob.c mc_search_glob_prepare_replace_str (mc_search_t * lc_mc_search, GString * replace_str)</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L194'>GString</a>           194 lib/search/glob.c     GString *repl = mc_search__translate_replace_glob_to_regex (replace_str-&gt;str);</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L195'>GString</a>           195 lib/search/glob.c     GString *res = mc_search_regex_prepare_replace_str (lc_mc_search, repl);</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L48'>GString</a>            48 lib/search/hex.c static GString *</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L49'>GString</a>            49 lib/search/hex.c mc_search__hex_translate_to_regex (const GString * astr)</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L51'>GString</a>            51 lib/search/hex.c     GString *buff;</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L120'>GString</a>           120 lib/search/hex.c     GString *tmp;</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L141'>GString</a>           141 lib/search/hex.c GString *</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L142'>GString</a>           142 lib/search/hex.c mc_search_hex_prepare_replace_str (mc_search_t * lc_mc_search, GString * replace_str)</span>
+<span class='curline'><a href='../S/lib--search--internal.h.html#L28'>GString</a>            28 lib/search/internal.h     GString *str;</span>
+<span class='curline'><a href='../S/lib--search--internal.h.html#L29'>GString</a>            29 lib/search/internal.h     GString *upper;</span>
+<span class='curline'><a href='../S/lib--search--internal.h.html#L30'>GString</a>            30 lib/search/internal.h     GString *lower;</span>
+<span class='curline'><a href='../S/lib--search--internal.h.html#L45'>GString</a>            45 lib/search/internal.h GString *mc_search__tolower_case_str (const char *, const char *, gsize);</span>
+<span class='curline'><a href='../S/lib--search--internal.h.html#L47'>GString</a>            47 lib/search/internal.h GString *mc_search__toupper_case_str (const char *, const char *, gsize);</span>
+<span class='curline'><a href='../S/lib--search--internal.h.html#L55'>GString</a>            55 lib/search/internal.h GString *mc_search_regex_prepare_replace_str (mc_search_t *, GString *);</span>
+<span class='curline'><a href='../S/lib--search--internal.h.html#L63'>GString</a>            63 lib/search/internal.h GString *mc_search_normal_prepare_replace_str (mc_search_t *, GString *);</span>
+<span class='curline'><a href='../S/lib--search--internal.h.html#L71'>GString</a>            71 lib/search/internal.h GString *mc_search_glob_prepare_replace_str (mc_search_t *, GString *);</span>
+<span class='curline'><a href='../S/lib--search--internal.h.html#L79'>GString</a>            79 lib/search/internal.h GString *mc_search_hex_prepare_replace_str (mc_search_t *, GString *);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L145'>GString</a>           145 lib/search/lib.c GString *</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L148'>GString</a>           148 lib/search/lib.c     GString *ret;</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L195'>GString</a>           195 lib/search/lib.c GString *</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L198'>GString</a>           198 lib/search/lib.c     GString *ret;</span>
+<span class='curline'><a href='../S/lib--search--normal.c.html#L45'>GString</a>            45 lib/search/normal.c static GString *</span>
+<span class='curline'><a href='../S/lib--search--normal.c.html#L46'>GString</a>            46 lib/search/normal.c mc_search__normal_translate_to_regex (const GString * astr)</span>
+<span class='curline'><a href='../S/lib--search--normal.c.html#L49'>GString</a>            49 lib/search/normal.c     GString *buff;</span>
+<span class='curline'><a href='../S/lib--search--normal.c.html#L89'>GString</a>            89 lib/search/normal.c     GString *tmp;</span>
+<span class='curline'><a href='../S/lib--search--normal.c.html#L108'>GString</a>           108 lib/search/normal.c GString *</span>
+<span class='curline'><a href='../S/lib--search--normal.c.html#L109'>GString</a>           109 lib/search/normal.c mc_search_normal_prepare_replace_str (mc_search_t * lc_mc_search, GString * replace_str)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L66'>GString</a>            66 lib/search/regex.c mc_search__regex_str_append_if_special (GString * copy_to, const GString * regex_str,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L124'>GString</a>           124 lib/search/regex.c mc_search__cond_struct_new_regex_hex_add (const char *charset, GString * str_to,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L127'>GString</a>           127 lib/search/regex.c     GString *upp, *low;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L156'>GString</a>           156 lib/search/regex.c mc_search__cond_struct_new_regex_accum_append (const char *charset, GString * str_to,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L157'>GString</a>           157 lib/search/regex.c                                                GString * str_from)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L159'>GString</a>           159 lib/search/regex.c     GString *recoded_part;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L198'>GString</a>           198 lib/search/regex.c static GString *</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L199'>GString</a>           199 lib/search/regex.c mc_search__cond_struct_new_regex_ci_str (const char *charset, const GString * astr)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L201'>GString</a>           201 lib/search/regex.c     GString *accumulator, *spec_char, *ret_str;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L312'>GString</a>           312 lib/search/regex.c                                  GString * search_str)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L351'>GString</a>           351 lib/search/regex.c mc_search__regex_found_cond (mc_search_t * lc_mc_search, GString * search_str)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L442'>GString</a>           442 lib/search/regex.c mc_search_regex__replace_handle_esc_seq (const GString * replace_str, const gsize current_pos,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L524'>GString</a>           524 lib/search/regex.c mc_search_regex__process_replace_str (const GString * replace_str, const gsize current_pos,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L616'>GString</a>           616 lib/search/regex.c mc_search_regex__process_append_str (GString * dest_str, const char *from, gsize len,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L633'>GString</a>           633 lib/search/regex.c         GString *tmp_string = NULL;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L673'>GString</a>           673 lib/search/regex.c mc_search_regex__process_escape_sequence (GString * dest_str, const char *from, gsize len,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L806'>GString</a>           806 lib/search/regex.c                 GString *tmp;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L842'>GString</a>           842 lib/search/regex.c                 GString *tmp;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L984'>GString</a>           984 lib/search/regex.c GString *</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L985'>GString</a>           985 lib/search/regex.c mc_search_regex_prepare_replace_str (mc_search_t * lc_mc_search, GString * replace_str)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L987'>GString</a>           987 lib/search/regex.c     GString *ret;</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L344'>GString</a>           344 lib/search/search.c GString *</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L345'>GString</a>           345 lib/search/search.c mc_search_prepare_replace_str (mc_search_t * lc_mc_search, GString * replace_str)</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L347'>GString</a>           347 lib/search/search.c     GString *ret;</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L381'>GString</a>           381 lib/search/search.c     GString *ret;</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L382'>GString</a>           382 lib/search/search.c     GString *replace_str2;</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L199'>GString</a>           199 lib/serialize.c     GString *buffer;</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L110'>GString</a>           110 lib/strutil.h        /*I*/ estr_t (*vfs_convert_to) (GIConv coder, const char *string, int size, GString * buffer);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L111'>GString</a>           111 lib/strutil.h        /*I*/ void (*insert_replace_char) (GString * buffer);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L195'>GString</a>           195 lib/strutil.h  estr_t str_convert (GIConv, const char *, GString *);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L196'>GString</a>           196 lib/strutil.h  estr_t str_nconvert (GIConv, const char *, int, GString *);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L210'>GString</a>           210 lib/strutil.h  estr_t str_vfs_convert_from (GIConv, const char *, GString *);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L216'>GString</a>           216 lib/strutil.h  estr_t str_vfs_convert_to (GIConv, const char *, int, GString *);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L221'>GString</a>           221 lib/strutil.h  void str_printf (GString * buffer, const char *format, ...) G_GNUC_PRINTF (2, 3);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L226'>GString</a>           226 lib/strutil.h  void str_insert_replace_char (GString *);</span>
+<span class='curline'><a href='../S/lib--strutil--replace.c.html#L47'>GString</a>            47 lib/strutil/replace.c     GString *return_str;</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L52'>GString</a>            52 lib/strutil/strescape.c     GString *ret;</span>
+<span class='curline'><a href='../S/lib--strutil--strescape.c.html#L102'>GString</a>           102 lib/strutil/strescape.c     GString *ret;</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L95'>GString</a>            95 lib/strutil/strutil.c _str_convert (GIConv coder, const char *string, int size, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L281'>GString</a>           281 lib/strutil/strutil.c str_convert (GIConv coder, const char *string, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L289'>GString</a>           289 lib/strutil/strutil.c str_nconvert (GIConv coder, const char *string, int size, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L305'>GString</a>           305 lib/strutil/strutil.c str_vfs_convert_from (GIConv coder, const char *string, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L320'>GString</a>           320 lib/strutil/strutil.c str_vfs_convert_to (GIConv coder, const char *string, int size, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L328'>GString</a>           328 lib/strutil/strutil.c str_printf (GString * buffer, const char *format, ...)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L340'>GString</a>           340 lib/strutil/strutil.c str_insert_replace_char (GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L80'>GString</a>            80 lib/strutil/strutil8bit.c str_8bit_insert_replace_char (GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L252'>GString</a>           252 lib/strutil/strutil8bit.c         GString *buf;</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L273'>GString</a>           273 lib/strutil/strutil8bit.c str_8bit_vfs_convert_to (GIConv coder, const char *string, int size, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L53'>GString</a>            53 lib/strutil/strutilascii.c str_ascii_insert_replace_char (GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L225'>GString</a>           225 lib/strutil/strutilascii.c str_ascii_vfs_convert_to (GIConv coder, const char *string, int size, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L80'>GString</a>            80 lib/strutil/strutilutf8.c str_utf8_insert_replace_char (GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L398'>GString</a>           398 lib/strutil/strutilutf8.c str_utf8_questmark_sustb (char **string, size_t * left, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L423'>GString</a>           423 lib/strutil/strutilutf8.c str_utf8_vfs_convert_to (GIConv coder, const char *string, int size, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L901'>GString</a>           901 lib/strutil/strutilutf8.c         GString *buffer;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1077'>GString</a>          1077 lib/strutil/strutilutf8.c     GString *fixed;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1122'>GString</a>          1122 lib/strutil/strutilutf8.c     GString *fixed;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1337'>GString</a>          1337 lib/strutil/strutilutf8.c         GString *fixed;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1514'>GString</a>          1514 lib/tty/key.c          GString *s;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1588'>GString</a>          1588 lib/tty/key.c      GString *s;</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L217'>GString</a>           217 lib/tty/tty.c      GString *buffer;</span>
+<span class='curline'><a href='../S/lib--util.c.html#L255'>GString</a>           255 lib/util.c         GString *ret;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L1304'>GString</a>          1304 lib/utilunix.c     GString *path;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L63'>GString</a>            63 lib/vfs/interface.c extern GString *vfs_str_buffer;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L532'>GString</a>           532 lib/vfs/path.c vfs_path_tokens_add_class_info (const vfs_path_element_t * element, GString * ret_tokens,</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L533'>GString</a>           533 lib/vfs/path.c                                 GString * element_tokens)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L630'>GString</a>           630 lib/vfs/path.c     GString *buffer;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L631'>GString</a>           631 lib/vfs/path.c     GString *recode_buffer;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1384'>GString</a>          1384 lib/vfs/path.c     GString *ret_tokens, *element_tokens;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1492'>GString</a>          1492 lib/vfs/path.c     GString *buffer;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1541'>GString</a>          1541 lib/vfs/path.c     GString *pretty_path;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L65'>GString</a>            65 lib/vfs/vfs.c  extern GString *vfs_str_buffer;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L71'>GString</a>            71 lib/vfs/vfs.c  GString *vfs_str_buffer = NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L114'>GString</a>           114 lib/vfs/vfs.c  _vfs_translate_path (const char *path, int size, GIConv defcnv, GString * buffer)</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L175'>GString</a>           175 lib/widget/history.c     GString *buffer;</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L234'>GString</a>           234 lib/widget/history.c     GString *buffer;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L289'>GString</a>           289 lib/widget/input_complete.c         GString *temp;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L381'>GString</a>           381 lib/widget/input_complete.c         GString *temp;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L537'>GString</a>           537 lib/widget/input_complete.c         GString *temp;</span>
+<span class='curline'><a href='../S/src--args.c.html#L422'>GString</a>           422 src/args.c         GString *buffer;</span>
+<span class='curline'><a href='../S/src--diffviewer--search.c.html#L123'>GString</a>           123 src/diffviewer/search.c         GString *tmp;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3435'>GString</a>          3435 src/diffviewer/ydiff.c     GString *title;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L399'>GString</a>           399 src/editor/editbuffer.c GString *</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L405'>GString</a>           405 src/editor/editbuffer.c     GString *match_expr;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L49'>GString</a>            49 src/editor/editbuffer.h GString *edit_buffer_get_word_from_pos (const edit_buffer_t * buf, off_t start_pos, off_t * start,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L914'>GString</a>           914 src/editor/editcmd.c     GString *tmp;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L933'>GString</a>           933 src/editor/editcmd.c     GString *tmp;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1200'>GString</a>          1200 src/editor/editcmd.c     GString *temp;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1224'>GString</a>          1224 src/editor/editcmd.c                           char *match_expr, GString ** compl, gsize * num)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1230'>GString</a>          1230 src/editor/editcmd.c     GString *temp;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1301'>GString</a>          1301 src/editor/editcmd.c                 GString *this = compl[i];</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1321'>GString</a>          1321 src/editor/editcmd.c             GString *recoded;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1540'>GString</a>          1540 src/editor/editcmd.c     GString *temp;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1865'>GString</a>          1865 src/editor/editcmd.c     GString *marcros_string;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2519'>GString</a>          2519 src/editor/editcmd.c     GString *input2_str = NULL;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2638'>GString</a>          2638 src/editor/editcmd.c             GString *repl_str;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3339'>GString</a>          3339 src/editor/editcmd.c     GString *match_expr;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3340'>GString</a>          3340 src/editor/editcmd.c     GString *compl[MAX_WORD_COMPLETIONS];       /* completions */</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3357'>GString</a>          3357 src/editor/editcmd.c         edit_collect_completions (edit, word_start, word_len, match_expr-&gt;str, (GString **) &amp; compl,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3377'>GString</a>          3377 src/editor/editcmd.c                                                          (GString **) &amp; compl, num_compl);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3510'>GString</a>          3510 src/editor/editcmd.c     GString *match_expr;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3576'>GString</a>          3576 src/editor/editcmd.c     GString *match_word;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3586'>GString</a>          3586 src/editor/editcmd.c         GString *tmp_word;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3623'>GString</a>          3623 src/editor/editcmd.c                     GString *tmp_word;</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L150'>GString</a>           150 src/editor/editcmd_dialogs.c         GString *tmp;</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L348'>GString</a>           348 src/editor/editcmd_dialogs.c editcmd_dialog_completion_show (const WEdit * edit, int max_len, GString ** compl, int num_compl)</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.h.html#L28'>GString</a>            28 src/editor/editcmd_dialogs.h char *editcmd_dialog_completion_show (const WEdit * edit, int max_len, GString ** compl,</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L171'>GString</a>           171 src/editor/format.c static GString *</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L174'>GString</a>           174 src/editor/format.c     GString *t;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L481'>GString</a>           481 src/editor/format.c     GString *t;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L654'>GString</a>           654 src/editor/syntax.c     GString *p;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1221'>GString</a>          1221 src/editor/syntax.c         GString *first_chars;</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L277'>GString</a>           277 src/filemanager/command.c         GString *command;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L182'>GString</a>           182 src/filemanager/ext.c     GString *export_vars_string;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L228'>GString</a>           228 src/filemanager/ext.c     GString *shell_string;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L214'>GString</a>           214 src/filemanager/hotlist.c static GString *tkn_buf = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L280'>GString</a>           280 src/filemanager/hotlist.c     GString *buff;</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L109'>GString</a>           109 src/filemanager/info.c     GString *buff;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1660'>GString</a>          1660 src/filemanager/midnight.c         GString *buffer;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1563'>GString</a>          1563 src/filemanager/panel.c     GString *format_txt;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4791'>GString</a>          4791 src/filemanager/panel.c     GString *tmp_conv;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L585'>GString</a>           585 src/filemanager/panelize.c             GString *buffer;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L874'>GString</a>           874 src/filemanager/usermenu.c             GString *block;</span>
+<span class='curline'><a href='../S/src--help.c.html#L403'>GString</a>           403 src/help.c     help_print_word (WDialog * h, GString * word, int *col, int *line, gboolean add_space)</span>
+<span class='curline'><a href='../S/src--help.c.html#L456'>GString</a>           456 src/help.c         GString *word;</span>
+<span class='curline'><a href='../S/src--help.c.html#L909'>GString</a>           909 src/help.c         GString *translated_data;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L100'>GString</a>           100 src/subshell/common.c GString *subshell_prompt = NULL;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L915'>GString</a>           915 src/subshell/common.c static GString *</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L918'>GString</a>           918 src/subshell/common.c     GString *ret;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1168'>GString</a>          1168 src/subshell/common.c     GString *p;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1298'>GString</a>          1298 src/subshell/common.c             GString *temp;</span>
+<span class='curline'><a href='../S/src--subshell--subshell.h.html#L35'>GString</a>            35 src/subshell/subshell.h extern GString *subshell_prompt;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L729'>GString</a>           729 src/vfs/extfs/extfs.c     GString *localpath;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L353'>GString</a>           353 src/vfs/fish/fish.c     GString *tmp;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L37'>GString</a>            37 src/vfs/sftpfs/internal.c GString *sftpfs_filename_buffer = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L56'>GString</a>            56 src/vfs/sftpfs/internal.h extern GString *sftpfs_filename_buffer;</span>
+<span class='curline'><a href='../S/src--viewer--dialogs.c.html#L128'>GString</a>           128 src/viewer/dialogs.c         GString *tmp;</span>
+<span class='curline'><a href='../S/tests--lib--search--glob_translate_to_regex.c.html#L88'>GString</a>            88 tests/lib/search/glob_translate_to_regex.c     GString *tmp = g_string_new (data-&gt;input_value);</span>
+<span class='curline'><a href='../S/tests--lib--search--glob_translate_to_regex.c.html#L89'>GString</a>            89 tests/lib/search/glob_translate_to_regex.c     GString *dest_str;</span>
+<span class='curline'><a href='../S/tests--lib--search--regex_process_escape_sequence.c.html#L119'>GString</a>           119 tests/lib/search/regex_process_escape_sequence.c     GString *actual_string;</span>
+<span class='curline'><a href='../S/tests--lib--search--regex_replace_esc_seq.c.html#L185'>GString</a>           185 tests/lib/search/regex_replace_esc_seq.c     GString *replace_str;</span>
+<span class='curline'><a href='../S/tests--lib--search--translate_replace_glob_to_regex.c.html#L68'>GString</a>            68 tests/lib/search/translate_replace_glob_to_regex.c     GString *dest_str;</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L88'>GString</a>            88 tests/src/editor/editcmd__edit_complete_word_cmd.c static GString **editcmd_dialog_completion_show__compl;</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L97'>GString</a>            97 tests/src/editor/editcmd__edit_complete_word_cmd.c editcmd_dialog_completion_show (const WEdit * edit, int max_len, GString ** compl, int num_compl)</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L107'>GString</a>           107 tests/src/editor/editcmd__edit_complete_word_cmd.c         editcmd_dialog_completion_show__compl = g_new0 (GString *, num_compl);</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L264'>GString</a>           264 tests/src/editor/editcmd__edit_complete_word_cmd.c         GString *actual_completed_str;</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L338'>GString</a>           338 tests/src/editor/editcmd__edit_complete_word_cmd.c         GString *actual_completed_str;</span>
+</pre>
+</body>
+</html>

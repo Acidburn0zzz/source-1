@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>SUP</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L262'>SUP</a>               262 src/vfs/fish/fish.c     status = write (SUP-&gt;sockw, str, strlen (str));</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L270'>SUP</a>               270 src/vfs/fish/fish.c         return fish_get_reply (me, SUP-&gt;sockr,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L281'>SUP</a>               281 src/vfs/fish/fish.c     if ((SUP-&gt;sockw != -1) || (SUP-&gt;sockr != -1))</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L285'>SUP</a>               285 src/vfs/fish/fish.c         close (SUP-&gt;sockw);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L286'>SUP</a>               286 src/vfs/fish/fish.c         close (SUP-&gt;sockr);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L287'>SUP</a>               287 src/vfs/fish/fish.c         SUP-&gt;sockw = SUP-&gt;sockr = -1;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L289'>SUP</a>               289 src/vfs/fish/fish.c     g_free (SUP-&gt;scr_ls);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L290'>SUP</a>               290 src/vfs/fish/fish.c     g_free (SUP-&gt;scr_exists);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L291'>SUP</a>               291 src/vfs/fish/fish.c     g_free (SUP-&gt;scr_mkdir);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L292'>SUP</a>               292 src/vfs/fish/fish.c     g_free (SUP-&gt;scr_unlink);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L293'>SUP</a>               293 src/vfs/fish/fish.c     g_free (SUP-&gt;scr_chown);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L294'>SUP</a>               294 src/vfs/fish/fish.c     g_free (SUP-&gt;scr_chmod);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L295'>SUP</a>               295 src/vfs/fish/fish.c     g_free (SUP-&gt;scr_utime);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L296'>SUP</a>               296 src/vfs/fish/fish.c     g_free (SUP-&gt;scr_rmdir);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L297'>SUP</a>               297 src/vfs/fish/fish.c     g_free (SUP-&gt;scr_ln);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L298'>SUP</a>               298 src/vfs/fish/fish.c     g_free (SUP-&gt;scr_mv);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L299'>SUP</a>               299 src/vfs/fish/fish.c     g_free (SUP-&gt;scr_hardlink);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L300'>SUP</a>               300 src/vfs/fish/fish.c     g_free (SUP-&gt;scr_get);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L301'>SUP</a>               301 src/vfs/fish/fish.c     g_free (SUP-&gt;scr_send);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L302'>SUP</a>               302 src/vfs/fish/fish.c     g_free (SUP-&gt;scr_append);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L303'>SUP</a>               303 src/vfs/fish/fish.c     g_free (SUP-&gt;scr_info);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L304'>SUP</a>               304 src/vfs/fish/fish.c     g_free (SUP-&gt;scr_env);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L305'>SUP</a>               305 src/vfs/fish/fish.c     g_free (SUP);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L328'>SUP</a>               328 src/vfs/fish/fish.c         SUP-&gt;sockw = fileset1[1];</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L330'>SUP</a>               330 src/vfs/fish/fish.c         SUP-&gt;sockr = fileset2[0];</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L387'>SUP</a>               387 src/vfs/fish/fish.c     if (fish_command (me, super, NONE, "%s", SUP-&gt;scr_info) == COMPLETE)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L394'>SUP</a>               394 src/vfs/fish/fish.c             res = vfs_s_get_line_interruptible (me, buffer, sizeof (buffer), SUP-&gt;sockr);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L399'>SUP</a>               399 src/vfs/fish/fish.c             SUP-&gt;host_flags = atol (buffer);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L462'>SUP</a>               462 src/vfs/fish/fish.c     if (!vfs_s_get_line (me, SUP-&gt;sockr, answer, sizeof (answer), ':'))</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L492'>SUP</a>               492 src/vfs/fish/fish.c             if ((write (SUP.sockw, super-&gt;path_element-&gt;password, str_len) != (ssize_t) str_len)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L493'>SUP</a>               493 src/vfs/fish/fish.c                 || (write (SUP-&gt;sockw, "\n", 1) != 1))</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L545'>SUP</a>               545 src/vfs/fish/fish.c         SUP-&gt;scr_env = fish_set_env (SUP-&gt;host_flags);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L573'>SUP</a>               573 src/vfs/fish/fish.c     SUP-&gt;scr_ls =</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L575'>SUP</a>               575 src/vfs/fish/fish.c     SUP-&gt;scr_exists =</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L578'>SUP</a>               578 src/vfs/fish/fish.c     SUP-&gt;scr_mkdir =</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L581'>SUP</a>               581 src/vfs/fish/fish.c     SUP-&gt;scr_unlink =</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L584'>SUP</a>               584 src/vfs/fish/fish.c     SUP-&gt;scr_chown =</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L587'>SUP</a>               587 src/vfs/fish/fish.c     SUP-&gt;scr_chmod =</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L590'>SUP</a>               590 src/vfs/fish/fish.c     SUP-&gt;scr_utime =</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L593'>SUP</a>               593 src/vfs/fish/fish.c     SUP-&gt;scr_rmdir =</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L596'>SUP</a>               596 src/vfs/fish/fish.c     SUP-&gt;scr_ln =</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L598'>SUP</a>               598 src/vfs/fish/fish.c     SUP-&gt;scr_mv =</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L600'>SUP</a>               600 src/vfs/fish/fish.c     SUP-&gt;scr_hardlink =</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L603'>SUP</a>               603 src/vfs/fish/fish.c     SUP-&gt;scr_get =</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L605'>SUP</a>               605 src/vfs/fish/fish.c     SUP-&gt;scr_send =</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L608'>SUP</a>               608 src/vfs/fish/fish.c     SUP-&gt;scr_append =</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L611'>SUP</a>               611 src/vfs/fish/fish.c     SUP-&gt;scr_info =</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L673'>SUP</a>               673 src/vfs/fish/fish.c     shell_commands = g_strconcat (SUP-&gt;scr_env, "FISH_FILENAME=%s;\n", SUP-&gt;scr_ls, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L682'>SUP</a>               682 src/vfs/fish/fish.c         res = vfs_s_get_line_interruptible (me, buffer, sizeof (buffer), SUP-&gt;sockr);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L912'>SUP</a>               912 src/vfs/fish/fish.c             g_strconcat (SUP-&gt;scr_env, "FISH_FILENAME=%s FISH_FILESIZE=%" PRIuMAX ";\n",</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L913'>SUP</a>               913 src/vfs/fish/fish.c                          SUP-&gt;scr_append, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L922'>SUP</a>               922 src/vfs/fish/fish.c             g_strconcat (SUP-&gt;scr_env, "FISH_FILENAME=%s FISH_FILESIZE=%" PRIuMAX ";\n",</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L923'>SUP</a>               923 src/vfs/fish/fish.c                          SUP-&gt;scr_send, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L953'>SUP</a>               953 src/vfs/fish/fish.c         t = write (SUP-&gt;sockw, buffer, n);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L969'>SUP</a>               969 src/vfs/fish/fish.c     if (fish_get_reply (me, SUP-&gt;sockr, NULL, 0) != COMPLETE)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L975'>SUP</a>               975 src/vfs/fish/fish.c     fish_get_reply (me, SUP-&gt;sockr, NULL, 0);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1010'>SUP</a>              1010 src/vfs/fish/fish.c         g_strconcat (SUP-&gt;scr_env, "FISH_FILENAME=%s FISH_START_OFFSET=%" PRIuMAX ";\n",</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1011'>SUP</a>              1011 src/vfs/fish/fish.c                      SUP-&gt;scr_get, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1047'>SUP</a>              1047 src/vfs/fish/fish.c             n = read (SUP-&gt;sockr, buffer, n);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1055'>SUP</a>              1055 src/vfs/fish/fish.c     if (fish_get_reply (me, SUP-&gt;sockr, NULL, 0) != COMPLETE)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1072'>SUP</a>              1072 src/vfs/fish/fish.c     while (len != 0 &amp;&amp; ((n = read (SUP-&gt;sockr, buf, len)) &lt; 0))</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1084'>SUP</a>              1084 src/vfs/fish/fish.c     else if (fish_get_reply (me, SUP-&gt;sockr, NULL, 0) != COMPLETE)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1172'>SUP</a>              1172 src/vfs/fish/fish.c     shell_commands = g_strconcat (SUP-&gt;scr_env, "FISH_FILEFROM=%s FISH_FILETO=%s;\n",</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1173'>SUP</a>              1173 src/vfs/fish/fish.c                                   SUP-&gt;scr_mv, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1205'>SUP</a>              1205 src/vfs/fish/fish.c     shell_commands = g_strconcat (SUP-&gt;scr_env, "FISH_FILEFROM=%s FISH_FILETO=%s;\n",</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1206'>SUP</a>              1206 src/vfs/fish/fish.c                                   SUP-&gt;scr_hardlink, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1237'>SUP</a>              1237 src/vfs/fish/fish.c     shell_commands = g_strconcat (SUP-&gt;scr_env, "FISH_FILEFROM=%s FISH_FILETO=%s;\n",</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1238'>SUP</a>              1238 src/vfs/fish/fish.c                                   SUP-&gt;scr_ln, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1265'>SUP</a>              1265 src/vfs/fish/fish.c     shell_commands = g_strconcat (SUP-&gt;scr_env, "FISH_FILENAME=%s FISH_FILEMODE=%4.4o;\n",</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1266'>SUP</a>              1266 src/vfs/fish/fish.c                                   SUP-&gt;scr_chmod, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1308'>SUP</a>              1308 src/vfs/fish/fish.c         shell_commands = g_strconcat (SUP-&gt;scr_env,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1310'>SUP</a>              1310 src/vfs/fish/fish.c                                       SUP-&gt;scr_chown, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1354'>SUP</a>              1354 src/vfs/fish/fish.c         g_strconcat (SUP-&gt;scr_env, "FISH_FILENAME=%s FISH_FILEATIME=%ld FISH_FILEMTIME=%ld ",</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1355'>SUP</a>              1355 src/vfs/fish/fish.c                      "FISH_TOUCHATIME=%s FISH_TOUCHMTIME=%s;\n", SUP-&gt;scr_utime, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1384'>SUP</a>              1384 src/vfs/fish/fish.c         g_strconcat (SUP-&gt;scr_env, "FISH_FILENAME=%s;\n", SUP-&gt;scr_unlink, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1412'>SUP</a>              1412 src/vfs/fish/fish.c         g_strconcat (SUP-&gt;scr_env, "FISH_FILENAME=%s;\n", SUP-&gt;scr_exists, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1443'>SUP</a>              1443 src/vfs/fish/fish.c         g_strconcat (SUP-&gt;scr_env, "FISH_FILENAME=%s;\n", SUP-&gt;scr_mkdir, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1481'>SUP</a>              1481 src/vfs/fish/fish.c         g_strconcat (SUP-&gt;scr_env, "FISH_FILENAME=%s;\n", SUP-&gt;scr_rmdir, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L277'>SUP</a>               277 src/vfs/ftpfs/ftpfs.c     if (!SUP-&gt;remote_is_amiga)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L426'>SUP</a>               426 src/vfs/ftpfs/ftpfs.c         char *cwdir = SUP-&gt;current_dir;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L428'>SUP</a>               428 src/vfs/ftpfs/ftpfs.c         close (SUP-&gt;sock);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L429'>SUP</a>               429 src/vfs/ftpfs/ftpfs.c         SUP-&gt;sock = sock;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L430'>SUP</a>               430 src/vfs/ftpfs/ftpfs.c         SUP-&gt;current_dir = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L441'>SUP</a>               441 src/vfs/ftpfs/ftpfs.c         SUP-&gt;current_dir = cwdir;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L487'>SUP</a>               487 src/vfs/ftpfs/ftpfs.c     status = write (SUP-&gt;sock, cmdstr, cmdlen);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L500'>SUP</a>               500 src/vfs/ftpfs/ftpfs.c                 if (status &amp;&amp; (write (SUP-&gt;sock, cmdstr, cmdlen) &gt; 0))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L518'>SUP</a>               518 src/vfs/ftpfs/ftpfs.c         status = ftpfs_get_reply (me, SUP-&gt;sock,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L527'>SUP</a>               527 src/vfs/ftpfs/ftpfs.c             if (status &amp;&amp; (write (SUP-&gt;sock, cmdstr, cmdlen) &gt; 0))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L545'>SUP</a>               545 src/vfs/ftpfs/ftpfs.c     if (SUP-&gt;sock != -1)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L549'>SUP</a>               549 src/vfs/ftpfs/ftpfs.c         close (SUP-&gt;sock);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L551'>SUP</a>               551 src/vfs/ftpfs/ftpfs.c     g_free (SUP-&gt;current_dir);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L560'>SUP</a>               560 src/vfs/ftpfs/ftpfs.c     if (binary != SUP-&gt;isbinary)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L564'>SUP</a>               564 src/vfs/ftpfs/ftpfs.c         SUP-&gt;isbinary = binary;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L581'>SUP</a>               581 src/vfs/ftpfs/ftpfs.c     SUP-&gt;isbinary = TYPE_UNKNOWN;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L616'>SUP</a>               616 src/vfs/ftpfs/ftpfs.c     if (SUP-&gt;proxy)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L625'>SUP</a>               625 src/vfs/ftpfs/ftpfs.c     if (ftpfs_get_reply (me, SUP-&gt;sock, reply_string, sizeof (reply_string) - 1) == COMPLETE)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L630'>SUP</a>               630 src/vfs/ftpfs/ftpfs.c         SUP-&gt;remote_is_amiga = strstr (reply_up, "AMIGA") != 0;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L632'>SUP</a>               632 src/vfs/ftpfs/ftpfs.c             SUP-&gt;strict = RFC_STRICT;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L637'>SUP</a>               637 src/vfs/ftpfs/ftpfs.c             fprintf (MEDATA-&gt;logfile, "MC -- remote_is_amiga =  %d\n", SUP-&gt;remote_is_amiga);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L674'>SUP</a>               674 src/vfs/ftpfs/ftpfs.c             SUP-&gt;failed_on_login = 1;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L822'>SUP</a>               822 src/vfs/ftpfs/ftpfs.c     if (SUP-&gt;proxy != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L921'>SUP</a>               921 src/vfs/ftpfs/ftpfs.c     if (SUP-&gt;proxy)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L922'>SUP</a>               922 src/vfs/ftpfs/ftpfs.c         SUP-&gt;use_passive_connection = ftpfs_use_passive_connections_over_proxy;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L926'>SUP</a>               926 src/vfs/ftpfs/ftpfs.c         SUP-&gt;failed_on_login = 0;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L928'>SUP</a>               928 src/vfs/ftpfs/ftpfs.c         SUP-&gt;sock = ftpfs_open_socket (me, super);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L929'>SUP</a>               929 src/vfs/ftpfs/ftpfs.c         if (SUP-&gt;sock == -1)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L939'>SUP</a>               939 src/vfs/ftpfs/ftpfs.c             if (!SUP-&gt;failed_on_login)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L943'>SUP</a>               943 src/vfs/ftpfs/ftpfs.c             close (SUP-&gt;sock);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L967'>SUP</a>               967 src/vfs/ftpfs/ftpfs.c     SUP-&gt;current_dir = ftpfs_get_current_directory (me, super);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L968'>SUP</a>               968 src/vfs/ftpfs/ftpfs.c     if (SUP-&gt;current_dir == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L969'>SUP</a>               969 src/vfs/ftpfs/ftpfs.c         SUP-&gt;current_dir = g_strdup (PATH_SEP_STR);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L985'>SUP</a>               985 src/vfs/ftpfs/ftpfs.c     SUP-&gt;proxy = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L987'>SUP</a>               987 src/vfs/ftpfs/ftpfs.c         SUP-&gt;proxy = ftpfs_proxy_host;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L988'>SUP</a>               988 src/vfs/ftpfs/ftpfs.c     SUP-&gt;use_passive_connection = ftpfs_use_passive_connections;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L989'>SUP</a>               989 src/vfs/ftpfs/ftpfs.c     SUP-&gt;strict = ftpfs_use_unix_list_options ? RFC_AUTODETECT : RFC_STRICT;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L990'>SUP</a>               990 src/vfs/ftpfs/ftpfs.c     SUP-&gt;isbinary = TYPE_UNKNOWN;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L991'>SUP</a>               991 src/vfs/ftpfs/ftpfs.c     SUP-&gt;remote_is_amiga = 0;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L992'>SUP</a>               992 src/vfs/ftpfs/ftpfs.c     SUP-&gt;ctl_connection_busy = 0;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1032'>SUP</a>              1032 src/vfs/ftpfs/ftpfs.c         ftpfs_get_reply (me, SUP-&gt;sock, buf, sizeof (buf)) == COMPLETE)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1264'>SUP</a>              1264 src/vfs/ftpfs/ftpfs.c     if (SUP-&gt;use_passive_connection)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1265'>SUP</a>              1265 src/vfs/ftpfs/ftpfs.c         result = getpeername (SUP-&gt;sock, (struct sockaddr *) data_addr, data_addrlen);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1267'>SUP</a>              1267 src/vfs/ftpfs/ftpfs.c         result = getsockname (SUP-&gt;sock, (struct sockaddr *) data_addr, data_addrlen);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1312'>SUP</a>              1312 src/vfs/ftpfs/ftpfs.c     if (SUP-&gt;use_passive_connection)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1324'>SUP</a>              1324 src/vfs/ftpfs/ftpfs.c         SUP-&gt;use_passive_connection = 0;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1330'>SUP</a>              1330 src/vfs/ftpfs/ftpfs.c     if (!SUP-&gt;use_passive_connection)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1348'>SUP</a>              1348 src/vfs/ftpfs/ftpfs.c     SUP-&gt;use_passive_connection = SUP-&gt;proxy != NULL ? ftpfs_use_passive_connections_over_proxy :</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1366'>SUP</a>              1366 src/vfs/ftpfs/ftpfs.c     if (SUP-&gt;ctl_connection_busy)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1395'>SUP</a>              1395 src/vfs/ftpfs/ftpfs.c     if (SUP-&gt;use_passive_connection)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1409'>SUP</a>              1409 src/vfs/ftpfs/ftpfs.c     SUP-&gt;ctl_connection_busy = 1;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1423'>SUP</a>              1423 src/vfs/ftpfs/ftpfs.c     SUP-&gt;ctl_connection_busy = 0;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1426'>SUP</a>              1426 src/vfs/ftpfs/ftpfs.c     if (send (SUP-&gt;sock, ipbuf, sizeof (ipbuf), MSG_OOB) != sizeof (ipbuf))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1466'>SUP</a>              1466 src/vfs/ftpfs/ftpfs.c     if ((ftpfs_get_reply (me, SUP-&gt;sock, NULL, 0) == TRANSIENT) &amp;&amp; (code == 426))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1467'>SUP</a>              1467 src/vfs/ftpfs/ftpfs.c         ftpfs_get_reply (me, SUP-&gt;sock, NULL, 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1638'>SUP</a>              1638 src/vfs/ftpfs/ftpfs.c     ftpfs_get_reply (me, SUP-&gt;sock, NULL, 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1648'>SUP</a>              1648 src/vfs/ftpfs/ftpfs.c     if (SUP-&gt;strict_rfc959_list_cmd)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1665'>SUP</a>              1665 src/vfs/ftpfs/ftpfs.c     cd_first = ftpfs_first_cd_then_ls || (SUP-&gt;strict == RFC_STRICT)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1671'>SUP</a>              1671 src/vfs/ftpfs/ftpfs.c                        SUP-&gt;strict ==</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1687'>SUP</a>              1687 src/vfs/ftpfs/ftpfs.c     if (SUP-&gt;strict == RFC_STRICT)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1725'>SUP</a>              1725 src/vfs/ftpfs/ftpfs.c             SUP-&gt;ctl_connection_busy = 0;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1727'>SUP</a>              1727 src/vfs/ftpfs/ftpfs.c             ftpfs_get_reply (me, SUP-&gt;sock, NULL, 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1754'>SUP</a>              1754 src/vfs/ftpfs/ftpfs.c     SUP-&gt;ctl_connection_busy = 0;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1756'>SUP</a>              1756 src/vfs/ftpfs/ftpfs.c     if ((ftpfs_get_reply (me, SUP-&gt;sock, NULL, 0) != COMPLETE))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1777'>SUP</a>              1777 src/vfs/ftpfs/ftpfs.c     if (SUP-&gt;strict == RFC_AUTODETECT)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1778'>SUP</a>              1778 src/vfs/ftpfs/ftpfs.c         SUP-&gt;strict = RFC_DARING;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1784'>SUP</a>              1784 src/vfs/ftpfs/ftpfs.c     if (SUP-&gt;strict == RFC_AUTODETECT)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1788'>SUP</a>              1788 src/vfs/ftpfs/ftpfs.c         SUP-&gt;strict = RFC_STRICT;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1877'>SUP</a>              1877 src/vfs/ftpfs/ftpfs.c     SUP-&gt;ctl_connection_busy = 0;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1879'>SUP</a>              1879 src/vfs/ftpfs/ftpfs.c     if (ftpfs_get_reply (me, SUP-&gt;sock, NULL, 0) != COMPLETE)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1885'>SUP</a>              1885 src/vfs/ftpfs/ftpfs.c     SUP-&gt;ctl_connection_busy = 0;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1887'>SUP</a>              1887 src/vfs/ftpfs/ftpfs.c     ftpfs_get_reply (me, SUP-&gt;sock, NULL, 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1933'>SUP</a>              1933 src/vfs/ftpfs/ftpfs.c         SUP-&gt;ctl_connection_busy = 0;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1936'>SUP</a>              1936 src/vfs/ftpfs/ftpfs.c         if ((ftpfs_get_reply (me, SUP-&gt;sock, NULL, 0) != COMPLETE))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2065'>SUP</a>              2065 src/vfs/ftpfs/ftpfs.c     if (SUP-&gt;current_dir == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2067'>SUP</a>              2067 src/vfs/ftpfs/ftpfs.c     return (strcmp (path, SUP-&gt;current_dir) == 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2078'>SUP</a>              2078 src/vfs/ftpfs/ftpfs.c     if (!SUP-&gt;cwd_deferred &amp;&amp; ftpfs_is_same_dir (me, super, remote_path))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2089'>SUP</a>              2089 src/vfs/ftpfs/ftpfs.c         g_free (SUP-&gt;current_dir);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2090'>SUP</a>              2090 src/vfs/ftpfs/ftpfs.c         SUP-&gt;current_dir = g_strdup (remote_path);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2091'>SUP</a>              2091 src/vfs/ftpfs/ftpfs.c         SUP-&gt;cwd_deferred = 0;</span>
+</pre>
+</body>
+</html>

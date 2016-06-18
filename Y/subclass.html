@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>subclass</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1050'>subclass</a>         1050 lib/vfs/direntry.c     struct vfs_s_subclass *subclass;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1055'>subclass</a>         1055 lib/vfs/direntry.c     subclass = ((struct vfs_s_subclass *) path_element-&gt;class-&gt;data);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1056'>subclass</a>         1056 lib/vfs/direntry.c     if (subclass == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1062'>subclass</a>         1062 lib/vfs/direntry.c     if (subclass-&gt;archive_check != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1064'>subclass</a>         1064 lib/vfs/direntry.c         cookie = subclass-&gt;archive_check (vpath_archive);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1069'>subclass</a>         1069 lib/vfs/direntry.c     for (iter = subclass-&gt;supers; iter != NULL; iter = g_list_next (iter))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1076'>subclass</a>         1076 lib/vfs/direntry.c         i = subclass-&gt;archive_same (path_element, super, vpath_archive, cookie);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1107'>subclass</a>         1107 lib/vfs/direntry.c     struct vfs_s_subclass *subclass;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1126'>subclass</a>         1126 lib/vfs/direntry.c     subclass = ((struct vfs_s_subclass *) path_element-&gt;class-&gt;data);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1127'>subclass</a>         1127 lib/vfs/direntry.c     if (subclass-&gt;open_archive != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1134'>subclass</a>         1134 lib/vfs/direntry.c         result = subclass-&gt;open_archive (super, vpath_archive, path_element);</span>
+</pre>
+</body>
+</html>

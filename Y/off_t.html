@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>off_t</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--search.h.html#L96'>off_t</a>              96 lib/search.h       off_t normal_offset;</span>
+<span class='curline'><a href='../S/lib--search.h.html#L98'>off_t</a>              98 lib/search.h       off_t start_buffer;</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1116'>off_t</a>            1116 lib/util.c     load_file_position (const vfs_path_t * filename_vpath, long *line, long *column, off_t * offset,</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1182'>off_t</a>            1182 lib/util.c                         *offset = (off_t) g_ascii_strtoll (pos_tokens[2], NULL, 10);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1207'>off_t</a>            1207 lib/util.c     save_file_position (const vfs_path_t * filename_vpath, long line, long column, off_t offset,</span>
+<span class='curline'><a href='../S/lib--util.h.html#L230'>off_t</a>             230 lib/util.h                              off_t * offset, GArray ** bookmarks);</span>
+<span class='curline'><a href='../S/lib--util.h.html#L232'>off_t</a>             232 lib/util.h     void save_file_position (const vfs_path_t * filename_vpath, long line, long column, off_t offset,</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L615'>off_t</a>             615 lib/vfs/direntry.c static off_t</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L616'>off_t</a>             616 lib/vfs/direntry.c vfs_s_lseek (void *fh, off_t offset, int whence)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L618'>off_t</a>             618 lib/vfs/direntry.c     off_t size = FH-&gt;ino-&gt;st.st_size;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L625'>off_t</a>             625 lib/vfs/direntry.c         off_t retval = lseek (FH-&gt;handle, offset, whence);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L696'>off_t</a>             696 lib/vfs/direntry.c                    const char *file_name, off_t have, off_t need)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1328'>off_t</a>            1328 lib/vfs/direntry.c     off_t total = 0;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1332'>off_t</a>            1332 lib/vfs/direntry.c     off_t stat_size = ino-&gt;st.st_size;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L760'>off_t</a>             760 lib/vfs/interface.c off_t</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L761'>off_t</a>             761 lib/vfs/interface.c mc_lseek (int fd, off_t offset, int whence)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L765'>off_t</a>             765 lib/vfs/interface.c     off_t result;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L785'>off_t</a>             785 lib/vfs/parse_ls_vga.c         s-&gt;st_size = (off_t) g_ascii_strtoll (columns[idx2], NULL, 10);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L623'>off_t</a>             623 lib/vfs/vfs.c  vfs_preallocate (int dest_vfs_fd, off_t src_fsize, off_t dest_fsize)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L179'>off_t</a>             179 lib/vfs/vfs.h      off_t (*lseek) (void *vfs_info, off_t offset, int whence);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L275'>off_t</a>             275 lib/vfs/vfs.h  int vfs_preallocate (int dest_desc, off_t src_fsize, off_t dest_fsize);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L285'>off_t</a>             285 lib/vfs/vfs.h  off_t mc_lseek (int fd, off_t offset, int whence);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L100'>off_t</a>             100 lib/vfs/xdirentry.h     off_t data_offset;          /* Subclass specific */</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L107'>off_t</a>             107 lib/vfs/xdirentry.h     off_t pos;                  /* This is for module's use */</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L150'>off_t</a>             150 lib/vfs/xdirentry.h     int (*linear_start) (struct vfs_class * me, vfs_file_handler_t * fh, off_t from);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L200'>off_t</a>             200 lib/vfs/xdirentry.h     entry-&gt;ino-&gt;data_offset = (off_t) position;</span>
+<span class='curline'><a href='../S/src--diffviewer--internal.h.html#L12'>off_t</a>              12 src/diffviewer/internal.h typedef int (*DFUNC) (void *ctx, int ch, int line, off_t off, size_t sz, const char *str);</span>
+<span class='curline'><a href='../S/src--diffviewer--internal.h.html#L72'>off_t</a>              72 src/diffviewer/internal.h         off_t off;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L361'>off_t</a>             361 src/diffviewer/ydiff.c static off_t</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L362'>off_t</a>             362 src/diffviewer/ydiff.c f_seek (FBUF * fs, off_t off, int whence)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L364'>off_t</a>             364 src/diffviewer/ydiff.c     off_t rv;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L400'>off_t</a>             400 src/diffviewer/ydiff.c static off_t</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L403'>off_t</a>             403 src/diffviewer/ydiff.c     off_t rv;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L446'>off_t</a>             446 src/diffviewer/ydiff.c static off_t</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L449'>off_t</a>             449 src/diffviewer/ydiff.c     off_t off;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L863'>off_t</a>             863 src/diffviewer/ydiff.c     off_t off = 0;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1562'>off_t</a>            1562 src/diffviewer/ydiff.c cvt_fget (FBUF * f, off_t off, char *dst, size_t dstsize, int skip, int ts, gboolean show_cr)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1679'>off_t</a>            1679 src/diffviewer/ydiff.c printer (void *ctx, int ch, int line, off_t off, size_t sz, const char *str)</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L148'>off_t</a>             148 src/editor/edit-impl.h off_t edit_move_forward3 (const WEdit * edit, off_t current, long cols, off_t upto);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L157'>off_t</a>             157 src/editor/edit-impl.h void edit_move_to_prev_col (WEdit * edit, off_t p);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L174'>off_t</a>             174 src/editor/edit-impl.h void edit_cursor_move (WEdit * edit, off_t increment);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L179'>off_t</a>             179 src/editor/edit-impl.h off_t edit_write_stream (WEdit * edit, FILE * f);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L195'>off_t</a>             195 src/editor/edit-impl.h void edit_set_markers (WEdit * edit, off_t m1, off_t m2, long c1, long c2);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L212'>off_t</a>             212 src/editor/edit-impl.h gboolean edit_save_block (WEdit * edit, const char *filename, off_t start, off_t finish);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L216'>off_t</a>             216 src/editor/edit-impl.h off_t edit_insert_file (WEdit * edit, const vfs_path_t * filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L227'>off_t</a>             227 src/editor/edit-impl.h gboolean eval_marks (WEdit * edit, off_t * start_mark, off_t * end_mark);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L261'>off_t</a>             261 src/editor/edit-impl.h int edit_get_syntax_color (WEdit * edit, off_t byte_index);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L138'>off_t</a>             138 src/editor/edit.c static const off_t option_filesize_default_threshold = 64 * 1024 * 1024;        /* 64 MB */</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L266'>off_t</a>             266 src/editor/edit.c static off_t</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L270'>off_t</a>             270 src/editor/edit.c     off_t i = 0;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L464'>off_t</a>             464 src/editor/edit.c     off_t offset;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L634'>off_t</a>             634 src/editor/edit.c     off_t p;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L653'>off_t</a>             653 src/editor/edit.c is_blank (const edit_buffer_t * buf, off_t offset)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L655'>off_t</a>             655 src/editor/edit.c     off_t s, f;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L673'>off_t</a>             673 src/editor/edit.c static off_t</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1382'>off_t</a>            1382 src/editor/edit.c     off_t p;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1466'>off_t</a>            1466 src/editor/edit.c     off_t curs;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1487'>off_t</a>            1487 src/editor/edit.c             off_t current = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1506'>off_t</a>            1506 src/editor/edit.c static off_t</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1512'>off_t</a>            1512 src/editor/edit.c     off_t q;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1564'>off_t</a>            1564 src/editor/edit.c     off_t q;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1580'>off_t</a>            1580 src/editor/edit.c     off_t start_mark, end_mark;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1617'>off_t</a>            1617 src/editor/edit.c     off_t start_mark, end_mark;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1618'>off_t</a>            1618 src/editor/edit.c     off_t cur_bol, start_bol;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1680'>off_t</a>            1680 src/editor/edit.c static off_t</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1681'>off_t</a>            1681 src/editor/edit.c edit_insert_column_from_file (WEdit * edit, int file, off_t * start_pos, off_t * end_pos,</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1684'>off_t</a>            1684 src/editor/edit.c     off_t cursor;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1686'>off_t</a>            1686 src/editor/edit.c     off_t blocklen = -1, width = 0;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1695'>off_t</a>            1695 src/editor/edit.c         off_t i;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1708'>off_t</a>            1708 src/editor/edit.c                 off_t p;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1758'>off_t</a>            1758 src/editor/edit.c     off_t curs;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1759'>off_t</a>            1759 src/editor/edit.c     off_t start_mark, end_mark;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1783'>off_t</a>            1783 src/editor/edit.c             off_t ins_len;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1829'>off_t</a>            1829 src/editor/edit.c off_t</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1938'>off_t</a>            1938 src/editor/edit.c off_t</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1942'>off_t</a>            1942 src/editor/edit.c     off_t current;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1943'>off_t</a>            1943 src/editor/edit.c     off_t ins_len = 0;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1987'>off_t</a>            1987 src/editor/edit.c         off_t blocklen;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2008'>off_t</a>            2008 src/editor/edit.c             off_t mark1, mark2;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2024'>off_t</a>            2024 src/editor/edit.c             off_t i;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2706'>off_t</a>            2706 src/editor/edit.c edit_cursor_move (WEdit * edit, off_t increment)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2750'>off_t</a>            2750 src/editor/edit.c off_t</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2751'>off_t</a>            2751 src/editor/edit.c edit_move_forward3 (const WEdit * edit, off_t current, long cols, off_t upto)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2753'>off_t</a>            2753 src/editor/edit.c     off_t p, q;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2800'>off_t</a>            2800 src/editor/edit.c             return (upto != 0 ? (off_t) col : p);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2814'>off_t</a>            2814 src/editor/edit.c     return (off_t) col;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2927'>off_t</a>            2927 src/editor/edit.c edit_move_to_prev_col (WEdit * edit, off_t p)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3036'>off_t</a>            3036 src/editor/edit.c edit_set_markers (WEdit * edit, off_t m1, off_t m2, long c1, long c2)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L93'>off_t</a>              93 src/editor/editbuffer.c #define EDIT_BUF_SIZE (((off_t) 1) &lt;&lt; S_EDIT_BUF_SIZE)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L114'>off_t</a>             114 src/editor/editbuffer.c edit_buffer_get_byte_ptr (const edit_buffer_t * buf, off_t byte_index)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L123'>off_t</a>             123 src/editor/editbuffer.c         off_t p;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L144'>off_t</a>             144 src/editor/editbuffer.c edit_buffer_init (edit_buffer_t * buf, off_t size)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L190'>off_t</a>             190 src/editor/editbuffer.c edit_buffer_get_byte (const edit_buffer_t * buf, off_t byte_index)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L215'>off_t</a>             215 src/editor/editbuffer.c edit_buffer_get_utf (const edit_buffer_t * buf, off_t byte_index, int *char_length)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L278'>off_t</a>             278 src/editor/editbuffer.c edit_buffer_get_prev_utf (const edit_buffer_t * buf, off_t byte_index, int *char_length)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L329'>off_t</a>             329 src/editor/editbuffer.c edit_buffer_count_lines (const edit_buffer_t * buf, off_t first, off_t last)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L353'>off_t</a>             353 src/editor/editbuffer.c off_t</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L354'>off_t</a>             354 src/editor/editbuffer.c edit_buffer_get_bol (const edit_buffer_t * buf, off_t current)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L375'>off_t</a>             375 src/editor/editbuffer.c off_t</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L376'>off_t</a>             376 src/editor/editbuffer.c edit_buffer_get_eol (const edit_buffer_t * buf, off_t current)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L400'>off_t</a>             400 src/editor/editbuffer.c edit_buffer_get_word_from_pos (const edit_buffer_t * buf, off_t start_pos, off_t * start,</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L403'>off_t</a>             403 src/editor/editbuffer.c     off_t word_start;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L446'>off_t</a>             446 src/editor/editbuffer.c     off_t i;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L478'>off_t</a>             478 src/editor/editbuffer.c     off_t i;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L511'>off_t</a>             511 src/editor/editbuffer.c     off_t prev;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L512'>off_t</a>             512 src/editor/editbuffer.c     off_t i;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L552'>off_t</a>             552 src/editor/editbuffer.c     off_t prev;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L553'>off_t</a>             553 src/editor/editbuffer.c     off_t i;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L593'>off_t</a>             593 src/editor/editbuffer.c off_t</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L594'>off_t</a>             594 src/editor/editbuffer.c edit_buffer_get_forward_offset (const edit_buffer_t * buf, off_t current, long lines, off_t upto)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L597'>off_t</a>             597 src/editor/editbuffer.c         return (off_t) edit_buffer_count_lines (buf, current, upto);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L625'>off_t</a>             625 src/editor/editbuffer.c off_t</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L626'>off_t</a>             626 src/editor/editbuffer.c edit_buffer_get_backward_offset (const edit_buffer_t * buf, off_t current, long lines)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L648'>off_t</a>             648 src/editor/editbuffer.c off_t</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L649'>off_t</a>             649 src/editor/editbuffer.c edit_buffer_read_file (edit_buffer_t * buf, int fd, off_t size,</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L652'>off_t</a>             652 src/editor/editbuffer.c     off_t ret = 0;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L653'>off_t</a>             653 src/editor/editbuffer.c     off_t i, j;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L654'>off_t</a>             654 src/editor/editbuffer.c     off_t data_size;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L687'>off_t</a>             687 src/editor/editbuffer.c         off_t sz;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L723'>off_t</a>             723 src/editor/editbuffer.c     for (i = 0; i &lt; (off_t) buf-&gt;b2-&gt;len / 2; i++)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L762'>off_t</a>             762 src/editor/editbuffer.c off_t</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L765'>off_t</a>             765 src/editor/editbuffer.c     off_t ret = 0;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L766'>off_t</a>             766 src/editor/editbuffer.c     off_t i;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L767'>off_t</a>             767 src/editor/editbuffer.c     off_t data_size, sz;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L774'>off_t</a>             774 src/editor/editbuffer.c         for (i = 0; i &lt; (off_t) buf-&gt;b1-&gt;len - 1; i++)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L837'>off_t</a>             837 src/editor/editbuffer.c edit_buffer_calc_percent (const edit_buffer_t * buf, off_t offset)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L16'>off_t</a>              16 src/editor/editbuffer.h     off_t curs1;                /* position of the cursor from the beginning of the file. */</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L17'>off_t</a>              17 src/editor/editbuffer.h     off_t curs2;                /* position from the end of the file */</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L20'>off_t</a>              20 src/editor/editbuffer.h     off_t size;                 /* file size */</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L31'>off_t</a>              31 src/editor/editbuffer.h     off_t loaded;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L38'>off_t</a>              38 src/editor/editbuffer.h void edit_buffer_init (edit_buffer_t * buf, off_t size);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L41'>off_t</a>              41 src/editor/editbuffer.h int edit_buffer_get_byte (const edit_buffer_t * buf, off_t byte_index);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L43'>off_t</a>              43 src/editor/editbuffer.h int edit_buffer_get_utf (const edit_buffer_t * buf, off_t byte_index, int *char_length);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L44'>off_t</a>              44 src/editor/editbuffer.h int edit_buffer_get_prev_utf (const edit_buffer_t * buf, off_t byte_index, int *char_length);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L46'>off_t</a>              46 src/editor/editbuffer.h long edit_buffer_count_lines (const edit_buffer_t * buf, off_t first, off_t last);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L47'>off_t</a>              47 src/editor/editbuffer.h off_t edit_buffer_get_bol (const edit_buffer_t * buf, off_t current);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L48'>off_t</a>              48 src/editor/editbuffer.h off_t edit_buffer_get_eol (const edit_buffer_t * buf, off_t current);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L49'>off_t</a>              49 src/editor/editbuffer.h GString *edit_buffer_get_word_from_pos (const edit_buffer_t * buf, off_t start_pos, off_t * start,</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L57'>off_t</a>              57 src/editor/editbuffer.h off_t edit_buffer_get_forward_offset (const edit_buffer_t * buf, off_t current, long lines,</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L58'>off_t</a>              58 src/editor/editbuffer.h                                       off_t upto);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L59'>off_t</a>              59 src/editor/editbuffer.h off_t edit_buffer_get_backward_offset (const edit_buffer_t * buf, off_t current, long lines);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L61'>off_t</a>              61 src/editor/editbuffer.h off_t edit_buffer_read_file (edit_buffer_t * buf, int fd, off_t size,</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L63'>off_t</a>              63 src/editor/editbuffer.h off_t edit_buffer_write_file (edit_buffer_t * buf, int fd);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L65'>off_t</a>              65 src/editor/editbuffer.h int edit_buffer_calc_percent (const edit_buffer_t * buf, off_t offset);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L92'>off_t</a>              92 src/editor/editbuffer.h static inline off_t</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.h.html#L107'>off_t</a>             107 src/editor/editbuffer.h static inline off_t</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L119'>off_t</a>             119 src/editor/editcmd.c     off_t offset;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L198'>off_t</a>             198 src/editor/editcmd.c     off_t filelen = 0;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L540'>off_t</a>             540 src/editor/editcmd.c     off_t p, q, r;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L541'>off_t</a>             541 src/editor/editcmd.c     off_t m1, m2;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L542'>off_t</a>             542 src/editor/editcmd.c     off_t n;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L583'>off_t</a>             583 src/editor/editcmd.c     off_t start_mark, end_mark;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L584'>off_t</a>             584 src/editor/editcmd.c     off_t curs_pos;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L623'>off_t</a>             623 src/editor/editcmd.c             off_t line_width;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L638'>off_t</a>             638 src/editor/editcmd.c             off_t count;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L704'>off_t</a>             704 src/editor/editcmd.c static off_t</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L705'>off_t</a>             705 src/editor/editcmd.c edit_calculate_start_of_next_line (const edit_buffer_t * buf, off_t current_pos, off_t max_pos,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L708'>off_t</a>             708 src/editor/editcmd.c     off_t i;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L730'>off_t</a>             730 src/editor/editcmd.c static off_t</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L731'>off_t</a>             731 src/editor/editcmd.c edit_calculate_end_of_previous_line (const edit_buffer_t * buf, off_t current_pos,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L734'>off_t</a>             734 src/editor/editcmd.c     off_t i;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L753'>off_t</a>             753 src/editor/editcmd.c static inline off_t</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L754'>off_t</a>             754 src/editor/editcmd.c edit_calculate_start_of_previous_line (const edit_buffer_t * buf, off_t current_pos,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L773'>off_t</a>             773 src/editor/editcmd.c static inline off_t</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L774'>off_t</a>             774 src/editor/editcmd.c edit_calculate_start_of_current_line (const edit_buffer_t * buf, off_t current_pos,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L792'>off_t</a>             792 src/editor/editcmd.c     off_t start_mark = 0;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L793'>off_t</a>             793 src/editor/editcmd.c     off_t end_mark = 0;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L819'>off_t</a>             819 src/editor/editcmd.c     off_t search_start = edit-&gt;search_start;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L820'>off_t</a>             820 src/editor/editcmd.c     off_t search_end;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L821'>off_t</a>             821 src/editor/editcmd.c     off_t start_mark = 0;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L822'>off_t</a>             822 src/editor/editcmd.c     off_t end_mark = edit-&gt;buffer.size;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L874'>off_t</a>             874 src/editor/editcmd.c             if (search_end &gt; (off_t) (search_start + edit-&gt;search-&gt;original_len)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1058'>off_t</a>            1058 src/editor/editcmd.c edit_get_block (WEdit * edit, off_t start, off_t finish, off_t * l)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1070'>off_t</a>            1070 src/editor/editcmd.c             off_t x;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1097'>off_t</a>            1097 src/editor/editcmd.c edit_save_block_to_clip_file (WEdit * edit, off_t start, off_t finish)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1132'>off_t</a>            1132 src/editor/editcmd.c         off_t i;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1144'>off_t</a>            1144 src/editor/editcmd.c edit_find_word_start (const edit_buffer_t * buf, off_t * word_start, gsize * word_len)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1147'>off_t</a>            1147 src/editor/editcmd.c     off_t i;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1195'>off_t</a>            1195 src/editor/editcmd.c                                            off_t word_start)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1199'>off_t</a>            1199 src/editor/editcmd.c     off_t i;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1207'>off_t</a>            1207 src/editor/editcmd.c     for (i = 0; i &lt; (off_t) len; i++)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1223'>off_t</a>            1223 src/editor/editcmd.c edit_collect_completions (WEdit * edit, off_t word_start, gsize word_len,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1232'>off_t</a>            1232 src/editor/editcmd.c     off_t last_byte, start = -1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1281'>off_t</a>            1281 src/editor/editcmd.c             if (start + (off_t) i == word_start)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1349'>off_t</a>            1349 src/editor/editcmd.c edit_insert_column_of_text (WEdit * edit, unsigned char *data, off_t size, long width,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1350'>off_t</a>            1350 src/editor/editcmd.c                             off_t * start_pos, off_t * end_pos, long *col1, long *col2)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1352'>off_t</a>            1352 src/editor/editcmd.c     off_t i, cursor;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1365'>off_t</a>            1365 src/editor/editcmd.c             off_t p;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2283'>off_t</a>            2283 src/editor/editcmd.c eval_marks (WEdit * edit, off_t * start_mark, off_t * end_mark)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2315'>off_t</a>            2315 src/editor/editcmd.c         off_t start_bol, start_eol;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2316'>off_t</a>            2316 src/editor/editcmd.c         off_t end_bol, end_eol;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2318'>off_t</a>            2318 src/editor/editcmd.c         off_t diff1, diff2;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2345'>off_t</a>            2345 src/editor/editcmd.c     off_t start_mark, end_mark, current = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2346'>off_t</a>            2346 src/editor/editcmd.c     off_t mark1 = 0, mark2 = 0;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2348'>off_t</a>            2348 src/editor/editcmd.c     off_t size;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2397'>off_t</a>            2397 src/editor/editcmd.c     off_t current;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2399'>off_t</a>            2399 src/editor/editcmd.c     off_t start_mark, end_mark;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2413'>off_t</a>            2413 src/editor/editcmd.c         off_t mark1, mark2;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2414'>off_t</a>            2414 src/editor/editcmd.c         off_t size;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2461'>off_t</a>            2461 src/editor/editcmd.c         off_t count, count_orig;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2499'>off_t</a>            2499 src/editor/editcmd.c     off_t start_mark, end_mark;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2760'>off_t</a>            2760 src/editor/editcmd.c     *current_char = edit_buffer_get_byte (&amp;edit-&gt;buffer, (off_t) char_offset);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2771'>off_t</a>            2771 src/editor/editcmd.c     ((edit_search_status_msg_t *) sm)-&gt;offset = (off_t) char_offset;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2906'>off_t</a>            2906 src/editor/editcmd.c edit_save_block (WEdit * edit, const char *filename, off_t start, off_t finish)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2909'>off_t</a>            2909 src/editor/editcmd.c     off_t len = 1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2943'>off_t</a>            2943 src/editor/editcmd.c         off_t i = start;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2944'>off_t</a>            2944 src/editor/editcmd.c         off_t end;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2977'>off_t</a>            2977 src/editor/editcmd.c     off_t start_mark, end_mark;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3001'>off_t</a>            3001 src/editor/editcmd.c     off_t start_mark, end_mark;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3084'>off_t</a>            3084 src/editor/editcmd.c     off_t start_mark, end_mark;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3156'>off_t</a>            3156 src/editor/editcmd.c     off_t start_mark, end_mark;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3338'>off_t</a>            3338 src/editor/editcmd.c     off_t word_start = 0;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3509'>off_t</a>            3509 src/editor/editcmd.c     off_t word_start = 0;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3574'>off_t</a>            3574 src/editor/editcmd.c     off_t word_start = 0;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L511'>off_t</a>             511 src/editor/editdraw.c edit_draw_this_line (WEdit * edit, off_t b, long row, long start_col, long end_col)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L518'>off_t</a>             518 src/editor/editdraw.c     off_t m1 = 0, m2 = 0, q;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L576'>off_t</a>             576 src/editor/editdraw.c             off_t tws = 0;</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L616'>off_t</a>             616 src/editor/editdraw.c                 if (q &gt;= edit-&gt;found_start &amp;&amp; q &lt; (off_t) (edit-&gt;found_start + edit-&gt;found_len))</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L842'>off_t</a>             842 src/editor/editdraw.c edit_draw_this_char (WEdit * edit, off_t curs, long row, long start_column, long end_column)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L844'>off_t</a>             844 src/editor/editdraw.c     off_t b = edit_buffer_get_bol (&amp;edit-&gt;buffer, curs);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L856'>off_t</a>             856 src/editor/editdraw.c     static off_t prev_curs = 0;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.h.html#L45'>off_t</a>              45 src/editor/editwidget.h     off_t end;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.h.html#L95'>off_t</a>              95 src/editor/editwidget.h     off_t search_start;         /* First character to start searching from */</span>
+<span class='curline'><a href='../S/src--editor--editwidget.h.html#L97'>off_t</a>              97 src/editor/editwidget.h     off_t found_start;          /* the found word from a search - start position */</span>
+<span class='curline'><a href='../S/src--editor--editwidget.h.html#L120'>off_t</a>             120 src/editor/editwidget.h     off_t mark1;                /* position of highlight start */</span>
+<span class='curline'><a href='../S/src--editor--editwidget.h.html#L121'>off_t</a>             121 src/editor/editwidget.h     off_t mark2;                /* position of highlight end */</span>
+<span class='curline'><a href='../S/src--editor--editwidget.h.html#L122'>off_t</a>             122 src/editor/editwidget.h     off_t end_mark_curs;        /* position of cursor after end of highlighting */</span>
+<span class='curline'><a href='../S/src--editor--editwidget.h.html#L125'>off_t</a>             125 src/editor/editwidget.h     off_t bracket;              /* position of a matching bracket */</span>
+<span class='curline'><a href='../S/src--editor--editwidget.h.html#L126'>off_t</a>             126 src/editor/editwidget.h     off_t last_bracket;         /* previous position of a matching bracket */</span>
+<span class='curline'><a href='../S/src--editor--editwidget.h.html#L131'>off_t</a>             131 src/editor/editwidget.h     off_t line_offsets[N_LINE_CACHES];</span>
+<span class='curline'><a href='../S/src--editor--editwidget.h.html#L157'>off_t</a>             157 src/editor/editwidget.h     off_t last_get_rule;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L74'>off_t</a>              74 src/editor/format.c static off_t</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L77'>off_t</a>              77 src/editor/format.c     off_t p;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L97'>off_t</a>              97 src/editor/format.c bad_line_start (const edit_buffer_t * buf, off_t p)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L124'>off_t</a>             124 src/editor/format.c static off_t</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L149'>off_t</a>             149 src/editor/format.c static off_t</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L172'>off_t</a>             172 src/editor/format.c get_paragraph (const edit_buffer_t * buf, off_t p, off_t q, gboolean indent)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L195'>off_t</a>             195 src/editor/format.c strip_newlines (unsigned char *t, off_t size)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L209'>off_t</a>             209 src/editor/format.c static inline off_t</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L210'>off_t</a>             210 src/editor/format.c next_tab_pos (off_t x)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L218'>off_t</a>             218 src/editor/format.c static inline off_t</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L219'>off_t</a>             219 src/editor/format.c line_pixel_length (unsigned char *t, off_t b, off_t l, gboolean utf8)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L221'>off_t</a>             221 src/editor/format.c     off_t xn, x;                /* position conters */</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L222'>off_t</a>             222 src/editor/format.c     off_t char_length;          /* character length in bytes */</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L273'>off_t</a>             273 src/editor/format.c static off_t</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L274'>off_t</a>             274 src/editor/format.c next_word_start (unsigned char *t, off_t q, off_t size)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L276'>off_t</a>             276 src/editor/format.c     off_t i;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L302'>off_t</a>             302 src/editor/format.c word_start (unsigned char *t, off_t q, off_t size)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L304'>off_t</a>             304 src/editor/format.c     off_t i;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L327'>off_t</a>             327 src/editor/format.c format_this (unsigned char *t, off_t size, long indent, gboolean utf8)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L329'>off_t</a>             329 src/editor/format.c     off_t q = 0, ww;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L338'>off_t</a>             338 src/editor/format.c         off_t p;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L362'>off_t</a>             362 src/editor/format.c replace_at (WEdit * edit, off_t q, int c)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L372'>off_t</a>             372 src/editor/format.c edit_indent_width (const WEdit * edit, off_t p)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L374'>off_t</a>             374 src/editor/format.c     off_t q = p;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L404'>off_t</a>             404 src/editor/format.c put_paragraph (WEdit * edit, unsigned char *t, off_t p, long indent, off_t size)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L406'>off_t</a>             406 src/editor/format.c     off_t cursor;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L407'>off_t</a>             407 src/editor/format.c     off_t i;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L425'>off_t</a>             425 src/editor/format.c                 off_t curs;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L456'>off_t</a>             456 src/editor/format.c test_indent (const WEdit * edit, off_t p, off_t q)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L478'>off_t</a>             478 src/editor/format.c     off_t p, q;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L480'>off_t</a>             480 src/editor/format.c     off_t size;</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L500'>off_t</a>             500 src/editor/format.c         off_t i;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L132'>off_t</a>             132 src/editor/syntax.c     off_t offset;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L253'>off_t</a>             253 src/editor/syntax.c static off_t</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L254'>off_t</a>             254 src/editor/syntax.c compare_word_to_right (const WEdit * edit, off_t i, const char *text,</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L376'>off_t</a>             376 src/editor/syntax.c apply_rules_going_right (WEdit * edit, off_t i)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L384'>off_t</a>             384 src/editor/syntax.c     off_t end = 0;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L408'>off_t</a>             408 src/editor/syntax.c         off_t e;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L451'>off_t</a>             451 src/editor/syntax.c                 off_t e;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L493'>off_t</a>             493 src/editor/syntax.c                         off_t e;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L518'>off_t</a>             518 src/editor/syntax.c                     off_t e;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L552'>off_t</a>             552 src/editor/syntax.c             off_t e;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L573'>off_t</a>             573 src/editor/syntax.c edit_get_rule (WEdit * edit, off_t byte_index)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L575'>off_t</a>             575 src/editor/syntax.c     off_t i;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L581'>off_t</a>             581 src/editor/syntax.c             off_t d = SYNTAX_MARKER_DENSITY;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1418'>off_t</a>            1418 src/editor/syntax.c edit_get_syntax_color (WEdit * edit, off_t byte_index)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L207'>off_t</a>             207 src/filemanager/cmd.c compare_files (const vfs_path_t * vpath1, const vfs_path_t * vpath2, off_t size)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L542'>off_t</a>             542 src/filemanager/cmd.c                    long start_line, off_t search_start, off_t search_end)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1466'>off_t</a>            1466 src/filemanager/cmd.c             entry-&gt;st.st_size = (off_t) total;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L1516'>off_t</a>            1516 src/filemanager/cmd.c             panel-&gt;dir.list[i].st.st_size = (off_t) total;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.h.html#L47'>off_t</a>              47 src/filemanager/cmd.h                             gboolean internal, long start_line, off_t search_start,</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.h.html#L48'>off_t</a>              48 src/filemanager/cmd.h                             off_t search_end);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L601'>off_t</a>             601 src/filemanager/file.c progress_update_one (file_op_total_context_t * tctx, file_op_context_t * ctx, off_t add)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L864'>off_t</a>             864 src/filemanager/file.c                                  off_t file_size, off_t n_read_total)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1495'>off_t</a>            1495 src/filemanager/file.c     off_t file_size = -1;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1792'>off_t</a>            1792 src/filemanager/file.c         off_t n_read_total = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L883'>off_t</a>             883 src/filemanager/filegui.c file_progress_show (file_op_context_t * ctx, off_t done, off_t total,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.h.html#L32'>off_t</a>              32 src/filemanager/filegui.h void file_progress_show (file_op_context_t * ctx, off_t done, off_t total,</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.h.html#L107'>off_t</a>             107 src/filemanager/fileopctx.h     off_t do_reget;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L165'>off_t</a>             165 src/filemanager/find.c static off_t last_off;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1039'>off_t</a>            1039 src/filemanager/find.c         off_t off = 0;          /* file_fd's offset corresponding to strbuf[0] */</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1420'>off_t</a>            1420 src/filemanager/find.c find_do_view_edit (gboolean unparsed_view, gboolean edit, char *dir, char *file, off_t search_start,</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1421'>off_t</a>            1421 src/filemanager/find.c                    off_t search_end)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1562'>off_t</a>            1562 src/filemanager/mountlist.c         lseek (fd, (off_t) SUPERBOFF, 0);</span>
+<span class='curline'><a href='../S/src--textconf.c.html#L163'>off_t</a>             163 src/textconf.c     TYPE_INFO (off_t);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L148'>off_t</a>             148 src/vfs/cpio/cpio.c static off_t cpio_position;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L822'>off_t</a>             822 src/vfs/cpio/cpio.c     off_t begin = FH-&gt;ino-&gt;data_offset;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L90'>off_t</a>              90 src/vfs/extfs/extfs.c     off_t size;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1377'>off_t</a>            1377 src/vfs/extfs/extfs.c static off_t</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1378'>off_t</a>            1378 src/vfs/extfs/extfs.c extfs_lseek (void *data, off_t offset, int whence)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L149'>off_t</a>             149 src/vfs/fish/fish.c     off_t got;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L150'>off_t</a>             150 src/vfs/fish/fish.c     off_t total;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L786'>off_t</a>             786 src/vfs/fish/fish.c             ST.st_size = (off_t) g_ascii_strtoll (buffer + 1, NULL, 10);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L861'>off_t</a>             861 src/vfs/fish/fish.c     off_t total = 0;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L982'>off_t</a>             982 src/vfs/fish/fish.c fish_linear_start (struct vfs_class *me, vfs_file_handler_t * fh, off_t offset)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1021'>off_t</a>            1021 src/vfs/fish/fish.c     fish-&gt;total = (off_t) strtol (reply_str, NULL, 10);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1023'>off_t</a>            1023 src/vfs/fish/fish.c     fish-&gt;total = (off_t) g_ascii_strtoll (reply_str, NULL, 10);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1044'>off_t</a>            1044 src/vfs/fish/fish.c         n = MIN ((off_t) sizeof (buffer), (fish-&gt;total - fish-&gt;got));</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1804'>off_t</a>            1804 src/vfs/ftpfs/ftpfs.c     off_t n_stored;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1894'>off_t</a>            1894 src/vfs/ftpfs/ftpfs.c ftpfs_linear_start (struct vfs_class *me, vfs_file_handler_t * fh, off_t offset)</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L405'>off_t</a>             405 src/vfs/local/local.c off_t</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L406'>off_t</a>             406 src/vfs/local/local.c local_lseek (void *data, off_t offset, int whence)</span>
+<span class='curline'><a href='../S/src--vfs--local--local.h.html#L29'>off_t</a>              29 src/vfs/local/local.h extern off_t local_lseek (void *data, off_t offset, int whence);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L276'>off_t</a>             276 src/vfs/sftpfs/file.c     file_handler-&gt;pos = (off_t) libssh2_sftp_tell64 (file_handler_data-&gt;handle);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L307'>off_t</a>             307 src/vfs/sftpfs/file.c     file_handler-&gt;pos = (off_t) libssh2_sftp_tell64 (file_handler_data-&gt;handle);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L370'>off_t</a>             370 src/vfs/sftpfs/file.c off_t</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L371'>off_t</a>             371 src/vfs/sftpfs/file.c sftpfs_lseek (vfs_file_handler_t * file_handler, off_t offset, int whence, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L409'>off_t</a>             409 src/vfs/sftpfs/file.c     file_handler-&gt;pos = (off_t) libssh2_sftp_tell64 (file_handler_data-&gt;handle);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L101'>off_t</a>             101 src/vfs/sftpfs/internal.h off_t sftpfs_lseek (vfs_file_handler_t * file_handler, off_t offset, int whence, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L572'>off_t</a>             572 src/vfs/sftpfs/vfs_class.c static off_t</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L573'>off_t</a>             573 src/vfs/sftpfs/vfs_class.c sftpfs_cb_lseek (void *data, off_t offset, int whence)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L575'>off_t</a>             575 src/vfs/sftpfs/vfs_class.c     off_t ret_offset;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--includes.h.html#L353'>off_t</a>             353 src/vfs/smbfs/helpers/include/includes.h #define SMB_OFF_T off_t</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L274'>off_t</a>             274 src/vfs/smbfs/helpers/include/proto.h size_t cli_read (struct cli_state *cli, int fnum, char *buf, off_t offset, size_t size);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L276'>off_t</a>             276 src/vfs/smbfs/helpers/include/proto.h                    int fnum, uint16 write_mode, const char *buf, off_t offset, size_t size);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L277'>off_t</a>             277 src/vfs/smbfs/helpers/include/proto.h ssize_t cli_smbwrite (struct cli_state *cli, int fnum, const char *buf, off_t offset, size_t size);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1402'>off_t</a>            1402 src/vfs/smbfs/helpers/libsmb/clientgen.c cli_issue_read (struct cli_state *cli, int fnum, off_t offset, size_t size, int i)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1427'>off_t</a>            1427 src/vfs/smbfs/helpers/libsmb/clientgen.c cli_read (struct cli_state *cli, int fnum, char *buf, off_t offset, size_t size)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1506'>off_t</a>            1506 src/vfs/smbfs/helpers/libsmb/clientgen.c cli_issue_write (struct cli_state *cli, int fnum, off_t offset, uint16 mode, const char *buf,</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1549'>off_t</a>            1549 src/vfs/smbfs/helpers/libsmb/clientgen.c            int fnum, uint16 write_mode, const char *buf, off_t offset, size_t size)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1598'>off_t</a>            1598 src/vfs/smbfs/helpers/libsmb/clientgen.c cli_smbwrite (struct cli_state * cli, int fnum, const char *buf, off_t offset, size_t size)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L101'>off_t</a>             101 src/vfs/smbfs/smbfs.c     off_t nread;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1834'>off_t</a>            1834 src/vfs/smbfs/smbfs.c static off_t</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1835'>off_t</a>            1835 src/vfs/smbfs/smbfs.c smbfs_lseek (void *data, off_t offset, int whence)</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L227'>off_t</a>             227 src/vfs/tar/tar.c static off_t current_tar_position = 0;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L567'>off_t</a>             567 src/vfs/tar/tar.c         off_t size;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L594'>off_t</a>             594 src/vfs/tar/tar.c             if ((off_t) written &gt; size)</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L615'>off_t</a>             615 src/vfs/tar/tar.c         off_t data_position;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L868'>off_t</a>             868 src/vfs/tar/tar.c     off_t begin = FH-&gt;ino-&gt;data_offset;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L108'>off_t</a>             108 src/vfs/undelfs/undelfs.c     off_t pos;                  /* file position */</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L109'>off_t</a>             109 src/vfs/undelfs/undelfs.c     off_t current;              /* used to determine current position in itereate */</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L113'>off_t</a>             113 src/vfs/undelfs/undelfs.c     off_t size;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L525'>off_t</a>             525 src/vfs/undelfs/undelfs.c     if (p-&gt;pos + (off_t) p-&gt;count &lt; p-&gt;current)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L541'>off_t</a>             541 src/vfs/undelfs/undelfs.c         if (p-&gt;pos + (off_t) p-&gt;count &lt;= p-&gt;current + param_fs-&gt;blocksize)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L557'>off_t</a>             557 src/vfs/undelfs/undelfs.c         if (p-&gt;pos + (off_t) p-&gt;count &lt; p-&gt;current + param_fs-&gt;blocksize)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L590'>off_t</a>             590 src/vfs/undelfs/undelfs.c     if (p-&gt;pos + (off_t) p-&gt;count &gt; p-&gt;size)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L730'>off_t</a>             730 src/vfs/undelfs/undelfs.c static off_t</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L731'>off_t</a>             731 src/vfs/undelfs/undelfs.c undelfs_lseek (void *vfs_info, off_t offset, int whence)</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L102'>off_t</a>             102 src/viewer/actions_cmd.c     off_t want_search_start = view-&gt;search_start;</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L411'>off_t</a>             411 src/viewer/actions_cmd.c             off_t addr;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L578'>off_t</a>             578 src/viewer/ascii.c                      gboolean * paragraph_ended, off_t * linewidth)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L584'>off_t</a>             584 src/viewer/ascii.c     off_t dpy_text_column = view-&gt;text_wrap_mode ? 0 : view-&gt;dpy_text_column;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L597'>off_t</a>             597 src/viewer/ascii.c         off_t eol;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L662'>off_t</a>             662 src/viewer/ascii.c         if (view-&gt;text_wrap_mode &amp;&amp; (off_t) col + charwidth &gt; dpy_text_column + (off_t) width</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L676'>off_t</a>             676 src/viewer/ascii.c             if ((off_t) col &gt;= dpy_text_column &amp;&amp;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L677'>off_t</a>             677 src/viewer/ascii.c                 (off_t) col + charwidth &lt;= dpy_text_column + (off_t) width)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L681'>off_t</a>             681 src/viewer/ascii.c                 widget_move (view, top + row, left + ((off_t) col - dpy_text_column));</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L700'>off_t</a>             700 src/viewer/ascii.c             else if ((off_t) col &lt; dpy_text_column &amp;&amp; (off_t) col + charwidth &gt; dpy_text_column)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L707'>off_t</a>             707 src/viewer/ascii.c                      i &lt; (off_t) col + charwidth &amp;&amp; i &lt; dpy_text_column + (off_t) width; i++)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L713'>off_t</a>             713 src/viewer/ascii.c             else if ((off_t) col &lt; dpy_text_column + (off_t) width &amp;&amp;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L714'>off_t</a>             714 src/viewer/ascii.c                      (off_t) col + charwidth &gt; dpy_text_column + (off_t) width)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L720'>off_t</a>             720 src/viewer/ascii.c                 for (i = col; i &lt; dpy_text_column + (off_t) width; i++)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L731'>off_t</a>             731 src/viewer/ascii.c         if (!view-&gt;text_wrap_mode &amp;&amp; (off_t) col &gt;= dpy_text_column + (off_t) width</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L736'>off_t</a>             736 src/viewer/ascii.c             off_t eol;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L927'>off_t</a>             927 src/viewer/ascii.c mcview_ascii_move_down (WView * view, off_t lines)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L976'>off_t</a>             976 src/viewer/ascii.c mcview_ascii_move_up (WView * view, off_t lines)</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L1040'>off_t</a>            1040 src/viewer/ascii.c         off_t linewidth;</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L1045'>off_t</a>            1045 src/viewer/ascii.c         view-&gt;dpy_text_column = mcview_offset_doz (linewidth, (off_t) view-&gt;data_area.width);</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L1052'>off_t</a>            1052 src/viewer/ascii.c mcview_state_machine_init (mcview_state_machine_t * state, off_t offset)</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L214'>off_t</a>             214 src/viewer/coord_cache.c     off_t offset, line, column, nextline_offset, filesize;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L291'>off_t</a>             291 src/viewer/coord_cache.c     off_t limit;</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L102'>off_t</a>             102 src/viewer/datasource.c off_t</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L140'>off_t</a>             140 src/viewer/datasource.c mcview_get_ptr_file (WView * view, off_t byte_index)</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L155'>off_t</a>             155 src/viewer/datasource.c mcview_get_utf (WView * view, off_t byte_index, int *ch, int *ch_len)</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L226'>off_t</a>             226 src/viewer/datasource.c mcview_get_ptr_string (WView * view, off_t byte_index)</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L231'>off_t</a>             231 src/viewer/datasource.c     if (byte_index &gt;= 0 &amp;&amp; byte_index &lt; (off_t) view-&gt;ds_string_len)</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L239'>off_t</a>             239 src/viewer/datasource.c mcview_get_byte_string (WView * view, off_t byte_index, int *retval)</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L258'>off_t</a>             258 src/viewer/datasource.c mcview_get_byte_none (WView * view, off_t byte_index, int *retval)</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L275'>off_t</a>             275 src/viewer/datasource.c mcview_set_byte (WView * view, off_t offset, byte b)</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L292'>off_t</a>             292 src/viewer/datasource.c mcview_file_load_data (WView * view, off_t byte_index)</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L294'>off_t</a>             294 src/viewer/datasource.c     off_t blockoffset;</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L325'>off_t</a>             325 src/viewer/datasource.c     if ((off_t) bytes_read &gt; view-&gt;ds_file_filesize - view-&gt;ds_file_offset)</span>
+<span class='curline'><a href='../S/src--viewer--dialogs.c.html#L168'>off_t</a>             168 src/viewer/dialogs.c mcview_dialog_goto (WView * view, off_t * offset)</span>
+<span class='curline'><a href='../S/src--viewer--dialogs.c.html#L232'>off_t</a>             232 src/viewer/dialogs.c         off_t addr;</span>
+<span class='curline'><a href='../S/src--viewer--dialogs.c.html#L235'>off_t</a>             235 src/viewer/dialogs.c         addr = (off_t) g_ascii_strtoll (exp, &amp;error, base);</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L129'>off_t</a>             129 src/viewer/display.c mcview_display_percent (WView * view, off_t p)</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L384'>off_t</a>             384 src/viewer/display.c     off_t cl;</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L111'>off_t</a>             111 src/viewer/growbuf.c off_t</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L121'>off_t</a>             121 src/viewer/growbuf.c         return ((off_t) view-&gt;growbuf_blockptr-&gt;len - 1) * VIEW_PAGE_SIZE + view-&gt;growbuf_lastindex;</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L131'>off_t</a>             131 src/viewer/growbuf.c mcview_growbuf_read_until (WView * view, off_t ofs)</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L252'>off_t</a>             252 src/viewer/growbuf.c mcview_get_byte_growing_buffer (WView * view, off_t byte_index, int *retval)</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L279'>off_t</a>             279 src/viewer/growbuf.c mcview_get_ptr_growing_buffer (WView * view, off_t byte_index)</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L281'>off_t</a>             281 src/viewer/growbuf.c     off_t pageno, pageindex;</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L296'>off_t</a>             296 src/viewer/growbuf.c     if (pageno &lt; (off_t) view-&gt;growbuf_blockptr-&gt;len - 1)</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L298'>off_t</a>             298 src/viewer/growbuf.c     if (pageno == (off_t) view-&gt;growbuf_blockptr-&gt;len - 1</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L299'>off_t</a>             299 src/viewer/growbuf.c         &amp;&amp; pageindex &lt; (off_t) view-&gt;growbuf_lastindex)</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L84'>off_t</a>              84 src/viewer/hex.c mcview_hex_calculate_boldflag (WView * view, off_t from, struct hexedit_change_node *curr,</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L114'>off_t</a>             114 src/viewer/hex.c     off_t from;</span>
+<span class='curline'><a href='../S/src--viewer--inlines.h.html#L21'>off_t</a>              21 src/viewer/inlines.h static inline off_t</span>
+<span class='curline'><a href='../S/src--viewer--inlines.h.html#L22'>off_t</a>              22 src/viewer/inlines.h mcview_offset_doz (off_t a, off_t b)</span>
+<span class='curline'><a href='../S/src--viewer--inlines.h.html#L29'>off_t</a>              29 src/viewer/inlines.h static inline off_t</span>
+<span class='curline'><a href='../S/src--viewer--inlines.h.html#L30'>off_t</a>              30 src/viewer/inlines.h mcview_offset_rounddown (off_t a, off_t b)</span>
+<span class='curline'><a href='../S/src--viewer--inlines.h.html#L70'>off_t</a>              70 src/viewer/inlines.h mcview_already_loaded (off_t offset, off_t idx, size_t size)</span>
+<span class='curline'><a href='../S/src--viewer--inlines.h.html#L72'>off_t</a>              72 src/viewer/inlines.h     return (offset &lt;= idx &amp;&amp; idx - offset &lt; (off_t) size);</span>
+<span class='curline'><a href='../S/src--viewer--inlines.h.html#L78'>off_t</a>              78 src/viewer/inlines.h mcview_get_byte_file (WView * view, off_t byte_index, int *retval)</span>
+<span class='curline'><a href='../S/src--viewer--inlines.h.html#L99'>off_t</a>              99 src/viewer/inlines.h mcview_get_byte (WView * view, off_t offset, int *retval)</span>
+<span class='curline'><a href='../S/src--viewer--inlines.h.html#L123'>off_t</a>             123 src/viewer/inlines.h mcview_get_byte_indexed (WView * view, off_t base, off_t ofs, int *retval)</span>
+<span class='curline'><a href='../S/src--viewer--inlines.h.html#L137'>off_t</a>             137 src/viewer/inlines.h mcview_count_backspaces (WView * view, off_t offset)</span>
+<span class='curline'><a href='../S/src--viewer--inlines.h.html#L150'>off_t</a>             150 src/viewer/inlines.h mcview_is_nroff_sequence (WView * view, off_t offset)</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L26'>off_t</a>              26 src/viewer/internal.h extern const off_t OFFSETTYPE_MAX;</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L59'>off_t</a>              59 src/viewer/internal.h     off_t offset;</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L76'>off_t</a>              76 src/viewer/internal.h     off_t cc_offset;</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L77'>off_t</a>              77 src/viewer/internal.h     off_t cc_line;</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L78'>off_t</a>              78 src/viewer/internal.h     off_t cc_column;</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L79'>off_t</a>              79 src/viewer/internal.h     off_t cc_nroff_column;</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L94'>off_t</a>              94 src/viewer/internal.h     off_t offset;               /* The file offset at which this is the state. */</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L95'>off_t</a>              95 src/viewer/internal.h     off_t unwrapped_column;     /* Columns if the paragraph wasn't wrapped, */</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L122'>off_t</a>             122 src/viewer/internal.h     off_t ds_file_filesize;     /* Size of the file */</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L123'>off_t</a>             123 src/viewer/internal.h     off_t ds_file_offset;       /* Offset of the currently loaded data */</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L158'>off_t</a>             158 src/viewer/internal.h     off_t dpy_start;            /* Offset of the displayed data (start of the paragraph in non-hex mode) */</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L159'>off_t</a>             159 src/viewer/internal.h     off_t dpy_end;              /* Offset after the displayed data */</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L160'>off_t</a>             160 src/viewer/internal.h     off_t dpy_paragraph_skip_lines;     /* Extra lines to skip in wrap mode */</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L164'>off_t</a>             164 src/viewer/internal.h     off_t dpy_text_column;      /* Number of skipped columns in non-wrap</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L166'>off_t</a>             166 src/viewer/internal.h     off_t hex_cursor;           /* Hexview cursor position in file */</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L183'>off_t</a>             183 src/viewer/internal.h     off_t search_start;         /* First character to start searching from */</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L184'>off_t</a>             184 src/viewer/internal.h     off_t search_end;           /* Length of found string or 0 if none was found */</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L188'>off_t</a>             188 src/viewer/internal.h     off_t marks[10];            /* 10 marks: 0..9 */</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L190'>off_t</a>             190 src/viewer/internal.h     off_t update_steps;         /* The number of bytes between percent</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L192'>off_t</a>             192 src/viewer/internal.h     off_t update_activate;      /* Last point where we updated the status */</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L216'>off_t</a>             216 src/viewer/internal.h     off_t index;</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L245'>off_t</a>             245 src/viewer/internal.h void mcview_state_machine_init (mcview_state_machine_t *, off_t);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L246'>off_t</a>             246 src/viewer/internal.h void mcview_ascii_move_down (WView *, off_t);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L247'>off_t</a>             247 src/viewer/internal.h void mcview_ascii_move_up (WView *, off_t);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L263'>off_t</a>             263 src/viewer/internal.h off_t mcview_get_filesize (WView *);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L265'>off_t</a>             265 src/viewer/internal.h char *mcview_get_ptr_file (WView *, off_t);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L266'>off_t</a>             266 src/viewer/internal.h char *mcview_get_ptr_string (WView *, off_t);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L267'>off_t</a>             267 src/viewer/internal.h gboolean mcview_get_utf (WView * view, off_t byte_index, int *ch, int *ch_len);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L268'>off_t</a>             268 src/viewer/internal.h gboolean mcview_get_byte_string (WView *, off_t, int *);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L269'>off_t</a>             269 src/viewer/internal.h gboolean mcview_get_byte_none (WView *, off_t, int *);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L270'>off_t</a>             270 src/viewer/internal.h void mcview_set_byte (WView *, off_t, byte);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L271'>off_t</a>             271 src/viewer/internal.h void mcview_file_load_data (WView *, off_t);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L280'>off_t</a>             280 src/viewer/internal.h gboolean mcview_dialog_goto (WView * view, off_t * offset);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L295'>off_t</a>             295 src/viewer/internal.h off_t mcview_growbuf_filesize (WView * view);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L296'>off_t</a>             296 src/viewer/internal.h void mcview_growbuf_read_until (WView * view, off_t p);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L297'>off_t</a>             297 src/viewer/internal.h gboolean mcview_get_byte_growing_buffer (WView * view, off_t p, int *);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L298'>off_t</a>             298 src/viewer/internal.h char *mcview_get_ptr_growing_buffer (WView * view, off_t p);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L317'>off_t</a>             317 src/viewer/internal.h off_t mcview_bol (WView * view, off_t current, off_t limit);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L318'>off_t</a>             318 src/viewer/internal.h off_t mcview_eol (WView * view, off_t current, off_t limit);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L320'>off_t</a>             320 src/viewer/internal.h int mcview_calc_percent (WView * view, off_t p);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L323'>off_t</a>             323 src/viewer/internal.h void mcview_move_up (WView *, off_t);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L324'>off_t</a>             324 src/viewer/internal.h void mcview_move_down (WView *, off_t);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L325'>off_t</a>             325 src/viewer/internal.h void mcview_move_left (WView *, off_t);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L326'>off_t</a>             326 src/viewer/internal.h void mcview_move_right (WView *, off_t);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L331'>off_t</a>             331 src/viewer/internal.h void mcview_moveto_offset (WView *, off_t);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L332'>off_t</a>             332 src/viewer/internal.h void mcview_moveto (WView *, off_t, off_t);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L333'>off_t</a>             333 src/viewer/internal.h void mcview_coord_to_offset (WView *, off_t *, off_t, off_t);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L334'>off_t</a>             334 src/viewer/internal.h void mcview_offset_to_coord (WView *, off_t *, off_t *, off_t);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L339'>off_t</a>             339 src/viewer/internal.h int mcview__get_nroff_real_len (WView * view, off_t, off_t p);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L340'>off_t</a>             340 src/viewer/internal.h mcview_nroff_t *mcview_nroff_seq_new_num (WView * view, off_t p);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L351'>off_t</a>             351 src/viewer/internal.h void mcview_do_search (WView * view, off_t want_search_start);</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L58'>off_t</a>              58 src/viewer/lib.c #define OFF_T_BITWIDTH (unsigned int) (sizeof (off_t) * CHAR_BIT - 1)</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L59'>off_t</a>              59 src/viewer/lib.c const off_t OFFSETTYPE_MAX = ((off_t) 1 &lt;&lt; (OFF_T_BITWIDTH - 1)) - 1;</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L323'>off_t</a>             323 src/viewer/lib.c off_t</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L324'>off_t</a>             324 src/viewer/lib.c mcview_bol (WView * view, off_t current, off_t limit)</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L327'>off_t</a>             327 src/viewer/lib.c     off_t filesize;</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L358'>off_t</a>             358 src/viewer/lib.c off_t</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L359'>off_t</a>             359 src/viewer/lib.c mcview_eol (WView * view, off_t current, off_t limit)</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L362'>off_t</a>             362 src/viewer/lib.c     off_t filesize;</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L412'>off_t</a>             412 src/viewer/lib.c mcview_calc_percent (WView * view, off_t p)</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L416'>off_t</a>             416 src/viewer/lib.c     off_t filesize;</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L228'>off_t</a>             228 src/viewer/mcviewer.c                off_t search_start, off_t search_end)</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L267'>off_t</a>             267 src/viewer/mcviewer.c              off_t search_start, off_t search_end)</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L421'>off_t</a>             421 src/viewer/mcviewer.c         off_t new_offset, max_offset;</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.h.html#L47'>off_t</a>              47 src/viewer/mcviewer.h                                off_t search_start, off_t search_end);</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.h.html#L50'>off_t</a>              50 src/viewer/mcviewer.h                              off_t search_start, off_t search_end);</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L75'>off_t</a>              75 src/viewer/move.c         off_t bytes = view-&gt;bytes_per_line;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L76'>off_t</a>              76 src/viewer/move.c         off_t cursor = view-&gt;hex_cursor;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L77'>off_t</a>              77 src/viewer/move.c         off_t topleft = view-&gt;dpy_start;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L78'>off_t</a>              78 src/viewer/move.c         off_t displaysize;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L110'>off_t</a>             110 src/viewer/move.c mcview_move_up (WView * view, off_t lines)</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L114'>off_t</a>             114 src/viewer/move.c         off_t bytes = lines * view-&gt;bytes_per_line;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L140'>off_t</a>             140 src/viewer/move.c mcview_move_down (WView * view, off_t lines)</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L142'>off_t</a>             142 src/viewer/move.c     off_t last_byte;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L146'>off_t</a>             146 src/viewer/move.c         off_t i, limit;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L148'>off_t</a>             148 src/viewer/move.c         limit = mcview_offset_doz (last_byte, (off_t) view-&gt;bytes_per_line);</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L171'>off_t</a>             171 src/viewer/move.c mcview_move_left (WView * view, off_t columns)</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L175'>off_t</a>             175 src/viewer/move.c         off_t old_cursor = view-&gt;hex_cursor;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L196'>off_t</a>             196 src/viewer/move.c mcview_move_right (WView * view, off_t columns)</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L200'>off_t</a>             200 src/viewer/move.c         off_t last_byte;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L201'>off_t</a>             201 src/viewer/move.c         off_t old_cursor = view-&gt;hex_cursor;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L241'>off_t</a>             241 src/viewer/move.c     off_t filesize;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L257'>off_t</a>             257 src/viewer/move.c         const off_t datalines = view-&gt;data_area.height;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L288'>off_t</a>             288 src/viewer/move.c     off_t bol;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L291'>off_t</a>             291 src/viewer/move.c         off_t filesize;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L314'>off_t</a>             314 src/viewer/move.c mcview_moveto_offset (WView * view, off_t offset)</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L335'>off_t</a>             335 src/viewer/move.c mcview_moveto (WView * view, off_t line, off_t col)</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L337'>off_t</a>             337 src/viewer/move.c     off_t offset;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L346'>off_t</a>             346 src/viewer/move.c mcview_coord_to_offset (WView * view, off_t * ret_offset, off_t line, off_t column)</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L360'>off_t</a>             360 src/viewer/move.c mcview_offset_to_coord (WView * view, off_t * ret_line, off_t * ret_column, off_t offset)</span>
+<span class='curline'><a href='../S/src--viewer--nroff.c.html#L61'>off_t</a>              61 src/viewer/nroff.c mcview_nroff_get_char (mcview_nroff_t * nroff, int *ret_val, off_t nroff_index)</span>
+<span class='curline'><a href='../S/src--viewer--nroff.c.html#L94'>off_t</a>              94 src/viewer/nroff.c mcview__get_nroff_real_len (WView * view, off_t start, off_t length)</span>
+<span class='curline'><a href='../S/src--viewer--nroff.c.html#L98'>off_t</a>              98 src/viewer/nroff.c     off_t i = 0;</span>
+<span class='curline'><a href='../S/src--viewer--nroff.c.html#L130'>off_t</a>             130 src/viewer/nroff.c mcview_nroff_seq_new_num (WView * view, off_t lc_index)</span>
+<span class='curline'><a href='../S/src--viewer--nroff.c.html#L149'>off_t</a>             149 src/viewer/nroff.c     return mcview_nroff_seq_new_num (view, (off_t) 0);</span>
+<span class='curline'><a href='../S/src--viewer--nroff.c.html#L239'>off_t</a>             239 src/viewer/nroff.c     off_t prev_index, prev_index2;</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L58'>off_t</a>              58 src/viewer/search.c     off_t offset;</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L106'>off_t</a>             106 src/viewer/search.c     off_t filesize;</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L127'>off_t</a>             127 src/viewer/search.c mcview_find (mcview_search_status_msg_t * ssm, off_t search_start, off_t search_end, gsize * len)</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L144'>off_t</a>             144 src/viewer/search.c             if (search_end &gt; search_start + (off_t) view-&gt;search-&gt;original_len</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L264'>off_t</a>             264 src/viewer/search.c     vsm-&gt;offset = (off_t) char_offset;</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L296'>off_t</a>             296 src/viewer/search.c mcview_do_search (WView * view, off_t want_search_start)</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L300'>off_t</a>             300 src/viewer/search.c     off_t search_start = 0;</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L301'>off_t</a>             301 src/viewer/search.c     off_t orig_search_start = view-&gt;search_start;</span>
+<span class='curline'><a href='../S/src--viewer--search.c.html#L354'>off_t</a>             354 src/viewer/search.c         off_t growbufsize;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_path_string_convert.c.html#L213'>off_t</a>             213 tests/lib/vfs/vfs_path_string_convert.c     const off_t element_index;</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L62'>off_t</a>              62 tests/src/editor/editcmd__edit_complete_word_cmd.c edit_get_syntax_color (WEdit * _edit, off_t _byte_index)</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L193'>off_t</a>             193 tests/src/editor/editcmd__edit_complete_word_cmd.c     off_t input_position;</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L263'>off_t</a>             263 tests/src/editor/editcmd__edit_complete_word_cmd.c         off_t i = 0;</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L293'>off_t</a>             293 tests/src/editor/editcmd__edit_complete_word_cmd.c     off_t input_position;</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L337'>off_t</a>             337 tests/src/editor/editcmd__edit_complete_word_cmd.c         off_t i = 0;</span>
+</pre>
+</body>
+</html>

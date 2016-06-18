@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>cwd</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3211'>cwd</a>              3211 src/filemanager/panel.c     const char *p, *cwd, *lwd;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3219'>cwd</a>              3219 src/filemanager/panel.c     cwd = vfs_path_as_str (cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3229'>cwd</a>              3229 src/filemanager/panel.c             &amp;&amp; (strncmp (cwd, lwd, (size_t) (p - lwd)) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3230'>cwd</a>              3230 src/filemanager/panel.c             &amp;&amp; (clen == (size_t) (p - lwd) || (p == lwd &amp;&amp; IS_PATH_SEP (cwd[0]) &amp;&amp; cwd[1] == '\0')))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3674'>cwd</a>              3674 src/filemanager/panel.c             char *cwd;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3676'>cwd</a>              3676 src/filemanager/panel.c             cwd = vfs_path_to_str_flags (panel-&gt;cwd_vpath, 0, VPF_STRIP_PASSWORD);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3678'>cwd</a>              3678 src/filemanager/panel.c                      cwd, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3679'>cwd</a>              3679 src/filemanager/panel.c             g_free (cwd);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L790'>cwd</a>               790 src/filemanager/usermenu.c             const char *cwd;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L794'>cwd</a>               794 src/filemanager/usermenu.c                 cwd = vfs_path_as_str (panel-&gt;cwd_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L796'>cwd</a>               796 src/filemanager/usermenu.c                 cwd = vfs_get_current_dir ();</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L798'>cwd</a>               798 src/filemanager/usermenu.c             qstr = quote_func (cwd, FALSE);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1342'>cwd</a>              1342 src/subshell/common.c             char *cwd;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1344'>cwd</a>              1344 src/subshell/common.c             cwd =</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1347'>cwd</a>              1347 src/subshell/common.c             vfs_print_message (_("Warning: Cannot change to %s.\n"), cwd);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1348'>cwd</a>              1348 src/subshell/common.c             g_free (cwd);</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>base</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--strutil.h.html#L560'>base</a>              560 lib/strutil.h  strtol_error_t xstrtoumax (const char *s, char **ptr, int base, uintmax_t * val,</span>
+<span class='curline'><a href='../S/lib--strutil--xstrtol.c.html#L67'>base</a>               67 lib/strutil/xstrtol.c bkm_scale_by_power (uintmax_t * x, int base, int power)</span>
+<span class='curline'><a href='../S/lib--strutil--xstrtol.c.html#L71'>base</a>               71 lib/strutil/xstrtol.c         err |= bkm_scale (x, base);</span>
+<span class='curline'><a href='../S/lib--strutil--xstrtol.c.html#L80'>base</a>               80 lib/strutil/xstrtol.c xstrtoumax (const char *s, char **ptr, int base, uintmax_t * val, const char *valid_suffixes)</span>
+<span class='curline'><a href='../S/lib--strutil--xstrtol.c.html#L88'>base</a>               88 lib/strutil/xstrtol.c     assert (0 &lt;= base &amp;&amp; base &lt;= 36);</span>
+<span class='curline'><a href='../S/lib--strutil--xstrtol.c.html#L105'>base</a>              105 lib/strutil/xstrtol.c     tmp = strtol (s, p, base);</span>
+<span class='curline'><a href='../S/lib--strutil--xstrtol.c.html#L143'>base</a>              143 lib/strutil/xstrtol.c         base = 1024;</span>
+<span class='curline'><a href='../S/lib--strutil--xstrtol.c.html#L177'>base</a>              177 lib/strutil/xstrtol.c                     base = 1000;</span>
+<span class='curline'><a href='../S/lib--strutil--xstrtol.c.html#L206'>base</a>              206 lib/strutil/xstrtol.c             overflow = bkm_scale_by_power (&amp;tmp, base, 6);</span>
+<span class='curline'><a href='../S/lib--strutil--xstrtol.c.html#L211'>base</a>              211 lib/strutil/xstrtol.c             overflow = bkm_scale_by_power (&amp;tmp, base, 3);</span>
+<span class='curline'><a href='../S/lib--strutil--xstrtol.c.html#L216'>base</a>              216 lib/strutil/xstrtol.c             overflow = bkm_scale_by_power (&amp;tmp, base, 1);</span>
+<span class='curline'><a href='../S/lib--strutil--xstrtol.c.html#L221'>base</a>              221 lib/strutil/xstrtol.c             overflow = bkm_scale_by_power (&amp;tmp, base, 2);</span>
+<span class='curline'><a href='../S/lib--strutil--xstrtol.c.html#L225'>base</a>              225 lib/strutil/xstrtol.c             overflow = bkm_scale_by_power (&amp;tmp, base, 5);</span>
+<span class='curline'><a href='../S/lib--strutil--xstrtol.c.html#L230'>base</a>              230 lib/strutil/xstrtol.c             overflow = bkm_scale_by_power (&amp;tmp, base, 4);</span>
+<span class='curline'><a href='../S/lib--strutil--xstrtol.c.html#L238'>base</a>              238 lib/strutil/xstrtol.c             overflow = bkm_scale_by_power (&amp;tmp, base, 8);</span>
+<span class='curline'><a href='../S/lib--strutil--xstrtol.c.html#L242'>base</a>              242 lib/strutil/xstrtol.c             overflow = bkm_scale_by_power (&amp;tmp, base, 7);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L641'>base</a>              641 lib/tty/key.c      key_def *base, *p, *attach;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L643'>base</a>              643 lib/tty/key.c      for (base = attach = NULL; *seq; seq++)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L646'>base</a>              646 lib/tty/key.c          if (base == NULL)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L647'>base</a>              647 lib/tty/key.c              base = p;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L660'>base</a>              660 lib/tty/key.c      return base;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1654'>base</a>             1654 lib/tty/key.c      key_def *base;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1659'>base</a>             1659 lib/tty/key.c      for (base = keys; (base != NULL) &amp;&amp; (*seq != '\0');)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1660'>base</a>             1660 lib/tty/key.c          if (*seq == base-&gt;ch)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1662'>base</a>             1662 lib/tty/key.c              if (base-&gt;child == 0)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1665'>base</a>             1665 lib/tty/key.c                      base-&gt;child = create_sequence (seq + 1, code, action);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1669'>base</a>             1669 lib/tty/key.c                      base-&gt;code = code;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1670'>base</a>             1670 lib/tty/key.c                      base-&gt;action = action;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1675'>base</a>             1675 lib/tty/key.c              base = base-&gt;child;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1680'>base</a>             1680 lib/tty/key.c              if (base-&gt;next)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1681'>base</a>             1681 lib/tty/key.c                  base = base-&gt;next;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1684'>base</a>             1684 lib/tty/key.c                  base-&gt;next = create_sequence (seq, code, action);</span>
+<span class='curline'><a href='../S/src--args.c.html#L733'>base</a>              733 src/args.c         const char *base;</span>
+<span class='curline'><a href='../S/src--args.c.html#L767'>base</a>              767 src/args.c         base = x_basename (argv[0]);</span>
+<span class='curline'><a href='../S/src--args.c.html#L770'>base</a>              770 src/args.c         if (strncmp (base, "mce", 3) == 0 || strcmp (base, "vi") == 0)</span>
+<span class='curline'><a href='../S/src--args.c.html#L775'>base</a>              775 src/args.c         else if (strncmp (base, "mcv", 3) == 0 || strcmp (base, "view") == 0)</span>
+<span class='curline'><a href='../S/src--args.c.html#L781'>base</a>              781 src/args.c         else if (strncmp (base, "mcd", 3) == 0 || strcmp (base, "diff") == 0)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1279'>base</a>             1279 src/diffviewer/ydiff.c cvt_cpy (char *dst, const char *src, size_t srcsize, int base, int ts)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1290'>base</a>             1290 src/diffviewer/ydiff.c             j = TAB_SKIP (ts, i + base);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1297'>base</a>             1297 src/diffviewer/ydiff.c     return i + base;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1320'>base</a>             1320 src/diffviewer/ydiff.c cvt_ncpy (char *dst, int dstsize, const char **_src, size_t srcsize, int base, int ts)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1332'>base</a>             1332 src/diffviewer/ydiff.c             j = TAB_SKIP (ts, i + base);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1342'>base</a>             1342 src/diffviewer/ydiff.c     return i + base;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1371'>base</a>             1371 src/diffviewer/ydiff.c         const int base = 0;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1379'>base</a>             1379 src/diffviewer/ydiff.c                 j = TAB_SKIP (ts, i + base);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1470'>base</a>             1470 src/diffviewer/ydiff.c         const int base = 0;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1478'>base</a>             1478 src/diffviewer/ydiff.c                 j = TAB_SKIP (ts, i + base);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1564'>base</a>             1564 src/diffviewer/ydiff.c     int base = 0;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1565'>base</a>             1565 src/diffviewer/ydiff.c     int old_base = base;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1585'>base</a>             1585 src/diffviewer/ydiff.c     while (skip &gt; base)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1587'>base</a>             1587 src/diffviewer/ydiff.c         old_base = base;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1592'>base</a>             1592 src/diffviewer/ydiff.c         base = cvt_cpy (cvt, tmp, sz, old_base, ts);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1593'>base</a>             1593 src/diffviewer/ydiff.c         if (cvt[base - old_base - 1] == '\n')</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1595'>base</a>             1595 src/diffviewer/ydiff.c             q = &amp;cvt[base - old_base - 1];</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1596'>base</a>             1596 src/diffviewer/ydiff.c             base = old_base + q - cvt + 1;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1601'>base</a>             1601 src/diffviewer/ydiff.c     if (base &lt; skip)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1608'>base</a>             1608 src/diffviewer/ydiff.c     useful = base - skip;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1623'>base</a>             1623 src/diffviewer/ydiff.c                 useful += cvt_ncpy (dst + useful, dstsize - useful, &amp;ptr, sz, base, ts) - base;</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L193'>base</a>              193 src/filemanager/achown.c get_perm (char *s, int base)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L199'>base</a>              199 src/filemanager/achown.c         ((s[0] == '+') ? (mode_t) (1 &lt;&lt; (base + 2)) : (1 &lt;&lt; (base + 2)) &amp; ch_cmode);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L202'>base</a>              202 src/filemanager/achown.c         ((s[1] == '+') ? (mode_t) (1 &lt;&lt; (base + 1)) : (1 &lt;&lt; (base + 1)) &amp; ch_cmode);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L204'>base</a>              204 src/filemanager/achown.c     m |= (s[2] == '-') ? 0 : ((s[2] == '+') ? (mode_t) (1 &lt;&lt; base) : (1 &lt;&lt; base) &amp; ch_cmode);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L683'>base</a>              683 src/filemanager/treestore.c     tree_entry *current, *base;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L700'>base</a>              700 src/filemanager/treestore.c     base = tree_store_whereis (name_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L701'>base</a>              701 src/filemanager/treestore.c     if (!base)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L704'>base</a>              704 src/filemanager/treestore.c     len = vfs_path_len (base-&gt;name);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L705'>base</a>              705 src/filemanager/treestore.c     current = base-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L706'>base</a>              706 src/filemanager/treestore.c     while (current != NULL &amp;&amp; vfs_path_equal_len (current-&gt;name, base-&gt;name, len))</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L721'>base</a>              721 src/filemanager/treestore.c     remove_entry (base);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L732'>base</a>              732 src/filemanager/treestore.c     tree_entry *current, *base;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L767'>base</a>              767 src/filemanager/treestore.c     base = current;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L768'>base</a>              768 src/filemanager/treestore.c     if (base)</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L772'>base</a>              772 src/filemanager/treestore.c         len = vfs_path_len (base-&gt;name);</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L773'>base</a>              773 src/filemanager/treestore.c         base-&gt;mark = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L774'>base</a>              774 src/filemanager/treestore.c         current = base-&gt;next;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L775'>base</a>              775 src/filemanager/treestore.c         while (current != NULL &amp;&amp; vfs_path_equal_len (current-&gt;name, base-&gt;name, len))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--includes.h.html#L564'>base</a>              564 src/vfs/smbfs/helpers/include/includes.h unsigned long strtoul (const char *nptr, char **endptr, int base);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L162'>base</a>              162 src/vfs/smbfs/helpers/include/proto.h char *align2 (char *q, char *base);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2953'>base</a>             2953 src/vfs/smbfs/helpers/lib/util.c align2 (char *q, char *base)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2955'>base</a>             2955 src/vfs/smbfs/helpers/lib/util.c     if ((q - base) &amp; 1)</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L146'>base</a>              146 src/viewer/coord_cache.c     size_t base = 0;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L157'>base</a>              157 src/viewer/coord_cache.c         i = base + limit / 2;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L165'>base</a>              165 src/viewer/coord_cache.c             base = i;</span>
+<span class='curline'><a href='../S/src--viewer--coord_cache.c.html#L169'>base</a>              169 src/viewer/coord_cache.c     return base;</span>
+<span class='curline'><a href='../S/src--viewer--dialogs.c.html#L231'>base</a>              231 src/viewer/dialogs.c         int base = (current_goto_type == MC_VIEW_GOTO_OFFSET_HEX) ? 16 : 10;</span>
+<span class='curline'><a href='../S/src--viewer--dialogs.c.html#L235'>base</a>              235 src/viewer/dialogs.c         addr = (off_t) g_ascii_strtoll (exp, &amp;error, base);</span>
+<span class='curline'><a href='../S/src--viewer--inlines.h.html#L123'>base</a>              123 src/viewer/inlines.h mcview_get_byte_indexed (WView * view, off_t base, off_t ofs, int *retval)</span>
+<span class='curline'><a href='../S/src--viewer--inlines.h.html#L125'>base</a>              125 src/viewer/inlines.h     if (base &lt;= OFFSETTYPE_MAX - ofs)</span>
+<span class='curline'><a href='../S/src--viewer--inlines.h.html#L127'>base</a>              127 src/viewer/inlines.h         return mcview_get_byte (view, base + ofs, retval);</span>
+</pre>
+</body>
+</html>

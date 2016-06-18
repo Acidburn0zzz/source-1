@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>ypos</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L64'>ypos</a>               64 lib/widget/listbox-window.c     int xpos = 0, ypos = 0;</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L88'>ypos</a>               88 lib/widget/listbox-window.c         ypos = center_y;</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L91'>ypos</a>               91 lib/widget/listbox-window.c         ypos -= lines / 2;</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L94'>ypos</a>               94 lib/widget/listbox-window.c         if (ypos + lines &gt;= LINES)</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L95'>ypos</a>               95 lib/widget/listbox-window.c             ypos = LINES - lines - space;</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L96'>ypos</a>               96 lib/widget/listbox-window.c         if (ypos &lt; 0)</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L97'>ypos</a>               97 lib/widget/listbox-window.c             ypos = 0;</span>
+<span class='curline'><a href='../S/lib--widget--listbox-window.c.html#L108'>ypos</a>              108 lib/widget/listbox-window.c         dlg_create (TRUE, ypos, xpos, lines + space, cols + space, pos_flags, FALSE, listbox_colors,</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L76'>ypos</a>               76 lib/widget/wtools.c             int ypos, xpos;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L97'>ypos</a>               97 lib/widget/wtools.c                 ypos = LINES / 3 - (w-&gt;lines - 3) / 2;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L99'>ypos</a>               99 lib/widget/wtools.c                 ypos = WIDGET (prev_dlg)-&gt;y + 2;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L104'>ypos</a>              104 lib/widget/wtools.c             dlg_set_position (h, ypos, xpos, w-&gt;lines, w-&gt;cols);</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L247'>ypos</a>              247 src/editor/editcmd_dialogs.c                                     int ypos)</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L261'>ypos</a>              261 src/editor/editcmd_dialogs.c     if (ypos == -1)</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L262'>ypos</a>              262 src/editor/editcmd_dialogs.c         ypos = w-&gt;y + w-&gt;lines / 2;</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L264'>ypos</a>              264 src/editor/editcmd_dialogs.c     if ((edit-&gt;curs_row &gt;= ypos - 1) &amp;&amp; (edit-&gt;curs_row &lt;= ypos + dlg_height - 1))</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L265'>ypos</a>              265 src/editor/editcmd_dialogs.c         ypos -= dlg_height;</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L291'>ypos</a>              291 src/editor/editcmd_dialogs.c             ypos, xpos, -1,</span>
+<span class='curline'><a href='../S/src--editor--spell_dialogs.c.html#L68'>ypos</a>               68 src/editor/spell_dialogs.c     int xpos, ypos;</span>
+<span class='curline'><a href='../S/src--editor--spell_dialogs.c.html#L88'>ypos</a>               88 src/editor/spell_dialogs.c     ypos = (LINES - sug_dlg_h) * 2 / 3;</span>
+<span class='curline'><a href='../S/src--editor--spell_dialogs.c.html#L91'>ypos</a>               91 src/editor/spell_dialogs.c     if ((edit-&gt;curs_row &gt;= ypos - 1) &amp;&amp; (edit-&gt;curs_row &lt;= ypos + sug_dlg_h - 1))</span>
+<span class='curline'><a href='../S/src--editor--spell_dialogs.c.html#L92'>ypos</a>               92 src/editor/spell_dialogs.c         ypos -= sug_dlg_h;</span>
+<span class='curline'><a href='../S/src--editor--spell_dialogs.c.html#L112'>ypos</a>              112 src/editor/spell_dialogs.c     sug_dlg = dlg_create (TRUE, ypos, xpos, sug_dlg_h, sug_dlg_w, WPOS_KEEP_DEFAULT, TRUE,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L399'>ypos</a>              399 src/filemanager/filegui.c #define ADD_RD_BUTTON(i, ypos) \</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L401'>ypos</a>              401 src/filemanager/filegui.c                         button_new (ypos, rd_widgets [i].xpos, rd_widgets [i].value, \</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L405'>ypos</a>              405 src/filemanager/filegui.c #define ADD_RD_LABEL(i, p1, p2, ypos) \</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L407'>ypos</a>              407 src/filemanager/filegui.c     label2 = WIDGET (label_new (ypos, rd_widgets [i].xpos, buffer)); \</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L420'>ypos</a>              420 src/filemanager/filegui.c         int ypos, xpos;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L511'>ypos</a>              511 src/filemanager/filegui.c                 if (row != rd_widgets[i].ypos)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L513'>ypos</a>              513 src/filemanager/filegui.c                     row = rd_widgets[i].ypos;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L533'>ypos</a>              533 src/filemanager/filegui.c                 if (row != rd_widgets[i].ypos)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L535'>ypos</a>              535 src/filemanager/filegui.c                     row = rd_widgets[i].ypos;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L910'>ypos</a>              910 src/filemanager/panel.c     int ypos = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L934'>ypos</a>              934 src/filemanager/panel.c         ypos = file_index - panel-&gt;top_file;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L937'>ypos</a>              937 src/filemanager/panel.c             ypos %= panel_lines (panel);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L939'>ypos</a>              939 src/filemanager/panel.c         ypos += 2;              /* top frame and header */</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L940'>ypos</a>              940 src/filemanager/panel.c         widget_move (w, ypos, offset + 1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L964'>ypos</a>              964 src/filemanager/panel.c         widget_move (w, ypos, offset);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L974'>ypos</a>              974 src/filemanager/panel.c             widget_move (w, ypos, offset);</span>
+</pre>
+</body>
+</html>

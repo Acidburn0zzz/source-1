@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>darr</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1691'>darr</a>             1691 src/filemanager/panel.c     format_e *darr, *old = NULL, *home = NULL;  /* The formats we return */</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1720'>darr</a>             1720 src/filemanager/panel.c         darr = g_new0 (format_e, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1724'>darr</a>             1724 src/filemanager/panel.c             home = old = darr;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1726'>darr</a>             1726 src/filemanager/panel.c         old-&gt;next = darr;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1727'>darr</a>             1727 src/filemanager/panel.c         darr-&gt;next = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1728'>darr</a>             1728 src/filemanager/panel.c         old = darr;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1763'>darr</a>             1763 src/filemanager/panel.c             darr-&gt;requested_field_len = panel_fields[i].min_size;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1764'>darr</a>             1764 src/filemanager/panel.c             darr-&gt;string_fn = panel_fields[i].string_fn;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1765'>darr</a>             1765 src/filemanager/panel.c             darr-&gt;title = g_strdup (panel_get_title_without_hotkey (panel_fields[i].title_hotkey));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1767'>darr</a>             1767 src/filemanager/panel.c             darr-&gt;id = panel_fields[i].id;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1768'>darr</a>             1768 src/filemanager/panel.c             darr-&gt;expand = panel_fields[i].expands;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1769'>darr</a>             1769 src/filemanager/panel.c             darr-&gt;just_mode = panel_fields[i].default_just;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1773'>darr</a>             1773 src/filemanager/panel.c                 if (IS_FIT (darr-&gt;just_mode))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1774'>darr</a>             1774 src/filemanager/panel.c                     darr-&gt;just_mode = MAKE_FIT (justify);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1776'>darr</a>             1776 src/filemanager/panel.c                     darr-&gt;just_mode = justify;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1790'>darr</a>             1790 src/filemanager/panel.c                 darr-&gt;expand = FALSE;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1793'>darr</a>             1793 src/filemanager/panel.c                 darr-&gt;requested_field_len = req_length;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1800'>darr</a>             1800 src/filemanager/panel.c                     darr-&gt;expand = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1827'>darr</a>             1827 src/filemanager/panel.c         total_cols += darr-&gt;requested_field_len;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1843'>darr</a>             1843 src/filemanager/panel.c     format_e *darr, *home;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1865'>darr</a>             1865 src/filemanager/panel.c     for (darr = home; darr != NULL &amp;&amp; expand_top &lt; MAX_EXPAND; darr = darr-&gt;next)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1867'>darr</a>             1867 src/filemanager/panel.c         darr-&gt;field_len = darr-&gt;requested_field_len;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1868'>darr</a>             1868 src/filemanager/panel.c         if (darr-&gt;expand)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1884'>darr</a>             1884 src/filemanager/panel.c             for (darr = home; darr; darr = darr-&gt;next)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1885'>darr</a>             1885 src/filemanager/panel.c                 if (dif != 0 &amp;&amp; darr-&gt;field_len != 1)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1887'>darr</a>             1887 src/filemanager/panel.c                     darr-&gt;field_len--;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1901'>darr</a>             1901 src/filemanager/panel.c         for (i = 0, darr = home; darr &amp;&amp; (i &lt; expand_top); darr = darr-&gt;next)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1902'>darr</a>             1902 src/filemanager/panel.c             if (darr-&gt;expand)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1904'>darr</a>             1904 src/filemanager/panel.c                 darr-&gt;field_len += spaces;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1906'>darr</a>             1906 src/filemanager/panel.c                     darr-&gt;field_len += (usable_columns - total_cols) % expand_top;</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>readdir</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1416'>readdir</a>          1416 lib/vfs/direntry.c     vclass-&gt;readdir = vfs_s_readdir;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L502'>readdir</a>           502 lib/vfs/interface.c     if (vfs-&gt;readdir)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L504'>readdir</a>           504 lib/vfs/interface.c         entry = (*vfs-&gt;readdir) (vfs_path_element-&gt;dir.info);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L518'>readdir</a>           518 lib/vfs/interface.c         errno = vfs-&gt;readdir ? vfs_ferrno (vfs) : E_NOTSUPP;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L161'>readdir</a>           161 lib/vfs/vfs.h      void *(*readdir) (void *vfs_info);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L927'>readdir</a>           927 src/filemanager/mountlist.c             while ((d = readdir (dirp)) != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1734'>readdir</a>          1734 src/vfs/extfs/extfs.c     vfs_extfs_ops.readdir = extfs_readdir;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L106'>readdir</a>           106 src/vfs/local/local.c     return readdir (*(DIR **) data);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L426'>readdir</a>           426 src/vfs/local/local.c     vfs_local_ops.readdir = local_readdir;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L698'>readdir</a>           698 src/vfs/sftpfs/vfs_class.c     sftpfs_class.readdir = sftpfs_cb_readdir;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L229'>readdir</a>           229 src/vfs/smbfs/helpers/lib/system.c     return readdir (dirp);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2248'>readdir</a>          2248 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.readdir = smbfs_readdir;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L826'>readdir</a>           826 src/vfs/undelfs/undelfs.c     vfs_undelfs_ops.readdir = undelfs_readdir;</span>
+</pre>
+</body>
+</html>

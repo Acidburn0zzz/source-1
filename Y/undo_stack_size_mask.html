@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>undo_stack_size_mask</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L533'>undo_stack_size_mask</a>  533 src/editor/edit.c     sp = (sp - 1) &amp; edit-&gt;undo_stack_size_mask;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L538'>undo_stack_size_mask</a>  538 src/editor/edit.c         edit-&gt;undo_stack_pointer = (edit-&gt;undo_stack_pointer - 1) &amp; edit-&gt;undo_stack_size_mask;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L545'>undo_stack_size_mask</a>  545 src/editor/edit.c     c = edit-&gt;undo_stack[(sp - 1) &amp; edit-&gt;undo_stack_size_mask];</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L595'>undo_stack_size_mask</a>  595 src/editor/edit.c     sp = (sp - 1) &amp; edit-&gt;undo_stack_size_mask;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L603'>undo_stack_size_mask</a>  603 src/editor/edit.c     c = edit-&gt;undo_stack[(sp - 1) &amp; edit-&gt;undo_stack_size_mask];</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2122'>undo_stack_size_mask</a> 2122 src/editor/edit.c     edit-&gt;undo_stack_size_mask = START_STACK_SIZE - 1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2342'>undo_stack_size_mask</a> 2342 src/editor/edit.c                 edit-&gt;undo_stack_size_mask = edit-&gt;undo_stack_size - 1;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2346'>undo_stack_size_mask</a> 2346 src/editor/edit.c     spm1 = (edit-&gt;undo_stack_pointer - 1) &amp; edit-&gt;undo_stack_size_mask;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2359'>undo_stack_size_mask</a> 2359 src/editor/edit.c         &amp;&amp; ((sp - 2) &amp; edit-&gt;undo_stack_size_mask) != edit-&gt;undo_stack_bottom)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2364'>undo_stack_size_mask</a> 2364 src/editor/edit.c             d = edit-&gt;undo_stack[(sp - 2) &amp; edit-&gt;undo_stack_size_mask];</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2387'>undo_stack_size_mask</a> 2387 src/editor/edit.c     edit-&gt;undo_stack_pointer = (edit-&gt;undo_stack_pointer + 1) &amp; edit-&gt;undo_stack_size_mask;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2392'>undo_stack_size_mask</a> 2392 src/editor/edit.c     c = (edit-&gt;undo_stack_pointer + 2) &amp; edit-&gt;undo_stack_size_mask;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2394'>undo_stack_size_mask</a> 2394 src/editor/edit.c         (((unsigned long) c + 1) &amp; edit-&gt;undo_stack_size_mask) == edit-&gt;undo_stack_bottom)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2397'>undo_stack_size_mask</a> 2397 src/editor/edit.c             edit-&gt;undo_stack_bottom = (edit-&gt;undo_stack_bottom + 1) &amp; edit-&gt;undo_stack_size_mask;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.h.html#L140'>undo_stack_size_mask</a>  140 src/editor/editwidget.h     unsigned long undo_stack_size_mask;</span>
+</pre>
+</body>
+</html>

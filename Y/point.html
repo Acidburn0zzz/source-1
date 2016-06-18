@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>point</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L132'>point</a>             132 lib/widget/input.c     in-&gt;mark = mark ? in-&gt;point : -1;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L142'>point</a>             142 lib/widget/input.c         *start_mark = MIN (in-&gt;mark, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L143'>point</a>             143 lib/widget/input.c         *end_mark = MAX (in-&gt;mark, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L161'>point</a>             161 lib/widget/input.c     in-&gt;point = first;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L340'>point</a>             340 lib/widget/input.c         size_t ins_point = str_offset_to_pos (in-&gt;buffer, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L348'>point</a>             348 lib/widget/input.c         in-&gt;point++;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L360'>point</a>             360 lib/widget/input.c     in-&gt;point = 0;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L369'>point</a>             369 lib/widget/input.c     in-&gt;point = str_length (in-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L380'>point</a>             380 lib/widget/input.c     act = in-&gt;buffer + str_offset_to_pos (in-&gt;buffer, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L381'>point</a>             381 lib/widget/input.c     if (in-&gt;point &gt; 0)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L382'>point</a>             382 lib/widget/input.c         in-&gt;point -= str_cprev_noncomb_char (&amp;act, in-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L393'>point</a>             393 lib/widget/input.c     act = in-&gt;buffer + str_offset_to_pos (in-&gt;buffer, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L395'>point</a>             395 lib/widget/input.c         in-&gt;point += str_cnext_noncomb_char (&amp;act);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L406'>point</a>             406 lib/widget/input.c     p = in-&gt;buffer + str_offset_to_pos (in-&gt;buffer, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L410'>point</a>             410 lib/widget/input.c         in-&gt;point++;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L415'>point</a>             415 lib/widget/input.c         in-&gt;point++;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L426'>point</a>             426 lib/widget/input.c     p = in-&gt;buffer + str_offset_to_pos (in-&gt;buffer, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L439'>point</a>             439 lib/widget/input.c         in-&gt;point--;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L447'>point</a>             447 lib/widget/input.c         in-&gt;point--;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L456'>point</a>             456 lib/widget/input.c     const char *act = in-&gt;buffer + str_offset_to_pos (in-&gt;buffer, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L459'>point</a>             459 lib/widget/input.c     if (in-&gt;point == 0)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L462'>point</a>             462 lib/widget/input.c     start = in-&gt;point - str_cprev_noncomb_char (&amp;act, in-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L463'>point</a>             463 lib/widget/input.c     move_buffer_backward (in, start, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L466'>point</a>             466 lib/widget/input.c     in-&gt;point = start;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L475'>point</a>             475 lib/widget/input.c     int end = in-&gt;point;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L477'>point</a>             477 lib/widget/input.c     act = in-&gt;buffer + str_offset_to_pos (in-&gt;buffer, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L480'>point</a>             480 lib/widget/input.c     move_buffer_backward (in, in-&gt;point, end);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L519'>point</a>             519 lib/widget/input.c     int old_point = in-&gt;point;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L523'>point</a>             523 lib/widget/input.c     new_point = in-&gt;point;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L524'>point</a>             524 lib/widget/input.c     in-&gt;point = old_point;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L536'>point</a>             536 lib/widget/input.c     int old_point = in-&gt;point;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L540'>point</a>             540 lib/widget/input.c     new_point = in-&gt;point;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L541'>point</a>             541 lib/widget/input.c     in-&gt;point = old_point;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L570'>point</a>             570 lib/widget/input.c     chp = str_offset_to_pos (in-&gt;buffer, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L584'>point</a>             584 lib/widget/input.c     in-&gt;point = 0;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L674'>point</a>             674 lib/widget/input.c     in-&gt;point = 0;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L771'>point</a>             771 lib/widget/input.c         delete_region (in, in-&gt;point, MAX (in-&gt;mark, 0));</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L780'>point</a>             780 lib/widget/input.c         copy_region (in, MAX (in-&gt;mark, 0), in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L787'>point</a>             787 lib/widget/input.c             copy_region (in, m, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L788'>point</a>             788 lib/widget/input.c             delete_region (in, in-&gt;point, m);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L951'>point</a>             951 lib/widget/input.c             prev_point = in-&gt;point;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L965'>point</a>             965 lib/widget/input.c         if (in-&gt;mark == in-&gt;point)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1095'>point</a>            1095 lib/widget/input.c         widget_move (in, 0, str_term_width2 (in-&gt;buffer, in-&gt;point) - in-&gt;term_first_shown);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1205'>point</a>            1205 lib/widget/input.c     in-&gt;point = str_length (in-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1241'>point</a>            1241 lib/widget/input.c     if (pos != in-&gt;point)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1243'>point</a>            1243 lib/widget/input.c     in-&gt;point = pos;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1274'>point</a>            1274 lib/widget/input.c     pw = str_term_width2 (in-&gt;buffer, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1382'>point</a>            1382 lib/widget/input.c     in-&gt;point = 0;</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L50'>point</a>              50 lib/widget/input.h     int point;                  /* cursor position in the input line in characters */</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1014'>point</a>            1014 lib/widget/input_complete.c         in-&gt;point += str_length (in-&gt;buffer) - buff_len;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1206'>point</a>            1206 lib/widget/input_complete.c     if (in-&gt;completions != NULL &amp;&amp; str_offset_to_pos (in-&gt;buffer, in-&gt;point) != end)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1414'>point</a>            1414 lib/widget/input_complete.c     end = str_offset_to_pos (in-&gt;buffer, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1417'>point</a>            1417 lib/widget/input_complete.c     if (in-&gt;point != 0)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1422'>point</a>            1422 lib/widget/input_complete.c         for (i = in-&gt;point - 1; i &gt; 0; i--)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1476'>point</a>            1476 src/filemanager/midnight.c             cmdline-&gt;point = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L103'>point</a>             103 src/filemanager/panelize.c         pname-&gt;point = 0;</span>
+<span class='curline'><a href='../S/tests--lib--widget--complete_engine.c.html#L203'>point</a>             203 tests/lib/widget/complete_engine.c     w_input-&gt;point = data-&gt;input_point;</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>flags</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L128'>flags</a>             128 lib/mcconfig/common.c             GKeyFileFlags flags = G_KEY_FILE_NONE;</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L131'>flags</a>             131 lib/mcconfig/common.c                 flags |= G_KEY_FILE_KEEP_COMMENTS;</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L134'>flags</a>             134 lib/mcconfig/common.c             g_key_file_load_from_file (mc_config-&gt;handle, ini_path, flags, NULL);</span>
+<span class='curline'><a href='../S/lib--util.h.html#L196'>flags</a>             196 lib/util.h     int my_system (int flags, const char *shell, const char *command);</span>
+<span class='curline'><a href='../S/lib--util.h.html#L197'>flags</a>             197 lib/util.h     int my_systeml (int flags, const char *shell, ...);</span>
+<span class='curline'><a href='../S/lib--util.h.html#L199'>flags</a>             199 lib/util.h     int my_systemv_flags (int flags, const char *command, char *const argv[]);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L210'>flags</a>             210 lib/utilunix.c my_system_make_arg_array (int flags, const char *shell, char **execute_name)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L216'>flags</a>             216 lib/utilunix.c     if ((flags &amp; EXECUTE_AS_SHELL) != 0)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L378'>flags</a>             378 lib/utilunix.c my_system (int flags, const char *shell, const char *command)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L380'>flags</a>             380 lib/utilunix.c     return my_systeml (flags, shell, command, NULL);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L399'>flags</a>             399 lib/utilunix.c my_systeml (int flags, const char *shell, ...)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L414'>flags</a>             414 lib/utilunix.c     status = my_systemv_flags (flags, shell, (char *const *) args_array-&gt;pdata);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L479'>flags</a>             479 lib/utilunix.c my_systemv_flags (int flags, const char *command, char *const argv[])</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L485'>flags</a>             485 lib/utilunix.c     args_array = my_system_make_arg_array (flags, command, &amp;execute_name);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L830'>flags</a>             830 lib/utilunix.c custom_canonicalize_pathname (char *path, CANON_PATH_FLAGS flags)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L837'>flags</a>             837 lib/utilunix.c     if ((flags &amp; CANON_PATH_GUARDUNC) != 0 &amp;&amp; IS_PATH_SEP (path[0]) &amp;&amp; IS_PATH_SEP (path[1]))</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L849'>flags</a>             849 lib/utilunix.c     if (flags &amp; CANON_PATH_JOINSLASHES)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L866'>flags</a>             866 lib/utilunix.c     if (flags &amp; CANON_PATH_JOINSLASHES)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L879'>flags</a>             879 lib/utilunix.c     if (flags &amp; CANON_PATH_REMSLASHDOTS)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L935'>flags</a>             935 lib/utilunix.c     if (flags &amp; CANON_PATH_REMDOUBLEDOTS)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L982'>flags</a>             982 lib/utilunix.c                         if (sub != NULL &amp;&amp; sub-&gt;flags &amp; VFS_S_REMOTE)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L112'>flags</a>             112 lib/vfs/direntry.c vfs_s_automake (struct vfs_class *me, struct vfs_s_inode *dir, char *path, int flags)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L121'>flags</a>             121 lib/vfs/direntry.c     res = vfs_s_generate_entry (me, path, dir, (flags &amp; FL_MKDIR) != 0 ? (0777 | S_IFDIR) : 0777);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L180'>flags</a>             180 lib/vfs/direntry.c                        const char *a_path, int follow, int flags)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L216'>flags</a>             216 lib/vfs/direntry.c         if (ent == NULL &amp;&amp; (flags &amp; (FL_MKFILE | FL_MKDIR)) != 0)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L217'>flags</a>             217 lib/vfs/direntry.c             ent = vfs_s_automake (me, root, path, flags);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L242'>flags</a>             242 lib/vfs/direntry.c                          const char *a_path, int follow, int flags)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L254'>flags</a>             254 lib/vfs/direntry.c     if ((flags &amp; FL_DIR) == 0)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L261'>flags</a>             261 lib/vfs/direntry.c         ino = vfs_s_find_inode (me, root-&gt;super, dirname, follow, flags | FL_DIR);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L262'>flags</a>             262 lib/vfs/direntry.c         ent = vfs_s_find_entry_tree (me, ino, name, follow, flags);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L371'>flags</a>             371 lib/vfs/direntry.c vfs_s_inode_from_path (const vfs_path_t * vpath, int flags)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L386'>flags</a>             386 lib/vfs/direntry.c                           (flags &amp; FL_FOLLOW) != 0 ? LINK_FOLLOW : LINK_NO_FOLLOW,</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L387'>flags</a>             387 lib/vfs/direntry.c                           flags &amp; ~FL_FOLLOW);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L392'>flags</a>             392 lib/vfs/direntry.c                               (flags &amp; FL_FOLLOW) != 0 ? LINK_FOLLOW : LINK_NO_FOLLOW,</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L393'>flags</a>             393 lib/vfs/direntry.c                               FL_DIR | (flags &amp; ~FL_FOLLOW));</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L670'>flags</a>             670 lib/vfs/direntry.c     if ((MEDATA-&gt;flags &amp; VFS_S_USETMP) &amp;&amp; FH-&gt;changed &amp;&amp; MEDATA-&gt;file_store)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L756'>flags</a>             756 lib/vfs/direntry.c         if ((MEDATA-&gt;flags &amp; VFS_S_USETMP) != 0 &amp;&amp; (fh-&gt;ino != NULL))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L919'>flags</a>             919 lib/vfs/direntry.c     if ((MEDATA-&gt;flags &amp; VFS_S_USETMP) != 0 &amp;&amp; ino-&gt;localname != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1023'>flags</a>            1023 lib/vfs/direntry.c                   const char *path, int follow, int flags)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1027'>flags</a>            1027 lib/vfs/direntry.c     if (((MEDATA-&gt;flags &amp; VFS_S_REMOTE) == 0) &amp;&amp; (*path == '\0'))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1030'>flags</a>            1030 lib/vfs/direntry.c     ent = (MEDATA-&gt;find_entry) (me, super-&gt;root, path, follow, flags);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1101'>flags</a>            1101 lib/vfs/direntry.c vfs_s_get_path (const vfs_path_t * vpath, struct vfs_s_super **archive, int flags)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1118'>flags</a>            1118 lib/vfs/direntry.c     if (flags &amp; FL_NO_OPEN)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1176'>flags</a>            1176 lib/vfs/direntry.c     if ((MEDATA-&gt;flags &amp; VFS_S_USETMP) == 0)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1204'>flags</a>            1204 lib/vfs/direntry.c vfs_s_open (const vfs_path_t * vpath, int flags, mode_t mode)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1219'>flags</a>            1219 lib/vfs/direntry.c     if (ino &amp;&amp; ((flags &amp; (O_CREAT | O_EXCL)) == (O_CREAT | O_EXCL)))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1231'>flags</a>            1231 lib/vfs/direntry.c         if (!(flags &amp; O_CREAT) || !(path_element-&gt;class-&gt;write))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1246'>flags</a>            1246 lib/vfs/direntry.c         if ((VFSDATA (path_element)-&gt;flags &amp; VFS_S_USETMP) != 0)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1282'>flags</a>            1282 lib/vfs/direntry.c     if (IS_LINEAR (flags))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1295'>flags</a>            1295 lib/vfs/direntry.c         if (s-&gt;fh_open != NULL &amp;&amp; s-&gt;fh_open (path_element-&gt;class, fh, flags, mode) != 0)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1304'>flags</a>            1304 lib/vfs/direntry.c     if ((VFSDATA (path_element)-&gt;flags &amp; VFS_S_USETMP) != 0 &amp;&amp; fh-&gt;ino-&gt;localname != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1306'>flags</a>            1306 lib/vfs/direntry.c         fh-&gt;handle = open (fh-&gt;ino-&gt;localname, NO_LINEAR (flags), mode);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1336'>flags</a>            1336 lib/vfs/direntry.c     if ((MEDATA-&gt;flags &amp; VFS_S_USETMP) == 0)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1411'>flags</a>            1411 lib/vfs/direntry.c     if (!(sub-&gt;flags &amp; VFS_S_READONLY))</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1428'>flags</a>            1428 lib/vfs/direntry.c     if ((sub-&gt;flags &amp; VFS_S_USETMP) != 0)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1434'>flags</a>            1434 lib/vfs/direntry.c     else if ((sub-&gt;flags &amp; VFS_S_REMOTE) != 0)</span>
+<span class='curline'><a href='../S/lib--vfs--gc.c.html#L105'>flags</a>             105 lib/vfs/gc.c       if (!(v-&gt;flags &amp; VFSF_LOCAL) &amp;&amp; id != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L189'>flags</a>             189 lib/vfs/interface.c mc_open (const vfs_path_t * vpath, int flags, ...)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L199'>flags</a>             199 lib/vfs/interface.c     if (flags &amp; O_CREAT)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L202'>flags</a>             202 lib/vfs/interface.c         va_start (ap, flags);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L215'>flags</a>             215 lib/vfs/interface.c         info = path_element-&gt;class-&gt;open (vpath, flags, mode);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L370'>flags</a>             370 lib/vfs/path.c vfs_path_from_str_deprecated_parser (char *path, vfs_path_flag_t flags)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L377'>flags</a>             377 lib/vfs/path.c     (void) flags;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L435'>flags</a>             435 lib/vfs/path.c vfs_path_from_str_uri_parser (char *path, vfs_path_flag_t flags)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L443'>flags</a>             443 lib/vfs/path.c     vpath-&gt;relative = (flags &amp; VPF_NO_CANON) != 0;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L466'>flags</a>             466 lib/vfs/path.c         if (sub != NULL &amp;&amp; (sub-&gt;flags &amp; VFS_S_REMOTE) != 0)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L535'>flags</a>             535 lib/vfs/path.c     if (((element-&gt;class-&gt;flags &amp; VFSF_LOCAL) == 0 || ret_tokens-&gt;len &gt; 0)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L600'>flags</a>             600 lib/vfs/path.c     if ((flags &amp; VPF_STRIP_HOME) &amp;&amp; element_index == 0 &amp;&amp; (element-&gt;class-&gt;flags &amp; VFSF_LOCAL) != 0) \</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L627'>flags</a>             627 lib/vfs/path.c vfs_path_to_str_flags (const vfs_path_t * vpath, int elements_count, vfs_path_flag_t flags)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L660'>flags</a>             660 lib/vfs/path.c             url_str = vfs_path_build_url_params_str (element, !(flags &amp; VPF_STRIP_PASSWORD));</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L672'>flags</a>             672 lib/vfs/path.c         if ((flags &amp; VPF_RECODE) == 0 &amp;&amp; vfs_path_element_need_cleanup_converter (element))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L674'>flags</a>             674 lib/vfs/path.c             if ((flags &amp; VPF_HIDE_CHARSET) == 0)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L725'>flags</a>             725 lib/vfs/path.c vfs_path_from_str_flags (const char *path_str, vfs_path_flag_t flags)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L733'>flags</a>             733 lib/vfs/path.c     if ((flags &amp; VPF_NO_CANON) == 0)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L741'>flags</a>             741 lib/vfs/path.c     if ((flags &amp; VPF_USE_DEPRECATED_PARSER) != 0 &amp;&amp; vfs_path_is_str_path_deprecated (path))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L742'>flags</a>             742 lib/vfs/path.c         vpath = vfs_path_from_str_deprecated_parser (path, flags);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L744'>flags</a>             744 lib/vfs/path.c         vpath = vfs_path_from_str_uri_parser (path, flags);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L746'>flags</a>             746 lib/vfs/path.c     vpath-&gt;str = vfs_path_to_str_flags (vpath, 0, flags);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L67'>flags</a>              67 lib/vfs/path.h char *vfs_path_to_str_flags (const vfs_path_t * vpath, int elements_count, vfs_path_flag_t flags);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L69'>flags</a>              69 lib/vfs/path.h vfs_path_t *vfs_path_from_str_flags (const char *path_str, vfs_path_flag_t flags);</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L236'>flags</a>             236 lib/vfs/utilvfs.c vfs_url_split (const char *path, int default_port, vfs_url_flags_t flags)</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L253'>flags</a>             253 lib/vfs/utilvfs.c     if ((flags &amp; URL_NOSLASH) == 0)</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L295'>flags</a>             295 lib/vfs/utilvfs.c     if ((flags &amp; URL_USE_ANONYMOUS) == 0)</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.h.html#L42'>flags</a>              42 lib/vfs/utilvfs.h vfs_path_element_t *vfs_url_split (const char *path, int default_port, vfs_url_flags_t flags);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L414'>flags</a>             414 lib/vfs/vfs.c      return (current_vfs-&gt;flags &amp; VFSF_LOCAL) != 0;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L429'>flags</a>             429 lib/vfs/vfs.c      return path_element-&gt;class-&gt;flags;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L571'>flags</a>             571 lib/vfs/vfs.c      if ((path_element-&gt;class-&gt;flags &amp; VFSF_LOCAL) != 0)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L642'>flags</a>             642 lib/vfs/vfs.c      if ((dest_class-&gt;flags &amp; VFSF_LOCAL) == 0 || dest_fd == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L134'>flags</a>             134 lib/vfs/vfs.h      vfs_class_flags_t flags;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L155'>flags</a>             155 lib/vfs/vfs.h      void *(*open) (const vfs_path_t * vpath, int flags, mode_t mode);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L220'>flags</a>             220 lib/vfs/vfs.h  void *vfs_s_open (const vfs_path_t * vpath, int flags, mode_t mode);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L304'>flags</a>             304 lib/vfs/vfs.h  int mc_open (const vfs_path_t * vpath, int flags, ...);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L122'>flags</a>             122 lib/vfs/xdirentry.h     vfs_subclass_flags_t flags; /* whether the subclass is remove, read-only etc */</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L139'>flags</a>             139 lib/vfs/xdirentry.h     int (*fh_open) (struct vfs_class * me, vfs_file_handler_t * fh, int flags, mode_t mode);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L145'>flags</a>             145 lib/vfs/xdirentry.h                                        const char *path, int follow, int flags);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L175'>flags</a>             175 lib/vfs/xdirentry.h                                       const char *path, int follow, int flags);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L180'>flags</a>             180 lib/vfs/xdirentry.h const char *vfs_s_get_path (const vfs_path_t * vpath, struct vfs_s_super **archive, int flags);</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L77'>flags</a>              77 lib/widget/button.c         if (parm == '\n' &amp;&amp; b-&gt;flags == DEFPUSH_BUTTON)</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L101'>flags</a>             101 lib/widget/button.c         switch (b-&gt;flags)</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L131'>flags</a>             131 lib/widget/button.c         switch (b-&gt;flags)</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L149'>flags</a>             149 lib/widget/button.c         switch (b-&gt;flags)</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L202'>flags</a>             202 lib/widget/button.c button_new (int y, int x, int action, button_flags_t flags, const char *text, bcback_fn callback)</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L211'>flags</a>             211 lib/widget/button.c     b-&gt;flags = flags;</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L254'>flags</a>             254 lib/widget/button.c     switch (b-&gt;flags)</span>
+<span class='curline'><a href='../S/lib--widget--button.h.html#L37'>flags</a>              37 lib/widget/button.h     button_flags_t flags;       /* button flags */</span>
+<span class='curline'><a href='../S/lib--widget--button.h.html#L47'>flags</a>              47 lib/widget/button.h WButton *button_new (int y, int x, int action, button_flags_t flags, const char *text,</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L122'>flags</a>             122 lib/widget/dialog.c dlg_broadcast_msg_to (WDialog * h, widget_msg_t msg, gboolean reverse, widget_options_t flags)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L148'>flags</a>             148 lib/widget/dialog.c         if ((flags == 0) || ((flags &amp; w-&gt;options) != 0))</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L68'>flags</a>              68 lib/widget/input_complete.c #define SHOW_C_CTX(func) fprintf(stderr, "%s: text='%s' flags=%s\n", func, text, show_c_flags(flags))</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L81'>flags</a>              81 lib/widget/input_complete.c typedef char *CompletionFunction (const char *text, int state, input_complete_t flags);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L91'>flags</a>              91 lib/widget/input_complete.c     input_complete_t flags;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L109'>flags</a>             109 lib/widget/input_complete.c char **try_complete (char *text, int *lc_start, int *lc_end, input_complete_t flags);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L117'>flags</a>             117 lib/widget/input_complete.c show_c_flags (input_complete_t flags)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L121'>flags</a>             121 lib/widget/input_complete.c     s_cf[0] = (flags &amp; INPUT_COMPLETE_FILENAMES) != 0 ? 'F' : ' ';</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L122'>flags</a>             122 lib/widget/input_complete.c     s_cf[1] = (flags &amp; INPUT_COMPLETE_HOSTNAMES) != 0 ? 'H' : ' ';</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L123'>flags</a>             123 lib/widget/input_complete.c     s_cf[2] = (flags &amp; INPUT_COMPLETE_COMMANDS) != 0 ? 'C' : ' ';</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L124'>flags</a>             124 lib/widget/input_complete.c     s_cf[3] = (flags &amp; INPUT_COMPLETE_VARIABLES) != 0 ? 'V' : ' ';</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L125'>flags</a>             125 lib/widget/input_complete.c     s_cf[4] = (flags &amp; INPUT_COMPLETE_USERNAMES) != 0 ? 'U' : ' ';</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L126'>flags</a>             126 lib/widget/input_complete.c     s_cf[5] = (flags &amp; INPUT_COMPLETE_CD) != 0 ? 'D' : ' ';</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L127'>flags</a>             127 lib/widget/input_complete.c     s_cf[6] = (flags &amp; INPUT_COMPLETE_SHELL_ESC) != 0 ? 'S' : ' ';</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L136'>flags</a>             136 lib/widget/input_complete.c filename_completion_function (const char *text, int state, input_complete_t flags)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L150'>flags</a>             150 lib/widget/input_complete.c     if (text != NULL &amp;&amp; (flags &amp; INPUT_COMPLETE_SHELL_ESC) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L158'>flags</a>             158 lib/widget/input_complete.c         result = filename_completion_function (u_text, state, flags &amp; (~INPUT_COMPLETE_SHELL_ESC));</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L265'>flags</a>             265 lib/widget/input_complete.c         if ((flags &amp; INPUT_COMPLETE_COMMANDS) != 0 &amp;&amp; (isexec || isdir))</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L267'>flags</a>             267 lib/widget/input_complete.c         if ((flags &amp; INPUT_COMPLETE_CD) != 0 &amp;&amp; isdir)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L269'>flags</a>             269 lib/widget/input_complete.c         if ((flags &amp; INPUT_COMPLETE_FILENAMES) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L314'>flags</a>             314 lib/widget/input_complete.c username_completion_function (const char *text, int state, input_complete_t flags)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L319'>flags</a>             319 lib/widget/input_complete.c     (void) flags;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L351'>flags</a>             351 lib/widget/input_complete.c variable_completion_function (const char *text, int state, input_complete_t flags)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L358'>flags</a>             358 lib/widget/input_complete.c     (void) flags;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L496'>flags</a>             496 lib/widget/input_complete.c hostname_completion_function (const char *text, int state, input_complete_t flags)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L502'>flags</a>             502 lib/widget/input_complete.c     (void) flags;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L559'>flags</a>             559 lib/widget/input_complete.c command_completion_function (const char *text, int state, input_complete_t flags)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L589'>flags</a>             589 lib/widget/input_complete.c     if ((flags &amp; INPUT_COMPLETE_COMMANDS) == 0)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L593'>flags</a>             593 lib/widget/input_complete.c     flags &amp;= ~INPUT_COMPLETE_SHELL_ESC;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L620'>flags</a>             620 lib/widget/input_complete.c         p = filename_completion_function (u_text, state, flags);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L676'>flags</a>             676 lib/widget/input_complete.c             found = filename_completion_function (cur_word, state - init_state, flags);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L721'>flags</a>             721 lib/widget/input_complete.c completion_matches (const char *text, CompletionFunction entry_function, input_complete_t flags)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L736'>flags</a>             736 lib/widget/input_complete.c     while ((string = (*entry_function) (text, matches, flags)) != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L819'>flags</a>             819 lib/widget/input_complete.c check_is_cd (const char *text, int lc_start, input_complete_t flags)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L825'>flags</a>             825 lib/widget/input_complete.c     if ((flags &amp; INPUT_COMPLETE_CD) == 0)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L883'>flags</a>             883 lib/widget/input_complete.c     if ((state-&gt;flags &amp; INPUT_COMPLETE_COMMANDS) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L885'>flags</a>             885 lib/widget/input_complete.c     if ((state-&gt;flags &amp; (INPUT_COMPLETE_COMMANDS | INPUT_COMPLETE_VARIABLES)) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L898'>flags</a>             898 lib/widget/input_complete.c             state-&gt;flags &amp;= ~INPUT_COMPLETE_VARIABLES;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L902'>flags</a>             902 lib/widget/input_complete.c     if ((state-&gt;flags &amp; INPUT_COMPLETE_HOSTNAMES) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L904'>flags</a>             904 lib/widget/input_complete.c     if (state-&gt;q != NULL &amp;&amp; state-&gt;q[1] == '(' &amp;&amp; (state-&gt;flags &amp; INPUT_COMPLETE_COMMANDS) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L924'>flags</a>             924 lib/widget/input_complete.c                                 state-&gt;flags &amp; (~INPUT_COMPLETE_FILENAMES));</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L926'>flags</a>             926 lib/widget/input_complete.c     else if ((state-&gt;flags &amp; INPUT_COMPLETE_FILENAMES) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L929'>flags</a>             929 lib/widget/input_complete.c             state-&gt;flags &amp;= ~(INPUT_COMPLETE_FILENAMES | INPUT_COMPLETE_COMMANDS);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L931'>flags</a>             931 lib/widget/input_complete.c         matches = completion_matches (state-&gt;word, filename_completion_function, state-&gt;flags);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L972'>flags</a>             972 lib/widget/input_complete.c                                                 state-&gt;flags);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1308'>flags</a>            1308 lib/widget/input_complete.c try_complete (char *text, int *lc_start, int *lc_end, input_complete_t flags)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1314'>flags</a>            1314 lib/widget/input_complete.c     state.flags = flags;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1319'>flags</a>            1319 lib/widget/input_complete.c     state.is_cd = check_is_cd (text, *lc_start, state.flags);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1325'>flags</a>            1325 lib/widget/input_complete.c     if (!state.is_cd &amp;&amp; (flags &amp; INPUT_COMPLETE_COMMANDS) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1336'>flags</a>            1336 lib/widget/input_complete.c                                       state.flags &amp; (~INPUT_COMPLETE_FILENAMES));</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1345'>flags</a>            1345 lib/widget/input_complete.c         matches = completion_matches (state.q, variable_completion_function, state.flags);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1355'>flags</a>            1355 lib/widget/input_complete.c         matches = completion_matches (state.r, hostname_completion_function, state.flags);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1362'>flags</a>            1362 lib/widget/input_complete.c     if (matches == NULL &amp;&amp; *state.word == '~' &amp;&amp; (state.flags &amp; INPUT_COMPLETE_USERNAMES) != 0</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1366'>flags</a>            1366 lib/widget/input_complete.c         matches = completion_matches (state.word, username_completion_function, state.flags);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1385'>flags</a>            1385 lib/widget/input_complete.c         (flags &amp; (INPUT_COMPLETE_FILENAMES | INPUT_COMPLETE_SHELL_ESC)) !=</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L119'>flags</a>             119 lib/widget/wtools.c do_create_message (int flags, const char *title, const char *text)</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L126'>flags</a>             126 lib/widget/wtools.c     query_dialog (title, p, flags, 0);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L145'>flags</a>             145 lib/widget/wtools.c fg_message (int flags, const char *title, const char *text)</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L149'>flags</a>             149 lib/widget/wtools.c     d = do_create_message (flags, title, text);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L161'>flags</a>             161 lib/widget/wtools.c bg_message (int dummy, int *flags, char *title, const char *text)</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L165'>flags</a>             165 lib/widget/wtools.c     fg_message (*flags, title, text);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L272'>flags</a>             272 lib/widget/wtools.c query_dialog (const char *header, const char *text, int flags, int count, ...)</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L281'>flags</a>             281 lib/widget/wtools.c     const int *query_colors = (flags &amp; D_ERROR) != 0 ? alarm_colors : dialog_colors;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L283'>flags</a>             283 lib/widget/wtools.c         (flags &amp; D_CENTER) != 0 ? (WPOS_CENTER | WPOS_TRYUP) : WPOS_KEEP_DEFAULT;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L383'>flags</a>             383 lib/widget/wtools.c create_message (int flags, const char *title, const char *text, ...)</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L393'>flags</a>             393 lib/widget/wtools.c     d = do_create_message (flags, title, p);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L403'>flags</a>             403 lib/widget/wtools.c message (int flags, const char *title, const char *text, ...)</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L425'>flags</a>             425 lib/widget/wtools.c         wtools_parent_call (func.p, NULL, 3, sizeof (flags), &amp;flags, strlen (title), title,</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L430'>flags</a>             430 lib/widget/wtools.c         fg_message (flags, title, p);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.h.html#L76'>flags</a>              76 lib/widget/wtools.h int query_dialog (const char *header, const char *text, int flags, int count, ...);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.h.html#L81'>flags</a>              81 lib/widget/wtools.h WDialog *create_message (int flags, const char *title, const char *text, ...)</span>
+<span class='curline'><a href='../S/lib--widget--wtools.h.html#L85'>flags</a>              85 lib/widget/wtools.h void message (int flags, const char *title, const char *text, ...) G_GNUC_PRINTF (3, 4);</span>
+<span class='curline'><a href='../S/src--diffviewer--internal.h.html#L49'>flags</a>              49 src/diffviewer/internal.h     int flags;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L213'>flags</a>             213 src/diffviewer/ydiff.c     fs-&gt;flags = 0;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L233'>flags</a>             233 src/diffviewer/ydiff.c     if (fs-&gt;flags &amp; FILE_FLAG_TEMP)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L269'>flags</a>             269 src/diffviewer/ydiff.c     fs-&gt;flags = FILE_FLAG_TEMP;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L285'>flags</a>             285 src/diffviewer/ydiff.c f_open (const char *filename, int flags)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L294'>flags</a>             294 src/diffviewer/ydiff.c     fd = open (filename, flags);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L501'>flags</a>             501 src/diffviewer/ydiff.c p_open (const char *cmd, int flags)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L507'>flags</a>             507 src/diffviewer/ydiff.c     if (flags == O_RDONLY)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L509'>flags</a>             509 src/diffviewer/ydiff.c     else if (flags == O_WRONLY)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L70'>flags</a>              70 src/execute.c  void do_execute (const char *shell, const char *command, int flags);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L71'>flags</a>              71 src/execute.c  void do_executev (const char *shell, int flags, char *const argv[]);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L293'>flags</a>             293 src/execute.c  do_executev (const char *shell, int flags, char *const argv[])</span>
+<span class='curline'><a href='../S/src--execute.c.html#L310'>flags</a>             310 src/execute.c      if (!mc_global.tty.use_subshell &amp;&amp; *argv != NULL &amp;&amp; (flags &amp; EXECUTE_INTERNAL) == 0)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L316'>flags</a>             316 src/execute.c      if (mc_global.tty.use_subshell &amp;&amp; (flags &amp; EXECUTE_INTERNAL) == 0)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L325'>flags</a>             325 src/execute.c          my_systemv_flags (flags, shell, argv);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L327'>flags</a>             327 src/execute.c      if ((flags &amp; EXECUTE_INTERNAL) == 0)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L383'>flags</a>             383 src/execute.c  do_execute (const char *shell, const char *command, int flags)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L391'>flags</a>             391 src/execute.c      do_executev (shell, flags, (char *const *) args_array-&gt;pdata);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L421'>flags</a>             421 src/execute.c  shell_execute (const char *command, int flags)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L425'>flags</a>             425 src/execute.c      if (flags &amp; EXECUTE_HIDE)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L428'>flags</a>             428 src/execute.c          flags ^= EXECUTE_HIDE;</span>
+<span class='curline'><a href='../S/src--execute.c.html#L434'>flags</a>             434 src/execute.c              do_execute (mc_global.shell-&gt;path, cmd ? cmd : command, flags | EXECUTE_AS_SHELL);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L439'>flags</a>             439 src/execute.c          do_execute (mc_global.shell-&gt;path, cmd ? cmd : command, flags | EXECUTE_AS_SHELL);</span>
+<span class='curline'><a href='../S/src--execute.h.html#L32'>flags</a>              32 src/execute.h  void shell_execute (const char *command, int flags);</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L83'>flags</a>              83 src/filemanager/achown.c     button_flags_t flags;</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L656'>flags</a>             656 src/filemanager/achown.c             if (chown_advanced_but[i].flags == DEFPUSH_BUTTON)</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L687'>flags</a>             687 src/filemanager/achown.c         chown_advanced_but[i].ret_cmd, chown_advanced_but[i].flags, \</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L714'>flags</a>             714 src/filemanager/achown.c                                                            chown_advanced_but[i].flags,</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L720'>flags</a>             720 src/filemanager/achown.c                                                            chown_advanced_but[i].flags,</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L732'>flags</a>             732 src/filemanager/achown.c                                                        chown_advanced_but[i].flags,</span>
+<span class='curline'><a href='../S/src--filemanager--achown.c.html#L738'>flags</a>             738 src/filemanager/achown.c                                                        chown_advanced_but[i].flags,</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1205'>flags</a>            1205 src/filemanager/boxes.c         int flags;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1235'>flags</a>            1235 src/filemanager/boxes.c         if (job_but[i].flags == DEFPUSH_BUTTON)</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1256'>flags</a>            1256 src/filemanager/boxes.c                     button_new (lines - 3, x, job_but[i].value, job_but[i].flags, job_but[i].name,</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L113'>flags</a>             113 src/filemanager/chmod.c     button_flags_t flags;</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L174'>flags</a>             174 src/filemanager/chmod.c         if (chmod_but[i].flags == DEFPUSH_BUTTON)</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L346'>flags</a>             346 src/filemanager/chmod.c                                     chmod_but[i].ret_cmd, chmod_but[i].flags, chmod_but[i].text,</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L351'>flags</a>             351 src/filemanager/chmod.c                                     chmod_but[i].ret_cmd, chmod_but[i].flags, chmod_but[i].text,</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L361'>flags</a>             361 src/filemanager/chmod.c                             chmod_but[i].flags, chmod_but[i].text, NULL));</span>
+<span class='curline'><a href='../S/src--filemanager--chmod.c.html#L365'>flags</a>             365 src/filemanager/chmod.c                             chmod_but[i].flags, chmod_but[i].text, NULL));</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L85'>flags</a>              85 src/filemanager/chown.c     button_flags_t flags;</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L134'>flags</a>             134 src/filemanager/chown.c         if (chown_but[i].flags == DEFPUSH_BUTTON)</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L261'>flags</a>             261 src/filemanager/chown.c                         button_new (y, x, chown_but[i].ret_cmd, chown_but[i].flags,</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L272'>flags</a>             272 src/filemanager/chown.c                             chown_but[i].flags, chown_but[i].text, NULL));</span>
+<span class='curline'><a href='../S/src--filemanager--chown.c.html#L276'>flags</a>             276 src/filemanager/chown.c                             chown_but[i].flags, chown_but[i].text, NULL));</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2666'>flags</a>            2666 src/filemanager/file.c                     panel_update_flags_t flags = UP_RELOAD;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2670'>flags</a>            2670 src/filemanager/file.c                         flags |= UP_ONLY_CURRENT;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2672'>flags</a>            2672 src/filemanager/file.c                     update_panels (flags, UP_KEEPSEL);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L251'>flags</a>             251 src/filemanager/filegui.c     button_flags_t flags;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L812'>flags</a>             812 src/filemanager/filegui.c                                                 progress_buttons[0].flags, progress_buttons[0].text,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L818'>flags</a>             818 src/filemanager/filegui.c                                                 progress_buttons[1].flags, progress_buttons[1].text,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L827'>flags</a>             827 src/filemanager/filegui.c                                                     progress_buttons[2].flags,</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L837'>flags</a>             837 src/filemanager/filegui.c                                                 progress_buttons[3].flags, progress_buttons[3].text,</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L181'>flags</a>             181 src/filemanager/find.c     button_flags_t flags;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1607'>flags</a>            1607 src/filemanager/find.c             if (fbuts[i].flags == DEFPUSH_BUTTON)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1646'>flags</a>            1646 src/filemanager/find.c                         (y, fbuts[i].x, fbuts[i].ret_cmd, fbuts[i].flags, fbuts[i].text,</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L172'>flags</a>             172 src/filemanager/hotlist.c     int ret_cmd, flags, y, x, len;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L670'>flags</a>             670 src/filemanager/hotlist.c             if (hotlist_but[i].flags == DEFPUSH_BUTTON)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L804'>flags</a>             804 src/filemanager/hotlist.c                                             hotlist_but[i].ret_cmd, hotlist_but[i].flags,</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L855'>flags</a>             855 src/filemanager/hotlist.c                                             hotlist_but[i].ret_cmd, hotlist_but[i].flags,</span>
+<span class='curline'><a href='../S/src--filemanager--listmode.c.html#L75'>flags</a>              75 src/filemanager/listmode.c     int ret_cmd, flags, y, x;</span>
+<span class='curline'><a href='../S/src--filemanager--listmode.c.html#L212'>flags</a>             212 src/filemanager/listmode.c                                 listmode_but[i].flags,</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L977'>flags</a>             977 src/filemanager/mountlist.c                 me-&gt;me_remote = (fi.flags &amp; B_FS_IS_SHARED) != 0;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4008'>flags</a>            4008 src/filemanager/panel.c update_one_panel_widget (WPanel * panel, panel_update_flags_t flags, const char *current_file)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4013'>flags</a>            4013 src/filemanager/panel.c     if ((flags &amp; UP_RELOAD) != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4044'>flags</a>            4044 src/filemanager/panel.c update_one_panel (int which, panel_update_flags_t flags, const char *current_file)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4052'>flags</a>            4052 src/filemanager/panel.c             flags &amp;= ~UP_RELOAD;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4053'>flags</a>            4053 src/filemanager/panel.c         update_one_panel_widget (panel, flags, current_file);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4853'>flags</a>            4853 src/filemanager/panel.c update_panels (panel_update_flags_t flags, const char *current_file)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4858'>flags</a>            4858 src/filemanager/panel.c     if ((flags &amp; UP_ONLY_CURRENT) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4859'>flags</a>            4859 src/filemanager/panel.c         update_one_panel (get_other_index (), flags, UP_KEEPSEL);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4861'>flags</a>            4861 src/filemanager/panel.c     update_one_panel (get_current_index (), flags, current_file);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.h.html#L167'>flags</a>             167 src/filemanager/panel.h void update_panels (panel_update_flags_t flags, const char *current_file);</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L133'>flags</a>             133 src/filemanager/panelize.c         button_flags_t flags;</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L163'>flags</a>             163 src/filemanager/panelize.c         if (panelize_but[i].flags == DEFPUSH_BUTTON)</span>
+<span class='curline'><a href='../S/src--filemanager--panelize.c.html#L203'>flags</a>             203 src/filemanager/panelize.c                         panelize_but[i].ret_cmd, panelize_but[i].flags, panelize_but[i].text, NULL);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L843'>flags</a>             843 src/vfs/cpio/cpio.c cpio_fh_open (struct vfs_class *me, vfs_file_handler_t * fh, int flags, mode_t mode)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L849'>flags</a>             849 src/vfs/cpio/cpio.c     if ((flags &amp; O_ACCMODE) != O_RDONLY)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L863'>flags</a>             863 src/vfs/cpio/cpio.c     cpio_subclass.flags = VFS_S_READONLY;       /* FIXME: cpiofs used own temp files */</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L890'>flags</a>             890 src/vfs/extfs/extfs.c extfs_open (const vfs_path_t * vpath, int flags, mode_t mode)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L903'>flags</a>             903 src/vfs/extfs/extfs.c     if ((entry == NULL) &amp;&amp; ((flags &amp; O_CREAT) != 0))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L932'>flags</a>             932 src/vfs/extfs/extfs.c         if (!created &amp;&amp; ((flags &amp; O_TRUNC) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L944'>flags</a>             944 src/vfs/extfs/extfs.c     local_handle = open (entry-&gt;inode-&gt;local_filename, NO_LINEAR (flags), mode);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L949'>flags</a>             949 src/vfs/extfs/extfs.c         flags = ~O_CREAT &amp; (NO_LINEAR (flags) | O_TRUNC);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L950'>flags</a>             950 src/vfs/extfs/extfs.c         local_handle = open (entry-&gt;inode-&gt;local_filename, flags, mode);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L351'>flags</a>             351 src/vfs/fish/fish.c fish_set_env (int flags)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L358'>flags</a>             358 src/vfs/fish/fish.c     if ((flags &amp; FISH_HAVE_HEAD) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L361'>flags</a>             361 src/vfs/fish/fish.c     if ((flags &amp; FISH_HAVE_SED) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L364'>flags</a>             364 src/vfs/fish/fish.c     if ((flags &amp; FISH_HAVE_AWK) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L367'>flags</a>             367 src/vfs/fish/fish.c     if ((flags &amp; FISH_HAVE_PERL) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L370'>flags</a>             370 src/vfs/fish/fish.c     if ((flags &amp; FISH_HAVE_LSQ) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L373'>flags</a>             373 src/vfs/fish/fish.c     if ((flags &amp; FISH_HAVE_DATE_MDYT) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L376'>flags</a>             376 src/vfs/fish/fish.c     if ((flags &amp; FISH_HAVE_TAIL) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1135'>flags</a>            1135 src/vfs/fish/fish.c fish_send_command (struct vfs_class *me, struct vfs_s_super *super, const char *cmd, int flags)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1143'>flags</a>            1143 src/vfs/fish/fish.c     if (flags &amp; OPT_FLUSH)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1500'>flags</a>            1500 src/vfs/fish/fish.c fish_fh_open (struct vfs_class *me, vfs_file_handler_t * fh, int flags, mode_t mode)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1510'>flags</a>            1510 src/vfs/fish/fish.c     if (((flags &amp; O_WRONLY) == O_WRONLY) &amp;&amp; ((flags &amp; (O_RDONLY | O_RDWR)) == 0))</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1513'>flags</a>            1513 src/vfs/fish/fish.c         if ((flags &amp; O_APPEND) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1557'>flags</a>            1557 src/vfs/fish/fish.c         const char *flags = "";</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1562'>flags</a>            1562 src/vfs/fish/fish.c             flags = ":r";</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1565'>flags</a>            1565 src/vfs/fish/fish.c             flags = ":C";</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1571'>flags</a>            1571 src/vfs/fish/fish.c                 flags = gbuf;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1578'>flags</a>            1578 src/vfs/fish/fish.c                          super-&gt;path_element-&gt;user, "@", super-&gt;path_element-&gt;host, flags,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1588'>flags</a>            1588 src/vfs/fish/fish.c fish_open (const vfs_path_t * vpath, int flags, mode_t mode)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1594'>flags</a>            1594 src/vfs/fish/fish.c     flags &amp;= ~O_EXCL;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1595'>flags</a>            1595 src/vfs/fish/fish.c     return vfs_s_open (vpath, flags, mode);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1609'>flags</a>            1609 src/vfs/fish/fish.c     fish_subclass.flags = VFS_S_REMOTE | VFS_S_USETMP;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1981'>flags</a>            1981 src/vfs/ftpfs/ftpfs.c ftpfs_send_command (const vfs_path_t * vpath, const char *cmd, int flags)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1988'>flags</a>            1988 src/vfs/ftpfs/ftpfs.c     int flush_directory_cache = (flags &amp; OPT_FLUSH);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2000'>flags</a>            2000 src/vfs/ftpfs/ftpfs.c     if (flags &amp; OPT_IGNORE_ERROR)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2135'>flags</a>            2135 src/vfs/ftpfs/ftpfs.c ftpfs_fh_open (struct vfs_class *me, vfs_file_handler_t * fh, int flags, mode_t mode)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2144'>flags</a>            2144 src/vfs/ftpfs/ftpfs.c     if (((flags &amp; O_WRONLY) == O_WRONLY) &amp;&amp; ((flags &amp; (O_RDONLY | O_RDWR)) == 0))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2173'>flags</a>            2173 src/vfs/ftpfs/ftpfs.c                 ftp-&gt;append = flags &amp; O_APPEND;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2182'>flags</a>            2182 src/vfs/ftpfs/ftpfs.c                                         (flags &amp; O_APPEND) ? "APPE" : "STOR", name, TYPE_BINARY, 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2583'>flags</a>            2583 src/vfs/ftpfs/ftpfs.c     ftpfs_subclass.flags = VFS_S_REMOTE | VFS_S_USETMP;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2598'>flags</a>            2598 src/vfs/ftpfs/ftpfs.c     vfs_ftpfs_ops.flags = VFSF_NOLINKS;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L64'>flags</a>              64 src/vfs/local/local.c local_open (const vfs_path_t * vpath, int flags, mode_t mode)</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L71'>flags</a>              71 src/vfs/local/local.c     fd = open (path_element-&gt;path, NO_LINEAR (flags), mode);</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L419'>flags</a>             419 src/vfs/local/local.c     vfs_local_ops.flags = VFSF_LOCAL;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L267'>flags</a>             267 src/vfs/sfs/sfs.c sfs_open (const vfs_path_t * vpath /*struct vfs_class *me, const char *path */ , int flags,</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L273'>flags</a>             273 src/vfs/sfs/sfs.c     fd = open (sfs_redirect (vpath), NO_LINEAR (flags), mode);</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L437'>flags</a>             437 src/vfs/sfs/sfs.c         char *c, *semi = NULL, flags = 0;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L449'>flags</a>             449 src/vfs/sfs/sfs.c                     flags |= F_FULLMATCH;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L467'>flags</a>             467 src/vfs/sfs/sfs.c                 flags |= F_1;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L470'>flags</a>             470 src/vfs/sfs/sfs.c                 flags |= F_2;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L473'>flags</a>             473 src/vfs/sfs/sfs.c                 flags |= F_NOLOCALCOPY;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L491'>flags</a>             491 src/vfs/sfs/sfs.c         sfs_flags[sfs_no] = flags;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L46'>flags</a>              46 src/vfs/sftpfs/file.c     int flags;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L64'>flags</a>              64 src/vfs/sftpfs/file.c     int flags;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L70'>flags</a>              70 src/vfs/sftpfs/file.c     flags = file_handler_data-&gt;flags;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L74'>flags</a>              74 src/vfs/sftpfs/file.c     sftpfs_open_file (file_handler, flags, mode, mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L91'>flags</a>              91 src/vfs/sftpfs/file.c sftpfs_open_file (vfs_file_handler_t * file_handler, int flags, mode_t mode, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L110'>flags</a>             110 src/vfs/sftpfs/file.c     if ((flags &amp; O_CREAT) != 0 || (flags &amp; O_WRONLY) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L112'>flags</a>             112 src/vfs/sftpfs/file.c         sftp_open_flags = (flags &amp; O_WRONLY) != 0 ? LIBSSH2_FXF_WRITE : 0;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L113'>flags</a>             113 src/vfs/sftpfs/file.c         sftp_open_flags |= (flags &amp; O_CREAT) != 0 ? LIBSSH2_FXF_CREAT : 0;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L114'>flags</a>             114 src/vfs/sftpfs/file.c         if ((flags &amp; O_APPEND) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L119'>flags</a>             119 src/vfs/sftpfs/file.c         sftp_open_flags |= (flags &amp; O_TRUNC) != 0 ? LIBSSH2_FXF_TRUNC : 0;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L150'>flags</a>             150 src/vfs/sftpfs/file.c     file_handler_data-&gt;flags = flags;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L206'>flags</a>             206 src/vfs/sftpfs/file.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_UIDGID) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L212'>flags</a>             212 src/vfs/sftpfs/file.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_ACMODTIME) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L219'>flags</a>             219 src/vfs/sftpfs/file.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_SIZE) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L222'>flags</a>             222 src/vfs/sftpfs/file.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_PERMISSIONS) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L177'>flags</a>             177 src/vfs/sftpfs/internal.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_UIDGID) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L183'>flags</a>             183 src/vfs/sftpfs/internal.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_ACMODTIME) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L190'>flags</a>             190 src/vfs/sftpfs/internal.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_SIZE) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L193'>flags</a>             193 src/vfs/sftpfs/internal.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_PERMISSIONS) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L256'>flags</a>             256 src/vfs/sftpfs/internal.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_UIDGID) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L262'>flags</a>             262 src/vfs/sftpfs/internal.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_ACMODTIME) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L269'>flags</a>             269 src/vfs/sftpfs/internal.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_SIZE) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L272'>flags</a>             272 src/vfs/sftpfs/internal.c     if ((attrs.flags &amp; LIBSSH2_SFTP_ATTR_PERMISSIONS) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L93'>flags</a>              93 src/vfs/sftpfs/internal.h gboolean sftpfs_open_file (vfs_file_handler_t * file_handler, int flags, mode_t mode,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L96'>flags</a>              96 src/vfs/sftpfs/vfs_class.c sftpfs_cb_open (const vfs_path_t * vpath, int flags, mode_t mode)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L113'>flags</a>             113 src/vfs/sftpfs/vfs_class.c     if (path_inode != NULL &amp;&amp; ((flags &amp; (O_CREAT | O_EXCL)) == (O_CREAT | O_EXCL)))</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L156'>flags</a>             156 src/vfs/sftpfs/vfs_class.c     if (!sftpfs_open_file (file_handler, flags, mode, &amp;mcerror))</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L681'>flags</a>             681 src/vfs/sftpfs/vfs_class.c     sftpfs_class.flags = VFSF_NOLINKS;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L188'>flags</a>             188 src/vfs/sftpfs/vfs_subclass.c     sftpfs_subclass.flags = VFS_S_REMOTE;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--nameserv.h.html#L407'>flags</a>             407 src/vfs/smbfs/helpers/include/nameserv.h         } flags;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L270'>flags</a>             270 src/vfs/smbfs/helpers/include/proto.h int cli_open (struct cli_state *cli, char *fname, int flags, int share_mode);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L872'>flags</a>             872 src/vfs/smbfs/helpers/include/smb.h     unsigned flags;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L243'>flags</a>             243 src/vfs/smbfs/helpers/libsmb/clientgen.c                 int fid, int flags,</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L271'>flags</a>             271 src/vfs/smbfs/helpers/libsmb/clientgen.c     SSVAL (cli-&gt;outbuf, smb_flags, flags);      /* flags */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1193'>flags</a>            1193 src/vfs/smbfs/helpers/libsmb/clientgen.c cli_open (struct cli_state *cli, char *fname, int flags, int share_mode)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1201'>flags</a>            1201 src/vfs/smbfs/helpers/libsmb/clientgen.c     if ((flags &amp; O_ACCMODE) == O_WRONLY &amp;&amp; strncmp (cli-&gt;dev, "LPT", 3))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1203'>flags</a>            1203 src/vfs/smbfs/helpers/libsmb/clientgen.c         flags = (flags &amp; ~O_ACCMODE) | O_RDWR;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1206'>flags</a>            1206 src/vfs/smbfs/helpers/libsmb/clientgen.c     if (flags &amp; O_CREAT)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1208'>flags</a>            1208 src/vfs/smbfs/helpers/libsmb/clientgen.c     if (!(flags &amp; O_EXCL))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1210'>flags</a>            1210 src/vfs/smbfs/helpers/libsmb/clientgen.c         if (flags &amp; O_TRUNC)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1218'>flags</a>            1218 src/vfs/smbfs/helpers/libsmb/clientgen.c     if ((flags &amp; O_ACCMODE) == O_RDWR)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1222'>flags</a>            1222 src/vfs/smbfs/helpers/libsmb/clientgen.c     else if ((flags &amp; O_ACCMODE) == O_WRONLY)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--clientgen.c.html#L1228'>flags</a>            1228 src/vfs/smbfs/helpers/libsmb/clientgen.c     if ((flags &amp; O_SYNC) == O_SYNC)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L55'>flags</a>              55 src/vfs/smbfs/helpers/libsmb/namequery.c         fstring flags;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L57'>flags</a>              57 src/vfs/smbfs/helpers/libsmb/namequery.c         *flags = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L62'>flags</a>              62 src/vfs/smbfs/helpers/libsmb/namequery.c         fstrcat (flags, (p[0] &amp; 0x80) ? "&lt;GROUP&gt; " : "        ");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L64'>flags</a>              64 src/vfs/smbfs/helpers/libsmb/namequery.c             fstrcat (flags, "B ");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L66'>flags</a>              66 src/vfs/smbfs/helpers/libsmb/namequery.c             fstrcat (flags, "P ");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L68'>flags</a>              68 src/vfs/smbfs/helpers/libsmb/namequery.c             fstrcat (flags, "M ");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L70'>flags</a>              70 src/vfs/smbfs/helpers/libsmb/namequery.c             fstrcat (flags, "H ");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L72'>flags</a>              72 src/vfs/smbfs/helpers/libsmb/namequery.c             fstrcat (flags, "&lt;DEREGISTERING&gt; ");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L74'>flags</a>              74 src/vfs/smbfs/helpers/libsmb/namequery.c             fstrcat (flags, "&lt;CONFLICT&gt; ");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L76'>flags</a>              76 src/vfs/smbfs/helpers/libsmb/namequery.c             fstrcat (flags, "&lt;ACTIVE&gt; ");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L78'>flags</a>              78 src/vfs/smbfs/helpers/libsmb/namequery.c             fstrcat (flags, "&lt;PERMANENT&gt; ");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L97'>flags</a>              97 src/vfs/smbfs/helpers/libsmb/namequery.c         DEBUG (1, ("\t%-15s &lt;%02x&gt; - %s\n", qname, type, flags));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L267'>flags</a>             267 src/vfs/smbfs/helpers/libsmb/namequery.c         pstring ip, flags, extra;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L281'>flags</a>             281 src/vfs/smbfs/helpers/libsmb/namequery.c         pstrcpy (flags, "");</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L289'>flags</a>             289 src/vfs/smbfs/helpers/libsmb/namequery.c         if (next_token (&amp;ptr, flags, NULL, sizeof (flags)))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L309'>flags</a>             309 src/vfs/smbfs/helpers/libsmb/namequery.c         DEBUG (4, ("getlmhostsent: lmhost entry: %s %s %s\n", ip, name, flags));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L311'>flags</a>             311 src/vfs/smbfs/helpers/libsmb/namequery.c         if (strchr (flags, 'G') || strchr (flags, 'S'))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L436'>flags</a>             436 src/vfs/smbfs/helpers/libsmb/nmblib.c     int flags;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L444'>flags</a>             444 src/vfs/smbfs/helpers/libsmb/nmblib.c     flags = CVAL (inbuf, 1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L445'>flags</a>             445 src/vfs/smbfs/helpers/libsmb/nmblib.c     dgram-&gt;header.flags.node_type = (enum node_type) ((flags &gt;&gt; 2) &amp; 3);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L446'>flags</a>             446 src/vfs/smbfs/helpers/libsmb/nmblib.c     if (flags &amp; 1)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L447'>flags</a>             447 src/vfs/smbfs/helpers/libsmb/nmblib.c         dgram-&gt;header.flags.more = True;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L448'>flags</a>             448 src/vfs/smbfs/helpers/libsmb/nmblib.c     if (flags &amp; 2)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L449'>flags</a>             449 src/vfs/smbfs/helpers/libsmb/nmblib.c         dgram-&gt;header.flags.first = True;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L797'>flags</a>             797 src/vfs/smbfs/helpers/libsmb/nmblib.c     ubuf[1] = (((int) dgram-&gt;header.flags.node_type) &lt;&lt; 2);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L798'>flags</a>             798 src/vfs/smbfs/helpers/libsmb/nmblib.c     if (dgram-&gt;header.flags.more)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--nmblib.c.html#L800'>flags</a>             800 src/vfs/smbfs/helpers/libsmb/nmblib.c     if (dgram-&gt;header.flags.first)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L1988'>flags</a>            1988 src/vfs/smbfs/helpers/param/loadparm.c     if (parm_table[parmnum].flags &amp; FLAG_DEPRECATED)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2044'>flags</a>            2044 src/vfs/smbfs/smbfs.c smbfs_open_readwrite (smbfs_handle * remote_handle, char *rname, int flags, mode_t mode)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2050'>flags</a>            2050 src/vfs/smbfs/smbfs.c     if (flags &amp; O_TRUNC)        /* if it exists truncate to zero */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2055'>flags</a>            2055 src/vfs/smbfs/smbfs.c         cli_open (remote_handle-&gt;cli, rname, flags, DENY_NONE);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2057'>flags</a>            2057 src/vfs/smbfs/smbfs.c         cli_open (remote_handle-&gt;cli, rname, ((flags &amp; O_CREAT)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2058'>flags</a>            2058 src/vfs/smbfs/smbfs.c                                               || (flags ==</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2060'>flags</a>            2060 src/vfs/smbfs/smbfs.c                   flags : O_RDONLY, DENY_NONE);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2071'>flags</a>            2071 src/vfs/smbfs/smbfs.c     if (flags &amp; O_CREAT)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2087'>flags</a>            2087 src/vfs/smbfs/smbfs.c     if ((flags == (O_WRONLY | O_APPEND))        /* file.c:copy_file_file() -&gt; do_append */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2100'>flags</a>            2100 src/vfs/smbfs/smbfs.c smbfs_open (const vfs_path_t * vpath, int flags, mode_t mode)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2109'>flags</a>            2109 src/vfs/smbfs/smbfs.c     DEBUG (3, ("smbfs_open(file:%s, flags:%d, mode:%o)\n", path_element-&gt;path, flags, mode));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2120'>flags</a>            2120 src/vfs/smbfs/smbfs.c     ret = smbfs_open_readwrite (remote_handle, remote_file, flags, mode);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2240'>flags</a>            2240 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.flags = VFSF_NOLINKS;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L889'>flags</a>             889 src/vfs/tar/tar.c tar_fh_open (struct vfs_class *me, vfs_file_handler_t * fh, int flags, mode_t mode)</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L894'>flags</a>             894 src/vfs/tar/tar.c     if ((flags &amp; O_ACCMODE) != O_RDONLY)</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L908'>flags</a>             908 src/vfs/tar/tar.c     tarfs_subclass.flags = VFS_S_READONLY;      /* FIXME: tarfs used own temp files */</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L433'>flags</a>             433 src/vfs/undelfs/undelfs.c undelfs_open (const vfs_path_t * vpath, int flags, mode_t mode)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L438'>flags</a>             438 src/vfs/undelfs/undelfs.c     (void) flags;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--canonicalize_pathname.c.html#L63'>flags</a>              63 tests/lib/vfs/canonicalize_pathname.c     vfs_test_ops.flags = VFSF_NOLINKS;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--canonicalize_pathname.c.html#L65'>flags</a>              65 tests/lib/vfs/canonicalize_pathname.c     test_subclass.flags = VFS_S_REMOTE;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--current_dir.c.html#L168'>flags</a>             168 tests/lib/vfs/current_dir.c     vfs_test_ops.flags = data-&gt;input_class_flags;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--current_dir.c.html#L169'>flags</a>             169 tests/lib/vfs/current_dir.c     test_subclass.flags = data-&gt;input_subclass_flags;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_manipulations.c.html#L48'>flags</a>              48 tests/lib/vfs/path_manipulations.c     test_subclass1.flags = VFS_S_REMOTE;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_manipulations.c.html#L52'>flags</a>              52 tests/lib/vfs/path_manipulations.c     vfs_test_ops1.flags = VFSF_NOLINKS;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_manipulations.c.html#L64'>flags</a>              64 tests/lib/vfs/path_manipulations.c     vfs_test_ops3.flags = VFSF_LOCAL;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_recode.c.html#L249'>flags</a>             249 tests/lib/vfs/path_recode.c     test_subclass1.flags = VFS_S_REMOTE;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_recode.c.html#L252'>flags</a>             252 tests/lib/vfs/path_recode.c     vfs_test_ops1.flags = VFSF_NOLINKS;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_serialize.c.html#L57'>flags</a>              57 tests/lib/vfs/path_serialize.c     test_subclass1.flags = VFS_S_REMOTE;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_serialize.c.html#L61'>flags</a>              61 tests/lib/vfs/path_serialize.c     vfs_test_ops1.flags = VFSF_NOLINKS;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--relative_cd.c.html#L81'>flags</a>              81 tests/lib/vfs/relative_cd.c     test_subclass1.flags = VFS_S_REMOTE;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--relative_cd.c.html#L85'>flags</a>              85 tests/lib/vfs/relative_cd.c     vfs_test_ops1.flags = VFSF_NOLINKS;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L47'>flags</a>              47 tests/lib/vfs/vfs_parse_ls_lga.c void message (int flags, const char *title, const char *text, ...) G_GNUC_PRINTF (3, 4);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L64'>flags</a>              64 tests/lib/vfs/vfs_parse_ls_lga.c     test_subclass1.flags = VFS_S_REMOTE;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L67'>flags</a>              67 tests/lib/vfs/vfs_parse_ls_lga.c     vfs_test_ops1.flags = VFSF_NOLINKS;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L93'>flags</a>              93 tests/lib/vfs/vfs_parse_ls_lga.c message (int flags, const char *title, const char *text, ...)</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L98'>flags</a>              98 tests/lib/vfs/vfs_parse_ls_lga.c     (void) flags;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_path_string_convert.c.html#L61'>flags</a>              61 tests/lib/vfs/vfs_path_string_convert.c     vfs_test_ops1.flags = VFSF_NOLINKS;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_path_string_convert.c.html#L65'>flags</a>              65 tests/lib/vfs/vfs_path_string_convert.c     test_subclass2.flags = VFS_S_REMOTE;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_prefix_to_class.c.html#L65'>flags</a>              65 tests/lib/vfs/vfs_prefix_to_class.c     test_subclass1.flags = VFS_S_REMOTE;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_prefix_to_class.c.html#L68'>flags</a>              68 tests/lib/vfs/vfs_prefix_to_class.c     vfs_test_ops1.flags = VFSF_NOLINKS;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L92'>flags</a>              92 tests/lib/vfs/vfs_s_get_path.c     test_subclass1.flags = VFS_S_REMOTE;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L96'>flags</a>              96 tests/lib/vfs/vfs_s_get_path.c     vfs_test_ops1.flags = VFSF_NOLINKS;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_split.c.html#L52'>flags</a>              52 tests/lib/vfs/vfs_split.c     test_subclass1.flags = VFS_S_REMOTE;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_split.c.html#L56'>flags</a>              56 tests/lib/vfs/vfs_split.c     vfs_test_ops1.flags = VFSF_NOLINKS;</span>
+<span class='curline'><a href='../S/tests--lib--widget--complete_engine.c.html#L36'>flags</a>              36 tests/lib/widget/complete_engine.c char **try_complete (char *text, int *lc_start, int *lc_end, input_complete_t flags);</span>
+<span class='curline'><a href='../S/tests--lib--widget--complete_engine.c.html#L54'>flags</a>              54 tests/lib/widget/complete_engine.c try_complete (char *text, int *lc_start, int *lc_end, input_complete_t flags)</span>
+<span class='curline'><a href='../S/tests--lib--widget--complete_engine.c.html#L59'>flags</a>              59 tests/lib/widget/complete_engine.c     try_complete__flags__captured = flags;</span>
+<span class='curline'><a href='../S/tests--src--execute__common.c.html#L65'>flags</a>              65 tests/src/execute__common.c void do_execute (const char *lc_shell, const char *command, int flags);</span>
+<span class='curline'><a href='../S/tests--src--execute__common.c.html#L76'>flags</a>              76 tests/src/execute__common.c do_execute (const char *lc_shell, const char *command, int flags)</span>
+<span class='curline'><a href='../S/tests--src--execute__common.c.html#L80'>flags</a>              80 tests/src/execute__common.c     do_execute__flags__captured = flags;</span>
+<span class='curline'><a href='../S/tests--src--execute__common.c.html#L139'>flags</a>             139 tests/src/execute__common.c message (int flags, const char *title, const char *text, ...)</span>
+<span class='curline'><a href='../S/tests--src--execute__common.c.html#L143'>flags</a>             143 tests/src/execute__common.c     message_flags__captured = flags;</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_external_editor_or_viewer.c.html#L75'>flags</a>              75 tests/src/execute__execute_external_editor_or_viewer.c void do_executev (const char *lc_shell, int flags, char *const argv[]);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_external_editor_or_viewer.c.html#L86'>flags</a>              86 tests/src/execute__execute_external_editor_or_viewer.c do_executev (const char *lc_shell, int flags, char *const argv[])</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_external_editor_or_viewer.c.html#L89'>flags</a>              89 tests/src/execute__execute_external_editor_or_viewer.c     do_executev__flags__captured = flags;</span>
+<span class='curline'><a href='../S/tests--src--filemanager--examine_cd.c.html#L97'>flags</a>              97 tests/src/filemanager/examine_cd.c shell_execute (const char *command, int flags)</span>
+<span class='curline'><a href='../S/tests--src--filemanager--examine_cd.c.html#L100'>flags</a>             100 tests/src/filemanager/examine_cd.c     (void) flags;</span>
+</pre>
+</body>
+</html>

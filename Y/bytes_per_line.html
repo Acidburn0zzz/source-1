@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>bytes_per_line</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L333'>bytes_per_line</a>    333 src/viewer/display.c     view-&gt;bytes_per_line = bytes;</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L103'>bytes_per_line</a>    103 src/viewer/hex.c     const int ngroups = view-&gt;bytes_per_line / 4;</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L135'>bytes_per_line</a>    135 src/viewer/hex.c         if (from &gt;= view-&gt;bytes_per_line)</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L138'>bytes_per_line</a>    138 src/viewer/hex.c             from -= view-&gt;bytes_per_line;</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L140'>bytes_per_line</a>    140 src/viewer/hex.c         if (view-&gt;bytes_per_line == 4 &amp;&amp; from &gt;= view-&gt;bytes_per_line)</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L143'>bytes_per_line</a>    143 src/viewer/hex.c             from -= view-&gt;bytes_per_line;</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L169'>bytes_per_line</a>    169 src/viewer/hex.c         for (bytes = 0; bytes &lt; view-&gt;bytes_per_line; bytes++, from++)</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L292'>bytes_per_line</a>    292 src/viewer/hex.c             if (bytes != view-&gt;bytes_per_line - 1)</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L180'>bytes_per_line</a>    180 src/viewer/internal.h     int bytes_per_line;         /* Number of bytes per line in hex mode */</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L136'>bytes_per_line</a>    136 src/viewer/lib.c         view-&gt;dpy_start = mcview_offset_rounddown (view-&gt;dpy_start, view-&gt;bytes_per_line);</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L189'>bytes_per_line</a>    189 src/viewer/lib.c     view-&gt;bytes_per_line = 1;</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L273'>bytes_per_line</a>    273 src/viewer/mcviewer.c     assert (view-&gt;bytes_per_line != 0);</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L436'>bytes_per_line</a>    436 src/viewer/mcviewer.c             view-&gt;dpy_start = new_offset - new_offset % view-&gt;bytes_per_line;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L75'>bytes_per_line</a>     75 src/viewer/move.c         off_t bytes = view-&gt;bytes_per_line;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L114'>bytes_per_line</a>    114 src/viewer/move.c         off_t bytes = lines * view-&gt;bytes_per_line;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L127'>bytes_per_line</a>    127 src/viewer/move.c             view-&gt;hex_cursor %= view-&gt;bytes_per_line;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L148'>bytes_per_line</a>    148 src/viewer/move.c         limit = mcview_offset_doz (last_byte, (off_t) view-&gt;bytes_per_line);</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L152'>bytes_per_line</a>    152 src/viewer/move.c             view-&gt;hex_cursor += view-&gt;bytes_per_line;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L155'>bytes_per_line</a>    155 src/viewer/move.c                 view-&gt;dpy_start += view-&gt;bytes_per_line;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L273'>bytes_per_line</a>    273 src/viewer/move.c         view-&gt;hex_cursor -= view-&gt;hex_cursor % view-&gt;bytes_per_line;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L293'>bytes_per_line</a>    293 src/viewer/move.c         bol = mcview_offset_rounddown (view-&gt;hex_cursor, view-&gt;bytes_per_line);</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L294'>bytes_per_line</a>    294 src/viewer/move.c         if (mcview_get_byte_indexed (view, bol, view-&gt;bytes_per_line - 1, NULL) == TRUE)</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L296'>bytes_per_line</a>    296 src/viewer/move.c             view-&gt;hex_cursor = bol + view-&gt;bytes_per_line - 1;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L319'>bytes_per_line</a>    319 src/viewer/move.c         view-&gt;dpy_start = offset - offset % view-&gt;bytes_per_line;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L396'>bytes_per_line</a>    396 src/viewer/move.c         view-&gt;dpy_start = view-&gt;search_start - view-&gt;search_start % view-&gt;bytes_per_line;</span>
+<span class='curline'><a href='../S/src--viewer--move.c.html#L397'>bytes_per_line</a>    397 src/viewer/move.c         view-&gt;dpy_end = view-&gt;search_end - view-&gt;search_end % view-&gt;bytes_per_line;</span>
+</pre>
+</body>
+</html>

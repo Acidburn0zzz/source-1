@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>SMB_OFF_T</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--client.h.html#L21'>SMB_OFF_T</a>          21 src/vfs/smbfs/helpers/include/client.h     SMB_OFF_T size;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--includes.h.html#L352'>SMB_OFF_T</a>         352 src/vfs/smbfs/helpers/include/includes.h #ifndef SMB_OFF_T</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--includes.h.html#L356'>SMB_OFF_T</a>         356 src/vfs/smbfs/helpers/include/includes.h #define SMB_OFF_T_BITS (sizeof(SMB_OFF_T)*8)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L60'>SMB_OFF_T</a>          60 src/vfs/smbfs/helpers/include/proto.h int sys_fseek (FILE * fp, SMB_OFF_T offset, int whence);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L61'>SMB_OFF_T</a>          61 src/vfs/smbfs/helpers/include/proto.h SMB_OFF_T sys_ftell (FILE * fp);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L111'>SMB_OFF_T</a>         111 src/vfs/smbfs/helpers/include/proto.h SMB_OFF_T file_size (char *file_name);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L127'>SMB_OFF_T</a>         127 src/vfs/smbfs/helpers/include/proto.h void make_dir_struct (char *buf, char *mask, char *fname, SMB_OFF_T size, int mode, time_t date);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L131'>SMB_OFF_T</a>         131 src/vfs/smbfs/helpers/include/proto.h SMB_OFF_T transfer_file (int infd, int outfd, SMB_OFF_T n, char *header, int headlen, int align);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L137'>SMB_OFF_T</a>         137 src/vfs/smbfs/helpers/include/proto.h int set_filelen (int fd, SMB_OFF_T len);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L158'>SMB_OFF_T</a>         158 src/vfs/smbfs/helpers/include/proto.h BOOL fcntl_lock (int fd, int op, SMB_OFF_T offset, SMB_OFF_T count, int type);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L600'>SMB_OFF_T</a>         600 src/vfs/smbfs/helpers/include/smb.h     SMB_OFF_T pos;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L601'>SMB_OFF_T</a>         601 src/vfs/smbfs/helpers/include/smb.h     SMB_OFF_T size;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L605'>SMB_OFF_T</a>         605 src/vfs/smbfs/helpers/include/smb.h     SMB_OFF_T mmap_size;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charset.c.html#L208'>SMB_OFF_T</a>         208 src/vfs/smbfs/helpers/lib/charset.c     SMB_OFF_T size;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L186'>SMB_OFF_T</a>         186 src/vfs/smbfs/helpers/lib/system.c sys_fseek (FILE * fp, SMB_OFF_T offset, int whence)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L195'>SMB_OFF_T</a>         195 src/vfs/smbfs/helpers/lib/system.c SMB_OFF_T</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--system.c.html#L198'>SMB_OFF_T</a>         198 src/vfs/smbfs/helpers/lib/system.c     return (SMB_OFF_T) ftell (fp);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L423'>SMB_OFF_T</a>         423 src/vfs/smbfs/helpers/lib/util.c SMB_OFF_T</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L429'>SMB_OFF_T</a>         429 src/vfs/smbfs/helpers/lib/util.c         return (SMB_OFF_T) - 1;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L932'>SMB_OFF_T</a>         932 src/vfs/smbfs/helpers/lib/util.c make_dir_struct (char *buf, char *mask, char *fname, SMB_OFF_T size, int mode, time_t date)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1044'>SMB_OFF_T</a>        1044 src/vfs/smbfs/helpers/lib/util.c SMB_OFF_T</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1045'>SMB_OFF_T</a>        1045 src/vfs/smbfs/helpers/lib/util.c transfer_file (int infd, int outfd, SMB_OFF_T n, char *header, int headlen, int align)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1050'>SMB_OFF_T</a>        1050 src/vfs/smbfs/helpers/lib/util.c     SMB_OFF_T total = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1080'>SMB_OFF_T</a>        1080 src/vfs/smbfs/helpers/lib/util.c         int s = (int) MIN (n, (SMB_OFF_T) size);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1730'>SMB_OFF_T</a>        1730 src/vfs/smbfs/helpers/lib/util.c set_filelen (int fd, SMB_OFF_T len)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1741'>SMB_OFF_T</a>        1741 src/vfs/smbfs/helpers/lib/util.c     SMB_OFF_T currpos = sys_lseek (fd, (SMB_OFF_T) 0, SEEK_CUR);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2776'>SMB_OFF_T</a>        2776 src/vfs/smbfs/helpers/lib/util.c fcntl_lock (int fd, int op, SMB_OFF_T offset, SMB_OFF_T count, int type)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2784'>SMB_OFF_T</a>        2784 src/vfs/smbfs/helpers/lib/util.c         SMB_OFF_T mask2 = ((SMB_OFF_T) 0x3) &lt;&lt; (SMB_OFF_T_BITS - 4);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2785'>SMB_OFF_T</a>        2785 src/vfs/smbfs/helpers/lib/util.c         SMB_OFF_T mask = (mask2 &lt;&lt; 2);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2799'>SMB_OFF_T</a>        2799 src/vfs/smbfs/helpers/lib/util.c         SMB_OFF_T mask2 = ((SMB_OFF_T) 0x4) &lt;&lt; (SMB_OFF_T_BITS - 4);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2800'>SMB_OFF_T</a>        2800 src/vfs/smbfs/helpers/lib/util.c         SMB_OFF_T mask = (mask2 &lt;&lt; 1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2801'>SMB_OFF_T</a>        2801 src/vfs/smbfs/helpers/lib/util.c         SMB_OFF_T neg_mask = ~mask;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util_file.c.html#L194'>SMB_OFF_T</a>         194 src/vfs/smbfs/helpers/lib/util_file.c     return !sys_fseek ((FILE *) vp, (SMB_OFF_T) tok, SEEK_SET);</span>
+</pre>
+</body>
+</html>

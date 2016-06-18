@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>history_ptr</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--help.c.html#L96'>history_ptr</a>        96 src/help.c     static int history_ptr;         /* For the history queue */</span>
+<span class='curline'><a href='../S/src--help.c.html#L607'>history_ptr</a>       607 src/help.c         history_ptr = (history_ptr + 1) % HISTORY_SIZE;</span>
+<span class='curline'><a href='../S/src--help.c.html#L608'>history_ptr</a>       608 src/help.c         history[history_ptr].page = currentpoint;</span>
+<span class='curline'><a href='../S/src--help.c.html#L609'>history_ptr</a>       609 src/help.c         history[history_ptr].link = selected_item;</span>
+<span class='curline'><a href='../S/src--help.c.html#L633'>history_ptr</a>       633 src/help.c             history_ptr = (history_ptr + 1) % HISTORY_SIZE;</span>
+<span class='curline'><a href='../S/src--help.c.html#L634'>history_ptr</a>       634 src/help.c             history[history_ptr].page = currentpoint;</span>
+<span class='curline'><a href='../S/src--help.c.html#L635'>history_ptr</a>       635 src/help.c             history[history_ptr].link = selected_item;</span>
+<span class='curline'><a href='../S/src--help.c.html#L648'>history_ptr</a>       648 src/help.c         currentpoint = history[history_ptr].page;</span>
+<span class='curline'><a href='../S/src--help.c.html#L649'>history_ptr</a>       649 src/help.c         selected_item = history[history_ptr].link;</span>
+<span class='curline'><a href='../S/src--help.c.html#L650'>history_ptr</a>       650 src/help.c         history_ptr--;</span>
+<span class='curline'><a href='../S/src--help.c.html#L651'>history_ptr</a>       651 src/help.c         if (history_ptr &lt; 0)</span>
+<span class='curline'><a href='../S/src--help.c.html#L652'>history_ptr</a>       652 src/help.c             history_ptr = HISTORY_SIZE - 1;</span>
+<span class='curline'><a href='../S/src--help.c.html#L756'>history_ptr</a>       756 src/help.c             history_ptr--;</span>
+<span class='curline'><a href='../S/src--help.c.html#L757'>history_ptr</a>       757 src/help.c             if (history_ptr &lt; 0)</span>
+<span class='curline'><a href='../S/src--help.c.html#L758'>history_ptr</a>       758 src/help.c                 history_ptr = HISTORY_SIZE - 1;</span>
+<span class='curline'><a href='../S/src--help.c.html#L760'>history_ptr</a>       760 src/help.c             currentpoint = history[history_ptr].page;</span>
+<span class='curline'><a href='../S/src--help.c.html#L761'>history_ptr</a>       761 src/help.c             selected_item = history[history_ptr].link;</span>
+<span class='curline'><a href='../S/src--help.c.html#L766'>history_ptr</a>       766 src/help.c             history_ptr = (history_ptr + 1) % HISTORY_SIZE;</span>
+<span class='curline'><a href='../S/src--help.c.html#L767'>history_ptr</a>       767 src/help.c             history[history_ptr].page = currentpoint;</span>
+<span class='curline'><a href='../S/src--help.c.html#L768'>history_ptr</a>       768 src/help.c             history[history_ptr].link = selected_item;</span>
+<span class='curline'><a href='../S/src--help.c.html#L998'>history_ptr</a>       998 src/help.c             history_ptr = (history_ptr + 1) % HISTORY_SIZE;</span>
+<span class='curline'><a href='../S/src--help.c.html#L999'>history_ptr</a>       999 src/help.c             history[history_ptr].page = currentpoint;</span>
+<span class='curline'><a href='../S/src--help.c.html#L1000'>history_ptr</a>      1000 src/help.c             history[history_ptr].link = la-&gt;link_name;</span>
+<span class='curline'><a href='../S/src--help.c.html#L1107'>history_ptr</a>      1107 src/help.c         for (history_ptr = HISTORY_SIZE; history_ptr;)</span>
+<span class='curline'><a href='../S/src--help.c.html#L1109'>history_ptr</a>      1109 src/help.c             history_ptr--;</span>
+<span class='curline'><a href='../S/src--help.c.html#L1110'>history_ptr</a>      1110 src/help.c             history[history_ptr].page = currentpoint;</span>
+<span class='curline'><a href='../S/src--help.c.html#L1111'>history_ptr</a>      1111 src/help.c             history[history_ptr].link = selected_item;</span>
+</pre>
+</body>
+</html>

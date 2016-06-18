@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>commands</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L425'>commands</a>          425 src/filemanager/usermenu.c execute_menu_command (const WEdit * edit_widget, const char *commands, gboolean show_prompt)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L438'>commands</a>          438 src/filemanager/usermenu.c     commands = strchr (commands, '\n');</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L439'>commands</a>          439 src/filemanager/usermenu.c     if (commands == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L453'>commands</a>          453 src/filemanager/usermenu.c     commands++;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L455'>commands</a>          455 src/filemanager/usermenu.c     for (col = 0; *commands != '\0'; commands++)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L459'>commands</a>          459 src/filemanager/usermenu.c             if (*commands != ' ' &amp;&amp; *commands != '\t')</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L461'>commands</a>          461 src/filemanager/usermenu.c             while (*commands == ' ' || *commands == '\t')</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L462'>commands</a>          462 src/filemanager/usermenu.c                 commands++;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L463'>commands</a>          463 src/filemanager/usermenu.c             if (*commands == '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L467'>commands</a>          467 src/filemanager/usermenu.c         if (*commands == '\n')</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L471'>commands</a>          471 src/filemanager/usermenu.c             if (*commands == '}')</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L501'>commands</a>          501 src/filemanager/usermenu.c                 *parameter++ = *commands;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L506'>commands</a>          506 src/filemanager/usermenu.c             if (g_ascii_isdigit ((gchar) * commands))</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L508'>commands</a>          508 src/filemanager/usermenu.c                 do_quote = (atoi (commands) != 0);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L509'>commands</a>          509 src/filemanager/usermenu.c                 while (g_ascii_isdigit ((gchar) * commands))</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L510'>commands</a>          510 src/filemanager/usermenu.c                     commands++;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L512'>commands</a>          512 src/filemanager/usermenu.c             if (*commands == '{')</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L518'>commands</a>          518 src/filemanager/usermenu.c                 text = expand_format (edit_widget, *commands, do_quote);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L525'>commands</a>          525 src/filemanager/usermenu.c             if (*commands == '%')</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L529'>commands</a>          529 src/filemanager/usermenu.c                 i = check_format_view (commands + 1);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L532'>commands</a>          532 src/filemanager/usermenu.c                     commands += i;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L542'>commands</a>          542 src/filemanager/usermenu.c                 fputc (*commands, cmd_file);</span>
+</pre>
+</body>
+</html>

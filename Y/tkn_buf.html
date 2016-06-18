@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>tkn_buf</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L214'>tkn_buf</a>           214 src/filemanager/hotlist.c static GString *tkn_buf = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1225'>tkn_buf</a>          1225 src/filemanager/hotlist.c     if (tkn_buf == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1226'>tkn_buf</a>          1226 src/filemanager/hotlist.c         tkn_buf = g_string_new ("");</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1227'>tkn_buf</a>          1227 src/filemanager/hotlist.c     g_string_set_size (tkn_buf, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1241'>tkn_buf</a>          1241 src/filemanager/hotlist.c             g_string_append_c (tkn_buf, c);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1252'>tkn_buf</a>          1252 src/filemanager/hotlist.c                     g_string_free (tkn_buf, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1256'>tkn_buf</a>          1256 src/filemanager/hotlist.c             g_string_append_c (tkn_buf, c == '\n' ? ' ' : c);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1264'>tkn_buf</a>          1264 src/filemanager/hotlist.c             g_string_free (tkn_buf, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1275'>tkn_buf</a>          1275 src/filemanager/hotlist.c             g_string_append_c (tkn_buf, g_ascii_toupper (c));</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1280'>tkn_buf</a>          1280 src/filemanager/hotlist.c         l = tkn_buf-&gt;len;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1281'>tkn_buf</a>          1281 src/filemanager/hotlist.c         if (strncmp (tkn_buf-&gt;str, "GROUP", l) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1283'>tkn_buf</a>          1283 src/filemanager/hotlist.c         else if (strncmp (tkn_buf-&gt;str, "ENTRY", l) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1285'>tkn_buf</a>          1285 src/filemanager/hotlist.c         else if (strncmp (tkn_buf-&gt;str, "ENDGROUP", l) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1287'>tkn_buf</a>          1287 src/filemanager/hotlist.c         else if (strncmp (tkn_buf-&gt;str, "URL", l) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1313'>tkn_buf</a>          1313 src/filemanager/hotlist.c                 add2hotlist (g_strndup (tkn_buf-&gt;str, tkn_buf-&gt;len), 0, HL_TYPE_GROUP,</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1322'>tkn_buf</a>          1322 src/filemanager/hotlist.c                 label = g_strndup (tkn_buf-&gt;str, tkn_buf-&gt;len);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1325'>tkn_buf</a>          1325 src/filemanager/hotlist.c                 url = tilde_expand (tkn_buf-&gt;str);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1331'>tkn_buf</a>          1331 src/filemanager/hotlist.c             label = g_strndup (tkn_buf-&gt;str, tkn_buf-&gt;len);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1367'>tkn_buf</a>          1367 src/filemanager/hotlist.c                 add2hotlist (g_strndup (tkn_buf-&gt;str, tkn_buf-&gt;len), 0, HL_TYPE_GROUP,</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1376'>tkn_buf</a>          1376 src/filemanager/hotlist.c                 label = g_strndup (tkn_buf-&gt;str, tkn_buf-&gt;len);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1379'>tkn_buf</a>          1379 src/filemanager/hotlist.c                 url = tilde_expand (tkn_buf-&gt;str);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1385'>tkn_buf</a>          1385 src/filemanager/hotlist.c             label = g_strndup (tkn_buf-&gt;str, tkn_buf-&gt;len);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1692'>tkn_buf</a>          1692 src/filemanager/hotlist.c     if (tkn_buf != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1694'>tkn_buf</a>          1694 src/filemanager/hotlist.c         g_string_free (tkn_buf, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1695'>tkn_buf</a>          1695 src/filemanager/hotlist.c         tkn_buf = NULL;</span>
+</pre>
+</body>
+</html>

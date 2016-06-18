@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>super</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L167'>super</a>             167 lib/vfs/direntry.c     target = (MEDATA-&gt;find_entry) (me, entry-&gt;dir-&gt;super-&gt;root, linkname, follow - 1, 0);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L248'>super</a>             248 lib/vfs/direntry.c     if (root-&gt;super-&gt;root != root)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L261'>super</a>             261 lib/vfs/direntry.c         ino = vfs_s_find_inode (me, root-&gt;super, dirname, follow, flags | FL_DIR);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L285'>super</a>             285 lib/vfs/direntry.c         ino = vfs_s_new_inode (me, root-&gt;super, vfs_s_default_stat (me, S_IFDIR | 0755));</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L320'>super</a>             320 lib/vfs/direntry.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L322'>super</a>             322 lib/vfs/direntry.c     super = g_new0 (struct vfs_s_super, 1);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L323'>super</a>             323 lib/vfs/direntry.c     super-&gt;me = me;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L324'>super</a>             324 lib/vfs/direntry.c     return super;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L330'>super</a>             330 lib/vfs/direntry.c vfs_s_insert_super (struct vfs_class *me, struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L332'>super</a>             332 lib/vfs/direntry.c     MEDATA-&gt;supers = g_list_prepend (MEDATA-&gt;supers, super);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L338'>super</a>             338 lib/vfs/direntry.c vfs_s_free_super (struct vfs_class *me, struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L340'>super</a>             340 lib/vfs/direntry.c     if (super-&gt;root != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L342'>super</a>             342 lib/vfs/direntry.c         vfs_s_free_inode (me, super-&gt;root);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L343'>super</a>             343 lib/vfs/direntry.c         super-&gt;root = NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L348'>super</a>             348 lib/vfs/direntry.c     if (super-&gt;ino_usage)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L350'>super</a>             350 lib/vfs/direntry.c                  "Super ino_usage is %d, memory leak", super-&gt;ino_usage);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L352'>super</a>             352 lib/vfs/direntry.c     if (super-&gt;want_stale)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L356'>super</a>             356 lib/vfs/direntry.c     MEDATA-&gt;supers = g_list_remove (MEDATA-&gt;supers, super);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L358'>super</a>             358 lib/vfs/direntry.c     CALL (free_archive) (me, super);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L360'>super</a>             360 lib/vfs/direntry.c     vfs_path_element_free (super-&gt;path_element);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L362'>super</a>             362 lib/vfs/direntry.c     g_free (super-&gt;name);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L363'>super</a>             363 lib/vfs/direntry.c     g_free (super);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L373'>super</a>             373 lib/vfs/direntry.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L378'>super</a>             378 lib/vfs/direntry.c     q = vfs_s_get_path (vpath, &amp;super, 0);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L385'>super</a>             385 lib/vfs/direntry.c         vfs_s_find_inode (path_element-&gt;class, super, q,</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L391'>super</a>             391 lib/vfs/direntry.c             vfs_s_find_inode (path_element-&gt;class, super, q,</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L463'>super</a>             463 lib/vfs/direntry.c     vfs_s_free_inode (dir-&gt;super-&gt;me, dir);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L627'>super</a>             627 lib/vfs/direntry.c             FH-&gt;ino-&gt;super-&gt;me-&gt;verrno = errno;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L716'>super</a>             716 lib/vfs/direntry.c         const struct vfs_s_super *super = (const struct vfs_s_super *) iter-&gt;data;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L719'>super</a>             719 lib/vfs/direntry.c         name = g_strconcat (super-&gt;name, PATH_SEP_STR, me-&gt;prefix, VFS_PATH_URL_DELIMITER,</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L799'>super</a>             799 lib/vfs/direntry.c                 ino-&gt;super-&gt;want_stale = 1;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L802'>super</a>             802 lib/vfs/direntry.c                 ino-&gt;super-&gt;want_stale = 0;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L803'>super</a>             803 lib/vfs/direntry.c                 vfs_s_invalidate (path_element-&gt;class, ino-&gt;super);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L877'>super</a>             877 lib/vfs/direntry.c vfs_s_new_inode (struct vfs_class *me, struct vfs_s_super *super, struct stat *initstat)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L887'>super</a>             887 lib/vfs/direntry.c     ino-&gt;super = super;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L892'>super</a>             892 lib/vfs/direntry.c     super-&gt;ino_usage++;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L924'>super</a>             924 lib/vfs/direntry.c     ino-&gt;super-&gt;ino_usage--;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1014'>super</a>            1014 lib/vfs/direntry.c     inode = vfs_s_new_inode (me, parent-&gt;super, st);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1022'>super</a>            1022 lib/vfs/direntry.c vfs_s_find_inode (struct vfs_class *me, const struct vfs_s_super *super,</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1028'>super</a>            1028 lib/vfs/direntry.c         return super-&gt;root;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1030'>super</a>            1030 lib/vfs/direntry.c     ent = (MEDATA-&gt;find_entry) (me, super-&gt;root, path, follow, flags);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1051'>super</a>            1051 lib/vfs/direntry.c     struct vfs_s_super *super = NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1073'>super</a>            1073 lib/vfs/direntry.c         super = (struct vfs_s_super *) iter-&gt;data;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1076'>super</a>            1076 lib/vfs/direntry.c         i = subclass-&gt;archive_same (path_element, super, vpath_archive, cookie);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1082'>super</a>            1082 lib/vfs/direntry.c         super = NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1087'>super</a>            1087 lib/vfs/direntry.c     return super;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1105'>super</a>            1105 lib/vfs/direntry.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1114'>super</a>            1114 lib/vfs/direntry.c     super = vfs_get_super_by_vpath (vpath);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1115'>super</a>            1115 lib/vfs/direntry.c     if (super != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1124'>super</a>            1124 lib/vfs/direntry.c     super = vfs_s_new_super (path_element-&gt;class);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1134'>super</a>            1134 lib/vfs/direntry.c         result = subclass-&gt;open_archive (super, vpath_archive, path_element);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1139'>super</a>            1139 lib/vfs/direntry.c         vfs_s_free_super (path_element-&gt;class, super);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1143'>super</a>            1143 lib/vfs/direntry.c     if (!super-&gt;name)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1145'>super</a>            1145 lib/vfs/direntry.c     if (!super-&gt;root)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1148'>super</a>            1148 lib/vfs/direntry.c     vfs_s_insert_super (path_element-&gt;class, super);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1149'>super</a>            1149 lib/vfs/direntry.c     vfs_stamp_create (path_element-&gt;class, super);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1152'>super</a>            1152 lib/vfs/direntry.c     *archive = super;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1159'>super</a>            1159 lib/vfs/direntry.c vfs_s_invalidate (struct vfs_class *me, struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1161'>super</a>            1161 lib/vfs/direntry.c     if (!super-&gt;want_stale)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1163'>super</a>            1163 lib/vfs/direntry.c         vfs_s_free_inode (me, super-&gt;root);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1164'>super</a>            1164 lib/vfs/direntry.c         super-&gt;root = vfs_s_new_inode (me, super, vfs_s_default_stat (me, S_IFDIR | 0755));</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1184'>super</a>            1184 lib/vfs/direntry.c             if (ino == ino-&gt;super-&gt;root)</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1208'>super</a>            1208 lib/vfs/direntry.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1215'>super</a>            1215 lib/vfs/direntry.c     q = vfs_s_get_path (vpath, &amp;super, 0);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1218'>super</a>            1218 lib/vfs/direntry.c     ino = vfs_s_find_inode (path_element-&gt;class, super, q, LINK_FOLLOW, FL_NONE);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1236'>super</a>            1236 lib/vfs/direntry.c         dir = vfs_s_find_inode (path_element-&gt;class, super, dirname, LINK_FOLLOW, FL_DIR);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1316'>super</a>            1316 lib/vfs/direntry.c     vfs_rmstamp (path_element-&gt;class, (vfsid) super);</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L1317'>super</a>            1317 lib/vfs/direntry.c     super-&gt;fd_usage++;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L739'>super</a>             739 lib/vfs/interface.c             struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L741'>super</a>             741 lib/vfs/interface.c             super = vfs_get_super_by_vpath (vpath);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L742'>super</a>             742 lib/vfs/interface.c             if (super != NULL &amp;&amp; super-&gt;path_element != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L744'>super</a>             744 lib/vfs/interface.c                 g_free (super-&gt;path_element-&gt;path);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L745'>super</a>             745 lib/vfs/interface.c                 super-&gt;path_element-&gt;path = g_strdup (path_element-&gt;path);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L42'>super</a>              42 lib/vfs/xdirentry.h #define FH_SUPER FH-&gt;ino-&gt;super</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L91'>super</a>              91 lib/vfs/xdirentry.h     struct vfs_s_super *super;  /* Archive the file is on */</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L162'>super</a>             162 lib/vfs/xdirentry.h                                      struct vfs_s_super *super, struct stat *initstat);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L174'>super</a>             174 lib/vfs/xdirentry.h                                       const struct vfs_s_super *super,</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L183'>super</a>             183 lib/vfs/xdirentry.h void vfs_s_invalidate (struct vfs_class *me, struct vfs_s_super *super);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L55'>super</a>              55 src/vfs/cpio/cpio.c #define CPIO_POS(super) cpio_position</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L59'>super</a>              59 src/vfs/cpio/cpio.c #define CPIO_SEEK_SET(super, where) \</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L60'>super</a>              60 src/vfs/cpio/cpio.c         mc_lseek (((cpio_super_data_t *)(super)-&gt;data)-&gt;fd, \</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L61'>super</a>              61 src/vfs/cpio/cpio.c                   CPIO_POS(super) = (where), SEEK_SET)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L62'>super</a>              62 src/vfs/cpio/cpio.c #define CPIO_SEEK_CUR(super, where) \</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L63'>super</a>              63 src/vfs/cpio/cpio.c         mc_lseek (((cpio_super_data_t *)(super)-&gt;data)-&gt;fd, \</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L64'>super</a>              64 src/vfs/cpio/cpio.c                   CPIO_POS(super) += (where), SEEK_SET)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L67'>super</a>              67 src/vfs/cpio/cpio.c #define SEEKBACK CPIO_SEEK_CUR(super, ptr - top)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L68'>super</a>              68 src/vfs/cpio/cpio.c #define RETURN(x) return (((cpio_super_data_t *)super-&gt;data)-&gt;type = (x))</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L70'>super</a>              70 src/vfs/cpio/cpio.c         ((((cpio_super_data_t *)super-&gt;data)-&gt;type == CPIO_UNKNOWN) || \</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L71'>super</a>              71 src/vfs/cpio/cpio.c          (((cpio_super_data_t *)super-&gt;data)-&gt;type == (x)))</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L153'>super</a>             153 src/vfs/cpio/cpio.c static ssize_t cpio_find_head (struct vfs_class *me, struct vfs_s_super *super);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L154'>super</a>             154 src/vfs/cpio/cpio.c static ssize_t cpio_read_bin_head (struct vfs_class *me, struct vfs_s_super *super);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L155'>super</a>             155 src/vfs/cpio/cpio.c static ssize_t cpio_read_oldc_head (struct vfs_class *me, struct vfs_s_super *super);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L156'>super</a>             156 src/vfs/cpio/cpio.c static ssize_t cpio_read_crc_head (struct vfs_class *me, struct vfs_s_super *super);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L173'>super</a>             173 src/vfs/cpio/cpio.c cpio_skip_padding (struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L175'>super</a>             175 src/vfs/cpio/cpio.c     switch (((cpio_super_data_t *) super-&gt;data)-&gt;type)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L179'>super</a>             179 src/vfs/cpio/cpio.c         return CPIO_SEEK_CUR (super, (2 - (CPIO_POS (super) % 2)) % 2);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L182'>super</a>             182 src/vfs/cpio/cpio.c         return CPIO_SEEK_CUR (super, (4 - (CPIO_POS (super) % 4)) % 4);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L184'>super</a>             184 src/vfs/cpio/cpio.c         return CPIO_POS (super);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L194'>super</a>             194 src/vfs/cpio/cpio.c cpio_free_archive (struct vfs_class *me, struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L196'>super</a>             196 src/vfs/cpio/cpio.c     cpio_super_data_t *arch = (cpio_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L200'>super</a>             200 src/vfs/cpio/cpio.c     if (super-&gt;data == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L208'>super</a>             208 src/vfs/cpio/cpio.c     MC_PTR_FREE (super-&gt;data);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L214'>super</a>             214 src/vfs/cpio/cpio.c cpio_open_cpio_file (struct vfs_class *me, struct vfs_s_super *super, const vfs_path_t * vpath)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L228'>super</a>             228 src/vfs/cpio/cpio.c     super-&gt;name = g_strdup (vfs_path_as_str (vpath));</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L229'>super</a>             229 src/vfs/cpio/cpio.c     super-&gt;data = g_new (cpio_super_data_t, 1);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L230'>super</a>             230 src/vfs/cpio/cpio.c     arch = (cpio_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L236'>super</a>             236 src/vfs/cpio/cpio.c     type = get_compression_type (fd, super-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L245'>super</a>             245 src/vfs/cpio/cpio.c         s = g_strconcat (super-&gt;name, decompress_extension (type), (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L253'>super</a>             253 src/vfs/cpio/cpio.c             MC_PTR_FREE (super-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L264'>super</a>             264 src/vfs/cpio/cpio.c     root = vfs_s_new_inode (me, super, &amp;arch-&gt;st);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L270'>super</a>             270 src/vfs/cpio/cpio.c     super-&gt;root = root;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L272'>super</a>             272 src/vfs/cpio/cpio.c     CPIO_SEEK_SET (super, 0);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L280'>super</a>             280 src/vfs/cpio/cpio.c cpio_read_head (struct vfs_class *me, struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L282'>super</a>             282 src/vfs/cpio/cpio.c     switch (cpio_find_head (me, super))</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L288'>super</a>             288 src/vfs/cpio/cpio.c         return cpio_read_bin_head (me, super);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L290'>super</a>             290 src/vfs/cpio/cpio.c         return cpio_read_oldc_head (me, super);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L293'>super</a>             293 src/vfs/cpio/cpio.c         return cpio_read_crc_head (me, super);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L303'>super</a>             303 src/vfs/cpio/cpio.c cpio_find_head (struct vfs_class *me, struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L305'>super</a>             305 src/vfs/cpio/cpio.c     cpio_super_data_t *arch = (cpio_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L313'>super</a>             313 src/vfs/cpio/cpio.c         CPIO_POS (super) += top;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L328'>super</a>             328 src/vfs/cpio/cpio.c                 message (D_ERROR, MSG_ERROR, _("Premature end of cpio archive\n%s"), super-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L329'>super</a>             329 src/vfs/cpio/cpio.c                 cpio_free_archive (me, super);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L367'>super</a>             367 src/vfs/cpio/cpio.c cpio_create_entry (struct vfs_class *me, struct vfs_s_super *super, struct stat *st, char *name)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L369'>super</a>             369 src/vfs/cpio/cpio.c     cpio_super_data_t *arch = (cpio_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L371'>super</a>             371 src/vfs/cpio/cpio.c     struct vfs_s_inode *root = super-&gt;root;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L416'>super</a>             416 src/vfs/cpio/cpio.c                          name, super-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L439'>super</a>             439 src/vfs/cpio/cpio.c         root = vfs_s_find_inode (me, super, name, LINK_FOLLOW, FL_MKDIR);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L456'>super</a>             456 src/vfs/cpio/cpio.c                      _("%s contains duplicate entries! Skipping!"), super-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L480'>super</a>             480 src/vfs/cpio/cpio.c                 inode = vfs_s_new_inode (me, super, st);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L496'>super</a>             496 src/vfs/cpio/cpio.c                 inode-&gt;data_offset = CPIO_POS (super);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L505'>super</a>             505 src/vfs/cpio/cpio.c             CPIO_SEEK_CUR (super, st-&gt;st_size);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L523'>super</a>             523 src/vfs/cpio/cpio.c             CPIO_POS (super) += st-&gt;st_size;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L524'>super</a>             524 src/vfs/cpio/cpio.c             cpio_skip_padding (super);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L534'>super</a>             534 src/vfs/cpio/cpio.c cpio_read_bin_head (struct vfs_class *me, struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L542'>super</a>             542 src/vfs/cpio/cpio.c     cpio_super_data_t *arch = (cpio_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L550'>super</a>             550 src/vfs/cpio/cpio.c     CPIO_POS (super) += len;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L560'>super</a>             560 src/vfs/cpio/cpio.c         message (D_ERROR, MSG_ERROR, _("Corrupted cpio header encountered in\n%s"), super-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L571'>super</a>             571 src/vfs/cpio/cpio.c     CPIO_POS (super) += len;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L572'>super</a>             572 src/vfs/cpio/cpio.c     cpio_skip_padding (super);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L590'>super</a>             590 src/vfs/cpio/cpio.c     return cpio_create_entry (me, super, &amp;st, name);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L599'>super</a>             599 src/vfs/cpio/cpio.c cpio_read_oldc_head (struct vfs_class *me, struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L601'>super</a>             601 src/vfs/cpio/cpio.c     cpio_super_data_t *arch = (cpio_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L613'>super</a>             613 src/vfs/cpio/cpio.c     CPIO_POS (super) += HEAD_LENGTH;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L621'>super</a>             621 src/vfs/cpio/cpio.c         message (D_ERROR, MSG_ERROR, _("Corrupted cpio header encountered in\n%s"), super-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L627'>super</a>             627 src/vfs/cpio/cpio.c         message (D_ERROR, MSG_ERROR, _("Corrupted cpio header encountered in\n%s"), super-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L638'>super</a>             638 src/vfs/cpio/cpio.c     CPIO_POS (super) += len;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L639'>super</a>             639 src/vfs/cpio/cpio.c     cpio_skip_padding (super);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L657'>super</a>             657 src/vfs/cpio/cpio.c     return cpio_create_entry (me, super, &amp;u.st, name);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L666'>super</a>             666 src/vfs/cpio/cpio.c cpio_read_crc_head (struct vfs_class *me, struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L668'>super</a>             668 src/vfs/cpio/cpio.c     cpio_super_data_t *arch = (cpio_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L681'>super</a>             681 src/vfs/cpio/cpio.c     CPIO_POS (super) += HEAD_LENGTH;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L691'>super</a>             691 src/vfs/cpio/cpio.c         message (D_ERROR, MSG_ERROR, _("Corrupted cpio header encountered in\n%s"), super-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L701'>super</a>             701 src/vfs/cpio/cpio.c         message (D_ERROR, MSG_ERROR, _("Corrupted cpio header encountered in\n%s"), super-&gt;name);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L714'>super</a>             714 src/vfs/cpio/cpio.c     CPIO_POS (super) += len;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L715'>super</a>             715 src/vfs/cpio/cpio.c     cpio_skip_padding (super);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L733'>super</a>             733 src/vfs/cpio/cpio.c     return cpio_create_entry (me, super, &amp;u.st, name);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L740'>super</a>             740 src/vfs/cpio/cpio.c cpio_open_archive (struct vfs_s_super *super, const vfs_path_t * vpath,</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L745'>super</a>             745 src/vfs/cpio/cpio.c     if (cpio_open_cpio_file (vpath_element-&gt;class, super, vpath) == -1)</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L752'>super</a>             752 src/vfs/cpio/cpio.c         status = cpio_read_head (vpath_element-&gt;class, super);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L120'>super</a>             120 src/vfs/fish/fish.c #define SUP ((fish_super_data_t *) super-&gt;data)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L240'>super</a>             240 src/vfs/fish/fish.c fish_command (struct vfs_class *me, struct vfs_s_super *super, int wait_reply, const char *fmt, ...)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L279'>super</a>             279 src/vfs/fish/fish.c fish_free_archive (struct vfs_class *me, struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L283'>super</a>             283 src/vfs/fish/fish.c         vfs_print_message (_("fish: Disconnecting from %s"), super-&gt;name ? super-&gt;name : "???");</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L284'>super</a>             284 src/vfs/fish/fish.c         fish_command (me, super, NONE, "%s", "#BYE\nexit\n");</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L306'>super</a>             306 src/vfs/fish/fish.c     super-&gt;data = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L312'>super</a>             312 src/vfs/fish/fish.c fish_pipeopen (struct vfs_s_super *super, const char *path, const char *argv[])</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L385'>super</a>             385 src/vfs/fish/fish.c fish_info (struct vfs_class *me, struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L387'>super</a>             387 src/vfs/fish/fish.c     if (fish_command (me, super, NONE, "%s", SUP-&gt;scr_info) == COMPLETE)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L410'>super</a>             410 src/vfs/fish/fish.c fish_open_archive_pipeopen (struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L414'>super</a>             414 src/vfs/fish/fish.c     const char *xsh = (super-&gt;path_element-&gt;port == FISH_FLAG_RSH ? "rsh" : "ssh");</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L418'>super</a>             418 src/vfs/fish/fish.c     if (super-&gt;path_element-&gt;port == FISH_FLAG_COMPRESSED)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L421'>super</a>             421 src/vfs/fish/fish.c     if (super-&gt;path_element-&gt;port &gt; FISH_FLAG_RSH)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L424'>super</a>             424 src/vfs/fish/fish.c         g_snprintf (gbuf, sizeof (gbuf), "%d", super-&gt;path_element-&gt;port);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L435'>super</a>             435 src/vfs/fish/fish.c     if (super-&gt;path_element-&gt;user != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L438'>super</a>             438 src/vfs/fish/fish.c         argv[i++] = super-&gt;path_element-&gt;user;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L443'>super</a>             443 src/vfs/fish/fish.c         super-&gt;path_element-&gt;user = vfs_get_local_username ();</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L446'>super</a>             446 src/vfs/fish/fish.c     argv[i++] = super-&gt;path_element-&gt;host;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L450'>super</a>             450 src/vfs/fish/fish.c     fish_pipeopen (super, xsh, argv);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L456'>super</a>             456 src/vfs/fish/fish.c fish_open_archive_talk (struct vfs_class *me, struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L474'>super</a>             474 src/vfs/fish/fish.c         if (super-&gt;path_element-&gt;password == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L477'>super</a>             477 src/vfs/fish/fish.c             p = g_strdup_printf (_("fish: Password is required for %s"), super-&gt;path_element-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L482'>super</a>             482 src/vfs/fish/fish.c             super-&gt;path_element-&gt;password = op;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L491'>super</a>             491 src/vfs/fish/fish.c             str_len = strlen (super-&gt;path_element-&gt;password);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L492'>super</a>             492 src/vfs/fish/fish.c             if ((write (SUP.sockw, super-&gt;path_element-&gt;password, str_len) != (ssize_t) str_len)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L504'>super</a>             504 src/vfs/fish/fish.c fish_open_archive_int (struct vfs_class *me, struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L511'>super</a>             511 src/vfs/fish/fish.c     fish_open_archive_pipeopen (super);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L514'>super</a>             514 src/vfs/fish/fish.c     ftalk = fish_open_archive_talk (me, super);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L529'>super</a>             529 src/vfs/fish/fish.c         (me, super, WAIT_REPLY, "%s",</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L534'>super</a>             534 src/vfs/fish/fish.c     if (fish_command (me, super, WAIT_REPLY, "%s", "#VER 0.0.3\necho '### 000'\n") != COMPLETE)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L539'>super</a>             539 src/vfs/fish/fish.c         (me, super, WAIT_REPLY, "%s",</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L544'>super</a>             544 src/vfs/fish/fish.c     if (fish_info (me, super))</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L548'>super</a>             548 src/vfs/fish/fish.c     super-&gt;name =</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L549'>super</a>             549 src/vfs/fish/fish.c         g_strconcat ("sh://", super-&gt;path_element-&gt;user, "@", super-&gt;path_element-&gt;host,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L552'>super</a>             552 src/vfs/fish/fish.c     super-&gt;name = g_strdup (PATH_SEP_STR);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L555'>super</a>             555 src/vfs/fish/fish.c     super-&gt;root = vfs_s_new_inode (me, super, vfs_s_default_stat (me, S_IFDIR | 0755));</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L562'>super</a>             562 src/vfs/fish/fish.c fish_open_archive (struct vfs_s_super *super,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L567'>super</a>             567 src/vfs/fish/fish.c     super-&gt;data = g_new0 (fish_super_data_t, 1);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L568'>super</a>             568 src/vfs/fish/fish.c     super-&gt;path_element = vfs_path_element_clone (vpath_element);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L571'>super</a>             571 src/vfs/fish/fish.c         super-&gt;path_element-&gt;port = FISH_FLAG_RSH;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L574'>super</a>             574 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_LS_FILE, FISH_LS_DEF_CONTENT);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L576'>super</a>             576 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_EXISTS_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L579'>super</a>             579 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_MKDIR_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L582'>super</a>             582 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_UNLINK_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L585'>super</a>             585 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_CHOWN_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L588'>super</a>             588 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_CHMOD_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L591'>super</a>             591 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_UTIME_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L594'>super</a>             594 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_RMDIR_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L597'>super</a>             597 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_LN_FILE, FISH_LN_DEF_CONTENT);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L599'>super</a>             599 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_MV_FILE, FISH_MV_DEF_CONTENT);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L601'>super</a>             601 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_HARDLINK_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L604'>super</a>             604 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_GET_FILE, FISH_GET_DEF_CONTENT);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L606'>super</a>             606 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_SEND_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L609'>super</a>             609 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_APPEND_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L612'>super</a>             612 src/vfs/fish/fish.c         fish_load_script_from_file (super-&gt;path_element-&gt;host, FISH_INFO_FILE,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L615'>super</a>             615 src/vfs/fish/fish.c     return fish_open_archive_int (vpath_element-&gt;class, super);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L621'>super</a>             621 src/vfs/fish/fish.c fish_archive_same (const vfs_path_element_t * vpath_element, struct vfs_s_super *super,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L635'>super</a>             635 src/vfs/fish/fish.c     result = ((strcmp (path_element-&gt;host, super-&gt;path_element-&gt;host) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L636'>super</a>             636 src/vfs/fish/fish.c               &amp;&amp; (strcmp (path_element-&gt;user, super-&gt;path_element-&gt;user) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L637'>super</a>             637 src/vfs/fish/fish.c               &amp;&amp; (path_element-&gt;port == super-&gt;path_element-&gt;port)) ? 1 : 0;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L649'>super</a>             649 src/vfs/fish/fish.c     struct vfs_s_super *super = dir-&gt;super;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L674'>super</a>             674 src/vfs/fish/fish.c     fish_command (me, super, NONE, shell_commands, quoted_path);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L859'>super</a>             859 src/vfs/fish/fish.c     struct vfs_s_super *super = FH_SUPER;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L915'>super</a>             915 src/vfs/fish/fish.c         code = fish_command (me, super, WAIT_REPLY, shell_commands, quoted_name,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L924'>super</a>             924 src/vfs/fish/fish.c         code = fish_command (me, super, WAIT_REPLY, shell_commands, quoted_name,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L986'>super</a>             986 src/vfs/fish/fish.c     struct vfs_s_super *super = FH_SUPER;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1012'>super</a>            1012 src/vfs/fish/fish.c     offset = fish_command (me, super, WANT_STRING, shell_commands, quoted_name, (uintmax_t) offset);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1036'>super</a>            1036 src/vfs/fish/fish.c     struct vfs_s_super *super = FH_SUPER;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1067'>super</a>            1067 src/vfs/fish/fish.c     struct vfs_s_super *super = FH_SUPER;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1135'>super</a>            1135 src/vfs/fish/fish.c fish_send_command (struct vfs_class *me, struct vfs_s_super *super, const char *cmd, int flags)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1139'>super</a>            1139 src/vfs/fish/fish.c     r = fish_command (me, super, WAIT_REPLY, "%s", cmd);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1140'>super</a>            1140 src/vfs/fish/fish.c     vfs_stamp_create (&amp;vfs_fish_ops, super);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1144'>super</a>            1144 src/vfs/fish/fish.c         vfs_s_invalidate (me, super);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1157'>super</a>            1157 src/vfs/fish/fish.c     struct vfs_s_super *super, *super2;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1162'>super</a>            1162 src/vfs/fish/fish.c     crpath1 = vfs_s_get_path (vpath1, &amp;super, 0);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1190'>super</a>            1190 src/vfs/fish/fish.c     struct vfs_s_super *super, *super2;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1195'>super</a>            1195 src/vfs/fish/fish.c     crpath1 = vfs_s_get_path (vpath1, &amp;super, 0);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1225'>super</a>            1225 src/vfs/fish/fish.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1230'>super</a>            1230 src/vfs/fish/fish.c     crpath = vfs_s_get_path (vpath2, &amp;super, 0);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1243'>super</a>            1243 src/vfs/fish/fish.c     return fish_send_command (path_element-&gt;class, super, buf, OPT_FLUSH);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1255'>super</a>            1255 src/vfs/fish/fish.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1260'>super</a>            1260 src/vfs/fish/fish.c     crpath = vfs_s_get_path (vpath, &amp;super, 0);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1270'>super</a>            1270 src/vfs/fish/fish.c     return fish_send_command (path_element-&gt;class, super, buf, OPT_FLUSH);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1298'>super</a>            1298 src/vfs/fish/fish.c         struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1303'>super</a>            1303 src/vfs/fish/fish.c         crpath = vfs_s_get_path (vpath, &amp;super, 0);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1313'>super</a>            1313 src/vfs/fish/fish.c         fish_send_command (path_element-&gt;class, super, buf, OPT_FLUSH);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1317'>super</a>            1317 src/vfs/fish/fish.c         return fish_send_command (path_element-&gt;class, super, buf, OPT_FLUSH);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1333'>super</a>            1333 src/vfs/fish/fish.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1338'>super</a>            1338 src/vfs/fish/fish.c     crpath = vfs_s_get_path (vpath, &amp;super, 0);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1360'>super</a>            1360 src/vfs/fish/fish.c     return fish_send_command (path_element-&gt;class, super, buf, OPT_FLUSH);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1373'>super</a>            1373 src/vfs/fish/fish.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1378'>super</a>            1378 src/vfs/fish/fish.c     crpath = vfs_s_get_path (vpath, &amp;super, 0);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1388'>super</a>            1388 src/vfs/fish/fish.c     return fish_send_command (path_element-&gt;class, super, buf, OPT_FLUSH);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1401'>super</a>            1401 src/vfs/fish/fish.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1406'>super</a>            1406 src/vfs/fish/fish.c     crpath = vfs_s_get_path (vpath, &amp;super, 0);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1417'>super</a>            1417 src/vfs/fish/fish.c     return (fish_send_command (path_element-&gt;class, super, buf, OPT_FLUSH) == 0) ? 1 : 0;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1430'>super</a>            1430 src/vfs/fish/fish.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1437'>super</a>            1437 src/vfs/fish/fish.c     crpath = vfs_s_get_path (vpath, &amp;super, 0);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1448'>super</a>            1448 src/vfs/fish/fish.c     ret_code = fish_send_command (path_element-&gt;class, super, buf, OPT_FLUSH);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1470'>super</a>            1470 src/vfs/fish/fish.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1475'>super</a>            1475 src/vfs/fish/fish.c     crpath = vfs_s_get_path (vpath, &amp;super, 0);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1485'>super</a>            1485 src/vfs/fish/fish.c     return fish_send_command (path_element-&gt;class, super, buf, OPT_FLUSH);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1553'>super</a>            1553 src/vfs/fish/fish.c         const struct vfs_s_super *super = (const struct vfs_s_super *) iter-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1559'>super</a>            1559 src/vfs/fish/fish.c         switch (super-&gt;path_element-&gt;port)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1568'>super</a>            1568 src/vfs/fish/fish.c             if (super-&gt;path_element-&gt;port &gt; FISH_FLAG_RSH)</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1570'>super</a>            1570 src/vfs/fish/fish.c                 g_snprintf (gbuf, sizeof (gbuf), ":%d", super-&gt;path_element-&gt;port);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1578'>super</a>            1578 src/vfs/fish/fish.c                          super-&gt;path_element-&gt;user, "@", super-&gt;path_element-&gt;host, flags,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1579'>super</a>            1579 src/vfs/fish/fish.c                          PATH_SEP_STR, super-&gt;path_element-&gt;path, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L156'>super</a>             156 src/vfs/ftpfs/ftpfs.c #define SUP ((ftp_super_data_t *) super-&gt;data)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L264'>super</a>             264 src/vfs/ftpfs/ftpfs.c static char *ftpfs_get_current_directory (struct vfs_class *me, struct vfs_s_super *super);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L265'>super</a>             265 src/vfs/ftpfs/ftpfs.c static int ftpfs_chdir_internal (struct vfs_class *me, struct vfs_s_super *super,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L267'>super</a>             267 src/vfs/ftpfs/ftpfs.c static int ftpfs_open_socket (struct vfs_class *me, struct vfs_s_super *super);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L268'>super</a>             268 src/vfs/ftpfs/ftpfs.c static int ftpfs_login_server (struct vfs_class *me, struct vfs_s_super *super,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L275'>super</a>             275 src/vfs/ftpfs/ftpfs.c ftpfs_translate_path (struct vfs_class *me, struct vfs_s_super *super, const char *remote_path)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L419'>super</a>             419 src/vfs/ftpfs/ftpfs.c ftpfs_reconnect (struct vfs_class *me, struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L423'>super</a>             423 src/vfs/ftpfs/ftpfs.c     sock = ftpfs_open_socket (me, super);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L432'>super</a>             432 src/vfs/ftpfs/ftpfs.c         if (ftpfs_login_server (me, super, super-&gt;path_element-&gt;password) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L436'>super</a>             436 src/vfs/ftpfs/ftpfs.c             sock = ftpfs_chdir_internal (me, super, cwdir);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L451'>super</a>             451 src/vfs/ftpfs/ftpfs.c ftpfs_command (struct vfs_class *me, struct vfs_s_super *super, int wait_reply, const char *fmt,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L498'>super</a>             498 src/vfs/ftpfs/ftpfs.c                 status = ftpfs_reconnect (me, super);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L525'>super</a>             525 src/vfs/ftpfs/ftpfs.c             status = ftpfs_reconnect (me, super);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L543'>super</a>             543 src/vfs/ftpfs/ftpfs.c ftpfs_free_archive (struct vfs_class *me, struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L547'>super</a>             547 src/vfs/ftpfs/ftpfs.c         vfs_print_message (_("ftpfs: Disconnecting from %s"), super-&gt;path_element-&gt;host);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L548'>super</a>             548 src/vfs/ftpfs/ftpfs.c         ftpfs_command (me, super, NONE, "QUIT");</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L552'>super</a>             552 src/vfs/ftpfs/ftpfs.c     MC_PTR_FREE (super-&gt;data);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L558'>super</a>             558 src/vfs/ftpfs/ftpfs.c ftpfs_changetype (struct vfs_class *me, struct vfs_s_super *super, int binary)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L562'>super</a>             562 src/vfs/ftpfs/ftpfs.c         if (ftpfs_command (me, super, WAIT_REPLY, "TYPE %c", binary ? 'I' : 'A') != COMPLETE)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L573'>super</a>             573 src/vfs/ftpfs/ftpfs.c ftpfs_login_server (struct vfs_class *me, struct vfs_s_super *super, const char *netrcpass)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L583'>super</a>             583 src/vfs/ftpfs/ftpfs.c     if (super-&gt;path_element-&gt;password != NULL)  /* explicit password */</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L584'>super</a>             584 src/vfs/ftpfs/ftpfs.c         op = g_strdup (super-&gt;path_element-&gt;password);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L587'>super</a>             587 src/vfs/ftpfs/ftpfs.c     else if (strcmp (super-&gt;path_element-&gt;user, "anonymous") == 0</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L588'>super</a>             588 src/vfs/ftpfs/ftpfs.c              || strcmp (super-&gt;path_element-&gt;user, "ftp") == 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L599'>super</a>             599 src/vfs/ftpfs/ftpfs.c         p = g_strdup_printf (_("FTP: Password required for %s"), super-&gt;path_element-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L604'>super</a>             604 src/vfs/ftpfs/ftpfs.c         super-&gt;path_element-&gt;password = g_strdup (op);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L618'>super</a>             618 src/vfs/ftpfs/ftpfs.c             g_strconcat (super-&gt;path_element-&gt;user, "@",</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L619'>super</a>             619 src/vfs/ftpfs/ftpfs.c                          super-&gt;path_element-&gt;host[0] ==</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L620'>super</a>             620 src/vfs/ftpfs/ftpfs.c                          '!' ? super-&gt;path_element-&gt;host + 1 : super-&gt;path_element-&gt;host,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L623'>super</a>             623 src/vfs/ftpfs/ftpfs.c         name = g_strdup (super-&gt;path_element-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L643'>super</a>             643 src/vfs/ftpfs/ftpfs.c         switch (ftpfs_command (me, super, WAIT_REPLY, "USER %s", name))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L647'>super</a>             647 src/vfs/ftpfs/ftpfs.c             code = ftpfs_command (me, super, WAIT_REPLY, "PASS %s", pass);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L653'>super</a>             653 src/vfs/ftpfs/ftpfs.c                                      super-&gt;path_element-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L660'>super</a>             660 src/vfs/ftpfs/ftpfs.c                 code = ftpfs_command (me, super, WAIT_REPLY, "ACCT %s", op);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L675'>super</a>             675 src/vfs/ftpfs/ftpfs.c             wipe_password (super-&gt;path_element-&gt;password);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L676'>super</a>             676 src/vfs/ftpfs/ftpfs.c             super-&gt;path_element-&gt;password = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L683'>super</a>             683 src/vfs/ftpfs/ftpfs.c              super-&gt;path_element-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L797'>super</a>             797 src/vfs/ftpfs/ftpfs.c ftpfs_open_socket (struct vfs_class *me, struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L809'>super</a>             809 src/vfs/ftpfs/ftpfs.c     host = g_strdup (super-&gt;path_element-&gt;host);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L820'>super</a>             820 src/vfs/ftpfs/ftpfs.c     tmp_port = super-&gt;path_element-&gt;port;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L915'>super</a>             915 src/vfs/ftpfs/ftpfs.c ftpfs_open_archive_int (struct vfs_class *me, struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L928'>super</a>             928 src/vfs/ftpfs/ftpfs.c         SUP-&gt;sock = ftpfs_open_socket (me, super);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L932'>super</a>             932 src/vfs/ftpfs/ftpfs.c         if (ftpfs_login_server (me, super, NULL) != 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L967'>super</a>             967 src/vfs/ftpfs/ftpfs.c     SUP-&gt;current_dir = ftpfs_get_current_directory (me, super);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L977'>super</a>             977 src/vfs/ftpfs/ftpfs.c ftpfs_open_archive (struct vfs_s_super *super,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L982'>super</a>             982 src/vfs/ftpfs/ftpfs.c     super-&gt;data = g_new0 (ftp_super_data_t, 1);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L984'>super</a>             984 src/vfs/ftpfs/ftpfs.c     super-&gt;path_element = ftpfs_correct_url_parameters (vpath_element);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L986'>super</a>             986 src/vfs/ftpfs/ftpfs.c     if (ftpfs_check_proxy (super-&gt;path_element-&gt;host))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L993'>super</a>             993 src/vfs/ftpfs/ftpfs.c     super-&gt;name = g_strdup (PATH_SEP_STR);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L994'>super</a>             994 src/vfs/ftpfs/ftpfs.c     super-&gt;root =</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L995'>super</a>             995 src/vfs/ftpfs/ftpfs.c         vfs_s_new_inode (vpath_element-&gt;class, super,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L998'>super</a>             998 src/vfs/ftpfs/ftpfs.c     return ftpfs_open_archive_int (vpath_element-&gt;class, super);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1004'>super</a>            1004 src/vfs/ftpfs/ftpfs.c ftpfs_archive_same (const vfs_path_element_t * vpath_element, struct vfs_s_super *super,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1015'>super</a>            1015 src/vfs/ftpfs/ftpfs.c     result = ((strcmp (path_element-&gt;host, super-&gt;path_element-&gt;host) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1016'>super</a>            1016 src/vfs/ftpfs/ftpfs.c               &amp;&amp; (strcmp (path_element-&gt;user, super-&gt;path_element-&gt;user) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1017'>super</a>            1017 src/vfs/ftpfs/ftpfs.c               &amp;&amp; (path_element-&gt;port == super-&gt;path_element-&gt;port)) ? 1 : 0;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1027'>super</a>            1027 src/vfs/ftpfs/ftpfs.c ftpfs_get_current_directory (struct vfs_class *me, struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1031'>super</a>            1031 src/vfs/ftpfs/ftpfs.c     if (ftpfs_command (me, super, NONE, "PWD") == COMPLETE &amp;&amp;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1076'>super</a>            1076 src/vfs/ftpfs/ftpfs.c ftpfs_setup_passive_pasv (struct vfs_class *me, struct vfs_s_super *super,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1083'>super</a>            1083 src/vfs/ftpfs/ftpfs.c     if (ftpfs_command (me, super, WAIT_REPLY | WANT_STRING, "PASV") != COMPLETE)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1117'>super</a>            1117 src/vfs/ftpfs/ftpfs.c ftpfs_setup_passive_epsv (struct vfs_class *me, struct vfs_s_super *super,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1123'>super</a>            1123 src/vfs/ftpfs/ftpfs.c     if (ftpfs_command (me, super, WAIT_REPLY | WANT_STRING, "EPSV") != COMPLETE)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1159'>super</a>            1159 src/vfs/ftpfs/ftpfs.c ftpfs_setup_passive (struct vfs_class *me, struct vfs_s_super *super,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1165'>super</a>            1165 src/vfs/ftpfs/ftpfs.c         if (!ftpfs_setup_passive_pasv (me, super, my_socket, sa, salen))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1167'>super</a>            1167 src/vfs/ftpfs/ftpfs.c             if (!ftpfs_setup_passive_epsv (me, super, my_socket, sa, salen))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1173'>super</a>            1173 src/vfs/ftpfs/ftpfs.c         if (!ftpfs_setup_passive_epsv (me, super, my_socket, sa, salen))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1184'>super</a>            1184 src/vfs/ftpfs/ftpfs.c ftpfs_setup_active (struct vfs_class *me, struct vfs_s_super *super,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1224'>super</a>            1224 src/vfs/ftpfs/ftpfs.c         if (ftpfs_command (me, super, WAIT_REPLY,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1242'>super</a>            1242 src/vfs/ftpfs/ftpfs.c     if (ftpfs_command (me, super, WAIT_REPLY, "EPRT |%u|%s|%hu|", af, addr, port) == COMPLETE)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1256'>super</a>            1256 src/vfs/ftpfs/ftpfs.c ftpfs_init_data_socket (struct vfs_class *me, struct vfs_s_super *super,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1300'>super</a>            1300 src/vfs/ftpfs/ftpfs.c ftpfs_initconn (struct vfs_class *me, struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1316'>super</a>            1316 src/vfs/ftpfs/ftpfs.c         data_sock = ftpfs_init_data_socket (me, super, &amp;data_addr, &amp;data_addrlen);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1320'>super</a>            1320 src/vfs/ftpfs/ftpfs.c         if (ftpfs_setup_passive (me, super, data_sock, &amp;data_addr, &amp;data_addrlen))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1334'>super</a>            1334 src/vfs/ftpfs/ftpfs.c         data_sock = ftpfs_init_data_socket (me, super, &amp;data_addr, &amp;data_addrlen);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1341'>super</a>            1341 src/vfs/ftpfs/ftpfs.c             (ftpfs_setup_active (me, super, data_addr, data_addrlen) != 0))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1358'>super</a>            1358 src/vfs/ftpfs/ftpfs.c ftpfs_open_data_connection (struct vfs_class *me, struct vfs_s_super *super, const char *cmd,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1369'>super</a>            1369 src/vfs/ftpfs/ftpfs.c     s = ftpfs_initconn (me, super);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1373'>super</a>            1373 src/vfs/ftpfs/ftpfs.c     if (ftpfs_changetype (me, super, isbinary) == -1)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1377'>super</a>            1377 src/vfs/ftpfs/ftpfs.c         j = ftpfs_command (me, super, WAIT_REPLY, "REST %d", reget);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1383'>super</a>            1383 src/vfs/ftpfs/ftpfs.c         char *remote_path = ftpfs_translate_path (me, super, remote);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1384'>super</a>            1384 src/vfs/ftpfs/ftpfs.c         j = ftpfs_command (me, super, WAIT_REPLY, "%s /%s", cmd,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1390'>super</a>            1390 src/vfs/ftpfs/ftpfs.c         j = ftpfs_command (me, super, WAIT_REPLY, "%s", cmd);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1418'>super</a>            1418 src/vfs/ftpfs/ftpfs.c     struct vfs_s_super *super = FH_SUPER;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1434'>super</a>            1434 src/vfs/ftpfs/ftpfs.c     if (ftpfs_command (me, super, NONE, "%cABOR", DM) != COMPLETE)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1459'>super</a>            1459 src/vfs/ftpfs/ftpfs.c                     ftpfs_reconnect (me, super);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1474'>super</a>            1474 src/vfs/ftpfs/ftpfs.c resolve_symlink_without_ls_options (struct vfs_class *me, struct vfs_s_super *super,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1551'>super</a>            1551 src/vfs/ftpfs/ftpfs.c resolve_symlink_with_ls_options (struct vfs_class *me, struct vfs_s_super *super,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1644'>super</a>            1644 src/vfs/ftpfs/ftpfs.c resolve_symlink (struct vfs_class *me, struct vfs_s_super *super, struct vfs_s_inode *dir)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1649'>super</a>            1649 src/vfs/ftpfs/ftpfs.c         resolve_symlink_without_ls_options (me, super, dir);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1651'>super</a>            1651 src/vfs/ftpfs/ftpfs.c         resolve_symlink_with_ls_options (me, super, dir);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1661'>super</a>            1661 src/vfs/ftpfs/ftpfs.c     struct vfs_s_super *super = dir-&gt;super;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1676'>super</a>            1676 src/vfs/ftpfs/ftpfs.c         if (ftpfs_chdir_internal (me, super, remote_path) != COMPLETE)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1688'>super</a>            1688 src/vfs/ftpfs/ftpfs.c         sock = ftpfs_open_data_connection (me, super, "LIST", 0, TYPE_ASCII, 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1692'>super</a>            1692 src/vfs/ftpfs/ftpfs.c         sock = ftpfs_open_data_connection (me, super, "LIST -la", 0, TYPE_ASCII, 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1699'>super</a>            1699 src/vfs/ftpfs/ftpfs.c         sock = ftpfs_open_data_connection (me, super, "LIST -la", path, TYPE_ASCII, 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1813'>super</a>            1813 src/vfs/ftpfs/ftpfs.c     struct vfs_s_super *super = FH_SUPER;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1822'>super</a>            1822 src/vfs/ftpfs/ftpfs.c           ftpfs_open_data_connection (me, super, ftp-&gt;append ? "APPE" : "STOR", name, TYPE_BINARY,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1919'>super</a>            1919 src/vfs/ftpfs/ftpfs.c     struct vfs_s_super *super = FH_SUPER;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1985'>super</a>            1985 src/vfs/ftpfs/ftpfs.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1992'>super</a>            1992 src/vfs/ftpfs/ftpfs.c     rpath = vfs_s_get_path (vpath, &amp;super, 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1996'>super</a>            1996 src/vfs/ftpfs/ftpfs.c     p = ftpfs_translate_path (path_element-&gt;class, super, rpath);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1997'>super</a>            1997 src/vfs/ftpfs/ftpfs.c     r = ftpfs_command (path_element-&gt;class, super, WAIT_REPLY, cmd, p);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1999'>super</a>            1999 src/vfs/ftpfs/ftpfs.c     vfs_stamp_create (&amp;vfs_ftpfs_ops, super);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2008'>super</a>            2008 src/vfs/ftpfs/ftpfs.c         vfs_s_invalidate (path_element-&gt;class, super);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2061'>super</a>            2061 src/vfs/ftpfs/ftpfs.c ftpfs_is_same_dir (struct vfs_class *me, struct vfs_s_super *super, const char *path)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2073'>super</a>            2073 src/vfs/ftpfs/ftpfs.c ftpfs_chdir_internal (struct vfs_class *me, struct vfs_s_super *super, const char *remote_path)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2078'>super</a>            2078 src/vfs/ftpfs/ftpfs.c     if (!SUP-&gt;cwd_deferred &amp;&amp; ftpfs_is_same_dir (me, super, remote_path))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2081'>super</a>            2081 src/vfs/ftpfs/ftpfs.c     p = ftpfs_translate_path (me, super, remote_path);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2082'>super</a>            2082 src/vfs/ftpfs/ftpfs.c     r = ftpfs_command (me, super, WAIT_REPLY, "CWD /%s", p);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2181'>super</a>            2181 src/vfs/ftpfs/ftpfs.c             ftpfs_open_data_connection (me, fh-&gt;ino-&gt;super,</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2219'>super</a>            2219 src/vfs/ftpfs/ftpfs.c         ftp_super_data_t *ftp = (ftp_super_data_t *) fh-&gt;ino-&gt;super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2258'>super</a>            2258 src/vfs/ftpfs/ftpfs.c         const struct vfs_s_super *super = (const struct vfs_s_super *) iter-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2261'>super</a>            2261 src/vfs/ftpfs/ftpfs.c         name = vfs_path_element_build_pretty_path_str (super-&gt;path_element);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L355'>super</a>             355 src/vfs/sftpfs/config_parser.c sftpfs_fill_connection_data_from_config (struct vfs_s_super *super, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L362'>super</a>             362 src/vfs/sftpfs/config_parser.c     super_data = (sftpfs_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L364'>super</a>             364 src/vfs/sftpfs/config_parser.c     config_entity = sftpfs_get_config_entity (super-&gt;path_element, mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L373'>super</a>             373 src/vfs/sftpfs/config_parser.c     if (super-&gt;path_element-&gt;port == 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L374'>super</a>             374 src/vfs/sftpfs/config_parser.c         super-&gt;path_element-&gt;port = config_entity-&gt;port;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L376'>super</a>             376 src/vfs/sftpfs/config_parser.c     if (super-&gt;path_element-&gt;user == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L377'>super</a>             377 src/vfs/sftpfs/config_parser.c         super-&gt;path_element-&gt;user = g_strdup (config_entity-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L381'>super</a>             381 src/vfs/sftpfs/config_parser.c         g_free (super-&gt;path_element-&gt;host);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L382'>super</a>             382 src/vfs/sftpfs/config_parser.c         super-&gt;path_element-&gt;host = g_strdup (config_entity-&gt;real_host);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L67'>super</a>              67 src/vfs/sftpfs/connection.c sftpfs_open_socket (struct vfs_s_super *super, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L76'>super</a>              76 src/vfs/sftpfs/connection.c     if (super-&gt;path_element-&gt;host == NULL || *super-&gt;path_element-&gt;host == '\0')</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L82'>super</a>              82 src/vfs/sftpfs/connection.c     sprintf (port, "%hu", (unsigned short) super-&gt;path_element-&gt;port);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L97'>super</a>              97 src/vfs/sftpfs/connection.c     e = getaddrinfo (super-&gt;path_element-&gt;host, port, &amp;hints, &amp;res);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L104'>super</a>             104 src/vfs/sftpfs/connection.c         e = getaddrinfo (super-&gt;path_element-&gt;host, port, &amp;hints, &amp;res);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L131'>super</a>             131 src/vfs/sftpfs/connection.c         vfs_print_message (_("sftp: making connection to %s"), super-&gt;path_element-&gt;host);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L167'>super</a>             167 src/vfs/sftpfs/connection.c sftpfs_recognize_auth_types (struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L172'>super</a>             172 src/vfs/sftpfs/connection.c     super_data = (sftpfs_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L178'>super</a>             178 src/vfs/sftpfs/connection.c     userauthlist = libssh2_userauth_list (super_data-&gt;session, super-&gt;path_element-&gt;user,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L179'>super</a>             179 src/vfs/sftpfs/connection.c                                           strlen (super-&gt;path_element-&gt;user));</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L203'>super</a>             203 src/vfs/sftpfs/connection.c sftpfs_open_connection_ssh_agent (struct vfs_s_super *super, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L211'>super</a>             211 src/vfs/sftpfs/connection.c     super_data = (sftpfs_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L237'>super</a>             237 src/vfs/sftpfs/connection.c         if (libssh2_agent_userauth (super_data-&gt;agent, super-&gt;path_element-&gt;user, identity) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L256'>super</a>             256 src/vfs/sftpfs/connection.c sftpfs_open_connection_ssh_key (struct vfs_s_super *super, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L264'>super</a>             264 src/vfs/sftpfs/connection.c     super_data = (sftpfs_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L272'>super</a>             272 src/vfs/sftpfs/connection.c     if (libssh2_userauth_publickey_fromfile (super_data-&gt;session, super-&gt;path_element-&gt;user,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L274'>super</a>             274 src/vfs/sftpfs/connection.c                                              super-&gt;path_element-&gt;password) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L277'>super</a>             277 src/vfs/sftpfs/connection.c     p = g_strdup_printf (_("sftp: Enter passphrase for %s "), super-&gt;path_element-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L286'>super</a>             286 src/vfs/sftpfs/connection.c                                                           super-&gt;path_element-&gt;user,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L305'>super</a>             305 src/vfs/sftpfs/connection.c sftpfs_open_connection_ssh_password (struct vfs_s_super *super, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L314'>super</a>             314 src/vfs/sftpfs/connection.c     super_data = (sftpfs_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L319'>super</a>             319 src/vfs/sftpfs/connection.c     if (super-&gt;path_element-&gt;password != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L321'>super</a>             321 src/vfs/sftpfs/connection.c         while ((rc = libssh2_userauth_password (super_data-&gt;session, super-&gt;path_element-&gt;user,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L322'>super</a>             322 src/vfs/sftpfs/connection.c                                                 super-&gt;path_element-&gt;password)) ==</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L328'>super</a>             328 src/vfs/sftpfs/connection.c     p = g_strdup_printf (_("sftp: Enter password for %s "), super-&gt;path_element-&gt;user);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L336'>super</a>             336 src/vfs/sftpfs/connection.c         while ((rc = libssh2_userauth_password (super_data-&gt;session, super-&gt;path_element-&gt;user,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L343'>super</a>             343 src/vfs/sftpfs/connection.c             g_free (super-&gt;path_element-&gt;password);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L344'>super</a>             344 src/vfs/sftpfs/connection.c             super-&gt;path_element-&gt;password = passwd;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L365'>super</a>             365 src/vfs/sftpfs/connection.c sftpfs_open_connection (struct vfs_s_super *super, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L372'>super</a>             372 src/vfs/sftpfs/connection.c     super_data = (sftpfs_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L378'>super</a>             378 src/vfs/sftpfs/connection.c     super_data-&gt;socket_handle = sftpfs_open_socket (super, mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L409'>super</a>             409 src/vfs/sftpfs/connection.c     sftpfs_recognize_auth_types (super);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L411'>super</a>             411 src/vfs/sftpfs/connection.c     if (!sftpfs_open_connection_ssh_agent (super, mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L412'>super</a>             412 src/vfs/sftpfs/connection.c         &amp;&amp; !sftpfs_open_connection_ssh_key (super, mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L413'>super</a>             413 src/vfs/sftpfs/connection.c         &amp;&amp; !sftpfs_open_connection_ssh_password (super, mcerror))</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L437'>super</a>             437 src/vfs/sftpfs/connection.c sftpfs_close_connection (struct vfs_s_super *super, const char *shutdown_message, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L444'>super</a>             444 src/vfs/sftpfs/connection.c     super_data = (sftpfs_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L69'>super</a>              69 src/vfs/sftpfs/dir.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L78'>super</a>              78 src/vfs/sftpfs/dir.c     if (vfs_s_get_path (vpath, &amp;super, 0) == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L81'>super</a>              81 src/vfs/sftpfs/dir.c     super_data = (sftpfs_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L191'>super</a>             191 src/vfs/sftpfs/dir.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L199'>super</a>             199 src/vfs/sftpfs/dir.c     if (vfs_s_get_path (vpath, &amp;super, 0) == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L202'>super</a>             202 src/vfs/sftpfs/dir.c     if (super == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L205'>super</a>             205 src/vfs/sftpfs/dir.c     super_data = (sftpfs_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L248'>super</a>             248 src/vfs/sftpfs/dir.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L256'>super</a>             256 src/vfs/sftpfs/dir.c     if (vfs_s_get_path (vpath, &amp;super, 0) == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L259'>super</a>             259 src/vfs/sftpfs/dir.c     if (super == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L262'>super</a>             262 src/vfs/sftpfs/dir.c     super_data = (sftpfs_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L107'>super</a>             107 src/vfs/sftpfs/file.c     super_data = (sftpfs_super_data_t *) file_handler-&gt;ino-&gt;super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L181'>super</a>             181 src/vfs/sftpfs/file.c     struct vfs_s_super *super = fh-&gt;ino-&gt;super;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L182'>super</a>             182 src/vfs/sftpfs/file.c     sftpfs_super_data_t *super_data = (sftpfs_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L257'>super</a>             257 src/vfs/sftpfs/file.c     super_data = (sftpfs_super_data_t *) file_handler-&gt;ino-&gt;super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L305'>super</a>             305 src/vfs/sftpfs/file.c     super_data = (sftpfs_super_data_t *) file_handler-&gt;ino-&gt;super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L135'>super</a>             135 src/vfs/sftpfs/internal.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L145'>super</a>             145 src/vfs/sftpfs/internal.c     if (vfs_s_get_path (vpath, &amp;super, 0) == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L148'>super</a>             148 src/vfs/sftpfs/internal.c     if (super == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L151'>super</a>             151 src/vfs/sftpfs/internal.c     super_data = (sftpfs_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L212'>super</a>             212 src/vfs/sftpfs/internal.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L222'>super</a>             222 src/vfs/sftpfs/internal.c     if (vfs_s_get_path (vpath, &amp;super, 0) == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L225'>super</a>             225 src/vfs/sftpfs/internal.c     if (super == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L228'>super</a>             228 src/vfs/sftpfs/internal.c     super_data = (sftpfs_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L292'>super</a>             292 src/vfs/sftpfs/internal.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L301'>super</a>             301 src/vfs/sftpfs/internal.c     if (vfs_s_get_path (vpath, &amp;super, 0) == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L304'>super</a>             304 src/vfs/sftpfs/internal.c     if (super == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L307'>super</a>             307 src/vfs/sftpfs/internal.c     super_data = (sftpfs_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L348'>super</a>             348 src/vfs/sftpfs/internal.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L359'>super</a>             359 src/vfs/sftpfs/internal.c     if (vfs_s_get_path (vpath2, &amp;super, 0) == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L362'>super</a>             362 src/vfs/sftpfs/internal.c     if (super == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L365'>super</a>             365 src/vfs/sftpfs/internal.c     super_data = (sftpfs_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L419'>super</a>             419 src/vfs/sftpfs/internal.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L429'>super</a>             429 src/vfs/sftpfs/internal.c     if (vfs_s_get_path (vpath, &amp;super, 0) == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L432'>super</a>             432 src/vfs/sftpfs/internal.c     if (super == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L435'>super</a>             435 src/vfs/sftpfs/internal.c     super_data = (sftpfs_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L498'>super</a>             498 src/vfs/sftpfs/internal.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L507'>super</a>             507 src/vfs/sftpfs/internal.c     if (vfs_s_get_path (vpath, &amp;super, 0) == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L510'>super</a>             510 src/vfs/sftpfs/internal.c     if (super == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L513'>super</a>             513 src/vfs/sftpfs/internal.c     super_data = (sftpfs_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L556'>super</a>             556 src/vfs/sftpfs/internal.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L566'>super</a>             566 src/vfs/sftpfs/internal.c     if (vfs_s_get_path (vpath2, &amp;super, 0) == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L569'>super</a>             569 src/vfs/sftpfs/internal.c     if (super == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L572'>super</a>             572 src/vfs/sftpfs/internal.c     super_data = (sftpfs_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L82'>super</a>              82 src/vfs/sftpfs/internal.h void sftpfs_fill_connection_data_from_config (struct vfs_s_super *super, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L83'>super</a>              83 src/vfs/sftpfs/internal.h int sftpfs_open_connection (struct vfs_s_super *super, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L84'>super</a>              84 src/vfs/sftpfs/internal.h void sftpfs_close_connection (struct vfs_s_super *super, const char *shutdown_message,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L100'>super</a>             100 src/vfs/sftpfs/vfs_class.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L108'>super</a>             108 src/vfs/sftpfs/vfs_class.c     path_super = vfs_s_get_path (vpath, &amp;super, 0);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L112'>super</a>             112 src/vfs/sftpfs/vfs_class.c     path_inode = vfs_s_find_inode (path_element-&gt;class, super, path_super, LINK_FOLLOW, FL_NONE);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L127'>super</a>             127 src/vfs/sftpfs/vfs_class.c         dir = vfs_s_find_inode (path_element-&gt;class, super, dirname, LINK_FOLLOW, FL_DIR);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L163'>super</a>             163 src/vfs/sftpfs/vfs_class.c     vfs_rmstamp (path_element-&gt;class, (vfsid) super);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L164'>super</a>             164 src/vfs/sftpfs/vfs_class.c     super-&gt;fd_usage++;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L482'>super</a>             482 src/vfs/sftpfs/vfs_class.c     struct vfs_s_super *super;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L485'>super</a>             485 src/vfs/sftpfs/vfs_class.c     super = file_handler-&gt;ino-&gt;super;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L487'>super</a>             487 src/vfs/sftpfs/vfs_class.c     super-&gt;fd_usage--;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L488'>super</a>             488 src/vfs/sftpfs/vfs_class.c     if (super-&gt;fd_usage == 0)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L489'>super</a>             489 src/vfs/sftpfs/vfs_class.c         vfs_stamp_create (&amp;sftpfs_class, super);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L656'>super</a>             656 src/vfs/sftpfs/vfs_class.c         const struct vfs_s_super *super = (const struct vfs_s_super *) iter-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L659'>super</a>             659 src/vfs/sftpfs/vfs_class.c         name = vfs_path_element_build_pretty_path_str (super-&gt;path_element);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L61'>super</a>              61 src/vfs/sftpfs/vfs_subclass.c sftpfs_cb_is_equal_connection (const vfs_path_element_t * vpath_element, struct vfs_s_super *super,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L70'>super</a>              70 src/vfs/sftpfs/vfs_subclass.c     orig_connect_info = ((sftpfs_super_data_t *) super-&gt;data)-&gt;original_connection_info;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L90'>super</a>              90 src/vfs/sftpfs/vfs_subclass.c sftpfs_cb_open_connection (struct vfs_s_super *super,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L109'>super</a>             109 src/vfs/sftpfs/vfs_subclass.c     super-&gt;data = sftpfs_super_data;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L110'>super</a>             110 src/vfs/sftpfs/vfs_subclass.c     super-&gt;path_element = vfs_path_element_clone (vpath_element);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L112'>super</a>             112 src/vfs/sftpfs/vfs_subclass.c     sftpfs_fill_connection_data_from_config (super, &amp;mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L119'>super</a>             119 src/vfs/sftpfs/vfs_subclass.c     super-&gt;name = g_strdup (PATH_SEP_STR);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L120'>super</a>             120 src/vfs/sftpfs/vfs_subclass.c     super-&gt;root =</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L121'>super</a>             121 src/vfs/sftpfs/vfs_subclass.c         vfs_s_new_inode (vpath_element-&gt;class, super,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L124'>super</a>             124 src/vfs/sftpfs/vfs_subclass.c     ret_value = sftpfs_open_connection (super, &amp;mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L138'>super</a>             138 src/vfs/sftpfs/vfs_subclass.c sftpfs_cb_close_connection (struct vfs_class *me, struct vfs_s_super *super)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L144'>super</a>             144 src/vfs/sftpfs/vfs_subclass.c     sftpfs_close_connection (super, "Normal Shutdown", &amp;mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L146'>super</a>             146 src/vfs/sftpfs/vfs_subclass.c     sftpfs_super_data = (sftpfs_super_data_t *) super-&gt;data;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L212'>super</a>             212 src/vfs/undelfs/undelfs.c     if (*block_nr &lt; _fs-&gt;super-&gt;s_first_data_block || *block_nr &gt;= _fs-&gt;super-&gt;s_blocks_count)</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L46'>super</a>              46 tests/lib/vfs/vfs_s_get_path.c test1_mock_open_archive (struct vfs_s_super *super, const vfs_path_t * vpath,</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L53'>super</a>              53 tests/lib/vfs/vfs_s_get_path.c     super-&gt;name = g_strdup (vfs_path_as_str (vpath));</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L54'>super</a>              54 tests/lib/vfs/vfs_s_get_path.c     super-&gt;data = g_new (char *, 1);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L55'>super</a>              55 tests/lib/vfs/vfs_s_get_path.c     root = vfs_s_new_inode (vpath_element-&gt;class, super, NULL);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L56'>super</a>              56 tests/lib/vfs/vfs_s_get_path.c     super-&gt;root = root;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L63'>super</a>              63 tests/lib/vfs/vfs_s_get_path.c test1_mock_archive_same (const vfs_path_element_t * vpath_element, struct vfs_s_super *super,</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L69'>super</a>              69 tests/lib/vfs/vfs_s_get_path.c     (void) super;</span>
+</pre>
+</body>
+</html>

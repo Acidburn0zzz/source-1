@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>sigaction_act__captured</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L51'>sigaction_act__captured</a>   51 tests/lib/utilunix__my_system-common.c static GPtrArray *sigaction_act__captured = NULL;</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L78'>sigaction_act__captured</a>   78 tests/lib/utilunix__my_system-common.c     if (sigaction_act__captured != NULL)</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L79'>sigaction_act__captured</a>   79 tests/lib/utilunix__my_system-common.c         g_ptr_array_add (sigaction_act__captured, tmp_act);</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L99'>sigaction_act__captured</a>   99 tests/lib/utilunix__my_system-common.c     sigaction_act__captured = g_ptr_array_new ();</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L109'>sigaction_act__captured</a>  109 tests/lib/utilunix__my_system-common.c     g_ptr_array_foreach (sigaction_act__captured, (GFunc) g_free, NULL);</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L110'>sigaction_act__captured</a>  110 tests/lib/utilunix__my_system-common.c     g_ptr_array_free (sigaction_act__captured, TRUE);</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L236'>sigaction_act__captured</a>  236 tests/lib/utilunix__my_system-common.c     struct sigaction *_act = (struct sigaction *) g_ptr_array_index(sigaction_act__captured, act_idx); \</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L252'>sigaction_act__captured</a>  252 tests/lib/utilunix__my_system-common.c     VERIFY_SIGACTION__ACT_IGNORED(g_ptr_array_index(sigaction_act__captured, 0)); \</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L253'>sigaction_act__captured</a>  253 tests/lib/utilunix__my_system-common.c     VERIFY_SIGACTION__ACT_IGNORED(g_ptr_array_index(sigaction_act__captured, 1)); \</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L255'>sigaction_act__captured</a>  255 tests/lib/utilunix__my_system-common.c         struct sigaction *_act  = g_ptr_array_index(sigaction_act__captured, 2); \</span>
+</pre>
+</body>
+</html>

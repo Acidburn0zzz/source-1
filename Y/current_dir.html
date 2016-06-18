@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>current_dir</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L542'>current_dir</a>       542 lib/vfs/vfs.c      char *current_dir;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L548'>current_dir</a>       548 lib/vfs/vfs.c          current_dir = g_get_current_dir ();</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L549'>current_dir</a>       549 lib/vfs/vfs.c          vfs_set_raw_current_dir (vfs_path_from_str (current_dir));</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L550'>current_dir</a>       550 lib/vfs/vfs.c          g_free (current_dir);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L552'>current_dir</a>       552 lib/vfs/vfs.c          current_dir = getenv ("PWD");</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L553'>current_dir</a>       553 lib/vfs/vfs.c          tmp_vpath = vfs_path_from_str (current_dir);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L573'>current_dir</a>       573 lib/vfs/vfs.c          current_dir = g_get_current_dir ();</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L574'>current_dir</a>       574 lib/vfs/vfs.c          tmp_vpath = vfs_path_from_str (current_dir);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L575'>current_dir</a>       575 lib/vfs/vfs.c          g_free (current_dir);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1012'>current_dir</a>      1012 src/filemanager/boxes.c tree_box (const char *current_dir)</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L1020'>current_dir</a>      1020 src/filemanager/boxes.c     (void) current_dir;</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.h.html#L34'>current_dir</a>        34 src/filemanager/boxes.h char *tree_box (const char *current_dir);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L574'>current_dir</a>       574 src/filemanager/midnight.c     char *current_dir, *other_dir;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L604'>current_dir</a>       604 src/filemanager/midnight.c             current_dir = NULL; /* assume current dir */</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L610'>current_dir</a>       610 src/filemanager/midnight.c             current_dir = (char *) mc_run_param0;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L616'>current_dir</a>       616 src/filemanager/midnight.c             current_dir = (char *) mc_run_param0;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L631'>current_dir</a>       631 src/filemanager/midnight.c             current_dir = NULL; /* assume current dir */</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L637'>current_dir</a>       637 src/filemanager/midnight.c             current_dir = (char *) mc_run_param0;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L643'>current_dir</a>       643 src/filemanager/midnight.c             current_dir = (char *) mc_run_param0;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L666'>current_dir</a>       666 src/filemanager/midnight.c     if (current_dir == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L672'>current_dir</a>       672 src/filemanager/midnight.c         if (g_path_is_absolute (current_dir))</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L673'>current_dir</a>       673 src/filemanager/midnight.c             vpath = vfs_path_from_str (current_dir);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L675'>current_dir</a>       675 src/filemanager/midnight.c             vpath = vfs_path_append_new (original_dir, current_dir, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L220'>current_dir</a>       220 src/vfs/ftpfs/ftpfs.c     char *current_dir;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L426'>current_dir</a>       426 src/vfs/ftpfs/ftpfs.c         char *cwdir = SUP-&gt;current_dir;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L430'>current_dir</a>       430 src/vfs/ftpfs/ftpfs.c         SUP-&gt;current_dir = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L441'>current_dir</a>       441 src/vfs/ftpfs/ftpfs.c         SUP-&gt;current_dir = cwdir;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L551'>current_dir</a>       551 src/vfs/ftpfs/ftpfs.c     g_free (SUP-&gt;current_dir);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L967'>current_dir</a>       967 src/vfs/ftpfs/ftpfs.c     SUP-&gt;current_dir = ftpfs_get_current_directory (me, super);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L968'>current_dir</a>       968 src/vfs/ftpfs/ftpfs.c     if (SUP-&gt;current_dir == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L969'>current_dir</a>       969 src/vfs/ftpfs/ftpfs.c         SUP-&gt;current_dir = g_strdup (PATH_SEP_STR);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2065'>current_dir</a>      2065 src/vfs/ftpfs/ftpfs.c     if (SUP-&gt;current_dir == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2067'>current_dir</a>      2067 src/vfs/ftpfs/ftpfs.c     return (strcmp (path, SUP-&gt;current_dir) == 0);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2089'>current_dir</a>      2089 src/vfs/ftpfs/ftpfs.c         g_free (SUP-&gt;current_dir);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2090'>current_dir</a>      2090 src/vfs/ftpfs/ftpfs.c         SUP-&gt;current_dir = g_strdup (remote_path);</span>
+</pre>
+</body>
+</html>

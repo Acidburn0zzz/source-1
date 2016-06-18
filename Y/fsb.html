@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>fsb</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L591'>fsb</a>               591 src/filemanager/mountlist.c statfs (char *file, struct statfs *fsb)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L600'>fsb</a>               600 src/filemanager/mountlist.c     fsb-&gt;f_type = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L601'>fsb</a>               601 src/filemanager/mountlist.c     fsb-&gt;f_bsize = fsd.du_bsize;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L602'>fsb</a>               602 src/filemanager/mountlist.c     fsb-&gt;f_blocks = fsd.du_fsize - fsd.du_isize;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L603'>fsb</a>               603 src/filemanager/mountlist.c     fsb-&gt;f_bfree = fsd.du_tfree;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L604'>fsb</a>               604 src/filemanager/mountlist.c     fsb-&gt;f_bavail = fsd.du_tfree;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L605'>fsb</a>               605 src/filemanager/mountlist.c     fsb-&gt;f_files = (fsd.du_isize - 2) * fsd.du_inopb;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L606'>fsb</a>               606 src/filemanager/mountlist.c     fsb-&gt;f_ffree = fsd.du_tinode;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L607'>fsb</a>               607 src/filemanager/mountlist.c     fsb-&gt;f_fsid.val[0] = fsd.du_site;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L608'>fsb</a>               608 src/filemanager/mountlist.c     fsb-&gt;f_fsid.val[1] = fsd.du_pckno;</span>
+</pre>
+</body>
+</html>

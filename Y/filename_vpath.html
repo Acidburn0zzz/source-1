@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>filename_vpath</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--util.c.html#L1116'>filename_vpath</a>   1116 lib/util.c     load_file_position (const vfs_path_t * filename_vpath, long *line, long *column, off_t * offset,</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1122'>filename_vpath</a>   1122 lib/util.c         const size_t len = vfs_path_len (filename_vpath);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1146'>filename_vpath</a>   1146 lib/util.c             if (strncmp (buf, vfs_path_as_str (filename_vpath), len) != 0)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1207'>filename_vpath</a>   1207 lib/util.c     save_file_position (const vfs_path_t * filename_vpath, long line, long column, off_t offset,</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1215'>filename_vpath</a>   1215 lib/util.c         const size_t len = vfs_path_len (filename_vpath);</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1245'>filename_vpath</a>   1245 lib/util.c                 (f, "%s %ld;%ld;%" PRIuMAX, vfs_path_as_str (filename_vpath), line, column,</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1260'>filename_vpath</a>   1260 lib/util.c             if (buf[len] == ' ' &amp;&amp; strncmp (buf, vfs_path_as_str (filename_vpath), len) == 0</span>
+<span class='curline'><a href='../S/lib--util.h.html#L229'>filename_vpath</a>    229 lib/util.h     void load_file_position (const vfs_path_t * filename_vpath, long *line, long *column,</span>
+<span class='curline'><a href='../S/lib--util.h.html#L232'>filename_vpath</a>    232 lib/util.h     void save_file_position (const vfs_path_t * filename_vpath, long line, long column, off_t offset,</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L81'>filename_vpath</a>     81 lib/vfs/interface.c mc_def_getlocalcopy (const vfs_path_t * filename_vpath)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L89'>filename_vpath</a>     89 lib/vfs/interface.c     fdin = mc_open (filename_vpath, O_RDONLY | O_LINEAR);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L93'>filename_vpath</a>     93 lib/vfs/interface.c     fdout = vfs_mkstemps (&amp;tmp_vpath, "vfs", vfs_path_get_last_path_str (filename_vpath));</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L114'>filename_vpath</a>    114 lib/vfs/interface.c     if (mc_stat (filename_vpath, &amp;mystat) != -1)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L131'>filename_vpath</a>    131 lib/vfs/interface.c mc_def_ungetlocalcopy (const vfs_path_t * filename_vpath,</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L144'>filename_vpath</a>    144 lib/vfs/interface.c         if (vfs_path_get_last_path_vfs (filename_vpath)-&gt;write == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L150'>filename_vpath</a>    150 lib/vfs/interface.c         fdout = mc_open (filename_vpath, O_WRONLY | O_TRUNC);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L175'>filename_vpath</a>    175 lib/vfs/interface.c     message (D_ERROR, _("Changes to file lost"), "%s", vfs_path_get_last_path_str (filename_vpath));</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L113'>filename_vpath</a>    113 src/editor/edit-impl.h     vfs_path_t *filename_vpath;</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L162'>filename_vpath</a>    162 src/editor/edit-impl.h gboolean edit_reload_line (WEdit * edit, const vfs_path_t * filename_vpath, long line);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L181'>filename_vpath</a>    181 src/editor/edit-impl.h                              const vfs_path_t * filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L185'>filename_vpath</a>    185 src/editor/edit-impl.h                   const vfs_path_t * filename_vpath, long line);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L216'>filename_vpath</a>    216 src/editor/edit-impl.h off_t edit_insert_file (WEdit * edit, const vfs_path_t * filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L293'>filename_vpath</a>    293 src/editor/edit-impl.h edit_reload (WEdit * edit, const vfs_path_t * filename_vpath)</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L295'>filename_vpath</a>    295 src/editor/edit-impl.h     return edit_reload_line (edit, filename_vpath, 0);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L179'>filename_vpath</a>    179 src/editor/edit.c edit_load_file_fast (edit_buffer_t * buf, const vfs_path_t * filename_vpath)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L186'>filename_vpath</a>    186 src/editor/edit.c     file = mc_open (filename_vpath, O_RDONLY | O_BINARY);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L192'>filename_vpath</a>    192 src/editor/edit.c             g_strdup_printf (_("Cannot open %s for reading"), vfs_path_as_str (filename_vpath));</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L213'>filename_vpath</a>    213 src/editor/edit.c         errmsg = g_strdup_printf (_("Error reading %s"), vfs_path_as_str (filename_vpath));</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L226'>filename_vpath</a>    226 src/editor/edit.c edit_find_filter (const vfs_path_t * filename_vpath)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L230'>filename_vpath</a>    230 src/editor/edit.c     if (filename_vpath == NULL)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L233'>filename_vpath</a>    233 src/editor/edit.c     l = strlen (vfs_path_as_str (filename_vpath));</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L240'>filename_vpath</a>    240 src/editor/edit.c             if (!strcmp (all_filters[i].extension, vfs_path_as_str (filename_vpath) + l - e))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L249'>filename_vpath</a>    249 src/editor/edit.c edit_get_filter (const vfs_path_t * filename_vpath)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L254'>filename_vpath</a>    254 src/editor/edit.c     i = edit_find_filter (filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L258'>filename_vpath</a>    258 src/editor/edit.c     quoted_name = name_quote (vfs_path_as_str (filename_vpath), FALSE);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L291'>filename_vpath</a>    291 src/editor/edit.c check_file_access (WEdit * edit, const vfs_path_t * filename_vpath, struct stat *st)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L299'>filename_vpath</a>    299 src/editor/edit.c     file = mc_open (filename_vpath, O_NONBLOCK | O_RDONLY | O_BINARY, 0666);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L306'>filename_vpath</a>    306 src/editor/edit.c         file = mc_open (filename_vpath, O_NONBLOCK | O_RDONLY | O_BINARY | O_CREAT | O_EXCL, 0666);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L310'>filename_vpath</a>    310 src/editor/edit.c                 g_strdup_printf (_("Cannot open %s for reading"), vfs_path_as_str (filename_vpath));</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L323'>filename_vpath</a>    323 src/editor/edit.c                              vfs_path_as_str (filename_vpath));</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L331'>filename_vpath</a>    331 src/editor/edit.c             g_strdup_printf (_("\"%s\" is not a regular file"), vfs_path_as_str (filename_vpath));</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L357'>filename_vpath</a>    357 src/editor/edit.c                                   vfs_path_as_str (filename_vpath));</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L398'>filename_vpath</a>    398 src/editor/edit.c     if (edit_find_filter (edit-&gt;filename_vpath) &gt;= 0)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L405'>filename_vpath</a>    405 src/editor/edit.c     if (edit-&gt;filename_vpath != NULL)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L411'>filename_vpath</a>    411 src/editor/edit.c         if (!vfs_file_is_local (edit-&gt;filename_vpath))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L415'>filename_vpath</a>    415 src/editor/edit.c         if (!check_file_access (edit, edit-&gt;filename_vpath, &amp;edit-&gt;stat1))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L431'>filename_vpath</a>    431 src/editor/edit.c         if (!edit_load_file_fast (&amp;edit-&gt;buffer, edit-&gt;filename_vpath))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L441'>filename_vpath</a>    441 src/editor/edit.c         if (edit-&gt;filename_vpath != NULL</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L442'>filename_vpath</a>    442 src/editor/edit.c             &amp;&amp; *(vfs_path_get_by_index (edit-&gt;filename_vpath, 0)-&gt;path) != '\0')</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L445'>filename_vpath</a>    445 src/editor/edit.c             if (edit_insert_file (edit, edit-&gt;filename_vpath) &lt; 0)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L466'>filename_vpath</a>    466 src/editor/edit.c     if (edit-&gt;filename_vpath == NULL</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L467'>filename_vpath</a>    467 src/editor/edit.c         || *(vfs_path_get_by_index (edit-&gt;filename_vpath, 0)-&gt;path) == '\0')</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L470'>filename_vpath</a>    470 src/editor/edit.c     load_file_position (edit-&gt;filename_vpath, &amp;line, &amp;column, &amp;offset, &amp;edit-&gt;serialized_bookmarks);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L496'>filename_vpath</a>    496 src/editor/edit.c     if (edit-&gt;filename_vpath == NULL</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L497'>filename_vpath</a>    497 src/editor/edit.c         || *(vfs_path_get_by_index (edit-&gt;filename_vpath, 0)-&gt;path) == '\0')</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L501'>filename_vpath</a>    501 src/editor/edit.c     save_file_position (edit-&gt;filename_vpath, edit-&gt;buffer.curs_line + 1, edit-&gt;curs_col,</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L617'>filename_vpath</a>    617 src/editor/edit.c         edit-&gt;locked = lock_file (edit-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1805'>filename_vpath</a>   1805 src/editor/edit.c edit_get_write_filter (const vfs_path_t * write_name_vpath, const vfs_path_t * filename_vpath)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1811'>filename_vpath</a>   1811 src/editor/edit.c     i = edit_find_filter (filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1939'>filename_vpath</a>   1939 src/editor/edit.c edit_insert_file (WEdit * edit, const vfs_path_t * filename_vpath)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1945'>filename_vpath</a>   1945 src/editor/edit.c     p = edit_get_filter (filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1991'>filename_vpath</a>   1991 src/editor/edit.c         file = mc_open (filename_vpath, O_RDONLY | O_BINARY);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2068'>filename_vpath</a>   2068 src/editor/edit.c edit_init (WEdit * edit, int y, int x, int lines, int cols, const vfs_path_t * filename_vpath,</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2119'>filename_vpath</a>   2119 src/editor/edit.c     edit_set_filename (edit, filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2176'>filename_vpath</a>   2176 src/editor/edit.c         edit-&gt;locked = unlock_file (edit-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2186'>filename_vpath</a>   2186 src/editor/edit.c         unlink (vfs_path_get_last_path_str (edit-&gt;filename_vpath));</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2195'>filename_vpath</a>   2195 src/editor/edit.c     vfs_path_free (edit-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2221'>filename_vpath</a>   2221 src/editor/edit.c edit_reload_line (WEdit * edit, const vfs_path_t * filename_vpath, long line)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2235'>filename_vpath</a>   2235 src/editor/edit.c     if (edit_init (e, w-&gt;y, w-&gt;x, w-&gt;lines, w-&gt;cols, filename_vpath, line) == NULL)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3983'>filename_vpath</a>   3983 src/editor/edit.c         edit_history_moveto[edit_stack_iterator].filename_vpath = NULL;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3996'>filename_vpath</a>   3996 src/editor/edit.c         vfs_path_free (edit_history_moveto[edit_stack_iterator].filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L194'>filename_vpath</a>    194 src/editor/editcmd.c edit_save_file (WEdit * edit, const vfs_path_t * filename_vpath)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L206'>filename_vpath</a>    206 src/editor/editcmd.c     vpath_element = vfs_path_get_by_index (filename_vpath, 0);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L215'>filename_vpath</a>    215 src/editor/editcmd.c         real_filename_vpath = vfs_path_append_vpath_new (edit-&gt;dir_vpath, filename_vpath, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L217'>filename_vpath</a>    217 src/editor/editcmd.c         real_filename_vpath = vfs_path_clone (filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L458'>filename_vpath</a>    458 src/editor/editcmd.c                              vfs_path_as_str (edit-&gt;filename_vpath), "save-as",</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L498'>filename_vpath</a>    498 src/editor/editcmd.c         save_lock = lock_file (edit-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L499'>filename_vpath</a>    499 src/editor/editcmd.c     res = edit_save_file (edit, edit-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L503'>filename_vpath</a>    503 src/editor/editcmd.c         edit-&gt;locked = unlock_file (edit-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1682'>filename_vpath</a>   1682 src/editor/editcmd.c     vfs_path_free (edit-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1683'>filename_vpath</a>   1683 src/editor/editcmd.c     edit-&gt;filename_vpath = vfs_path_clone (name_vpath);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1715'>filename_vpath</a>   1715 src/editor/editcmd.c             if (!vfs_path_equal (edit-&gt;filename_vpath, exp_vpath))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1773'>filename_vpath</a>   1773 src/editor/editcmd.c                         edit-&gt;locked = unlock_file (edit-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1778'>filename_vpath</a>   1778 src/editor/editcmd.c                         edit-&gt;locked = unlock_file (edit-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2073'>filename_vpath</a>   2073 src/editor/editcmd.c     if (edit-&gt;filename_vpath == NULL)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2085'>filename_vpath</a>   2085 src/editor/editcmd.c                              vfs_path_as_str (edit-&gt;filename_vpath));</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2255'>filename_vpath</a>   2255 src/editor/editcmd.c             unlock_file (edit-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2854'>filename_vpath</a>   2854 src/editor/editcmd.c     if (edit-&gt;filename_vpath != NULL)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2855'>filename_vpath</a>   2855 src/editor/editcmd.c         fname = vfs_path_as_str (edit-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3467'>filename_vpath</a>   3467 src/editor/editcmd.c     if (edit_history_moveto[edit_stack_iterator].filename_vpath != NULL)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3468'>filename_vpath</a>   3468 src/editor/editcmd.c         return edit_reload_line (edit, edit_history_moveto[edit_stack_iterator].filename_vpath,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3494'>filename_vpath</a>   3494 src/editor/editcmd.c     if (edit_history_moveto[edit_stack_iterator].filename_vpath != NULL)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3495'>filename_vpath</a>   3495 src/editor/editcmd.c         return edit_reload_line (edit, edit_history_moveto[edit_stack_iterator].filename_vpath,</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L498'>filename_vpath</a>    498 src/editor/editcmd_dialogs.c                 vfs_path_free (edit_history_moveto[edit_stack_iterator].filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L501'>filename_vpath</a>    501 src/editor/editcmd_dialogs.c                     edit_history_moveto[edit_stack_iterator].filename_vpath =</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L502'>filename_vpath</a>    502 src/editor/editcmd_dialogs.c                         vfs_path_append_vpath_new (edit-&gt;dir_vpath, edit-&gt;filename_vpath, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L506'>filename_vpath</a>    506 src/editor/editcmd_dialogs.c                     edit_history_moveto[edit_stack_iterator].filename_vpath =</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L507'>filename_vpath</a>    507 src/editor/editcmd_dialogs.c                         vfs_path_clone (edit-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L512'>filename_vpath</a>    512 src/editor/editcmd_dialogs.c                 vfs_path_free (edit_history_moveto[edit_stack_iterator].filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L513'>filename_vpath</a>    513 src/editor/editcmd_dialogs.c                 edit_history_moveto[edit_stack_iterator].filename_vpath =</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L516'>filename_vpath</a>    516 src/editor/editcmd_dialogs.c                 edit_reload_line (edit, edit_history_moveto[edit_stack_iterator].filename_vpath,</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L212'>filename_vpath</a>    212 src/editor/editdraw.c     if (edit-&gt;filename_vpath != NULL)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L214'>filename_vpath</a>    214 src/editor/editdraw.c         fname = vfs_path_get_last_path_str (edit-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L270'>filename_vpath</a>    270 src/editor/editdraw.c         if (edit-&gt;filename_vpath != NULL)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L272'>filename_vpath</a>    272 src/editor/editdraw.c             fname = vfs_path_get_last_path_str (edit-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L341'>filename_vpath</a>    341 src/editor/editwidget.c             if (e-&gt;filename_vpath == NULL)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L346'>filename_vpath</a>    346 src/editor/editwidget.c                                      vfs_path_as_str (e-&gt;filename_vpath));</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L396'>filename_vpath</a>    396 src/editor/editwidget.c     if (edit-&gt;filename_vpath == NULL)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L399'>filename_vpath</a>    399 src/editor/editwidget.c         filename = g_strdup (vfs_path_as_str (edit-&gt;filename_vpath));</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1265'>filename_vpath</a>   1265 src/editor/editwidget.c     return vfs_path_as_str (edit-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.h.html#L74'>filename_vpath</a>     74 src/editor/editwidget.h     vfs_path_t *filename_vpath; /* Name of the file */</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1488'>filename_vpath</a>   1488 src/editor/syntax.c     if (edit != NULL &amp;&amp; edit-&gt;filename_vpath == NULL)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1493'>filename_vpath</a>   1493 src/editor/syntax.c         r = edit_read_syntax_file (edit, pnames, f, vfs_path_as_str (edit-&gt;filename_vpath),</span>
+<span class='curline'><a href='../S/src--execute.c.html#L73'>filename_vpath</a>     73 src/execute.c                                                   const vfs_path_t * filename_vpath,</span>
+<span class='curline'><a href='../S/src--execute.c.html#L179'>filename_vpath</a>    179 src/execute.c  execute_prepare_with_vfs_arg (const vfs_path_t * filename_vpath, vfs_path_t ** localcopy_vpath,</span>
+<span class='curline'><a href='../S/src--execute.c.html#L185'>filename_vpath</a>    185 src/execute.c      if ((filename_vpath == NULL &amp;&amp; vfs_file_is_local (vfs_get_raw_current_dir ()))</span>
+<span class='curline'><a href='../S/src--execute.c.html#L186'>filename_vpath</a>    186 src/execute.c          || vfs_file_is_local (filename_vpath))</span>
+<span class='curline'><a href='../S/src--execute.c.html#L190'>filename_vpath</a>    190 src/execute.c      if (filename_vpath == NULL)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L193'>filename_vpath</a>    193 src/execute.c      *localcopy_vpath = mc_getlocalcopy (filename_vpath);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L197'>filename_vpath</a>    197 src/execute.c                   vfs_path_as_str (filename_vpath));</span>
+<span class='curline'><a href='../S/src--execute.c.html#L209'>filename_vpath</a>    209 src/execute.c  execute_cleanup_with_vfs_arg (const vfs_path_t * filename_vpath, vfs_path_t ** localcopy_vpath,</span>
+<span class='curline'><a href='../S/src--execute.c.html#L222'>filename_vpath</a>    222 src/execute.c          mc_ungetlocalcopy (filename_vpath, *localcopy_vpath, *mtime != st.st_mtime);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L261'>filename_vpath</a>    261 src/execute.c  execute_get_external_cmd_opts_from_config (const char *command, const vfs_path_t * filename_vpath,</span>
+<span class='curline'><a href='../S/src--execute.c.html#L267'>filename_vpath</a>    267 src/execute.c      if (filename_vpath == NULL)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L270'>filename_vpath</a>    270 src/execute.c      parameter = g_shell_quote (vfs_path_get_last_path_str (filename_vpath));</span>
+<span class='curline'><a href='../S/src--execute.c.html#L592'>filename_vpath</a>    592 src/execute.c  execute_with_vfs_arg (const char *command, const vfs_path_t * filename_vpath)</span>
+<span class='curline'><a href='../S/src--execute.c.html#L598'>filename_vpath</a>    598 src/execute.c      if (!execute_prepare_with_vfs_arg (filename_vpath, &amp;localcopy_vpath, &amp;mtime))</span>
+<span class='curline'><a href='../S/src--execute.c.html#L601'>filename_vpath</a>    601 src/execute.c      do_execute_vpath = (localcopy_vpath == NULL) ? filename_vpath : localcopy_vpath;</span>
+<span class='curline'><a href='../S/src--execute.c.html#L605'>filename_vpath</a>    605 src/execute.c      execute_cleanup_with_vfs_arg (filename_vpath, &amp;localcopy_vpath, &amp;mtime);</span>
+<span class='curline'><a href='../S/src--execute.c.html#L619'>filename_vpath</a>    619 src/execute.c  execute_external_editor_or_viewer (const char *command, const vfs_path_t * filename_vpath,</span>
+<span class='curline'><a href='../S/src--execute.c.html#L627'>filename_vpath</a>    627 src/execute.c      if (!execute_prepare_with_vfs_arg (filename_vpath, &amp;localcopy_vpath, &amp;mtime))</span>
+<span class='curline'><a href='../S/src--execute.c.html#L630'>filename_vpath</a>    630 src/execute.c      do_execute_vpath = (localcopy_vpath == NULL) ? filename_vpath : localcopy_vpath;</span>
+<span class='curline'><a href='../S/src--execute.c.html#L652'>filename_vpath</a>    652 src/execute.c      execute_cleanup_with_vfs_arg (filename_vpath, &amp;localcopy_vpath, &amp;mtime);</span>
+<span class='curline'><a href='../S/src--execute.h.html#L42'>filename_vpath</a>     42 src/execute.h  void execute_with_vfs_arg (const char *command, const vfs_path_t * filename_vpath);</span>
+<span class='curline'><a href='../S/src--execute.h.html#L43'>filename_vpath</a>     43 src/execute.h  void execute_external_editor_or_viewer (const char *command, const vfs_path_t * filename_vpath,</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L150'>filename_vpath</a>    150 src/filemanager/cmd.c         vfs_path_t *filename_vpath;</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L153'>filename_vpath</a>    153 src/filemanager/cmd.c         filename_vpath = vfs_path_from_str (current_panel-&gt;dir.list[file_idx].fname);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L154'>filename_vpath</a>    154 src/filemanager/cmd.c         view_file (filename_vpath, normal, use_internal_view != 0);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L155'>filename_vpath</a>    155 src/filemanager/cmd.c         vfs_path_free (filename_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L541'>filename_vpath</a>    541 src/filemanager/cmd.c view_file_at_line (const vfs_path_t * filename_vpath, gboolean plain_view, gboolean internal,</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L565'>filename_vpath</a>    565 src/filemanager/cmd.c         ret = mcview_viewer (NULL, filename_vpath, start_line, search_start, search_end);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L585'>filename_vpath</a>    585 src/filemanager/cmd.c         ret = (regex_command (filename_vpath, view_entry) == 0);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L588'>filename_vpath</a>    588 src/filemanager/cmd.c             ret = mcview_viewer (NULL, filename_vpath, start_line, search_start, search_end);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L605'>filename_vpath</a>    605 src/filemanager/cmd.c         execute_external_editor_or_viewer (viewer, filename_vpath, start_line);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L622'>filename_vpath</a>    622 src/filemanager/cmd.c view_file (const vfs_path_t * filename_vpath, gboolean plain_view, gboolean internal)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L624'>filename_vpath</a>    624 src/filemanager/cmd.c     return view_file_at_line (filename_vpath, plain_view, internal, 0, 0, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.h.html#L46'>filename_vpath</a>     46 src/filemanager/cmd.h gboolean view_file_at_line (const vfs_path_t * filename_vpath, gboolean plain_view,</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.h.html#L49'>filename_vpath</a>     49 src/filemanager/cmd.h gboolean view_file (const vfs_path_t * filename_vpath, gboolean normal, gboolean internal);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L118'>filename_vpath</a>    118 src/filemanager/ext.c exec_cleanup_file_name (const vfs_path_t * filename_vpath, gboolean has_changed)</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L130'>filename_vpath</a>    130 src/filemanager/ext.c     mc_ungetlocalcopy (filename_vpath, localfilecopy_vpath, has_changed);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L138'>filename_vpath</a>    138 src/filemanager/ext.c exec_get_file_name (const vfs_path_t * filename_vpath)</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L141'>filename_vpath</a>    141 src/filemanager/ext.c         return quote_func (vfs_path_get_last_path_str (filename_vpath), FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L146'>filename_vpath</a>    146 src/filemanager/ext.c         localfilecopy_vpath = mc_getlocalcopy (filename_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L179'>filename_vpath</a>    179 src/filemanager/ext.c exec_get_export_variables (const vfs_path_t * filename_vpath)</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L200'>filename_vpath</a>    200 src/filemanager/ext.c     text = exec_get_file_name (filename_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L226'>filename_vpath</a>    226 src/filemanager/ext.c exec_make_shell_string (const char *lc_data, const vfs_path_t * filename_vpath)</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L251'>filename_vpath</a>    251 src/filemanager/ext.c                     exec_cleanup_file_name (filename_vpath, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L313'>filename_vpath</a>    313 src/filemanager/ext.c                                 text = exec_get_file_name (filename_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L354'>filename_vpath</a>    354 src/filemanager/ext.c exec_extension_view (void *target, char *cmd, const vfs_path_t * filename_vpath, int start_line)</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L367'>filename_vpath</a>    367 src/filemanager/ext.c         mcview_viewer (cmd, filename_vpath, start_line, 0, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L369'>filename_vpath</a>    369 src/filemanager/ext.c         mcview_load ((WView *) target, cmd, vfs_path_as_str (filename_vpath), start_line, 0, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L408'>filename_vpath</a>    408 src/filemanager/ext.c exec_extension (void *target, const vfs_path_t * filename_vpath, const char *lc_data,</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L427'>filename_vpath</a>    427 src/filemanager/ext.c     do_local_copy = !vfs_file_is_local (filename_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L429'>filename_vpath</a>    429 src/filemanager/ext.c     shell_string = exec_make_shell_string (lc_data, filename_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L459'>filename_vpath</a>    459 src/filemanager/ext.c     export_variables = exec_get_export_variables (filename_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L496'>filename_vpath</a>    496 src/filemanager/ext.c             exec_extension_view (target, NULL, filename_vpath, start_line);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L498'>filename_vpath</a>    498 src/filemanager/ext.c             exec_extension_view (target, cmd, filename_vpath, start_line);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L515'>filename_vpath</a>    515 src/filemanager/ext.c     exec_cleanup_file_name (filename_vpath, TRUE);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L572'>filename_vpath</a>    572 src/filemanager/ext.c get_file_type_local (const vfs_path_t * filename_vpath, char *buf, int buflen)</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L577'>filename_vpath</a>    577 src/filemanager/ext.c     tmp = name_quote (vfs_path_get_last_path_str (filename_vpath), FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L592'>filename_vpath</a>    592 src/filemanager/ext.c get_file_encoding_local (const vfs_path_t * filename_vpath, char *buf, int buflen)</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L597'>filename_vpath</a>    597 src/filemanager/ext.c     tmp = name_quote (vfs_path_get_last_path_str (filename_vpath), FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L620'>filename_vpath</a>    620 src/filemanager/ext.c regex_check_type (const vfs_path_t * filename_vpath, const char *ptr, gboolean case_insense,</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L648'>filename_vpath</a>    648 src/filemanager/ext.c         localfile_vpath = mc_getlocalcopy (filename_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L652'>filename_vpath</a>    652 src/filemanager/ext.c                                 vfs_path_as_str (filename_vpath));</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L681'>filename_vpath</a>    681 src/filemanager/ext.c         mc_ungetlocalcopy (filename_vpath, localfile_vpath, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L769'>filename_vpath</a>    769 src/filemanager/ext.c regex_command_for (void *target, const vfs_path_t * filename_vpath, const char *action,</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L784'>filename_vpath</a>    784 src/filemanager/ext.c     if (filename_vpath == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L867'>filename_vpath</a>    867 src/filemanager/ext.c     mc_stat (filename_vpath, &amp;mystat);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L869'>filename_vpath</a>    869 src/filemanager/ext.c     filename = vfs_path_get_last_path_str (filename_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L924'>filename_vpath</a>    924 src/filemanager/ext.c                     &amp;&amp; mc_search (p + 10, DEFAULT_CHARSET, vfs_path_as_str (filename_vpath),</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L961'>filename_vpath</a>    961 src/filemanager/ext.c                 found = regex_check_type (filename_vpath, p, case_insense, &amp;have_type, &amp;mcerror);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L1020'>filename_vpath</a>   1020 src/filemanager/ext.c                             sv = exec_extension (target, filename_vpath, r + 1,</span>
+<span class='curline'><a href='../S/src--filemanager--ext.h.html#L17'>filename_vpath</a>     17 src/filemanager/ext.h int regex_command_for (void *target, const vfs_path_t * filename_vpath, const char *action,</span>
+<span class='curline'><a href='../S/src--filemanager--ext.h.html#L28'>filename_vpath</a>     28 src/filemanager/ext.h regex_command (const vfs_path_t * filename_vpath, const char *action)</span>
+<span class='curline'><a href='../S/src--filemanager--ext.h.html#L30'>filename_vpath</a>     30 src/filemanager/ext.h     return regex_command_for (NULL, filename_vpath, action, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1886'>filename_vpath</a>   1886 src/filemanager/find.c                 vfs_path_t *filename_vpath;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1888'>filename_vpath</a>   1888 src/filemanager/find.c                 filename_vpath = vfs_path_from_str (filename);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1889'>filename_vpath</a>   1889 src/filemanager/find.c                 do_cd (filename_vpath, cd_exact);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1890'>filename_vpath</a>   1890 src/filemanager/find.c                 vfs_path_free (filename_vpath);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L263'>filename_vpath</a>    263 src/viewer/actions_cmd.c     if ((view-&gt;filename_vpath != NULL)</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L264'>filename_vpath</a>    264 src/viewer/actions_cmd.c         &amp;&amp; (*(vfs_path_get_last_path_str (view-&gt;filename_vpath)) != '\0')</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L266'>filename_vpath</a>    266 src/viewer/actions_cmd.c         view-&gt;locked = lock_file (view-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L313'>filename_vpath</a>    313 src/viewer/actions_cmd.c         fname = x_basename (vfs_path_as_str (view-&gt;filename_vpath));</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L164'>filename_vpath</a>    164 src/viewer/display.c         view-&gt;filename_vpath != NULL ?</span>
+<span class='curline'><a href='../S/src--viewer--display.c.html#L165'>filename_vpath</a>    165 src/viewer/display.c         vfs_path_get_last_path_str (view-&gt;filename_vpath) : view-&gt;command != NULL ?</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L393'>filename_vpath</a>    393 src/viewer/hex.c         assert (view-&gt;filename_vpath != NULL);</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L396'>filename_vpath</a>    396 src/viewer/hex.c         fp = mc_open (view-&gt;filename_vpath, O_WRONLY);</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L417'>filename_vpath</a>    417 src/viewer/hex.c                 view-&gt;locked = unlock_file (view-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--viewer--hex.c.html#L464'>filename_vpath</a>    464 src/viewer/hex.c         view-&gt;locked = unlock_file (view-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--viewer--internal.h.html#L107'>filename_vpath</a>    107 src/viewer/internal.h     vfs_path_t *filename_vpath; /* Name of the file */</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L85'>filename_vpath</a>     85 src/viewer/lib.c     filename = g_strdup (vfs_path_as_str (view-&gt;filename_vpath));</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L159'>filename_vpath</a>    159 src/viewer/lib.c     view-&gt;filename_vpath = NULL;</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L210'>filename_vpath</a>    210 src/viewer/lib.c     if (mcview_remember_file_position &amp;&amp; view-&gt;filename_vpath != NULL)</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L212'>filename_vpath</a>    212 src/viewer/lib.c         save_file_position (view-&gt;filename_vpath, -1, 0,</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L228'>filename_vpath</a>    228 src/viewer/lib.c     vfs_path_free (view-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L229'>filename_vpath</a>    229 src/viewer/lib.c     view-&gt;filename_vpath = NULL;</span>
+<span class='curline'><a href='../S/src--viewer--lib.c.html#L398'>filename_vpath</a>    398 src/viewer/lib.c     view_filename = vfs_path_as_str (view-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L276'>filename_vpath</a>    276 src/viewer/mcviewer.c     view-&gt;filename_vpath = vfs_path_from_str (file);</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L326'>filename_vpath</a>    326 src/viewer/mcviewer.c             vfs_path_free (view-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L327'>filename_vpath</a>    327 src/viewer/mcviewer.c             view-&gt;filename_vpath = NULL;</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L341'>filename_vpath</a>    341 src/viewer/mcviewer.c             vfs_path_free (view-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L342'>filename_vpath</a>    342 src/viewer/mcviewer.c             view-&gt;filename_vpath = NULL;</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L353'>filename_vpath</a>    353 src/viewer/mcviewer.c             vfs_path_free (view-&gt;filename_vpath);</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L354'>filename_vpath</a>    354 src/viewer/mcviewer.c             view-&gt;filename_vpath = NULL;</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L418'>filename_vpath</a>    418 src/viewer/mcviewer.c     if (mcview_remember_file_position &amp;&amp; view-&gt;filename_vpath != NULL &amp;&amp; start_line == 0)</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L423'>filename_vpath</a>    423 src/viewer/mcviewer.c         load_file_position (view-&gt;filename_vpath, &amp;line, &amp;col, &amp;new_offset, &amp;view-&gt;saved_bookmarks);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_external_editor_or_viewer.c.html#L35'>filename_vpath</a>     35 tests/src/execute__execute_external_editor_or_viewer.c                                                  const vfs_path_t * filename_vpath, int start_line);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_external_editor_or_viewer.c.html#L49'>filename_vpath</a>     49 tests/src/execute__execute_external_editor_or_viewer.c execute_get_external_cmd_opts_from_config (const char *command, const vfs_path_t * filename_vpath,</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_external_editor_or_viewer.c.html#L53'>filename_vpath</a>     53 tests/src/execute__execute_external_editor_or_viewer.c     execute_external_cmd_opts__filename_vpath__captured = vfs_path_clone (filename_vpath);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_external_editor_or_viewer.c.html#L143'>filename_vpath</a>    143 tests/src/execute__execute_external_editor_or_viewer.c     vfs_path_t *filename_vpath;</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_external_editor_or_viewer.c.html#L144'>filename_vpath</a>    144 tests/src/execute__execute_external_editor_or_viewer.c     filename_vpath = vfs_path_from_str ("/path/to/file.txt");</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_external_editor_or_viewer.c.html#L152'>filename_vpath</a>    152 tests/src/execute__execute_external_editor_or_viewer.c     execute_external_editor_or_viewer ("editor_or_viewer", filename_vpath, 123);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_external_editor_or_viewer.c.html#L159'>filename_vpath</a>    159 tests/src/execute__execute_external_editor_or_viewer.c                           (execute_external_cmd_opts__filename_vpath__captured, filename_vpath),</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_external_editor_or_viewer.c.html#L177'>filename_vpath</a>    177 tests/src/execute__execute_external_editor_or_viewer.c     vfs_path_free (filename_vpath);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_get_external_cmd_opts_from_config.c.html#L36'>filename_vpath</a>     36 tests/src/execute__execute_get_external_cmd_opts_from_config.c                                                  const vfs_path_t * filename_vpath, int start_line);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_get_external_cmd_opts_from_config.c.html#L155'>filename_vpath</a>    155 tests/src/execute__execute_get_external_cmd_opts_from_config.c     vfs_path_t *filename_vpath;</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_get_external_cmd_opts_from_config.c.html#L158'>filename_vpath</a>    158 tests/src/execute__execute_get_external_cmd_opts_from_config.c     filename_vpath = vfs_path_from_str (data-&gt;file_name);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_get_external_cmd_opts_from_config.c.html#L162'>filename_vpath</a>    162 tests/src/execute__execute_get_external_cmd_opts_from_config.c         execute_get_external_cmd_opts_from_config (data-&gt;app_name, filename_vpath,</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_get_external_cmd_opts_from_config.c.html#L178'>filename_vpath</a>    178 tests/src/execute__execute_get_external_cmd_opts_from_config.c     vfs_path_free (filename_vpath);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L56'>filename_vpath</a>     56 tests/src/execute__execute_with_vfs_arg.c     vfs_path_t *filename_vpath;</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L57'>filename_vpath</a>     57 tests/src/execute__execute_with_vfs_arg.c     filename_vpath = vfs_path_from_str (data-&gt;input_path);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L62'>filename_vpath</a>     62 tests/src/execute__execute_with_vfs_arg.c     execute_with_vfs_arg ("cmd_for_local_file", filename_vpath);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L72'>filename_vpath</a>     72 tests/src/execute__execute_with_vfs_arg.c         tmp_vpath = (data-&gt;input_path == NULL) ? vfs_get_raw_current_dir () : filename_vpath;</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L81'>filename_vpath</a>     81 tests/src/execute__execute_with_vfs_arg.c     vfs_path_free (filename_vpath);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L95'>filename_vpath</a>     95 tests/src/execute__execute_with_vfs_arg.c     vfs_path_t *filename_vpath;</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L96'>filename_vpath</a>     96 tests/src/execute__execute_with_vfs_arg.c     filename_vpath = NULL;</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L101'>filename_vpath</a>    101 tests/src/execute__execute_with_vfs_arg.c     execute_with_vfs_arg ("cmd_for_remote_file", filename_vpath);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L117'>filename_vpath</a>    117 tests/src/execute__execute_with_vfs_arg.c     vfs_path_free (filename_vpath);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L131'>filename_vpath</a>    131 tests/src/execute__execute_with_vfs_arg.c     vfs_path_t *filename_vpath;</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L133'>filename_vpath</a>    133 tests/src/execute__execute_with_vfs_arg.c     filename_vpath = vfs_path_from_str ("/ftp://some.host/editme.txt");</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L139'>filename_vpath</a>    139 tests/src/execute__execute_with_vfs_arg.c     execute_with_vfs_arg ("cmd_for_remote_file", filename_vpath);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L149'>filename_vpath</a>    149 tests/src/execute__execute_with_vfs_arg.c                            filename_vpath), TRUE);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L152'>filename_vpath</a>    152 tests/src/execute__execute_with_vfs_arg.c                           (mc_getlocalcopy__pathname_vpath__captured, filename_vpath), TRUE);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L159'>filename_vpath</a>    159 tests/src/execute__execute_with_vfs_arg.c     vfs_path_free (filename_vpath);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L173'>filename_vpath</a>    173 tests/src/execute__execute_with_vfs_arg.c     vfs_path_t *filename_vpath, *local_vpath, *local_vpath_should_be_freeing;</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L175'>filename_vpath</a>    175 tests/src/execute__execute_with_vfs_arg.c     filename_vpath = vfs_path_from_str ("/ftp://some.host/editme.txt");</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L183'>filename_vpath</a>    183 tests/src/execute__execute_with_vfs_arg.c     execute_with_vfs_arg ("cmd_for_remote_file", filename_vpath);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L193'>filename_vpath</a>    193 tests/src/execute__execute_with_vfs_arg.c                            filename_vpath), TRUE);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L196'>filename_vpath</a>    196 tests/src/execute__execute_with_vfs_arg.c                           (mc_getlocalcopy__pathname_vpath__captured, filename_vpath), TRUE);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L207'>filename_vpath</a>    207 tests/src/execute__execute_with_vfs_arg.c                           (mc_ungetlocalcopy__pathname_vpath__captured, filename_vpath), TRUE);</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_with_vfs_arg.c.html#L212'>filename_vpath</a>    212 tests/src/execute__execute_with_vfs_arg.c     vfs_path_free (filename_vpath);</span>
+<span class='curline'><a href='../S/tests--src--filemanager--exec_get_export_variables_ext.c.html#L73'>filename_vpath</a>     73 tests/src/filemanager/exec_get_export_variables_ext.c     vfs_path_t *filename_vpath;</span>
+<span class='curline'><a href='../S/tests--src--filemanager--exec_get_export_variables_ext.c.html#L86'>filename_vpath</a>     86 tests/src/filemanager/exec_get_export_variables_ext.c     filename_vpath = vfs_path_from_str ("/tmp/blabla.txt");</span>
+<span class='curline'><a href='../S/tests--src--filemanager--exec_get_export_variables_ext.c.html#L87'>filename_vpath</a>     87 tests/src/filemanager/exec_get_export_variables_ext.c     actual_string = exec_get_export_variables (filename_vpath);</span>
+<span class='curline'><a href='../S/tests--src--filemanager--exec_get_export_variables_ext.c.html#L88'>filename_vpath</a>     88 tests/src/filemanager/exec_get_export_variables_ext.c     vfs_path_free (filename_vpath);</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>old_mask</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L463'>old_mask</a>          463 src/subshell/common.c     sigset_t sigchld_mask, old_mask;</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L467'>old_mask</a>          467 src/subshell/common.c     sigprocmask (SIG_BLOCK, &amp;sigchld_mask, &amp;old_mask);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L473'>old_mask</a>          473 src/subshell/common.c     sigdelset (&amp;old_mask, SIGCHLD);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L477'>old_mask</a>          477 src/subshell/common.c         sigsuspend (&amp;old_mask);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L488'>old_mask</a>          488 src/subshell/common.c     sigprocmask (SIG_SETMASK, &amp;old_mask, NULL);</span>
+</pre>
+</body>
+</html>

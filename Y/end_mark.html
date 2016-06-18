@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>end_mark</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L138'>end_mark</a>          138 lib/widget/input.c input_eval_marks (WInput * in, long *start_mark, long *end_mark)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L143'>end_mark</a>          143 lib/widget/input.c         *end_mark = MAX (in-&gt;mark, in-&gt;point);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L147'>end_mark</a>          147 lib/widget/input.c     *start_mark = *end_mark = -1;</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L227'>end_mark</a>          227 src/editor/edit-impl.h gboolean eval_marks (WEdit * edit, off_t * start_mark, off_t * end_mark);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1580'>end_mark</a>         1580 src/editor/edit.c     off_t start_mark, end_mark;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1583'>end_mark</a>         1583 src/editor/edit.c     if (!eval_marks (edit, &amp;start_mark, &amp;end_mark))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1587'>end_mark</a>         1587 src/editor/edit.c     cur_bol = edit_buffer_get_bol (&amp;edit-&gt;buffer, end_mark - 1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1617'>end_mark</a>         1617 src/editor/edit.c     off_t start_mark, end_mark;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1621'>end_mark</a>         1621 src/editor/edit.c     if (!eval_marks (edit, &amp;start_mark, &amp;end_mark))</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1625'>end_mark</a>         1625 src/editor/edit.c     cur_bol = edit_buffer_get_bol (&amp;edit-&gt;buffer, end_mark - 1);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1759'>end_mark</a>         1759 src/editor/edit.c     off_t start_mark, end_mark;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1766'>end_mark</a>         1766 src/editor/edit.c     nomark = !eval_marks (edit, &amp;start_mark, &amp;end_mark);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1768'>end_mark</a>         1768 src/editor/edit.c         edit_save_block (edit, block_file, start_mark, end_mark);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L583'>end_mark</a>          583 src/editor/editcmd.c     off_t start_mark, end_mark;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L587'>end_mark</a>          587 src/editor/editcmd.c     if (!eval_marks (edit, &amp;start_mark, &amp;end_mark))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L592'>end_mark</a>          592 src/editor/editcmd.c     if ((end_mark - start_mark) &gt; option_max_undo / 2)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L619'>end_mark</a>          619 src/editor/editcmd.c     if (start_mark &lt; end_mark)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L640'>end_mark</a>          640 src/editor/editcmd.c             for (count = start_mark; count &lt; end_mark; count++)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L793'>end_mark</a>          793 src/editor/editcmd.c     off_t end_mark = 0;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L798'>end_mark</a>          798 src/editor/editcmd.c     if (!eval_marks (edit, &amp;start_mark, &amp;end_mark))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L803'>end_mark</a>          803 src/editor/editcmd.c         if (edit-&gt;search_start &gt; end_mark || edit-&gt;search_start &lt;= start_mark)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L804'>end_mark</a>          804 src/editor/editcmd.c             edit-&gt;search_start = end_mark;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L808'>end_mark</a>          808 src/editor/editcmd.c         if (edit-&gt;search_start &lt; start_mark || edit-&gt;search_start &gt;= end_mark)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L822'>end_mark</a>          822 src/editor/editcmd.c     off_t end_mark = edit-&gt;buffer.size;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L830'>end_mark</a>          830 src/editor/editcmd.c         if (!eval_marks (edit, &amp;start_mark, &amp;end_mark))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L845'>end_mark</a>          845 src/editor/editcmd.c             &amp;&amp; (end_mark - 1 != edit-&gt;buffer.size</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L846'>end_mark</a>          846 src/editor/editcmd.c                 || edit_buffer_get_byte (&amp;edit-&gt;buffer, end_mark) != end_string_symbol))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L847'>end_mark</a>          847 src/editor/editcmd.c             end_mark =</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L848'>end_mark</a>          848 src/editor/editcmd.c                 edit_calculate_end_of_previous_line (&amp;edit-&gt;buffer, end_mark, end_string_symbol);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L850'>end_mark</a>          850 src/editor/editcmd.c         if (start_mark &gt;= end_mark)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L857'>end_mark</a>          857 src/editor/editcmd.c         end_mark = MAX (1, edit-&gt;buffer.curs1) - 1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L863'>end_mark</a>          863 src/editor/editcmd.c         search_end = end_mark;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L902'>end_mark</a>          902 src/editor/editcmd.c             edit_calculate_start_of_next_line (&amp;edit-&gt;buffer, search_start, end_mark,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L905'>end_mark</a>          905 src/editor/editcmd.c     return mc_search_run (edit-&gt;search, (void *) esm, search_start, end_mark, len);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2283'>end_mark</a>         2283 src/editor/editcmd.c eval_marks (WEdit * edit, off_t * start_mark, off_t * end_mark)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2289'>end_mark</a>         2289 src/editor/editcmd.c         *start_mark = *end_mark = 0;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2302'>end_mark</a>         2302 src/editor/editcmd.c         *end_mark = MAX (edit-&gt;mark1, edit-&gt;mark2);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2307'>end_mark</a>         2307 src/editor/editcmd.c         *end_mark = MAX (edit-&gt;mark1, end_mark_curs);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2322'>end_mark</a>         2322 src/editor/editcmd.c         end_bol = edit_buffer_get_bol (&amp;edit-&gt;buffer, *end_mark);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2323'>end_mark</a>         2323 src/editor/editcmd.c         end_eol = edit_buffer_get_eol (&amp;edit-&gt;buffer, *end_mark);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2333'>end_mark</a>         2333 src/editor/editcmd.c         *end_mark += diff2;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2335'>end_mark</a>         2335 src/editor/editcmd.c         *end_mark = MIN (*end_mark, end_eol);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2345'>end_mark</a>         2345 src/editor/editcmd.c     off_t start_mark, end_mark, current = edit-&gt;buffer.curs1;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2352'>end_mark</a>         2352 src/editor/editcmd.c     if (!eval_marks (edit, &amp;start_mark, &amp;end_mark))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2355'>end_mark</a>         2355 src/editor/editcmd.c     copy_buf = edit_get_block (edit, start_mark, end_mark, &amp;size);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2385'>end_mark</a>         2385 src/editor/editcmd.c     else if (start_mark &lt; current &amp;&amp; end_mark &gt; current)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2386'>end_mark</a>         2386 src/editor/editcmd.c         edit_set_markers (edit, start_mark, end_mark + end_mark - start_mark, 0, 0);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2399'>end_mark</a>         2399 src/editor/editcmd.c     off_t start_mark, end_mark;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2401'>end_mark</a>         2401 src/editor/editcmd.c     if (!eval_marks (edit, &amp;start_mark, &amp;end_mark))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2404'>end_mark</a>         2404 src/editor/editcmd.c     if (!edit-&gt;column_highlight &amp;&amp; edit-&gt;buffer.curs1 &gt; start_mark &amp;&amp; edit-&gt;buffer.curs1 &lt; end_mark)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2433'>end_mark</a>         2433 src/editor/editcmd.c             &amp;&amp; edit-&gt;buffer.curs1 &lt; edit_buffer_get_eol (&amp;edit-&gt;buffer, end_mark))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2441'>end_mark</a>         2441 src/editor/editcmd.c         copy_buf = edit_get_block (edit, start_mark, end_mark, &amp;size);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2464'>end_mark</a>         2464 src/editor/editcmd.c         copy_buf = g_malloc0 (end_mark - start_mark);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2468'>end_mark</a>         2468 src/editor/editcmd.c         for (count = start_mark; count &lt; end_mark; count++)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2469'>end_mark</a>         2469 src/editor/editcmd.c             copy_buf[end_mark - count - 1] = edit_delete (edit, TRUE);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2474'>end_mark</a>         2474 src/editor/editcmd.c                           (((current - edit-&gt;buffer.curs1) &gt; 0) ? end_mark - start_mark : 0));</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2478'>end_mark</a>         2478 src/editor/editcmd.c             edit_insert_ahead (edit, copy_buf[end_mark - count - 1]);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2480'>end_mark</a>         2480 src/editor/editcmd.c         edit_set_markers (edit, edit-&gt;buffer.curs1, edit-&gt;buffer.curs1 + end_mark - start_mark, 0,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2499'>end_mark</a>         2499 src/editor/editcmd.c     off_t start_mark, end_mark;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2501'>end_mark</a>         2501 src/editor/editcmd.c     if (eval_marks (edit, &amp;start_mark, &amp;end_mark))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2977'>end_mark</a>         2977 src/editor/editcmd.c     off_t start_mark, end_mark;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2979'>end_mark</a>         2979 src/editor/editcmd.c     if (!eval_marks (edit, &amp;start_mark, &amp;end_mark))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2982'>end_mark</a>         2982 src/editor/editcmd.c     if (!edit_save_block_to_clip_file (edit, start_mark, end_mark))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3001'>end_mark</a>         3001 src/editor/editcmd.c     off_t start_mark, end_mark;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3003'>end_mark</a>         3003 src/editor/editcmd.c     if (!eval_marks (edit, &amp;start_mark, &amp;end_mark))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3006'>end_mark</a>         3006 src/editor/editcmd.c     if (!edit_save_block_to_clip_file (edit, start_mark, end_mark))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3084'>end_mark</a>         3084 src/editor/editcmd.c     off_t start_mark, end_mark;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3088'>end_mark</a>         3088 src/editor/editcmd.c     if (!eval_marks (edit, &amp;start_mark, &amp;end_mark))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3100'>end_mark</a>         3100 src/editor/editcmd.c         if (edit_save_block (edit, exp, start_mark, end_mark))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3156'>end_mark</a>         3156 src/editor/editcmd.c     off_t start_mark, end_mark;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3159'>end_mark</a>         3159 src/editor/editcmd.c     if (!eval_marks (edit, &amp;start_mark, &amp;end_mark))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3166'>end_mark</a>         3166 src/editor/editcmd.c     edit_save_block (edit, tmp, start_mark, end_mark);</span>
+</pre>
+</body>
+</html>

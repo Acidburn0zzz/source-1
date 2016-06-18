@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>vfs_smbfs_ops</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L139'>vfs_smbfs_ops</a>     139 src/vfs/smbfs/smbfs.c static struct vfs_class vfs_smbfs_ops;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1344'>vfs_smbfs_ops</a>    1344 src/vfs/smbfs/smbfs.c     if (path_element-&gt;class != &amp;vfs_smbfs_ops)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1745'>vfs_smbfs_ops</a>    1745 src/vfs/smbfs/smbfs.c     if (path_element-&gt;class != &amp;vfs_smbfs_ops)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1981'>vfs_smbfs_ops</a>    1981 src/vfs/smbfs/smbfs.c     if (path_element-&gt;class != &amp;vfs_smbfs_ops)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2238'>vfs_smbfs_ops</a>    2238 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.name = "smbfs";</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2239'>vfs_smbfs_ops</a>    2239 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.prefix = "smb";</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2240'>vfs_smbfs_ops</a>    2240 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.flags = VFSF_NOLINKS;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2241'>vfs_smbfs_ops</a>    2241 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.init = smbfs_init;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2242'>vfs_smbfs_ops</a>    2242 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.fill_names = smbfs_fill_names;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2243'>vfs_smbfs_ops</a>    2243 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.open = smbfs_open;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2244'>vfs_smbfs_ops</a>    2244 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.close = smbfs_close;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2245'>vfs_smbfs_ops</a>    2245 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.read = smbfs_read;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2246'>vfs_smbfs_ops</a>    2246 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.write = smbfs_write;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2247'>vfs_smbfs_ops</a>    2247 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.opendir = smbfs_opendir;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2248'>vfs_smbfs_ops</a>    2248 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.readdir = smbfs_readdir;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2249'>vfs_smbfs_ops</a>    2249 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.closedir = smbfs_closedir;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2250'>vfs_smbfs_ops</a>    2250 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.stat = smbfs_stat;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2251'>vfs_smbfs_ops</a>    2251 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.lstat = smbfs_lstat;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2252'>vfs_smbfs_ops</a>    2252 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.fstat = smbfs_fstat;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2253'>vfs_smbfs_ops</a>    2253 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.chmod = smbfs_chmod;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2254'>vfs_smbfs_ops</a>    2254 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.chown = smbfs_chown;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2255'>vfs_smbfs_ops</a>    2255 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.utime = smbfs_utime;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2256'>vfs_smbfs_ops</a>    2256 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.readlink = smbfs_readlink;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2257'>vfs_smbfs_ops</a>    2257 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.symlink = smbfs_symlink;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2258'>vfs_smbfs_ops</a>    2258 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.link = smbfs_link;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2259'>vfs_smbfs_ops</a>    2259 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.unlink = smbfs_unlink;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2260'>vfs_smbfs_ops</a>    2260 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.rename = smbfs_rename;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2261'>vfs_smbfs_ops</a>    2261 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.chdir = smbfs_chdir;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2262'>vfs_smbfs_ops</a>    2262 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.ferrno = smbfs_errno;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2263'>vfs_smbfs_ops</a>    2263 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.lseek = smbfs_lseek;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2264'>vfs_smbfs_ops</a>    2264 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.mknod = smbfs_mknod;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2265'>vfs_smbfs_ops</a>    2265 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.free = smbfs_free;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2266'>vfs_smbfs_ops</a>    2266 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.mkdir = smbfs_mkdir;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2267'>vfs_smbfs_ops</a>    2267 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.rmdir = smbfs_rmdir;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2268'>vfs_smbfs_ops</a>    2268 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.setctl = smbfs_setctl;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2269'>vfs_smbfs_ops</a>    2269 src/vfs/smbfs/smbfs.c     vfs_register_class (&amp;vfs_smbfs_ops);</span>
+</pre>
+</body>
+</html>

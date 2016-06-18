@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>mc_config_t</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--event-types.h.html#L70'>mc_config_t</a>        70 lib/event-types.h struct mc_config_t;</span>
+<span class='curline'><a href='../S/lib--event-types.h.html#L74'>mc_config_t</a>        74 lib/event-types.h     struct mc_config_t *cfg;</span>
+<span class='curline'><a href='../S/lib--filehighlight.h.html#L15'>mc_config_t</a>        15 lib/filehighlight.h     mc_config_t *config;</span>
+<span class='curline'><a href='../S/lib--global.h.html#L185'>mc_config_t</a>       185 lib/global.h       mc_config_t *main_config;</span>
+<span class='curline'><a href='../S/lib--global.h.html#L186'>mc_config_t</a>       186 lib/global.h       mc_config_t *panels_config;</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L30'>mc_config_t</a>        30 lib/mcconfig.h mc_config_t *mc_config_init (const gchar * ini_path, gboolean read_only);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L31'>mc_config_t</a>        31 lib/mcconfig.h void mc_config_deinit (mc_config_t * mc_config);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L33'>mc_config_t</a>        33 lib/mcconfig.h gboolean mc_config_del_key (mc_config_t *, const char *, const gchar *);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L34'>mc_config_t</a>        34 lib/mcconfig.h gboolean mc_config_del_group (mc_config_t *, const char *);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L36'>mc_config_t</a>        36 lib/mcconfig.h gboolean mc_config_has_param (const mc_config_t *, const char *, const gchar *);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L37'>mc_config_t</a>        37 lib/mcconfig.h gboolean mc_config_has_group (mc_config_t *, const char *);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L39'>mc_config_t</a>        39 lib/mcconfig.h gboolean mc_config_read_file (mc_config_t * mc_config, const gchar * ini_path, gboolean read_only,</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L42'>mc_config_t</a>        42 lib/mcconfig.h gboolean mc_config_save_file (mc_config_t * config, GError ** error);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L44'>mc_config_t</a>        44 lib/mcconfig.h gboolean mc_config_save_to_file (mc_config_t * config, const gchar * filename, GError ** error);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L49'>mc_config_t</a>        49 lib/mcconfig.h gchar **mc_config_get_groups (const mc_config_t * mc_config, gsize * len);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L51'>mc_config_t</a>        51 lib/mcconfig.h gchar **mc_config_get_keys (const mc_config_t * mc_config, const gchar * group, gsize * len);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L53'>mc_config_t</a>        53 lib/mcconfig.h gchar *mc_config_get_string (mc_config_t *, const gchar *, const gchar *, const gchar *);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L55'>mc_config_t</a>        55 lib/mcconfig.h gchar *mc_config_get_string_raw (const mc_config_t *, const gchar *, const gchar *, const gchar *);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L57'>mc_config_t</a>        57 lib/mcconfig.h gboolean mc_config_get_bool (mc_config_t *, const gchar *, const gchar *, gboolean);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L59'>mc_config_t</a>        59 lib/mcconfig.h int mc_config_get_int (mc_config_t *, const gchar *, const gchar *, int);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L62'>mc_config_t</a>        62 lib/mcconfig.h gchar **mc_config_get_string_list (mc_config_t * mc_config, const gchar * group,</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L65'>mc_config_t</a>        65 lib/mcconfig.h gboolean *mc_config_get_bool_list (mc_config_t *, const gchar *, const gchar *, gsize *);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L67'>mc_config_t</a>        67 lib/mcconfig.h int *mc_config_get_int_list (mc_config_t *, const gchar *, const gchar *, gsize *);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L72'>mc_config_t</a>        72 lib/mcconfig.h void mc_config_set_string_raw (mc_config_t *, const gchar *, const gchar *, const gchar *);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L74'>mc_config_t</a>        74 lib/mcconfig.h void mc_config_set_string_raw_value (mc_config_t *, const gchar *, const gchar *, const gchar *);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L76'>mc_config_t</a>        76 lib/mcconfig.h void mc_config_set_string (const mc_config_t *, const gchar *, const gchar *, const gchar *);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L78'>mc_config_t</a>        78 lib/mcconfig.h void mc_config_set_bool (mc_config_t *, const gchar *, const gchar *, gboolean);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L80'>mc_config_t</a>        80 lib/mcconfig.h void mc_config_set_int (mc_config_t *, const gchar *, const gchar *, int);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L83'>mc_config_t</a>        83 lib/mcconfig.h mc_config_set_string_list (mc_config_t *, const gchar *,</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L86'>mc_config_t</a>        86 lib/mcconfig.h void mc_config_set_bool_list (mc_config_t *, const gchar *, const gchar *, gboolean[], gsize);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L88'>mc_config_t</a>        88 lib/mcconfig.h void mc_config_set_int_list (mc_config_t *, const gchar *, const gchar *, int[], gsize);</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L47'>mc_config_t</a>        47 lib/mcconfig/common.c mc_config_new_or_override_file (mc_config_t * mc_config, const gchar * ini_path, GError ** mcerror)</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L101'>mc_config_t</a>       101 lib/mcconfig/common.c mc_config_t *</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L104'>mc_config_t</a>       104 lib/mcconfig/common.c     mc_config_t *mc_config;</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L107'>mc_config_t</a>       107 lib/mcconfig/common.c     mc_config = g_try_malloc0 (sizeof (mc_config_t));</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L146'>mc_config_t</a>       146 lib/mcconfig/common.c mc_config_deinit (mc_config_t * mc_config)</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L159'>mc_config_t</a>       159 lib/mcconfig/common.c mc_config_has_param (const mc_config_t * mc_config, const char *group, const gchar * param)</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L170'>mc_config_t</a>       170 lib/mcconfig/common.c mc_config_has_group (mc_config_t * mc_config, const char *group)</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L181'>mc_config_t</a>       181 lib/mcconfig/common.c mc_config_del_key (mc_config_t * mc_config, const char *group, const gchar * param)</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L192'>mc_config_t</a>       192 lib/mcconfig/common.c mc_config_del_group (mc_config_t * mc_config, const char *group)</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L203'>mc_config_t</a>       203 lib/mcconfig/common.c mc_config_read_file (mc_config_t * mc_config, const gchar * ini_path, gboolean read_only,</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L206'>mc_config_t</a>       206 lib/mcconfig/common.c     mc_config_t *tmp_config;</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L253'>mc_config_t</a>       253 lib/mcconfig/common.c mc_config_save_file (mc_config_t * mc_config, GError ** mcerror)</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L266'>mc_config_t</a>       266 lib/mcconfig/common.c mc_config_save_to_file (mc_config_t * mc_config, const gchar * ini_path, GError ** mcerror)</span>
+<span class='curline'><a href='../S/lib--mcconfig--get.c.html#L42'>mc_config_t</a>        42 lib/mcconfig/get.c mc_config_get_groups (const mc_config_t * mc_config, gsize * len)</span>
+<span class='curline'><a href='../S/lib--mcconfig--get.c.html#L62'>mc_config_t</a>        62 lib/mcconfig/get.c mc_config_get_keys (const mc_config_t * mc_config, const gchar * group, gsize * len)</span>
+<span class='curline'><a href='../S/lib--mcconfig--get.c.html#L82'>mc_config_t</a>        82 lib/mcconfig/get.c mc_config_get_string (mc_config_t * mc_config, const gchar * group,</span>
+<span class='curline'><a href='../S/lib--mcconfig--get.c.html#L129'>mc_config_t</a>       129 lib/mcconfig/get.c mc_config_get_string_raw (const mc_config_t * mc_config, const gchar * group,</span>
+<span class='curline'><a href='../S/lib--mcconfig--get.c.html#L152'>mc_config_t</a>       152 lib/mcconfig/get.c mc_config_get_bool (mc_config_t * mc_config, const gchar * group, const gchar * param, gboolean def)</span>
+<span class='curline'><a href='../S/lib--mcconfig--get.c.html#L169'>mc_config_t</a>       169 lib/mcconfig/get.c mc_config_get_int (mc_config_t * mc_config, const gchar * group, const gchar * param, int def)</span>
+<span class='curline'><a href='../S/lib--mcconfig--get.c.html#L187'>mc_config_t</a>       187 lib/mcconfig/get.c mc_config_get_string_list (mc_config_t * mc_config, const gchar * group,</span>
+<span class='curline'><a href='../S/lib--mcconfig--get.c.html#L199'>mc_config_t</a>       199 lib/mcconfig/get.c mc_config_get_bool_list (mc_config_t * mc_config, const gchar * group,</span>
+<span class='curline'><a href='../S/lib--mcconfig--get.c.html#L211'>mc_config_t</a>       211 lib/mcconfig/get.c mc_config_get_int_list (mc_config_t * mc_config, const gchar * group,</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L73'>mc_config_t</a>        73 lib/mcconfig/set.c mc_config_set_string_raw (mc_config_t * mc_config, const gchar * group,</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L85'>mc_config_t</a>        85 lib/mcconfig/set.c mc_config_set_string_raw_value (mc_config_t * mc_config, const gchar * group,</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L97'>mc_config_t</a>        97 lib/mcconfig/set.c mc_config_set_string (const mc_config_t * mc_config, const gchar * group,</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L115'>mc_config_t</a>       115 lib/mcconfig/set.c mc_config_set_bool (mc_config_t * mc_config, const gchar * group,</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L127'>mc_config_t</a>       127 lib/mcconfig/set.c mc_config_set_int (mc_config_t * mc_config, const gchar * group, const gchar * param, int value)</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L139'>mc_config_t</a>       139 lib/mcconfig/set.c mc_config_set_string_list (mc_config_t * mc_config, const gchar * group,</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L152'>mc_config_t</a>       152 lib/mcconfig/set.c mc_config_set_bool_list (mc_config_t * mc_config, const gchar * group,</span>
+<span class='curline'><a href='../S/lib--mcconfig--set.c.html#L164'>mc_config_t</a>       164 lib/mcconfig/set.c mc_config_set_int_list (mc_config_t * mc_config, const gchar * group,</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L196'>mc_config_t</a>       196 lib/serialize.c mc_serialize_config (const mc_config_t * data, GError ** error)</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L274'>mc_config_t</a>       274 lib/serialize.c mc_config_t *</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L279'>mc_config_t</a>       279 lib/serialize.c     mc_config_t *ret_data;</span>
+<span class='curline'><a href='../S/lib--serialize.h.html#L22'>mc_config_t</a>        22 lib/serialize.h char *mc_serialize_config (const mc_config_t * data, GError ** error);</span>
+<span class='curline'><a href='../S/lib--serialize.h.html#L23'>mc_config_t</a>        23 lib/serialize.h mc_config_t *mc_deserialize_config (const char *data, GError ** error);</span>
+<span class='curline'><a href='../S/lib--skin.h.html#L120'>mc_config_t</a>       120 lib/skin.h         mc_config_t *config;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1089'>mc_config_t</a>      1089 lib/vfs/path.c     mc_config_t *cpath;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1147'>mc_config_t</a>      1147 lib/vfs/path.c     mc_config_t *cpath;</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L144'>mc_config_t</a>       144 lib/widget/history.c     mc_config_t *cfg;</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L168'>mc_config_t</a>       168 lib/widget/history.c history_load (mc_config_t * cfg, const char *name)</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L231'>mc_config_t</a>       231 lib/widget/history.c history_save (mc_config_t * cfg, const char *name, GList * h)</span>
+<span class='curline'><a href='../S/lib--widget--history.h.html#L26'>mc_config_t</a>        26 lib/widget/history.h GList *history_load (mc_config_t * cfg, const char *name);</span>
+<span class='curline'><a href='../S/lib--widget--history.h.html#L28'>mc_config_t</a>        28 lib/widget/history.h void history_save (mc_config_t * cfg, const char *name, GList * h);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1452'>mc_config_t</a>      1452 src/editor/editcmd.c     mc_config_t *macros_config = NULL;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1866'>mc_config_t</a>      1866 src/editor/editcmd.c     mc_config_t *macros_config = NULL;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1983'>mc_config_t</a>      1983 src/editor/editcmd.c     mc_config_t *macros_config = NULL;</span>
+<span class='curline'><a href='../S/src--execute.c.html#L241'>mc_config_t</a>       241 src/execute.c          mc_config_t *cfg;</span>
+<span class='curline'><a href='../S/src--filemanager--treestore.c.html#L534'>mc_config_t</a>       534 src/filemanager/treestore.c     mc_config_t *cfg;</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L564'>mc_config_t</a>       564 src/keybind-defaults.c create_default_keymap_section (mc_config_t * keymap, const char *section,</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L577'>mc_config_t</a>       577 src/keybind-defaults.c mc_config_t *</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L580'>mc_config_t</a>       580 src/keybind-defaults.c     mc_config_t *keymap;</span>
+<span class='curline'><a href='../S/src--keybind-defaults.h.html#L53'>mc_config_t</a>        53 src/keybind-defaults.h mc_config_t *create_default_keymap (void);</span>
+<span class='curline'><a href='../S/src--setup.c.html#L515'>mc_config_t</a>       515 src/setup.c        mc_config_t *tmp_cfg;</span>
+<span class='curline'><a href='../S/src--setup.c.html#L568'>mc_config_t</a>       568 src/setup.c    load_setup_init_config_from_file (mc_config_t ** config, const char *fname, gboolean read_only)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L621'>mc_config_t</a>       621 src/setup.c    load_keys_from_section (const char *terminal, mc_config_t * cfg)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L681'>mc_config_t</a>       681 src/setup.c    load_keymap_from_section (const char *section_name, GArray * keymap, mc_config_t * cfg)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L717'>mc_config_t</a>       717 src/setup.c    static mc_config_t *</span>
+<span class='curline'><a href='../S/src--setup.c.html#L723'>mc_config_t</a>       723 src/setup.c        mc_config_t *keymap_config;</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1274'>mc_config_t</a>      1274 src/setup.c        mc_config_t *mc_global_config;</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1316'>mc_config_t</a>      1316 src/setup.c        mc_config_t *mc_global_keymap;</span>
+<span class='curline'><a href='../S/tests--lib--mcconfig--config_string.c.html#L36'>mc_config_t</a>        36 tests/lib/mcconfig/config_string.c static mc_config_t *mc_config;</span>
+<span class='curline'><a href='../S/tests--lib--serialize.c.html#L220'>mc_config_t</a>       220 tests/lib/serialize.c     mc_config_t *test_data;</span>
+<span class='curline'><a href='../S/tests--lib--serialize.c.html#L293'>mc_config_t</a>       293 tests/lib/serialize.c     mc_config_t *actual_result;</span>
+<span class='curline'><a href='../S/tests--lib--serialize.c.html#L315'>mc_config_t</a>       315 tests/lib/serialize.c     mc_config_t *actual;</span>
+<span class='curline'><a href='../S/tests--src--execute__execute_get_external_cmd_opts_from_config.c.html#L51'>mc_config_t</a>        51 tests/src/execute__execute_get_external_cmd_opts_from_config.c mc_config_get_string_raw (const mc_config_t * config_ignored, const gchar * group,</span>
+</pre>
+</body>
+</html>

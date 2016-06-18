@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>loop</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L51'>loop</a>               51 lib/search/glob.c     gsize loop;</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L56'>loop</a>               56 lib/search/glob.c     for (loop = 0; loop &lt; astr-&gt;len; loop++)</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L58'>loop</a>               58 lib/search/glob.c         switch (str[loop])</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L61'>loop</a>               61 lib/search/glob.c             if (!strutils_is_char_escaped (str, &amp;(str[loop])))</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L68'>loop</a>               68 lib/search/glob.c             if (!strutils_is_char_escaped (str, &amp;(str[loop])))</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L75'>loop</a>               75 lib/search/glob.c             if (!strutils_is_char_escaped (str, &amp;(str[loop])))</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L82'>loop</a>               82 lib/search/glob.c             if (!strutils_is_char_escaped (str, &amp;(str[loop])))</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L90'>loop</a>               90 lib/search/glob.c             if (!strutils_is_char_escaped (str, &amp;(str[loop])))</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L108'>loop</a>              108 lib/search/glob.c         g_string_append_c (buff, str[loop]);</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L54'>loop</a>               54 lib/search/hex.c     gsize loop = 0;</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L74'>loop</a>               74 lib/search/hex.c     while (loop &lt; tmp_str_len)</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L79'>loop</a>               79 lib/search/hex.c         if (sscanf (tmp_str + loop, "%x%n", &amp;val, &amp;ptr))</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L82'>loop</a>               82 lib/search/hex.c                 loop++;</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L86'>loop</a>               86 lib/search/hex.c                 loop += ptr;</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L89'>loop</a>               89 lib/search/hex.c         else if (*(tmp_str + loop) == '"')</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L93'>loop</a>               93 lib/search/hex.c             loop++;</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L94'>loop</a>               94 lib/search/hex.c             while (loop + loop2 &lt; tmp_str_len)</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L96'>loop</a>               96 lib/search/hex.c                 if (*(tmp_str + loop + loop2) == '"' &amp;&amp;</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L97'>loop</a>               97 lib/search/hex.c                     !strutils_is_char_escaped (tmp_str, tmp_str + loop + loop2))</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L102'>loop</a>              102 lib/search/hex.c             g_string_append_len (buff, tmp_str + loop, loop2 - 1);</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L103'>loop</a>              103 lib/search/hex.c             loop += loop2;</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L106'>loop</a>              106 lib/search/hex.c             loop++;</span>
+<span class='curline'><a href='../S/lib--search--normal.c.html#L50'>loop</a>               50 lib/search/normal.c     gsize loop;</span>
+<span class='curline'><a href='../S/lib--search--normal.c.html#L54'>loop</a>               54 lib/search/normal.c     for (loop = 0; loop &lt; astr-&gt;len; loop++)</span>
+<span class='curline'><a href='../S/lib--search--normal.c.html#L55'>loop</a>               55 lib/search/normal.c         switch (str[loop])</span>
+<span class='curline'><a href='../S/lib--search--normal.c.html#L76'>loop</a>               76 lib/search/normal.c             g_string_append_c (buff, str[loop]);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L128'>loop</a>              128 lib/search/regex.c     gsize loop;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L133'>loop</a>              133 lib/search/regex.c     for (loop = 0; loop &lt; upp-&gt;len; loop++)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L138'>loop</a>              138 lib/search/regex.c         if (loop &gt;= low-&gt;len || upp-&gt;str[loop] == low-&gt;str[loop])</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L140'>loop</a>              140 lib/search/regex.c                 g_snprintf (tmp_str, sizeof (tmp_str), "\\x%02X", (unsigned char) upp-&gt;str[loop]);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L144'>loop</a>              144 lib/search/regex.c                             (unsigned char) upp-&gt;str[loop], (unsigned char) low-&gt;str[loop]);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L160'>loop</a>              160 lib/search/regex.c     gsize loop = 0;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L164'>loop</a>              164 lib/search/regex.c     while (loop &lt; str_from-&gt;len)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L171'>loop</a>              171 lib/search/regex.c             mc_search__get_one_symbol (charset, &amp;(str_from-&gt;str[loop]),</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L172'>loop</a>              172 lib/search/regex.c                                        MIN (str_from-&gt;len - loop, 6), &amp;just_letters);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L176'>loop</a>              176 lib/search/regex.c             loop++;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L179'>loop</a>              179 lib/search/regex.c             loop += one_char_len;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L202'>loop</a>              202 lib/search/regex.c     gsize loop;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L207'>loop</a>              207 lib/search/regex.c     loop = 0;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L209'>loop</a>              209 lib/search/regex.c     while (loop &lt;= astr-&gt;len)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L211'>loop</a>              211 lib/search/regex.c         if (mc_search__regex_str_append_if_special (spec_char, astr, &amp;loop))</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L219'>loop</a>              219 lib/search/regex.c         if (astr-&gt;str[loop] == '[' &amp;&amp; !strutils_is_char_escaped (astr-&gt;str, &amp;(astr-&gt;str[loop])))</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L223'>loop</a>              223 lib/search/regex.c             while (loop &lt; astr-&gt;len &amp;&amp; !(astr-&gt;str[loop] == ']'</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L225'>loop</a>              225 lib/search/regex.c                                                                        &amp;(astr-&gt;str[loop]))))</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L227'>loop</a>              227 lib/search/regex.c                 g_string_append_c (ret_str, astr-&gt;str[loop]);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L228'>loop</a>              228 lib/search/regex.c                 loop++;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L231'>loop</a>              231 lib/search/regex.c             g_string_append_c (ret_str, astr-&gt;str[loop]);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L232'>loop</a>              232 lib/search/regex.c             loop++;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L238'>loop</a>              238 lib/search/regex.c         g_string_append_c (accumulator, astr-&gt;str[loop]);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L239'>loop</a>              239 lib/search/regex.c         loop++;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L380'>loop</a>              380 lib/search/regex.c     gsize loop;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L381'>loop</a>              381 lib/search/regex.c     for (loop = 0; loop &lt; len - 1; loop++)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L383'>loop</a>              383 lib/search/regex.c         if (str[loop] == '\\' &amp;&amp; g_ascii_isdigit (str[loop + 1]))</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L385'>loop</a>              385 lib/search/regex.c             if (strutils_is_char_escaped (str, &amp;str[loop]))</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L387'>loop</a>              387 lib/search/regex.c             if (max_token &lt; str[loop + 1] - '0')</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L388'>loop</a>              388 lib/search/regex.c                 max_token = str[loop + 1] - '0';</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L391'>loop</a>              391 lib/search/regex.c         if (str[loop] == '$' &amp;&amp; str[loop + 1] == '{')</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L395'>loop</a>              395 lib/search/regex.c             if (strutils_is_char_escaped (str, &amp;str[loop]))</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L399'>loop</a>              399 lib/search/regex.c                  loop + tmp_len + 2 &lt; len &amp;&amp; (str[loop + 2 + tmp_len] &amp; (char) 0xf0) == 0x30;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L402'>loop</a>              402 lib/search/regex.c             if (str[loop + 2 + tmp_len] == '}')</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L407'>loop</a>              407 lib/search/regex.c                 tmp_str = g_strndup (&amp;str[loop + 2], tmp_len);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L619'>loop</a>              619 lib/search/regex.c     gsize loop;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L631'>loop</a>              631 lib/search/regex.c     for (loop = 0; loop &lt; len; loop += char_len)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L636'>loop</a>              636 lib/search/regex.c         tmp_str = mc_search__get_one_symbol (NULL, from + loop, len - loop, NULL);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L990'>loop</a>              990 lib/search/regex.c     gsize loop;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1010'>loop</a>             1010 lib/search/regex.c     for (loop = 0; loop &lt; replace_str-&gt;len - 1; loop++)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1016'>loop</a>             1016 lib/search/regex.c         lc_index = mc_search_regex__process_replace_str (replace_str, loop, &amp;len, &amp;replace_flags);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1022'>loop</a>             1022 lib/search/regex.c                 mc_search_regex__process_append_str (ret, replace_str-&gt;str + prev, loop - prev,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1024'>loop</a>             1024 lib/search/regex.c                 mc_search_regex__process_append_str (ret, replace_str-&gt;str + loop + 1, len - 1,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1026'>loop</a>             1026 lib/search/regex.c                 prev = loop + len;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1027'>loop</a>             1027 lib/search/regex.c                 loop = prev - 1;        /* prepare to loop++ */</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1035'>loop</a>             1035 lib/search/regex.c             if (loop != 0)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1036'>loop</a>             1036 lib/search/regex.c                 mc_search_regex__process_append_str (ret, replace_str-&gt;str + prev, loop - prev,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1038'>loop</a>             1038 lib/search/regex.c             prev = loop + len;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1039'>loop</a>             1039 lib/search/regex.c             loop = prev - 1;    /* prepare to loop++ */</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1046'>loop</a>             1046 lib/search/regex.c             mc_search_regex__process_append_str (ret, replace_str-&gt;str + prev, loop - prev,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1049'>loop</a>             1049 lib/search/regex.c             mc_search_regex__process_escape_sequence (ret, replace_str-&gt;str + loop + 1, len - 1,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1051'>loop</a>             1051 lib/search/regex.c             prev = loop + len;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1052'>loop</a>             1052 lib/search/regex.c             loop = prev - 1;    /* prepare to loop++ */</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1067'>loop</a>             1067 lib/search/regex.c         if (loop != 0)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1068'>loop</a>             1068 lib/search/regex.c             mc_search_regex__process_append_str (ret, replace_str-&gt;str + prev, loop - prev,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1074'>loop</a>             1074 lib/search/regex.c         prev = loop + len;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1075'>loop</a>             1075 lib/search/regex.c         loop = prev - 1;        /* prepare to loop++ */</span>
+</pre>
+</body>
+</html>

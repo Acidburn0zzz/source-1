@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>mc_skin_color</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L52'>mc_skin_color</a>      52 lib/skin/colors.c     mc_skin_color_t *mc_skin_color;</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L61'>mc_skin_color</a>      61 lib/skin/colors.c     mc_skin_color = (mc_skin_color_t *) g_hash_table_lookup (mc_skin-&gt;colors, (gpointer) kname);</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L63'>mc_skin_color</a>      63 lib/skin/colors.c     return mc_skin_color;</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L88'>mc_skin_color</a>      88 lib/skin/colors.c                            mc_skin_color_t * mc_skin_color)</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L98'>mc_skin_color</a>      98 lib/skin/colors.c         g_hash_table_insert (mc_skin-&gt;colors, (gpointer) kname, (gpointer) mc_skin_color);</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L107'>mc_skin_color</a>     107 lib/skin/colors.c     mc_skin_color_t *mc_skin_color;</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L109'>mc_skin_color</a>     109 lib/skin/colors.c     mc_skin_color = mc_skin_color_get_from_hash (NULL, group, name);</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L110'>mc_skin_color</a>     110 lib/skin/colors.c     if (mc_skin_color != NULL)</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L111'>mc_skin_color</a>     111 lib/skin/colors.c         return mc_skin_color;</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L113'>mc_skin_color</a>     113 lib/skin/colors.c     mc_skin_color = mc_skin_color_get_from_hash (NULL, group, "_default_");</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L114'>mc_skin_color</a>     114 lib/skin/colors.c     if (mc_skin_color != NULL)</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L115'>mc_skin_color</a>     115 lib/skin/colors.c         return mc_skin_color;</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L117'>mc_skin_color</a>     117 lib/skin/colors.c     mc_skin_color = mc_skin_color_get_from_hash (NULL, "core", "_default_");</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L118'>mc_skin_color</a>     118 lib/skin/colors.c     return mc_skin_color;</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L128'>mc_skin_color</a>     128 lib/skin/colors.c     mc_skin_color_t *mc_skin_color, *tmp;</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L137'>mc_skin_color</a>     137 lib/skin/colors.c     mc_skin_color = g_try_new0 (mc_skin_color_t, 1);</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L138'>mc_skin_color</a>     138 lib/skin/colors.c     if (mc_skin_color == NULL)</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L145'>mc_skin_color</a>     145 lib/skin/colors.c     mc_skin_color-&gt;fgcolor = (items_count &gt; 0 &amp;&amp; values[0][0]) ? g_strstrip (g_strdup (values[0])) :</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L147'>mc_skin_color</a>     147 lib/skin/colors.c     mc_skin_color-&gt;bgcolor = (items_count &gt; 1 &amp;&amp; values[1][0]) ? g_strstrip (g_strdup (values[1])) :</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L149'>mc_skin_color</a>     149 lib/skin/colors.c     mc_skin_color-&gt;attrs = (items_count &gt; 2 &amp;&amp; values[2][0]) ? g_strstrip (g_strdup (values[2])) :</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L154'>mc_skin_color</a>     154 lib/skin/colors.c     mc_skin_color-&gt;pair_index =</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L155'>mc_skin_color</a>     155 lib/skin/colors.c         tty_try_alloc_color_pair2 (mc_skin_color-&gt;fgcolor, mc_skin_color-&gt;bgcolor,</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L156'>mc_skin_color</a>     156 lib/skin/colors.c                                    mc_skin_color-&gt;attrs, FALSE);</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L158'>mc_skin_color</a>     158 lib/skin/colors.c     return mc_skin_color;</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L166'>mc_skin_color</a>     166 lib/skin/colors.c     mc_skin_color_t *mc_skin_color;</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L167'>mc_skin_color</a>     167 lib/skin/colors.c     mc_skin_color = g_try_new0 (mc_skin_color_t, 1);</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L168'>mc_skin_color</a>     168 lib/skin/colors.c     if (mc_skin_color != NULL)</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L170'>mc_skin_color</a>     170 lib/skin/colors.c         mc_skin_color-&gt;fgcolor = g_strdup ("default");</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L171'>mc_skin_color</a>     171 lib/skin/colors.c         mc_skin_color-&gt;bgcolor = g_strdup ("default");</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L172'>mc_skin_color</a>     172 lib/skin/colors.c         mc_skin_color-&gt;attrs = NULL;</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L173'>mc_skin_color</a>     173 lib/skin/colors.c         mc_skin_color-&gt;pair_index =</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L174'>mc_skin_color</a>     174 lib/skin/colors.c             tty_try_alloc_color_pair2 (mc_skin_color-&gt;fgcolor, mc_skin_color-&gt;bgcolor,</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L175'>mc_skin_color</a>     175 lib/skin/colors.c                                        mc_skin_color-&gt;attrs, FALSE);</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L176'>mc_skin_color</a>     176 lib/skin/colors.c         mc_skin_color_add_to_hash (mc_skin, "skin", "terminal_default_color", mc_skin_color);</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L302'>mc_skin_color</a>     302 lib/skin/colors.c     mc_skin_color_t *mc_skin_color;</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L315'>mc_skin_color</a>     315 lib/skin/colors.c     mc_skin_color = mc_skin_color_get_from_ini_file (mc_skin, "core", "_default_");</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L316'>mc_skin_color</a>     316 lib/skin/colors.c     if (mc_skin_color == NULL)</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L319'>mc_skin_color</a>     319 lib/skin/colors.c     tty_color_set_defaults (mc_skin_color-&gt;fgcolor, mc_skin_color-&gt;bgcolor, mc_skin_color-&gt;attrs);</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L320'>mc_skin_color</a>     320 lib/skin/colors.c     mc_skin_color_add_to_hash (mc_skin, "core", "_default_", mc_skin_color);</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L333'>mc_skin_color</a>     333 lib/skin/colors.c             mc_skin_color = mc_skin_color_get_from_ini_file (mc_skin, *groups, *keys);</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L334'>mc_skin_color</a>     334 lib/skin/colors.c             if (mc_skin_color != NULL)</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L335'>mc_skin_color</a>     335 lib/skin/colors.c                 mc_skin_color_add_to_hash (mc_skin, *groups, *keys, mc_skin_color);</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L350'>mc_skin_color</a>     350 lib/skin/colors.c     mc_skin_color_t *mc_skin_color;</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L352'>mc_skin_color</a>     352 lib/skin/colors.c     mc_skin_color = mc_skin_color_get_with_defaults (group, name);</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L354'>mc_skin_color</a>     354 lib/skin/colors.c     return (mc_skin_color != NULL) ? mc_skin_color-&gt;pair_index : 0;</span>
+<span class='curline'><a href='../S/lib--skin--common.c.html#L55'>mc_skin_color</a>      55 lib/skin/common.c     mc_skin_color_t *mc_skin_color = (mc_skin_color_t *) data;</span>
+<span class='curline'><a href='../S/lib--skin--common.c.html#L56'>mc_skin_color</a>      56 lib/skin/common.c     g_free (mc_skin_color-&gt;fgcolor);</span>
+<span class='curline'><a href='../S/lib--skin--common.c.html#L57'>mc_skin_color</a>      57 lib/skin/common.c     g_free (mc_skin_color-&gt;bgcolor);</span>
+<span class='curline'><a href='../S/lib--skin--common.c.html#L58'>mc_skin_color</a>      58 lib/skin/common.c     g_free (mc_skin_color-&gt;attrs);</span>
+<span class='curline'><a href='../S/lib--skin--common.c.html#L59'>mc_skin_color</a>      59 lib/skin/common.c     g_free (mc_skin_color);</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>GSList</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--glibcompat.c.html#L65'>GSList</a>             65 lib/glibcompat.c g_slist_free_full (GSList * list, GDestroyNotify free_func)</span>
+<span class='curline'><a href='../S/lib--glibcompat.h.html#L15'>GSList</a>             15 lib/glibcompat.h void g_slist_free_full (GSList * list, GDestroyNotify free_func);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.h.html#L155'>GSList</a>            155 src/editor/editwidget.h     GSList *syntax_marker;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L172'>GSList</a>            172 src/filemanager/file.c static GSList *linklist = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L175'>GSList</a>            175 src/filemanager/file.c static GSList *erase_list = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L187'>GSList</a>            187 src/filemanager/file.c static GSList *dest_dirs = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L281'>GSList</a>            281 src/filemanager/file.c free_linklist (GSList * lp)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L291'>GSList</a>            291 src/filemanager/file.c is_in_linklist (const GSList * lp, const vfs_path_t * vpath, const struct stat *sb)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L299'>GSList</a>            299 src/filemanager/file.c     for (; lp != NULL; lp = (const GSList *) g_slist_next (lp))</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L320'>GSList</a>            320 src/filemanager/file.c     GSList *lp;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L2027'>GSList</a>           2027 src/filemanager/file.c               gboolean toplevel, gboolean move_over, gboolean do_delete, GSList * parent_dirs)</span>
+<span class='curline'><a href='../S/src--filemanager--file.h.html#L49'>GSList</a>             49 src/filemanager/file.h                                  GSList * parent_dirs);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L353'>GSList</a>            353 src/filemanager/mountlist.c static GSList *mc_mount_list = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L648'>GSList</a>            648 src/filemanager/mountlist.c static GSList *</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L651'>GSList</a>            651 src/filemanager/mountlist.c     GSList *mount_list = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1318'>GSList</a>           1318 src/filemanager/mountlist.c static GSList *</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1326'>GSList</a>           1326 src/filemanager/mountlist.c     static GSList *list = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1707'>GSList</a>           1707 src/filemanager/mountlist.c     GSList *temp;</span>
+<span class='curline'><a href='../S/src--help.c.html#L112'>GSList</a>            112 src/help.c     static GSList *link_area = NULL;</span>
+<span class='curline'><a href='../S/src--help.c.html#L955'>GSList</a>            955 src/help.c         GSList *current_area;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L141'>GSList</a>            141 src/vfs/cpio/cpio.c     GSList *deferred;           /* List of inodes for which another entries may appear */</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L406'>GSList</a>            406 src/vfs/cpio/cpio.c         GSList *l;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L151'>GSList</a>            151 src/vfs/extfs/extfs.c static struct entry *extfs_resolve_symlinks_int (struct entry *entry, GSList * list);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L238'>GSList</a>            238 src/vfs/extfs/extfs.c extfs_find_entry_int (struct entry *dir, const char *name, GSList * list,</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L747'>GSList</a>            747 src/vfs/extfs/extfs.c extfs_resolve_symlinks_int (struct entry *entry, GSList * list)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L761'>GSList</a>            761 src/vfs/extfs/extfs.c         GSList *looping;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L242'>GSList</a>            242 src/vfs/ftpfs/ftpfs.c static GSList *no_proxy;</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L741'>GSList</a>            741 src/vfs/ftpfs/ftpfs.c     GSList *npe;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L102'>GSList</a>            102 src/vfs/sfs/sfs.c static GSList *head;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L224'>GSList</a>            224 src/vfs/sfs/sfs.c     GSList *cur;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L340'>GSList</a>            340 src/vfs/sfs/sfs.c     GSList *cur;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L353'>GSList</a>            353 src/vfs/sfs/sfs.c     GSList *cur;</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L374'>GSList</a>            374 src/vfs/sfs/sfs.c     GSList *cur;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L160'>GSList</a>            160 src/vfs/smbfs/smbfs.c static GSList *auth_list;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L286'>GSList</a>            286 src/vfs/smbfs/smbfs.c     GSList *list;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L312'>GSList</a>            312 src/vfs/smbfs/smbfs.c     GSList *list;</span>
+</pre>
+</body>
+</html>

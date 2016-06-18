@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>prompt_width</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L810'>prompt_width</a>      810 src/filemanager/layout.c     int prompt_width;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L822'>prompt_width</a>      822 src/filemanager/layout.c     prompt_width = str_term_width1 (tmp_prompt);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L825'>prompt_width</a>      825 src/filemanager/layout.c     if (COLS &gt; 8 &amp;&amp; prompt_width &gt; COLS - 8)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L829'>prompt_width</a>      829 src/filemanager/layout.c         prompt_width = COLS - 8;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L830'>prompt_width</a>      830 src/filemanager/layout.c         prompt_len = str_offset_to_pos (tmp_prompt, prompt_width);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L845'>prompt_width</a>      845 src/filemanager/layout.c     widget_set_size (WIDGET (the_prompt), y, 0, 1, prompt_width);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L847'>prompt_width</a>      847 src/filemanager/layout.c     widget_set_size (WIDGET (cmdline), y, prompt_width, 1, COLS - prompt_width);</span>
+</pre>
+</body>
+</html>

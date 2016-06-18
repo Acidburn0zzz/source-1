@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>fd_flags</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L740'>fd_flags</a>          740 lib/utilunix.c         int fd_flags;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L741'>fd_flags</a>          741 lib/utilunix.c         fd_flags = fcntl (error_pipe[0], F_GETFL, NULL);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L742'>fd_flags</a>          742 lib/utilunix.c         if (fd_flags != -1)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L744'>fd_flags</a>          744 lib/utilunix.c             fd_flags |= O_NONBLOCK;</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L745'>fd_flags</a>          745 lib/utilunix.c             if (fcntl (error_pipe[0], F_SETFL, fd_flags) == -1)</span>
+</pre>
+</body>
+</html>

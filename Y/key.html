@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>key</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--keybind.c.html#L398'>key</a>               398 lib/keybind.c  keymap_add (GArray * keymap, long key, long cmd, const char *caption)</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L400'>key</a>               400 lib/keybind.c      if (key != 0 &amp;&amp; cmd != CK_IgnoreKey)</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L404'>key</a>               404 lib/keybind.c          new_bind.key = key;</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L419'>key</a>               419 lib/keybind.c      long key;</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L421'>key</a>               421 lib/keybind.c      key = lookup_key (keybind, &amp;caption);</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L422'>key</a>               422 lib/keybind.c      keymap_add (keymap, key, action, caption);</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L431'>key</a>               431 lib/keybind.c      const name_keymap_t key = { name, 0 };</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L436'>key</a>               436 lib/keybind.c      res = bsearch (&amp;key, command_names, num_command_names,</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L465'>key</a>               465 lib/keybind.c          for (i = 0; keymap[i].key != 0; i++)</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L475'>key</a>               475 lib/keybind.c  keybind_lookup_keymap_command (const global_keymap_t * keymap, long key)</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L481'>key</a>               481 lib/keybind.c          for (i = 0; keymap[i].key != 0; i++)</span>
+<span class='curline'><a href='../S/lib--keybind.c.html#L482'>key</a>               482 lib/keybind.c              if (keymap[i].key == key)</span>
+<span class='curline'><a href='../S/lib--keybind.h.html#L356'>key</a>               356 lib/keybind.h      long key;</span>
+<span class='curline'><a href='../S/lib--keybind.h.html#L369'>key</a>               369 lib/keybind.h  long keybind_lookup_keymap_command (const global_keymap_t * keymap, long key);</span>
+<span class='curline'><a href='../S/lib--skin--colors-old.c.html#L48'>key</a>                48 lib/skin/colors-old.c     const char *key;</span>
+<span class='curline'><a href='../S/lib--skin--colors-old.c.html#L121'>key</a>               121 lib/skin/colors-old.c mc_skin_colors_old_transform (const char *old_color, const char **group, const char **key)</span>
+<span class='curline'><a href='../S/lib--skin--colors-old.c.html#L137'>key</a>               137 lib/skin/colors-old.c     if (key != NULL)</span>
+<span class='curline'><a href='../S/lib--skin--colors-old.c.html#L138'>key</a>               138 lib/skin/colors-old.c         *key = res-&gt;key;</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L49'>key</a>                49 lib/skin/colors.c mc_skin_color_get_from_hash (mc_skin_t * mc_skin, const gchar * group, const gchar * key)</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L54'>key</a>                54 lib/skin/colors.c     if (group == NULL || key == NULL)</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L60'>key</a>                60 lib/skin/colors.c     g_snprintf (kname, sizeof (kname), "%s.%s", group, key);</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L70'>key</a>                70 lib/skin/colors.c mc_skin_color_remove_from_hash (mc_skin_t * mc_skin, const gchar * group, const gchar * key)</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L73'>key</a>                73 lib/skin/colors.c     if (group == NULL || key == NULL)</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L79'>key</a>                79 lib/skin/colors.c     g_snprintf (kname, sizeof (kname), "%s.%s", group, key);</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L87'>key</a>                87 lib/skin/colors.c mc_skin_color_add_to_hash (mc_skin_t * mc_skin, const gchar * group, const gchar * key,</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L92'>key</a>                92 lib/skin/colors.c     kname = g_strdup_printf ("%s.%s", group, key);</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L124'>key</a>               124 lib/skin/colors.c mc_skin_color_get_from_ini_file (mc_skin_t * mc_skin, const gchar * group, const gchar * key)</span>
+<span class='curline'><a href='../S/lib--skin--colors.c.html#L130'>key</a>               130 lib/skin/colors.c     values = mc_config_get_string_list (mc_skin-&gt;config, group, key, &amp;items_count);</span>
+<span class='curline'><a href='../S/lib--skin--common.c.html#L186'>key</a>               186 lib/skin/common.c mc_skin_get (const gchar * group, const gchar * key, const gchar * default_value)</span>
+<span class='curline'><a href='../S/lib--skin--common.c.html#L192'>key</a>               192 lib/skin/common.c     return mc_config_get_string (mc_skin__default.config, group, key, default_value);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L155'>key</a>               155 lib/strutil.h        /*I*/ void (*release_key) (char *key, int case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L531'>key</a>               531 lib/strutil.h  void str_release_key (char *key, int case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L908'>key</a>               908 lib/strutil/strutil.c str_release_key (char *key, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L910'>key</a>               910 lib/strutil/strutil.c     used_class.release_key (key, case_sen);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L797'>key</a>               797 lib/strutil/strutil8bit.c str_8bit_release_key (char *key, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L800'>key</a>               800 lib/strutil/strutil8bit.c         g_free (key);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L691'>key</a>               691 lib/strutil/strutilascii.c str_ascii_release_key (char *key, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L693'>key</a>               693 lib/strutil/strutilascii.c     (void) key;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1339'>key</a>              1339 lib/strutil/strutilutf8.c         char *fold, *key;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1357'>key</a>              1357 lib/strutil/strutilutf8.c                 key = keygen (fold, -1);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1358'>key</a>              1358 lib/strutil/strutilutf8.c                 g_string_append (fixed, key);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1359'>key</a>              1359 lib/strutil/strutilutf8.c                 g_free (key);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1376'>key</a>              1376 lib/strutil/strutilutf8.c             key = keygen (fold, -1);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1377'>key</a>              1377 lib/strutil/strutilutf8.c             g_string_append (fixed, key);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1378'>key</a>              1378 lib/strutil/strutilutf8.c             g_free (key);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1387'>key</a>              1387 lib/strutil/strutilutf8.c                 key = keygen (fold, -1);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1388'>key</a>              1388 lib/strutil/strutilutf8.c                 g_string_append (fixed, key);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1389'>key</a>              1389 lib/strutil/strutilutf8.c                 g_free (key);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1428'>key</a>              1428 lib/strutil/strutilutf8.c str_utf8_release_key (char *key, int case_sen)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1431'>key</a>              1431 lib/strutil/strutilutf8.c     g_free (key);</span>
+<span class='curline'><a href='../S/lib--tty--color-ncurses.c.html#L69'>key</a>                69 lib/tty/color-ncurses.c     int *attr, *key;</span>
+<span class='curline'><a href='../S/lib--tty--color-ncurses.c.html#L75'>key</a>                75 lib/tty/color-ncurses.c     key = g_try_new (int, 1);</span>
+<span class='curline'><a href='../S/lib--tty--color-ncurses.c.html#L76'>key</a>                76 lib/tty/color-ncurses.c     if (key == NULL)</span>
+<span class='curline'><a href='../S/lib--tty--color-ncurses.c.html#L82'>key</a>                82 lib/tty/color-ncurses.c     *key = color_pair;</span>
+<span class='curline'><a href='../S/lib--tty--color-ncurses.c.html#L85'>key</a>                85 lib/tty/color-ncurses.c     g_hash_table_replace (mc_tty_color_color_pair_attrs, (gpointer) key, (gpointer) attr);</span>
+<span class='curline'><a href='../S/lib--tty--color.c.html#L68'>key</a>                68 lib/tty/color.c tty_color_free_condition_cb (gpointer key, gpointer value, gpointer user_data)</span>
+<span class='curline'><a href='../S/lib--tty--color.c.html#L72'>key</a>                72 lib/tty/color.c     (void) key;</span>
+<span class='curline'><a href='../S/lib--tty--color.c.html#L91'>key</a>                91 lib/tty/color.c tty_color_get_next_cpn_cb (gpointer key, gpointer value, gpointer user_data)</span>
+<span class='curline'><a href='../S/lib--tty--color.c.html#L95'>key</a>                95 lib/tty/color.c     (void) key;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1260'>key</a>              1260 lib/tty/key.c          const key_code_name_t key = { 0, name, NULL, NULL };</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1261'>key</a>              1261 lib/tty/key.c          const key_code_name_t *keyp = &amp;key;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1293'>key</a>              1293 lib/tty/key.c          const key_code_name_t key = { code, NULL, NULL, NULL };</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1294'>key</a>              1294 lib/tty/key.c          const key_code_name_t *keyp = &amp;key;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1469'>key</a>              1469 lib/tty/key.c      int key = 0;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1489'>key</a>              1489 lib/tty/key.c              key = lookup_keyname (g_strstrip (*p), &amp;idx);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1491'>key</a>              1491 lib/tty/key.c              if (key == KEY_M_ALT)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1493'>key</a>              1493 lib/tty/key.c              else if (key == KEY_M_CTRL)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1495'>key</a>              1495 lib/tty/key.c              else if (key == KEY_M_SHIFT)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1499'>key</a>              1499 lib/tty/key.c                  k = key;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1549'>key</a>              1549 lib/tty/key.c              g_string_append_c (s, (gchar) g_ascii_tolower ((gchar) key));</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2167'>key</a>              2167 lib/tty/key.c      int key;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2170'>key</a>              2170 lib/tty/key.c      while ((key = tty_get_event (&amp;ev, FALSE, TRUE)) == EV_NONE);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2171'>key</a>              2171 lib/tty/key.c      return key;</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L173'>key</a>               173 lib/tty/tty-slang.c     int key;</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L177'>key</a>               177 lib/tty/tty-slang.c     for (key = 1; key &lt; 9; key++)</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L181'>key</a>               181 lib/tty/tty-slang.c         g_snprintf (tmp, sizeof (tmp), "k%d", key);</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L185'>key</a>               185 lib/tty/tty-slang.c             g_snprintf (tmp, sizeof (tmp), ESC_STR "&amp;f%dk%dd%dL%s%s", key,</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1289'>key</a>              1289 lib/widget/dialog.c dlg_process_event (WDialog * h, int key, Gpm_Event * event)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1291'>key</a>              1291 lib/widget/dialog.c     if (key == EV_NONE)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1297'>key</a>              1297 lib/widget/dialog.c     else if (key == EV_MOUSE)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1300'>key</a>              1300 lib/widget/dialog.c         dlg_key_event (h, key);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L132'>key</a>               132 lib/widget/dialog.h void dlg_process_event (WDialog * h, int key, Gpm_Event * event);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L193'>key</a>               193 lib/widget/history.c         char key[BUF_TINY];</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L196'>key</a>               196 lib/widget/history.c         g_snprintf (key, sizeof (key), "%lu", (unsigned long) i);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L197'>key</a>               197 lib/widget/history.c         this_entry = mc_config_get_string_raw (cfg, name, key, "");</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L259'>key</a>               259 lib/widget/history.c         char key[BUF_TINY];</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L266'>key</a>               266 lib/widget/history.c         g_snprintf (key, sizeof (key), "%d", i++);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L269'>key</a>               269 lib/widget/history.c             mc_config_set_string_raw (cfg, name, key, text);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L274'>key</a>               274 lib/widget/history.c                 mc_config_set_string_raw (cfg, name, key, text);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L276'>key</a>               276 lib/widget/history.c                 mc_config_set_string_raw (cfg, name, key, buffer-&gt;str);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1125'>key</a>              1125 lib/widget/input.c input_handle_char (WInput * in, int key)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1133'>key</a>              1133 lib/widget/input.c         v = insert_char (in, key);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1139'>key</a>              1139 lib/widget/input.c     command = keybind_lookup_keymap_command (input_map, key);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1143'>key</a>              1143 lib/widget/input.c         if (key &gt; 255)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1148'>key</a>              1148 lib/widget/input.c         v = insert_char (in, key);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1170'>key</a>              1170 lib/widget/input.c input_key_is_in_map (WInput * in, int key)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L1176'>key</a>              1176 lib/widget/input.c     command = keybind_lookup_keymap_command (input_map, key);</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L92'>key</a>                92 lib/widget/input.h cb_ret_t input_handle_char (WInput * in, int key);</span>
+<span class='curline'><a href='../S/lib--widget--input.h.html#L93'>key</a>                93 lib/widget/input.h int input_key_is_in_map (WInput * in, int key);</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L201'>key</a>               201 lib/widget/listbox.c listbox_check_hotkey (WListbox * l, int key)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L212'>key</a>               212 lib/widget/listbox.c             if (e-&gt;hotkey == key)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L333'>key</a>               333 lib/widget/listbox.c listbox_key (WListbox * l, int key)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L341'>key</a>               341 lib/widget/listbox.c     if (key &gt;= '0' &amp;&amp; key &lt;= '9')</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L343'>key</a>               343 lib/widget/listbox.c         listbox_select_entry (l, key - '0');</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L347'>key</a>               347 lib/widget/listbox.c     command = keybind_lookup_keymap_command (listbox_map, key);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L452'>key</a>               452 lib/widget/menu.c menubar_handle_key (WMenuBar * menubar, int key)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L455'>key</a>               455 lib/widget/menu.c     if (isascii (key))</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L456'>key</a>               456 lib/widget/menu.c         key = g_ascii_tolower (key);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L458'>key</a>               458 lib/widget/menu.c     if (is_abort_char (key))</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L465'>key</a>               465 lib/widget/menu.c     switch (key)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L505'>key</a>               505 lib/widget/menu.c             if ((menu-&gt;text.hotkey != NULL) &amp;&amp; (key == g_ascii_tolower (menu-&gt;text.hotkey[0])))</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L513'>key</a>               513 lib/widget/menu.c         if (key == KEY_ENTER || key == XCTRL ('n') || key == KEY_DOWN || key == '\n')</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L529'>key</a>               529 lib/widget/menu.c                 &amp;&amp; (entry-&gt;text.hotkey != NULL) &amp;&amp; (key == g_ascii_tolower (entry-&gt;text.hotkey[0])))</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L538'>key</a>               538 lib/widget/menu.c         switch (key)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3284'>key</a>              3284 src/diffviewer/ydiff.c dview_handle_key (WDiff * dview, int key)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3289'>key</a>              3289 src/diffviewer/ydiff.c     key = convert_from_input_c (key);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3292'>key</a>              3292 src/diffviewer/ydiff.c     command = keybind_lookup_keymap_command (diff_map, key);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L143'>key</a>               143 src/editor/edit-impl.h gboolean edit_drop_hotkey_menu (WDialog * h, int key);</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L311'>key</a>               311 src/editor/editmenu.c edit_drop_hotkey_menu (WDialog * h, int key)</span>
+<span class='curline'><a href='../S/src--editor--editmenu.c.html#L314'>key</a>               314 src/editor/editmenu.c     switch (key)</span>
+<span class='curline'><a href='../S/src--editor--spell.c.html#L61'>key</a>                61 src/editor/spell.c static int (*mc_aspell_config_replace) (AspellConfig * ths, const char *key, const char *value);</span>
+<span class='curline'><a href='../S/src--editor--spell.c.html#L72'>key</a>                72 src/editor/spell.c static const char *(*mc_aspell_config_retrieve) (AspellConfig * ths, const char *key);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L180'>key</a>               180 src/editor/syntax.c mc_defines_destroy (gpointer key, gpointer value, gpointer data)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L184'>key</a>               184 src/editor/syntax.c     g_free (key);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1185'>key</a>              1185 src/editor/syntax.c             char *key = *a++;</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1190'>key</a>              1190 src/editor/syntax.c             argv = g_tree_lookup (edit-&gt;defines, key);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1194'>key</a>              1194 src/editor/syntax.c                 key = g_strdup (key);</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1197'>key</a>              1197 src/editor/syntax.c             g_tree_insert (edit-&gt;defines, key, argv);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L504'>key</a>               504 src/filemanager/hotlist.c hotlist_handle_key (WDialog * h, int key)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L506'>key</a>               506 src/filemanager/hotlist.c     switch (key)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3602'>key</a>              3602 src/filemanager/panel.c panel_key (WPanel * panel, int key)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3606'>key</a>              3606 src/filemanager/panel.c     if (is_abort_char (key))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3612'>key</a>              3612 src/filemanager/panel.c     if (panel-&gt;searching &amp;&amp; ((key &gt;= ' ' &amp;&amp; key &lt;= 255) || key == KEY_BACKSPACE))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3614'>key</a>              3614 src/filemanager/panel.c         do_search (panel, key);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3618'>key</a>              3618 src/filemanager/panel.c     for (i = 0; panel_map[i].key != 0; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3619'>key</a>              3619 src/filemanager/panel.c         if (key == panel_map[i].key)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3622'>key</a>              3622 src/filemanager/panel.c     if (panels_options.torben_fj_mode &amp;&amp; key == ALT ('h'))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3628'>key</a>              3628 src/filemanager/panel.c     if (!command_prompt &amp;&amp; ((key &gt;= ' ' &amp;&amp; key &lt;= 255) || key == KEY_BACKSPACE))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3631'>key</a>              3631 src/filemanager/panel.c         do_search (panel, key);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L651'>key</a>               651 src/filemanager/tree.c tree_do_search (WTree * tree, int key)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L656'>key</a>               656 src/filemanager/tree.c     if ((l != 0) &amp;&amp; (key == KEY_BACKSPACE))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L658'>key</a>               658 src/filemanager/tree.c     else if (key &amp;&amp; l &lt; sizeof (tree-&gt;search_buffer))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L660'>key</a>               660 src/filemanager/tree.c         tree-&gt;search_buffer[l] = key;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1055'>key</a>              1055 src/filemanager/tree.c tree_key (WTree * tree, int key)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1059'>key</a>              1059 src/filemanager/tree.c     if (is_abort_char (key))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1072'>key</a>              1072 src/filemanager/tree.c     if (tree-&gt;searching &amp;&amp; ((key &gt;= ' ' &amp;&amp; key &lt;= 255) || key == KEY_BACKSPACE))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1074'>key</a>              1074 src/filemanager/tree.c         tree_do_search (tree, key);</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1079'>key</a>              1079 src/filemanager/tree.c     for (i = 0; tree_map[i].key != 0; i++)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1080'>key</a>              1080 src/filemanager/tree.c         if (key == tree_map[i].key)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1093'>key</a>              1093 src/filemanager/tree.c     if (!command_prompt &amp;&amp; ((key &gt;= ' ' &amp;&amp; key &lt;= 255) || key == KEY_BACKSPACE))</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1096'>key</a>              1096 src/filemanager/tree.c         tree_do_search (tree, key);</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L78'>key</a>                78 src/keybind-defaults.c     const char *key;</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L569'>key</a>               569 src/keybind-defaults.c     for (i = 0; k[i].key != NULL; i++)</span>
+<span class='curline'><a href='../S/src--keybind-defaults.c.html#L570'>key</a>               570 src/keybind-defaults.c         mc_config_set_string_raw (keymap, section, k[i].key, k[i].value);</span>
+<span class='curline'><a href='../S/src--learn.c.html#L260'>key</a>               260 src/learn.c        const key_code_name_t *key;</span>
+<span class='curline'><a href='../S/src--learn.c.html#L281'>key</a>               281 src/learn.c        for (key = key_name_conv_tab, learn_total = 0;</span>
+<span class='curline'><a href='../S/src--learn.c.html#L282'>key</a>               282 src/learn.c             key-&gt;name != NULL &amp;&amp; strcmp (key-&gt;name, "kpleft") != 0; key++, learn_total++)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L233'>key</a>               233 src/setup.c        const char *key;</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1447'>key</a>              1447 src/setup.c        for (i = 0; list_types[i].key != NULL; i++)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1448'>key</a>              1448 src/setup.c            if (g_ascii_strcasecmp (list_types[i].key, buffer) == 0)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1489'>key</a>              1489 src/setup.c        for (i = 0; list_types[i].key != NULL; i++)</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1492'>key</a>              1492 src/setup.c                mc_config_set_string (mc_global.panels_config, section, "list_mode", list_types[i].key);</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L419'>key</a>               419 src/vfs/sfs/sfs.c     char key[256];</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L435'>key</a>               435 src/vfs/sfs/sfs.c     while (sfs_no &lt; MAXFS &amp;&amp; fgets (key, sizeof (key), cfg))</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L439'>key</a>               439 src/vfs/sfs/sfs.c         if (*key == '#' || *key == '\n')</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L442'>key</a>               442 src/vfs/sfs/sfs.c         for (c = key; *c; c++)</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L457'>key</a>               457 src/vfs/sfs/sfs.c             fprintf (stderr, _("Warning: Invalid line in %s:\n%s\n"), "sfs.ini", key);</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L476'>key</a>               476 src/vfs/sfs/sfs.c                 fprintf (stderr, _("Warning: Invalid flag %c in %s:\n%s\n"), *c, "sfs.ini", key);</span>
+<span class='curline'><a href='../S/src--vfs--sfs--sfs.c.html#L489'>key</a>               489 src/vfs/sfs/sfs.c         sfs_prefix[sfs_no] = g_strdup (key);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L360'>key</a>               360 src/vfs/smbfs/helpers/include/proto.h void cred_hash1 (unsigned char *out, unsigned char *in, unsigned char *key);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L361'>key</a>               361 src/vfs/smbfs/helpers/include/proto.h void cred_hash2 (unsigned char *out, unsigned char *in, unsigned char *key);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L362'>key</a>               362 src/vfs/smbfs/helpers/include/proto.h void cred_hash3 (unsigned char *out, unsigned char *in, unsigned char *key, int forw);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L363'>key</a>               363 src/vfs/smbfs/helpers/include/proto.h void SamOEMhash (unsigned char *data, unsigned char *key, int val);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L199'>key</a>               199 src/vfs/smbfs/helpers/libsmb/smbdes.c dohash (char *out, char *in, char *key, int forw)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L211'>key</a>               211 src/vfs/smbfs/helpers/libsmb/smbdes.c     permute (pk1, key, perm1, 56);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L283'>key</a>               283 src/vfs/smbfs/helpers/libsmb/smbdes.c str_to_key (unsigned char *str, unsigned char *key)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L287'>key</a>               287 src/vfs/smbfs/helpers/libsmb/smbdes.c     key[0] = str[0] &gt;&gt; 1;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L288'>key</a>               288 src/vfs/smbfs/helpers/libsmb/smbdes.c     key[1] = ((str[0] &amp; 0x01) &lt;&lt; 6) | (str[1] &gt;&gt; 2);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L289'>key</a>               289 src/vfs/smbfs/helpers/libsmb/smbdes.c     key[2] = ((str[1] &amp; 0x03) &lt;&lt; 5) | (str[2] &gt;&gt; 3);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L290'>key</a>               290 src/vfs/smbfs/helpers/libsmb/smbdes.c     key[3] = ((str[2] &amp; 0x07) &lt;&lt; 4) | (str[3] &gt;&gt; 4);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L291'>key</a>               291 src/vfs/smbfs/helpers/libsmb/smbdes.c     key[4] = ((str[3] &amp; 0x0F) &lt;&lt; 3) | (str[4] &gt;&gt; 5);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L292'>key</a>               292 src/vfs/smbfs/helpers/libsmb/smbdes.c     key[5] = ((str[4] &amp; 0x1F) &lt;&lt; 2) | (str[5] &gt;&gt; 6);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L293'>key</a>               293 src/vfs/smbfs/helpers/libsmb/smbdes.c     key[6] = ((str[5] &amp; 0x3F) &lt;&lt; 1) | (str[6] &gt;&gt; 7);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L294'>key</a>               294 src/vfs/smbfs/helpers/libsmb/smbdes.c     key[7] = str[6] &amp; 0x7F;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L297'>key</a>               297 src/vfs/smbfs/helpers/libsmb/smbdes.c         key[i] = (key[i] &lt;&lt; 1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L303'>key</a>               303 src/vfs/smbfs/helpers/libsmb/smbdes.c smbhash (unsigned char *out, unsigned char *in, unsigned char *key, int forw)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L311'>key</a>               311 src/vfs/smbfs/helpers/libsmb/smbdes.c     str_to_key (key, key2);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L365'>key</a>               365 src/vfs/smbfs/helpers/libsmb/smbdes.c cred_hash1 (unsigned char *out, unsigned char *in, unsigned char *key)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L369'>key</a>               369 src/vfs/smbfs/helpers/libsmb/smbdes.c     smbhash (buf, in, key, 1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L370'>key</a>               370 src/vfs/smbfs/helpers/libsmb/smbdes.c     smbhash (out, buf, key + 9, 1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L374'>key</a>               374 src/vfs/smbfs/helpers/libsmb/smbdes.c cred_hash2 (unsigned char *out, unsigned char *in, unsigned char *key)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L379'>key</a>               379 src/vfs/smbfs/helpers/libsmb/smbdes.c     smbhash (buf, in, key, 1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L380'>key</a>               380 src/vfs/smbfs/helpers/libsmb/smbdes.c     key2[0] = key[7];</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L385'>key</a>               385 src/vfs/smbfs/helpers/libsmb/smbdes.c cred_hash3 (unsigned char *out, unsigned char *in, unsigned char *key, int forw)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L389'>key</a>               389 src/vfs/smbfs/helpers/libsmb/smbdes.c     smbhash (out, in, key, forw);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L390'>key</a>               390 src/vfs/smbfs/helpers/libsmb/smbdes.c     key2[0] = key[7];</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L395'>key</a>               395 src/vfs/smbfs/helpers/libsmb/smbdes.c SamOEMhash (unsigned char *data, unsigned char *key, int val)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L412'>key</a>               412 src/vfs/smbfs/helpers/libsmb/smbdes.c         j += (s_box[ind] + key[ind % 16]);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L220'>key</a>               220 src/viewer/actions_cmd.c mcview_handle_editkey (WView * view, int key)</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L235'>key</a>               235 src/viewer/actions_cmd.c         if (key &gt;= '0' &amp;&amp; key &lt;= '9')</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L236'>key</a>               236 src/viewer/actions_cmd.c             hexvalue = 0 + (key - '0');</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L237'>key</a>               237 src/viewer/actions_cmd.c         else if (key &gt;= 'A' &amp;&amp; key &lt;= 'F')</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L238'>key</a>               238 src/viewer/actions_cmd.c             hexvalue = 10 + (key - 'A');</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L239'>key</a>               239 src/viewer/actions_cmd.c         else if (key &gt;= 'a' &amp;&amp; key &lt;= 'f')</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L240'>key</a>               240 src/viewer/actions_cmd.c             hexvalue = 10 + (key - 'a');</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L257'>key</a>               257 src/viewer/actions_cmd.c         if (key &lt; 256 &amp;&amp; key != '\t')</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L258'>key</a>               258 src/viewer/actions_cmd.c             byte_val = key;</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L547'>key</a>               547 src/viewer/actions_cmd.c mcview_handle_key (WView * view, int key)</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L552'>key</a>               552 src/viewer/actions_cmd.c     key = convert_from_input_c (key);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L557'>key</a>               557 src/viewer/actions_cmd.c         if (view-&gt;hexedit_mode &amp;&amp; (mcview_handle_editkey (view, key) == MSG_HANDLED))</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L560'>key</a>               560 src/viewer/actions_cmd.c         command = keybind_lookup_keymap_command (viewer_hex_map, key);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L565'>key</a>               565 src/viewer/actions_cmd.c     command = keybind_lookup_keymap_command (viewer_map, key);</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L576'>key</a>               576 src/viewer/actions_cmd.c     if (key &gt;= '0' &amp;&amp; key &lt;= '9')</span>
+<span class='curline'><a href='../S/src--viewer--actions_cmd.c.html#L577'>key</a>               577 src/viewer/actions_cmd.c         view-&gt;marker = key - '0';</span>
+</pre>
+</body>
+</html>

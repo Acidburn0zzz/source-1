@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>vfs_openfiles</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L98'>vfs_openfiles</a>      98 lib/vfs/vfs.c  static GPtrArray *vfs_openfiles;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L193'>vfs_openfiles</a>     193 lib/vfs/vfs.c      if (handle &lt; VFS_FIRST_HANDLE || (guint) (handle - VFS_FIRST_HANDLE) &gt;= vfs_openfiles-&gt;len)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L196'>vfs_openfiles</a>     196 lib/vfs/vfs.c      h = (struct vfs_openfile *) g_ptr_array_index (vfs_openfiles, handle - VFS_FIRST_HANDLE);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L215'>vfs_openfiles</a>     215 lib/vfs/vfs.c      if (handle &gt;= VFS_FIRST_HANDLE &amp;&amp; (guint) idx &lt; vfs_openfiles-&gt;len)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L219'>vfs_openfiles</a>     219 lib/vfs/vfs.c          h = (struct vfs_openfile *) g_ptr_array_index (vfs_openfiles, idx);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L221'>vfs_openfiles</a>     221 lib/vfs/vfs.c          g_ptr_array_index (vfs_openfiles, idx) = (void *) vfs_free_handle_list;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L266'>vfs_openfiles</a>     266 lib/vfs/vfs.c          h-&gt;handle = vfs_openfiles-&gt;len;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L267'>vfs_openfiles</a>     267 lib/vfs/vfs.c          g_ptr_array_add (vfs_openfiles, h);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L271'>vfs_openfiles</a>     271 lib/vfs/vfs.c          vfs_free_handle_list = (long) g_ptr_array_index (vfs_openfiles, vfs_free_handle_list);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L272'>vfs_openfiles</a>     272 lib/vfs/vfs.c          g_ptr_array_index (vfs_openfiles, h-&gt;handle) = h;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L441'>vfs_openfiles</a>     441 lib/vfs/vfs.c      vfs_openfiles = g_ptr_array_new ();</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L485'>vfs_openfiles</a>     485 lib/vfs/vfs.c      g_ptr_array_free (vfs_openfiles, TRUE);</span>
+</pre>
+</body>
+</html>

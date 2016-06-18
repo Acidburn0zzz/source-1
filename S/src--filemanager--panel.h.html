@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>src/filemanager/panel.h</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<!-- beginning of fixed guide -->
+<div id='guide'><ul>
+<li><a href='#L208'><img class='icon' src='../icons/first.png' alt='[^]' /></a></li>
+<li><a href='#BOTTOM'><img class='icon' src='../icons/last.png' alt='[v]' /></a></li>
+<li><a href='#TOP'><img class='icon' src='../icons/top.png' alt='[top]' /></a></li>
+<li><a href='#BOTTOM'><img class='icon' src='../icons/bottom.png' alt='[bottom]' /></a></li>
+<li><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a></li>
+<li><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a></li>
+<li class='standout'><span><a href='../files/src.html'>src</a>/<a href='../files/src--filemanager.html'>filemanager</a>/panel.h</span></li>
+</ul></div>
+<!-- end of fixed guide -->
+<a id='TOP' name='TOP'></a><h2 class='header'><a href='../mains.html'>root</a>/<a href='../files/src.html'>src</a>/<a href='../files/src--filemanager.html'>filemanager</a>/panel.h</h2>
+<em class='comment'>/* <img class='icon' src='../icons/n_left.png' alt='[previous]' /><img class='icon' src='../icons/n_right.png' alt='[next]' /><a href='#L208'><img class='icon' src='../icons/first.png' alt='[first]' /></a><img class='icon' src='../icons/n_last.png' alt='[last]' /><img class='icon' src='../icons/n_top.png' alt='[top]' /><a href='#BOTTOM'><img class='icon' src='../icons/bottom.png' alt='[bottom]' /></a><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a>&nbsp;<em class='position'>[+1 src/filemanager/panel.h]</em> */</em>
+<hr />
+<h2 class='header'><a href='../J/panel.h.html' title='Multiple included from 12 places.'>INCLUDED FROM</a></h2>
+<hr />
+<h2 class='header'>DEFINITIONS</h2>
+This source file includes following definitions.
+<ol>
+<li><a href='#L208' title='Defined at 208.'>panel_new</a></li>
+</ol>
+<hr />
+<pre>
+<a id='L1' name='L1'></a>   1 <em class='comment'>/** \file panel.h</em>
+<a id='L2' name='L2'></a>   2 <em class='comment'> *  \brief Header: defines WPanel structure</em>
+<a id='L3' name='L3'></a>   3 <em class='comment'> */</em>
+<a id='L4' name='L4'></a>   4 
+<a id='L5' name='L5'></a>   5 <em class='sharp'>#ifndef</em> <a href='../S/src--filemanager--panel.h.html#L6' title='Defined at 6 in src/filemanager/panel.h.'>MC__PANEL_H</a>
+<a id='L6' name='L6'></a>   6 <em class='sharp'>#define</em> <a href='../S/src--filemanager--panel.h.html#L5' title='Referred from 5 in src/filemanager/panel.h.'>MC__PANEL_H</a>
+<a id='L7' name='L7'></a>   7 
+<a id='L8' name='L8'></a>   8 <em class='sharp'>#include</em> &lt;inttypes.h&gt;           <em class='comment'>/* uintmax_t */</em>
+<a id='L9' name='L9'></a>   9 
+<a id='L10' name='L10'></a>  10 <em class='sharp'>#include</em> "<a href='lib--global.h.html'>lib/global.h</a>"         <em class='comment'>/* gboolean */</em>
+<a id='L11' name='L11'></a>  11 <em class='sharp'>#include</em> "<a href='lib--fs.h.html'>lib/fs.h</a>"             <em class='comment'>/* MC_MAXPATHLEN */</em>
+<a id='L12' name='L12'></a>  12 <em class='sharp'>#include</em> "<a href='lib--strutil.h.html'>lib/strutil.h</a>"
+<a id='L13' name='L13'></a>  13 <em class='sharp'>#include</em> "<a href='lib--widget.h.html'>lib/widget.h</a>"         <em class='comment'>/* Widget */</em>
+<a id='L14' name='L14'></a>  14 <em class='sharp'>#include</em> "<a href='lib--filehighlight.h.html'>lib/filehighlight.h</a>"
+<a id='L15' name='L15'></a>  15 
+<a id='L16' name='L16'></a>  16 <em class='sharp'>#include</em> "<a href='src--filemanager--dir.h.html'>dir.h</a>"                <em class='comment'>/* dir_list */</em>
+<a id='L17' name='L17'></a>  17 
+<a id='L18' name='L18'></a>  18 <em class='comment'>/*** typedefs(not structures) and defined constants **********************************************/</em>
+<a id='L19' name='L19'></a>  19 
+<a id='L20' name='L20'></a>  20 <em class='sharp'>#define</em> <a href='../R/PANEL.html' title='Multiple referred from 26 places.'>PANEL</a>(<a href='../Y/x.html' title='Multiple used in 633 places.'>x</a>) ((<a href='../S/src--filemanager--panel.h.html#L143' title='Defined at 143 in src/filemanager/panel.h.'>WPanel</a> *)(<a href='../Y/x.html' title='Multiple used in 633 places.'>x</a>))
+<a id='L21' name='L21'></a>  21 <em class='sharp'>#define</em> <a href='../R/selection.html' title='Multiple referred from 45 places.'>selection</a>(<a href='../Y/p.html' title='Multiple used in 2289 places.'>p</a>) (&amp;(<a href='../Y/p.html' title='Multiple used in 2289 places.'>p</a>-&gt;<a href='../Y/dir.html' title='Multiple used in 475 places.'>dir</a>.<a href='../Y/list.html' title='Multiple used in 398 places.'>list</a>[<a href='../Y/p.html' title='Multiple used in 2289 places.'>p</a>-&gt;<a href='../Y/selected.html' title='Multiple used in 179 places.'>selected</a>]))
+<a id='L22' name='L22'></a>  22 <em class='sharp'>#define</em> <a href='../R/DEFAULT_USER_FORMAT.html' title='Multiple referred from 9 places.'>DEFAULT_USER_FORMAT</a> "half type name | size | perm"
+<a id='L23' name='L23'></a>  23 
+<a id='L24' name='L24'></a>  24 <em class='sharp'>#define</em> <a href='../R/LIST_TYPES.html' title='Multiple referred from 10 places.'>LIST_TYPES</a> 4
+<a id='L25' name='L25'></a>  25 
+<a id='L26' name='L26'></a>  26 <em class='sharp'>#define</em> <a href='../R/UP_KEEPSEL.html' title='Multiple referred from 25 places.'>UP_KEEPSEL</a> ((<strong class='reserved'>char</strong> *) -1)
+<a id='L27' name='L27'></a>  27 
+<a id='L28' name='L28'></a>  28 <em class='comment'>/*** enums ***************************************************************************************/</em>
+<a id='L29' name='L29'></a>  29 
+<a id='L30' name='L30'></a>  30 <strong class='reserved'>typedef</strong> <strong class='reserved'>enum</strong>
+<a id='L31' name='L31'></a>  31 <em class='brace'>{</em>
+<a id='L32' name='L32'></a>  32     <a href='../R/list_full.html' title='Multiple referred from 5 places.'>list_full</a>,                  <em class='comment'>/* Name, size, perm/date */</em>
+<a id='L33' name='L33'></a>  33     <a href='../R/list_brief.html' title='Multiple referred from 6 places.'>list_brief</a>,                 <em class='comment'>/* Name */</em>
+<a id='L34' name='L34'></a>  34     <a href='../R/list_long.html' title='Multiple referred from 6 places.'>list_long</a>,                  <em class='comment'>/* Like ls -l */</em>
+<a id='L35' name='L35'></a>  35     <a href='../R/list_user.html' title='Multiple referred from 5 places.'>list_user</a>                   <em class='comment'>/* User defined */</em>
+<a id='L36' name='L36'></a>  36 <em class='brace'>}</em> <a href='../S/src--filemanager--panel.h.html#L96' title='Referred from 96 in src/filemanager/panel.h.'>list_type_t</a>;
+<a id='L37' name='L37'></a>  37 
+<a id='L38' name='L38'></a>  38 <strong class='reserved'>typedef</strong> <strong class='reserved'>enum</strong>
+<a id='L39' name='L39'></a>  39 <em class='brace'>{</em>
+<a id='L40' name='L40'></a>  40     <a href='../R/frame_full.html' title='Multiple referred from 3 places.'>frame_full</a>,                 <em class='comment'>/* full screen frame */</em>
+<a id='L41' name='L41'></a>  41     <a href='../R/frame_half.html' title='Multiple referred from 4 places.'>frame_half</a>                  <em class='comment'>/* half screen frame */</em>
+<a id='L42' name='L42'></a>  42 <em class='brace'>}</em> <a href='../R/panel_display_t.html' title='Multiple referred from 4 places.'>panel_display_t</a>;
+<a id='L43' name='L43'></a>  43 
+<a id='L44' name='L44'></a>  44 <strong class='reserved'>typedef</strong> <strong class='reserved'>enum</strong>
+<a id='L45' name='L45'></a>  45 <em class='brace'>{</em>
+<a id='L46' name='L46'></a>  46     <a href='../R/UP_OPTIMIZE.html' title='Multiple referred from 20 places.'>UP_OPTIMIZE</a> = 0,
+<a id='L47' name='L47'></a>  47     <a href='../R/UP_RELOAD.html' title='Multiple referred from 7 places.'>UP_RELOAD</a> = 1,
+<a id='L48' name='L48'></a>  48     <a href='../R/UP_ONLY_CURRENT.html' title='Multiple referred from 3 places.'>UP_ONLY_CURRENT</a> = 2
+<a id='L49' name='L49'></a>  49 <em class='brace'>}</em> <a href='../R/panel_update_flags_t.html' title='Multiple referred from 6 places.'>panel_update_flags_t</a>;
+<a id='L50' name='L50'></a>  50 
+<a id='L51' name='L51'></a>  51 <em class='comment'>/* selection flags */</em>
+<a id='L52' name='L52'></a>  52 <strong class='reserved'>typedef</strong> <strong class='reserved'>enum</strong>
+<a id='L53' name='L53'></a>  53 <em class='brace'>{</em>
+<a id='L54' name='L54'></a>  54     <a href='../R/SELECT_FILES_ONLY.html' title='Multiple referred from 2 places.'>SELECT_FILES_ONLY</a> = 1 &lt;&lt; 0,
+<a id='L55' name='L55'></a>  55     <a href='../R/SELECT_MATCH_CASE.html' title='Multiple referred from 3 places.'>SELECT_MATCH_CASE</a> = 1 &lt;&lt; 1,
+<a id='L56' name='L56'></a>  56     <a href='../R/SELECT_SHELL_PATTERNS.html' title='Multiple referred from 3 places.'>SELECT_SHELL_PATTERNS</a> = 1 &lt;&lt; 2
+<a id='L57' name='L57'></a>  57 <em class='brace'>}</em> <a href='../S/src--setup.h.html#L57' title='Referred from 57 in src/setup.h.'>panel_select_flags_t</a>;
+<a id='L58' name='L58'></a>  58 
+<a id='L59' name='L59'></a>  59 <em class='comment'>/* run mode and params */</em>
+<a id='L60' name='L60'></a>  60 
+<a id='L61' name='L61'></a>  61 <strong class='reserved'>enum</strong> <a href='../R/cd_enum.html' title='Multiple referred from 8 places.'>cd_enum</a>
+<a id='L62' name='L62'></a>  62 <em class='brace'>{</em>
+<a id='L63' name='L63'></a>  63     <a href='../R/cd_parse_command.html' title='Multiple referred from 8 places.'>cd_parse_command</a>,
+<a id='L64' name='L64'></a>  64     <a href='../R/cd_exact.html' title='Multiple referred from 20 places.'>cd_exact</a>
+<a id='L65' name='L65'></a>  65 <em class='brace'>}</em>;
+<a id='L66' name='L66'></a>  66 
+<a id='L67' name='L67'></a>  67 <em class='comment'>/*** structures declarations (and typedefs of structures)*****************************************/</em>
+<a id='L68' name='L68'></a>  68 
+<a id='L69' name='L69'></a>  69 <strong class='reserved'>struct</strong> <a href='../D/format_e.html' title='Multiple defined in 2 places.'>format_e</a>;
+<a id='L70' name='L70'></a>  70 
+<a id='L71' name='L71'></a>  71 <strong class='reserved'>typedef</strong> <strong class='reserved'>struct</strong> panel_field_struct
+<a id='L72' name='L72'></a>  72 <em class='brace'>{</em>
+<a id='L73' name='L73'></a>  73     <strong class='reserved'>const</strong> <strong class='reserved'>char</strong> *<a href='../Y/id.html' title='Multiple used in 155 places.'>id</a>;
+<a id='L74' name='L74'></a>  74     <strong class='reserved'>int</strong> <a href='../Y/min_size.html' title='Multiple used in 3 places.'>min_size</a>;
+<a id='L75' name='L75'></a>  75     <a href='../Y/gboolean.html' title='Multiple used in 1280 places.'>gboolean</a> <a href='../Y/expands.html' title='Multiple used in 2 places.'>expands</a>;
+<a id='L76' name='L76'></a>  76     <a href='../S/lib--strutil.h.html#L88' title='Defined at 88 in lib/strutil.h.'>align_crt_t</a> <a href='../Y/default_just.html' title='Multiple used in 2 places.'>default_just</a>;
+<a id='L77' name='L77'></a>  77     <strong class='reserved'>const</strong> <strong class='reserved'>char</strong> *<a href='../Y/hotkey.html' title='Multiple used in 76 places.'>hotkey</a>;
+<a id='L78' name='L78'></a>  78     <strong class='reserved'>const</strong> <strong class='reserved'>char</strong> *<a href='../Y/title_hotkey.html' title='Multiple used in 11 places.'>title_hotkey</a>;
+<a id='L79' name='L79'></a>  79     <a href='../Y/gboolean.html' title='Multiple used in 1280 places.'>gboolean</a> <a href='../Y/is_user_choice.html' title='Multiple used in 3 places.'>is_user_choice</a>;
+<a id='L80' name='L80'></a>  80     <a href='../Y/gboolean.html' title='Multiple used in 1280 places.'>gboolean</a> <a href='../Y/use_in_user_format.html' title='Multiple used in 3 places.'>use_in_user_format</a>;
+<a id='L81' name='L81'></a>  81     <strong class='reserved'>const</strong> <strong class='reserved'>char</strong> *(*<a href='../Y/string_fn.html' title='Multiple used in 6 places.'>string_fn</a>) (<a href='../S/lib--util.h.html#L116' title='Defined at 116 in lib/util.h.'>file_entry_t</a> *, <strong class='reserved'>int</strong>);
+<a id='L82' name='L82'></a>  82     <a href='../Y/GCompareFunc.html' title='Multiple used in 28 places.'>GCompareFunc</a> <a href='../Y/sort_routine.html' title='Multiple used in 10 places.'>sort_routine</a>;  <em class='comment'>/* used by mouse_sort_col() */</em>
+<a id='L83' name='L83'></a>  83 <em class='brace'>}</em> <a href='../R/panel_field_t.html' title='Multiple referred from 22 places.'>panel_field_t</a>;
+<a id='L84' name='L84'></a>  84 
+<a id='L85' name='L85'></a>  85 <strong class='reserved'>typedef</strong> <strong class='reserved'>struct</strong>
+<a id='L86' name='L86'></a>  86 <em class='brace'>{</em>
+<a id='L87' name='L87'></a>  87     <a href='../S/src--filemanager--dir.h.html#L31' title='Defined at 31 in src/filemanager/dir.h.'>dir_list</a> <a href='../Y/list.html' title='Multiple used in 398 places.'>list</a>;
+<a id='L88' name='L88'></a>  88     <a href='../S/lib--vfs--path.h.html#L31' title='Defined at 31 in lib/vfs/path.h.'>vfs_path_t</a> *<a href='../Y/root_vpath.html' title='Multiple used in 9 places.'>root_vpath</a>;
+<a id='L89' name='L89'></a>  89 <em class='brace'>}</em> <a href='../R/panelized_panel_t.html' title='Multiple referred from 2 places.'>panelized_panel_t</a>;
+<a id='L90' name='L90'></a>  90 
+<a id='L91' name='L91'></a>  91 <strong class='reserved'>typedef</strong> <strong class='reserved'>struct</strong>
+<a id='L92' name='L92'></a>  92 <em class='brace'>{</em>
+<a id='L93' name='L93'></a>  93     <a href='../D/Widget.html' title='Multiple defined in 2 places.'>Widget</a> <a href='../Y/widget.html' title='Multiple used in 214 places.'>widget</a>;
+<a id='L94' name='L94'></a>  94     <a href='../S/src--filemanager--dir.h.html#L31' title='Defined at 31 in src/filemanager/dir.h.'>dir_list</a> <a href='../Y/dir.html' title='Multiple used in 475 places.'>dir</a>;               <em class='comment'>/* Directory contents */</em>
+<a id='L95' name='L95'></a>  95 
+<a id='L96' name='L96'></a>  96     <a href='../S/src--filemanager--panel.h.html#L36' title='Defined at 36 in src/filemanager/panel.h.'>list_type_t</a> <a href='../Y/list_type.html' title='Multiple used in 45 places.'>list_type</a>;      <em class='comment'>/* listing type */</em>
+<a id='L97' name='L97'></a>  97     <strong class='reserved'>int</strong> <a href='../Y/active.html' title='Multiple used in 27 places.'>active</a>;                 <em class='comment'>/* If panel is currently selected */</em>
+<a id='L98' name='L98'></a>  98     <a href='../S/lib--vfs--path.h.html#L31' title='Defined at 31 in lib/vfs/path.h.'>vfs_path_t</a> *<a href='../Y/cwd_vpath.html' title='Multiple used in 129 places.'>cwd_vpath</a>;      <em class='comment'>/* Current Working Directory */</em>
+<a id='L99' name='L99'></a>  99     <a href='../S/lib--vfs--path.h.html#L31' title='Defined at 31 in lib/vfs/path.h.'>vfs_path_t</a> *<a href='../Y/lwd_vpath.html' title='Multiple used in 10 places.'>lwd_vpath</a>;      <em class='comment'>/* Last Working Directory */</em>
+<a id='L100' name='L100'></a> 100     <a href='../Y/GList.html' title='Multiple used in 144 places.'>GList</a> *<a href='../Y/dir_history.html' title='Multiple used in 13 places.'>dir_history</a>;         <em class='comment'>/* directory history */</em>
+<a id='L101' name='L101'></a> 101     <a href='../Y/GList.html' title='Multiple used in 144 places.'>GList</a> *<a href='../Y/dir_history_current.html' title='Multiple used in 10 places.'>dir_history_current</a>; <em class='comment'>/* pointer to the current history item */</em>
+<a id='L102' name='L102'></a> 102     <strong class='reserved'>char</strong> *<a href='../Y/hist_name.html' title='Multiple used in 6 places.'>hist_name</a>;            <em class='comment'>/* directory history name for history file */</em>
+<a id='L103' name='L103'></a> 103     <strong class='reserved'>int</strong> <a href='../Y/marked.html' title='Multiple used in 83 places.'>marked</a>;                 <em class='comment'>/* Count of marked files */</em>
+<a id='L104' name='L104'></a> 104     <strong class='reserved'>int</strong> <a href='../Y/dirs_marked.html' title='Multiple used in 15 places.'>dirs_marked</a>;            <em class='comment'>/* Count of marked directories */</em>
+<a id='L105' name='L105'></a> 105     <a href='../Y/uintmax_t.html' title='Multiple used in 85 places.'>uintmax_t</a> <a href='../Y/total.html' title='Multiple used in 92 places.'>total</a>;            <em class='comment'>/* Bytes in marked files */</em>
+<a id='L106' name='L106'></a> 106     <strong class='reserved'>int</strong> <a href='../Y/top_file.html' title='Multiple used in 67 places.'>top_file</a>;               <em class='comment'>/* The file showed on the top of the panel */</em>
+<a id='L107' name='L107'></a> 107     <strong class='reserved'>int</strong> <a href='../Y/selected.html' title='Multiple used in 179 places.'>selected</a>;               <em class='comment'>/* Index to the selected file */</em>
+<a id='L108' name='L108'></a> 108     <strong class='reserved'>int</strong> <a href='../Y/list_cols.html' title='Multiple used in 19 places.'>list_cols</a>;              <em class='comment'>/* Number of file list columns */</em>
+<a id='L109' name='L109'></a> 109     <strong class='reserved'>int</strong> <a href='../Y/brief_cols.html' title='Multiple used in 24 places.'>brief_cols</a>;             <em class='comment'>/* Number of columns in case of list_brief format */</em>
+<a id='L110' name='L110'></a> 110     <a href='../Y/gboolean.html' title='Multiple used in 1280 places.'>gboolean</a> <a href='../Y/is_panelized.html' title='Multiple used in 20 places.'>is_panelized</a>;      <em class='comment'>/* Flag: special filelisting, can't reload */</em>
+<a id='L111' name='L111'></a> 111     <a href='../S/src--filemanager--panel.h.html#L42' title='Defined at 42 in src/filemanager/panel.h.'>panel_display_t</a> <a href='../Y/frame_size.html' title='Multiple used in 9 places.'>frame_size</a>; <em class='comment'>/* half or full frame */</em>
+<a id='L112' name='L112'></a> 112     <strong class='reserved'>char</strong> *<a href='../Y/filter.html' title='Multiple used in 16 places.'>filter</a>;               <em class='comment'>/* File name filter */</em>
+<a id='L113' name='L113'></a> 113 
+<a id='L114' name='L114'></a> 114     <em class='comment'>/* sort */</em>
+<a id='L115' name='L115'></a> 115     <a href='../S/src--filemanager--dir.h.html#L41' title='Defined at 41 in src/filemanager/dir.h.'>dir_sort_options_t</a> <a href='../Y/sort_info.html' title='Multiple used in 21 places.'>sort_info</a>;
+<a id='L116' name='L116'></a> 116     <strong class='reserved'>const</strong> <a href='../S/src--filemanager--panel.h.html#L83' title='Defined at 83 in src/filemanager/panel.h.'>panel_field_t</a> *<a href='../Y/sort_field.html' title='Multiple used in 31 places.'>sort_field</a>;
+<a id='L117' name='L117'></a> 117 
+<a id='L118' name='L118'></a> 118     <strong class='reserved'>int</strong> <a href='../Y/dirty.html' title='Multiple used in 53 places.'>dirty</a>;                  <em class='comment'>/* Should we redisplay the panel? */</em>
+<a id='L119' name='L119'></a> 119 
+<a id='L120' name='L120'></a> 120     <strong class='reserved'>int</strong> <a href='../Y/user_mini_status.html' title='Multiple used in 7 places.'>user_mini_status</a>;       <em class='comment'>/* Is user_status_format used */</em>
+<a id='L121' name='L121'></a> 121     <strong class='reserved'>char</strong> *<a href='../Y/user_format.html' title='Multiple used in 18 places.'>user_format</a>;          <em class='comment'>/* User format */</em>
+<a id='L122' name='L122'></a> 122     <strong class='reserved'>char</strong> *<a href='../Y/user_status_format.html' title='Multiple used in 15 places.'>user_status_format</a>[<a href='../S/src--filemanager--panel.h.html#L24' title='Defined at 24 in src/filemanager/panel.h.'>LIST_TYPES</a>];       <em class='comment'>/* User format for status line */</em>
+<a id='L123' name='L123'></a> 123 
+<a id='L124' name='L124'></a> 124     <strong class='reserved'>struct</strong> <a href='../D/format_e.html' title='Multiple defined in 2 places.'>format_e</a> *<a href='../Y/format.html' title='Multiple used in 140 places.'>format</a>;    <em class='comment'>/* Display format */</em>
+<a id='L125' name='L125'></a> 125     <strong class='reserved'>struct</strong> <a href='../D/format_e.html' title='Multiple defined in 2 places.'>format_e</a> *<a href='../Y/status_format.html' title='Multiple used in 11 places.'>status_format</a>;     <em class='comment'>/* Mini status format */</em>
+<a id='L126' name='L126'></a> 126 
+<a id='L127' name='L127'></a> 127     <strong class='reserved'>int</strong> <a href='../Y/format_modified.html' title='Multiple used in 3 places.'>format_modified</a>;        <em class='comment'>/* If the format was changed this is set */</em>
+<a id='L128' name='L128'></a> 128 
+<a id='L129' name='L129'></a> 129     <strong class='reserved'>char</strong> *<a href='../Y/panel_name.html' title='Multiple used in 20 places.'>panel_name</a>;           <em class='comment'>/* The panel name */</em>
+<a id='L130' name='L130'></a> 130     <strong class='reserved'>struct</strong> <a href='../Y/stat.html' title='Multiple used in 216 places.'>stat</a> <a href='../Y/dir_stat.html' title='Multiple used in 8 places.'>dir_stat</a>;       <em class='comment'>/* Stat of current dir: used by execute () */</em>
+<a id='L131' name='L131'></a> 131 
+<a id='L132' name='L132'></a> 132 <em class='sharp'>#ifdef</em> <a href='../S/tests--lib--vfs--tempdir.c.html#L31' title='Defined at 31 in tests/lib/vfs/tempdir.c.'>HAVE_CHARSET</a>
+<a id='L133' name='L133'></a> 133     <strong class='reserved'>int</strong> <a href='../Y/codepage.html' title='Multiple used in 14 places.'>codepage</a>;               <em class='comment'>/* panel codepage */</em>
+<a id='L134' name='L134'></a> 134 <em class='sharp'>#endif</em>
+<a id='L135' name='L135'></a> 135 
+<a id='L136' name='L136'></a> 136     <a href='../Y/gboolean.html' title='Multiple used in 1280 places.'>gboolean</a> <a href='../Y/searching.html' title='Multiple used in 22 places.'>searching</a>;
+<a id='L137' name='L137'></a> 137     <strong class='reserved'>char</strong> <a href='../Y/search_buffer.html' title='Multiple used in 29 places.'>search_buffer</a>[<a href='../S/lib--fs.h.html#L109' title='Defined at 109 in lib/fs.h.'>MC_MAXFILENAMELEN</a>];
+<a id='L138' name='L138'></a> 138     <strong class='reserved'>char</strong> <a href='../Y/prev_search_buffer.html' title='Multiple used in 5 places.'>prev_search_buffer</a>[<a href='../S/lib--fs.h.html#L109' title='Defined at 109 in lib/fs.h.'>MC_MAXFILENAMELEN</a>];
+<a id='L139' name='L139'></a> 139     <strong class='reserved'>char</strong> <a href='../Y/search_char.html' title='Multiple used in 6 places.'>search_char</a>[<a href='../Y/MB_LEN_MAX.html' title='Multiple used in 8 places.'>MB_LEN_MAX</a>];       <em class='comment'>/*buffer for multibytes characters */</em>
+<a id='L140' name='L140'></a> 140     <strong class='reserved'>int</strong> <a href='../Y/search_chpoint.html' title='Multiple used in 13 places.'>search_chpoint</a>;         <em class='comment'>/*point after last characters in search_char */</em>
+<a id='L141' name='L141'></a> 141     <strong class='reserved'>int</strong> <a href='../Y/content_shift.html' title='Multiple used in 19 places.'>content_shift</a>;          <em class='comment'>/* Number of characters of filename need to skip from left side. */</em>
+<a id='L142' name='L142'></a> 142     <strong class='reserved'>int</strong> <a href='../Y/max_shift.html' title='Multiple used in 8 places.'>max_shift</a>;              <em class='comment'>/* Max shift for visible part of current panel */</em>
+<a id='L143' name='L143'></a> 143 <em class='brace'>}</em> <a href='../R/WPanel.html' title='Multiple referred from 183 places.'>WPanel</a>;
+<a id='L144' name='L144'></a> 144 
+<a id='L145' name='L145'></a> 145 <em class='comment'>/*** global variables defined in .c file *********************************************************/</em>
+<a id='L146' name='L146'></a> 146 
+<a id='L147' name='L147'></a> 147 <strong class='reserved'>extern</strong> <a href='../S/src--filemanager--panel.h.html#L89' title='Defined at 89 in src/filemanager/panel.h.'>panelized_panel_t</a> <a href='../Y/panelized_panel.html' title='Multiple used in 42 places.'>panelized_panel</a>;
+<a id='L148' name='L148'></a> 148 
+<a id='L149' name='L149'></a> 149 <strong class='reserved'>extern</strong> <a href='../D/hook_t.html' title='Multiple defined in 2 places.'>hook_t</a> *<a href='../Y/select_file_hook.html' title='Multiple used in 7 places.'>select_file_hook</a>;
+<a id='L150' name='L150'></a> 150 
+<a id='L151' name='L151'></a> 151 <strong class='reserved'>extern</strong> <a href='../S/lib--filehighlight.h.html#L17' title='Defined at 17 in lib/filehighlight.h.'>mc_fhl_t</a> *<a href='../Y/mc_filehighlight.html' title='Multiple used in 9 places.'>mc_filehighlight</a>;
+<a id='L152' name='L152'></a> 152 
+<a id='L153' name='L153'></a> 153 <em class='comment'>/*** declarations of public functions ************************************************************/</em>
+<a id='L154' name='L154'></a> 154 
+<a id='L155' name='L155'></a> 155 <a href='../S/src--filemanager--panel.h.html#L143' title='Defined at 143 in src/filemanager/panel.h.'>WPanel</a> *<a href='../S/src--filemanager--panel.c.html#L4283' title='Defined at 4283 in src/filemanager/panel.c.'>panel_new_with_dir</a> (<strong class='reserved'>const</strong> <strong class='reserved'>char</strong> *<a href='../Y/panel_name.html' title='Multiple used in 20 places.'>panel_name</a>, <strong class='reserved'>const</strong> <a href='../S/lib--vfs--path.h.html#L31' title='Defined at 31 in lib/vfs/path.h.'>vfs_path_t</a> * <a href='../Y/vpath.html' title='Multiple used in 933 places.'>vpath</a>);
+<a id='L156' name='L156'></a> 156 <strong class='reserved'>void</strong> <a href='../S/src--filemanager--panel.c.html#L4219' title='Defined at 4219 in src/filemanager/panel.c.'>panel_clean_dir</a> (<a href='../S/src--filemanager--panel.h.html#L143' title='Defined at 143 in src/filemanager/panel.h.'>WPanel</a> * <a href='../Y/panel.html' title='Multiple used in 972 places.'>panel</a>);
+<a id='L157' name='L157'></a> 157 
+<a id='L158' name='L158'></a> 158 <strong class='reserved'>void</strong> <a href='../S/src--filemanager--panel.c.html#L4402' title='Defined at 4402 in src/filemanager/panel.c.'>panel_reload</a> (<a href='../S/src--filemanager--panel.h.html#L143' title='Defined at 143 in src/filemanager/panel.h.'>WPanel</a> * <a href='../Y/panel.html' title='Multiple used in 972 places.'>panel</a>);
+<a id='L159' name='L159'></a> 159 <strong class='reserved'>void</strong> <a href='../S/src--filemanager--panel.c.html#L4706' title='Defined at 4706 in src/filemanager/panel.c.'>panel_set_sort_order</a> (<a href='../S/src--filemanager--panel.h.html#L143' title='Defined at 143 in src/filemanager/panel.h.'>WPanel</a> * <a href='../Y/panel.html' title='Multiple used in 972 places.'>panel</a>, <strong class='reserved'>const</strong> <a href='../S/src--filemanager--panel.h.html#L83' title='Defined at 83 in src/filemanager/panel.h.'>panel_field_t</a> * <a href='../Y/sort_order.html' title='Multiple used in 17 places.'>sort_order</a>);
+<a id='L160' name='L160'></a> 160 <strong class='reserved'>void</strong> <a href='../S/src--filemanager--panel.c.html#L4677' title='Defined at 4677 in src/filemanager/panel.c.'>panel_re_sort</a> (<a href='../S/src--filemanager--panel.h.html#L143' title='Defined at 143 in src/filemanager/panel.h.'>WPanel</a> * <a href='../Y/panel.html' title='Multiple used in 972 places.'>panel</a>);
+<a id='L161' name='L161'></a> 161 
+<a id='L162' name='L162'></a> 162 <em class='sharp'>#ifdef</em> <a href='../S/tests--lib--vfs--tempdir.c.html#L31' title='Defined at 31 in tests/lib/vfs/tempdir.c.'>HAVE_CHARSET</a>
+<a id='L163' name='L163'></a> 163 <strong class='reserved'>void</strong> <a href='../S/src--filemanager--panel.c.html#L4736' title='Defined at 4736 in src/filemanager/panel.c.'>panel_change_encoding</a> (<a href='../S/src--filemanager--panel.h.html#L143' title='Defined at 143 in src/filemanager/panel.h.'>WPanel</a> * <a href='../Y/panel.html' title='Multiple used in 972 places.'>panel</a>);
+<a id='L164' name='L164'></a> 164 <a href='../S/lib--vfs--path.h.html#L31' title='Defined at 31 in lib/vfs/path.h.'>vfs_path_t</a> *<a href='../S/src--filemanager--panel.c.html#L4788' title='Defined at 4788 in src/filemanager/panel.c.'>remove_encoding_from_path</a> (<strong class='reserved'>const</strong> <a href='../S/lib--vfs--path.h.html#L31' title='Defined at 31 in lib/vfs/path.h.'>vfs_path_t</a> * <a href='../Y/vpath.html' title='Multiple used in 933 places.'>vpath</a>);
+<a id='L165' name='L165'></a> 165 <em class='sharp'>#endif</em>
+<a id='L166' name='L166'></a> 166 
+<a id='L167' name='L167'></a> 167 <strong class='reserved'>void</strong> <a href='../S/src--filemanager--panel.c.html#L4853' title='Defined at 4853 in src/filemanager/panel.c.'>update_panels</a> (<a href='../S/src--filemanager--panel.h.html#L49' title='Defined at 49 in src/filemanager/panel.h.'>panel_update_flags_t</a> <a href='../Y/flags.html' title='Multiple used in 432 places.'>flags</a>, <strong class='reserved'>const</strong> <strong class='reserved'>char</strong> *<a href='../Y/current_file.html' title='Multiple used in 33 places.'>current_file</a>);
+<a id='L168' name='L168'></a> 168 <strong class='reserved'>int</strong> <a href='../S/src--filemanager--panel.c.html#L4443' title='Defined at 4443 in src/filemanager/panel.c.'>set_panel_formats</a> (<a href='../S/src--filemanager--panel.h.html#L143' title='Defined at 143 in src/filemanager/panel.h.'>WPanel</a> * <a href='../Y/p.html' title='Multiple used in 2289 places.'>p</a>);
+<a id='L169' name='L169'></a> 169 <strong class='reserved'>void</strong> <a href='../S/src--filemanager--panel.c.html#L4501' title='Defined at 4501 in src/filemanager/panel.c.'>panel_update_cols</a> (<a href='../D/Widget.html' title='Multiple defined in 2 places.'>Widget</a> * <a href='../Y/widget.html' title='Multiple used in 214 places.'>widget</a>, <a href='../S/src--filemanager--panel.h.html#L42' title='Defined at 42 in src/filemanager/panel.h.'>panel_display_t</a> <a href='../Y/frame_size.html' title='Multiple used in 9 places.'>frame_size</a>);
+<a id='L170' name='L170'></a> 170 
+<a id='L171' name='L171'></a> 171 <strong class='reserved'>void</strong> <a href='../S/src--filemanager--panel.c.html#L4210' title='Defined at 4210 in src/filemanager/panel.c.'>try_to_select</a> (<a href='../S/src--filemanager--panel.h.html#L143' title='Defined at 143 in src/filemanager/panel.h.'>WPanel</a> * <a href='../Y/panel.html' title='Multiple used in 972 places.'>panel</a>, <strong class='reserved'>const</strong> <strong class='reserved'>char</strong> *<a href='../Y/name.html' title='Multiple used in 726 places.'>name</a>);
+<a id='L172' name='L172'></a> 172 
+<a id='L173' name='L173'></a> 173 <strong class='reserved'>void</strong> <a href='../S/src--filemanager--panel.c.html#L4563' title='Defined at 4563 in src/filemanager/panel.c.'>unmark_files</a> (<a href='../S/src--filemanager--panel.h.html#L143' title='Defined at 143 in src/filemanager/panel.h.'>WPanel</a> * <a href='../Y/panel.html' title='Multiple used in 972 places.'>panel</a>);
+<a id='L174' name='L174'></a> 174 <strong class='reserved'>void</strong> <a href='../S/src--filemanager--panel.c.html#L4541' title='Defined at 4541 in src/filemanager/panel.c.'>select_item</a> (<a href='../S/src--filemanager--panel.h.html#L143' title='Defined at 143 in src/filemanager/panel.h.'>WPanel</a> * <a href='../Y/panel.html' title='Multiple used in 972 places.'>panel</a>);
+<a id='L175' name='L175'></a> 175 
+<a id='L176' name='L176'></a> 176 <strong class='reserved'>void</strong> <a href='../S/src--filemanager--panel.c.html#L4583' title='Defined at 4583 in src/filemanager/panel.c.'>recalculate_panel_summary</a> (<a href='../S/src--filemanager--panel.h.html#L143' title='Defined at 143 in src/filemanager/panel.h.'>WPanel</a> * <a href='../Y/panel.html' title='Multiple used in 972 places.'>panel</a>);
+<a id='L177' name='L177'></a> 177 <strong class='reserved'>void</strong> <a href='../S/src--filemanager--panel.c.html#L4665' title='Defined at 4665 in src/filemanager/panel.c.'>file_mark</a> (<a href='../S/src--filemanager--panel.h.html#L143' title='Defined at 143 in src/filemanager/panel.h.'>WPanel</a> * <a href='../Y/panel.html' title='Multiple used in 972 places.'>panel</a>, <strong class='reserved'>int</strong> <a href='../Y/idx.html' title='Multiple used in 119 places.'>idx</a>, <strong class='reserved'>int</strong> <a href='../Y/val.html' title='Multiple used in 106 places.'>val</a>);
+<a id='L178' name='L178'></a> 178 <strong class='reserved'>void</strong> <a href='../S/src--filemanager--panel.c.html#L4606' title='Defined at 4606 in src/filemanager/panel.c.'>do_file_mark</a> (<a href='../S/src--filemanager--panel.h.html#L143' title='Defined at 143 in src/filemanager/panel.h.'>WPanel</a> * <a href='../Y/panel.html' title='Multiple used in 972 places.'>panel</a>, <strong class='reserved'>int</strong> <a href='../Y/idx.html' title='Multiple used in 119 places.'>idx</a>, <strong class='reserved'>int</strong> <a href='../Y/val.html' title='Multiple used in 106 places.'>val</a>);
+<a id='L179' name='L179'></a> 179 
+<a id='L180' name='L180'></a> 180 <a href='../Y/gboolean.html' title='Multiple used in 1280 places.'>gboolean</a> <a href='../S/src--filemanager--panel.c.html#L4652' title='Defined at 4652 in src/filemanager/panel.c.'>do_panel_cd</a> (<a href='../S/src--filemanager--panel.h.html#L143' title='Defined at 143 in src/filemanager/panel.h.'>WPanel</a> * <a href='../Y/panel.html' title='Multiple used in 972 places.'>panel</a>, <strong class='reserved'>const</strong> <a href='../S/lib--vfs--path.h.html#L31' title='Defined at 31 in lib/vfs/path.h.'>vfs_path_t</a> * <a href='../Y/new_dir_vpath.html' title='Multiple used in 42 places.'>new_dir_vpath</a>, <strong class='reserved'>enum</strong> <a href='../S/src--filemanager--panel.h.html#L61' title='Defined at 61 in src/filemanager/panel.h.'>cd_enum</a> <a href='../Y/cd_type.html' title='Multiple used in 10 places.'>cd_type</a>);
+<a id='L181' name='L181'></a> 181 
+<a id='L182' name='L182'></a> 182 <a href='../Y/gsize.html' title='Multiple used in 189 places.'>gsize</a> <a href='../S/src--filemanager--panel.c.html#L4875' title='Defined at 4875 in src/filemanager/panel.c.'>panel_get_num_of_sortable_fields</a> (<strong class='reserved'>void</strong>);
+<a id='L183' name='L183'></a> 183 <strong class='reserved'>char</strong> **<a href='../S/src--filemanager--panel.c.html#L4888' title='Defined at 4888 in src/filemanager/panel.c.'>panel_get_sortable_fields</a> (<a href='../Y/gsize.html' title='Multiple used in 189 places.'>gsize</a> *);
+<a id='L184' name='L184'></a> 184 <strong class='reserved'>const</strong> <a href='../S/src--filemanager--panel.h.html#L83' title='Defined at 83 in src/filemanager/panel.h.'>panel_field_t</a> *<a href='../S/src--filemanager--panel.c.html#L4914' title='Defined at 4914 in src/filemanager/panel.c.'>panel_get_field_by_id</a> (<strong class='reserved'>const</strong> <strong class='reserved'>char</strong> *);
+<a id='L185' name='L185'></a> 185 <strong class='reserved'>const</strong> <a href='../S/src--filemanager--panel.h.html#L83' title='Defined at 83 in src/filemanager/panel.h.'>panel_field_t</a> *<a href='../S/src--filemanager--panel.c.html#L4943' title='Defined at 4943 in src/filemanager/panel.c.'>panel_get_field_by_title</a> (<strong class='reserved'>const</strong> <strong class='reserved'>char</strong> *);
+<a id='L186' name='L186'></a> 186 <strong class='reserved'>const</strong> <a href='../S/src--filemanager--panel.h.html#L83' title='Defined at 83 in src/filemanager/panel.h.'>panel_field_t</a> *<a href='../S/src--filemanager--panel.c.html#L4928' title='Defined at 4928 in src/filemanager/panel.c.'>panel_get_field_by_title_hotkey</a> (<strong class='reserved'>const</strong> <strong class='reserved'>char</strong> *);
+<a id='L187' name='L187'></a> 187 <a href='../Y/gsize.html' title='Multiple used in 189 places.'>gsize</a> <a href='../S/src--filemanager--panel.c.html#L4962' title='Defined at 4962 in src/filemanager/panel.c.'>panel_get_num_of_user_possible_fields</a> (<strong class='reserved'>void</strong>);
+<a id='L188' name='L188'></a> 188 <strong class='reserved'>char</strong> **<a href='../S/src--filemanager--panel.c.html#L4976' title='Defined at 4976 in src/filemanager/panel.c.'>panel_get_user_possible_fields</a> (<a href='../Y/gsize.html' title='Multiple used in 189 places.'>gsize</a> *);
+<a id='L189' name='L189'></a> 189 <strong class='reserved'>void</strong> <a href='../S/src--filemanager--panel.c.html#L4244' title='Defined at 4244 in src/filemanager/panel.c.'>panel_set_cwd</a> (<a href='../S/src--filemanager--panel.h.html#L143' title='Defined at 143 in src/filemanager/panel.h.'>WPanel</a> * <a href='../Y/panel.html' title='Multiple used in 972 places.'>panel</a>, <strong class='reserved'>const</strong> <a href='../S/lib--vfs--path.h.html#L31' title='Defined at 31 in lib/vfs/path.h.'>vfs_path_t</a> * <a href='../Y/vpath.html' title='Multiple used in 933 places.'>vpath</a>);
+<a id='L190' name='L190'></a> 190 <strong class='reserved'>void</strong> <a href='../S/src--filemanager--panel.c.html#L4262' title='Defined at 4262 in src/filemanager/panel.c.'>panel_set_lwd</a> (<a href='../S/src--filemanager--panel.h.html#L143' title='Defined at 143 in src/filemanager/panel.h.'>WPanel</a> * <a href='../Y/panel.html' title='Multiple used in 972 places.'>panel</a>, <strong class='reserved'>const</strong> <a href='../S/lib--vfs--path.h.html#L31' title='Defined at 31 in lib/vfs/path.h.'>vfs_path_t</a> * <a href='../Y/vpath.html' title='Multiple used in 933 places.'>vpath</a>);
+<a id='L191' name='L191'></a> 191 
+<a id='L192' name='L192'></a> 192 <strong class='reserved'>void</strong> <a href='../S/src--filemanager--panel.c.html#L5002' title='Defined at 5002 in src/filemanager/panel.c.'>panel_init</a> (<strong class='reserved'>void</strong>);
+<a id='L193' name='L193'></a> 193 <strong class='reserved'>void</strong> <a href='../S/src--filemanager--panel.c.html#L5025' title='Defined at 5025 in src/filemanager/panel.c.'>panel_deinit</a> (<strong class='reserved'>void</strong>);
+<a id='L194' name='L194'></a> 194 <a href='../Y/gboolean.html' title='Multiple used in 1280 places.'>gboolean</a> <a href='../D/do_cd.html' title='Multiple defined in 3 places.'>do_cd</a> (<strong class='reserved'>const</strong> <a href='../S/lib--vfs--path.h.html#L31' title='Defined at 31 in lib/vfs/path.h.'>vfs_path_t</a> * <a href='../Y/new_dir_vpath.html' title='Multiple used in 42 places.'>new_dir_vpath</a>, <strong class='reserved'>enum</strong> <a href='../S/src--filemanager--panel.h.html#L61' title='Defined at 61 in src/filemanager/panel.h.'>cd_enum</a> <a href='../Y/cd_type.html' title='Multiple used in 10 places.'>cd_type</a>);
+<a id='L195' name='L195'></a> 195 
+<a id='L196' name='L196'></a> 196 <em class='comment'>/* --------------------------------------------------------------------------------------------- */</em>
+<a id='L197' name='L197'></a> 197 <em class='comment'>/*** inline functions ****************************************************************************/</em>
+<a id='L198' name='L198'></a> 198 <em class='comment'>/* --------------------------------------------------------------------------------------------- */</em>
+<a id='L199' name='L199'></a> 199 <em class='comment'>/**</em>
+<a id='L200' name='L200'></a> 200 <em class='comment'> * Panel creation.</em>
+<a id='L201' name='L201'></a> 201 <em class='comment'> *</em>
+<a id='L202' name='L202'></a> 202 <em class='comment'> * @param panel_name the name of the panel for setup retieving</em>
+<a id='L203' name='L203'></a> 203 <em class='comment'> *</em>
+<a id='L204' name='L204'></a> 204 <em class='comment'> * @return new instance of WPanel</em>
+<a id='L205' name='L205'></a> 205 <em class='comment'> */</em>
+<a id='L206' name='L206'></a> 206 
+<a id='L207' name='L207'></a> 207 <strong class='reserved'>static</strong> <strong class='reserved'>inline</strong> <a href='../S/src--filemanager--panel.h.html#L143' title='Defined at 143 in src/filemanager/panel.h.'>WPanel</a> *
+<a id='L208' name='L208'></a> 208 <a href='../S/src--filemanager--layout.c.html#L616' title='Referred from 616 in src/filemanager/layout.c.'>panel_new</a> (<strong class='reserved'>const</strong> <strong class='reserved'>char</strong> *<a href='../Y/panel_name.html' title='Multiple used in 20 places.'>panel_name</a>)
+     <em class='comment'>/* <img class='icon' src='../icons/n_left.png' alt='[previous]' /><img class='icon' src='../icons/n_right.png' alt='[next]' /><img class='icon' src='../icons/n_first.png' alt='[first]' /><img class='icon' src='../icons/n_last.png' alt='[last]' /><a href='#TOP'><img class='icon' src='../icons/top.png' alt='[top]' /></a><a href='#BOTTOM'><img class='icon' src='../icons/bottom.png' alt='[bottom]' /></a><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a>&nbsp;<em class='position'>[+208 src/filemanager/panel.h]</em> */</em>
+<a id='L209' name='L209'></a> 209 <em class='brace'>{</em>
+<a id='L210' name='L210'></a> 210     <strong class='reserved'>return</strong> <a href='../S/src--filemanager--panel.c.html#L4283' title='Defined at 4283 in src/filemanager/panel.c.'>panel_new_with_dir</a> (<a href='../Y/panel_name.html' title='Multiple used in 20 places.'>panel_name</a>, <a href='../Y/NULL.html' title='Multiple used in 5246 places.'>NULL</a>);
+<a id='L211' name='L211'></a> 211 <em class='brace'>}</em>
+<a id='L212' name='L212'></a> 212 
+<a id='L213' name='L213'></a> 213 <em class='comment'>/* --------------------------------------------------------------------------------------------- */</em>
+<a id='L214' name='L214'></a> 214 
+<a id='L215' name='L215'></a> 215 <em class='sharp'>#endif</em> <em class='comment'>/* MC__PANEL_H */</em>
+</pre>
+<hr />
+<a id='BOTTOM' name='BOTTOM'></a>
+<em class='comment'>/* <img class='icon' src='../icons/n_left.png' alt='[previous]' /><img class='icon' src='../icons/n_right.png' alt='[next]' /><img class='icon' src='../icons/n_first.png' alt='[first]' /><a href='#L208'><img class='icon' src='../icons/last.png' alt='[last]' /></a><a href='#TOP'><img class='icon' src='../icons/top.png' alt='[top]' /></a><img class='icon' src='../icons/n_bottom.png' alt='[bottom]' /><a href='../mains.html'><img class='icon' src='../icons/index.png' alt='[index]' /></a><a href='../help.html'><img class='icon' src='../icons/help.png' alt='[help]' /></a>&nbsp;<em class='position'>[+215 src/filemanager/panel.h]</em> */</em>
+</body>
+</html>

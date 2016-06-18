@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>input</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L101'>input</a>             101 lib/widget/input_complete.c static WInput *input;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1054'>input</a>            1054 lib/widget/input_complete.c                 end = str_get_prev_char (&amp;input-&gt;buffer[end]) - input-&gt;buffer;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1055'>input</a>            1055 lib/widget/input_complete.c                 input_handle_char (input, parm);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1065'>input</a>            1065 lib/widget/input_complete.c                 new_end = str_get_prev_char (&amp;input-&gt;buffer[end]) - input-&gt;buffer;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1072'>input</a>            1072 lib/widget/input_complete.c                     if (strncmp (input-&gt;buffer + start, le-&gt;text, new_end - start) == 0)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1076'>input</a>            1076 lib/widget/input_complete.c                         input_handle_char (input, parm);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1088'>input</a>            1088 lib/widget/input_complete.c                 if (input_key_is_in_map (input, parm) != 2)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1126'>input</a>            1126 lib/widget/input_complete.c                     if (strncmp (input-&gt;buffer + start, le-&gt;text, end - start) == 0</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1182'>input</a>            1182 lib/widget/input_complete.c                     insert_text (input, last_text, low);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1269'>input</a>            1269 lib/widget/input_complete.c             input = in;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L73'>input</a>              73 lib/widget/quick.c     in = input_new (y, x, input_colors, 8, qw-&gt;u.input.text, qw-&gt;u.input.histname,</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L74'>input</a>              74 lib/widget/quick.c                     qw-&gt;u.input.completion_flags);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L76'>input</a>              76 lib/widget/quick.c     in-&gt;is_password = qw-&gt;u.input.is_passwd;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L77'>input</a>              77 lib/widget/quick.c     in-&gt;strip_password = qw-&gt;u.input.strip_passwd;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L97'>input</a>              97 lib/widget/quick.c     switch (quick_widget-&gt;u.input.label_location)</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L100'>input</a>             100 lib/widget/quick.c         label.widget = WIDGET (label_new (*y, x, I18N (quick_widget-&gt;u.input.label_text)));</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L112'>input</a>             112 lib/widget/quick.c         label.widget = WIDGET (label_new (*y, x, I18N (quick_widget-&gt;u.input.label_text)));</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L129'>input</a>             129 lib/widget/quick.c                     (*y, x + in.widget-&gt;cols + 1, I18N (quick_widget-&gt;u.input.label_text)));</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L140'>input</a>             140 lib/widget/quick.c         label.widget = WIDGET (label_new (++(*y), x, I18N (quick_widget-&gt;u.input.label_text)));</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L153'>input</a>             153 lib/widget/quick.c     label.quick_widget-&gt;u.label.input = in.quick_widget;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L154'>input</a>             154 lib/widget/quick.c     in.quick_widget-&gt;u.input.label = label.quick_widget;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L237'>input</a>             237 lib/widget/quick.c             *quick_widget-&gt;u.input.result = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L239'>input</a>             239 lib/widget/quick.c             if (quick_widget-&gt;u.input.label_location != input_label_none)</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L242'>input</a>             242 lib/widget/quick.c                 input_labels = g_list_prepend (input_labels, quick_widget-&gt;u.input.label);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L436'>input</a>             436 lib/widget/quick.c                 quick_widget_t *input = item-&gt;quick_widget-&gt;u.label.input;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L438'>input</a>             438 lib/widget/quick.c                 if (input != NULL &amp;&amp; input-&gt;u.input.label_location == input_label_right)</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L476'>input</a>             476 lib/widget/quick.c                 switch (item-&gt;quick_widget-&gt;u.input.label_location)</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L597'>input</a>             597 lib/widget/quick.c                 if ((quick_widget-&gt;u.input.completion_flags &amp; INPUT_COMPLETE_CD) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L598'>input</a>             598 lib/widget/quick.c                     *item-&gt;quick_widget-&gt;u.input.result =</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L601'>input</a>             601 lib/widget/quick.c                     *item-&gt;quick_widget-&gt;u.input.result = g_strdup (INPUT (item-&gt;widget)-&gt;buffer);</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L48'>input</a>              48 lib/widget/quick.h         .input = {                                                              \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L69'>input</a>              69 lib/widget/quick.h         .input = {                                                              \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L92'>input</a>              92 lib/widget/quick.h             .input = NULL                                                       \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L132'>input</a>             132 lib/widget/quick.h         .input = {                                                              \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L161'>input</a>             161 lib/widget/quick.h         .input = {                                                              \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L176'>input</a>             176 lib/widget/quick.h         .input = {                                                              \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L191'>input</a>             191 lib/widget/quick.h         .input = {                                                              \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L225'>input</a>             225 lib/widget/quick.h         .input = {                                                              \</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L303'>input</a>             303 lib/widget/quick.h         } input;</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L308'>input</a>             308 lib/widget/quick.h             quick_widget_t *input;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2928'>input</a>            2928 src/diffviewer/ydiff.c     char *input;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2930'>input</a>            2930 src/diffviewer/ydiff.c     input =</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2933'>input</a>            2933 src/diffviewer/ydiff.c     if (input != NULL)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2935'>input</a>            2935 src/diffviewer/ydiff.c         const char *s = input;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2954'>input</a>            2954 src/diffviewer/ydiff.c         g_free (input);</span>
+<span class='curline'><a href='../S/tests--src--filemanager--examine_cd.c.html#L122'>input</a>             122 tests/src/filemanager/examine_cd.c #define check_examine_cd(input, etalon) \</span>
+<span class='curline'><a href='../S/tests--src--filemanager--examine_cd.c.html#L124'>input</a>             124 tests/src/filemanager/examine_cd.c     result = examine_cd (input); \</span>
+<span class='curline'><a href='../S/tests--src--filemanager--examine_cd.c.html#L126'>input</a>             126 tests/src/filemanager/examine_cd.c     "\ninput (%s)\nactial (%s) not equal to\netalon (%s)", input, result, etalon); \</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>sys_tmp</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L839'>sys_tmp</a>           839 lib/vfs/interface.c     const char *sys_tmp;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L849'>sys_tmp</a>           849 lib/vfs/interface.c     sys_tmp = getenv ("TMPDIR");</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L850'>sys_tmp</a>           850 lib/vfs/interface.c     if (sys_tmp == NULL || !IS_PATH_SEP (sys_tmp[0]))</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L851'>sys_tmp</a>           851 lib/vfs/interface.c         sys_tmp = TMPDIR_DEFAULT;</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L856'>sys_tmp</a>           856 lib/vfs/interface.c         g_snprintf (buffer, sizeof (buffer), "%s/mc-%s", sys_tmp, pwd-&gt;pw_name);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L858'>sys_tmp</a>           858 lib/vfs/interface.c         g_snprintf (buffer, sizeof (buffer), "%s/mc-%lu", sys_tmp, (unsigned long) getuid ());</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L895'>sys_tmp</a>           895 lib/vfs/interface.c         fallback_prefix = g_strdup_printf ("%s/mctest", sys_tmp);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L912'>sys_tmp</a>           912 lib/vfs/interface.c             fprintf (stderr, _("Temporary files will be created in %s\n"), sys_tmp);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L913'>sys_tmp</a>           913 lib/vfs/interface.c             g_snprintf (buffer, sizeof (buffer), "%s", sys_tmp);</span>
+</pre>
+</body>
+</html>

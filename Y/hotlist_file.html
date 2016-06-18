@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>hotlist_file</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L217'>hotlist_file</a>      217 src/filemanager/hotlist.c static FILE *hotlist_file;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1212'>hotlist_file</a>     1212 src/filemanager/hotlist.c     while ((c = getc (hotlist_file)) != EOF &amp;&amp; c != '\n' &amp;&amp; g_ascii_isspace (c))</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1240'>hotlist_file</a>     1240 src/filemanager/hotlist.c         while ((c = getc (hotlist_file)) != EOF &amp;&amp; c != '\n')</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1245'>hotlist_file</a>     1245 src/filemanager/hotlist.c         while ((c = getc (hotlist_file)) != EOF &amp;&amp; c != '"')</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1249'>hotlist_file</a>     1249 src/filemanager/hotlist.c                 c = getc (hotlist_file);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1261'>hotlist_file</a>     1261 src/filemanager/hotlist.c         c = getc (hotlist_file);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1277'>hotlist_file</a>     1277 src/filemanager/hotlist.c         while ((c = fgetc (hotlist_file)) != EOF &amp;&amp; (g_ascii_isalnum (c) || !isascii (c)));</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1279'>hotlist_file</a>     1279 src/filemanager/hotlist.c             ungetc (c, hotlist_file);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1454'>hotlist_file</a>     1454 src/filemanager/hotlist.c     hotlist_file = fopen (hotlist_file_name, "r");</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1455'>hotlist_file</a>     1455 src/filemanager/hotlist.c     if (hotlist_file == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1478'>hotlist_file</a>     1478 src/filemanager/hotlist.c         fclose (hotlist_file);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1510'>hotlist_file</a>     1510 src/filemanager/hotlist.c         putc (' ', hotlist_file); \</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1518'>hotlist_file</a>     1518 src/filemanager/hotlist.c             fputs ("GROUP \"", hotlist_file);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1522'>hotlist_file</a>     1522 src/filemanager/hotlist.c                     putc ('\\', hotlist_file);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1523'>hotlist_file</a>     1523 src/filemanager/hotlist.c                 putc (*s, hotlist_file);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1525'>hotlist_file</a>     1525 src/filemanager/hotlist.c             fputs ("\"\n", hotlist_file);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1530'>hotlist_file</a>     1530 src/filemanager/hotlist.c             fputs ("ENDGROUP\n", hotlist_file);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1534'>hotlist_file</a>     1534 src/filemanager/hotlist.c             fputs ("ENTRY \"", hotlist_file);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1538'>hotlist_file</a>     1538 src/filemanager/hotlist.c                     putc ('\\', hotlist_file);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1539'>hotlist_file</a>     1539 src/filemanager/hotlist.c                 putc (*s, hotlist_file);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1541'>hotlist_file</a>     1541 src/filemanager/hotlist.c             fputs ("\" URL \"", hotlist_file);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1545'>hotlist_file</a>     1545 src/filemanager/hotlist.c                     putc ('\\', hotlist_file);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1546'>hotlist_file</a>     1546 src/filemanager/hotlist.c                 putc (*s, hotlist_file);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1548'>hotlist_file</a>     1548 src/filemanager/hotlist.c             fputs ("\"\n", hotlist_file);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1551'>hotlist_file</a>     1551 src/filemanager/hotlist.c             fprintf (hotlist_file, "#%s\n", current-&gt;label);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1652'>hotlist_file</a>     1652 src/filemanager/hotlist.c         hotlist_file = fopen (hotlist_file_name, "w");</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1653'>hotlist_file</a>     1653 src/filemanager/hotlist.c         if (hotlist_file == NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1658'>hotlist_file</a>     1658 src/filemanager/hotlist.c             fclose (hotlist_file);</span>
+</pre>
+</body>
+</html>

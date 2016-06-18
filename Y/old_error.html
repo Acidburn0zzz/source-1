@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>old_error</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L121'>old_error</a>         121 lib/utilunix.c static int old_error;           /* File descriptor of old standard error */</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L722'>old_error</a>         722 lib/utilunix.c     old_error = dup (STDERR_FILENO);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L723'>old_error</a>         723 lib/utilunix.c     if (old_error &lt; 0 || close (STDERR_FILENO) != 0 || dup (error_pipe[1]) != STDERR_FILENO)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L781'>old_error</a>         781 lib/utilunix.c     if (old_error &gt;= 0)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L783'>old_error</a>         783 lib/utilunix.c         if (dup2 (old_error, STDERR_FILENO) == -1)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L791'>old_error</a>         791 lib/utilunix.c         close (old_error);</span>
+</pre>
+</body>
+</html>

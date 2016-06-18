@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>menu</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L80'>menu</a>               80 lib/widget/menu.c menu_arrange (menu_t * menu, dlg_shortcut_str get_shortcut)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L82'>menu</a>               82 lib/widget/menu.c     if (menu != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L87'>menu</a>               87 lib/widget/menu.c         menu-&gt;max_entry_len = 1;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L88'>menu</a>               88 lib/widget/menu.c         menu-&gt;max_hotkey_len = 1;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L90'>menu</a>               90 lib/widget/menu.c         for (i = menu-&gt;entries; i != NULL; i = g_list_next (i))</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L99'>menu</a>               99 lib/widget/menu.c                 menu-&gt;max_hotkey_len = MAX (menu-&gt;max_hotkey_len, len);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L112'>menu</a>              112 lib/widget/menu.c         menu-&gt;max_entry_len = menu-&gt;max_hotkey_len + max_shortcut_len;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L122'>menu</a>              122 lib/widget/menu.c     const menu_t *menu = MENU (g_list_nth_data (menubar-&gt;menu, menubar-&gt;selected));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L123'>menu</a>              123 lib/widget/menu.c     const menu_entry_t *entry = MENUENTRY (g_list_nth_data (menu-&gt;entries, idx));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L125'>menu</a>              125 lib/widget/menu.c     int x = menu-&gt;start_x;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L127'>menu</a>              127 lib/widget/menu.c     if (x + menu-&gt;max_entry_len + 4 &gt; (gsize) w-&gt;cols)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L128'>menu</a>              128 lib/widget/menu.c         x = w-&gt;cols - menu-&gt;max_entry_len - 4;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L137'>menu</a>              137 lib/widget/menu.c         tty_draw_hline (w-&gt;y + y, w-&gt;x + x, ACS_HLINE, menu-&gt;max_entry_len + 3);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L138'>menu</a>              138 lib/widget/menu.c         widget_move (w, y, x + menu-&gt;max_entry_len + 3);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L150'>menu</a>              150 lib/widget/menu.c         tty_draw_hline (yt, xt, ' ', menu-&gt;max_entry_len + 2);  /* clear line */</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L165'>menu</a>              165 lib/widget/menu.c             widget_move (w, y, x + menu-&gt;max_hotkey_len + 3);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L180'>menu</a>              180 lib/widget/menu.c     const menu_t *menu = MENU (g_list_nth_data (menubar-&gt;menu, menubar-&gt;selected));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L181'>menu</a>              181 lib/widget/menu.c     const unsigned int count = g_list_length (menu-&gt;entries);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L182'>menu</a>              182 lib/widget/menu.c     int column = menu-&gt;start_x - 1;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L185'>menu</a>              185 lib/widget/menu.c     if (column + menu-&gt;max_entry_len + 5 &gt; (gsize) w-&gt;cols)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L186'>menu</a>              186 lib/widget/menu.c         column = w-&gt;cols - menu-&gt;max_entry_len - 5;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L189'>menu</a>              189 lib/widget/menu.c     tty_draw_box (w-&gt;y + 1, w-&gt;x + column, count + 2, menu-&gt;max_entry_len + 5, FALSE);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L193'>menu</a>              193 lib/widget/menu.c                            i == menu-&gt;selected ? MENU_SELECTED_COLOR : MENU_ENTRY_COLOR);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L222'>menu</a>              222 lib/widget/menu.c     for (i = menubar-&gt;menu; i != NULL; i = g_list_next (i))</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L224'>menu</a>              224 lib/widget/menu.c         menu_t *menu = MENU (i-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L225'>menu</a>              225 lib/widget/menu.c         gboolean is_selected = (menubar-&gt;selected == (gsize) g_list_position (menubar-&gt;menu, i));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L228'>menu</a>              228 lib/widget/menu.c         widget_move (w, 0, menu-&gt;start_x);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L231'>menu</a>              231 lib/widget/menu.c         tty_print_string (menu-&gt;text.start);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L233'>menu</a>              233 lib/widget/menu.c         if (menu-&gt;text.hotkey != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L236'>menu</a>              236 lib/widget/menu.c             tty_print_string (menu-&gt;text.hotkey);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L240'>menu</a>              240 lib/widget/menu.c         if (menu-&gt;text.end != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L241'>menu</a>              241 lib/widget/menu.c             tty_print_string (menu-&gt;text.end);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L249'>menu</a>              249 lib/widget/menu.c         widget_move (w, 0, MENU (g_list_nth_data (menubar-&gt;menu, menubar-&gt;selected))-&gt;start_x);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L284'>menu</a>              284 lib/widget/menu.c         menubar-&gt;selected = g_list_length (menubar-&gt;menu) - 1;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L296'>menu</a>              296 lib/widget/menu.c     menubar-&gt;selected = (menubar-&gt;selected + 1) % g_list_length (menubar-&gt;menu);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L335'>menu</a>              335 lib/widget/menu.c     const menu_t *menu = MENU (g_list_nth_data (menubar-&gt;menu, menubar-&gt;selected));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L336'>menu</a>              336 lib/widget/menu.c     const menu_entry_t *entry = MENUENTRY (g_list_nth_data (menu-&gt;entries, menu-&gt;selected));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L354'>menu</a>              354 lib/widget/menu.c     menu_t *menu = MENU (g_list_nth_data (menubar-&gt;menu, menubar-&gt;selected));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L355'>menu</a>              355 lib/widget/menu.c     const unsigned int len = g_list_length (menu-&gt;entries);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L358'>menu</a>              358 lib/widget/menu.c     menubar_paint_idx (menubar, menu-&gt;selected, MENU_ENTRY_COLOR);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L362'>menu</a>              362 lib/widget/menu.c         menu-&gt;selected = (menu-&gt;selected + 1) % len;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L363'>menu</a>              363 lib/widget/menu.c         entry = MENUENTRY (g_list_nth_data (menu-&gt;entries, menu-&gt;selected));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L367'>menu</a>              367 lib/widget/menu.c     menubar_paint_idx (menubar, menu-&gt;selected, MENU_SELECTED_COLOR);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L375'>menu</a>              375 lib/widget/menu.c     menu_t *menu = MENU (g_list_nth_data (menubar-&gt;menu, menubar-&gt;selected));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L376'>menu</a>              376 lib/widget/menu.c     const unsigned int len = g_list_length (menu-&gt;entries);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L379'>menu</a>              379 lib/widget/menu.c     menubar_paint_idx (menubar, menu-&gt;selected, MENU_ENTRY_COLOR);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L383'>menu</a>              383 lib/widget/menu.c         if (menu-&gt;selected == 0)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L384'>menu</a>              384 lib/widget/menu.c             menu-&gt;selected = len - 1;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L386'>menu</a>              386 lib/widget/menu.c             menu-&gt;selected--;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L387'>menu</a>              387 lib/widget/menu.c         entry = MENUENTRY (g_list_nth_data (menu-&gt;entries, menu-&gt;selected));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L391'>menu</a>              391 lib/widget/menu.c     menubar_paint_idx (menubar, menu-&gt;selected, MENU_SELECTED_COLOR);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L399'>menu</a>              399 lib/widget/menu.c     menu_t *menu = MENU (g_list_nth_data (menubar-&gt;menu, menubar-&gt;selected));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L401'>menu</a>              401 lib/widget/menu.c     if (menu-&gt;selected == 0)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L404'>menu</a>              404 lib/widget/menu.c     menubar_paint_idx (menubar, menu-&gt;selected, MENU_ENTRY_COLOR);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L406'>menu</a>              406 lib/widget/menu.c     menu-&gt;selected = 0;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L412'>menu</a>              412 lib/widget/menu.c         entry = MENUENTRY (g_list_nth_data (menu-&gt;entries, menu-&gt;selected));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L415'>menu</a>              415 lib/widget/menu.c             menu-&gt;selected++;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L420'>menu</a>              420 lib/widget/menu.c     menubar_paint_idx (menubar, menu-&gt;selected, MENU_SELECTED_COLOR);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L428'>menu</a>              428 lib/widget/menu.c     menu_t *menu = MENU (g_list_nth_data (menubar-&gt;menu, menubar-&gt;selected));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L429'>menu</a>              429 lib/widget/menu.c     const unsigned int len = g_list_length (menu-&gt;entries);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L432'>menu</a>              432 lib/widget/menu.c     if (menu-&gt;selected == len - 1)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L435'>menu</a>              435 lib/widget/menu.c     menubar_paint_idx (menubar, menu-&gt;selected, MENU_ENTRY_COLOR);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L437'>menu</a>              437 lib/widget/menu.c     menu-&gt;selected = len;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L441'>menu</a>              441 lib/widget/menu.c         menu-&gt;selected--;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L442'>menu</a>              442 lib/widget/menu.c         entry = MENUENTRY (g_list_nth_data (menu-&gt;entries, menu-&gt;selected));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L446'>menu</a>              446 lib/widget/menu.c     menubar_paint_idx (menubar, menu-&gt;selected, MENU_SELECTED_COLOR);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L473'>menu</a>              473 lib/widget/menu.c                     MENU (g_list_nth_data (menubar-&gt;menu, menubar-&gt;selected))-&gt;help_node;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L501'>menu</a>              501 lib/widget/menu.c         for (i = menubar-&gt;menu; i != NULL; i = g_list_next (i))</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L503'>menu</a>              503 lib/widget/menu.c             menu_t *menu = MENU (i-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L505'>menu</a>              505 lib/widget/menu.c             if ((menu-&gt;text.hotkey != NULL) &amp;&amp; (key == g_ascii_tolower (menu-&gt;text.hotkey[0])))</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L507'>menu</a>              507 lib/widget/menu.c                 menubar_drop (menubar, g_list_position (menubar-&gt;menu, i));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L520'>menu</a>              520 lib/widget/menu.c         menu_t *menu = MENU (g_list_nth_data (menubar-&gt;menu, menubar-&gt;selected));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L524'>menu</a>              524 lib/widget/menu.c         for (i = menu-&gt;entries; i != NULL; i = g_list_next (i))</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L531'>menu</a>              531 lib/widget/menu.c                 menu-&gt;selected = g_list_position (menu-&gt;entries, i);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L641'>menu</a>              641 lib/widget/menu.c     GList *menu;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L643'>menu</a>              643 lib/widget/menu.c     for (i = 0, menu = menubar-&gt;menu;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L644'>menu</a>              644 lib/widget/menu.c          menu != NULL &amp;&amp; x &gt; MENU (menu-&gt;data)-&gt;start_x; i++, menu = g_list_next (menu))</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L660'>menu</a>              660 lib/widget/menu.c     menu_t *menu;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L666'>menu</a>              666 lib/widget/menu.c     menu = MENU (g_list_nth_data (menubar-&gt;menu, menubar-&gt;selected));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L667'>menu</a>              667 lib/widget/menu.c     left_x = menu-&gt;start_x;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L668'>menu</a>              668 lib/widget/menu.c     right_x = left_x + menu-&gt;max_entry_len + 3;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L671'>menu</a>              671 lib/widget/menu.c         left_x = w-&gt;cols - (menu-&gt;max_entry_len + 3);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L675'>menu</a>              675 lib/widget/menu.c     bottom_y = g_list_length (menu-&gt;entries) + 2;       /* skip bar and top frame */</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L685'>menu</a>              685 lib/widget/menu.c     menu_t *menu;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L689'>menu</a>              689 lib/widget/menu.c     menu = MENU (g_list_nth_data (menubar-&gt;menu, menubar-&gt;selected));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L690'>menu</a>              690 lib/widget/menu.c     entry = MENUENTRY (g_list_nth_data (menu-&gt;entries, y));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L694'>menu</a>              694 lib/widget/menu.c         menubar_paint_idx (menubar, menu-&gt;selected, MENU_ENTRY_COLOR);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L695'>menu</a>              695 lib/widget/menu.c         menu-&gt;selected = y;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L696'>menu</a>              696 lib/widget/menu.c         menubar_paint_idx (menubar, menu-&gt;selected, MENU_SELECTED_COLOR);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L850'>menu</a>              850 lib/widget/menu.c     menu_t *menu;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L852'>menu</a>              852 lib/widget/menu.c     menu = g_new (menu_t, 1);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L853'>menu</a>              853 lib/widget/menu.c     menu-&gt;start_x = 0;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L854'>menu</a>              854 lib/widget/menu.c     menu-&gt;text = parse_hotkey (name);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L855'>menu</a>              855 lib/widget/menu.c     menu-&gt;entries = entries;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L856'>menu</a>              856 lib/widget/menu.c     menu-&gt;max_entry_len = 1;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L857'>menu</a>              857 lib/widget/menu.c     menu-&gt;max_hotkey_len = 0;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L858'>menu</a>              858 lib/widget/menu.c     menu-&gt;selected = 0;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L859'>menu</a>              859 lib/widget/menu.c     menu-&gt;help_node = g_strdup (help_node);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L861'>menu</a>              861 lib/widget/menu.c     return menu;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L867'>menu</a>              867 lib/widget/menu.c menu_set_name (menu_t * menu, const char *name)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L869'>menu</a>              869 lib/widget/menu.c     release_hotkey (menu-&gt;text);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L870'>menu</a>              870 lib/widget/menu.c     menu-&gt;text = parse_hotkey (name);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L876'>menu</a>              876 lib/widget/menu.c destroy_menu (menu_t * menu)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L878'>menu</a>              878 lib/widget/menu.c     release_hotkey (menu-&gt;text);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L879'>menu</a>              879 lib/widget/menu.c     g_list_free_full (menu-&gt;entries, (GDestroyNotify) menu_entry_free);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L880'>menu</a>              880 lib/widget/menu.c     g_free (menu-&gt;help_node);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L881'>menu</a>              881 lib/widget/menu.c     g_free (menu);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L887'>menu</a>              887 lib/widget/menu.c menubar_new (int y, int x, int cols, GList * menu, gboolean visible)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L898'>menu</a>              898 lib/widget/menu.c     menubar_set_menu (menubar, menu);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L906'>menu</a>              906 lib/widget/menu.c menubar_set_menu (WMenuBar * menubar, GList * menu)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L909'>menu</a>              909 lib/widget/menu.c     if (menubar-&gt;menu != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L910'>menu</a>              910 lib/widget/menu.c         g_list_free_full (menubar-&gt;menu, (GDestroyNotify) destroy_menu);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L915'>menu</a>              915 lib/widget/menu.c     menubar-&gt;menu = menu;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L923'>menu</a>              923 lib/widget/menu.c menubar_add_menu (WMenuBar * menubar, menu_t * menu)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L925'>menu</a>              925 lib/widget/menu.c     if (menu != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L927'>menu</a>              927 lib/widget/menu.c         menu_arrange (menu, WIDGET (menubar)-&gt;owner-&gt;get_shortcut);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L928'>menu</a>              928 lib/widget/menu.c         menubar-&gt;menu = g_list_append (menubar-&gt;menu, menu);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L947'>menu</a>              947 lib/widget/menu.c     if (menubar-&gt;menu == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L953'>menu</a>              953 lib/widget/menu.c     for (i = menubar-&gt;menu; i != NULL; i = g_list_next (i))</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L955'>menu</a>              955 lib/widget/menu.c         menu_t *menu = MENU (i-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L958'>menu</a>              958 lib/widget/menu.c         menu-&gt;start_x = hotkey_width (menu-&gt;text) + 2;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L959'>menu</a>              959 lib/widget/menu.c         gap -= menu-&gt;start_x;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L962'>menu</a>              962 lib/widget/menu.c     if (g_list_next (menubar-&gt;menu) == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L965'>menu</a>              965 lib/widget/menu.c         gap /= (g_list_length (menubar-&gt;menu) - 1);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L976'>menu</a>              976 lib/widget/menu.c     for (i = menubar-&gt;menu; i != NULL; i = g_list_next (i))</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L978'>menu</a>              978 lib/widget/menu.c         menu_t *menu = MENU (i-&gt;data);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L979'>menu</a>              979 lib/widget/menu.c         int len = menu-&gt;start_x;</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L981'>menu</a>              981 lib/widget/menu.c         menu-&gt;start_x = start_x;</span>
+<span class='curline'><a href='../S/lib--widget--menu.h.html#L36'>menu</a>               36 lib/widget/menu.h     GList *menu;                /* The actual menus */</span>
+<span class='curline'><a href='../S/lib--widget--menu.h.html#L49'>menu</a>               49 lib/widget/menu.h void menu_set_name (menu_t * menu, const char *name);</span>
+<span class='curline'><a href='../S/lib--widget--menu.h.html#L50'>menu</a>               50 lib/widget/menu.h void destroy_menu (menu_t * menu);</span>
+<span class='curline'><a href='../S/lib--widget--menu.h.html#L52'>menu</a>               52 lib/widget/menu.h WMenuBar *menubar_new (int y, int x, int cols, GList * menu, gboolean visible);</span>
+<span class='curline'><a href='../S/lib--widget--menu.h.html#L53'>menu</a>               53 lib/widget/menu.h void menubar_set_menu (WMenuBar * menubar, GList * menu);</span>
+<span class='curline'><a href='../S/lib--widget--menu.h.html#L54'>menu</a>               54 lib/widget/menu.h void menubar_add_menu (WMenuBar * menubar, menu_t * menu);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L384'>menu</a>              384 src/filemanager/midnight.c         selected = g_list_length (the_menubar-&gt;menu) - 1;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L75'>menu</a>               75 src/filemanager/usermenu.c static char *menu = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L856'>menu</a>              856 src/filemanager/usermenu.c         if (menu != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L858'>menu</a>              858 src/filemanager/usermenu.c             result = quote_func (menu, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L935'>menu</a>              935 src/filemanager/usermenu.c         menu = g_strdup (menu_file);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L937'>menu</a>              937 src/filemanager/usermenu.c         menu = g_strdup (edit_widget != NULL ? EDIT_LOCAL_MENU : MC_LOCAL_MENU);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L938'>menu</a>              938 src/filemanager/usermenu.c     if (!exist_file (menu) || !menu_file_own (menu))</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L942'>menu</a>              942 src/filemanager/usermenu.c             message (D_ERROR, MSG_ERROR, _("Cannot open file %s\n%s"), menu,</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L944'>menu</a>              944 src/filemanager/usermenu.c             MC_PTR_FREE (menu);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L948'>menu</a>              948 src/filemanager/usermenu.c         g_free (menu);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L950'>menu</a>              950 src/filemanager/usermenu.c             menu = mc_config_get_full_path (EDIT_HOME_MENU);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L952'>menu</a>              952 src/filemanager/usermenu.c             menu = mc_config_get_full_path (MC_USERMENU_FILE);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L955'>menu</a>              955 src/filemanager/usermenu.c         if (!exist_file (menu))</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L957'>menu</a>              957 src/filemanager/usermenu.c             g_free (menu);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L958'>menu</a>              958 src/filemanager/usermenu.c             menu =</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L962'>menu</a>              962 src/filemanager/usermenu.c             if (!exist_file (menu))</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L964'>menu</a>              964 src/filemanager/usermenu.c                 g_free (menu);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L965'>menu</a>              965 src/filemanager/usermenu.c                 menu =</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L969'>menu</a>              969 src/filemanager/usermenu.c                 if (!exist_file (menu))</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L971'>menu</a>              971 src/filemanager/usermenu.c                     g_free (menu);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L972'>menu</a>              972 src/filemanager/usermenu.c                     menu =</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L981'>menu</a>              981 src/filemanager/usermenu.c     if (!g_file_get_contents (menu, &amp;data, NULL, NULL))</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L983'>menu</a>              983 src/filemanager/usermenu.c         message (D_ERROR, MSG_ERROR, _("Cannot open file %s\n%s"), menu, unix_error_string (errno));</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L984'>menu</a>              984 src/filemanager/usermenu.c         MC_PTR_FREE (menu);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L1085'>menu</a>             1085 src/filemanager/usermenu.c         message (D_ERROR, MSG_ERROR, _("No suitable entries found in %s"), menu);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L1123'>menu</a>             1123 src/filemanager/usermenu.c     MC_PTR_FREE (menu);</span>
+</pre>
+</body>
+</html>

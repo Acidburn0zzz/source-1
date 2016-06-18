@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>new_mode</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L81'>new_mode</a>           81 lib/tty/tty-slang.c static struct termios new_mode;</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L303'>new_mode</a>          303 lib/tty/tty-slang.c     if (tcgetattr (SLang_TT_Read_FD, &amp;new_mode) == 0)</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L306'>new_mode</a>          306 lib/tty/tty-slang.c         new_mode.c_cc[VDSUSP] = NULL_VALUE;     /* to ignore ^Y */</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L309'>new_mode</a>          309 lib/tty/tty-slang.c         new_mode.c_cc[VLNEXT] = NULL_VALUE;     /* to ignore ^V */</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L311'>new_mode</a>          311 lib/tty/tty-slang.c         tcsetattr (SLang_TT_Read_FD, TCSADRAIN, &amp;new_mode);</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L405'>new_mode</a>          405 lib/tty/tty-slang.c     tcsetattr (SLang_TT_Read_FD, TCSANOW, &amp;new_mode);</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L424'>new_mode</a>          424 lib/tty/tty-slang.c     tcsetattr (SLang_TT_Read_FD, TCSANOW, &amp;new_mode);</span>
+</pre>
+</body>
+</html>

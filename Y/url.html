@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>url</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L202'>url</a>               202 lib/widget/input.c input_history_strip_password (char *url)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L206'>url</a>               206 lib/widget/input.c     at = strrchr (url, '@');</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L208'>url</a>               208 lib/widget/input.c         return g_strdup (url);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L212'>url</a>               212 lib/widget/input.c     delim = strstr (url, VFS_PATH_URL_DELIMITER);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L216'>url</a>               216 lib/widget/input.c         colon = strchr (url, ':');</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L224'>url</a>               224 lib/widget/input.c         return g_strdup (url);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L227'>url</a>               227 lib/widget/input.c     return g_strconcat (url, at, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1015'>url</a>              1015 src/filemanager/hotlist.c     char *title, *url, *to_free;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1019'>url</a>              1019 src/filemanager/hotlist.c     to_free = title = url = vfs_path_to_str_flags (current_panel-&gt;cwd_vpath, 0, VPF_STRIP_PASSWORD);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1022'>url</a>              1022 src/filemanager/hotlist.c                                _("Directory path:"), "[Hotlist]", &amp;title, &amp;url);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1027'>url</a>              1027 src/filemanager/hotlist.c     if (title == NULL || *title == '\0' || url == NULL || *url == '\0')</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1030'>url</a>              1030 src/filemanager/hotlist.c         g_free (url);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1035'>url</a>              1035 src/filemanager/hotlist.c         add2hotlist (title, url, HL_TYPE_ENTRY, LISTBOX_APPEND_AFTER);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1037'>url</a>              1037 src/filemanager/hotlist.c         add2hotlist (title, url, HL_TYPE_ENTRY, LISTBOX_APPEND_BEFORE);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1303'>url</a>              1303 src/filemanager/hotlist.c     char *label, *url;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1325'>url</a>              1325 src/filemanager/hotlist.c                 url = tilde_expand (tkn_buf-&gt;str);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1326'>url</a>              1326 src/filemanager/hotlist.c                 add2hotlist (label, url, HL_TYPE_ENTRY, LISTBOX_APPEND_AT_END);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1357'>url</a>              1357 src/filemanager/hotlist.c     char *label, *url;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1379'>url</a>              1379 src/filemanager/hotlist.c                 url = tilde_expand (tkn_buf-&gt;str);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1380'>url</a>              1380 src/filemanager/hotlist.c                 add2hotlist (label, url, HL_TYPE_ENTRY, LISTBOX_APPEND_AT_END);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1335'>url</a>              1335 src/vfs/smbfs/smbfs.c     vfs_path_element_t *url;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1350'>url</a>              1350 src/vfs/smbfs/smbfs.c     url = vfs_url_split (path, SMB_PORT, URL_FLAGS_NONE);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1352'>url</a>              1352 src/vfs/smbfs/smbfs.c     if (url != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1354'>url</a>              1354 src/vfs/smbfs/smbfs.c         *sc = smbfs_open_link (url-&gt;host, url-&gt;path, url-&gt;user, &amp;url-&gt;port, url-&gt;password);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1355'>url</a>              1355 src/vfs/smbfs/smbfs.c         wipe_password (url-&gt;password);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1358'>url</a>              1358 src/vfs/smbfs/smbfs.c             remote_path = g_strdup (url-&gt;path);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1360'>url</a>              1360 src/vfs/smbfs/smbfs.c         vfs_path_element_free (url);</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>stats</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L593'>stats</a>             593 src/filemanager/mountlist.c     struct stat stats;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L596'>stats</a>             596 src/filemanager/mountlist.c     if (stat (file, &amp;stats) != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L598'>stats</a>             598 src/filemanager/mountlist.c     if (dustat (stats.st_dev, 0, &amp;fsd, sizeof (fsd)))</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L997'>stats</a>             997 src/filemanager/mountlist.c         struct statfs *stats;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1002'>stats</a>            1002 src/filemanager/mountlist.c         if (SIZE_MAX / sizeof (*stats) &lt;= numsys)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1008'>stats</a>            1008 src/filemanager/mountlist.c         bufsize = (1 + numsys) * sizeof (*stats);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1009'>stats</a>            1009 src/filemanager/mountlist.c         stats = g_malloc (bufsize);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1010'>stats</a>            1010 src/filemanager/mountlist.c         numsys = getfsstat (stats, bufsize, MNT_NOWAIT);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1014'>stats</a>            1014 src/filemanager/mountlist.c             g_free (stats);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1021'>stats</a>            1021 src/filemanager/mountlist.c             me-&gt;me_devname = g_strdup (stats[counter].f_mntfromname);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1022'>stats</a>            1022 src/filemanager/mountlist.c             me-&gt;me_mountdir = g_strdup (stats[counter].f_mntonname);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1024'>stats</a>            1024 src/filemanager/mountlist.c             me-&gt;me_type = g_strdup (FS_TYPE (stats[counter]));</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1033'>stats</a>            1033 src/filemanager/mountlist.c         g_free (stats);</span>
+</pre>
+</body>
+</html>

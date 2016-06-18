@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>qname</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L53'>qname</a>              53 src/vfs/smbfs/helpers/libsmb/namequery.c         char qname[17];</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L58'>qname</a>              58 src/vfs/smbfs/helpers/libsmb/namequery.c         StrnCpy (qname, p, 15);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L82'>qname</a>              82 src/vfs/smbfs/helpers/libsmb/namequery.c             StrnCpy (master, qname, 15);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L88'>qname</a>              88 src/vfs/smbfs/helpers/libsmb/namequery.c             StrnCpy (rname, qname, 15);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L92'>qname</a>              92 src/vfs/smbfs/helpers/libsmb/namequery.c         for (i = strlen (qname); --i &gt;= 0;)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L94'>qname</a>              94 src/vfs/smbfs/helpers/libsmb/namequery.c             if (!isprint ((int) qname[i]))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L95'>qname</a>              95 src/vfs/smbfs/helpers/libsmb/namequery.c                 qname[i] = '.';</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--namequery.c.html#L97'>qname</a>              97 src/vfs/smbfs/helpers/libsmb/namequery.c         DEBUG (1, ("\t%-15s &lt;%02x&gt; - %s\n", qname, type, flags));</span>
+</pre>
+</body>
+</html>

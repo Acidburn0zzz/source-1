@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>event</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1951'>event</a>            1951 lib/tty/key.c  tty_get_event (struct Gpm_Event *event, gboolean redo_event, gboolean block)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1976'>event</a>            1976 lib/tty/key.c      if (event-&gt;x &gt; 0)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1978'>event</a>            1978 lib/tty/key.c          show_mouse_pointer (event-&gt;x, event-&gt;y);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1980'>event</a>            1980 lib/tty/key.c              event-&gt;x = -1;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2091'>event</a>            2091 lib/tty/key.c                          *event = ev;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2143'>event</a>            2143 lib/tty/key.c          xmouse_get_event (event, c == MCKEY_EXTENDED_MOUSE);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2144'>event</a>            2144 lib/tty/key.c          c = (event-&gt;type != 0) ? EV_MOUSE : EV_NONE;</span>
+<span class='curline'><a href='../S/lib--tty--key.h.html#L81'>event</a>              81 lib/tty/key.h  int tty_get_event (struct Gpm_Event *event, gboolean redo_event, gboolean block);</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L177'>event</a>             177 lib/widget/button.c button_mouse_callback (Widget * w, mouse_msg_t msg, mouse_event_t * event)</span>
+<span class='curline'><a href='../S/lib--widget--button.c.html#L179'>event</a>             179 lib/widget/button.c     (void) event;</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L219'>event</a>             219 lib/widget/buttonbar.c buttonbar_mouse_callback (Widget * w, mouse_msg_t msg, mouse_event_t * event)</span>
+<span class='curline'><a href='../S/lib--widget--buttonbar.c.html#L228'>event</a>             228 lib/widget/buttonbar.c             button = buttonbar_get_button_by_x_coord (bb, event-&gt;x);</span>
+<span class='curline'><a href='../S/lib--widget--check.c.html#L107'>event</a>             107 lib/widget/check.c check_mouse_callback (Widget * w, mouse_msg_t msg, mouse_event_t * event)</span>
+<span class='curline'><a href='../S/lib--widget--check.c.html#L109'>event</a>             109 lib/widget/check.c     (void) event;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L372'>event</a>             372 lib/widget/dialog.c dlg_mouse_translator (Gpm_Event * event, Widget * w)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L376'>event</a>             376 lib/widget/dialog.c     me = mouse_translate_event (w, event);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L384'>event</a>             384 lib/widget/dialog.c dlg_mouse_event (WDialog * h, Gpm_Event * event)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L392'>event</a>             392 lib/widget/dialog.c         &amp;&amp; ((event-&gt;buttons &amp; GPM_B_LEFT) != 0) &amp;&amp; ((event-&gt;type &amp; GPM_DOWN) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L393'>event</a>             393 lib/widget/dialog.c         &amp;&amp; !mouse_global_in_widget (event, wh))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L404'>event</a>             404 lib/widget/dialog.c         mou = dlg_mouse_translator (event, wh);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L420'>event</a>             420 lib/widget/dialog.c             ret = dlg_mouse_translator (event, w);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L558'>event</a>             558 lib/widget/dialog.c     Gpm_Event event;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L560'>event</a>             560 lib/widget/dialog.c     event.x = -1;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L593'>event</a>             593 lib/widget/dialog.c         d_key = tty_get_event (&amp;event, h-&gt;mouse_status == MOU_REPEAT, TRUE);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L595'>event</a>             595 lib/widget/dialog.c         dlg_process_event (h, d_key, &amp;event);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1289'>event</a>            1289 lib/widget/dialog.c dlg_process_event (WDialog * h, int key, Gpm_Event * event)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1298'>event</a>            1298 lib/widget/dialog.c         h-&gt;mouse_status = dlg_mouse_event (h, event);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L132'>event</a>             132 lib/widget/dialog.h void dlg_process_event (WDialog * h, int key, Gpm_Event * event);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L932'>event</a>             932 lib/widget/input.c input_mouse_callback (Widget * w, mouse_msg_t msg, mouse_event_t * event)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L944'>event</a>             944 lib/widget/input.c         if (event-&gt;x &gt;= w-&gt;cols - HISTORY_BUTTON_WIDTH &amp;&amp; should_show_history_button (in))</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L949'>event</a>             949 lib/widget/input.c             input_set_point (in, input_screen_to_point (in, event-&gt;x));</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L960'>event</a>             960 lib/widget/input.c         input_set_point (in, input_screen_to_point (in, event-&gt;x));</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L499'>event</a>             499 lib/widget/listbox.c listbox_mouse_callback (Widget * w, mouse_msg_t msg, mouse_event_t * event)</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L510'>event</a>             510 lib/widget/listbox.c         listbox_select_entry (l, listbox_y_pos (l, event-&gt;y));</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L522'>event</a>             522 lib/widget/listbox.c         event-&gt;result.repeat = TRUE;    /* It'd be functional even without this. */</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L523'>event</a>             523 lib/widget/listbox.c         listbox_select_entry (l, listbox_y_pos (l, event-&gt;y));</span>
+<span class='curline'><a href='../S/lib--widget--listbox.c.html#L528'>event</a>             528 lib/widget/listbox.c         if (event-&gt;count == GPM_DOUBLE) /* Double click */</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L703'>event</a>             703 lib/widget/menu.c menubar_mouse_callback (Widget * w, mouse_msg_t msg, mouse_event_t * event)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L710'>event</a>             710 lib/widget/menu.c     mouse_on_drop = menubar_mouse_on_menu (menubar, event-&gt;y, event-&gt;x);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L717'>event</a>             717 lib/widget/menu.c         if (event-&gt;y == 0)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L722'>event</a>             722 lib/widget/menu.c             selected = menubar_get_menu_by_x_coord (menubar, event-&gt;x);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L728'>event</a>             728 lib/widget/menu.c             menubar_change_selected_item (menubar, event-&gt;y);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L759'>event</a>             759 lib/widget/menu.c         if ((event-&gt;buttons &amp; GPM_B_MIDDLE) != 0 &amp;&amp; event-&gt;y &gt; 0 &amp;&amp; menubar-&gt;is_dropped)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L766'>event</a>             766 lib/widget/menu.c         else if (event-&gt;y &gt; 0)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L772'>event</a>             772 lib/widget/menu.c         if (event-&gt;y == 0)</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L775'>event</a>             775 lib/widget/menu.c             menubar_drop (menubar, menubar_get_menu_by_x_coord (menubar, event-&gt;x));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L778'>event</a>             778 lib/widget/menu.c             menubar_change_selected_item (menubar, event-&gt;y);</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L789'>event</a>             789 lib/widget/menu.c             if (event-&gt;y == 0)</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L60'>event</a>              60 lib/widget/mouse.c init_mouse_event (mouse_event_t * event, mouse_msg_t msg, const Gpm_Event * global_gpm,</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L63'>event</a>              63 lib/widget/mouse.c     event-&gt;msg = msg;</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L64'>event</a>              64 lib/widget/mouse.c     event-&gt;x = global_gpm-&gt;x - w-&gt;x - 1;        /* '-1' because Gpm_Event is 1-based. */</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L65'>event</a>              65 lib/widget/mouse.c     event-&gt;y = global_gpm-&gt;y - w-&gt;y - 1;</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L66'>event</a>              66 lib/widget/mouse.c     event-&gt;count = global_gpm-&gt;type &amp; (GPM_SINGLE | GPM_DOUBLE | GPM_TRIPLE);</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L67'>event</a>              67 lib/widget/mouse.c     event-&gt;buttons = global_gpm-&gt;buttons;</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L68'>event</a>              68 lib/widget/mouse.c     event-&gt;result.abort = FALSE;</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L69'>event</a>              69 lib/widget/mouse.c     event-&gt;result.repeat = FALSE;</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L85'>event</a>              85 lib/widget/mouse.c mouse_translate_event (Widget * w, Gpm_Event * event)</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L97'>event</a>              97 lib/widget/mouse.c     in_widget = w-&gt;mouse.forced_capture || mouse_global_in_widget (event, w);</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L99'>event</a>              99 lib/widget/mouse.c     if ((event-&gt;type &amp; GPM_DOWN) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L103'>event</a>             103 lib/widget/mouse.c             if ((event-&gt;buttons &amp; GPM_B_UP) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L105'>event</a>             105 lib/widget/mouse.c             else if ((event-&gt;buttons &amp; GPM_B_DOWN) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L118'>event</a>             118 lib/widget/mouse.c                 w-&gt;mouse.last_buttons_down = event-&gt;buttons;</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L122'>event</a>             122 lib/widget/mouse.c     else if ((event-&gt;type &amp; GPM_UP) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L140'>event</a>             140 lib/widget/mouse.c             if (event-&gt;buttons == 0)</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L141'>event</a>             141 lib/widget/mouse.c                 event-&gt;buttons = w-&gt;mouse.last_buttons_down;</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L144'>event</a>             144 lib/widget/mouse.c     else if ((event-&gt;type &amp; GPM_DRAG) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L149'>event</a>             149 lib/widget/mouse.c     else if ((event-&gt;type &amp; GPM_MOVE) != 0)</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L155'>event</a>             155 lib/widget/mouse.c     init_mouse_event (&amp;local, msg, event, w);</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L176'>event</a>             176 lib/widget/mouse.c mouse_process_event (Widget * w, mouse_event_t * event)</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L180'>event</a>             180 lib/widget/mouse.c     if (event-&gt;msg != MSG_MOUSE_NONE)</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L182'>event</a>             182 lib/widget/mouse.c         w-&gt;mouse_callback (w, event-&gt;msg, event);</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L186'>event</a>             186 lib/widget/mouse.c         if (event-&gt;msg == MSG_MOUSE_UP &amp;&amp; w-&gt;mouse.last_msg == MSG_MOUSE_DOWN)</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L187'>event</a>             187 lib/widget/mouse.c             w-&gt;mouse_callback (w, MSG_MOUSE_CLICK, event);</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L190'>event</a>             190 lib/widget/mouse.c         w-&gt;mouse.last_msg = event-&gt;msg;</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L192'>event</a>             192 lib/widget/mouse.c         if (!event-&gt;result.abort)</span>
+<span class='curline'><a href='../S/lib--widget--mouse.c.html#L193'>event</a>             193 lib/widget/mouse.c             ret = event-&gt;result.repeat ? MOU_REPEAT : MOU_NORMAL;</span>
+<span class='curline'><a href='../S/lib--widget--mouse.h.html#L61'>event</a>              61 lib/widget/mouse.h mouse_event_t mouse_translate_event (Widget * w, Gpm_Event * event);</span>
+<span class='curline'><a href='../S/lib--widget--mouse.h.html#L63'>event</a>              63 lib/widget/mouse.h int mouse_process_event (Widget * w, mouse_event_t * event);</span>
+<span class='curline'><a href='../S/lib--widget--radio.c.html#L146'>event</a>             146 lib/widget/radio.c radio_mouse_callback (Widget * w, mouse_msg_t msg, mouse_event_t * event)</span>
+<span class='curline'><a href='../S/lib--widget--radio.c.html#L151'>event</a>             151 lib/widget/radio.c         RADIO (w)-&gt;pos = event-&gt;y;</span>
+<span class='curline'><a href='../S/lib--widget--radio.c.html#L156'>event</a>             156 lib/widget/radio.c         RADIO (w)-&gt;pos = event-&gt;y;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L418'>event</a>             418 lib/widget/widget-common.c mouse_global_in_widget (const Gpm_Event * event, const Widget * w)</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L420'>event</a>             420 lib/widget/widget-common.c     return (event-&gt;x &gt; w-&gt;x) &amp;&amp; (event-&gt;y &gt; w-&gt;y) &amp;&amp; (event-&gt;x &lt;= w-&gt;x + w-&gt;cols)</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L421'>event</a>             421 lib/widget/widget-common.c         &amp;&amp; (event-&gt;y &lt;= w-&gt;y + w-&gt;lines);</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.h.html#L121'>event</a>             121 lib/widget/widget-common.h typedef void (*widget_mouse_cb_fn) (Widget * w, mouse_msg_t msg, mouse_event_t * event);</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.h.html#L191'>event</a>             191 lib/widget/widget-common.h gboolean mouse_global_in_widget (const Gpm_Event * event, const Widget * w);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L643'>event</a>             643 lib/widget/wtools.c     Gpm_Event event;</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L665'>event</a>             665 lib/widget/wtools.c     event.x = -1;               /* Don't show the GPM cursor */</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L666'>event</a>             666 lib/widget/wtools.c     c = tty_get_event (&amp;event, FALSE, sm-&gt;block);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L673'>event</a>             673 lib/widget/wtools.c     dlg_process_event (sm-&gt;dlg, c, &amp;event);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3351'>event</a>            3351 src/diffviewer/ydiff.c dview_mouse_callback (Widget * w, mouse_msg_t msg, mouse_event_t * event)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L3355'>event</a>            3355 src/diffviewer/ydiff.c     (void) event;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L703'>event</a>             703 src/editor/editwidget.c edit_update_cursor (WEdit * edit, const mouse_event_t * event)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L708'>event</a>             708 src/editor/editwidget.c     x = event-&gt;x - (edit-&gt;fullscreen ? 0 : 1);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L709'>event</a>             709 src/editor/editwidget.c     y = event-&gt;y - (edit-&gt;fullscreen ? 0 : 1);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L711'>event</a>             711 src/editor/editwidget.c     if (edit-&gt;mark2 != -1 &amp;&amp; event-&gt;msg == MSG_MOUSE_UP)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L714'>event</a>             714 src/editor/editwidget.c     if (event-&gt;msg == MSG_MOUSE_DOWN || event-&gt;msg == MSG_MOUSE_UP)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L746'>event</a>             746 src/editor/editwidget.c     if (event-&gt;msg == MSG_MOUSE_CLICK)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L752'>event</a>             752 src/editor/editwidget.c     done = (event-&gt;msg != MSG_MOUSE_DRAG);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L874'>event</a>             874 src/editor/editwidget.c edit_dialog_mouse_callback (Widget * w, mouse_msg_t msg, mouse_event_t * event)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L878'>event</a>             878 src/editor/editwidget.c     if (msg == MSG_MOUSE_DOWN &amp;&amp; event-&gt;y == 0)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L902'>event</a>             902 src/editor/editwidget.c             if (top != NULL &amp;&amp; event-&gt;x &gt;= x)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L913'>event</a>             913 src/editor/editwidget.c                 if (event-&gt;x - x &lt;= 2)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L927'>event</a>             927 src/editor/editwidget.c     event-&gt;result.abort = unhandled;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1011'>event</a>            1011 src/editor/editwidget.c edit_mouse_handle_move_resize (Widget * w, mouse_msg_t msg, mouse_event_t * event)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1035'>event</a>            1035 src/editor/editwidget.c     global_x = event-&gt;x + w-&gt;x;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1036'>event</a>            1036 src/editor/editwidget.c     global_y = event-&gt;y + w-&gt;y;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1069'>event</a>            1069 src/editor/editwidget.c edit_mouse_callback (Widget * w, mouse_msg_t msg, mouse_event_t * event)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1083'>event</a>            1083 src/editor/editwidget.c         edit_mouse_handle_move_resize (w, msg, event);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1096'>event</a>            1096 src/editor/editwidget.c             if (event-&gt;y == 0)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1098'>event</a>            1098 src/editor/editwidget.c                 if (event-&gt;x == close_x)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1100'>event</a>            1100 src/editor/editwidget.c                 else if (event-&gt;x == toggle_fullscreen_x)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1106'>event</a>            1106 src/editor/editwidget.c                     edit-&gt;drag_state_start = event-&gt;x;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1111'>event</a>            1111 src/editor/editwidget.c             if (event-&gt;y == w-&gt;lines - 1 &amp;&amp; event-&gt;x == w-&gt;cols - 1)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1122'>event</a>            1122 src/editor/editwidget.c         edit_update_cursor (edit, event);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1127'>event</a>            1127 src/editor/editwidget.c         if (event-&gt;y == 0)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1129'>event</a>            1129 src/editor/editwidget.c             if (event-&gt;x == close_x)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1131'>event</a>            1131 src/editor/editwidget.c             else if (event-&gt;x == toggle_fullscreen_x)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1133'>event</a>            1133 src/editor/editwidget.c             else if (!edit-&gt;fullscreen &amp;&amp; event-&gt;count == GPM_DOUBLE)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1137'>event</a>            1137 src/editor/editwidget.c         else if (event-&gt;count == GPM_DOUBLE)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1143'>event</a>            1143 src/editor/editwidget.c         else if (event-&gt;count == GPM_TRIPLE)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1152'>event</a>            1152 src/editor/editwidget.c         edit_update_cursor (edit, event);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L671'>event</a>             671 src/filemanager/filegui.c     Gpm_Event event;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L680'>event</a>             680 src/filemanager/filegui.c     event.x = -1;               /* Don't show the GPM cursor */</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L681'>event</a>             681 src/filemanager/filegui.c     c = tty_get_event (&amp;event, FALSE, ctx-&gt;suspended);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L688'>event</a>             688 src/filemanager/filegui.c     dlg_process_event (ui-&gt;op_dlg, c, &amp;event);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L946'>event</a>             946 src/filemanager/find.c     Gpm_Event event;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L949'>event</a>             949 src/filemanager/find.c     event.x = -1;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L950'>event</a>             950 src/filemanager/find.c     c = tty_get_event (&amp;event, h-&gt;mouse_status == MOU_REPEAT, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L953'>event</a>             953 src/filemanager/find.c         dlg_process_event (h, c, &amp;event);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3753'>event</a>            3753 src/filemanager/panel.c mark_if_marking (WPanel * panel, const mouse_event_t * event)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3755'>event</a>            3755 src/filemanager/panel.c     if ((event-&gt;buttons &amp; GPM_B_RIGHT) != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3757'>event</a>            3757 src/filemanager/panel.c         if (event-&gt;msg == MSG_MOUSE_DOWN)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3826'>event</a>            3826 src/filemanager/panel.c panel_mouse_callback (Widget * w, mouse_msg_t msg, mouse_event_t * event)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3836'>event</a>            3836 src/filemanager/panel.c         if (event-&gt;y == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3839'>event</a>            3839 src/filemanager/panel.c             if (event-&gt;x == 1)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3842'>event</a>            3842 src/filemanager/panel.c             else if (event-&gt;x == w-&gt;cols - 2)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3845'>event</a>            3845 src/filemanager/panel.c             else if (event-&gt;x &gt;= w-&gt;cols - 5 &amp;&amp; event-&gt;x &lt;= w-&gt;cols - 3)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3848'>event</a>            3848 src/filemanager/panel.c             else if (event-&gt;x == w-&gt;cols - 6)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3854'>event</a>            3854 src/filemanager/panel.c                 event-&gt;result.abort = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3861'>event</a>            3861 src/filemanager/panel.c         if (event-&gt;y == 1)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3864'>event</a>            3864 src/filemanager/panel.c             mouse_sort_col (panel, event-&gt;x + 1);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3877'>event</a>            3877 src/filemanager/panel.c             y = event-&gt;y - 2;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3891'>event</a>            3891 src/filemanager/panel.c                     my_index += lines * (event-&gt;x / width);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3906'>event</a>            3906 src/filemanager/panel.c             mark_if_marking (panel, event);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3914'>event</a>            3914 src/filemanager/panel.c         if ((event-&gt;count &amp; GPM_DOUBLE) != 0)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L3918'>event</a>            3918 src/filemanager/panel.c             y = event-&gt;y - 1;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1208'>event</a>            1208 src/filemanager/tree.c tree_mouse_callback (Widget * w, mouse_msg_t msg, mouse_event_t * event)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1213'>event</a>            1213 src/filemanager/tree.c     y = event-&gt;y;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1221'>event</a>            1221 src/filemanager/tree.c         if (tree-&gt;is_panel &amp;&amp; event-&gt;y == WIDGET (w-&gt;owner)-&gt;y)</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1224'>event</a>            1224 src/filemanager/tree.c             event-&gt;result.abort = TRUE;</span>
+<span class='curline'><a href='../S/src--filemanager--tree.c.html#L1246'>event</a>            1246 src/filemanager/tree.c             else if ((event-&gt;count &amp; GPM_DOUBLE) != 0)</span>
+<span class='curline'><a href='../S/src--help.c.html#L952'>event</a>             952 src/help.c     help_mouse_callback (Widget * w, mouse_msg_t msg, mouse_event_t * event)</span>
+<span class='curline'><a href='../S/src--help.c.html#L960'>event</a>             960 src/help.c         if ((event-&gt;buttons &amp; GPM_B_RIGHT) != 0)</span>
+<span class='curline'><a href='../S/src--help.c.html#L970'>event</a>             970 src/help.c         x = event-&gt;x - 1;</span>
+<span class='curline'><a href='../S/src--help.c.html#L971'>event</a>             971 src/help.c         y = event-&gt;y - 1;</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L84'>event</a>              84 src/viewer/mcviewer.c mcview_mouse_callback (Widget * w, mouse_msg_t msg, mouse_event_t * event)</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L94'>event</a>              94 src/viewer/mcviewer.c             if (event-&gt;y == WIDGET (w-&gt;owner)-&gt;y)</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L97'>event</a>              97 src/viewer/mcviewer.c                 event-&gt;result.abort = TRUE;</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L117'>event</a>             117 src/viewer/mcviewer.c             x = event-&gt;x + 1;   /* FIXME */</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L122'>event</a>             122 src/viewer/mcviewer.c                 event-&gt;result.repeat = msg == MSG_MOUSE_DOWN;</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L132'>event</a>             132 src/viewer/mcviewer.c                 event-&gt;result.repeat = msg == MSG_MOUSE_DOWN;</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L140'>event</a>             140 src/viewer/mcviewer.c             y = event-&gt;y + 1;   /* FIXME */</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L149'>event</a>             149 src/viewer/mcviewer.c                 event-&gt;result.repeat = msg == MSG_MOUSE_DOWN;</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L163'>event</a>             163 src/viewer/mcviewer.c                 event-&gt;result.repeat = msg == MSG_MOUSE_DOWN;</span>
+</pre>
+</body>
+</html>

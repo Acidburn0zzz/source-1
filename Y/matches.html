@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>matches</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L728'>matches</a>           728 lib/widget/input_complete.c     size_t matches = 0;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L736'>matches</a>           736 lib/widget/input_complete.c     while ((string = (*entry_function) (text, matches, flags)) != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L738'>matches</a>           738 lib/widget/input_complete.c         if (matches + 1 == match_list_size)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L743'>matches</a>           743 lib/widget/input_complete.c         match_list[++matches] = string;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L744'>matches</a>           744 lib/widget/input_complete.c         match_list[matches + 1] = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L749'>matches</a>           749 lib/widget/input_complete.c     if (matches == 0)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L754'>matches</a>           754 lib/widget/input_complete.c         if (matches == 1)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L765'>matches</a>           765 lib/widget/input_complete.c             qsort (match_list + 1, matches, sizeof (char *), match_compare);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L772'>matches</a>           772 lib/widget/input_complete.c             while (j &lt; matches + 1)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L796'>matches</a>           796 lib/widget/input_complete.c                     if (j &gt; matches)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L807'>matches</a>           807 lib/widget/input_complete.c             matches = i;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L808'>matches</a>           808 lib/widget/input_complete.c             match_list[matches + 1] = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L917'>matches</a>           917 lib/widget/input_complete.c     char **matches = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L922'>matches</a>           922 lib/widget/input_complete.c         matches =</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L931'>matches</a>           931 lib/widget/input_complete.c         matches = completion_matches (state-&gt;word, filename_completion_function, state-&gt;flags);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L933'>matches</a>           933 lib/widget/input_complete.c         if (matches == NULL &amp;&amp; state-&gt;is_cd &amp;&amp; !IS_PATH_SEP (*state-&gt;word) &amp;&amp; *state-&gt;word != '~')</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L956'>matches</a>           956 lib/widget/input_complete.c                 while (matches == NULL &amp;&amp; c == ':')</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L970'>matches</a>           970 lib/widget/input_complete.c                         matches =</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L982'>matches</a>           982 lib/widget/input_complete.c     return matches;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1311'>matches</a>          1311 lib/widget/input_complete.c     char **matches = NULL;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1334'>matches</a>          1334 lib/widget/input_complete.c         matches = completion_matches (str_cget_next_char (state.p),</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1337'>matches</a>          1337 lib/widget/input_complete.c         if (matches != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1345'>matches</a>          1345 lib/widget/input_complete.c         matches = completion_matches (state.q, variable_completion_function, state.flags);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1346'>matches</a>          1346 lib/widget/input_complete.c         if (matches != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1355'>matches</a>          1355 lib/widget/input_complete.c         matches = completion_matches (state.r, hostname_completion_function, state.flags);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1356'>matches</a>          1356 lib/widget/input_complete.c         if (matches != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1362'>matches</a>          1362 lib/widget/input_complete.c     if (matches == NULL &amp;&amp; *state.word == '~' &amp;&amp; (state.flags &amp; INPUT_COMPLETE_USERNAMES) != 0</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1366'>matches</a>          1366 lib/widget/input_complete.c         matches = completion_matches (state.word, username_completion_function, state.flags);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1372'>matches</a>          1372 lib/widget/input_complete.c     if (matches == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1373'>matches</a>          1373 lib/widget/input_complete.c         matches = try_complete_all_possible (&amp;state, text, lc_start);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1376'>matches</a>          1376 lib/widget/input_complete.c     if (matches == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1379'>matches</a>          1379 lib/widget/input_complete.c         matches = try_complete_all_possible (&amp;state, text, lc_start);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1384'>matches</a>          1384 lib/widget/input_complete.c     if (matches != NULL &amp;&amp;</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1391'>matches</a>          1391 lib/widget/input_complete.c         for (m = matches; *m != NULL; m++)</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L1401'>matches</a>          1401 lib/widget/input_complete.c     return matches;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L155'>matches</a>           155 src/filemanager/find.c static unsigned long matches;   /* Number of matches */</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L373'>matches</a>           373 src/filemanager/find.c     g_snprintf (buffer, sizeof (buffer), _("Found: %ld"), matches);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L933'>matches</a>           933 src/filemanager/find.c     if (matches == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L937'>matches</a>           937 src/filemanager/find.c     matches++;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1407'>matches</a>          1407 src/filemanager/find.c     matches = 0;</span>
+</pre>
+</body>
+</html>

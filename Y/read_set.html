@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>read_set</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L498'>read_set</a>          498 src/subshell/common.c     fd_set read_set;            /* For 'select' */</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L519'>read_set</a>          519 src/subshell/common.c         FD_ZERO (&amp;read_set);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L520'>read_set</a>          520 src/subshell/common.c         FD_SET (mc_global.tty.subshell_pty, &amp;read_set);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L521'>read_set</a>          521 src/subshell/common.c         FD_SET (subshell_pipe[READ], &amp;read_set);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L525'>read_set</a>          525 src/subshell/common.c             FD_SET (STDIN_FILENO, &amp;read_set);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L529'>read_set</a>          529 src/subshell/common.c         if (select (maxfdp + 1, &amp;read_set, NULL, NULL, wptr) == -1)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L545'>read_set</a>          545 src/subshell/common.c         if (FD_ISSET (mc_global.tty.subshell_pty, &amp;read_set))</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L570'>read_set</a>          570 src/subshell/common.c         else if (FD_ISSET (subshell_pipe[READ], &amp;read_set))</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L594'>read_set</a>          594 src/subshell/common.c         else if (FD_ISSET (STDIN_FILENO, &amp;read_set))</span>
+</pre>
+</body>
+</html>

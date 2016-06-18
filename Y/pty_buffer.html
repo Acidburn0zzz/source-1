@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>pty_buffer</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L147'>pty_buffer</a>        147 src/subshell/common.c static char pty_buffer[PTY_BUFFER_SIZE] = "\0";</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L553'>pty_buffer</a>        553 src/subshell/common.c             bytes = read (mc_global.tty.subshell_pty, pty_buffer, sizeof (pty_buffer));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L567'>pty_buffer</a>        567 src/subshell/common.c                 write_all (STDOUT_FILENO, pty_buffer, bytes);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L597'>pty_buffer</a>        597 src/subshell/common.c             bytes = read (STDIN_FILENO, pty_buffer, sizeof (pty_buffer));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L607'>pty_buffer</a>        607 src/subshell/common.c                 if (pty_buffer[i] == subshell_switch_key)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L609'>pty_buffer</a>        609 src/subshell/common.c                     write_all (mc_global.tty.subshell_pty, pty_buffer, i);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L615'>pty_buffer</a>        615 src/subshell/common.c             write_all (mc_global.tty.subshell_pty, pty_buffer, bytes);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L617'>pty_buffer</a>        617 src/subshell/common.c             if (pty_buffer[bytes - 1] == '\n' || pty_buffer[bytes - 1] == '\r')</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1201'>pty_buffer</a>       1201 src/subshell/common.c         bytes = read (mc_global.tty.subshell_pty, pty_buffer, sizeof (pty_buffer));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1205'>pty_buffer</a>       1205 src/subshell/common.c             if (pty_buffer[i] == '\n' || pty_buffer[i] == '\r')</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1210'>pty_buffer</a>       1210 src/subshell/common.c             else if (pty_buffer[i] != '\0')</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1211'>pty_buffer</a>       1211 src/subshell/common.c                 g_string_append_c (p, pty_buffer[i]);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1259'>pty_buffer</a>       1259 src/subshell/common.c         pty_buffer[0] = '\0';</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>WEdit</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--editor--bookmark.c.html#L66'>WEdit</a>              66 src/editor/bookmark.c double_marks (WEdit * edit, edit_book_mark_t * p)</span>
+<span class='curline'><a href='../S/src--editor--bookmark.c.html#L80'>WEdit</a>              80 src/editor/bookmark.c book_mark_find (WEdit * edit, long line)</span>
+<span class='curline'><a href='../S/src--editor--bookmark.c.html#L152'>WEdit</a>             152 src/editor/bookmark.c book_mark_query_color (WEdit * edit, long line, int c)</span>
+<span class='curline'><a href='../S/src--editor--bookmark.c.html#L174'>WEdit</a>             174 src/editor/bookmark.c book_mark_insert (WEdit * edit, long line, int c)</span>
+<span class='curline'><a href='../S/src--editor--bookmark.c.html#L216'>WEdit</a>             216 src/editor/bookmark.c book_mark_clear (WEdit * edit, long line, int c)</span>
+<span class='curline'><a href='../S/src--editor--bookmark.c.html#L250'>WEdit</a>             250 src/editor/bookmark.c book_mark_flush (WEdit * edit, int c)</span>
+<span class='curline'><a href='../S/src--editor--bookmark.c.html#L281'>WEdit</a>             281 src/editor/bookmark.c book_mark_inc (WEdit * edit, long line)</span>
+<span class='curline'><a href='../S/src--editor--bookmark.c.html#L297'>WEdit</a>             297 src/editor/bookmark.c book_mark_dec (WEdit * edit, long line)</span>
+<span class='curline'><a href='../S/src--editor--bookmark.c.html#L313'>WEdit</a>             313 src/editor/bookmark.c book_mark_serialize (WEdit * edit, int color)</span>
+<span class='curline'><a href='../S/src--editor--bookmark.c.html#L336'>WEdit</a>             336 src/editor/bookmark.c book_mark_restore (WEdit * edit, int color)</span>
+<span class='curline'><a href='../S/src--editor--choosesyntax.c.html#L98'>WEdit</a>              98 src/editor/choosesyntax.c edit_syntax_dialog (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L141'>WEdit</a>             141 src/editor/edit-impl.h WEdit *find_editor (const WDialog * h);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L145'>WEdit</a>             145 src/editor/edit-impl.h void user_menu (WEdit * edit, const char *menu_file, int selected_entry);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L148'>WEdit</a>             148 src/editor/edit-impl.h off_t edit_move_forward3 (const WEdit * edit, off_t current, long cols, off_t upto);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L149'>WEdit</a>             149 src/editor/edit-impl.h void edit_scroll_screen_over_cursor (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L150'>WEdit</a>             150 src/editor/edit-impl.h void edit_render_keypress (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L151'>WEdit</a>             151 src/editor/edit-impl.h void edit_scroll_upward (WEdit * edit, long i);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L152'>WEdit</a>             152 src/editor/edit-impl.h void edit_scroll_downward (WEdit * edit, long i);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L153'>WEdit</a>             153 src/editor/edit-impl.h void edit_scroll_right (WEdit * edit, long i);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L154'>WEdit</a>             154 src/editor/edit-impl.h void edit_scroll_left (WEdit * edit, long i);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L155'>WEdit</a>             155 src/editor/edit-impl.h void edit_move_up (WEdit * edit, long i, gboolean do_scroll);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L156'>WEdit</a>             156 src/editor/edit-impl.h void edit_move_down (WEdit * edit, long i, gboolean do_scroll);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L157'>WEdit</a>             157 src/editor/edit-impl.h void edit_move_to_prev_col (WEdit * edit, off_t p);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L158'>WEdit</a>             158 src/editor/edit-impl.h long edit_get_col (const WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L159'>WEdit</a>             159 src/editor/edit-impl.h void edit_update_curs_row (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L160'>WEdit</a>             160 src/editor/edit-impl.h void edit_update_curs_col (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L161'>WEdit</a>             161 src/editor/edit-impl.h void edit_find_bracket (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L162'>WEdit</a>             162 src/editor/edit-impl.h gboolean edit_reload_line (WEdit * edit, const vfs_path_t * filename_vpath, long line);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L163'>WEdit</a>             163 src/editor/edit-impl.h void edit_set_codeset (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L165'>WEdit</a>             165 src/editor/edit-impl.h void edit_block_copy_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L166'>WEdit</a>             166 src/editor/edit-impl.h void edit_block_move_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L167'>WEdit</a>             167 src/editor/edit-impl.h int edit_block_delete_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L168'>WEdit</a>             168 src/editor/edit-impl.h void edit_delete_line (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L170'>WEdit</a>             170 src/editor/edit-impl.h int edit_delete (WEdit * edit, gboolean byte_delete);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L171'>WEdit</a>             171 src/editor/edit-impl.h int edit_backspace (WEdit * edit, gboolean byte_delete);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L172'>WEdit</a>             172 src/editor/edit-impl.h void edit_insert (WEdit * edit, int c);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L173'>WEdit</a>             173 src/editor/edit-impl.h void edit_insert_over (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L174'>WEdit</a>             174 src/editor/edit-impl.h void edit_cursor_move (WEdit * edit, off_t increment);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L175'>WEdit</a>             175 src/editor/edit-impl.h void edit_push_undo_action (WEdit * edit, long c);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L176'>WEdit</a>             176 src/editor/edit-impl.h void edit_push_redo_action (WEdit * edit, long c);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L177'>WEdit</a>             177 src/editor/edit-impl.h void edit_push_key_press (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L178'>WEdit</a>             178 src/editor/edit-impl.h void edit_insert_ahead (WEdit * edit, int c);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L179'>WEdit</a>             179 src/editor/edit-impl.h off_t edit_write_stream (WEdit * edit, FILE * f);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L182'>WEdit</a>             182 src/editor/edit-impl.h gboolean edit_save_confirm_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L183'>WEdit</a>             183 src/editor/edit-impl.h gboolean edit_save_as_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L184'>WEdit</a>             184 src/editor/edit-impl.h WEdit *edit_init (WEdit * edit, int y, int x, int lines, int cols,</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L186'>WEdit</a>             186 src/editor/edit-impl.h gboolean edit_clean (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L187'>WEdit</a>             187 src/editor/edit-impl.h gboolean edit_ok_to_exit (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L191'>WEdit</a>             191 src/editor/edit-impl.h gboolean edit_close_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L192'>WEdit</a>             192 src/editor/edit-impl.h void edit_mark_cmd (WEdit * edit, gboolean unmark);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L193'>WEdit</a>             193 src/editor/edit-impl.h void edit_mark_current_word_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L194'>WEdit</a>             194 src/editor/edit-impl.h void edit_mark_current_line_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L195'>WEdit</a>             195 src/editor/edit-impl.h void edit_set_markers (WEdit * edit, off_t m1, off_t m2, long c1, long c2);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L196'>WEdit</a>             196 src/editor/edit-impl.h void edit_push_markers (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L197'>WEdit</a>             197 src/editor/edit-impl.h void edit_replace_cmd (WEdit * edit, gboolean again);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L198'>WEdit</a>             198 src/editor/edit-impl.h void edit_search_cmd (WEdit * edit, gboolean again);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L203'>WEdit</a>             203 src/editor/edit-impl.h void edit_complete_word_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L204'>WEdit</a>             204 src/editor/edit-impl.h void edit_get_match_keyword_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L207'>WEdit</a>             207 src/editor/edit-impl.h int edit_suggest_current_word (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L208'>WEdit</a>             208 src/editor/edit-impl.h void edit_spellcheck_file (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L212'>WEdit</a>             212 src/editor/edit-impl.h gboolean edit_save_block (WEdit * edit, const char *filename, off_t start, off_t finish);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L213'>WEdit</a>             213 src/editor/edit-impl.h gboolean edit_save_block_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L214'>WEdit</a>             214 src/editor/edit-impl.h gboolean edit_insert_file_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L216'>WEdit</a>             216 src/editor/edit-impl.h off_t edit_insert_file (WEdit * edit, const vfs_path_t * filename_vpath);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L217'>WEdit</a>             217 src/editor/edit-impl.h gboolean edit_load_back_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L218'>WEdit</a>             218 src/editor/edit-impl.h gboolean edit_load_forward_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L219'>WEdit</a>             219 src/editor/edit-impl.h void edit_block_process_cmd (WEdit * edit, int macro_number);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L225'>WEdit</a>             225 src/editor/edit-impl.h void edit_date_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L226'>WEdit</a>             226 src/editor/edit-impl.h void edit_goto_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L227'>WEdit</a>             227 src/editor/edit-impl.h gboolean eval_marks (WEdit * edit, off_t * start_mark, off_t * end_mark);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L228'>WEdit</a>             228 src/editor/edit-impl.h void edit_status (WEdit * edit, gboolean active);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L229'>WEdit</a>             229 src/editor/edit-impl.h void edit_execute_key_command (WEdit * edit, long command, int char_for_insertion);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L230'>WEdit</a>             230 src/editor/edit-impl.h void edit_update_screen (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L231'>WEdit</a>             231 src/editor/edit-impl.h void edit_save_size (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L232'>WEdit</a>             232 src/editor/edit-impl.h gboolean edit_handle_move_resize (WEdit * edit, long command);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L233'>WEdit</a>             233 src/editor/edit-impl.h void edit_toggle_fullscreen (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L234'>WEdit</a>             234 src/editor/edit-impl.h void edit_move_to_line (WEdit * e, long line);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L235'>WEdit</a>             235 src/editor/edit-impl.h void edit_move_display (WEdit * e, long line);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L236'>WEdit</a>             236 src/editor/edit-impl.h void edit_word_wrap (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L237'>WEdit</a>             237 src/editor/edit-impl.h int edit_sort_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L238'>WEdit</a>             238 src/editor/edit-impl.h int edit_ext_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L240'>WEdit</a>             240 src/editor/edit-impl.h int edit_store_macro_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L241'>WEdit</a>             241 src/editor/edit-impl.h gboolean edit_load_macro_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L242'>WEdit</a>             242 src/editor/edit-impl.h void edit_delete_macro_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L243'>WEdit</a>             243 src/editor/edit-impl.h gboolean edit_repeat_macro_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L245'>WEdit</a>             245 src/editor/edit-impl.h gboolean edit_copy_to_X_buf_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L246'>WEdit</a>             246 src/editor/edit-impl.h gboolean edit_cut_to_X_buf_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L247'>WEdit</a>             247 src/editor/edit-impl.h gboolean edit_paste_from_X_buf_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L249'>WEdit</a>             249 src/editor/edit-impl.h void edit_select_codepage_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L250'>WEdit</a>             250 src/editor/edit-impl.h void edit_insert_literal_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L251'>WEdit</a>             251 src/editor/edit-impl.h gboolean edit_execute_macro (WEdit * edit, int hotkey);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L252'>WEdit</a>             252 src/editor/edit-impl.h void edit_begin_end_macro_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L253'>WEdit</a>             253 src/editor/edit-impl.h void edit_begin_end_repeat_cmd (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L255'>WEdit</a>             255 src/editor/edit-impl.h void edit_paste_from_history (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L257'>WEdit</a>             257 src/editor/edit-impl.h void edit_set_filename (WEdit * edit, const vfs_path_t * name_vpath);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L259'>WEdit</a>             259 src/editor/edit-impl.h void edit_load_syntax (WEdit * edit, GPtrArray * pnames, const char *type);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L260'>WEdit</a>             260 src/editor/edit-impl.h void edit_free_syntax_rules (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L261'>WEdit</a>             261 src/editor/edit-impl.h int edit_get_syntax_color (WEdit * edit, off_t byte_index);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L263'>WEdit</a>             263 src/editor/edit-impl.h void book_mark_insert (WEdit * edit, long line, int c);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L264'>WEdit</a>             264 src/editor/edit-impl.h gboolean book_mark_query_color (WEdit * edit, long line, int c);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L265'>WEdit</a>             265 src/editor/edit-impl.h struct edit_book_mark_t *book_mark_find (WEdit * edit, long line);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L266'>WEdit</a>             266 src/editor/edit-impl.h gboolean book_mark_clear (WEdit * edit, long line, int c);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L267'>WEdit</a>             267 src/editor/edit-impl.h void book_mark_flush (WEdit * edit, int c);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L268'>WEdit</a>             268 src/editor/edit-impl.h void book_mark_inc (WEdit * edit, long line);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L269'>WEdit</a>             269 src/editor/edit-impl.h void book_mark_dec (WEdit * edit, long line);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L270'>WEdit</a>             270 src/editor/edit-impl.h void book_mark_serialize (WEdit * edit, int color);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L271'>WEdit</a>             271 src/editor/edit-impl.h void book_mark_restore (WEdit * edit, int color);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L273'>WEdit</a>             273 src/editor/edit-impl.h gboolean edit_line_is_blank (WEdit * edit, long line);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L276'>WEdit</a>             276 src/editor/edit-impl.h void edit_syntax_dialog (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L277'>WEdit</a>             277 src/editor/edit-impl.h void edit_mail_dialog (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L278'>WEdit</a>             278 src/editor/edit-impl.h void format_paragraph (WEdit * edit, gboolean force);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L281'>WEdit</a>             281 src/editor/edit-impl.h void edit_execute_cmd (WEdit * edit, long command, int char_for_insertion);</span>
+<span class='curline'><a href='../S/src--editor--edit-impl.h.html#L293'>WEdit</a>             293 src/editor/edit-impl.h edit_reload (WEdit * edit, const vfs_path_t * filename_vpath)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L267'>WEdit</a>             267 src/editor/edit.c edit_insert_stream (WEdit * edit, FILE * f)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L291'>WEdit</a>             291 src/editor/edit.c check_file_access (WEdit * edit, const vfs_path_t * filename_vpath, struct stat *st)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L393'>WEdit</a>             393 src/editor/edit.c edit_load_file (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L461'>WEdit</a>             461 src/editor/edit.c edit_load_position (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L494'>WEdit</a>             494 src/editor/edit.c edit_save_position (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L510'>WEdit</a>             510 src/editor/edit.c edit_purge_widget (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L512'>WEdit</a>             512 src/editor/edit.c     size_t len = sizeof (WEdit) - sizeof (Widget);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L525'>WEdit</a>             525 src/editor/edit.c edit_pop_undo_action (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L558'>WEdit</a>             558 src/editor/edit.c edit_pop_redo_action (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L587'>WEdit</a>             587 src/editor/edit.c get_prev_undo_action (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L611'>WEdit</a>             611 src/editor/edit.c edit_modification (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L674'>WEdit</a>             674 src/editor/edit.c edit_find_line (WEdit * edit, long line)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L729'>WEdit</a>             729 src/editor/edit.c edit_move_up_paragraph (WEdit * edit, gboolean do_scroll)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L766'>WEdit</a>             766 src/editor/edit.c edit_move_down_paragraph (WEdit * edit, gboolean do_scroll)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L799'>WEdit</a>             799 src/editor/edit.c edit_begin_page (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L808'>WEdit</a>             808 src/editor/edit.c edit_end_page (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L819'>WEdit</a>             819 src/editor/edit.c edit_move_to_top (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L835'>WEdit</a>             835 src/editor/edit.c edit_move_to_bottom (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L851'>WEdit</a>             851 src/editor/edit.c edit_cursor_to_bol (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L863'>WEdit</a>             863 src/editor/edit.c edit_cursor_to_eol (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L916'>WEdit</a>             916 src/editor/edit.c edit_left_word_move (WEdit * edit, int s)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L946'>WEdit</a>             946 src/editor/edit.c edit_left_word_move_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L955'>WEdit</a>             955 src/editor/edit.c edit_right_word_move (WEdit * edit, int s)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L985'>WEdit</a>             985 src/editor/edit.c edit_right_word_move_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L994'>WEdit</a>             994 src/editor/edit.c edit_right_char_move_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1019'>WEdit</a>            1019 src/editor/edit.c edit_left_char_move_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1050'>WEdit</a>            1050 src/editor/edit.c edit_move_updown (WEdit * edit, long lines, gboolean do_scroll, gboolean direction)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1093'>WEdit</a>            1093 src/editor/edit.c edit_right_delete_word (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1113'>WEdit</a>            1113 src/editor/edit.c edit_left_delete_word (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1137'>WEdit</a>            1137 src/editor/edit.c edit_do_undo (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1222'>WEdit</a>            1222 src/editor/edit.c edit_do_redo (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1304'>WEdit</a>            1304 src/editor/edit.c edit_group_undo (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1324'>WEdit</a>            1324 src/editor/edit.c edit_delete_to_line_end (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1333'>WEdit</a>            1333 src/editor/edit.c edit_delete_to_line_begin (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1342'>WEdit</a>            1342 src/editor/edit.c is_aligned_on_a_tab (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1354'>WEdit</a>            1354 src/editor/edit.c right_of_four_spaces (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1367'>WEdit</a>            1367 src/editor/edit.c left_of_four_spaces (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1380'>WEdit</a>            1380 src/editor/edit.c edit_auto_indent (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1402'>WEdit</a>            1402 src/editor/edit.c edit_double_newline (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1415'>WEdit</a>            1415 src/editor/edit.c insert_spaces_tab (WEdit * edit, gboolean half)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1437'>WEdit</a>            1437 src/editor/edit.c edit_tab_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1464'>WEdit</a>            1464 src/editor/edit.c check_and_wrap_line (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1507'>WEdit</a>            1507 src/editor/edit.c edit_get_bracket (WEdit * edit, gboolean in_screen, unsigned long furthest_bracket_search)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1562'>WEdit</a>            1562 src/editor/edit.c edit_goto_matching_bracket (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1578'>WEdit</a>            1578 src/editor/edit.c edit_move_block_to_right (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1615'>WEdit</a>            1615 src/editor/edit.c edit_move_block_to_left (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1667'>WEdit</a>            1667 src/editor/edit.c edit_print_string (WEdit * e, const char *s)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1681'>WEdit</a>            1681 src/editor/edit.c edit_insert_column_from_file (WEdit * edit, int file, off_t * start_pos, off_t * end_pos,</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1754'>WEdit</a>            1754 src/editor/edit.c user_menu (WEdit * edit, const char *menu_file, int selected_entry)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1830'>WEdit</a>            1830 src/editor/edit.c edit_write_stream (WEdit * edit, FILE * f)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1939'>WEdit</a>            1939 src/editor/edit.c edit_insert_file (WEdit * edit, const vfs_path_t * filename_vpath)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2067'>WEdit</a>            2067 src/editor/edit.c WEdit *</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2068'>WEdit</a>            2068 src/editor/edit.c edit_init (WEdit * edit, int y, int x, int lines, int cols, const vfs_path_t * filename_vpath,</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2096'>WEdit</a>            2096 src/editor/edit.c         edit = g_malloc0 (sizeof (WEdit));</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2169'>WEdit</a>            2169 src/editor/edit.c edit_clean (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2221'>WEdit</a>            2221 src/editor/edit.c edit_reload_line (WEdit * edit, const vfs_path_t * filename_vpath, long line)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2224'>WEdit</a>            2224 src/editor/edit.c     WEdit *e;</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2226'>WEdit</a>            2226 src/editor/edit.c     e = g_malloc0 (sizeof (WEdit));</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2252'>WEdit</a>            2252 src/editor/edit.c edit_set_codeset (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2324'>WEdit</a>            2324 src/editor/edit.c edit_push_undo_action (WEdit * edit, long c)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2413'>WEdit</a>            2413 src/editor/edit.c edit_push_redo_action (WEdit * edit, long c)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2498'>WEdit</a>            2498 src/editor/edit.c edit_insert (WEdit * edit, int c)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2539'>WEdit</a>            2539 src/editor/edit.c edit_insert_ahead (WEdit * edit, int c)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2570'>WEdit</a>            2570 src/editor/edit.c edit_insert_over (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2583'>WEdit</a>            2583 src/editor/edit.c edit_delete (WEdit * edit, gboolean byte_delete)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2644'>WEdit</a>            2644 src/editor/edit.c edit_backspace (WEdit * edit, gboolean byte_delete)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2706'>WEdit</a>            2706 src/editor/edit.c edit_cursor_move (WEdit * edit, off_t increment)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2751'>WEdit</a>            2751 src/editor/edit.c edit_move_forward3 (const WEdit * edit, off_t current, long cols, off_t upto)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2821'>WEdit</a>            2821 src/editor/edit.c edit_get_col (const WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2832'>WEdit</a>            2832 src/editor/edit.c edit_update_curs_row (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2840'>WEdit</a>            2840 src/editor/edit.c edit_update_curs_col (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2849'>WEdit</a>            2849 src/editor/edit.c edit_get_curs_col (const WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2858'>WEdit</a>            2858 src/editor/edit.c edit_scroll_upward (WEdit * edit, long i)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2879'>WEdit</a>            2879 src/editor/edit.c edit_scroll_downward (WEdit * edit, long i)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2900'>WEdit</a>            2900 src/editor/edit.c edit_scroll_right (WEdit * edit, long i)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2910'>WEdit</a>            2910 src/editor/edit.c edit_scroll_left (WEdit * edit, long i)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2927'>WEdit</a>            2927 src/editor/edit.c edit_move_to_prev_col (WEdit * edit, off_t p)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L2992'>WEdit</a>            2992 src/editor/edit.c edit_line_is_blank (WEdit * edit, long line)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3001'>WEdit</a>            3001 src/editor/edit.c edit_move_to_line (WEdit * e, long line)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3014'>WEdit</a>            3014 src/editor/edit.c edit_move_display (WEdit * e, long line)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3026'>WEdit</a>            3026 src/editor/edit.c edit_push_markers (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3036'>WEdit</a>            3036 src/editor/edit.c edit_set_markers (WEdit * edit, off_t m1, off_t m2, long c1, long c2)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3049'>WEdit</a>            3049 src/editor/edit.c edit_mark_cmd (WEdit * edit, gboolean unmark)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3076'>WEdit</a>            3076 src/editor/edit.c edit_mark_current_word_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3112'>WEdit</a>            3112 src/editor/edit.c edit_mark_current_line_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3123'>WEdit</a>            3123 src/editor/edit.c edit_delete_line (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3151'>WEdit</a>            3151 src/editor/edit.c edit_push_key_press (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3164'>WEdit</a>            3164 src/editor/edit.c edit_find_bracket (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3184'>WEdit</a>            3184 src/editor/edit.c edit_execute_key_command (WEdit * edit, long command, int char_for_insertion)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3233'>WEdit</a>            3233 src/editor/edit.c edit_execute_cmd (WEdit * edit, long command, int char_for_insertion)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L4003'>WEdit</a>            4003 src/editor/edit.c edit_move_up (WEdit * edit, long i, gboolean do_scroll)</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L4012'>WEdit</a>            4012 src/editor/edit.c edit_move_down (WEdit * edit, long i, gboolean do_scroll)</span>
+<span class='curline'><a href='../S/src--editor--edit.h.html#L28'>WEdit</a>              28 src/editor/edit.h struct WEdit;</span>
+<span class='curline'><a href='../S/src--editor--edit.h.html#L29'>WEdit</a>              29 src/editor/edit.h typedef struct WEdit WEdit;</span>
+<span class='curline'><a href='../S/src--editor--edit.h.html#L72'>WEdit</a>              72 src/editor/edit.h const char *edit_get_file_name (const WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit.h.html#L73'>WEdit</a>              73 src/editor/edit.h long edit_get_curs_col (const WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--edit.h.html#L74'>WEdit</a>              74 src/editor/edit.h const char *edit_get_syntax_type (const WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L118'>WEdit</a>             118 src/editor/editcmd.c     WEdit *edit;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L194'>WEdit</a>             194 src/editor/editcmd.c edit_save_file (WEdit * edit, const vfs_path_t * filename_vpath)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L442'>WEdit</a>             442 src/editor/editcmd.c edit_get_save_file_as (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L493'>WEdit</a>             493 src/editor/editcmd.c edit_save_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L538'>WEdit</a>             538 src/editor/editcmd.c edit_delete_column_of_text (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L581'>WEdit</a>             581 src/editor/editcmd.c edit_block_delete (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L658'>WEdit</a>             658 src/editor/editcmd.c edit_search_get_current_end_line_char (const WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L790'>WEdit</a>             790 src/editor/editcmd.c edit_search_fix_search_start_if_selection (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L818'>WEdit</a>             818 src/editor/editcmd.c     WEdit *edit = esm-&gt;edit;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L949'>WEdit</a>             949 src/editor/editcmd.c edit_show_search_error (const WEdit * edit, const char *title)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L960'>WEdit</a>             960 src/editor/editcmd.c edit_do_search (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1044'>WEdit</a>            1044 src/editor/editcmd.c edit_search (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1058'>WEdit</a>            1058 src/editor/editcmd.c edit_get_block (WEdit * edit, off_t start, off_t finish, off_t * l)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1097'>WEdit</a>            1097 src/editor/editcmd.c edit_save_block_to_clip_file (WEdit * edit, off_t start, off_t finish)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1197'>WEdit</a>            1197 src/editor/editcmd.c     WEdit *edit = esm-&gt;edit;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1223'>WEdit</a>            1223 src/editor/editcmd.c edit_collect_completions (WEdit * edit, off_t word_start, gsize word_len,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1349'>WEdit</a>            1349 src/editor/editcmd.c edit_insert_column_of_text (WEdit * edit, unsigned char *data, off_t size, long width,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1424'>WEdit</a>            1424 src/editor/editcmd.c edit_get_macro (WEdit * edit, int hotkey, const macros_t ** macros, guint * indx)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1450'>WEdit</a>            1450 src/editor/editcmd.c edit_delete_macro (WEdit * edit, int hotkey)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1501'>WEdit</a>            1501 src/editor/editcmd.c         WEdit *edit = (WEdit *) data;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1524'>WEdit</a>            1524 src/editor/editcmd.c         ((WEdit *) data)-&gt;force |= REDRAW_PAGE;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1537'>WEdit</a>            1537 src/editor/editcmd.c edit_complete_word_insert_recoded_completion (WEdit * edit, char *completion, gsize word_len)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1680'>WEdit</a>            1680 src/editor/editcmd.c edit_set_filename (WEdit * edit, const vfs_path_t * name_vpath)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1694'>WEdit</a>            1694 src/editor/editcmd.c edit_save_as_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1813'>WEdit</a>            1813 src/editor/editcmd.c edit_delete_macro_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1827'>WEdit</a>            1827 src/editor/editcmd.c edit_execute_macro (WEdit * edit, int hotkey)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1861'>WEdit</a>            1861 src/editor/editcmd.c edit_store_macro_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1942'>WEdit</a>            1942 src/editor/editcmd.c edit_repeat_macro_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1981'>WEdit</a>            1981 src/editor/editcmd.c edit_load_macro_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2071'>WEdit</a>            2071 src/editor/editcmd.c edit_save_confirm_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2244'>WEdit</a>            2244 src/editor/editcmd.c edit_close_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2260'>WEdit</a>            2260 src/editor/editcmd.c             edit = (WEdit *) h-&gt;current-&gt;data;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2283'>WEdit</a>            2283 src/editor/editcmd.c eval_marks (WEdit * edit, off_t * start_mark, off_t * end_mark)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2343'>WEdit</a>            2343 src/editor/editcmd.c edit_block_copy_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2395'>WEdit</a>            2395 src/editor/editcmd.c edit_block_move_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2497'>WEdit</a>            2497 src/editor/editcmd.c edit_block_delete_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2512'>WEdit</a>            2512 src/editor/editcmd.c edit_replace_cmd (WEdit * edit, gboolean again)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2758'>WEdit</a>            2758 src/editor/editcmd.c     WEdit *edit = ((const edit_search_status_msg_t *) user_data)-&gt;edit;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2779'>WEdit</a>            2779 src/editor/editcmd.c edit_search_cmd (WEdit * edit, gboolean again)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2845'>WEdit</a>            2845 src/editor/editcmd.c edit_ok_to_exit (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2906'>WEdit</a>            2906 src/editor/editcmd.c edit_save_block (WEdit * edit, const char *filename, off_t start, off_t finish)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2966'>WEdit</a>            2966 src/editor/editcmd.c edit_paste_from_history (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2975'>WEdit</a>            2975 src/editor/editcmd.c edit_copy_to_X_buf_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2999'>WEdit</a>            2999 src/editor/editcmd.c edit_cut_to_X_buf_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3023'>WEdit</a>            3023 src/editor/editcmd.c edit_paste_from_X_buf_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3044'>WEdit</a>            3044 src/editor/editcmd.c edit_goto_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3082'>WEdit</a>            3082 src/editor/editcmd.c edit_save_block_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3118'>WEdit</a>            3118 src/editor/editcmd.c edit_insert_file_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3153'>WEdit</a>            3153 src/editor/editcmd.c edit_sort_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3225'>WEdit</a>            3225 src/editor/editcmd.c edit_ext_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3271'>WEdit</a>            3271 src/editor/editcmd.c edit_block_process_cmd (WEdit * edit, int macro_number)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3287'>WEdit</a>            3287 src/editor/editcmd.c edit_mail_dialog (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3335'>WEdit</a>            3335 src/editor/editcmd.c edit_complete_word_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3397'>WEdit</a>            3397 src/editor/editcmd.c edit_select_codepage_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3410'>WEdit</a>            3410 src/editor/editcmd.c edit_insert_literal_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3422'>WEdit</a>            3422 src/editor/editcmd.c edit_begin_end_macro_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3435'>WEdit</a>            3435 src/editor/editcmd.c edit_begin_end_repeat_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3448'>WEdit</a>            3448 src/editor/editcmd.c edit_load_forward_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3477'>WEdit</a>            3477 src/editor/editcmd.c edit_load_back_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3504'>WEdit</a>            3504 src/editor/editcmd.c edit_get_match_keyword_cmd (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3570'>WEdit</a>            3570 src/editor/editcmd.c edit_suggest_current_word (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3660'>WEdit</a>            3660 src/editor/editcmd.c edit_spellcheck_file (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L92'>WEdit</a>              92 src/editor/editcmd_dialogs.c editcmd_dialog_search_show (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L188'>WEdit</a>             188 src/editor/editcmd_dialogs.c editcmd_dialog_replace_show (WEdit * edit, const char *search_default, const char *replace_default,</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L246'>WEdit</a>             246 src/editor/editcmd_dialogs.c editcmd_dialog_replace_prompt_show (WEdit * edit, char *from_text, char *to_text, int xpos,</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L348'>WEdit</a>             348 src/editor/editcmd_dialogs.c editcmd_dialog_completion_show (const WEdit * edit, int max_len, GString ** compl, int num_compl)</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L414'>WEdit</a>             414 src/editor/editcmd_dialogs.c editcmd_dialog_select_definition_show (WEdit * edit, char *match_expr, int max_len, int word_len,</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.h.html#L22'>WEdit</a>              22 src/editor/editcmd_dialogs.h void editcmd_dialog_replace_show (WEdit *, const char *, const char *, char **, char **);</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.h.html#L24'>WEdit</a>              24 src/editor/editcmd_dialogs.h gboolean editcmd_dialog_search_show (WEdit * edit);</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.h.html#L28'>WEdit</a>              28 src/editor/editcmd_dialogs.h char *editcmd_dialog_completion_show (const WEdit * edit, int max_len, GString ** compl,</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.h.html#L31'>WEdit</a>              31 src/editor/editcmd_dialogs.h void editcmd_dialog_select_definition_show (WEdit *, char *, int, int, struct etags_hash_struct *,</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.h.html#L34'>WEdit</a>              34 src/editor/editcmd_dialogs.h int editcmd_dialog_replace_prompt_show (WEdit *, char *, char *, int, int);</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L107'>WEdit</a>             107 src/editor/editdraw.c status_string (WEdit * edit, char *s, int w)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L196'>WEdit</a>             196 src/editor/editdraw.c edit_status_fullscreen (WEdit * edit, int color)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L258'>WEdit</a>             258 src/editor/editdraw.c edit_status_window (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L349'>WEdit</a>             349 src/editor/editdraw.c edit_draw_frame (const WEdit * edit, int color, gboolean active)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L375'>WEdit</a>             375 src/editor/editdraw.c edit_draw_window_icons (const WEdit * edit, int color)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L392'>WEdit</a>             392 src/editor/editdraw.c print_to_widget (WEdit * edit, long row, int start_col, int start_col_real,</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L511'>WEdit</a>             511 src/editor/editdraw.c edit_draw_this_line (WEdit * edit, off_t b, long row, long start_col, long end_col)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L842'>WEdit</a>             842 src/editor/editdraw.c edit_draw_this_char (WEdit * edit, off_t curs, long row, long start_column, long end_column)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L853'>WEdit</a>             853 src/editor/editdraw.c render_edit_text (WEdit * edit, long start_row, long start_column, long end_row, long end_column)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1022'>WEdit</a>            1022 src/editor/editdraw.c edit_render (WEdit * edit, int page, int row_start, int col_start, int row_end, int col_end)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1043'>WEdit</a>            1043 src/editor/editdraw.c edit_status (WEdit * edit, gboolean active)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1067'>WEdit</a>            1067 src/editor/editdraw.c edit_scroll_screen_over_cursor (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editdraw.c.html#L1149'>WEdit</a>            1149 src/editor/editdraw.c edit_render_keypress (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editoptions.c.html#L88'>WEdit</a>              88 src/editor/editoptions.c         ((WEdit *) data)-&gt;over_col = 0;</span>
+<span class='curline'><a href='../S/src--editor--editoptions.c.html#L107'>WEdit</a>             107 src/editor/editoptions.c         WEdit *edit = (WEdit *) data;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L196'>WEdit</a>             196 src/editor/editwidget.c     if (edit_widget_is_editor (w) &amp;&amp; ((WEdit *) w)-&gt;fullscreen)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L213'>WEdit</a>             213 src/editor/editwidget.c edit_restore_size (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L232'>WEdit</a>             232 src/editor/editwidget.c edit_window_move (WEdit * edit, long command)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L272'>WEdit</a>             272 src/editor/editwidget.c edit_window_resize (WEdit * edit, long command)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L338'>WEdit</a>             338 src/editor/editwidget.c             WEdit *e = (WEdit *) w-&gt;data;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L389'>WEdit</a>             389 src/editor/editwidget.c     const WEdit *edit = find_editor (h);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L432'>WEdit</a>             432 src/editor/editwidget.c             edit_close_cmd ((WEdit *) h-&gt;current-&gt;data) &amp;&amp; find_editor (h) == NULL)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L448'>WEdit</a>             448 src/editor/editwidget.c             if (edit_widget_is_editor (w) &amp;&amp; ((WEdit *) w)-&gt;drag_state != MCEDIT_DRAG_NONE)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L449'>WEdit</a>             449 src/editor/editwidget.c                 edit_restore_size ((WEdit *) w);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L481'>WEdit</a>             481 src/editor/editwidget.c             edit_handle_move_resize ((WEdit *) h-&gt;current-&gt;data, command);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L518'>WEdit</a>             518 src/editor/editwidget.c edit_translate_key (WEdit * edit, long x_key, int *cmd, int *ch)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L642'>WEdit</a>             642 src/editor/editwidget.c     WEdit *e = NULL;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L650'>WEdit</a>             650 src/editor/editwidget.c             e = (WEdit *) l-&gt;data;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L675'>WEdit</a>             675 src/editor/editwidget.c edit_set_buttonbar (WEdit * edit, WButtonBar * bb)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L692'>WEdit</a>             692 src/editor/editwidget.c edit_total_update (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L703'>WEdit</a>             703 src/editor/editwidget.c edit_update_cursor (WEdit * edit, const mouse_event_t * event)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L816'>WEdit</a>             816 src/editor/editwidget.c                 WEdit *e = (WEdit *) we;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L896'>WEdit</a>             896 src/editor/editwidget.c                     &amp;&amp; ((WEdit *) l-&gt;data)-&gt;fullscreen)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L904'>WEdit</a>             904 src/editor/editwidget.c                 WEdit *e = (WEdit *) top-&gt;data;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L935'>WEdit</a>             935 src/editor/editwidget.c     WEdit *e = (WEdit *) w;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1013'>WEdit</a>            1013 src/editor/editwidget.c     WEdit *edit = (WEdit *) (w);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1071'>WEdit</a>            1071 src/editor/editwidget.c     WEdit *edit = (WEdit *) w;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1263'>WEdit</a>            1263 src/editor/editwidget.c edit_get_file_name (const WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1270'>WEdit</a>            1270 src/editor/editwidget.c WEdit *</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1274'>WEdit</a>            1274 src/editor/editwidget.c         return (WEdit *) h-&gt;current-&gt;data;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1275'>WEdit</a>            1275 src/editor/editwidget.c     return (WEdit *) find_widget_type (h, edit_callback);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1295'>WEdit</a>            1295 src/editor/editwidget.c edit_update_screen (WEdit * e)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1324'>WEdit</a>            1324 src/editor/editwidget.c edit_save_size (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1352'>WEdit</a>            1352 src/editor/editwidget.c     WEdit *edit;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1379'>WEdit</a>            1379 src/editor/editwidget.c edit_handle_move_resize (WEdit * edit, long command)</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L1494'>WEdit</a>            1494 src/editor/editwidget.c edit_toggle_fullscreen (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L125'>WEdit</a>             125 src/editor/format.c begin_paragraph (WEdit * edit, gboolean force, long *lines)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L150'>WEdit</a>             150 src/editor/format.c end_paragraph (WEdit * edit, gboolean force)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L362'>WEdit</a>             362 src/editor/format.c replace_at (WEdit * edit, off_t q, int c)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L372'>WEdit</a>             372 src/editor/format.c edit_indent_width (const WEdit * edit, off_t p)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L387'>WEdit</a>             387 src/editor/format.c edit_insert_indent (WEdit * edit, long indent)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L404'>WEdit</a>             404 src/editor/format.c put_paragraph (WEdit * edit, unsigned char *t, off_t p, long indent, off_t size)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L456'>WEdit</a>             456 src/editor/format.c test_indent (const WEdit * edit, off_t p, off_t q)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L476'>WEdit</a>             476 src/editor/format.c format_paragraph (WEdit * edit, gboolean force)</span>
+<span class='curline'><a href='../S/src--editor--spell_dialogs.c.html#L63'>WEdit</a>              63 src/editor/spell_dialogs.c spell_dialog_spell_suggest_show (WEdit * edit, const char *word, char **new_word, GArray * suggest)</span>
+<span class='curline'><a href='../S/src--editor--spell_dialogs.h.html#L19'>WEdit</a>              19 src/editor/spell_dialogs.h int spell_dialog_spell_suggest_show (WEdit * edit, const char *word, char **new_word,</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L205'>WEdit</a>             205 src/editor/syntax.c xx_tolower (const WEdit * edit, int c)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L254'>WEdit</a>             254 src/editor/syntax.c compare_word_to_right (const WEdit * edit, off_t i, const char *text,</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L365'>WEdit</a>             365 src/editor/syntax.c xx_strchr (const WEdit * edit, const unsigned char *s, int char_byte)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L376'>WEdit</a>             376 src/editor/syntax.c apply_rules_going_right (WEdit * edit, off_t i)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L573'>WEdit</a>             573 src/editor/syntax.c edit_get_rule (WEdit * edit, off_t byte_index)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L633'>WEdit</a>             633 src/editor/syntax.c translate_rule_to_color (const WEdit * edit, const edit_syntax_rule_t * rule)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L908'>WEdit</a>             908 src/editor/syntax.c xx_lowerize_line (WEdit * edit, char *line, size_t len)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L922'>WEdit</a>             922 src/editor/syntax.c edit_read_syntax_rules (WEdit * edit, FILE * f, char **args, int args_size)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1258'>WEdit</a>            1258 src/editor/syntax.c edit_read_syntax_file (WEdit * edit, GPtrArray * pnames, const char *syntax_file,</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1387'>WEdit</a>            1387 src/editor/syntax.c get_first_editor_line (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1418'>WEdit</a>            1418 src/editor/syntax.c edit_get_syntax_color (WEdit * edit, off_t byte_index)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1435'>WEdit</a>            1435 src/editor/syntax.c edit_free_syntax_rules (WEdit * edit)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1465'>WEdit</a>            1465 src/editor/syntax.c edit_load_syntax (WEdit * edit, GPtrArray * pnames, const char *type)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1518'>WEdit</a>            1518 src/editor/syntax.c edit_get_syntax_type (const WEdit * edit)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L218'>WEdit</a>             218 src/filemanager/usermenu.c test_condition (const WEdit * edit_widget, char *p, gboolean * condition)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L359'>WEdit</a>             359 src/filemanager/usermenu.c test_line (const WEdit * edit_widget, char *p, gboolean * result)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L425'>WEdit</a>             425 src/filemanager/usermenu.c execute_menu_command (const WEdit * edit_widget, const char *commands, gboolean show_prompt)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L732'>WEdit</a>             732 src/filemanager/usermenu.c expand_format (const WEdit * edit_widget, char c, gboolean do_quote)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.c.html#L918'>WEdit</a>             918 src/filemanager/usermenu.c user_menu_cmd (const WEdit * edit_widget, const char *menu_file, int selected_entry)</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.h.html#L22'>WEdit</a>              22 src/filemanager/usermenu.h gboolean user_menu_cmd (const WEdit * edit_widget, const char *menu_file, int selected_entry);</span>
+<span class='curline'><a href='../S/src--filemanager--usermenu.h.html#L23'>WEdit</a>              23 src/filemanager/usermenu.h char *expand_format (const WEdit * edit_widget, char c, gboolean do_quote);</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L46'>WEdit</a>              46 tests/src/editor/editcmd__edit_complete_word_cmd.c static WEdit *test_edit;</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L51'>WEdit</a>              51 tests/src/editor/editcmd__edit_complete_word_cmd.c edit_load_syntax (WEdit * _edit, GPtrArray * _pnames, const char *_type)</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L62'>WEdit</a>              62 tests/src/editor/editcmd__edit_complete_word_cmd.c edit_get_syntax_color (WEdit * _edit, off_t _byte_index)</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L74'>WEdit</a>              74 tests/src/editor/editcmd__edit_complete_word_cmd.c edit_load_macro_cmd (WEdit * _edit)</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L84'>WEdit</a>              84 tests/src/editor/editcmd__edit_complete_word_cmd.c static const WEdit *editcmd_dialog_completion_show__edit;</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L97'>WEdit</a>              97 tests/src/editor/editcmd__edit_complete_word_cmd.c editcmd_dialog_completion_show (const WEdit * edit, int max_len, GString ** compl, int num_compl)</span>
+<span class='curline'><a href='../S/tests--src--filemanager--examine_cd.c.html#L74'>WEdit</a>              74 tests/src/filemanager/examine_cd.c expand_format (const WEdit * edit_widget, char c, gboolean do_quote)</span>
+</pre>
+</body>
+</html>

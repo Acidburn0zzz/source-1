@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>widgets</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L95'>widgets</a>            95 lib/widget/dialog.c         next = h-&gt;widgets;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L109'>widgets</a>           109 lib/widget/dialog.c         prev = g_list_last (h-&gt;widgets);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L126'>widgets</a>           126 lib/widget/dialog.c     if (h-&gt;widgets == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L130'>widgets</a>           130 lib/widget/dialog.c         h-&gt;current = h-&gt;widgets;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L240'>widgets</a>           240 lib/widget/dialog.c             h-&gt;current = g_list_find (h-&gt;widgets, w0);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L410'>widgets</a>           410 lib/widget/dialog.c     p = g_list_last (h-&gt;widgets);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L442'>widgets</a>           442 lib/widget/dialog.c     if (h-&gt;widgets == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L446'>widgets</a>           446 lib/widget/dialog.c         h-&gt;current = h-&gt;widgets;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L507'>widgets</a>           507 lib/widget/dialog.c     if (h-&gt;widgets == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L511'>widgets</a>           511 lib/widget/dialog.c         h-&gt;current = h-&gt;widgets;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L622'>widgets</a>           622 lib/widget/dialog.c     l = g_list_find (h-&gt;widgets, w);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L631'>widgets</a>           631 lib/widget/dialog.c     h-&gt;widgets = g_list_remove_link (h-&gt;widgets, l);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L633'>widgets</a>           633 lib/widget/dialog.c         h-&gt;widgets = g_list_concat (h-&gt;widgets, l);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L635'>widgets</a>           635 lib/widget/dialog.c         h-&gt;widgets = g_list_concat (l, h-&gt;widgets);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L691'>widgets</a>           691 lib/widget/dialog.c     if (h-&gt;widgets == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L695'>widgets</a>           695 lib/widget/dialog.c         h-&gt;current = h-&gt;widgets;</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L707'>widgets</a>           707 lib/widget/dialog.c         for (w = h-&gt;widgets; w != NULL; w = g_list_next (w))</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L955'>widgets</a>           955 lib/widget/dialog.c     if (h-&gt;widgets == NULL || before == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L957'>widgets</a>           957 lib/widget/dialog.c         h-&gt;widgets = g_list_append (h-&gt;widgets, widget);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L958'>widgets</a>           958 lib/widget/dialog.c         h-&gt;current = g_list_last (h-&gt;widgets);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L964'>widgets</a>           964 lib/widget/dialog.c         b = g_list_find (h-&gt;widgets, before);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L971'>widgets</a>           971 lib/widget/dialog.c         h-&gt;widgets = g_list_insert_before (h-&gt;widgets, b, widget);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L975'>widgets</a>           975 lib/widget/dialog.c             h-&gt;current = g_list_last (h-&gt;widgets);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1022'>widgets</a>          1022 lib/widget/dialog.c     d = g_list_find (h-&gt;widgets, w);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1026'>widgets</a>          1026 lib/widget/dialog.c     h-&gt;widgets = g_list_remove_link (h-&gt;widgets, d);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1107'>widgets</a>          1107 lib/widget/dialog.c     w = g_list_find_custom (h-&gt;widgets, (gconstpointer) callback, dlg_find_widget_callback);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1120'>widgets</a>          1120 lib/widget/dialog.c     w = g_list_find_custom (h-&gt;widgets, GUINT_TO_POINTER (id), dlg_find_widget_by_id);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1151'>widgets</a>          1151 lib/widget/dialog.c         do_select_widget (h, g_list_find (h-&gt;widgets, widget), SELECT_EXACT);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1171'>widgets</a>          1171 lib/widget/dialog.c     if (h-&gt;widgets != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1181'>widgets</a>          1181 lib/widget/dialog.c     if (h-&gt;widgets != NULL)</span>
+<span class='curline'><a href='../S/lib--widget--dialog.c.html#L1344'>widgets</a>          1344 lib/widget/dialog.c     g_list_free_full (h-&gt;widgets, g_free);</span>
+<span class='curline'><a href='../S/lib--widget--dialog.h.html#L77'>widgets</a>            77 lib/widget/dialog.h     GList *widgets;             /* widgets list */</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L267'>widgets</a>           267 lib/widget/menu.c     h-&gt;current = g_list_find (h-&gt;widgets, dlg_find_by_id (h, menubar-&gt;previous_widget));</span>
+<span class='curline'><a href='../S/lib--widget--menu.c.html#L274'>widgets</a>           274 lib/widget/menu.c     h-&gt;current = g_list_find (h-&gt;widgets, menubar);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L85'>widgets</a>            85 lib/widget/quick.c quick_create_labeled_input (GArray * widgets, int *y, int x, quick_widget_t * quick_widget,</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L102'>widgets</a>           102 lib/widget/quick.c         g_array_append_val (widgets, label);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L106'>widgets</a>           106 lib/widget/quick.c         g_array_append_val (widgets, in);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L113'>widgets</a>           113 lib/widget/quick.c         g_array_append_val (widgets, label);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L117'>widgets</a>           117 lib/widget/quick.c         g_array_append_val (widgets, in);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L125'>widgets</a>           125 lib/widget/quick.c         g_array_append_val (widgets, in);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L130'>widgets</a>           130 lib/widget/quick.c         g_array_append_val (widgets, label);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L138'>widgets</a>           138 lib/widget/quick.c         g_array_append_val (widgets, in);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L142'>widgets</a>           142 lib/widget/quick.c         g_array_append_val (widgets, label);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L180'>widgets</a>           180 lib/widget/quick.c     GArray *widgets;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L195'>widgets</a>           195 lib/widget/quick.c     widgets = g_array_sized_new (FALSE, FALSE, sizeof (quick_widget_item_t), 8);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L197'>widgets</a>           197 lib/widget/quick.c     for (quick_widget = quick_dlg-&gt;widgets; quick_widget-&gt;widget_type != quick_end; quick_widget++)</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L209'>widgets</a>           209 lib/widget/quick.c             g_array_append_val (widgets, item);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L226'>widgets</a>           226 lib/widget/quick.c             g_array_append_val (widgets, item);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L241'>widgets</a>           241 lib/widget/quick.c                 quick_create_labeled_input (widgets, &amp;y, x, quick_widget, &amp;width);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L247'>widgets</a>           247 lib/widget/quick.c                 g_array_append_val (widgets, item);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L260'>widgets</a>           260 lib/widget/quick.c             g_array_append_val (widgets, item);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L286'>widgets</a>           286 lib/widget/quick.c                 g_array_append_val (widgets, item);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L303'>widgets</a>           303 lib/widget/quick.c             g_array_append_val (widgets, item);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L316'>widgets</a>           316 lib/widget/quick.c                 g_array_append_val (widgets, item);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L325'>widgets</a>           325 lib/widget/quick.c                 g_array_append_val (widgets, item);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L331'>widgets</a>           331 lib/widget/quick.c             g_array_append_val (widgets, item);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L344'>widgets</a>           344 lib/widget/quick.c             g_array_append_val (widgets, item);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L358'>widgets</a>           358 lib/widget/quick.c             g_array_append_val (widgets, item);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L371'>widgets</a>           371 lib/widget/quick.c                 g_array_append_val (widgets, item);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L423'>widgets</a>           423 lib/widget/quick.c     for (i = 0; i &lt; widgets-&gt;len; i++)</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L428'>widgets</a>           428 lib/widget/quick.c         item = &amp;g_array_index (widgets, quick_widget_item_t, i);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L577'>widgets</a>           577 lib/widget/quick.c             dd-&gt;current = dd-&gt;widgets;</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L584'>widgets</a>           584 lib/widget/quick.c         for (i = 0; i &lt; widgets-&gt;len; i++)</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L588'>widgets</a>           588 lib/widget/quick.c             item = &amp;g_array_index (widgets, quick_widget_item_t, i);</span>
+<span class='curline'><a href='../S/lib--widget--quick.c.html#L616'>widgets</a>           616 lib/widget/quick.c     g_array_free (widgets, TRUE);</span>
+<span class='curline'><a href='../S/lib--widget--quick.h.html#L337'>widgets</a>           337 lib/widget/quick.h     quick_widget_t *widgets;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L351'>widgets</a>           351 lib/widget/widget-common.c     if (h-&gt;widgets == NULL)</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L355'>widgets</a>           355 lib/widget/widget-common.c         h-&gt;current = h-&gt;widgets;</span>
+<span class='curline'><a href='../S/lib--widget--widget-common.c.html#L366'>widgets</a>           366 lib/widget/widget-common.c         g_list_find (h-&gt;widgets, old_w)-&gt;data = new_w;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1576'>widgets</a>          1576 src/editor/editcmd.c     g_list_foreach (h-&gt;widgets, edit_syntax_onoff_cb, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1591'>widgets</a>          1591 src/editor/editcmd.c     g_list_foreach (h-&gt;widgets, edit_redraw_page_cb, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1606'>widgets</a>          1606 src/editor/editcmd.c     g_list_foreach (h-&gt;widgets, edit_redraw_page_cb, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1622'>widgets</a>          1622 src/editor/editcmd.c     g_list_foreach (h-&gt;widgets, edit_redraw_page_cb, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editoptions.c.html#L200'>widgets</a>           200 src/editor/editoptions.c         g_list_foreach (h-&gt;widgets, edit_reset_over_col, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editoptions.c.html#L236'>widgets</a>           236 src/editor/editoptions.c         g_list_foreach (h-&gt;widgets, edit_reload_syntax, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L323'>widgets</a>           323 src/editor/editwidget.c     const size_t dlg_num = g_list_length (h-&gt;widgets) - offset;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L335'>widgets</a>           335 src/editor/editwidget.c     for (w = h-&gt;widgets; w != NULL; w = g_list_next (w))</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L353'>widgets</a>           353 src/editor/editwidget.c     rv = g_list_position (h-&gt;widgets, h-&gt;current) - offset;</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L358'>widgets</a>           358 src/editor/editwidget.c         w = g_list_nth (h-&gt;widgets, rv + offset);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L647'>widgets</a>           647 src/editor/editwidget.c     for (l = h-&gt;widgets; l != NULL; l = g_list_next (l))</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L790'>widgets</a>           790 src/editor/editwidget.c         g_list_foreach (h-&gt;widgets, (GFunc) edit_dialog_resize_cb, NULL);</span>
+<span class='curline'><a href='../S/src--editor--editwidget.c.html#L894'>widgets</a>           894 src/editor/editwidget.c             for (l = h-&gt;widgets; l != NULL; l = g_list_next (l))</span>
+</pre>
+</body>
+</html>

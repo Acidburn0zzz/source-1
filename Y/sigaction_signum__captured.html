@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>sigaction_signum__captured</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L49'>sigaction_signum__captured</a>   49 tests/lib/utilunix__my_system-common.c static GPtrArray *sigaction_signum__captured = NULL;</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L67'>sigaction_signum__captured</a>   67 tests/lib/utilunix__my_system-common.c     if (sigaction_signum__captured != NULL)</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L68'>sigaction_signum__captured</a>   68 tests/lib/utilunix__my_system-common.c         g_ptr_array_add (sigaction_signum__captured, tmp_signum);</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L98'>sigaction_signum__captured</a>   98 tests/lib/utilunix__my_system-common.c     sigaction_signum__captured = g_ptr_array_new ();</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L106'>sigaction_signum__captured</a>  106 tests/lib/utilunix__my_system-common.c     g_ptr_array_foreach (sigaction_signum__captured, (GFunc) g_free, NULL);</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L107'>sigaction_signum__captured</a>  107 tests/lib/utilunix__my_system-common.c     g_ptr_array_free (sigaction_signum__captured, TRUE);</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L243'>sigaction_signum__captured</a>  243 tests/lib/utilunix__my_system-common.c     mctest_assert_int_eq (sigaction_signum__captured-&gt;len, 6); \</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L245'>sigaction_signum__captured</a>  245 tests/lib/utilunix__my_system-common.c     mctest_assert_int_eq (*((int *) g_ptr_array_index(sigaction_signum__captured, 0)), SIGINT); \</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L246'>sigaction_signum__captured</a>  246 tests/lib/utilunix__my_system-common.c     mctest_assert_int_eq (*((int *) g_ptr_array_index(sigaction_signum__captured, 1)), SIGQUIT); \</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L247'>sigaction_signum__captured</a>  247 tests/lib/utilunix__my_system-common.c     mctest_assert_int_eq (*((int *) g_ptr_array_index(sigaction_signum__captured, 2)), SIGTSTP); \</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L248'>sigaction_signum__captured</a>  248 tests/lib/utilunix__my_system-common.c     mctest_assert_int_eq (*((int *) g_ptr_array_index(sigaction_signum__captured, 3)), SIGINT); \</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L249'>sigaction_signum__captured</a>  249 tests/lib/utilunix__my_system-common.c     mctest_assert_int_eq (*((int *) g_ptr_array_index(sigaction_signum__captured, 4)), SIGQUIT); \</span>
+<span class='curline'><a href='../S/tests--lib--utilunix__my_system-common.c.html#L250'>sigaction_signum__captured</a>  250 tests/lib/utilunix__my_system-common.c     mctest_assert_int_eq (*((int *) g_ptr_array_index(sigaction_signum__captured, 5)), SIGTSTP); \</span>
+</pre>
+</body>
+</html>

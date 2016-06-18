@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>st_rdev</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L995'>st_rdev</a>           995 lib/vfs/direntry.c     st.st_rdev = 0;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L774'>st_rdev</a>           774 lib/vfs/parse_ls_vga.c         s-&gt;st_rdev = makedev (maj, min);</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L787'>st_rdev</a>           787 lib/vfs/parse_ls_vga.c         s-&gt;st_rdev = 0;</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L189'>st_rdev</a>           189 src/consaver/cons.saver.c     if ((st.st_rdev &amp; 0xff00) != 0x0400)</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L191'>st_rdev</a>           191 src/consaver/cons.saver.c     console_minor = (int) (st.st_rdev &amp; 0x00ff);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1597'>st_rdev</a>          1597 src/filemanager/file.c             while (mc_mknod (dst_vpath, src_stat.st_mode &amp; ctx-&gt;umask_kill, src_stat.st_rdev) &lt; 0</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L231'>st_rdev</a>           231 src/filemanager/info.c                         (unsigned long) major (st.st_rdev), (unsigned long) minor (st.st_rdev));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L515'>st_rdev</a>           515 src/filemanager/panel.c         format_device_number (buffer, len + 1, fe-&gt;st.st_rdev);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L391'>st_rdev</a>           391 src/vfs/cpio/cpio.c         if ((st-&gt;st_size != 0) &amp;&amp; (st-&gt;st_rdev == 0x0001))</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L395'>st_rdev</a>           395 src/vfs/cpio/cpio.c             st-&gt;st_rdev = (unsigned) st-&gt;st_size;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L586'>st_rdev</a>           586 src/vfs/cpio/cpio.c     st.st_rdev = u.buf.c_rdev;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L653'>st_rdev</a>           653 src/vfs/cpio/cpio.c     u.st.st_rdev = hd.c_rdev;</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L729'>st_rdev</a>           729 src/vfs/cpio/cpio.c     u.st.st_rdev = makedev (hd.c_rdev, hd.c_rdevmin);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L590'>st_rdev</a>           590 src/vfs/extfs/extfs.c                     inode-&gt;rdev = hstat.st_rdev;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1092'>st_rdev</a>          1092 src/vfs/extfs/extfs.c     buf-&gt;st_rdev = inode-&gt;rdev;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L829'>st_rdev</a>           829 src/vfs/fish/fish.c                 ST.st_rdev = makedev (maj, min);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L404'>st_rdev</a>           404 src/vfs/tar/tar.c     st-&gt;st_rdev = 0;</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L423'>st_rdev</a>           423 src/vfs/tar/tar.c             st-&gt;st_rdev =</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L122'>st_rdev</a>           122 tests/lib/vfs/vfs_parse_ls_lga.c         etalon_stat-&gt;st_rdev = 0;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L137'>st_rdev</a>           137 tests/lib/vfs/vfs_parse_ls_lga.c         etalon_stat-&gt;st_rdev = 0;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L152'>st_rdev</a>           152 tests/lib/vfs/vfs_parse_ls_lga.c         etalon_stat-&gt;st_rdev = 0;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L167'>st_rdev</a>           167 tests/lib/vfs/vfs_parse_ls_lga.c         etalon_stat-&gt;st_rdev = 0;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L260'>st_rdev</a>           260 tests/lib/vfs/vfs_parse_ls_lga.c     mctest_assert_int_eq (etalon_stat.st_rdev, test_stat.st_rdev);</span>
+</pre>
+</body>
+</html>

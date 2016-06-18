@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>session</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L178'>session</a>           178 src/vfs/sftpfs/connection.c     userauthlist = libssh2_userauth_list (super_data-&gt;session, super-&gt;path_element-&gt;user,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L218'>session</a>           218 src/vfs/sftpfs/connection.c     super_data-&gt;agent = libssh2_agent_init (super_data-&gt;session);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L272'>session</a>           272 src/vfs/sftpfs/connection.c     if (libssh2_userauth_publickey_fromfile (super_data-&gt;session, super-&gt;path_element-&gt;user,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L285'>session</a>           285 src/vfs/sftpfs/connection.c         ret_value = (libssh2_userauth_publickey_fromfile (super_data-&gt;session,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L321'>session</a>           321 src/vfs/sftpfs/connection.c         while ((rc = libssh2_userauth_password (super_data-&gt;session, super-&gt;path_element-&gt;user,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L336'>session</a>           336 src/vfs/sftpfs/connection.c         while ((rc = libssh2_userauth_password (super_data-&gt;session, super-&gt;path_element-&gt;user,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L383'>session</a>           383 src/vfs/sftpfs/connection.c     super_data-&gt;session = libssh2_session_init ();</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L384'>session</a>           384 src/vfs/sftpfs/connection.c     if (super_data-&gt;session == NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L391'>session</a>           391 src/vfs/sftpfs/connection.c     rc = libssh2_session_startup (super_data-&gt;session, super_data-&gt;socket_handle);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L393'>session</a>           393 src/vfs/sftpfs/connection.c     rc = libssh2_session_handshake (super_data-&gt;session,</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L407'>session</a>           407 src/vfs/sftpfs/connection.c     super_data-&gt;fingerprint = libssh2_hostkey_hash (super_data-&gt;session, LIBSSH2_HOSTKEY_HASH_SHA1);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L416'>session</a>           416 src/vfs/sftpfs/connection.c     super_data-&gt;sftp_session = libssh2_sftp_init (super_data-&gt;session);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L422'>session</a>           422 src/vfs/sftpfs/connection.c     libssh2_session_set_blocking (super_data-&gt;session, 1);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L463'>session</a>           463 src/vfs/sftpfs/connection.c     if (super_data-&gt;session != NULL)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L465'>session</a>           465 src/vfs/sftpfs/connection.c         libssh2_session_disconnect (super_data-&gt;session, shutdown_message);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L466'>session</a>           466 src/vfs/sftpfs/connection.c         libssh2_session_free (super_data-&gt;session);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L467'>session</a>           467 src/vfs/sftpfs/connection.c         super_data-&gt;session = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L93'>session</a>            93 src/vfs/sftpfs/dir.c         libssh_errno = libssh2_session_last_errno (super_data-&gt;session);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L138'>session</a>           138 src/vfs/sftpfs/file.c         libssh_errno = libssh2_session_last_errno (super_data-&gt;session);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L67'>session</a>            67 src/vfs/sftpfs/internal.c     libssh2_session_last_error (super_data-&gt;session, &amp;err, &amp;err_len, 1);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L111'>session</a>           111 src/vfs/sftpfs/internal.c     dir = libssh2_session_block_directions (super_data-&gt;session);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L41'>session</a>            41 src/vfs/sftpfs/internal.h     LIBSSH2_SESSION *session;</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>lnk</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L301'>lnk</a>               301 src/filemanager/file.c         const struct link *lnk = (const struct link *) lp-&gt;data;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L303'>lnk</a>               303 src/filemanager/file.c         if (lnk-&gt;vfs == class &amp;&amp; lnk-&gt;ino == ino &amp;&amp; lnk-&gt;dev == dev)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L321'>lnk</a>               321 src/filemanager/file.c     struct link *lnk;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L335'>lnk</a>               335 src/filemanager/file.c         lnk = (struct link *) lp-&gt;data;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L337'>lnk</a>               337 src/filemanager/file.c         if (lnk-&gt;vfs == my_vfs &amp;&amp; lnk-&gt;ino == ino &amp;&amp; lnk-&gt;dev == dev)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L342'>lnk</a>               342 src/filemanager/file.c             lp_name_class = vfs_path_get_last_path_vfs (lnk-&gt;src_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L343'>lnk</a>               343 src/filemanager/file.c             stat_result = mc_stat (lnk-&gt;src_vpath, &amp;link_stat);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L351'>lnk</a>               351 src/filemanager/file.c                 p_class = vfs_path_get_last_path_vfs (lnk-&gt;dst_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L354'>lnk</a>               354 src/filemanager/file.c                     mc_stat (lnk-&gt;dst_vpath, &amp;link_stat) == 0 &amp;&amp;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L355'>lnk</a>               355 src/filemanager/file.c                     mc_link (lnk-&gt;dst_vpath, dst_vpath) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L364'>lnk</a>               364 src/filemanager/file.c     lnk = g_new0 (struct link, 1);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L365'>lnk</a>               365 src/filemanager/file.c     if (lnk != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L367'>lnk</a>               367 src/filemanager/file.c         lnk-&gt;vfs = my_vfs;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L368'>lnk</a>               368 src/filemanager/file.c         lnk-&gt;ino = ino;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L369'>lnk</a>               369 src/filemanager/file.c         lnk-&gt;dev = dev;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L370'>lnk</a>               370 src/filemanager/file.c         lnk-&gt;src_vpath = vfs_path_clone (src_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L371'>lnk</a>               371 src/filemanager/file.c         lnk-&gt;dst_vpath = vfs_path_clone (dst_vpath);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L372'>lnk</a>               372 src/filemanager/file.c         linklist = g_slist_prepend (linklist, lnk);</span>
+</pre>
+</body>
+</html>

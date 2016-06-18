@@ -1,0 +1,556 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>str</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--charsets.c.html#L342'>str</a>               342 lib/charsets.c convert_to_display (char *str)</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L344'>str</a>               344 lib/charsets.c     if (!str)</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L347'>str</a>               347 lib/charsets.c     while (*str)</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L349'>str</a>               349 lib/charsets.c         *str = conv_displ[(unsigned char) *str];</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L350'>str</a>               350 lib/charsets.c         str++;</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L357'>str</a>               357 lib/charsets.c str_convert_to_display (const char *str)</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L359'>str</a>               359 lib/charsets.c     return str_nconvert_to_display (str, -1);</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L366'>str</a>               366 lib/charsets.c str_nconvert_to_display (const char *str, int len)</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L371'>str</a>               371 lib/charsets.c     if (!str)</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L375'>str</a>               375 lib/charsets.c         return g_string_new (str);</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L380'>str</a>               380 lib/charsets.c     str_nconvert (conv, str, len, buff);</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L388'>str</a>               388 lib/charsets.c convert_from_input (char *str)</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L390'>str</a>               390 lib/charsets.c     if (!str)</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L393'>str</a>               393 lib/charsets.c     while (*str)</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L395'>str</a>               395 lib/charsets.c         *str = conv_input[(unsigned char) *str];</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L396'>str</a>               396 lib/charsets.c         str++;</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L403'>str</a>               403 lib/charsets.c str_convert_to_input (const char *str)</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L405'>str</a>               405 lib/charsets.c     return str_nconvert_to_input (str, -1);</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L411'>str</a>               411 lib/charsets.c str_nconvert_to_input (const char *str, int len)</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L416'>str</a>               416 lib/charsets.c     if (!str)</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L420'>str</a>               420 lib/charsets.c         return g_string_new (str);</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L425'>str</a>               425 lib/charsets.c     str_nconvert (conv, str, len, buff);</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L433'>str</a>               433 lib/charsets.c convert_from_utf_to_current (const char *str)</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L440'>str</a>               440 lib/charsets.c     if (str == NULL)</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L448'>str</a>               448 lib/charsets.c         switch (str_translate_char (conv, str, -1, (char *) buf_ch, sizeof (buf_ch)))</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L471'>str</a>               471 lib/charsets.c     unsigned char str[UTF8_CHAR_LEN + 1];</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L476'>str</a>               476 lib/charsets.c     res = g_unichar_to_utf8 (input_char, (char *) str);</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L480'>str</a>               480 lib/charsets.c     str[res] = '\0';</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L482'>str</a>               482 lib/charsets.c     switch (str_translate_char (conv, (char *) str, -1, (char *) buf_ch, sizeof (buf_ch)))</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L503'>str</a>               503 lib/charsets.c     unsigned char str[2];</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L507'>str</a>               507 lib/charsets.c     str[0] = (unsigned char) input_char;</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L508'>str</a>               508 lib/charsets.c     str[1] = '\0';</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L510'>str</a>               510 lib/charsets.c     switch (str_translate_char (conv, (char *) str, -1, (char *) buf_ch, sizeof (buf_ch)))</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L535'>str</a>               535 lib/charsets.c     unsigned char str[2];</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L540'>str</a>               540 lib/charsets.c     str[0] = (unsigned char) input_char;</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L541'>str</a>               541 lib/charsets.c     str[1] = '\0';</span>
+<span class='curline'><a href='../S/lib--charsets.c.html#L550'>str</a>               550 lib/charsets.c         switch (str_translate_char (conv, (char *) str, -1, (char *) buf_ch, sizeof (buf_ch)))</span>
+<span class='curline'><a href='../S/lib--charsets.h.html#L37'>str</a>                37 lib/charsets.h void convert_to_display (char *str);</span>
+<span class='curline'><a href='../S/lib--charsets.h.html#L38'>str</a>                38 lib/charsets.h void convert_from_input (char *str);</span>
+<span class='curline'><a href='../S/lib--charsets.h.html#L39'>str</a>                39 lib/charsets.h void convert_string (unsigned char *str);</span>
+<span class='curline'><a href='../S/lib--charsets.h.html#L46'>str</a>                46 lib/charsets.h unsigned char convert_from_utf_to_current (const char *str);</span>
+<span class='curline'><a href='../S/lib--charsets.h.html#L69'>str</a>                69 lib/charsets.h GString *str_convert_to_input (const char *str);</span>
+<span class='curline'><a href='../S/lib--charsets.h.html#L70'>str</a>                70 lib/charsets.h GString *str_nconvert_to_input (const char *str, int len);</span>
+<span class='curline'><a href='../S/lib--charsets.h.html#L72'>str</a>                72 lib/charsets.h GString *str_convert_to_display (const char *str);</span>
+<span class='curline'><a href='../S/lib--charsets.h.html#L73'>str</a>                73 lib/charsets.h GString *str_nconvert_to_display (const char *str, int len);</span>
+<span class='curline'><a href='../S/lib--filehighlight--ini-file-read.c.html#L161'>str</a>               161 lib/filehighlight/ini-file-read.c     mc_filter-&gt;search_condition = mc_search_new_len (buf-&gt;str, buf-&gt;len, DEFAULT_CHARSET);</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L139'>str</a>               139 lib/lock.c     lock_extract_info (const char *str)</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L146'>str</a>               146 lib/lock.c         len = strlen (str);</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L148'>str</a>               148 lib/lock.c         for (p = str + len - 1; p &gt;= str; p--)</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L154'>str</a>               154 lib/lock.c         for (s = str; i &lt; BUF_SIZE &amp;&amp; s &lt; p; s++)</span>
+<span class='curline'><a href='../S/lib--lock.c.html#L162'>str</a>               162 lib/lock.c         for (p = p + 1; i &lt; PID_BUF_SIZE &amp;&amp; p &lt; str + len &amp;&amp; *p != ':'; p++)</span>
+<span class='curline'><a href='../S/lib--search.h.html#L127'>str</a>               127 lib/search.h       const char *str;</span>
+<span class='curline'><a href='../S/lib--search.h.html#L164'>str</a>               164 lib/search.h   gboolean mc_search (const gchar * pattern, const gchar * pattern_charset, const gchar * str,</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L49'>str</a>                49 lib/search/glob.c     const char *str = astr-&gt;str;</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L58'>str</a>                58 lib/search/glob.c         switch (str[loop])</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L61'>str</a>                61 lib/search/glob.c             if (!strutils_is_char_escaped (str, &amp;(str[loop])))</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L68'>str</a>                68 lib/search/glob.c             if (!strutils_is_char_escaped (str, &amp;(str[loop])))</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L75'>str</a>                75 lib/search/glob.c             if (!strutils_is_char_escaped (str, &amp;(str[loop])))</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L82'>str</a>                82 lib/search/glob.c             if (!strutils_is_char_escaped (str, &amp;(str[loop])))</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L90'>str</a>                90 lib/search/glob.c             if (!strutils_is_char_escaped (str, &amp;(str[loop])))</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L108'>str</a>               108 lib/search/glob.c         g_string_append_c (buff, str[loop]);</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L116'>str</a>               116 lib/search/glob.c mc_search__translate_replace_glob_to_regex (const char *str)</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L124'>str</a>               124 lib/search/glob.c     while (*str != '\0')</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L126'>str</a>               126 lib/search/glob.c         char c = *str++;</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L167'>str</a>               167 lib/search/glob.c     tmp = mc_search__glob_translate_to_regex (mc_search_cond-&gt;str);</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L168'>str</a>               168 lib/search/glob.c     g_string_free (mc_search_cond-&gt;str, TRUE);</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L175'>str</a>               175 lib/search/glob.c     mc_search_cond-&gt;str = tmp;</span>
+<span class='curline'><a href='../S/lib--search--glob.c.html#L194'>str</a>               194 lib/search/glob.c     GString *repl = mc_search__translate_replace_glob_to_regex (replace_str-&gt;str);</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L57'>str</a>                57 lib/search/hex.c     tmp_str = g_strndup (astr-&gt;str, astr-&gt;len);</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L122'>str</a>               122 lib/search/hex.c     g_string_ascii_down (mc_search_cond-&gt;str);</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L123'>str</a>               123 lib/search/hex.c     tmp = mc_search__hex_translate_to_regex (mc_search_cond-&gt;str);</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L124'>str</a>               124 lib/search/hex.c     g_string_free (mc_search_cond-&gt;str, TRUE);</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L125'>str</a>               125 lib/search/hex.c     mc_search_cond-&gt;str = tmp;</span>
+<span class='curline'><a href='../S/lib--search--hex.c.html#L145'>str</a>               145 lib/search/hex.c     return g_string_new_len (replace_str-&gt;str, replace_str-&gt;len);</span>
+<span class='curline'><a href='../S/lib--search--internal.h.html#L28'>str</a>                28 lib/search/internal.h     GString *str;</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L61'>str</a>                61 lib/search/lib.c mc_search__recode_str (const char *str, gsize str_len,</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L72'>str</a>                72 lib/search/lib.c         return g_strndup (str, str_len);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L79'>str</a>                79 lib/search/lib.c         return g_strndup (str, str_len);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L82'>str</a>                82 lib/search/lib.c     ret = g_convert_with_iconv (str, str_len, conv, &amp;bytes_read, bytes_written, NULL);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L88'>str</a>                88 lib/search/lib.c         return g_strndup (str, str_len);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L97'>str</a>                97 lib/search/lib.c mc_search__get_one_symbol (const char *charset, const char *str, gsize str_len,</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L111'>str</a>               111 lib/search/lib.c     converted_str = mc_search__recode_str (str, str_len, charset, cp_display, &amp;converted_str_len);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L115'>str</a>               115 lib/search/lib.c     converted_str = g_strndup (str, str_len);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L146'>str</a>               146 lib/search/lib.c mc_search__tolower_case_str (const char *charset, const char *str, gsize str_len)</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L158'>str</a>               158 lib/search/lib.c         mc_search__recode_str (str, str_len, charset, cp_display, &amp;converted_str_len);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L176'>str</a>               176 lib/search/lib.c     const gchar *tmp_str1 = str;</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L182'>str</a>               182 lib/search/lib.c     tmp_str2 = converted_str = g_strndup (str, str_len);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L196'>str</a>               196 lib/search/lib.c mc_search__toupper_case_str (const char *charset, const char *str, gsize str_len)</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L208'>str</a>               208 lib/search/lib.c         mc_search__recode_str (str, str_len, charset, cp_display, &amp;converted_str_len);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L228'>str</a>               228 lib/search/lib.c     const gchar *tmp_str1 = str;</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L234'>str</a>               234 lib/search/lib.c     tmp_str2 = converted_str = g_strndup (str, str_len);</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L261'>str</a>               261 lib/search/lib.c     for (lc_index = 0, type_str = types_str; type_str-&gt;str != NULL; type_str++, lc_index++)</span>
+<span class='curline'><a href='../S/lib--search--lib.c.html#L262'>str</a>               262 lib/search/lib.c         ret[lc_index] = g_strdup (type_str-&gt;str);</span>
+<span class='curline'><a href='../S/lib--search--normal.c.html#L48'>str</a>                48 lib/search/normal.c     const char *str = astr-&gt;str;</span>
+<span class='curline'><a href='../S/lib--search--normal.c.html#L55'>str</a>                55 lib/search/normal.c         switch (str[loop])</span>
+<span class='curline'><a href='../S/lib--search--normal.c.html#L76'>str</a>                76 lib/search/normal.c             g_string_append_c (buff, str[loop]);</span>
+<span class='curline'><a href='../S/lib--search--normal.c.html#L91'>str</a>                91 lib/search/normal.c     tmp = mc_search__normal_translate_to_regex (mc_search_cond-&gt;str);</span>
+<span class='curline'><a href='../S/lib--search--normal.c.html#L92'>str</a>                92 lib/search/normal.c     g_string_free (mc_search_cond-&gt;str, TRUE);</span>
+<span class='curline'><a href='../S/lib--search--normal.c.html#L94'>str</a>                94 lib/search/normal.c     mc_search_cond-&gt;str = tmp;</span>
+<span class='curline'><a href='../S/lib--search--normal.c.html#L112'>str</a>               112 lib/search/normal.c     return g_string_new_len (replace_str-&gt;str, replace_str-&gt;len);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L88'>str</a>                88 lib/search/regex.c     tmp_regex_str = &amp;(regex_str-&gt;str[*offset]);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L97'>str</a>                97 lib/search/regex.c             &amp;&amp; !strutils_is_char_escaped (regex_str-&gt;str, tmp_regex_str))</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L138'>str</a>               138 lib/search/regex.c         if (loop &gt;= low-&gt;len || upp-&gt;str[loop] == low-&gt;str[loop])</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L140'>str</a>               140 lib/search/regex.c                 g_snprintf (tmp_str, sizeof (tmp_str), "\\x%02X", (unsigned char) upp-&gt;str[loop]);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L144'>str</a>               144 lib/search/regex.c                             (unsigned char) upp-&gt;str[loop], (unsigned char) low-&gt;str[loop]);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L171'>str</a>               171 lib/search/regex.c             mc_search__get_one_symbol (charset, &amp;(str_from-&gt;str[loop]),</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L191'>str</a>               191 lib/search/regex.c     g_string_append_len (str_to, recoded_part-&gt;str, recoded_part-&gt;len);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L214'>str</a>               214 lib/search/regex.c             g_string_append_len (ret_str, spec_char-&gt;str, spec_char-&gt;len);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L219'>str</a>               219 lib/search/regex.c         if (astr-&gt;str[loop] == '[' &amp;&amp; !strutils_is_char_escaped (astr-&gt;str, &amp;(astr-&gt;str[loop])))</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L223'>str</a>               223 lib/search/regex.c             while (loop &lt; astr-&gt;len &amp;&amp; !(astr-&gt;str[loop] == ']'</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L224'>str</a>               224 lib/search/regex.c                                          &amp;&amp; !strutils_is_char_escaped (astr-&gt;str,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L225'>str</a>               225 lib/search/regex.c                                                                        &amp;(astr-&gt;str[loop]))))</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L227'>str</a>               227 lib/search/regex.c                 g_string_append_c (ret_str, astr-&gt;str[loop]);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L231'>str</a>               231 lib/search/regex.c             g_string_append_c (ret_str, astr-&gt;str[loop]);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L238'>str</a>               238 lib/search/regex.c         g_string_append_c (accumulator, astr-&gt;str[loop]);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L318'>str</a>               318 lib/search/regex.c         (regex, search_str-&gt;str, search_str-&gt;len, 0, G_REGEX_MATCH_NEWLINE_ANY,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L337'>str</a>               337 lib/search/regex.c                                            search_str-&gt;str, search_str-&gt;len, 0, 0,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L377'>str</a>               377 lib/search/regex.c mc_search_regex__get_max_num_of_replace_tokens (const gchar * str, gsize len)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L383'>str</a>               383 lib/search/regex.c         if (str[loop] == '\\' &amp;&amp; g_ascii_isdigit (str[loop + 1]))</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L385'>str</a>               385 lib/search/regex.c             if (strutils_is_char_escaped (str, &amp;str[loop]))</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L387'>str</a>               387 lib/search/regex.c             if (max_token &lt; str[loop + 1] - '0')</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L388'>str</a>               388 lib/search/regex.c                 max_token = str[loop + 1] - '0';</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L391'>str</a>               391 lib/search/regex.c         if (str[loop] == '$' &amp;&amp; str[loop + 1] == '{')</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L395'>str</a>               395 lib/search/regex.c             if (strutils_is_char_escaped (str, &amp;str[loop]))</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L399'>str</a>               399 lib/search/regex.c                  loop + tmp_len + 2 &lt; len &amp;&amp; (str[loop + 2 + tmp_len] &amp; (char) 0xf0) == 0x30;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L402'>str</a>               402 lib/search/regex.c             if (str[loop + 2 + tmp_len] == '}')</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L407'>str</a>               407 lib/search/regex.c                 tmp_str = g_strndup (&amp;str[loop + 2], tmp_len);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L435'>str</a>               435 lib/search/regex.c     return g_strndup (lc_mc_search-&gt;regex_buffer-&gt;str + fnd_start, fnd_end - fnd_start);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L445'>str</a>               445 lib/search/regex.c     char *curr_str = &amp;(replace_str-&gt;str[current_pos]);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L528'>str</a>               528 lib/search/regex.c     const char *curr_str = &amp;(replace_str-&gt;str[current_pos]);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L540'>str</a>               540 lib/search/regex.c         if (strutils_is_char_escaped (replace_str-&gt;str, curr_str))</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L567'>str</a>               567 lib/search/regex.c         if (strutils_is_char_escaped (replace_str-&gt;str, curr_str))</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L643'>str</a>               643 lib/search/regex.c             g_string_append_len (dest_str, tmp_string-&gt;str, tmp_string-&gt;len);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L650'>str</a>               650 lib/search/regex.c             g_string_append_len (dest_str, tmp_string-&gt;str, tmp_string-&gt;len);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L656'>str</a>               656 lib/search/regex.c             g_string_append_len (dest_str, tmp_string-&gt;str, tmp_string-&gt;len);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L662'>str</a>               662 lib/search/regex.c             g_string_append_len (dest_str, tmp_string-&gt;str, tmp_string-&gt;len);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L786'>str</a>               786 lib/search/regex.c         g_string_prepend (mc_search_cond-&gt;str, "(?&lt;![\\p{L}\\p{N}_])");</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L787'>str</a>               787 lib/search/regex.c         g_string_append (mc_search_cond-&gt;str, "(?![\\p{L}\\p{N}_])");</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L808'>str</a>               808 lib/search/regex.c                 tmp = mc_search_cond-&gt;str;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L809'>str</a>               809 lib/search/regex.c                 mc_search_cond-&gt;str = mc_search__cond_struct_new_regex_ci_str (charset, tmp);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L816'>str</a>               816 lib/search/regex.c             g_regex_new (mc_search_cond-&gt;str-&gt;str, g_regex_options, 0, &amp;mcerror);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L844'>str</a>               844 lib/search/regex.c                 tmp = mc_search_cond-&gt;str;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L845'>str</a>               845 lib/search/regex.c                 mc_search_cond-&gt;str = mc_search__cond_struct_new_regex_ci_str (charset, tmp);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L851'>str</a>               851 lib/search/regex.c             pcre_compile (mc_search_cond-&gt;str-&gt;str, pcre_options, &amp;error, &amp;erroffset, NULL);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L995'>str</a>               995 lib/search/regex.c         mc_search_regex__get_max_num_of_replace_tokens (replace_str-&gt;str, replace_str-&gt;len);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L998'>str</a>               998 lib/search/regex.c         return g_string_new_len (replace_str-&gt;str, replace_str-&gt;len);</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1022'>str</a>              1022 lib/search/regex.c                 mc_search_regex__process_append_str (ret, replace_str-&gt;str + prev, loop - prev,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1024'>str</a>              1024 lib/search/regex.c                 mc_search_regex__process_append_str (ret, replace_str-&gt;str + loop + 1, len - 1,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1036'>str</a>              1036 lib/search/regex.c                 mc_search_regex__process_append_str (ret, replace_str-&gt;str + prev, loop - prev,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1046'>str</a>              1046 lib/search/regex.c             mc_search_regex__process_append_str (ret, replace_str-&gt;str + prev, loop - prev,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1049'>str</a>              1049 lib/search/regex.c             mc_search_regex__process_escape_sequence (ret, replace_str-&gt;str + loop + 1, len - 1,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1068'>str</a>              1068 lib/search/regex.c             mc_search_regex__process_append_str (ret, replace_str-&gt;str + prev, loop - prev,</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L1078'>str</a>              1078 lib/search/regex.c     mc_search_regex__process_append_str (ret, replace_str-&gt;str + prev, replace_str-&gt;len - prev,</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L63'>str</a>                63 lib/search/search.c mc_search__cond_struct_new (mc_search_t * lc_mc_search, const char *str,</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L69'>str</a>                69 lib/search/search.c     mc_search_cond-&gt;str = g_string_new_len (str, str_len);</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L103'>str</a>               103 lib/search/search.c     g_string_free (mc_search_cond-&gt;str, TRUE);</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L350'>str</a>               350 lib/search/search.c         return g_string_new_len (replace_str-&gt;str, replace_str-&gt;len);</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L352'>str</a>               352 lib/search/search.c     if (replace_str == NULL || replace_str-&gt;str == NULL || replace_str-&gt;len == 0)</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L370'>str</a>               370 lib/search/search.c         ret = g_string_new_len (replace_str-&gt;str, replace_str-&gt;len);</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L419'>str</a>               419 lib/search/search.c mc_search (const gchar * pattern, const gchar * pattern_charset, const gchar * str,</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L425'>str</a>               425 lib/search/search.c     if (str == NULL)</span>
+<span class='curline'><a href='../S/lib--search--search.c.html#L438'>str</a>               438 lib/search/search.c     ret = mc_search_run (search, str, 0, strlen (str), NULL);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L562'>str</a>               562 lib/strutil.h  uintmax_t parse_integer (const char *str, gboolean * invalid);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L986'>str</a>               986 lib/strutil/strutil.c parse_integer (const char *str, gboolean * invalid)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L992'>str</a>               992 lib/strutil/strutil.c     e = xstrtoumax (str, &amp;suffix, 10, &amp;n, "bcEGkKMPTwYZ0");</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L574'>str</a>               574 lib/strutil/strutil8bit.c str_8bit_strdown (const char *str)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L578'>str</a>               578 lib/strutil/strutil8bit.c     if (str == NULL)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L581'>str</a>               581 lib/strutil/strutil8bit.c     rets = g_strdup (str);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L904'>str</a>               904 lib/strutil/strutilutf8.c         str_utf8_fix_string (buffer-&gt;str);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L905'>str</a>               905 lib/strutil/strutilutf8.c         result = g_utf8_offset_to_pointer (buffer-&gt;str, length) - buffer-&gt;str;</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L558'>str</a>               558 lib/tty/tty-ncurses.c         unsigned char str[UTF8_CHAR_LEN + 1];</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L560'>str</a>               560 lib/tty/tty-ncurses.c         res = g_unichar_to_utf8 (c, (char *) str);</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L571'>str</a>               571 lib/tty/tty-ncurses.c             str[res] = '\0';</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L572'>str</a>               572 lib/tty/tty-ncurses.c             s = str_term_form ((char *) str);</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L220'>str</a>               220 lib/tty/tty-slang.c mc_tty_normalize_lines_char (const char *str)</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L245'>str</a>               245 lib/tty/tty-slang.c     if (!str)</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L250'>str</a>               250 lib/tty/tty-slang.c         if (strcmp (str, lines_codes[res].line) == 0)</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L254'>str</a>               254 lib/tty/tty-slang.c     str2 = mc_tty_normalize_from_utf8 (str);</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L703'>str</a>               703 lib/tty/tty-slang.c         char str[UTF8_CHAR_LEN + 1];</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L706'>str</a>               706 lib/tty/tty-slang.c         res = g_unichar_to_utf8 (c, str);</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L709'>str</a>               709 lib/tty/tty-slang.c             str[0] = '.';</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L710'>str</a>               710 lib/tty/tty-slang.c             str[1] = '\0';</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L714'>str</a>               714 lib/tty/tty-slang.c             str[res] = '\0';</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L716'>str</a>               716 lib/tty/tty-slang.c         SLsmg_write_string ((char *) str_term_form (str));</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L214'>str</a>               214 lib/tty/tty.c  mc_tty_normalize_from_utf8 (const char *str)</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L221'>str</a>               221 lib/tty/tty.c          return g_strdup (str);</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L225'>str</a>               225 lib/tty/tty.c          return g_strdup (str);</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L229'>str</a>               229 lib/tty/tty.c      if (str_convert (conv, str, buffer) == ESTR_FAILURE)</span>
+<span class='curline'><a href='../S/lib--tty--tty.c.html#L233'>str</a>               233 lib/tty/tty.c          return g_strdup (str);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L515'>str</a>               515 lib/vfs/interface.c         g_strlcpy (mc_readdir_result-&gt;d_name, vfs_str_buffer-&gt;str, MAXNAMLEN + 1);</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L81'>str</a>                81 lib/vfs/parse_ls_vga.c is_dos_date (const char *str)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L85'>str</a>                85 lib/vfs/parse_ls_vga.c     if (!str)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L88'>str</a>                88 lib/vfs/parse_ls_vga.c     len = strlen (str);</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L92'>str</a>                92 lib/vfs/parse_ls_vga.c     if (str[2] != str[5])</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L95'>str</a>                95 lib/vfs/parse_ls_vga.c     if (!strchr ("\\-/", (int) str[2]))</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L104'>str</a>               104 lib/vfs/parse_ls_vga.c is_week (const char *str, struct tm *tim)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L109'>str</a>               109 lib/vfs/parse_ls_vga.c     if (!str)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L112'>str</a>               112 lib/vfs/parse_ls_vga.c     pos = strstr (week, str);</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L125'>str</a>               125 lib/vfs/parse_ls_vga.c is_month (const char *str, struct tm *tim)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L130'>str</a>               130 lib/vfs/parse_ls_vga.c     if (!str)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L133'>str</a>               133 lib/vfs/parse_ls_vga.c     pos = strstr (month, str);</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L171'>str</a>               171 lib/vfs/parse_ls_vga.c is_time (const char *str, struct tm *tim)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L175'>str</a>               175 lib/vfs/parse_ls_vga.c     if (str == NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L178'>str</a>               178 lib/vfs/parse_ls_vga.c     p = strchr (str, ':');</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L179'>str</a>               179 lib/vfs/parse_ls_vga.c     p2 = strrchr (str, ':');</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L184'>str</a>               184 lib/vfs/parse_ls_vga.c             if (sscanf (str, "%2d:%2d:%2d", &amp;tim-&gt;tm_hour, &amp;tim-&gt;tm_min, &amp;tim-&gt;tm_sec) != 3)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L189'>str</a>               189 lib/vfs/parse_ls_vga.c             if (sscanf (str, "%2d:%2d", &amp;tim-&gt;tm_hour, &amp;tim-&gt;tm_min) != 2)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L202'>str</a>               202 lib/vfs/parse_ls_vga.c is_year (char *str, struct tm *tim)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L206'>str</a>               206 lib/vfs/parse_ls_vga.c     if (!str)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L209'>str</a>               209 lib/vfs/parse_ls_vga.c     if (strchr (str, ':'))</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L212'>str</a>               212 lib/vfs/parse_ls_vga.c     if (strlen (str) != 4)</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L216'>str</a>               216 lib/vfs/parse_ls_vga.c     if (sscanf (str, "%ld", &amp;year) != 1)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L540'>str</a>               540 lib/vfs/path.c         if (ret_tokens-&gt;len &gt; 0 &amp;&amp; !IS_PATH_SEP (ret_tokens-&gt;str[ret_tokens-&gt;len - 1]))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L559'>str</a>               559 lib/vfs/path.c         if (ret_tokens-&gt;len &gt; 0 &amp;&amp; !IS_PATH_SEP (ret_tokens-&gt;str[ret_tokens-&gt;len - 1]))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L567'>str</a>               567 lib/vfs/path.c     g_string_append (ret_tokens, element_tokens-&gt;str);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L610'>str</a>               610 lib/vfs/path.c             &amp;&amp; (buffer-&gt;len == 0 || !IS_PATH_SEP (buffer-&gt;str[buffer-&gt;len - 1]))) \</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L654'>str</a>               654 lib/vfs/path.c             if (!is_relative &amp;&amp; (buffer-&gt;len == 0 || !IS_PATH_SEP (buffer-&gt;str[buffer-&gt;len - 1])))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L677'>str</a>               677 lib/vfs/path.c                     &amp;&amp; (buffer-&gt;len == 0 || !IS_PATH_SEP (buffer-&gt;str[buffer-&gt;len - 1])))</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L683'>str</a>               683 lib/vfs/path.c             vfs_append_from_path (recode_buffer-&gt;str, is_relative);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L746'>str</a>               746 lib/vfs/path.c     vpath-&gt;str = vfs_path_to_str_flags (vpath, 0, flags);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L811'>str</a>               811 lib/vfs/path.c     g_free (vpath-&gt;str);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L812'>str</a>               812 lib/vfs/path.c     vpath-&gt;str = vfs_path_to_str_flags (vpath, 0, VPF_NONE);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L933'>str</a>               933 lib/vfs/path.c     new_vpath-&gt;str = g_strdup (vpath-&gt;str);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L964'>str</a>               964 lib/vfs/path.c     g_free (vpath-&gt;str);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L991'>str</a>               991 lib/vfs/path.c     g_free (vpath-&gt;str);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L992'>str</a>               992 lib/vfs/path.c     vpath-&gt;str = vfs_path_to_str_flags (vpath, 0, VPF_NONE);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1068'>str</a>              1068 lib/vfs/path.c     g_free (vpath-&gt;str);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1069'>str</a>              1069 lib/vfs/path.c     vpath-&gt;str = vfs_path_to_str_flags (vpath, 0, VPF_NONE);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1215'>str</a>              1215 lib/vfs/path.c     vpath-&gt;str = vfs_path_to_str_flags (vpath, 0, VPF_NONE);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1322'>str</a>              1322 lib/vfs/path.c     ret_vpath-&gt;str = vfs_path_to_str_flags (ret_vpath, 0, VPF_NONE);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1627'>str</a>              1627 lib/vfs/path.c     return strlen (vpath-&gt;str);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L30'>str</a>                30 lib/vfs/path.h     char *str;</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L144'>str</a>               144 lib/vfs/path.h     return (vpath == NULL ? NULL : vpath-&gt;str);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L342'>str</a>               342 lib/vfs/vfs.c      return (state != ESTR_FAILURE) ? vfs_str_buffer-&gt;str : NULL;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L366'>str</a>               366 lib/vfs/vfs.c      return current_path-&gt;str;</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.c.html#L379'>str</a>               379 lib/vfs/vfs.c      return g_strdup (current_path-&gt;str);</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L211'>str</a>               211 lib/widget/history.c                 hist = list_append_unique (hist, g_strndup (buffer-&gt;str, buffer-&gt;len));</span>
+<span class='curline'><a href='../S/lib--widget--history.c.html#L276'>str</a>               276 lib/widget/history.c                 mc_config_set_string_raw (cfg, name, key, buffer-&gt;str);</span>
+<span class='curline'><a href='../S/lib--widget--input_complete.c.html#L298'>str</a>               298 lib/widget/input_complete.c             if (!IS_PATH_SEP (temp-&gt;str[temp-&gt;len - 1]))</span>
+<span class='curline'><a href='../S/src--background.c.html#L462'>str</a>               462 src/background.c     char *str;</span>
+<span class='curline'><a href='../S/src--background.c.html#L484'>str</a>               484 src/background.c     str = g_malloc (i + 1);</span>
+<span class='curline'><a href='../S/src--background.c.html#L485'>str</a>               485 src/background.c     if (read (from_parent_fd, str, i) != i)</span>
+<span class='curline'><a href='../S/src--background.c.html#L487'>str</a>               487 src/background.c         g_free (str);</span>
+<span class='curline'><a href='../S/src--background.c.html#L490'>str</a>               490 src/background.c     str[i] = 0;</span>
+<span class='curline'><a href='../S/src--background.c.html#L491'>str</a>               491 src/background.c     return str;</span>
+<span class='curline'><a href='../S/src--background.c.html#L608'>str</a>               608 src/background.c     char *str;</span>
+<span class='curline'><a href='../S/src--background.c.html#L611'>str</a>               611 src/background.c     str = parent_va_call_string (routine, argc, ap);</span>
+<span class='curline'><a href='../S/src--background.c.html#L614'>str</a>               614 src/background.c     return str;</span>
+<span class='curline'><a href='../S/src--diffviewer--internal.h.html#L12'>str</a>                12 src/diffviewer/internal.h typedef int (*DFUNC) (void *ctx, int ch, int line, off_t off, size_t sz, const char *str);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L565'>str</a>               565 src/diffviewer/ydiff.c dview_get_byte (const char *str, int *ch)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L567'>str</a>               567 src/diffviewer/ydiff.c     if (str == NULL)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L570'>str</a>               570 src/diffviewer/ydiff.c     *ch = (unsigned char) (*str);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L587'>str</a>               587 src/diffviewer/ydiff.c dview_get_utf (const char *str, int *ch, int *ch_length)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L589'>str</a>               589 src/diffviewer/ydiff.c     if (str == NULL)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L592'>str</a>               592 src/diffviewer/ydiff.c     *ch = g_utf8_get_char_validated (str, -1);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L596'>str</a>               596 src/diffviewer/ydiff.c         *ch = (unsigned char) (*str);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L604'>str</a>               604 src/diffviewer/ydiff.c         next_ch = g_utf8_next_char (str);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L605'>str</a>               605 src/diffviewer/ydiff.c         *ch_length = next_ch - str;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L660'>str</a>               660 src/diffviewer/ydiff.c scan_deci (const char **str, int *n)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L662'>str</a>               662 src/diffviewer/ydiff.c     const char *p = *str;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L669'>str</a>               669 src/diffviewer/ydiff.c     *str = q;</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1679'>str</a>              1679 src/diffviewer/ydiff.c printer (void *ctx, int ch, int line, off_t off, size_t sz, const char *str)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1694'>str</a>              1694 src/diffviewer/ydiff.c             if (sz != 0 &amp;&amp; str[sz - 1] == '\n')</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1697'>str</a>              1697 src/diffviewer/ydiff.c                 p.p = g_strndup (str, sz);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1707'>str</a>              1707 src/diffviewer/ydiff.c         if (sz != 0 &amp;&amp; str[sz - 1] == '\n')</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1716'>str</a>              1716 src/diffviewer/ydiff.c             memcpy (q + p-&gt;u.len, str, sz);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L1724'>str</a>              1724 src/diffviewer/ydiff.c         f_write (f, str, sz);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3347'>str</a>              3347 src/editor/edit.c             unsigned char str[UTF8_CHAR_LEN + 1];</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3351'>str</a>              3351 src/editor/edit.c             res = g_unichar_to_utf8 (char_for_insertion, (char *) str);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3354'>str</a>              3354 src/editor/edit.c                 str[0] = '.';</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3355'>str</a>              3355 src/editor/edit.c                 str[1] = '\0';</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3359'>str</a>              3359 src/editor/edit.c                 str[res] = '\0';</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3361'>str</a>              3361 src/editor/edit.c             while (i &lt;= UTF8_CHAR_LEN &amp;&amp; str[i] != '\0')</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L3363'>str</a>              3363 src/editor/edit.c                 char_for_insertion = str[i];</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L217'>str</a>               217 src/editor/editbuffer.c     gchar *str = NULL;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L228'>str</a>               228 src/editor/editbuffer.c     str = edit_buffer_get_byte_ptr (buf, byte_index);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L229'>str</a>               229 src/editor/editbuffer.c     if (str == NULL)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L235'>str</a>               235 src/editor/editbuffer.c     res = g_utf8_get_char_validated (str, -1);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L250'>str</a>               250 src/editor/editbuffer.c         ch = *str;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L257'>str</a>               257 src/editor/editbuffer.c         next_ch = g_utf8_next_char (str);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L258'>str</a>               258 src/editor/editbuffer.c         *char_length = next_ch - str;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L282'>str</a>               282 src/editor/editbuffer.c     gchar *str;</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L297'>str</a>               297 src/editor/editbuffer.c     str = g_utf8_find_prev_char (utf8_buf, cursor_buf_ptr);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L299'>str</a>               299 src/editor/editbuffer.c     if (str == NULL || g_utf8_next_char (str) != cursor_buf_ptr)</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L305'>str</a>               305 src/editor/editbuffer.c     res = g_utf8_get_char_validated (str, -1);</span>
+<span class='curline'><a href='../S/src--editor--editbuffer.c.html#L312'>str</a>               312 src/editor/editbuffer.c     *char_length = cursor_buf_ptr - str;</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L911'>str</a>               911 src/editor/editcmd.c edit_replace_cmd__conv_to_display (const char *str)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L916'>str</a>               916 src/editor/editcmd.c     tmp = str_convert_to_display (str);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L924'>str</a>               924 src/editor/editcmd.c     return g_strdup (str);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L930'>str</a>               930 src/editor/editcmd.c edit_replace_cmd__conv_to_input (char *str)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L935'>str</a>               935 src/editor/editcmd.c     tmp = str_convert_to_input (str);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L943'>str</a>               943 src/editor/editcmd.c     return g_strdup (str);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1290'>str</a>              1290 src/editor/editcmd.c         if (current_word != NULL &amp;&amp; strcmp (current_word, temp-&gt;str) == 0)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1298'>str</a>              1298 src/editor/editcmd.c                 ((char *) &amp;compl[i]-&gt;str[word_len],</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1299'>str</a>              1299 src/editor/editcmd.c                  (char *) &amp;temp-&gt;str[word_len], MAX (len, compl[i]-&gt;len) - word_len) == 0)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1322'>str</a>              1322 src/editor/editcmd.c             recoded = str_convert_to_display (temp-&gt;str);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1325'>str</a>              1325 src/editor/editcmd.c                 g_string_assign (temp, recoded-&gt;str);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1330'>str</a>              1330 src/editor/editcmd.c         compl[(*num)++] = g_string_new_len (temp-&gt;str, temp-&gt;len);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1544'>str</a>              1544 src/editor/editcmd.c     for (completion = temp-&gt;str + word_len; *completion != '\0'; completion++)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1633'>str</a>              1633 src/editor/editcmd.c     const char *str[] = {</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1647'>str</a>              1647 src/editor/editcmd.c         str[i] = _(str[i]);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1653'>str</a>              1653 src/editor/editcmd.c             QUICK_RADIO (3, str, &amp;option_save_mode, &amp;edit_save_mode_radio_id),</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1925'>str</a>              1925 src/editor/editcmd.c         mc_config_set_string (macros_config, section_name, skeyname, marcros_string-&gt;str);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L2701'>str</a>              2701 src/editor/editcmd.c                 edit_insert (edit, repl_str-&gt;str[i]);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3357'>str</a>              3357 src/editor/editcmd.c         edit_collect_completions (edit, word_start, word_len, match_expr-&gt;str, (GString **) &amp; compl,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3364'>str</a>              3364 src/editor/editcmd.c             edit_complete_word_insert_recoded_completion (edit, compl[0]-&gt;str, word_len);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3551'>str</a>              3551 src/editor/editcmd.c             etags_set_definition_hash (tagfile, path, match_expr-&gt;str, (etags_hash_t *) &amp; def_hash);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3560'>str</a>              3560 src/editor/editcmd.c         editcmd_dialog_select_definition_show (edit, match_expr-&gt;str, max_len, word_len,</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3588'>str</a>              3588 src/editor/editcmd.c         tmp_word = str_convert_to_display (match_word-&gt;str);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3593'>str</a>              3593 src/editor/editcmd.c     if (!aspell_check (match_word-&gt;str, (int) word_len))</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3601'>str</a>              3601 src/editor/editcmd.c         res = aspell_suggest (suggest, match_word-&gt;str, (int) word_len);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3612'>str</a>              3612 src/editor/editcmd.c             retval = spell_dialog_spell_suggest_show (edit, match_word-&gt;str, &amp;new_word, suggest);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L3638'>str</a>              3638 src/editor/editcmd.c                 aspell_add_to_dict (match_word-&gt;str, (int) word_len);</span>
+<span class='curline'><a href='../S/src--editor--editcmd_dialogs.c.html#L394'>str</a>               394 src/editor/editcmd_dialogs.c         listbox_add_item (compl_list, LISTBOX_APPEND_AT_END, 0, (char *) compl[i]-&gt;str, NULL,</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L504'>str</a>               504 src/editor/format.c             &amp;&amp; strchr (option_stop_format_chars, t-&gt;str[0]) != NULL)</span>
+<span class='curline'><a href='../S/src--editor--format.c.html#L516'>str</a>               516 src/editor/format.c             if (t-&gt;str[i] == '\n' &amp;&amp; strchr (stop_format_chars, t-&gt;str[i + 1]) != NULL)</span>
+<span class='curline'><a href='../S/src--editor--syntax.c.html#L1245'>str</a>              1245 src/editor/syntax.c             c-&gt;keyword_first_chars = g_strndup (first_chars-&gt;str, first_chars-&gt;len);</span>
+<span class='curline'><a href='../S/src--filemanager--command.c.html#L311'>str</a>               311 src/filemanager/command.c         shell_execute (command-&gt;str, 0);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L748'>str</a>               748 src/filemanager/file.c do_file_error (const char *str)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L761'>str</a>               761 src/filemanager/file.c         return parent_call (pntr.p, NULL, 1, strlen (str), str);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L763'>str</a>               763 src/filemanager/file.c         return real_do_file_error (Foreground, str);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L815'>str</a>               815 src/filemanager/file.c do_file_error (const char *str)</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L817'>str</a>               817 src/filemanager/file.c     return real_do_file_error (Foreground, str);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L293'>str</a>               293 src/filemanager/hotlist.c                 listbox_add_item (list, LISTBOX_APPEND_AT_END, 0, buff-&gt;str, current, FALSE);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1281'>str</a>              1281 src/filemanager/hotlist.c         if (strncmp (tkn_buf-&gt;str, "GROUP", l) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1283'>str</a>              1283 src/filemanager/hotlist.c         else if (strncmp (tkn_buf-&gt;str, "ENTRY", l) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1285'>str</a>              1285 src/filemanager/hotlist.c         else if (strncmp (tkn_buf-&gt;str, "ENDGROUP", l) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1287'>str</a>              1287 src/filemanager/hotlist.c         else if (strncmp (tkn_buf-&gt;str, "URL", l) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1313'>str</a>              1313 src/filemanager/hotlist.c                 add2hotlist (g_strndup (tkn_buf-&gt;str, tkn_buf-&gt;len), 0, HL_TYPE_GROUP,</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1322'>str</a>              1322 src/filemanager/hotlist.c                 label = g_strndup (tkn_buf-&gt;str, tkn_buf-&gt;len);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1325'>str</a>              1325 src/filemanager/hotlist.c                 url = tilde_expand (tkn_buf-&gt;str);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1331'>str</a>              1331 src/filemanager/hotlist.c             label = g_strndup (tkn_buf-&gt;str, tkn_buf-&gt;len);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1367'>str</a>              1367 src/filemanager/hotlist.c                 add2hotlist (g_strndup (tkn_buf-&gt;str, tkn_buf-&gt;len), 0, HL_TYPE_GROUP,</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1376'>str</a>              1376 src/filemanager/hotlist.c                 label = g_strndup (tkn_buf-&gt;str, tkn_buf-&gt;len);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1379'>str</a>              1379 src/filemanager/hotlist.c                 url = tilde_expand (tkn_buf-&gt;str);</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1385'>str</a>              1385 src/filemanager/hotlist.c             label = g_strndup (tkn_buf-&gt;str, tkn_buf-&gt;len);</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L199'>str</a>               199 src/filemanager/info.c         tty_print_string (buff-&gt;str);</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L205'>str</a>               205 src/filemanager/info.c         tty_print_string (buff-&gt;str);</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L210'>str</a>               210 src/filemanager/info.c         tty_print_string (buff-&gt;str);</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L215'>str</a>               215 src/filemanager/info.c         tty_print_string (buff-&gt;str);</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L223'>str</a>               223 src/filemanager/info.c         tty_print_string (buff-&gt;str);</span>
+<span class='curline'><a href='../S/src--filemanager--info.c.html#L268'>str</a>               268 src/filemanager/info.c             tty_print_string (buff-&gt;str);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L839'>str</a>               839 src/filemanager/layout.c         mc_prompt = subshell_prompt-&gt;str;</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L864'>str</a>               864 src/filemanager/layout.c set_hintbar (const char *str)</span>
+<span class='curline'><a href='../S/src--filemanager--layout.c.html#L866'>str</a>               866 src/filemanager/layout.c     label_set_text (the_hint, str);</span>
+<span class='curline'><a href='../S/src--filemanager--layout.h.html#L80'>str</a>                80 src/filemanager/layout.h void set_hintbar (const char *str);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L621'>str</a>               621 src/filemanager/mountlist.c unescape_tab (char *str)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L626'>str</a>               626 src/filemanager/mountlist.c     len = strlen (str) + 1;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L630'>str</a>               630 src/filemanager/mountlist.c         if (str[i] == '\\' &amp;&amp; (i + 4 &lt; len)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L631'>str</a>               631 src/filemanager/mountlist.c             &amp;&amp; str[i + 1] &gt;= '0' &amp;&amp; str[i + 1] &lt;= '3'</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L632'>str</a>               632 src/filemanager/mountlist.c             &amp;&amp; str[i + 2] &gt;= '0' &amp;&amp; str[i + 2] &lt;= '7' &amp;&amp; str[i + 3] &gt;= '0' &amp;&amp; str[i + 3] &lt;= '7')</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L634'>str</a>               634 src/filemanager/mountlist.c             str[j++] = (str[i + 1] - '0') * 64 + (str[i + 2] - '0') * 8 + (str[i + 3] - '0');</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L638'>str</a>               638 src/filemanager/mountlist.c             str[j++] = str[i];</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1522'>str</a>              1522 src/filemanager/panel.c         char *str;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1524'>str</a>              1524 src/filemanager/panel.c         str = g_strdup_printf ("%s%s", sort_sign, Q_ (panel-&gt;sort_field-&gt;hotkey));</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1526'>str</a>              1526 src/filemanager/panel.c         tty_print_string (str);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1527'>str</a>              1527 src/filemanager/panel.c         g_free (str);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1599'>str</a>              1599 src/filemanager/panel.c                 tty_print_string (str_fit_to_term (format_txt-&gt;str, format-&gt;field_len,</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L4823'>str</a>              4823 src/filemanager/panel.c         path_element-&gt;path = g_strndup (tmp_conv-&gt;str, tmp_conv-&gt;len);</span>
+<span class='curline'><a href='../S/src--help.c.html#L411'>str</a>               411 src/help.c             w = str_term_width1 (word-&gt;str);</span>
+<span class='curline'><a href='../S/src--help.c.html#L423'>str</a>               423 src/help.c                 tty_print_string (word-&gt;str);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1215'>str</a>              1215 src/subshell/common.c         g_string_assign (subshell_prompt, p-&gt;str);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1229'>str</a>              1229 src/subshell/common.c         printf ("\r\n%s", subshell_prompt-&gt;str);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1301'>str</a>              1301 src/subshell/common.c             write_all (mc_global.tty.subshell_pty, temp-&gt;str, temp-&gt;len);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L243'>str</a>               243 src/vfs/fish/fish.c     char *str;</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L249'>str</a>               249 src/vfs/fish/fish.c     str = g_strdup_vprintf (fmt, ap);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L255'>str</a>               255 src/vfs/fish/fish.c         ret = fwrite (str, strlen (str), 1, logfile);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L262'>str</a>               262 src/vfs/fish/fish.c     status = write (SUP-&gt;sockw, str, strlen (str));</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L263'>str</a>               263 src/vfs/fish/fish.c     g_free (str);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L84'>str</a>                84 src/vfs/sftpfs/internal.c     return sftpfs_filename_buffer-&gt;str;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--kanji.h.html#L125'>str</a>               125 src/vfs/smbfs/helpers/include/kanji.h extern char *(*_dos_to_unix) (char *str, BOOL overwrite);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--kanji.h.html#L126'>str</a>               126 src/vfs/smbfs/helpers/include/kanji.h extern char *(*_unix_to_dos) (char *str, BOOL overwrite);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L7'>str</a>                 7 src/vfs/smbfs/helpers/include/proto.h char *unix2dos_format (char *str, BOOL overwrite);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L8'>str</a>                 8 src/vfs/smbfs/helpers/include/proto.h char *dos2unix_format (char *str, BOOL overwrite);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L9'>str</a>                 9 src/vfs/smbfs/helpers/include/proto.h void interpret_character_set (const char *str);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L39'>str</a>                39 src/vfs/smbfs/helpers/include/proto.h void interpret_coding_system (const char *str);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L53'>str</a>                53 src/vfs/smbfs/helpers/include/proto.h int vslprintf (char *str, int n, const char *format, va_list ap);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L135'>str</a>               135 src/vfs/smbfs/helpers/include/proto.h BOOL do_match (char *str, char *regexp, int case_sig);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L136'>str</a>               136 src/vfs/smbfs/helpers/include/proto.h BOOL mask_match (char *str, char *regexp, int case_sig, BOOL trans2);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L141'>str</a>               141 src/vfs/smbfs/helpers/include/proto.h int interpret_protocol (char *str, int def);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L142'>str</a>               142 src/vfs/smbfs/helpers/include/proto.h uint32 interpret_addr (const char *str);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L143'>str</a>               143 src/vfs/smbfs/helpers/include/proto.h struct in_addr *interpret_addr2 (const char *str);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L146'>str</a>               146 src/vfs/smbfs/helpers/include/proto.h void standard_sub_basic (char *str);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--proto.h.html#L147'>str</a>               147 src/vfs/smbfs/helpers/include/proto.h void standard_sub (connection_struct * conn, char *str);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--smb.h.html#L1340'>str</a>              1340 src/vfs/smbfs/helpers/include/smb.h slprintf (char *str, int n, const char *format, ...)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charcnv.c.html#L52'>str</a>                52 src/vfs/smbfs/helpers/lib/charcnv.c update_map (const char *str)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charcnv.c.html#L56'>str</a>                56 src/vfs/smbfs/helpers/lib/charcnv.c     for (p = str; *p; p++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charcnv.c.html#L200'>str</a>               200 src/vfs/smbfs/helpers/lib/charcnv.c unix2dos_format (char *str, BOOL overwrite)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charcnv.c.html#L210'>str</a>               210 src/vfs/smbfs/helpers/lib/charcnv.c         for (p = str; *p; p++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charcnv.c.html#L212'>str</a>               212 src/vfs/smbfs/helpers/lib/charcnv.c         return str;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charcnv.c.html#L216'>str</a>               216 src/vfs/smbfs/helpers/lib/charcnv.c         for (p = str, dp = cvtbuf; *p &amp;&amp; dp &lt; &amp;(cvtbuf[sizeof (cvtbuf) - 1]); p++, dp++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charcnv.c.html#L227'>str</a>               227 src/vfs/smbfs/helpers/lib/charcnv.c dos2unix_format (char *str, BOOL overwrite)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charcnv.c.html#L237'>str</a>               237 src/vfs/smbfs/helpers/lib/charcnv.c         for (p = str; *p; p++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charcnv.c.html#L239'>str</a>               239 src/vfs/smbfs/helpers/lib/charcnv.c         return str;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charcnv.c.html#L243'>str</a>               243 src/vfs/smbfs/helpers/lib/charcnv.c         for (p = str, dp = cvtbuf; *p &amp;&amp; dp &lt; &amp;(cvtbuf[sizeof (cvtbuf) - 1]); p++, dp++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charcnv.c.html#L255'>str</a>               255 src/vfs/smbfs/helpers/lib/charcnv.c interpret_character_set (const char *str)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charcnv.c.html#L257'>str</a>               257 src/vfs/smbfs/helpers/lib/charcnv.c     if (strequal (str, "iso8859-1"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charcnv.c.html#L261'>str</a>               261 src/vfs/smbfs/helpers/lib/charcnv.c     else if (strequal (str, "iso8859-2"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charcnv.c.html#L265'>str</a>               265 src/vfs/smbfs/helpers/lib/charcnv.c     else if (strequal (str, "iso8859-5"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charcnv.c.html#L269'>str</a>               269 src/vfs/smbfs/helpers/lib/charcnv.c     else if (strequal (str, "koi8-r"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--charcnv.c.html#L275'>str</a>               275 src/vfs/smbfs/helpers/lib/charcnv.c         DEBUG (0, ("unrecognized character set %s\n", str));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1266'>str</a>              1266 src/vfs/smbfs/helpers/lib/kanji.c interpret_coding_system (const char *str)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1270'>str</a>              1270 src/vfs/smbfs/helpers/lib/kanji.c     if (strequal (str, "sjis"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1274'>str</a>              1274 src/vfs/smbfs/helpers/lib/kanji.c     else if (strequal (str, "euc"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1278'>str</a>              1278 src/vfs/smbfs/helpers/lib/kanji.c     else if (strequal (str, "cap"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1283'>str</a>              1283 src/vfs/smbfs/helpers/lib/kanji.c     else if (strequal (str, "hex"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1288'>str</a>              1288 src/vfs/smbfs/helpers/lib/kanji.c     else if (!strncasecmp (str, "hex", 3))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1291'>str</a>              1291 src/vfs/smbfs/helpers/lib/kanji.c         hex_tag = (str[3] ? str[3] : HEXTAG);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1293'>str</a>              1293 src/vfs/smbfs/helpers/lib/kanji.c     else if (strequal (str, "j8bb"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1299'>str</a>              1299 src/vfs/smbfs/helpers/lib/kanji.c     else if (strequal (str, "j8bj") || strequal (str, "jis8"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1305'>str</a>              1305 src/vfs/smbfs/helpers/lib/kanji.c     else if (strequal (str, "j8bh"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1311'>str</a>              1311 src/vfs/smbfs/helpers/lib/kanji.c     else if (strequal (str, "j8@b"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1317'>str</a>              1317 src/vfs/smbfs/helpers/lib/kanji.c     else if (strequal (str, "j8@j"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1323'>str</a>              1323 src/vfs/smbfs/helpers/lib/kanji.c     else if (strequal (str, "j8@h"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1329'>str</a>              1329 src/vfs/smbfs/helpers/lib/kanji.c     else if (strequal (str, "j7bb"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1335'>str</a>              1335 src/vfs/smbfs/helpers/lib/kanji.c     else if (strequal (str, "j7bj") || strequal (str, "jis7"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1341'>str</a>              1341 src/vfs/smbfs/helpers/lib/kanji.c     else if (strequal (str, "j7bh"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1347'>str</a>              1347 src/vfs/smbfs/helpers/lib/kanji.c     else if (strequal (str, "j7@b"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1353'>str</a>              1353 src/vfs/smbfs/helpers/lib/kanji.c     else if (strequal (str, "j7@j"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1359'>str</a>              1359 src/vfs/smbfs/helpers/lib/kanji.c     else if (strequal (str, "j7@h"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1365'>str</a>              1365 src/vfs/smbfs/helpers/lib/kanji.c     else if (strequal (str, "jubb"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1371'>str</a>              1371 src/vfs/smbfs/helpers/lib/kanji.c     else if (strequal (str, "jubj") || strequal (str, "junet"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1377'>str</a>              1377 src/vfs/smbfs/helpers/lib/kanji.c     else if (strequal (str, "jubh"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1383'>str</a>              1383 src/vfs/smbfs/helpers/lib/kanji.c     else if (strequal (str, "ju@b"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1389'>str</a>              1389 src/vfs/smbfs/helpers/lib/kanji.c     else if (strequal (str, "ju@j"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--kanji.c.html#L1395'>str</a>              1395 src/vfs/smbfs/helpers/lib/kanji.c     else if (strequal (str, "ju@h"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--slprintf.c.html#L36'>str</a>                36 src/vfs/smbfs/helpers/lib/slprintf.c vslprintf (char *str, int n, const char *format, va_list ap)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--slprintf.c.html#L38'>str</a>                38 src/vfs/smbfs/helpers/lib/slprintf.c     int ret = vsnprintf (str, n, format, ap);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--slprintf.c.html#L41'>str</a>                41 src/vfs/smbfs/helpers/lib/slprintf.c         str[n] = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--slprintf.c.html#L44'>str</a>                44 src/vfs/smbfs/helpers/lib/slprintf.c     str[ret] = 0;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--slprintf.c.html#L50'>str</a>                50 src/vfs/smbfs/helpers/lib/slprintf.c slprintf (char *str, int n, const char *format, ...)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--slprintf.c.html#L57'>str</a>                57 src/vfs/smbfs/helpers/lib/slprintf.c     char *str, *format;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--slprintf.c.html#L67'>str</a>                67 src/vfs/smbfs/helpers/lib/slprintf.c     str = va_arg (ap, char *);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--slprintf.c.html#L72'>str</a>                72 src/vfs/smbfs/helpers/lib/slprintf.c     ret = vslprintf (str, n, format, ap);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1224'>str</a>              1224 src/vfs/smbfs/helpers/lib/util.c unix_do_match (char *str, char *regexp, int case_sig)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1228'>str</a>              1228 src/vfs/smbfs/helpers/lib/util.c     for (p = regexp; *p &amp;&amp; *str;)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1233'>str</a>              1233 src/vfs/smbfs/helpers/lib/util.c             str++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1243'>str</a>              1243 src/vfs/smbfs/helpers/lib/util.c             while (*str)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1245'>str</a>              1245 src/vfs/smbfs/helpers/lib/util.c                 while (*str &amp;&amp; (case_sig ? (*p != *str) : (toupper (*p) != toupper (*str))))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1246'>str</a>              1246 src/vfs/smbfs/helpers/lib/util.c                     str++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1247'>str</a>              1247 src/vfs/smbfs/helpers/lib/util.c                 if (unix_do_match (str, p, case_sig))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1249'>str</a>              1249 src/vfs/smbfs/helpers/lib/util.c                 if (!*str)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1252'>str</a>              1252 src/vfs/smbfs/helpers/lib/util.c                     str++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1259'>str</a>              1259 src/vfs/smbfs/helpers/lib/util.c                 if (*str != *p)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1264'>str</a>              1264 src/vfs/smbfs/helpers/lib/util.c                 if (toupper (*str) != toupper (*p))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1267'>str</a>              1267 src/vfs/smbfs/helpers/lib/util.c             str++, p++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1271'>str</a>              1271 src/vfs/smbfs/helpers/lib/util.c     if (!*p &amp;&amp; !*str)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1274'>str</a>              1274 src/vfs/smbfs/helpers/lib/util.c     if (!*p &amp;&amp; str[0] == '.' &amp;&amp; str[1] == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1277'>str</a>              1277 src/vfs/smbfs/helpers/lib/util.c     if (!*str &amp;&amp; *p == '?')</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1284'>str</a>              1284 src/vfs/smbfs/helpers/lib/util.c     if (!*str &amp;&amp; (*p == '*' &amp;&amp; p[1] == '\0'))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1298'>str</a>              1298 src/vfs/smbfs/helpers/lib/util.c unix_mask_match (char *str, char *regexp, int case_sig, BOOL trans2)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1308'>str</a>              1308 src/vfs/smbfs/helpers/lib/util.c     StrnCpy (p2, str, sizeof (pstring) - 1);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1372'>str</a>              1372 src/vfs/smbfs/helpers/lib/util.c do_match (char *str, char *regexp, int case_sig)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1376'>str</a>              1376 src/vfs/smbfs/helpers/lib/util.c     for (p = regexp; *p &amp;&amp; *str;)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1381'>str</a>              1381 src/vfs/smbfs/helpers/lib/util.c             str++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1391'>str</a>              1391 src/vfs/smbfs/helpers/lib/util.c             while (*str)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1393'>str</a>              1393 src/vfs/smbfs/helpers/lib/util.c                 while (*str &amp;&amp; (case_sig ? (*p != *str) : (toupper (*p) != toupper (*str))))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1394'>str</a>              1394 src/vfs/smbfs/helpers/lib/util.c                     str++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1397'>str</a>              1397 src/vfs/smbfs/helpers/lib/util.c                 while (*str &amp;&amp; (case_sig ? (*p == *str) : (toupper (*p) == toupper (*str))))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1398'>str</a>              1398 src/vfs/smbfs/helpers/lib/util.c                     str++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1399'>str</a>              1399 src/vfs/smbfs/helpers/lib/util.c                 str--;          /* We've eaten the match char after the '*' */</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1400'>str</a>              1400 src/vfs/smbfs/helpers/lib/util.c                 if (do_match (str, p, case_sig))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1404'>str</a>              1404 src/vfs/smbfs/helpers/lib/util.c                 if (!*str)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1410'>str</a>              1410 src/vfs/smbfs/helpers/lib/util.c                     str++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1418'>str</a>              1418 src/vfs/smbfs/helpers/lib/util.c                 if (*str != *p)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1425'>str</a>              1425 src/vfs/smbfs/helpers/lib/util.c                 if (toupper (*str) != toupper (*p))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1430'>str</a>              1430 src/vfs/smbfs/helpers/lib/util.c             str++, p++;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1435'>str</a>              1435 src/vfs/smbfs/helpers/lib/util.c     if (!*p &amp;&amp; !*str)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1438'>str</a>              1438 src/vfs/smbfs/helpers/lib/util.c     if (!*p &amp;&amp; str[0] == '.' &amp;&amp; str[1] == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1443'>str</a>              1443 src/vfs/smbfs/helpers/lib/util.c     if (!*str &amp;&amp; *p == '?')</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1450'>str</a>              1450 src/vfs/smbfs/helpers/lib/util.c     if (!*str &amp;&amp; (*p == '*' &amp;&amp; p[1] == '\0'))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1468'>str</a>              1468 src/vfs/smbfs/helpers/lib/util.c mask_match (char *str, char *regexp, int case_sig, BOOL trans2)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1478'>str</a>              1478 src/vfs/smbfs/helpers/lib/util.c     pstrcpy (t_filename, str);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1680'>str</a>              1680 src/vfs/smbfs/helpers/lib/util.c                     matched = do_match (str, ebase, case_sig);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1886'>str</a>              1886 src/vfs/smbfs/helpers/lib/util.c interpret_protocol (char *str, int def)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1888'>str</a>              1888 src/vfs/smbfs/helpers/lib/util.c     if (strequal (str, "NT1"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1890'>str</a>              1890 src/vfs/smbfs/helpers/lib/util.c     if (strequal (str, "LANMAN2"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1892'>str</a>              1892 src/vfs/smbfs/helpers/lib/util.c     if (strequal (str, "LANMAN1"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1894'>str</a>              1894 src/vfs/smbfs/helpers/lib/util.c     if (strequal (str, "CORE"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1896'>str</a>              1896 src/vfs/smbfs/helpers/lib/util.c     if (strequal (str, "COREPLUS"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1898'>str</a>              1898 src/vfs/smbfs/helpers/lib/util.c     if (strequal (str, "CORE+"))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1901'>str</a>              1901 src/vfs/smbfs/helpers/lib/util.c     DEBUG (0, ("Unrecognised protocol level %s\n", str));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1911'>str</a>              1911 src/vfs/smbfs/helpers/lib/util.c interpret_addr (const char *str)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1918'>str</a>              1918 src/vfs/smbfs/helpers/lib/util.c     if (strcmp (str, "0.0.0.0") == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1920'>str</a>              1920 src/vfs/smbfs/helpers/lib/util.c     if (strcmp (str, "255.255.255.255") == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1923'>str</a>              1923 src/vfs/smbfs/helpers/lib/util.c     for (i = 0; pure_address &amp;&amp; str[i]; i++)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1924'>str</a>              1924 src/vfs/smbfs/helpers/lib/util.c         if (!(isdigit ((int) str[i]) || str[i] == '.'))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1930'>str</a>              1930 src/vfs/smbfs/helpers/lib/util.c         res = inet_addr (str);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1936'>str</a>              1936 src/vfs/smbfs/helpers/lib/util.c         if ((hp = Get_Hostbyname (str)) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1938'>str</a>              1938 src/vfs/smbfs/helpers/lib/util.c             DEBUG (3, ("Get_Hostbyname: Unknown host. %s\n", str));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1943'>str</a>              1943 src/vfs/smbfs/helpers/lib/util.c             DEBUG (3, ("Get_Hostbyname: host address is invalid for host %s\n", str));</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1959'>str</a>              1959 src/vfs/smbfs/helpers/lib/util.c interpret_addr2 (const char *str)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L1962'>str</a>              1962 src/vfs/smbfs/helpers/lib/util.c     uint32 a = interpret_addr (str);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2033'>str</a>              2033 src/vfs/smbfs/helpers/lib/util.c strip_mount_options (pstring * str)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2035'>str</a>              2035 src/vfs/smbfs/helpers/lib/util.c     if (**str == '-')</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2037'>str</a>              2037 src/vfs/smbfs/helpers/lib/util.c         char *p = *str;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2047'>str</a>              2047 src/vfs/smbfs/helpers/lib/util.c             pstrcpy (*str, tmp_str);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2246'>str</a>              2246 src/vfs/smbfs/helpers/lib/util.c standard_sub_basic (char *str)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2253'>str</a>              2253 src/vfs/smbfs/helpers/lib/util.c     for (s = str; s &amp;&amp; *s &amp;&amp; (p = strchr (s, '%')); s = p)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2363'>str</a>              2363 src/vfs/smbfs/helpers/lib/util.c standard_sub (connection_struct * conn, char *str)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2368'>str</a>              2368 src/vfs/smbfs/helpers/lib/util.c     for (s = str; (p = strchr (s, '%')); s = p)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--lib--util.c.html#L2419'>str</a>              2419 src/vfs/smbfs/helpers/lib/util.c     standard_sub_basic (str);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L283'>str</a>               283 src/vfs/smbfs/helpers/libsmb/smbdes.c str_to_key (unsigned char *str, unsigned char *key)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L287'>str</a>               287 src/vfs/smbfs/helpers/libsmb/smbdes.c     key[0] = str[0] &gt;&gt; 1;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L288'>str</a>               288 src/vfs/smbfs/helpers/libsmb/smbdes.c     key[1] = ((str[0] &amp; 0x01) &lt;&lt; 6) | (str[1] &gt;&gt; 2);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L289'>str</a>               289 src/vfs/smbfs/helpers/libsmb/smbdes.c     key[2] = ((str[1] &amp; 0x03) &lt;&lt; 5) | (str[2] &gt;&gt; 3);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L290'>str</a>               290 src/vfs/smbfs/helpers/libsmb/smbdes.c     key[3] = ((str[2] &amp; 0x07) &lt;&lt; 4) | (str[3] &gt;&gt; 4);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L291'>str</a>               291 src/vfs/smbfs/helpers/libsmb/smbdes.c     key[4] = ((str[3] &amp; 0x0F) &lt;&lt; 3) | (str[4] &gt;&gt; 5);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L292'>str</a>               292 src/vfs/smbfs/helpers/libsmb/smbdes.c     key[5] = ((str[4] &amp; 0x1F) &lt;&lt; 2) | (str[5] &gt;&gt; 6);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L293'>str</a>               293 src/vfs/smbfs/helpers/libsmb/smbdes.c     key[6] = ((str[5] &amp; 0x3F) &lt;&lt; 1) | (str[6] &gt;&gt; 7);</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbdes.c.html#L294'>str</a>               294 src/vfs/smbfs/helpers/libsmb/smbdes.c     key[7] = str[6] &amp; 0x7F;</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbencrypt.c.html#L63'>str</a>                63 src/vfs/smbfs/helpers/libsmb/smbencrypt.c _my_wcslen (int16 * str)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--libsmb--smbencrypt.c.html#L66'>str</a>                66 src/vfs/smbfs/helpers/libsmb/smbencrypt.c     while (*str++ != 0)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2288'>str</a>              2288 src/vfs/smbfs/helpers/param/loadparm.c lp_add_auto_services (char *str)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2294'>str</a>              2294 src/vfs/smbfs/helpers/param/loadparm.c     if (!str)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--param--loadparm.c.html#L2297'>str</a>              2297 src/vfs/smbfs/helpers/param/loadparm.c     s = strdup (str);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L804'>str</a>               804 src/vfs/undelfs/undelfs.c     char *str;</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L807'>str</a>               807 src/vfs/undelfs/undelfs.c     str = g_strdup_vprintf (fmt, ap);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L810'>str</a>               810 src/vfs/undelfs/undelfs.c     message (D_ERROR, _("Ext2lib error"), "%s (%s: %ld)", str, whoami, err_code);</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L811'>str</a>               811 src/vfs/undelfs/undelfs.c     g_free (str);</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L587'>str</a>               587 src/viewer/ascii.c     char str[(1 + MAX_COMBINING_CHARS) * UTF8_CHAR_LEN + 1];</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L691'>str</a>               691 src/viewer/ascii.c                         j += mcview_char_display (view, cs[i], str + j);</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L692'>str</a>               692 src/viewer/ascii.c                     str[j] = '\0';</span>
+<span class='curline'><a href='../S/src--viewer--ascii.c.html#L697'>str</a>               697 src/viewer/ascii.c                     tty_printf ("%s", str);</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L157'>str</a>               157 src/viewer/datasource.c     gchar *str = NULL;</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L165'>str</a>               165 src/viewer/datasource.c         str = mcview_get_ptr_growing_buffer (view, byte_index);</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L168'>str</a>               168 src/viewer/datasource.c         str = mcview_get_ptr_file (view, byte_index);</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L171'>str</a>               171 src/viewer/datasource.c         str = mcview_get_ptr_string (view, byte_index);</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L180'>str</a>               180 src/viewer/datasource.c     if (str == NULL)</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L183'>str</a>               183 src/viewer/datasource.c     res = g_utf8_get_char_validated (str, -1);</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L201'>str</a>               201 src/viewer/datasource.c         str = utf8buf;</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L202'>str</a>               202 src/viewer/datasource.c         res = g_utf8_get_char_validated (str, -1);</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L207'>str</a>               207 src/viewer/datasource.c         *ch = (unsigned char) (*str);</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L216'>str</a>               216 src/viewer/datasource.c         next_ch = g_utf8_next_char (str);</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L217'>str</a>               217 src/viewer/datasource.c         *ch_len = next_ch - str;</span>
+<span class='curline'><a href='../S/tests--lib--search--glob_translate_to_regex.c.html#L97'>str</a>                97 tests/lib/search/glob_translate_to_regex.c     mctest_assert_str_eq (dest_str-&gt;str, data-&gt;expected_result);</span>
+<span class='curline'><a href='../S/tests--lib--search--regex_process_escape_sequence.c.html#L130'>str</a>               130 tests/lib/search/regex_process_escape_sequence.c     mctest_assert_str_eq (actual_string-&gt;str, data-&gt;expected_string);</span>
+<span class='curline'><a href='../S/tests--lib--search--translate_replace_glob_to_regex.c.html#L74'>str</a>                74 tests/lib/search/translate_replace_glob_to_regex.c     mctest_assert_str_eq (dest_str-&gt;str, data-&gt;expected_result);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_path_from_str_flags.c.html#L99'>str</a>                99 tests/lib/vfs/vfs_path_from_str_flags.c     mctest_assert_str_eq (actual_result-&gt;str, data-&gt;expected_result);</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L111'>str</a>               111 tests/src/editor/editcmd__edit_complete_word_cmd.c                 g_string_new_len (compl[iterator]-&gt;str, compl[iterator]-&gt;len);</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L279'>str</a>               279 tests/src/editor/editcmd__edit_complete_word_cmd.c         mctest_assert_str_eq (actual_completed_str-&gt;str, data-&gt;expected_completed_word);</span>
+<span class='curline'><a href='../S/tests--src--editor--editcmd__edit_complete_word_cmd.c.html#L353'>str</a>               353 tests/src/editor/editcmd__edit_complete_word_cmd.c         mctest_assert_str_eq (actual_completed_str-&gt;str, data-&gt;expected_completed_word);</span>
+</pre>
+</body>
+</html>

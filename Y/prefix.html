@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>prefix</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--serialize.c.html#L109'>prefix</a>            109 lib/serialize.c mc_serialize_str (const char prefix, const char *data, GError ** error)</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L116'>prefix</a>            116 lib/serialize.c     return g_strdup_printf ("%c%zd" SRLZ_DELIM_S "%s", prefix, strlen (data), data);</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L132'>prefix</a>            132 lib/serialize.c mc_deserialize_str (const char prefix, const char *data, GError ** error)</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L142'>prefix</a>            142 lib/serialize.c     if (*data != prefix)</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L144'>prefix</a>            144 lib/serialize.c         g_set_error (error, MC_ERROR, 0, FUNC_NAME ": String prefix doesn't equal to '%c'", prefix);</span>
+<span class='curline'><a href='../S/lib--serialize.h.html#L19'>prefix</a>             19 lib/serialize.h char *mc_serialize_str (const char prefix, const char *data, GError ** error);</span>
+<span class='curline'><a href='../S/lib--serialize.h.html#L20'>prefix</a>             20 lib/serialize.h char *mc_deserialize_str (const char prefix, const char *data, GError ** error);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L150'>prefix</a>            150 lib/strutil.h        /*I*/ int (*prefix) (const char *, const char *);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L503'>prefix</a>            503 lib/strutil.h  int str_prefix (const char *text, const char *prefix);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L508'>prefix</a>            508 lib/strutil.h  int str_caseprefix (const char *text, const char *prefix);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L860'>prefix</a>            860 lib/strutil/strutil.c str_prefix (const char *text, const char *prefix)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L862'>prefix</a>            862 lib/strutil/strutil.c     return used_class.prefix (text, prefix);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L868'>prefix</a>            868 lib/strutil/strutil.c str_caseprefix (const char *text, const char *prefix)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L870'>prefix</a>            870 lib/strutil/strutil.c     return used_class.caseprefix (text, prefix);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L744'>prefix</a>            744 lib/strutil/strutil8bit.c str_8bit_prefix (const char *text, const char *prefix)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L748'>prefix</a>            748 lib/strutil/strutil8bit.c     for (result = 0; text[result] != '\0' &amp;&amp; prefix[result] != '\0'</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L749'>prefix</a>            749 lib/strutil/strutil8bit.c          &amp;&amp; text[result] == prefix[result]; result++);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L757'>prefix</a>            757 lib/strutil/strutil8bit.c str_8bit_caseprefix (const char *text, const char *prefix)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L761'>prefix</a>            761 lib/strutil/strutil8bit.c     for (result = 0; text[result] != '\0' &amp;&amp; prefix[result] != '\0'</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L762'>prefix</a>            762 lib/strutil/strutil8bit.c          &amp;&amp; char_toupper (text[result]) == char_toupper (prefix[result]); result++);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L853'>prefix</a>            853 lib/strutil/strutil8bit.c     result.prefix = str_8bit_prefix;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L700'>prefix</a>            700 lib/strutil/strutilascii.c str_ascii_prefix (const char *text, const char *prefix)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L704'>prefix</a>            704 lib/strutil/strutilascii.c     for (result = 0; text[result] != '\0' &amp;&amp; prefix[result] != '\0'</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L705'>prefix</a>            705 lib/strutil/strutilascii.c          &amp;&amp; text[result] == prefix[result]; result++);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L713'>prefix</a>            713 lib/strutil/strutilascii.c str_ascii_caseprefix (const char *text, const char *prefix)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L717'>prefix</a>            717 lib/strutil/strutilascii.c     for (result = 0; text[result] != '\0' &amp;&amp; prefix[result] != '\0'</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L718'>prefix</a>            718 lib/strutil/strutilascii.c          &amp;&amp; g_ascii_toupper (text[result]) == g_ascii_toupper (prefix[result]); result++);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L773'>prefix</a>            773 lib/strutil/strutilascii.c     result.prefix = str_ascii_prefix;</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1253'>prefix</a>           1253 lib/strutil/strutilutf8.c str_utf8_prefix (const char *text, const char *prefix)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1261'>prefix</a>           1261 lib/strutil/strutilutf8.c     p = str_utf8_normalize (prefix);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1290'>prefix</a>           1290 lib/strutil/strutilutf8.c str_utf8_caseprefix (const char *text, const char *prefix)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1298'>prefix</a>           1298 lib/strutil/strutilutf8.c     p = str_utf8_casefold_normalize (prefix);</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L1484'>prefix</a>           1484 lib/strutil/strutilutf8.c     result.prefix = str_utf8_prefix;</span>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L719'>prefix</a>            719 lib/vfs/direntry.c         name = g_strconcat (super-&gt;name, PATH_SEP_STR, me-&gt;prefix, VFS_PATH_URL_DELIMITER,</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L795'>prefix</a>            795 lib/vfs/interface.c mc_mkstemps (vfs_path_t ** pname_vpath, const char *prefix, const char *suffix)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L800'>prefix</a>            800 lib/vfs/interface.c     if (strchr (prefix, PATH_SEP) != NULL)</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L801'>prefix</a>            801 lib/vfs/interface.c         p1 = g_strdup (prefix);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L805'>prefix</a>            805 lib/vfs/interface.c         p1 = g_build_filename (mc_tmpdir (), prefix, (char *) NULL);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L999'>prefix</a>            999 lib/vfs/path.c vfs_prefix_to_class (const char *prefix)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1011'>prefix</a>           1011 lib/vfs/path.c             if (vfs-&gt;which (vfs, prefix) == -1)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1016'>prefix</a>           1016 lib/vfs/path.c         if (vfs-&gt;prefix != NULL &amp;&amp; strncmp (prefix, vfs-&gt;prefix, strlen (vfs-&gt;prefix)) == 0)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1543'>prefix</a>           1543 lib/vfs/path.c     pretty_path = g_string_new (element-&gt;class-&gt;prefix);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L82'>prefix</a>             82 lib/vfs/path.h struct vfs_class *vfs_prefix_to_class (const char *prefix);</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L177'>prefix</a>            177 lib/vfs/utilvfs.c vfs_mkstemps (vfs_path_t ** pname_vpath, const char *prefix, const char *param_basename)</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.c.html#L208'>prefix</a>            208 lib/vfs/utilvfs.c     fd = mc_mkstemps (pname_vpath, prefix, suffix);</span>
+<span class='curline'><a href='../S/lib--vfs--utilvfs.h.html#L45'>prefix</a>             45 lib/vfs/utilvfs.h int vfs_mkstemps (vfs_path_t ** pname_vpath, const char *prefix, const char *basename);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L135'>prefix</a>            135 lib/vfs/vfs.h      const char *prefix;         /* "fish:" */</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L308'>prefix</a>            308 lib/vfs/vfs.h  int mc_mkstemps (vfs_path_t ** pname_vpath, const char *prefix, const char *suffix);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L421'>prefix</a>            421 src/filemanager/cmd.c          const char *history_name, const char *prefix, int to_home, gboolean strip_password)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L439'>prefix</a>            439 src/filemanager/cmd.c     if (strncmp (prefix, machine, strlen (prefix)) == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L442'>prefix</a>            442 src/filemanager/cmd.c         cd_path = g_strconcat (prefix, machine, to_home ? "/~/" : (char *) NULL, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L872'>prefix</a>            872 src/vfs/cpio/cpio.c     vfs_cpiofs_ops.prefix = "ucpio";</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L130'>prefix</a>            130 src/vfs/extfs/extfs.c     char *prefix;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L360'>prefix</a>            360 src/vfs/extfs/extfs.c             g_strconcat (a-&gt;name ? a-&gt;name : "", PATH_SEP_STR, info-&gt;prefix, VFS_PATH_URL_DELIMITER,</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L427'>prefix</a>            427 src/vfs/extfs/extfs.c     cmd = g_strconcat (info-&gt;path, info-&gt;prefix, " list ",</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L509'>prefix</a>            509 src/vfs/extfs/extfs.c         message (D_ERROR, MSG_ERROR, _("Cannot open %s archive\n%s"), info-&gt;prefix, name);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L655'>prefix</a>            655 src/vfs/extfs/extfs.c         if ((strncmp (path, info-&gt;prefix, path_len) == 0)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L656'>prefix</a>            656 src/vfs/extfs/extfs.c             &amp;&amp; ((info-&gt;prefix[path_len] == '\0') || (info-&gt;prefix[path_len] == '+')))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L846'>prefix</a>            846 src/vfs/extfs/extfs.c     cmd = g_strconcat (info-&gt;path, info-&gt;prefix, str_extfs_cmd,</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L880'>prefix</a>            880 src/vfs/extfs/extfs.c         g_strconcat (info-&gt;path, info-&gt;prefix, " run ", quoted_archive_name, " ", q, (char *) NULL);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1612'>prefix</a>           1612 src/vfs/extfs/extfs.c                 info.prefix = g_strdup (filename);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1616'>prefix</a>           1616 src/vfs/extfs/extfs.c                     info.prefix[len - 1] = '\0';</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1627'>prefix</a>           1627 src/vfs/extfs/extfs.c                         &amp;&amp; (strcmp (info.prefix, p-&gt;prefix) == 0))</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1637'>prefix</a>           1637 src/vfs/extfs/extfs.c                     g_free (info.prefix);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1643'>prefix</a>           1643 src/vfs/extfs/extfs.c                         info.prefix[len - 1] = '+';</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1695'>prefix</a>           1695 src/vfs/extfs/extfs.c         g_free (info-&gt;prefix);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1577'>prefix</a>           1577 src/vfs/fish/fish.c             g_strconcat (vfs_fish_ops.prefix, VFS_PATH_URL_DELIMITER,</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1623'>prefix</a>           1623 src/vfs/fish/fish.c     vfs_fish_ops.prefix = "sh";</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2599'>prefix</a>           2599 src/vfs/ftpfs/ftpfs.c     vfs_ftpfs_ops.prefix = "ftp";</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L680'>prefix</a>            680 src/vfs/sftpfs/vfs_class.c     sftpfs_class.prefix = "sftp";</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2239'>prefix</a>           2239 src/vfs/smbfs/smbfs.c     vfs_smbfs_ops.prefix = "smb";</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L181'>prefix</a>            181 src/vfs/tar/tar.c             char prefix[PREFIX_SIZE];</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L641'>prefix</a>            641 src/vfs/tar/tar.c             if (header-&gt;header.unused.prefix[0] != '\0')</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L646'>prefix</a>            646 src/vfs/tar/tar.c                 temp_prefix = g_strndup (header-&gt;header.unused.prefix, PREFIX_SIZE);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L917'>prefix</a>            917 src/vfs/tar/tar.c     vfs_tarfs_ops.prefix = "utar";</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L820'>prefix</a>            820 src/vfs/undelfs/undelfs.c     vfs_undelfs_ops.prefix = "undel";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--canonicalize_pathname.c.html#L64'>prefix</a>             64 tests/lib/vfs/canonicalize_pathname.c     vfs_test_ops.prefix = "ftp";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--current_dir.c.html#L65'>prefix</a>             65 tests/lib/vfs/current_dir.c     vfs_test_ops.prefix = "test";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_manipulations.c.html#L53'>prefix</a>             53 tests/lib/vfs/path_manipulations.c     vfs_test_ops1.prefix = "test1";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_manipulations.c.html#L58'>prefix</a>             58 tests/lib/vfs/path_manipulations.c     vfs_test_ops2.prefix = "test2";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_manipulations.c.html#L63'>prefix</a>             63 tests/lib/vfs/path_manipulations.c     vfs_test_ops3.prefix = "test3";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_recode.c.html#L253'>prefix</a>            253 tests/lib/vfs/path_recode.c     vfs_test_ops1.prefix = "test1";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_serialize.c.html#L62'>prefix</a>             62 tests/lib/vfs/path_serialize.c     vfs_test_ops1.prefix = "test1";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_serialize.c.html#L67'>prefix</a>             67 tests/lib/vfs/path_serialize.c     vfs_test_ops2.prefix = "test2";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_serialize.c.html#L72'>prefix</a>             72 tests/lib/vfs/path_serialize.c     vfs_test_ops3.prefix = "test3";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--relative_cd.c.html#L86'>prefix</a>             86 tests/lib/vfs/relative_cd.c     vfs_test_ops1.prefix = "test1";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_parse_ls_lga.c.html#L68'>prefix</a>             68 tests/lib/vfs/vfs_parse_ls_lga.c     vfs_test_ops1.prefix = "test1:";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_path_string_convert.c.html#L62'>prefix</a>             62 tests/lib/vfs/vfs_path_string_convert.c     vfs_test_ops1.prefix = "test1";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_path_string_convert.c.html#L68'>prefix</a>             68 tests/lib/vfs/vfs_path_string_convert.c     vfs_test_ops2.prefix = "test2";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_path_string_convert.c.html#L73'>prefix</a>             73 tests/lib/vfs/vfs_path_string_convert.c     vfs_test_ops3.prefix = "test3";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_prefix_to_class.c.html#L69'>prefix</a>             69 tests/lib/vfs/vfs_prefix_to_class.c     vfs_test_ops1.prefix = "test1:";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_prefix_to_class.c.html#L75'>prefix</a>             75 tests/lib/vfs/vfs_prefix_to_class.c     vfs_test_ops2.prefix = "test2:";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_prefix_to_class.c.html#L80'>prefix</a>             80 tests/lib/vfs/vfs_prefix_to_class.c     vfs_test_ops3.prefix = "test3:";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L97'>prefix</a>             97 tests/lib/vfs/vfs_s_get_path.c     vfs_test_ops1.prefix = "test1:";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L105'>prefix</a>            105 tests/lib/vfs/vfs_s_get_path.c     vfs_test_ops2.prefix = "test2:";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_s_get_path.c.html#L110'>prefix</a>            110 tests/lib/vfs/vfs_s_get_path.c     vfs_test_ops3.prefix = "test3:";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_split.c.html#L57'>prefix</a>             57 tests/lib/vfs/vfs_split.c     vfs_test_ops1.prefix = "test1:";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_split.c.html#L62'>prefix</a>             62 tests/lib/vfs/vfs_split.c     vfs_test_ops2.prefix = "test2:";</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_split.c.html#L67'>prefix</a>             67 tests/lib/vfs/vfs_split.c     vfs_test_ops3.prefix = "test3:";</span>
+</pre>
+</body>
+</html>

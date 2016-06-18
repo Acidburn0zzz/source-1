@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>lc_data</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L226'>lc_data</a>           226 src/filemanager/ext.c exec_make_shell_string (const char *lc_data, const vfs_path_t * filename_vpath)</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L235'>lc_data</a>           235 src/filemanager/ext.c     for (; *lc_data != '\0' &amp;&amp; *lc_data != '\n'; lc_data++)</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L239'>lc_data</a>           239 src/filemanager/ext.c             if (*lc_data == '}')</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L264'>lc_data</a>           264 src/filemanager/ext.c                     lc_prompt[len] = *lc_data;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L272'>lc_data</a>           272 src/filemanager/ext.c             if (*lc_data == '{')</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L279'>lc_data</a>           279 src/filemanager/ext.c                 i = check_format_view (lc_data);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L282'>lc_data</a>           282 src/filemanager/ext.c                     lc_data += i - 1;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L287'>lc_data</a>           287 src/filemanager/ext.c                     i = check_format_cd (lc_data);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L294'>lc_data</a>           294 src/filemanager/ext.c                         lc_data += i - 1;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L298'>lc_data</a>           298 src/filemanager/ext.c                         i = check_format_var (lc_data, &amp;v);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L303'>lc_data</a>           303 src/filemanager/ext.c                             lc_data += i;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L309'>lc_data</a>           309 src/filemanager/ext.c                             if (*lc_data != 'f')</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L310'>lc_data</a>           310 src/filemanager/ext.c                                 text = expand_format (NULL, *lc_data, !is_cd);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L336'>lc_data</a>           336 src/filemanager/ext.c         else if (*lc_data == '%')</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L340'>lc_data</a>           340 src/filemanager/ext.c             if (*lc_data != ' ' &amp;&amp; *lc_data != '\t')</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L343'>lc_data</a>           343 src/filemanager/ext.c                 *(pbuffer++) = *lc_data;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L345'>lc_data</a>           345 src/filemanager/ext.c                 g_string_append_c (shell_string, *lc_data);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L408'>lc_data</a>           408 src/filemanager/ext.c exec_extension (void *target, const vfs_path_t * filename_vpath, const char *lc_data,</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L417'>lc_data</a>           417 src/filemanager/ext.c     g_return_val_if_fail (lc_data != NULL, NULL);</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L429'>lc_data</a>           429 src/filemanager/ext.c     shell_string = exec_make_shell_string (lc_data, filename_vpath);</span>
+</pre>
+</body>
+</html>

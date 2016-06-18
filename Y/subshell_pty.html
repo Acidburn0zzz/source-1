@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>subshell_pty</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--global.c.html#L98'>subshell_pty</a>       98 lib/global.c           .subshell_pty = 0,</span>
+<span class='curline'><a href='../S/lib--global.h.html#L253'>subshell_pty</a>      253 lib/global.h           int subshell_pty;</span>
+<span class='curline'><a href='../S/lib--tty--tty-ncurses.c.html#L286'>subshell_pty</a>      286 lib/tty/tty-ncurses.c         tty_resize (mc_global.tty.subshell_pty);</span>
+<span class='curline'><a href='../S/lib--tty--tty-slang.c.html#L395'>subshell_pty</a>      395 lib/tty/tty-slang.c         tty_resize (mc_global.tty.subshell_pty);</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L879'>subshell_pty</a>      879 src/filemanager/midnight.c         add_select_channel (mc_global.tty.subshell_pty, load_prompt, 0);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L351'>subshell_pty</a>      351 src/subshell/common.c     close (mc_global.tty.subshell_pty);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L520'>subshell_pty</a>      520 src/subshell/common.c         FD_SET (mc_global.tty.subshell_pty, &amp;read_set);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L522'>subshell_pty</a>      522 src/subshell/common.c         maxfdp = MAX (mc_global.tty.subshell_pty, subshell_pipe[READ]);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L545'>subshell_pty</a>      545 src/subshell/common.c         if (FD_ISSET (mc_global.tty.subshell_pty, &amp;read_set))</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L553'>subshell_pty</a>      553 src/subshell/common.c             bytes = read (mc_global.tty.subshell_pty, pty_buffer, sizeof (pty_buffer));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L609'>subshell_pty</a>      609 src/subshell/common.c                     write_all (mc_global.tty.subshell_pty, pty_buffer, i);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L615'>subshell_pty</a>      615 src/subshell/common.c             write_all (mc_global.tty.subshell_pty, pty_buffer, bytes);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1013'>subshell_pty</a>     1013 src/subshell/common.c     if (mc_global.tty.subshell_pty == 0)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1022'>subshell_pty</a>     1022 src/subshell/common.c         mc_global.tty.subshell_pty = pty_open_master (pty_name);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1023'>subshell_pty</a>     1023 src/subshell/common.c         if (mc_global.tty.subshell_pty == -1)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1092'>subshell_pty</a>     1092 src/subshell/common.c     write_all (mc_global.tty.subshell_pty, precmd, strlen (precmd));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1127'>subshell_pty</a>     1127 src/subshell/common.c                 write_all (mc_global.tty.subshell_pty, " \b", 2);       /* Hack to make prompt reappear */</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1133'>subshell_pty</a>     1133 src/subshell/common.c             write_all (mc_global.tty.subshell_pty, " ", 1);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1135'>subshell_pty</a>     1135 src/subshell/common.c         write_all (mc_global.tty.subshell_pty, command, strlen (command));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1136'>subshell_pty</a>     1136 src/subshell/common.c         write_all (mc_global.tty.subshell_pty, "\n", 1);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1173'>subshell_pty</a>     1173 src/subshell/common.c     FD_SET (mc_global.tty.subshell_pty, &amp;tmp);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1182'>subshell_pty</a>     1182 src/subshell/common.c            &amp;&amp; (rc = select (mc_global.tty.subshell_pty + 1, &amp;tmp, NULL, NULL, &amp;timeleft)) != 0)</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1201'>subshell_pty</a>     1201 src/subshell/common.c         bytes = read (mc_global.tty.subshell_pty, pty_buffer, sizeof (pty_buffer));</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1289'>subshell_pty</a>     1289 src/subshell/common.c     write_all (mc_global.tty.subshell_pty, " cd ", 4);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1301'>subshell_pty</a>     1301 src/subshell/common.c             write_all (mc_global.tty.subshell_pty, temp-&gt;str, temp-&gt;len);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1306'>subshell_pty</a>     1306 src/subshell/common.c             write_all (mc_global.tty.subshell_pty, ".", 1);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1311'>subshell_pty</a>     1311 src/subshell/common.c         write_all (mc_global.tty.subshell_pty, "/", 1);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1313'>subshell_pty</a>     1313 src/subshell/common.c     write_all (mc_global.tty.subshell_pty, "\n", 1);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1358'>subshell_pty</a>     1358 src/subshell/common.c         write_all (mc_global.tty.subshell_pty, " \n", 2);</span>
+<span class='curline'><a href='../S/src--subshell--common.c.html#L1420'>subshell_pty</a>     1420 src/subshell/common.c             delete_select_channel (mc_global.tty.subshell_pty);</span>
+</pre>
+</body>
+</html>

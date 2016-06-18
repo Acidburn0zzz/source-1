@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>dev_t</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L259'>dev_t</a>             259 lib/vfs/interface.c MC_NAMEOP (mknod, (const vfs_path_t *vpath, mode_t mode, dev_t dev), (vpath, mode, dev))</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L180'>dev_t</a>             180 lib/vfs/vfs.h      int (*mknod) (const vfs_path_t * vpath, mode_t mode, dev_t dev);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L290'>dev_t</a>             290 lib/vfs/vfs.h  int mc_mknod (const vfs_path_t * vpath, mode_t mode, dev_t dev);</span>
+<span class='curline'><a href='../S/lib--vfs--xdirentry.h.html#L123'>dev_t</a>             123 lib/vfs/xdirentry.h     dev_t rdev;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L114'>dev_t</a>             114 src/filemanager/file.c     dev_t dev;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L295'>dev_t</a>             295 src/filemanager/file.c     dev_t dev = sb-&gt;st_dev;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L325'>dev_t</a>             325 src/filemanager/file.c     dev_t dev = pstat-&gt;st_dev;</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L116'>dev_t</a>             116 src/filemanager/filegui.c     dev_t device = dev_for_path (filename);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L333'>dev_t</a>             333 src/filemanager/mountlist.c     dev_t me_dev;               /* Device number of me_mountdir. */</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L555'>dev_t</a>             555 src/filemanager/mountlist.c static dev_t</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L574'>dev_t</a>             574 src/filemanager/mountlist.c             &amp;&amp; !(dev == ULONG_MAX &amp;&amp; errno == ERANGE) &amp;&amp; dev == (dev_t) dev)</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L831'>dev_t</a>             831 src/filemanager/mountlist.c             me-&gt;me_dev = (dev_t) (-1);  /* Magic; means not known yet. */</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L856'>dev_t</a>             856 src/filemanager/mountlist.c             me-&gt;me_dev = (dev_t) (-1);  /* Magic; means not known yet. */</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L909'>dev_t</a>             909 src/filemanager/mountlist.c             dev_t dev;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L916'>dev_t</a>             916 src/filemanager/mountlist.c         dev_t dev;</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1028'>dev_t</a>            1028 src/filemanager/mountlist.c             me-&gt;me_dev = (dev_t) (-1);  /* Magic; means not known yet. */</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1057'>dev_t</a>            1057 src/filemanager/mountlist.c             me-&gt;me_dev = (dev_t) (-1);  /* Magic; means not known yet. */</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1108'>dev_t</a>            1108 src/filemanager/mountlist.c             me-&gt;me_dev = (dev_t) (-1);  /* Magic; means not known yet. */</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1246'>dev_t</a>            1246 src/filemanager/mountlist.c             me-&gt;me_dev = (dev_t) (-1);  /* vmt_fsid might be the info we want.  */</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1284'>dev_t</a>            1284 src/filemanager/mountlist.c                 me-&gt;me_dev = (dev_t) (-1);      /* Magic; means not known yet. */</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L470'>dev_t</a>             470 src/filemanager/panel.c ilog10 (dev_t n)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L486'>dev_t</a>             486 src/filemanager/panel.c format_device_number (char *buf, size_t bufsize, dev_t dev)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L488'>dev_t</a>             488 src/filemanager/panel.c     dev_t major_dev = major (dev);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L489'>dev_t</a>             489 src/filemanager/panel.c     dev_t minor_dev = minor (dev);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L132'>dev_t</a>             132 src/vfs/cpio/cpio.c     dev_t device;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L84'>dev_t</a>              84 src/vfs/extfs/extfs.c     dev_t dev;                  /* This is an internal identification of the extfs archive */</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L86'>dev_t</a>              86 src/vfs/extfs/extfs.c     dev_t rdev;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L120'>dev_t</a>             120 src/vfs/extfs/extfs.c     dev_t rdev;</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L398'>dev_t</a>             398 src/vfs/extfs/extfs.c     static dev_t archive_counter = 0;</span>
+<span class='curline'><a href='../S/src--vfs--local--local.c.html#L269'>dev_t</a>             269 src/vfs/local/local.c local_mknod (const vfs_path_t * vpath, mode_t mode, dev_t dev)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L372'>dev_t</a>             372 src/vfs/sftpfs/vfs_class.c sftpfs_cb_mknod (const vfs_path_t * vpath, mode_t mode, dev_t dev)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--includes.h.html#L329'>dev_t</a>             329 src/vfs/smbfs/helpers/include/includes.h #define SMB_DEV_T dev_t</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L1873'>dev_t</a>            1873 src/vfs/smbfs/smbfs.c smbfs_mknod (const vfs_path_t * vpath, mode_t mode, dev_t dev)</span>
+</pre>
+</body>
+</html>

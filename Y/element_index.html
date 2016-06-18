@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>element_index</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L600'>element_index</a>     600 lib/vfs/path.c     if ((flags &amp; VPF_STRIP_HOME) &amp;&amp; element_index == 0 &amp;&amp; (element-&gt;class-&gt;flags &amp; VFSF_LOCAL) != 0) \</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L629'>element_index</a>     629 lib/vfs/path.c     int element_index;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L645'>element_index</a>     645 lib/vfs/path.c     for (element_index = 0; element_index &lt; elements_count; element_index++)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L648'>element_index</a>     648 lib/vfs/path.c         gboolean is_relative = vpath-&gt;relative &amp;&amp; (element_index == 0);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L650'>element_index</a>     650 lib/vfs/path.c         element = vfs_path_get_by_index (vpath, element_index);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L826'>element_index</a>     826 lib/vfs/path.c vfs_path_get_by_index (const vfs_path_t * vpath, int element_index)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L831'>element_index</a>     831 lib/vfs/path.c     if (element_index &lt; 0)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L832'>element_index</a>     832 lib/vfs/path.c         element_index += vfs_path_elements_count (vpath);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L834'>element_index</a>     834 lib/vfs/path.c     if (element_index &lt; 0)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L837'>element_index</a>     837 lib/vfs/path.c     return g_array_index (vpath-&gt;path, vfs_path_element_t *, element_index);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L978'>element_index</a>     978 lib/vfs/path.c vfs_path_remove_element_by_index (vfs_path_t * vpath, int element_index)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L985'>element_index</a>     985 lib/vfs/path.c     if (element_index &lt; 0)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L986'>element_index</a>     986 lib/vfs/path.c         element_index = vfs_path_elements_count (vpath) + element_index;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L988'>element_index</a>     988 lib/vfs/path.c     element = (vfs_path_element_t *) vfs_path_get_by_index (vpath, element_index);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L989'>element_index</a>     989 lib/vfs/path.c     vpath-&gt;path = g_array_remove_index (vpath-&gt;path, element_index);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1090'>element_index</a>    1090 lib/vfs/path.c     ssize_t element_index;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1104'>element_index</a>    1104 lib/vfs/path.c     for (element_index = 0; element_index &lt; vfs_path_elements_count (vpath); element_index++)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1109'>element_index</a>    1109 lib/vfs/path.c         groupname = g_strdup_printf ("path-element-%zd", element_index);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1110'>element_index</a>    1110 lib/vfs/path.c         element = vfs_path_get_by_index (vpath, element_index);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1148'>element_index</a>    1148 lib/vfs/path.c     size_t element_index = 0;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1165'>element_index</a>    1165 lib/vfs/path.c         groupname = g_strdup_printf ("path-element-%zd", element_index);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1205'>element_index</a>    1205 lib/vfs/path.c         element_index++;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1341'>element_index</a>    1341 lib/vfs/path.c     int element_index;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1346'>element_index</a>    1346 lib/vfs/path.c     for (element_index = 0; element_index &lt; vfs_path_elements_count (vpath); element_index++)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1351'>element_index</a>    1351 lib/vfs/path.c         element = vfs_path_get_by_index (vpath, element_index);</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1385'>element_index</a>    1385 lib/vfs/path.c     int element_index;</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1412'>element_index</a>    1412 lib/vfs/path.c     for (element_index = 0; element_index &lt; vfs_path_elements_count (vpath); element_index++)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1418'>element_index</a>    1418 lib/vfs/path.c         element = vfs_path_get_by_index (vpath, element_index);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L62'>element_index</a>      62 lib/vfs/path.h void vfs_path_remove_element_by_index (vfs_path_t * vpath, int element_index);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L78'>element_index</a>      78 lib/vfs/path.h const vfs_path_element_t *vfs_path_get_by_index (const vfs_path_t * path, int element_index);</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_path_string_convert.c.html#L213'>element_index</a>     213 tests/lib/vfs/vfs_path_string_convert.c     const off_t element_index;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--vfs_path_string_convert.c.html#L276'>element_index</a>     276 tests/lib/vfs/vfs_path_string_convert.c     actual_result = vfs_path_to_str_elements_count (vpath, data-&gt;element_index);</span>
+</pre>
+</body>
+</html>

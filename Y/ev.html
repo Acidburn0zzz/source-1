@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>ev</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L719'>ev</a>                719 lib/tty/key.c  xmouse_get_event (Gpm_Event * ev, gboolean extended)</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L736'>ev</a>                736 lib/tty/key.c          ev-&gt;x = tty_lowlevel_getch () - 32;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L737'>ev</a>                737 lib/tty/key.c          ev-&gt;y = tty_lowlevel_getch () - 32;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L748'>ev</a>                748 lib/tty/key.c          btn = ev-&gt;x = ev-&gt;y = 0;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L749'>ev</a>                749 lib/tty/key.c          ev-&gt;type = 0;           /* In case we return on an invalid sequence */</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L760'>ev</a>                760 lib/tty/key.c              ev-&gt;x = 10 * ev-&gt;x + (c - '0');</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L766'>ev</a>                766 lib/tty/key.c              ev-&gt;y = 10 * ev-&gt;y + (c - '0');</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L788'>ev</a>                788 lib/tty/key.c                  ev-&gt;type = 0;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L794'>ev</a>                794 lib/tty/key.c                  ev-&gt;type = GPM_UP | (GPM_SINGLE &lt;&lt; clicks);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L797'>ev</a>                797 lib/tty/key.c              ev-&gt;buttons = 0;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L804'>ev</a>                804 lib/tty/key.c              ev-&gt;type = 0;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L812'>ev</a>                812 lib/tty/key.c              ev-&gt;type = GPM_DRAG;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L815'>ev</a>                815 lib/tty/key.c              ev-&gt;type = GPM_DOWN;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L829'>ev</a>                829 lib/tty/key.c              ev-&gt;buttons = GPM_B_LEFT;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L832'>ev</a>                832 lib/tty/key.c              ev-&gt;buttons = GPM_B_MIDDLE;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L835'>ev</a>                835 lib/tty/key.c              ev-&gt;buttons = GPM_B_RIGHT;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L838'>ev</a>                838 lib/tty/key.c              ev-&gt;buttons = GPM_B_UP;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L842'>ev</a>                842 lib/tty/key.c              ev-&gt;buttons = GPM_B_DOWN;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L847'>ev</a>                847 lib/tty/key.c              ev-&gt;type = 0;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L848'>ev</a>                848 lib/tty/key.c              ev-&gt;buttons = 0;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L851'>ev</a>                851 lib/tty/key.c          last_btn = ev-&gt;buttons;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L1956'>ev</a>               1956 lib/tty/key.c      static struct Gpm_Event ev; /* Mouse event */</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2087'>ev</a>               2087 lib/tty/key.c                      status = Gpm_GetEvent (&amp;ev);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2090'>ev</a>               2090 lib/tty/key.c                          Gpm_FitEvent (&amp;ev);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2091'>ev</a>               2091 lib/tty/key.c                          *event = ev;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2166'>ev</a>               2166 lib/tty/key.c      Gpm_Event ev;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2169'>ev</a>               2169 lib/tty/key.c      ev.x = -1;</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L2170'>ev</a>               2170 lib/tty/key.c      while ((key = tty_get_event (&amp;ev, FALSE, TRUE)) == EV_NONE);</span>
+<span class='curline'><a href='../S/lib--tty--mouse.h.html#L28'>ev</a>                 28 lib/tty/mouse.h #define GPM_BARE_EVENTS(ev) ((ev)&amp;0xF)</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L839'>ev</a>                839 lib/widget/input.c     ev_history_load_save_t *ev = (ev_history_load_save_t *) data;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L844'>ev</a>                844 lib/widget/input.c     in-&gt;history.list = history_load (ev-&gt;cfg, in-&gt;history.name);</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L874'>ev</a>                874 lib/widget/input.c         ev_history_load_save_t *ev = (ev_history_load_save_t *) data;</span>
+<span class='curline'><a href='../S/lib--widget--input.c.html#L878'>ev</a>                878 lib/widget/input.c             history_save (ev-&gt;cfg, in-&gt;history.name, in-&gt;history.list);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1424'>ev</a>               1424 src/filemanager/panel.c     ev_history_load_save_t *ev = (ev_history_load_save_t *) data;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1429'>ev</a>               1429 src/filemanager/panel.c     if (ev-&gt;receiver == NULL || ev-&gt;receiver == WIDGET (p))</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1431'>ev</a>               1431 src/filemanager/panel.c         if (ev-&gt;cfg != NULL)</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1432'>ev</a>               1432 src/filemanager/panel.c             p-&gt;dir_history = history_load (ev-&gt;cfg, p-&gt;hist_name);</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1456'>ev</a>               1456 src/filemanager/panel.c         ev_history_load_save_t *ev = (ev_history_load_save_t *) data;</span>
+<span class='curline'><a href='../S/src--filemanager--panel.c.html#L1458'>ev</a>               1458 src/filemanager/panel.c         history_save (ev-&gt;cfg, p-&gt;hist_name, p-&gt;dir_history);</span>
+</pre>
+</body>
+</html>

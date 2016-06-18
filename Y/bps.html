@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>bps</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L879'>bps</a>               879 src/filemanager/file.c         ctx-&gt;bps = n_read_total / ((dt &lt; 1) ? 1 : dt);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L886'>bps</a>               886 src/filemanager/file.c     ctx-&gt;bps = n_read_total / ctx-&gt;bps_time;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L901'>bps</a>               901 src/filemanager/file.c             tctx-&gt;bps = tctx-&gt;copied_bytes / total_secs;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L902'>bps</a>               902 src/filemanager/file.c             tctx-&gt;eta_secs = (tctx-&gt;bps != 0) ? remain_bytes / tctx-&gt;bps : 0;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L907'>bps</a>               907 src/filemanager/file.c         tctx-&gt;bps = (tctx-&gt;bps * (tctx-&gt;bps_count - 1) + ctx-&gt;bps) / tctx-&gt;bps_count;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L908'>bps</a>               908 src/filemanager/file.c         tctx-&gt;eta_secs = (tctx-&gt;bps != 0) ? remain_bytes / tctx-&gt;bps : 0;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1780'>bps</a>              1780 src/filemanager/file.c     ctx-&gt;bps = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1782'>bps</a>              1782 src/filemanager/file.c     if (tctx-&gt;bps == 0 || (file_size / (tctx-&gt;bps)) &gt; FILEOP_UPDATE_INTERVAL)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L372'>bps</a>               372 src/filemanager/filegui.c file_bps_prepare_for_show (char *buffer, long bps)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L374'>bps</a>               374 src/filemanager/filegui.c     if (bps &gt; 1024 * 1024)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L376'>bps</a>               376 src/filemanager/filegui.c         g_snprintf (buffer, BUF_TINY, _("%.2f MB/s"), bps / (1024 * 1024.0));</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L378'>bps</a>               378 src/filemanager/filegui.c     else if (bps &gt; 1024)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L380'>bps</a>               380 src/filemanager/filegui.c         g_snprintf (buffer, BUF_TINY, _("%.2f KB/s"), bps / 1024.0);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L382'>bps</a>               382 src/filemanager/filegui.c     else if (bps &gt; 1)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L384'>bps</a>               384 src/filemanager/filegui.c         g_snprintf (buffer, BUF_TINY, _("%ld B/s"), bps);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L911'>bps</a>               911 src/filemanager/filegui.c         if (ctx-&gt;bps == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L917'>bps</a>               917 src/filemanager/filegui.c             file_bps_prepare_for_show (buffer3, ctx-&gt;bps);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L979'>bps</a>               979 src/filemanager/filegui.c     if (!show_summary &amp;&amp; tctx-&gt;bps == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L993'>bps</a>               993 src/filemanager/filegui.c             if (tctx-&gt;bps == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L998'>bps</a>               998 src/filemanager/filegui.c                 file_bps_prepare_for_show (buffer4, (long) tctx-&gt;bps);</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1005'>bps</a>              1005 src/filemanager/filegui.c             if (tctx-&gt;bps == 0)</span>
+<span class='curline'><a href='../S/src--filemanager--filegui.c.html#L1009'>bps</a>              1009 src/filemanager/filegui.c                 file_bps_prepare_for_show (buffer4, (long) tctx-&gt;bps);</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.h.html#L83'>bps</a>                83 src/filemanager/fileopctx.h     long bps;</span>
+<span class='curline'><a href='../S/src--filemanager--fileopctx.h.html#L172'>bps</a>               172 src/filemanager/fileopctx.h     size_t bps;</span>
+</pre>
+</body>
+</html>

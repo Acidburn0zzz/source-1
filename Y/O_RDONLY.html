@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>O_RDONLY</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--direntry.c.html#L749'>O_RDONLY</a>          749 lib/vfs/direntry.c     fh = vfs_s_open (vpath, O_RDONLY, 0);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L89'>O_RDONLY</a>           89 lib/vfs/interface.c     fdin = mc_open (filename_vpath, O_RDONLY | O_LINEAR);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L147'>O_RDONLY</a>          147 lib/vfs/interface.c         fdin = open (local, O_RDONLY);</span>
+<span class='curline'><a href='../S/lib--vfs--interface.c.html#L901'>O_RDONLY</a>          901 lib/vfs/interface.c             test_fd = open (vfs_path_as_str (test_vpath), O_RDONLY);</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L40'>O_RDONLY</a>           40 lib/vfs/vfs.h  #define O_ALL (O_CREAT | O_EXCL | O_NOCTTY | O_NDELAY | O_SYNC | O_WRONLY | O_RDWR | O_RDONLY)</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L51'>O_RDONLY</a>           51 lib/vfs/vfs.h  #define IS_LINEAR(a) ((a) == (O_RDONLY | O_LINEAR))     /* Return only 0 and 1 ! */</span>
+<span class='curline'><a href='../S/lib--vfs--vfs.h.html#L52'>O_RDONLY</a>           52 lib/vfs/vfs.h  #define NO_LINEAR(a) (((a) == (O_RDONLY | O_LINEAR)) ? O_RDONLY : (a))</span>
+<span class='curline'><a href='../S/src--consaver--cons.saver.c.html#L184'>O_RDONLY</a>          184 src/consaver/cons.saver.c     console_fd = open (tty_name, O_RDONLY);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L507'>O_RDONLY</a>          507 src/diffviewer/ydiff.c     if (flags == O_RDONLY)</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L826'>O_RDONLY</a>          826 src/diffviewer/ydiff.c     f = p_open (cmd, O_RDONLY);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L869'>O_RDONLY</a>          869 src/diffviewer/ydiff.c     f = f_open (filename, O_RDONLY);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2414'>O_RDONLY</a>         2414 src/diffviewer/ydiff.c         f[DIFF_LEFT] = f_open (file1, O_RDONLY);</span>
+<span class='curline'><a href='../S/src--diffviewer--ydiff.c.html#L2418'>O_RDONLY</a>         2418 src/diffviewer/ydiff.c         f[DIFF_RIGHT] = f_open (file2, O_RDONLY);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L186'>O_RDONLY</a>          186 src/editor/edit.c     file = mc_open (filename_vpath, O_RDONLY | O_BINARY);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L299'>O_RDONLY</a>          299 src/editor/edit.c     file = mc_open (filename_vpath, O_NONBLOCK | O_RDONLY | O_BINARY, 0666);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L306'>O_RDONLY</a>          306 src/editor/edit.c         file = mc_open (filename_vpath, O_NONBLOCK | O_RDONLY | O_BINARY | O_CREAT | O_EXCL, 0666);</span>
+<span class='curline'><a href='../S/src--editor--edit.c.html#L1991'>O_RDONLY</a>         1991 src/editor/edit.c         file = mc_open (filename_vpath, O_RDONLY | O_BINARY);</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L223'>O_RDONLY</a>          223 src/editor/editcmd.c             || (fd = mc_open (real_filename_vpath, O_RDONLY | O_BINARY)) == -1)</span>
+<span class='curline'><a href='../S/src--editor--editcmd.c.html#L1729'>O_RDONLY</a>         1729 src/editor/editcmd.c                 file = mc_open (exp_vpath, O_RDONLY | O_BINARY);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L215'>O_RDONLY</a>          215 src/filemanager/cmd.c     file1 = open (vfs_path_as_str (vpath1), O_RDONLY);</span>
+<span class='curline'><a href='../S/src--filemanager--cmd.c.html#L220'>O_RDONLY</a>          220 src/filemanager/cmd.c         file2 = open (vfs_path_as_str (vpath2), O_RDONLY);</span>
+<span class='curline'><a href='../S/src--filemanager--file.c.html#L1646'>O_RDONLY</a>         1646 src/filemanager/file.c     while ((src_desc = mc_open (src_vpath, O_RDONLY | O_LINEAR)) &lt; 0 &amp;&amp; !ctx-&gt;skip_all)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1002'>O_RDONLY</a>         1002 src/filemanager/find.c     file_fd = mc_open (vpath, O_RDONLY);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1132'>O_RDONLY</a>         1132 src/filemanager/mountlist.c         lockfd = open (MNTTAB_LOCK, O_RDONLY);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1346'>O_RDONLY</a>         1346 src/filemanager/mountlist.c     fd = open (dir, O_RDONLY);</span>
+<span class='curline'><a href='../S/src--filemanager--mountlist.c.html#L1559'>O_RDONLY</a>         1559 src/filemanager/mountlist.c         fd = open (disk, O_RDONLY);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L221'>O_RDONLY</a>          221 src/vfs/cpio/cpio.c     fd = mc_open (vpath, O_RDONLY);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L247'>O_RDONLY</a>          247 src/vfs/cpio/cpio.c         fd = mc_open (tmp_vpath, O_RDONLY);</span>
+<span class='curline'><a href='../S/src--vfs--cpio--cpio.c.html#L849'>O_RDONLY</a>          849 src/vfs/cpio/cpio.c     if ((flags &amp; O_ACCMODE) != O_RDONLY)</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1515'>O_RDONLY</a>         1515 src/vfs/extfs/extfs.c     fp = (struct pseudofile *) extfs_open (vpath, O_RDONLY, 0);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1536'>O_RDONLY</a>         1536 src/vfs/extfs/extfs.c     fp = (struct pseudofile *) extfs_open (vpath, O_RDONLY, 0);</span>
+<span class='curline'><a href='../S/src--vfs--extfs--extfs.c.html#L1596'>O_RDONLY</a>         1596 src/vfs/extfs/extfs.c             f = open (fullname, O_RDONLY);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L867'>O_RDONLY</a>          867 src/vfs/fish/fish.c     h = open (localname, O_RDONLY);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L947'>O_RDONLY</a>          947 src/vfs/fish/fish.c             h = open ("/dev/zero", O_RDONLY);</span>
+<span class='curline'><a href='../S/src--vfs--fish--fish.c.html#L1510'>O_RDONLY</a>         1510 src/vfs/fish/fish.c     if (((flags &amp; O_WRONLY) == O_WRONLY) &amp;&amp; ((flags &amp; (O_RDONLY | O_RDWR)) == 0))</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L1816'>O_RDONLY</a>         1816 src/vfs/ftpfs/ftpfs.c     h = open (localname, O_RDONLY);</span>
+<span class='curline'><a href='../S/src--vfs--ftpfs--ftpfs.c.html#L2144'>O_RDONLY</a>         2144 src/vfs/ftpfs/ftpfs.c     if (((flags &amp; O_WRONLY) == O_WRONLY) &amp;&amp; ((flags &amp; (O_RDONLY | O_RDWR)) == 0))</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--helpers--include--includes.h.html#L544'>O_RDONLY</a>          544 src/vfs/smbfs/helpers/include/includes.h #define O_ACCMODE (O_RDONLY | O_WRONLY | O_RDWR)</span>
+<span class='curline'><a href='../S/src--vfs--smbfs--smbfs.c.html#L2060'>O_RDONLY</a>         2060 src/vfs/smbfs/smbfs.c                   flags : O_RDONLY, DENY_NONE);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L290'>O_RDONLY</a>          290 src/vfs/tar/tar.c     result = mc_open (vpath, O_RDONLY);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L316'>O_RDONLY</a>          316 src/vfs/tar/tar.c         result = mc_open (tmp_vpath, O_RDONLY);</span>
+<span class='curline'><a href='../S/src--vfs--tar--tar.c.html#L894'>O_RDONLY</a>          894 src/vfs/tar/tar.c     if ((flags &amp; O_ACCMODE) != O_RDONLY)</span>
+<span class='curline'><a href='../S/src--vfs--undelfs--undelfs.c.html#L713'>O_RDONLY</a>          713 src/vfs/undelfs/undelfs.c     fd = open (file, O_RDONLY);</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L319'>O_RDONLY</a>          319 src/viewer/mcviewer.c         fd = mc_open (vpath, O_RDONLY | O_NONBLOCK);</span>
+<span class='curline'><a href='../S/src--viewer--mcviewer.c.html#L382'>O_RDONLY</a>          382 src/viewer/mcviewer.c                     fd1 = mc_open (vpath1, O_RDONLY | O_NONBLOCK);</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>tv</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--timer.c.html#L72'>tv</a>                 72 lib/timer.c        struct timeval tv;</span>
+<span class='curline'><a href='../S/lib--timer.c.html#L75'>tv</a>                 75 lib/timer.c        gettimeofday (&amp;tv, NULL);</span>
+<span class='curline'><a href='../S/lib--timer.c.html#L76'>tv</a>                 76 lib/timer.c        timer-&gt;start = (guint64) tv.tv_sec * G_USEC_PER_SEC + (guint64) tv.tv_usec;</span>
+<span class='curline'><a href='../S/lib--timer.c.html#L107'>tv</a>                107 lib/timer.c        struct timeval tv;</span>
+<span class='curline'><a href='../S/lib--timer.c.html#L109'>tv</a>                109 lib/timer.c        gettimeofday (&amp;tv, NULL);</span>
+<span class='curline'><a href='../S/lib--timer.c.html#L111'>tv</a>                111 lib/timer.c        return ((guint64) tv.tv_sec * G_USEC_PER_SEC + (guint64) tv.tv_usec - timer-&gt;start);</span>
+<span class='curline'><a href='../S/lib--tty--key.c.html#L219'>tv</a>                219 lib/tty/key.c  #define GET_TIME(tv)     (gettimeofday(&amp;tv, (struct timezone *) NULL))</span>
+<span class='curline'><a href='../S/lib--tty--win.c.html#L82'>tv</a>                 82 lib/tty/win.c      struct timeval tv;</span>
+<span class='curline'><a href='../S/lib--tty--win.c.html#L86'>tv</a>                 86 lib/tty/win.c      tv.tv_sec = 0;</span>
+<span class='curline'><a href='../S/lib--tty--win.c.html#L87'>tv</a>                 87 lib/tty/win.c      tv.tv_usec = 0;</span>
+<span class='curline'><a href='../S/lib--tty--win.c.html#L88'>tv</a>                 88 lib/tty/win.c      return select (1, &amp;fds, 0, 0, &amp;tv);</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L989'>tv</a>                989 src/filemanager/find.c     struct timeval tv;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1009'>tv</a>               1009 src/filemanager/find.c     if (gettimeofday (&amp;tv, NULL) == -1)</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1011'>tv</a>               1011 src/filemanager/find.c         tv.tv_sec = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1012'>tv</a>               1012 src/filemanager/find.c         tv.tv_usec = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1013'>tv</a>               1013 src/filemanager/find.c         last_refresh = tv;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1015'>tv</a>               1015 src/filemanager/find.c     seconds = tv.tv_sec - last_refresh.tv_sec;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1016'>tv</a>               1016 src/filemanager/find.c     useconds = tv.tv_usec - last_refresh.tv_usec;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1028'>tv</a>               1028 src/filemanager/find.c         last_refresh = tv;</span>
+<span class='curline'><a href='../S/src--filemanager--find.c.html#L1121'>tv</a>               1121 src/filemanager/find.c                     last_refresh = tv;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1617'>tv</a>               1617 src/filemanager/midnight.c     static guint64 tv = 0;</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1624'>tv</a>               1624 src/filemanager/midnight.c     if (!force &amp;&amp; !mc_time_elapsed (&amp;tv, update_period))</span>
+<span class='curline'><a href='../S/src--filemanager--midnight.c.html#L1632'>tv</a>               1632 src/filemanager/midnight.c     srand ((unsigned int) (tv / G_USEC_PER_SEC));</span>
+</pre>
+</body>
+</html>

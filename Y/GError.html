@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>GError</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--event.h.html#L27'>GError</a>             27 lib/event.h    gboolean mc_event_init (GError **);</span>
+<span class='curline'><a href='../S/lib--event.h.html#L28'>GError</a>             28 lib/event.h    gboolean mc_event_deinit (GError **);</span>
+<span class='curline'><a href='../S/lib--event.h.html#L32'>GError</a>             32 lib/event.h    gboolean mc_event_add (const gchar *, const gchar *, mc_event_callback_func_t, gpointer, GError **);</span>
+<span class='curline'><a href='../S/lib--event.h.html#L37'>GError</a>             37 lib/event.h    gboolean mc_event_mass_add (event_init_t *, GError **);</span>
+<span class='curline'><a href='../S/lib--event--event.c.html#L51'>GError</a>             51 lib/event/event.c mc_event_init (GError ** mcerror)</span>
+<span class='curline'><a href='../S/lib--event--event.c.html#L77'>GError</a>             77 lib/event/event.c mc_event_deinit (GError ** mcerror)</span>
+<span class='curline'><a href='../S/lib--event--event.c.html#L95'>GError</a>             95 lib/event/event.c mc_event_mass_add (event_init_t * events, GError ** mcerror)</span>
+<span class='curline'><a href='../S/lib--event--internal.h.html#L24'>GError</a>             24 lib/event/internal.h                                          GError ** mcerror);</span>
+<span class='curline'><a href='../S/lib--event--internal.h.html#L26'>GError</a>             26 lib/event/internal.h                                        gboolean create_new, GError ** mcerror);</span>
+<span class='curline'><a href='../S/lib--event--manage.c.html#L65'>GError</a>             65 lib/event/manage.c               mc_event_callback_func_t event_callback, gpointer event_init_data, GError ** mcerror)</span>
+<span class='curline'><a href='../S/lib--event--manage.c.html#L159'>GError</a>            159 lib/event/manage.c                                   GError ** mcerror)</span>
+<span class='curline'><a href='../S/lib--event--manage.c.html#L188'>GError</a>            188 lib/event/manage.c                             GError ** mcerror)</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L42'>GError</a>             42 lib/mcconfig.h gboolean mc_config_save_file (mc_config_t * config, GError ** error);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L44'>GError</a>             44 lib/mcconfig.h gboolean mc_config_save_to_file (mc_config_t * config, const gchar * filename, GError ** error);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L98'>GError</a>             98 lib/mcconfig.h void mc_config_init_config_paths (GError ** error);</span>
+<span class='curline'><a href='../S/lib--mcconfig.h.html#L102'>GError</a>            102 lib/mcconfig.h gboolean mc_config_migrate_from_old_place (GError ** error, char **msg);</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L47'>GError</a>             47 lib/mcconfig/common.c mc_config_new_or_override_file (mc_config_t * mc_config, const gchar * ini_path, GError ** mcerror)</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L253'>GError</a>            253 lib/mcconfig/common.c mc_config_save_file (mc_config_t * mc_config, GError ** mcerror)</span>
+<span class='curline'><a href='../S/lib--mcconfig--common.c.html#L266'>GError</a>            266 lib/mcconfig/common.c mc_config_save_to_file (mc_config_t * mc_config, const gchar * ini_path, GError ** mcerror)</span>
+<span class='curline'><a href='../S/lib--mcconfig--paths.c.html#L138'>GError</a>            138 lib/mcconfig/paths.c mc_config_mkdir (const char *directory_name, GError ** mcerror)</span>
+<span class='curline'><a href='../S/lib--mcconfig--paths.c.html#L150'>GError</a>            150 lib/mcconfig/paths.c mc_config_init_one_config_path (const char *path_base, const char *subdir, GError ** mcerror)</span>
+<span class='curline'><a href='../S/lib--mcconfig--paths.c.html#L188'>GError</a>            188 lib/mcconfig/paths.c mc_config_copy (const char *old_name, const char *new_name, GError ** mcerror)</span>
+<span class='curline'><a href='../S/lib--mcconfig--paths.c.html#L287'>GError</a>            287 lib/mcconfig/paths.c mc_config_init_config_paths (GError ** mcerror)</span>
+<span class='curline'><a href='../S/lib--mcconfig--paths.c.html#L445'>GError</a>            445 lib/mcconfig/paths.c mc_config_migrate_from_old_place (GError ** mcerror, char **msg)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L262'>GError</a>            262 lib/search/regex.c                                     GMatchInfo ** match_info, GError ** error)</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L315'>GError</a>            315 lib/search/regex.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/lib--search--regex.c.html#L792'>GError</a>            792 lib/search/regex.c         GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L56'>GError</a>             56 lib/serialize.c prepend_error_message (GError ** error, const char *format, ...)</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L109'>GError</a>            109 lib/serialize.c mc_serialize_str (const char prefix, const char *data, GError ** error)</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L132'>GError</a>            132 lib/serialize.c mc_deserialize_str (const char prefix, const char *data, GError ** error)</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L196'>GError</a>            196 lib/serialize.c mc_serialize_config (const mc_config_t * data, GError ** error)</span>
+<span class='curline'><a href='../S/lib--serialize.c.html#L275'>GError</a>            275 lib/serialize.c mc_deserialize_config (const char *data, GError ** error)</span>
+<span class='curline'><a href='../S/lib--serialize.h.html#L19'>GError</a>             19 lib/serialize.h char *mc_serialize_str (const char prefix, const char *data, GError ** error);</span>
+<span class='curline'><a href='../S/lib--serialize.h.html#L20'>GError</a>             20 lib/serialize.h char *mc_deserialize_str (const char prefix, const char *data, GError ** error);</span>
+<span class='curline'><a href='../S/lib--serialize.h.html#L22'>GError</a>             22 lib/serialize.h char *mc_serialize_config (const mc_config_t * data, GError ** error);</span>
+<span class='curline'><a href='../S/lib--serialize.h.html#L23'>GError</a>             23 lib/serialize.h mc_config_t *mc_deserialize_config (const char *data, GError ** error);</span>
+<span class='curline'><a href='../S/lib--skin.h.html#L132'>GError</a>            132 lib/skin.h     gboolean mc_skin_init (const gchar * skin_override, GError ** error);</span>
+<span class='curline'><a href='../S/lib--skin--common.c.html#L114'>GError</a>            114 lib/skin/common.c mc_skin_init (const gchar * skin_override, GError ** mcerror)</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L109'>GError</a>            109 lib/strutil.h      gchar *(*conv_gerror_message) (GError * error, const char *def_msg);</span>
+<span class='curline'><a href='../S/lib--strutil.h.html#L203'>GError</a>            203 lib/strutil.h  gchar *str_conv_gerror_message (GError * error, const char *def_msg);</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L131'>GError</a>            131 lib/strutil/strutil.c         GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/lib--strutil--strutil.c.html#L297'>GError</a>            297 lib/strutil/strutil.c str_conv_gerror_message (GError * mcerror, const char *def_msg)</span>
+<span class='curline'><a href='../S/lib--strutil--strutil8bit.c.html#L240'>GError</a>            240 lib/strutil/strutil8bit.c str_8bit_conv_gerror_message (GError * mcerror, const char *def_msg)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilascii.c.html#L213'>GError</a>            213 lib/strutil/strutilascii.c str_ascii_conv_gerror_message (GError * mcerror, const char *def_msg)</span>
+<span class='curline'><a href='../S/lib--strutil--strutilutf8.c.html#L412'>GError</a>            412 lib/strutil/strutilutf8.c str_utf8_conv_gerror_message (GError * mcerror, const char *def_msg)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1432'>GError</a>           1432 lib/util.c     mc_propagate_error (GError ** dest, int code, const char *format, ...)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1436'>GError</a>           1436 lib/util.c             GError *tmp_error;</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1458'>GError</a>           1458 lib/util.c     mc_replace_error (GError ** dest, int code, const char *format, ...)</span>
+<span class='curline'><a href='../S/lib--util.c.html#L1462'>GError</a>           1462 lib/util.c             GError *tmp_error;</span>
+<span class='curline'><a href='../S/lib--util.h.html#L201'>GError</a>            201 lib/util.h     mc_pipe_t *mc_popen (const char *command, GError ** error);</span>
+<span class='curline'><a href='../S/lib--util.h.html#L202'>GError</a>            202 lib/util.h     void mc_pread (mc_pipe_t * p, GError ** error);</span>
+<span class='curline'><a href='../S/lib--util.h.html#L203'>GError</a>            203 lib/util.h     void mc_pclose (mc_pipe_t * p, GError ** error);</span>
+<span class='curline'><a href='../S/lib--util.h.html#L253'>GError</a>            253 lib/util.h     void mc_propagate_error (GError ** dest, int code, const char *format, ...) G_GNUC_PRINTF (3, 4);</span>
+<span class='curline'><a href='../S/lib--util.h.html#L254'>GError</a>            254 lib/util.h     void mc_replace_error (GError ** dest, int code, const char *format, ...) G_GNUC_PRINTF (3, 4);</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L510'>GError</a>            510 lib/utilunix.c mc_popen (const char *command, GError ** error)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L568'>GError</a>            568 lib/utilunix.c mc_pread (mc_pipe_t * p, GError ** error)</span>
+<span class='curline'><a href='../S/lib--utilunix.c.html#L632'>GError</a>            632 lib/utilunix.c mc_pclose (mc_pipe_t * p, GError ** error)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1087'>GError</a>           1087 lib/vfs/path.c vfs_path_serialize (const vfs_path_t * vpath, GError ** mcerror)</span>
+<span class='curline'><a href='../S/lib--vfs--path.c.html#L1145'>GError</a>           1145 lib/vfs/path.c vfs_path_deserialize (const char *data, GError ** mcerror)</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L89'>GError</a>             89 lib/vfs/path.h char *vfs_path_serialize (const vfs_path_t * vpath, GError ** error);</span>
+<span class='curline'><a href='../S/lib--vfs--path.h.html#L90'>GError</a>             90 lib/vfs/path.h vfs_path_t *vfs_path_deserialize (const char *data, GError ** error);</span>
+<span class='curline'><a href='../S/lib--widget--wtools.c.html#L439'>GError</a>            439 lib/widget/wtools.c mc_error_message (GError ** mcerror, int *code)</span>
+<span class='curline'><a href='../S/lib--widget--wtools.h.html#L88'>GError</a>             88 lib/widget/wtools.h gboolean mc_error_message (GError ** mcerror, int *code);</span>
+<span class='curline'><a href='../S/src--args.c.html#L87'>GError</a>             87 src/args.c                                          gpointer data, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--args.c.html#L89'>GError</a>             89 src/args.c                                          gpointer data, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--args.c.html#L442'>GError</a>            442 src/args.c                          GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--args.c.html#L459'>GError</a>            459 src/args.c                          GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--args.c.html#L617'>GError</a>            617 src/args.c     mc_args_parse (int *argc, char ***argv, const char *translation_domain, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--args.c.html#L731'>GError</a>            731 src/args.c     mc_setup_by_args (int argc, char **argv, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--args.h.html#L49'>GError</a>             49 src/args.h     gboolean mc_args_parse (int *argc, char ***argv, const char *translation_domain, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--args.h.html#L51'>GError</a>             51 src/args.h     gboolean mc_setup_by_args (int argc, char **argv, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--clipboard.c.html#L123'>GError</a>            123 src/clipboard.c         GError *error = NULL;</span>
+<span class='curline'><a href='../S/src--events_init.c.html#L58'>GError</a>             58 src/events_init.c events_init (GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--events_init.h.html#L15'>GError</a>             15 src/events_init.h gboolean events_init (GError **);</span>
+<span class='curline'><a href='../S/src--filemanager--boxes.c.html#L156'>GError</a>            156 src/filemanager/boxes.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L621'>GError</a>            621 src/filemanager/ext.c                   gboolean * have_type, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--filemanager--ext.c.html#L953'>GError</a>            953 src/filemanager/ext.c                 GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--filemanager--hotlist.c.html#L1484'>GError</a>           1484 src/filemanager/hotlist.c         GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--main.c.html#L220'>GError</a>            220 src/main.c         GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--setup.c.html#L1254'>GError</a>           1254 src/setup.c    setup_save_config_show_error (const char *filename, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--setup.h.html#L148'>GError</a>            148 src/setup.h    void setup_save_config_show_error (const char *filename, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L207'>GError</a>            207 src/vfs/sftpfs/config_parser.c                                        const vfs_path_element_t * vpath_element, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L298'>GError</a>            298 src/vfs/sftpfs/config_parser.c sftpfs_get_config_entity (const vfs_path_element_t * vpath_element, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--config_parser.c.html#L355'>GError</a>            355 src/vfs/sftpfs/config_parser.c sftpfs_fill_connection_data_from_config (struct vfs_s_super *super, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L67'>GError</a>             67 src/vfs/sftpfs/connection.c sftpfs_open_socket (struct vfs_s_super *super, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L203'>GError</a>            203 src/vfs/sftpfs/connection.c sftpfs_open_connection_ssh_agent (struct vfs_s_super *super, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L256'>GError</a>            256 src/vfs/sftpfs/connection.c sftpfs_open_connection_ssh_key (struct vfs_s_super *super, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L305'>GError</a>            305 src/vfs/sftpfs/connection.c sftpfs_open_connection_ssh_password (struct vfs_s_super *super, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L365'>GError</a>            365 src/vfs/sftpfs/connection.c sftpfs_open_connection (struct vfs_s_super *super, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--connection.c.html#L437'>GError</a>            437 src/vfs/sftpfs/connection.c sftpfs_close_connection (struct vfs_s_super *super, const char *shutdown_message, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L66'>GError</a>             66 src/vfs/sftpfs/dir.c sftpfs_opendir (const vfs_path_t * vpath, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L121'>GError</a>            121 src/vfs/sftpfs/dir.c sftpfs_readdir (void *data, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L165'>GError</a>            165 src/vfs/sftpfs/dir.c sftpfs_closedir (void *data, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L188'>GError</a>            188 src/vfs/sftpfs/dir.c sftpfs_mkdir (const vfs_path_t * vpath, mode_t mode, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--dir.c.html#L245'>GError</a>            245 src/vfs/sftpfs/dir.c sftpfs_rmdir (const vfs_path_t * vpath, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L61'>GError</a>             61 src/vfs/sftpfs/file.c sftpfs_reopen (vfs_file_handler_t * file_handler, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L91'>GError</a>             91 src/vfs/sftpfs/file.c sftpfs_open_file (vfs_file_handler_t * file_handler, int flags, mode_t mode, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L175'>GError</a>            175 src/vfs/sftpfs/file.c sftpfs_fstat (void *data, struct stat *buf, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L241'>GError</a>            241 src/vfs/sftpfs/file.c sftpfs_read_file (vfs_file_handler_t * file_handler, char *buffer, size_t count, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L296'>GError</a>            296 src/vfs/sftpfs/file.c                    GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L341'>GError</a>            341 src/vfs/sftpfs/file.c sftpfs_close_file (vfs_file_handler_t * file_handler, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--file.c.html#L371'>GError</a>            371 src/vfs/sftpfs/file.c sftpfs_lseek (vfs_file_handler_t * file_handler, off_t offset, int whence, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L60'>GError</a>             60 src/vfs/sftpfs/internal.c sftpfs_ssherror_to_gliberror (sftpfs_super_data_t * super_data, int libssh_errno, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L97'>GError</a>             97 src/vfs/sftpfs/internal.c sftpfs_waitsocket (sftpfs_super_data_t * super_data, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L133'>GError</a>            133 src/vfs/sftpfs/internal.c sftpfs_lstat (const vfs_path_t * vpath, struct stat *buf, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L210'>GError</a>            210 src/vfs/sftpfs/internal.c sftpfs_stat (const vfs_path_t * vpath, struct stat *buf, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L290'>GError</a>            290 src/vfs/sftpfs/internal.c sftpfs_readlink (const vfs_path_t * vpath, char *buf, size_t size, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L346'>GError</a>            346 src/vfs/sftpfs/internal.c sftpfs_symlink (const vfs_path_t * vpath1, const vfs_path_t * vpath2, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L417'>GError</a>            417 src/vfs/sftpfs/internal.c sftpfs_chmod (const vfs_path_t * vpath, mode_t mode, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L496'>GError</a>            496 src/vfs/sftpfs/internal.c sftpfs_unlink (const vfs_path_t * vpath, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.c.html#L554'>GError</a>            554 src/vfs/sftpfs/internal.c sftpfs_rename (const vfs_path_t * vpath1, const vfs_path_t * vpath2, GError ** mcerror)</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L70'>GError</a>             70 src/vfs/sftpfs/internal.h                                    GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L71'>GError</a>             71 src/vfs/sftpfs/internal.h int sftpfs_waitsocket (sftpfs_super_data_t * super_data, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L74'>GError</a>             74 src/vfs/sftpfs/internal.h int sftpfs_lstat (const vfs_path_t * vpath, struct stat *buf, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L75'>GError</a>             75 src/vfs/sftpfs/internal.h int sftpfs_stat (const vfs_path_t * vpath, struct stat *buf, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L76'>GError</a>             76 src/vfs/sftpfs/internal.h int sftpfs_readlink (const vfs_path_t * vpath, char *buf, size_t size, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L77'>GError</a>             77 src/vfs/sftpfs/internal.h int sftpfs_symlink (const vfs_path_t * vpath1, const vfs_path_t * vpath2, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L78'>GError</a>             78 src/vfs/sftpfs/internal.h int sftpfs_chmod (const vfs_path_t * vpath, mode_t mode, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L79'>GError</a>             79 src/vfs/sftpfs/internal.h int sftpfs_unlink (const vfs_path_t * vpath, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L80'>GError</a>             80 src/vfs/sftpfs/internal.h int sftpfs_rename (const vfs_path_t * vpath1, const vfs_path_t * vpath2, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L82'>GError</a>             82 src/vfs/sftpfs/internal.h void sftpfs_fill_connection_data_from_config (struct vfs_s_super *super, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L83'>GError</a>             83 src/vfs/sftpfs/internal.h int sftpfs_open_connection (struct vfs_s_super *super, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L85'>GError</a>             85 src/vfs/sftpfs/internal.h                               GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L87'>GError</a>             87 src/vfs/sftpfs/internal.h void *sftpfs_opendir (const vfs_path_t * vpath, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L88'>GError</a>             88 src/vfs/sftpfs/internal.h void *sftpfs_readdir (void *data, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L89'>GError</a>             89 src/vfs/sftpfs/internal.h int sftpfs_closedir (void *data, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L90'>GError</a>             90 src/vfs/sftpfs/internal.h int sftpfs_mkdir (const vfs_path_t * vpath, mode_t mode, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L91'>GError</a>             91 src/vfs/sftpfs/internal.h int sftpfs_rmdir (const vfs_path_t * vpath, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L94'>GError</a>             94 src/vfs/sftpfs/internal.h                            GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L96'>GError</a>             96 src/vfs/sftpfs/internal.h                           GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L98'>GError</a>             98 src/vfs/sftpfs/internal.h                            GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L99'>GError</a>             99 src/vfs/sftpfs/internal.h int sftpfs_close_file (vfs_file_handler_t * file_handler, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L100'>GError</a>            100 src/vfs/sftpfs/internal.h int sftpfs_fstat (void *data, struct stat *buf, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--internal.h.html#L101'>GError</a>            101 src/vfs/sftpfs/internal.h off_t sftpfs_lseek (vfs_file_handler_t * file_handler, off_t offset, int whence, GError ** mcerror);</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L103'>GError</a>            103 src/vfs/sftpfs/vfs_class.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L180'>GError</a>            180 src/vfs/sftpfs/vfs_class.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L202'>GError</a>            202 src/vfs/sftpfs/vfs_class.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L235'>GError</a>            235 src/vfs/sftpfs/vfs_class.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L255'>GError</a>            255 src/vfs/sftpfs/vfs_class.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L275'>GError</a>            275 src/vfs/sftpfs/vfs_class.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L295'>GError</a>            295 src/vfs/sftpfs/vfs_class.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L316'>GError</a>            316 src/vfs/sftpfs/vfs_class.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L354'>GError</a>            354 src/vfs/sftpfs/vfs_class.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L433'>GError</a>            433 src/vfs/sftpfs/vfs_class.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L461'>GError</a>            461 src/vfs/sftpfs/vfs_class.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L481'>GError</a>            481 src/vfs/sftpfs/vfs_class.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L516'>GError</a>            516 src/vfs/sftpfs/vfs_class.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L536'>GError</a>            536 src/vfs/sftpfs/vfs_class.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L555'>GError</a>            555 src/vfs/sftpfs/vfs_class.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L577'>GError</a>            577 src/vfs/sftpfs/vfs_class.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L596'>GError</a>            596 src/vfs/sftpfs/vfs_class.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_class.c.html#L616'>GError</a>            616 src/vfs/sftpfs/vfs_class.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L93'>GError</a>             93 src/vfs/sftpfs/vfs_subclass.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--vfs--sftpfs--vfs_subclass.c.html#L140'>GError</a>            140 src/vfs/sftpfs/vfs_subclass.c     GError *mcerror = NULL;</span>
+<span class='curline'><a href='../S/src--viewer--datasource.c.html#L399'>GError</a>            399 src/viewer/datasource.c     GError *error = NULL;</span>
+<span class='curline'><a href='../S/src--viewer--growbuf.c.html#L167'>GError</a>            167 src/viewer/growbuf.c             GError *error = NULL;</span>
+<span class='curline'><a href='../S/tests--lib--mcconfig--config_string.c.html#L55'>GError</a>             55 tests/lib/mcconfig/config_string.c     GError *error = NULL;</span>
+<span class='curline'><a href='../S/tests--lib--serialize.c.html#L33'>GError</a>             33 tests/lib/serialize.c static GError *error = NULL;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_serialize.c.html#L153'>GError</a>            153 tests/lib/vfs/path_serialize.c     GError *error = NULL;</span>
+<span class='curline'><a href='../S/tests--lib--vfs--path_serialize.c.html#L176'>GError</a>            176 tests/lib/vfs/path_serialize.c     GError *error = NULL;</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>perms</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L300'>perms</a>             300 lib/vfs/parse_ls_vga.c     mode_t perms;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L303'>perms</a>             303 lib/vfs/parse_ls_vga.c     perms = 0;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L310'>perms</a>             310 lib/vfs/parse_ls_vga.c         perms |= S_IRUSR;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L320'>perms</a>             320 lib/vfs/parse_ls_vga.c         perms |= S_IWUSR;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L330'>perms</a>             330 lib/vfs/parse_ls_vga.c         perms |= S_ISUID;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L333'>perms</a>             333 lib/vfs/parse_ls_vga.c         perms |= S_IXUSR | S_ISUID;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L336'>perms</a>             336 lib/vfs/parse_ls_vga.c         perms |= S_IXUSR;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L346'>perms</a>             346 lib/vfs/parse_ls_vga.c         perms |= S_IRGRP;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L356'>perms</a>             356 lib/vfs/parse_ls_vga.c         perms |= S_IWGRP;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L366'>perms</a>             366 lib/vfs/parse_ls_vga.c         perms |= S_ISGID;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L369'>perms</a>             369 lib/vfs/parse_ls_vga.c         perms |= S_ISGID;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L372'>perms</a>             372 lib/vfs/parse_ls_vga.c         perms |= S_IXGRP | S_ISGID;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L375'>perms</a>             375 lib/vfs/parse_ls_vga.c         perms |= S_IXGRP;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L385'>perms</a>             385 lib/vfs/parse_ls_vga.c         perms |= S_IROTH;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L395'>perms</a>             395 lib/vfs/parse_ls_vga.c         perms |= S_IWOTH;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L405'>perms</a>             405 lib/vfs/parse_ls_vga.c         perms |= S_ISVTX;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L408'>perms</a>             408 lib/vfs/parse_ls_vga.c         perms |= S_IXOTH | S_ISVTX;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L411'>perms</a>             411 lib/vfs/parse_ls_vga.c         perms |= S_IXOTH;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L422'>perms</a>             422 lib/vfs/parse_ls_vga.c     *ret_perms = perms;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L432'>perms</a>             432 lib/vfs/parse_ls_vga.c     mode_t type, perms;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L441'>perms</a>             441 lib/vfs/parse_ls_vga.c     if (!vfs_parse_fileperms (p, &amp;skipped, &amp;perms))</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L446'>perms</a>             446 lib/vfs/parse_ls_vga.c     *ret_mode = type | perms;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L456'>perms</a>             456 lib/vfs/parse_ls_vga.c     mode_t remote_type = 0, local_type, perms = 0;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L463'>perms</a>             463 lib/vfs/parse_ls_vga.c         perms *= 010;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L464'>perms</a>             464 lib/vfs/parse_ls_vga.c         perms += (*p - '0');</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L510'>perms</a>             510 lib/vfs/parse_ls_vga.c     *ret_mode = local_type | perms;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L709'>perms</a>             709 lib/vfs/parse_ls_vga.c         mode_t perms;</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L711'>perms</a>             711 lib/vfs/parse_ls_vga.c         if (!vfs_parse_fileperms (p, &amp;lc_skipped, &amp;perms))</span>
+<span class='curline'><a href='../S/lib--vfs--parse_ls_vga.c.html#L714'>perms</a>             714 lib/vfs/parse_ls_vga.c         s-&gt;st_mode |= perms;</span>
+</pre>
+</body>
+</html>
